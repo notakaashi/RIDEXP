@@ -1,1 +1,22 @@
-sdasdasd
+    DATABASE NAME - WALA PA
+
+    TABLES TO MAKE - 
+    LIST NG MGA CAR
+    CAR CATEGORY 
+    MOTOR CATEGORY
+    LIST NG MGA MOTOR
+    CHECK LIST NG MGA CAR AT MOTOR (complete seats, maayos mga windows etc.,) -- before and after ng rent
+    CUSTOMER (informations: name, date of birth, etc)
+    RENTAL RATE (PARA MAKITA UNG PAYMENT PER HOUR AND PER CAR/MOTOR)
+    CUSTONER + NI RENT NA CAR OR MOTOR
+    PAYMENT (IF PAID, PROCESSING, DOWN PAYMENT) (THRU GCASH, CASH, CARD)
+    USER (ASSIGNED SA NAGPARENT, ROLE, ETC.)
+    RESERVATION(advanced booking, kailan available ung car na irrent)
+
+DATABASE NAME RIDEXPRESS
+KULANG SA FUCNTIONAL: 
+SALES REPORT 
+maintenance
+CHECKLIST BEFORE AND AFTER 
+penalty table if ever may sira
+terms and policies
