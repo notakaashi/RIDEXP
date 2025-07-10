@@ -5,179 +5,406 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema RIDEXP
 -- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `RIDEXP` DEFAULT CHARACTER SET utf8 ;
+USE `RIDEXP`;
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Table `transmission_types`
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE TABLE IF NOT EXISTS `transmission_types` (
+  `transmission_id` INT NOT NULL AUTO_INCREMENT,
+  `transmission_type` VARCHAR(20) NOT NULL UNIQUE,
+  PRIMARY KEY (`transmission_id`)
+) ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table `mydb`.`car_category`
+-- Table `fuel_types`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`car_category` (
+CREATE TABLE IF NOT EXISTS `fuel_types` (
+  `fuel_id` INT NOT NULL AUTO_INCREMENT,
+  `fuel_type` VARCHAR(20) NOT NULL UNIQUE,
+  PRIMARY KEY (`fuel_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `vehicle_status`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `vehicle_status` (
+  `status_id` INT NOT NULL AUTO_INCREMENT,
+  `status_name` VARCHAR(20) NOT NULL UNIQUE,
+  PRIMARY KEY (`status_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `payment_methods`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `payment_methods` (
+  `method_id` INT NOT NULL AUTO_INCREMENT,
+  `method_name` VARCHAR(20) NOT NULL UNIQUE,
+  PRIMARY KEY (`method_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `payment_status`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `payment_status` (
+  `payment_status_id` INT NOT NULL AUTO_INCREMENT,
+  `status_name` VARCHAR(20) NOT NULL UNIQUE,
+  PRIMARY KEY (`payment_status_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `rental_status`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `rental_status` (
+  `rental_status_id` INT NOT NULL AUTO_INCREMENT,
+  `status_name` VARCHAR(20) NOT NULL UNIQUE,
+  PRIMARY KEY (`rental_status_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `reservation_status`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `reservation_status` (
+  `reservation_status_id` INT NOT NULL AUTO_INCREMENT,
+  `status_name` VARCHAR(20) NOT NULL UNIQUE,
+  PRIMARY KEY (`reservation_status_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `maintenance_status`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `maintenance_status` (
+  `maintenance_status_id` INT NOT NULL AUTO_INCREMENT,
+  `status_name` VARCHAR(20) NOT NULL UNIQUE,
+  PRIMARY KEY (`maintenance_status_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `user_roles`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `user_roles` (
+  `role_id` INT NOT NULL AUTO_INCREMENT,
+  `role_name` VARCHAR(20) NOT NULL UNIQUE,
+  PRIMARY KEY (`role_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `inspection_types`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `inspection_types` (
+  `inspection_type_id` INT NOT NULL AUTO_INCREMENT,
+  `inspection_type_name` VARCHAR(20) NOT NULL UNIQUE,
+  PRIMARY KEY (`inspection_type_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `car_category`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `car_category` (
   `car_category_id` INT NOT NULL AUTO_INCREMENT,
   `category_name` VARCHAR(45) NOT NULL,
-  `description` VARCHAR(45) NOT NULL,
-  `transmission` VARCHAR(45) NULL,
-  PRIMARY KEY (`car_category_id`))
-ENGINE = InnoDB;
-
+  `description` VARCHAR(100) NOT NULL,
+  `transmission_id` INT,
+  `fuel_id` INT,
+  PRIMARY KEY (`car_category_id`),
+  FOREIGN KEY (`transmission_id`) REFERENCES `transmission_types`(`transmission_id`),
+  FOREIGN KEY (`fuel_id`) REFERENCES `fuel_types`(`fuel_id`)
+) ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table `mydb`.`cars`
+-- Table `cars`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`cars` (
-  `status` VARCHAR(45) NULL,
+CREATE TABLE IF NOT EXISTS `cars` (
   `car_id` INT NOT NULL AUTO_INCREMENT,
-  `status` ENUM('available', 'under maintenance', 'booked') NOT NULL,
-  `car_cateogry_id` INT NOT NULL,
+  `car_category_id` INT NOT NULL,
   `make` VARCHAR(45) NOT NULL,
   `model_name` VARCHAR(45) NOT NULL,
   `year` INT NOT NULL,
-  `license_plate` VARCHAR(45) NOT NULL,
-  `status` ENUM('available', 'rented', 'reserved', 'under_maintenance', 'out_of_service', 'cleaning', ' damaged') NULL,
-  `carscol` VARCHAR(45) NULL,
+  `license_plate` VARCHAR(45) NOT NULL UNIQUE,
+  `color` VARCHAR(30),
+  `seating_capacity` INT,
+  `mileage` INT DEFAULT 0,
+  `status_id` INT NOT NULL,
   PRIMARY KEY (`car_id`),
-  UNIQUE INDEX `car_id_UNIQUE` (`car_id` ASC) VISIBLE,
-  INDEX `fk_cars_car_category_idx` (`car_cateogry_id` ASC) VISIBLE,
-  CONSTRAINT `fk_cars_car_category`
-    FOREIGN KEY (`car_cateogry_id`)
-    REFERENCES `mydb`.`car_category` (`car_category_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
+  FOREIGN KEY (`car_category_id`) REFERENCES `car_category`(`car_category_id`),
+  FOREIGN KEY (`status_id`) REFERENCES `vehicle_status`(`status_id`)
+) ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table `mydb`.`motor_category`
+-- Table `motor_category`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`motor_category` (
+CREATE TABLE IF NOT EXISTS `motor_category` (
   `motor_category_id` INT NOT NULL AUTO_INCREMENT,
   `category_name` VARCHAR(45) NOT NULL,
-  `description` VARCHAR(45) NOT NULL,
-  `transmission` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`motor_category_id`))
-ENGINE = InnoDB;
-
+  `description` VARCHAR(100) NOT NULL,
+  `transmission_id` INT NOT NULL,
+  `fuel_id` INT,
+  `engine_capacity` VARCHAR(20),
+  PRIMARY KEY (`motor_category_id`),
+  FOREIGN KEY (`transmission_id`) REFERENCES `transmission_types`(`transmission_id`),
+  FOREIGN KEY (`fuel_id`) REFERENCES `fuel_types`(`fuel_id`)
+) ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table `mydb`.`motors`
+-- Table `motors`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`motors` (
-  `motor_id` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `motors` (
+  `motor_id` INT NOT NULL AUTO_INCREMENT,
   `motor_category_id` INT NOT NULL,
   `make` VARCHAR(45) NOT NULL,
-  `model` VARCHAR(45) NULL,
-  `year` VARCHAR(45) NULL,
-  `license_plate` VARCHAR(45) NULL,
-  `status` ENUM('available', 'rented', 'reserved', 'under_maintenance', 'out_of_service', 'cleaning', 'damaged') NULL,
+  `model` VARCHAR(45),
+  `year` INT NOT NULL,
+  `license_plate` VARCHAR(45) NOT NULL UNIQUE,
+  `color` VARCHAR(30),
+  `mileage` INT DEFAULT 0,
+  `status_id` INT NOT NULL,
   PRIMARY KEY (`motor_id`),
-  INDEX `fk_motors_motor_category1_idx` (`motor_category_id` ASC) VISIBLE,
-  CONSTRAINT `fk_motors_motor_category1`
-    FOREIGN KEY (`motor_category_id`)
-    REFERENCES `mydb`.`motor_category` (`motor_category_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
+  FOREIGN KEY (`motor_category_id`) REFERENCES `motor_category`(`motor_category_id`),
+  FOREIGN KEY (`status_id`) REFERENCES `vehicle_status`(`status_id`)
+) ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table `mydb`.`vehicles`
+-- Table `vehicles`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`vehicles` (
+CREATE TABLE IF NOT EXISTS `vehicles` (
   `vehicle_id` INT NOT NULL AUTO_INCREMENT,
   `vehicle_type` ENUM('car', 'motor') NOT NULL,
   `item_id` INT NOT NULL,
   PRIMARY KEY (`vehicle_id`),
-  UNIQUE INDEX `vehicle_type_UNIQUE` (`vehicle_type` ASC) VISIBLE,
-  UNIQUE INDEX `item_id_UNIQUE` (`item_id` ASC) VISIBLE)
-ENGINE = InnoDB;
-
+  UNIQUE KEY `unique_vehicle` (`vehicle_type`, `item_id`)
+) ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table `mydb`.`checklist`
+-- Table `customers`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`checklist` (
-  `checklist_id` INT NOT NULL,
-  `inspection_date` DATE NOT NULL,
-  `inspection_type` ENUM('before_rent', 'after_rent') NOT NULL,
-  `windows_condition` TINYINT NULL,
-  `tires_condition` TINYINT NULL,
-  `lights_condition` TINYINT NULL,
-  `engine_condition` TINYINT NULL,
-  `checklistcol` TINYINT NOT NULL,
-  `notes` VARCHAR(45) NULL,
-  `vehicle_id` INT NOT NULL,
-  PRIMARY KEY (`checklist_id`),
-  INDEX `fk_checklist_vehicles1_idx` (`vehicle_id` ASC) VISIBLE,
-  CONSTRAINT `fk_checklist_vehicles1`
-    FOREIGN KEY (`vehicle_id`)
-    REFERENCES `mydb`.`vehicles` (`vehicle_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`customers`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`customers` (
-  `customer_id` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `customers` (
+  `customer_id` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(45) NOT NULL,
   `last_name` VARCHAR(45) NOT NULL,
-  `date_of_birth` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `phone` VARCHAR(45) NULL,
-  `address` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`customer_id`))
-ENGINE = InnoDB;
-
+  `date_of_birth` DATE NOT NULL,
+  `email` VARCHAR(100) NOT NULL UNIQUE,
+  `phone` VARCHAR(20),
+  `address` VARCHAR(255) NOT NULL,
+  `license_number` VARCHAR(50),
+  `license_expiry` DATE,
+  PRIMARY KEY (`customer_id`)
+) ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table `mydb`.`rental_rate`
+-- Table `rental_rate`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`rental_rate` (
-  `rate_id` INT NOT NULL,
-  `rate_per_hour` VARCHAR(45) NULL,
+CREATE TABLE IF NOT EXISTS `rental_rate` (
+  `rate_id` INT NOT NULL AUTO_INCREMENT,
   `vehicle_id` INT NOT NULL,
+  `rate_per_hour` DECIMAL(10,2) NOT NULL,
+  `rate_per_day` DECIMAL(10,2),
+  `security_deposit` DECIMAL(10,2) NOT NULL,
+  `effective_date` DATE NOT NULL,
   PRIMARY KEY (`rate_id`),
-  INDEX `fk_rental_rate_vehicles1_idx` (`vehicle_id` ASC) VISIBLE,
-  CONSTRAINT `fk_rental_rate_vehicles1`
-    FOREIGN KEY (`vehicle_id`)
-    REFERENCES `mydb`.`vehicles` (`vehicle_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
+  FOREIGN KEY (`vehicle_id`) REFERENCES `vehicles`(`vehicle_id`)
+) ENGINE = InnoDB;
 
 -- -----------------------------------------------------
--- Table `mydb`.`rentals`
+-- Table `reservation`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`rentals` (
-  `rental_id` INT NOT NULL,
-  `start_date` DATETIME NULL,
-  `end_date` DATETIME NULL,
+CREATE TABLE IF NOT EXISTS `reservation` (
+  `reservation_id` INT NOT NULL AUTO_INCREMENT,
   `customer_id` INT NOT NULL,
   `vehicle_id` INT NOT NULL,
-  `status` ENUM('active', 'completed', 'cancelled') NULL,
-  PRIMARY KEY (`rental_id`),
-  INDEX `fk_rentals_customers1_idx` (`customer_id` ASC) VISIBLE,
-  INDEX `fk_rentals_vehicles1_idx` (`vehicle_id` ASC) VISIBLE,
-  CONSTRAINT `fk_rentals_customers1`
-    FOREIGN KEY (`customer_id`)
-    REFERENCES `mydb`.`customers` (`customer_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_rentals_vehicles1`
-    FOREIGN KEY (`vehicle_id`)
-    REFERENCES `mydb`.`vehicles` (`vehicle_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  `start_datetime` DATETIME NOT NULL,
+  `end_datetime` DATETIME NOT NULL,
+  `total_amount` DECIMAL(10,2),
+  `reservation_status_id` INT NOT NULL,
+  PRIMARY KEY (`reservation_id`),
+  FOREIGN KEY (`customer_id`) REFERENCES `customers`(`customer_id`),
+  FOREIGN KEY (`vehicle_id`) REFERENCES `vehicles`(`vehicle_id`),
+  FOREIGN KEY (`reservation_status_id`) REFERENCES `reservation_status`(`reservation_status_id`)
+) ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `rentals`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `rentals` (
+  `rental_id` INT NOT NULL AUTO_INCREMENT,
+  `reservation_id` INT NULL,
+  `start_date` DATETIME NOT NULL,
+  `end_date` DATETIME NOT NULL,
+  `actual_return_date` DATETIME,
+  `customer_id` INT NOT NULL,
+  `vehicle_id` INT NOT NULL,
+  `total_amount` DECIMAL(10,2),
+  `security_deposit` DECIMAL(10,2),
+  `rental_status_id` INT NOT NULL,
+  PRIMARY KEY (`rental_id`),
+  FOREIGN KEY (`customer_id`) REFERENCES `customers`(`customer_id`),
+  FOREIGN KEY (`vehicle_id`) REFERENCES `vehicles`(`vehicle_id`),
+  FOREIGN KEY (`reservation_id`) REFERENCES `reservation`(`reservation_id`),
+  FOREIGN KEY (`rental_status_id`) REFERENCES `rental_status`(`rental_status_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `payment`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `payment` (
+  `payment_id` INT NOT NULL AUTO_INCREMENT,
+  `rental_id` INT NOT NULL,
+  `amount` DECIMAL(10,2) NOT NULL,
+  `payment_status_id` INT NOT NULL,
+  `method_id` INT NOT NULL,
+  `paid_at` DATETIME,
+  PRIMARY KEY (`payment_id`),
+  FOREIGN KEY (`rental_id`) REFERENCES `rentals`(`rental_id`),
+  FOREIGN KEY (`payment_status_id`) REFERENCES `payment_status`(`payment_status_id`),
+  FOREIGN KEY (`method_id`) REFERENCES `payment_methods`(`method_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `penalty`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `penalty` (
+  `penalty_id` INT NOT NULL AUTO_INCREMENT,
+  `rental_id` INT NOT NULL,
+  `description` TEXT NOT NULL,
+  `amount` DECIMAL(10,2) NOT NULL,
+  `is_paid` BOOLEAN DEFAULT FALSE,
+  PRIMARY KEY (`penalty_id`),
+  FOREIGN KEY (`rental_id`) REFERENCES `rentals`(`rental_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `checklist`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `checklist` (
+  `checklist_id` INT NOT NULL AUTO_INCREMENT,
+  `rental_id` INT NOT NULL,
+  `inspection_date` DATE NOT NULL,
+  `inspection_type_id` INT NOT NULL,
+  `windows_condition` TINYINT,
+  `tires_condition` TINYINT,
+  `lights_condition` TINYINT,
+  `engine_condition` TINYINT,
+  `notes` VARCHAR(100),
+  `vehicle_id` INT NOT NULL,
+  PRIMARY KEY (`checklist_id`),
+  FOREIGN KEY (`vehicle_id`) REFERENCES `vehicles`(`vehicle_id`),
+  FOREIGN KEY (`rental_id`) REFERENCES `rentals`(`rental_id`),
+  FOREIGN KEY (`inspection_type_id`) REFERENCES `inspection_types`(`inspection_type_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `maintenance`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `maintenance` (
+  `maintenance_id` INT NOT NULL AUTO_INCREMENT,
+  `vehicle_id` INT NOT NULL,
+  `maintenance_type` VARCHAR(100) NOT NULL,
+  `start_date` DATE NOT NULL,
+  `end_date` DATE,
+  `cost` DECIMAL(10,2),
+  `description` TEXT,
+  `service_provider` VARCHAR(100),
+  `maintenance_status_id` INT NOT NULL,
+  PRIMARY KEY (`maintenance_id`),
+  FOREIGN KEY (`vehicle_id`) REFERENCES `vehicles`(`vehicle_id`),
+  FOREIGN KEY (`maintenance_status_id`) REFERENCES `maintenance_status`(`maintenance_status_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `user`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `user` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(50) NOT NULL UNIQUE,
+  `password_hash` TEXT NOT NULL,
+  `role_id` INT NOT NULL,
+  PRIMARY KEY (`user_id`),
+  FOREIGN KEY (`role_id`) REFERENCES `user_roles`(`role_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `terms_and_policies`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `terms_and_policies` (
+  `terms_id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(255) NOT NULL,
+  `content` TEXT NOT NULL,
+  `version` VARCHAR(10) NOT NULL,
+  `effective_date` DATE NOT NULL,
+  PRIMARY KEY (`terms_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `sales_report`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sales_report` (
+  `report_id` INT NOT NULL AUTO_INCREMENT,
+  `report_date` DATE NOT NULL,
+  `total_earnings` DECIMAL(12,2) NOT NULL,
+  `total_rentals` INT DEFAULT 0,
+  `total_penalties` DECIMAL(12,2) DEFAULT 0,
+  `generated_by` INT NOT NULL,
+  PRIMARY KEY (`report_id`),
+  FOREIGN KEY (`generated_by`) REFERENCES `user`(`user_id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Insert lookup table data
+-- -----------------------------------------------------
+INSERT INTO `transmission_types` (`transmission_type`) VALUES
+('manual'),
+('automatic'),
+('cvt');
+
+INSERT INTO `fuel_types` (`fuel_type`) VALUES
+('gasoline'),
+('diesel'),
+('electric'),
+('hybrid');
+
+INSERT INTO `vehicle_status` (`status_name`) VALUES
+('available'),
+('rented'),
+('reserved'),
+('under_maintenance'),
+('out_of_service'),
+('cleaning'),
+('damaged');
+
+INSERT INTO `payment_methods` (`method_name`) VALUES
+('cash'),
+('gcash'),
+('card');
+
+INSERT INTO `payment_status` (`status_name`) VALUES
+('paid'),
+('processing'),
+('down_payment');
+
+INSERT INTO `rental_status` (`status_name`) VALUES
+('active'),
+('completed'),
+('cancelled');
+
+INSERT INTO `reservation_status` (`status_name`) VALUES
+('pending'),
+('confirmed'),
+('cancelled');
+
+INSERT INTO `maintenance_status` (`status_name`) VALUES
+('scheduled'),
+('in_progress'),
+('completed');
+
+INSERT INTO `user_roles` (`role_name`) VALUES
+('admin'),
+('staff');
+
+INSERT INTO `inspection_types` (`inspection_type_name`) VALUES
+('before_rent'),
+('after_rent');
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
