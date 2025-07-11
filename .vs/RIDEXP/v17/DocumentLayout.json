@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\3RD SEM\\FUNDAMENTALS\\VBNET\\RIDEXP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|c:\\users\\admin\\desktop\\3rd sem\\fundamentals\\vbnet\\ridexp\\ridexp\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|solutionrelative:ridexp\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|c:\\users\\admin\\desktop\\3rd sem\\fundamentals\\vbnet\\ridexp\\ridexp\\ridexp.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|solutionrelative:ridexp\\ridexp.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|c:\\users\\admin\\desktop\\3rd sem\\fundamentals\\vbnet\\ridexp\\ridexp\\signup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|solutionrelative:ridexp\\signup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|c:\\users\\admin\\desktop\\3rd sem\\fundamentals\\vbnet\\ridexp\\ridexp\\signup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|solutionrelative:ridexp\\signup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|c:\\users\\admin\\desktop\\3rd sem\\fundamentals\\vbnet\\ridexp\\ridexp\\logjn.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|solutionrelative:ridexp\\logjn.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|c:\\users\\admin\\desktop\\3rd sem\\fundamentals\\vbnet\\ridexp\\ridexp\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|solutionrelative:ridexp\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|c:\\users\\admin\\desktop\\3rd sem\\fundamentals\\vbnet\\ridexp\\ridexp\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|solutionrelative:ridexp\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|c:\\users\\admin\\desktop\\3rd sem\\fundamentals\\vbnet\\ridexp\\ridexp\\logjn.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|solutionrelative:ridexp\\logjn.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|c:\\users\\admin\\desktop\\3rd sem\\fundamentals\\vbnet\\ridexp\\ridexp\\signup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|solutionrelative:ridexp\\signup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|c:\\users\\admin\\desktop\\3rd sem\\fundamentals\\vbnet\\ridexp\\ridexp\\ridexp.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{367E24B8-F330-4B6C-AF67-421D16352F22}|RIDEXP\\RIDEXP.vbproj|solutionrelative:ridexp\\ridexp.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Logjn.vb",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\3RD SEM\\FUNDAMENTALS\\VBNET\\RIDEXP\\RIDEXP\\Logjn.vb",
+              "RelativeDocumentMoniker": "RIDEXP\\Logjn.vb",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\3RD SEM\\FUNDAMENTALS\\VBNET\\RIDEXP\\RIDEXP\\Logjn.vb",
+              "RelativeToolTip": "RIDEXP\\Logjn.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-11T01:42:31.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "RIDEXP",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\3RD SEM\\FUNDAMENTALS\\VBNET\\RIDEXP\\RIDEXP\\RIDEXP.vbproj",
               "RelativeDocumentMoniker": "RIDEXP\\RIDEXP.vbproj",
@@ -49,19 +66,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "SIGNUP.vb",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\3RD SEM\\FUNDAMENTALS\\VBNET\\RIDEXP\\RIDEXP\\SIGNUP.vb",
               "RelativeDocumentMoniker": "RIDEXP\\SIGNUP.vb",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\3RD SEM\\FUNDAMENTALS\\VBNET\\RIDEXP\\RIDEXP\\SIGNUP.vb",
               "RelativeToolTip": "RIDEXP\\SIGNUP.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-10T02:56:26.985Z"
+              "WhenOpened": "2025-07-10T02:56:26.985Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "SIGNUP.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\3RD SEM\\FUNDAMENTALS\\VBNET\\RIDEXP\\RIDEXP\\SIGNUP.vb",
               "RelativeDocumentMoniker": "RIDEXP\\SIGNUP.vb",
@@ -79,14 +97,14 @@
               "RelativeDocumentMoniker": "RIDEXP\\Form1.vb",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\3RD SEM\\FUNDAMENTALS\\VBNET\\RIDEXP\\RIDEXP\\Form1.vb",
               "RelativeToolTip": "RIDEXP\\Form1.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-07-10T02:32:39.497Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Logjn.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\3RD SEM\\FUNDAMENTALS\\VBNET\\RIDEXP\\RIDEXP\\Logjn.vb",
               "RelativeDocumentMoniker": "RIDEXP\\Logjn.vb",
@@ -98,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Form1.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\3RD SEM\\FUNDAMENTALS\\VBNET\\RIDEXP\\RIDEXP\\Form1.vb",
               "RelativeDocumentMoniker": "RIDEXP\\Form1.vb",

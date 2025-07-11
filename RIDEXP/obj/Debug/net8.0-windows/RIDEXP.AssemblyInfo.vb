@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("RIDEXP"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+189d2a7b86c6fb3acb8c4f8661235d6b99d4755d"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7562cf55535c82930f43f5b7cf97ca6367de32a8"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("RIDEXP"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("RIDEXP"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

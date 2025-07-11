@@ -42,7 +42,11 @@ Partial Class SIGNUP
         PictureBox1 = New PictureBox()
         Label9 = New Label()
         Panel3 = New Panel()
+        Button3 = New Button()
         PictureBox2 = New PictureBox()
+        btnCONTACT = New Button()
+        btnRENTALS = New Button()
+        btnHOME = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -68,9 +72,9 @@ Partial Class SIGNUP
         Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(TextBox1)
         Panel1.Controls.Add(Label2)
-        Panel1.Location = New Point(633, 258)
+        Panel1.Location = New Point(633, 301)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(647, 749)
+        Panel1.Size = New Size(647, 706)
         Panel1.TabIndex = 0
         ' 
         ' Button1
@@ -237,7 +241,7 @@ Partial Class SIGNUP
         ' 
         PictureBox1.BackColor = Color.Transparent
         PictureBox1.Image = My.Resources.Resources.RideX
-        PictureBox1.Location = New Point(3, -40)
+        PictureBox1.Location = New Point(3, -28)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(207, 182)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -250,7 +254,7 @@ Partial Class SIGNUP
         Label9.BackColor = Color.Transparent
         Label9.Font = New Font("Reesha", 72F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label9.Location = New Point(655, 96)
+        Label9.Location = New Point(680, 129)
         Label9.Name = "Label9"
         Label9.Size = New Size(600, 144)
         Label9.TabIndex = 3
@@ -258,25 +262,87 @@ Partial Class SIGNUP
         ' 
         ' Panel3
         ' 
+        Panel3.Controls.Add(Button3)
         Panel3.Controls.Add(PictureBox2)
+        Panel3.Controls.Add(btnCONTACT)
+        Panel3.Controls.Add(btnRENTALS)
+        Panel3.Controls.Add(btnHOME)
         Panel3.Controls.Add(PictureBox1)
         Panel3.Dock = DockStyle.Top
         Panel3.Location = New Point(0, 0)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(1920, 111)
+        Panel3.Size = New Size(1920, 136)
         Panel3.TabIndex = 4
+        ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button3.FlatStyle = FlatStyle.Flat
+        Button3.Font = New Font("Reesha", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(1452, 24)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(328, 76)
+        Button3.TabIndex = 19
+        Button3.Text = "BOOK NOW"
+        Button3.TextAlign = ContentAlignment.TopCenter
+        Button3.UseVisualStyleBackColor = False
         ' 
         ' PictureBox2
         ' 
         PictureBox2.BackColor = Color.Transparent
         PictureBox2.BackgroundImage = My.Resources.Resources.USER_LOGO
         PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox2.Location = New Point(1811, 25)
+        PictureBox2.Location = New Point(1799, 27)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(67, 66)
+        PictureBox2.Size = New Size(79, 73)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.TabIndex = 5
+        PictureBox2.TabIndex = 18
         PictureBox2.TabStop = False
+        ' 
+        ' btnCONTACT
+        ' 
+        btnCONTACT.BackColor = Color.Transparent
+        btnCONTACT.FlatStyle = FlatStyle.Flat
+        btnCONTACT.Font = New Font("Reesha", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnCONTACT.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnCONTACT.ImageAlign = ContentAlignment.TopCenter
+        btnCONTACT.Location = New Point(785, 33)
+        btnCONTACT.Name = "btnCONTACT"
+        btnCONTACT.Size = New Size(354, 65)
+        btnCONTACT.TabIndex = 17
+        btnCONTACT.Text = "CONTACT US"
+        btnCONTACT.TextAlign = ContentAlignment.TopCenter
+        btnCONTACT.UseVisualStyleBackColor = False
+        ' 
+        ' btnRENTALS
+        ' 
+        btnRENTALS.BackColor = Color.Transparent
+        btnRENTALS.FlatStyle = FlatStyle.Flat
+        btnRENTALS.Font = New Font("Reesha", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnRENTALS.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnRENTALS.ImageAlign = ContentAlignment.TopCenter
+        btnRENTALS.Location = New Point(415, 33)
+        btnRENTALS.Name = "btnRENTALS"
+        btnRENTALS.Size = New Size(354, 65)
+        btnRENTALS.TabIndex = 16
+        btnRENTALS.Text = "OUR RENTALS"
+        btnRENTALS.TextAlign = ContentAlignment.TopCenter
+        btnRENTALS.UseVisualStyleBackColor = False
+        ' 
+        ' btnHOME
+        ' 
+        btnHOME.BackColor = Color.Transparent
+        btnHOME.FlatStyle = FlatStyle.Flat
+        btnHOME.Font = New Font("Reesha", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnHOME.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnHOME.Location = New Point(240, 33)
+        btnHOME.Name = "btnHOME"
+        btnHOME.Size = New Size(160, 65)
+        btnHOME.TabIndex = 15
+        btnHOME.Text = "HOME"
+        btnHOME.TextAlign = ContentAlignment.TopCenter
+        btnHOME.UseVisualStyleBackColor = False
         ' 
         ' SIGNUP
         ' 
@@ -321,5 +387,9 @@ Partial Class SIGNUP
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents Button3 As Button
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents btnCONTACT As Button
+    Friend WithEvents btnRENTALS As Button
+    Friend WithEvents btnHOME As Button
 End Class

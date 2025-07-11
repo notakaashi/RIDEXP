@@ -31,6 +31,12 @@ Partial Class Logjn
         Label2 = New Label()
         TextBox1 = New TextBox()
         Label1 = New Label()
+        btnCONTACT = New Button()
+        btnRENTALS = New Button()
+        btnHOME = New Button()
+        Button3 = New Button()
+        PictureBox1 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label5
@@ -39,7 +45,7 @@ Partial Class Logjn
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label5.Location = New Point(123, 624)
+        Label5.Location = New Point(123, 662)
         Label5.Name = "Label5"
         Label5.Size = New Size(360, 36)
         Label5.TabIndex = 8
@@ -49,13 +55,14 @@ Partial Class Logjn
         ' 
         Button2.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Speeday", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.Font = New Font("Reesha", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(170, 705)
+        Button2.Location = New Point(163, 769)
         Button2.Name = "Button2"
         Button2.Size = New Size(268, 72)
         Button2.TabIndex = 7
         Button2.Text = "SIGN UP"
+        Button2.TextAlign = ContentAlignment.TopCenter
         Button2.UseVisualStyleBackColor = False
         ' 
         ' Label4
@@ -63,7 +70,7 @@ Partial Class Logjn
         Label4.AutoSize = True
         Label4.Font = New Font("Futura Hv BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label4.Location = New Point(170, 673)
+        Label4.Location = New Point(170, 734)
         Label4.Name = "Label4"
         Label4.Size = New Size(261, 20)
         Label4.TabIndex = 6
@@ -73,13 +80,14 @@ Partial Class Logjn
         ' 
         Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Speeday", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Reesha", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(163, 549)
+        Button1.Location = New Point(163, 578)
         Button1.Name = "Button1"
         Button1.Size = New Size(268, 72)
         Button1.TabIndex = 5
         Button1.Text = "SIGN IN"
+        Button1.TextAlign = ContentAlignment.TopCenter
         Button1.UseVisualStyleBackColor = False
         ' 
         ' Label3
@@ -126,13 +134,83 @@ Partial Class Logjn
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Speeday", 47.9999962F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Reesha", 60F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label1.Location = New Point(109, 175)
+        Label1.Location = New Point(92, 147)
         Label1.Name = "Label1"
-        Label1.Size = New Size(380, 96)
+        Label1.Size = New Size(440, 120)
         Label1.TabIndex = 0
         Label1.Text = "SIGN IN"
+        ' 
+        ' btnCONTACT
+        ' 
+        btnCONTACT.BackColor = Color.Transparent
+        btnCONTACT.FlatStyle = FlatStyle.Flat
+        btnCONTACT.Font = New Font("Reesha", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnCONTACT.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnCONTACT.ImageAlign = ContentAlignment.TopCenter
+        btnCONTACT.Location = New Point(872, 29)
+        btnCONTACT.Name = "btnCONTACT"
+        btnCONTACT.Size = New Size(354, 65)
+        btnCONTACT.TabIndex = 12
+        btnCONTACT.Text = "CONTACT US"
+        btnCONTACT.TextAlign = ContentAlignment.TopCenter
+        btnCONTACT.UseVisualStyleBackColor = False
+        ' 
+        ' btnRENTALS
+        ' 
+        btnRENTALS.BackColor = Color.Transparent
+        btnRENTALS.FlatStyle = FlatStyle.Flat
+        btnRENTALS.Font = New Font("Reesha", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnRENTALS.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnRENTALS.ImageAlign = ContentAlignment.TopCenter
+        btnRENTALS.Location = New Point(502, 29)
+        btnRENTALS.Name = "btnRENTALS"
+        btnRENTALS.Size = New Size(354, 65)
+        btnRENTALS.TabIndex = 11
+        btnRENTALS.Text = "OUR RENTALS"
+        btnRENTALS.TextAlign = ContentAlignment.TopCenter
+        btnRENTALS.UseVisualStyleBackColor = False
+        ' 
+        ' btnHOME
+        ' 
+        btnHOME.BackColor = Color.Transparent
+        btnHOME.FlatStyle = FlatStyle.Flat
+        btnHOME.Font = New Font("Reesha", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnHOME.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnHOME.Location = New Point(327, 29)
+        btnHOME.Name = "btnHOME"
+        btnHOME.Size = New Size(160, 65)
+        btnHOME.TabIndex = 10
+        btnHOME.Text = "HOME"
+        btnHOME.TextAlign = ContentAlignment.TopCenter
+        btnHOME.UseVisualStyleBackColor = False
+        ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button3.FlatStyle = FlatStyle.Flat
+        Button3.Font = New Font("Reesha", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(1433, 29)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(328, 76)
+        Button3.TabIndex = 14
+        Button3.Text = "BOOK NOW"
+        Button3.TextAlign = ContentAlignment.TopCenter
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = Color.Transparent
+        PictureBox1.BackgroundImage = My.Resources.Resources.USER_LOGO
+        PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
+        PictureBox1.Location = New Point(1782, 29)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(79, 73)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 13
+        PictureBox1.TabStop = False
         ' 
         ' Logjn
         ' 
@@ -141,6 +219,11 @@ Partial Class Logjn
         BackgroundImage = My.Resources.Resources.RIDEXPRESS__4_
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1902, 1033)
+        Controls.Add(Button3)
+        Controls.Add(PictureBox1)
+        Controls.Add(btnCONTACT)
+        Controls.Add(btnRENTALS)
+        Controls.Add(btnHOME)
         Controls.Add(Label5)
         Controls.Add(Button2)
         Controls.Add(Label4)
@@ -155,6 +238,7 @@ Partial Class Logjn
         Name = "Logjn"
         Text = "Logjn"
         WindowState = FormWindowState.Maximized
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -167,4 +251,10 @@ Partial Class Logjn
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnCONTACT As Button
+    Friend WithEvents btnRENTALS As Button
+    Friend WithEvents btnHOME As Button
+    Friend WithEvents Button3 As Button
 End Class
