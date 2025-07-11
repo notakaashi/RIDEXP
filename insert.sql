@@ -13,61 +13,47 @@ INSERT INTO `payment_methods` (`method_name`) VALUES
 INSERT INTO `user_roles` (`role_name`) VALUES
 ('customer');
 
--- Insert car categories (typical Filipino car categories)
-INSERT INTO `car_category` (`category_name`, `description`, `transmission_id`, `fuel_id`) VALUES
-('Compact Sedan', 'Popular entry-level sedans for daily driving', 1, 1),
-('Subcompact', 'Small cars perfect for city driving and parking', 1, 1),
-('Mid-size Sedan', 'Comfortable sedans for longer trips', 2, 1),
-('Full-size Sedan', 'Premium sedans with more space', 2, 1),
-('SUV', 'Sport Utility Vehicles for families', 2, 1),
-('Hatchback', 'Compact cars with flexible cargo space', 1, 1),
-('Electric', 'Eco-friendly electric vehicles', 2, 3),
-('Hybrid', 'Fuel-efficient hybrid vehicles', 2, 4);
+INSERT INTO car_category (category_name, description, transmission_id, fuel_id) VALUES
+('Compact Sedan CVT', 'CVT sedans for city driving', 3, 1),
+('MPV Automatic', 'Automatic multi-purpose vehicles', 2, 1),
+('SUV Diesel Automatic', 'Diesel automatic sport utility vehicles', 2, 2),
+('SUV Gasoline Automatic', 'Gasoline automatic sport utility vehicles', 2, 1),
+('Hatchback CVT', 'CVT compact hatchback cars', 3, 1),
+('Hybrid CVT', 'CVT fuel-efficient hybrid sedans', 3, 4);
 
--- Insert motor categories (typical Filipino motorcycle categories)
-INSERT INTO `motor_category` (`category_name`, `description`, `transmission_id`, `fuel_id`, `engine_capacity`) VALUES
-('Scooter', 'Automatic scooters perfect for city commuting', 2, 1, '125cc-150cc'),
-('Underbone', 'Sport-style underbone motorcycles', 1, 1, '150cc'),
-('Naked', 'Naked sport bikes for enthusiasts', 1, 1, '150cc'),
-('Enduro', 'Dual-sport motorcycles for city and off-road', 1, 1, '125cc'),
-('Standard', 'Basic motorcycles for everyday use', 1, 1, '150cc');
+-- Insert Motor Categories (based on real motorcycle classifications)
+INSERT INTO motor_category (category_name, description, transmission_id, fuel_id, engine_capacity) VALUES
+('Scooter CVT', 'CVT automatic scooters', 3, 1, '110-125cc'),
+('Sport Scooter CVT', 'CVT performance scooters', 3, 1, '155cc'),
+('Underbone Semi-Auto', 'Semi-automatic underbone motorcycles', 2, 1, '125cc'),
+('Sport Manual', 'Manual sport motorcycles', 1, 1, '150cc'),
+('Adventure CVT', 'CVT adventure-style scooters', 3, 1, '160cc');
 
--- Insert sample cars (typical Filipino go-to vehicles)
-INSERT INTO `cars` (`car_category_id`, `make`, `model_name`, `year`, `license_plate`, `color`, `seating_capacity`, `mileage`, `status_id`) VALUES
-(1, 'Toyota', 'Vios', 2022, 'ABC-1234', 'White', 5, 15000, 1),
-(1, 'Toyota', 'Vios', 2023, 'DEF-5678', 'Silver', 5, 8000, 1),
-(1, 'Honda', 'City', 2022, 'GHI-9012', 'Blue', 5, 12000, 1),
-(1, 'Honda', 'City', 2023, 'JKL-3456', 'Red', 5, 5000, 1),
-(2, 'Nissan', 'Almera', 2022, 'MNO-7890', 'Black', 5, 18000, 1),
-(2, 'Mitsubishi', 'Mirage', 2023, 'PQR-1234', 'Gray', 5, 10000, 1),
-(2, 'Suzuki', 'Swift', 2022, 'STU-5678', 'White', 5, 20000, 1),
-(3, 'Honda', 'Civic', 2022, 'VWX-9012', 'Black', 5, 15000, 1),
-(3, 'Honda', 'Civic', 2023, 'YZA-3456', 'Silver', 5, 12000, 1),
-(3, 'Toyota', 'Altis', 2023, 'BCD-7890', 'Blue', 5, 8000, 1),
-(4, 'Honda', 'Accord', 2022, 'EFG-1234', 'White', 5, 25000, 1),
-(4, 'Toyota', 'Camry', 2023, 'HIJ-5678', 'Black', 5, 15000, 1),
-(5, 'Honda', 'CR-V', 2022, 'KLM-9012', 'Silver', 7, 30000, 1),
-(5, 'Toyota', 'Fortuner', 2023, 'NOP-3456', 'White', 7, 18000, 1),
-(5, 'Mitsubishi', 'Montero Sport', 2022, 'QRS-7890', 'Gray', 7, 22000, 1);
+-- Insert Cars (10 vehicles - one per model)
+INSERT INTO cars (car_category_id, make, model_name, year, license_plate, color, seating_capacity, mileage, status_id) VALUES
+(1, 'Toyota', 'Vios 1.3 XE CVT', 2023, 'ABC-1234', 'Red Mica Metallic', 5, 15000, 1),
+(2, 'Mitsubishi', 'Xpander GLS AT', 2022, 'DEF-2345', 'Jet Black Mica', 7, 22000, 1),
+(2, 'Toyota', 'Innova 2.8 E Diesel AT', 2021, 'GHI-3456', 'White Pearl', 8, 35000, 1),
+(2, 'Suzuki', 'Ertiga GL 1.5 AT', 2023, 'JKL-4567', 'Snow White', 7, 18000, 1),
+(1, 'Honda', 'City 1.5 S CVT', 2022, 'MNO-5678', 'Ignite Red', 5, 28000, 1),
+(3, 'Toyota', 'Fortuner 2.4 G Diesel 4x2 AT', 2021, 'PQR-6789', 'Attitude Black', 7, 45000, 1),
+(5, 'Suzuki', 'Swift GL 1.2 CVT', 2023, 'STU-7890', 'Burning Red', 5, 12000, 1),
+(2, 'Honda', 'BR-V 1.5 VX CVT', 2022, 'VWX-8901', 'Crystal Black', 7, 25000, 1),
+(6, 'Toyota', 'Corolla Altis 1.8 Hybrid CVT', 2023, 'YZA-9012', 'White Pearl', 5, 8000, 1),
+(4, 'Toyota', 'Rush 1.5 G AT', 2022, 'BCD-0123', 'Silver Mica Metallic', 7, 32000, 1);
 
--- Insert sample motors (typical Filipino motorcycles/scooters)
-INSERT INTO `motors` (`motor_category_id`, `make`, `model`, `year`, `license_plate`, `color`, `mileage`, `status_id`) VALUES
-(1, 'Yamaha', 'Mio i 125', 2022, 'M001-ABC', 'White', 8000, 1),
-(1, 'Yamaha', 'Mio i 125', 2023, 'M002-DEF', 'Blue', 5000, 1),
-(1, 'Honda', 'Click 150i', 2022, 'M003-GHI', 'Red', 12000, 1),
-(1, 'Honda', 'Click 150i', 2023, 'M004-JKL', 'Black', 6000, 1),
-(1, 'Yamaha', 'NMAX', 2022, 'M005-MNO', 'Gray', 10000, 1),
-(1, 'Yamaha', 'NMAX', 2023, 'M006-PQR', 'White', 3000, 1),
-(1, 'Honda', 'PCX 150', 2022, 'M007-STU', 'Silver', 15000, 1),
-(1, 'Honda', 'PCX 150', 2023, 'M008-VWX', 'Blue', 8000, 1),
-(2, 'Yamaha', 'Sniper 150', 2022, 'M009-YZA', 'Red', 12000, 1),
-(2, 'Honda', 'RS150', 2023, 'M010-BCD', 'Black', 5000, 1),
-(3, 'Honda', 'CB150R', 2022, 'M011-EFG', 'Orange', 18000, 1),
-(3, 'Yamaha', 'MT-15', 2023, 'M012-HIJ', 'Blue', 7000, 1),
-(4, 'Honda', 'XRM 125', 2022, 'M013-KLM', 'Red', 20000, 1),
-(4, 'Yamaha', 'XTZ 125', 2023, 'M014-NOP', 'Green', 15000, 1),
-(5, 'Suzuki', 'Raider R150', 2022, 'M015-QRS', 'Blue', 25000, 1);
-
+-- Insert Motors (10 vehicles - one per model)
+INSERT INTO motors (motor_category_id, make, model, year, license_plate, color, mileage, status_id) VALUES
+(1, 'Yamaha', 'Mio Sporty', 2023, 'EFG-1134', 'Matte Blue', 8500, 1),
+(2, 'Yamaha', 'Mio Aerox 155 S', 2022, 'HIJ-1235', 'Black Raven', 12000, 1),
+(3, 'Honda', 'Click 125i', 2023, 'KLM-1336', 'Red', 6500, 1),
+(1, 'Honda', 'BeAT Premium ISS/CBS', 2022, 'NOP-1437', 'Matte Black', 11000, 1),
+(1, 'Honda', 'Genio', 2023, 'QRS-1538', 'Blue', 4200, 1),
+(3, 'Honda', 'Super Cub C125', 2021, 'TUV-1639', 'Pearl Niltava Blue', 15000, 1),
+(4, 'Suzuki', 'Raider R150 Fi', 2022, 'WXY-1740', 'Blue', 18000, 1),
+(4, 'Kawasaki', 'Barako III', 2021, 'ZAB-1841', 'Black', 25000, 1),
+(2, 'Yamaha', 'NMAX 155 Standard', 2023, 'CDE-1942', 'Phantom Blue', 7800, 1),
+(5, 'Honda', 'ADV 160', 2022, 'FGH-2043', 'Matte Gunpowder Black', 13500, 1);
 -- Insert vehicles (linking cars and motors to unified vehicle table)
 -- Cars
 INSERT INTO `vehicles` (`vehicle_type`, `item_id`) VALUES
@@ -112,9 +98,7 @@ INSERT INTO `terms_and_policies` (`title`, `content`, `version`, `effective_date
 
 5. DATA RETENTION: We retain your information for as long as necessary to provide services and comply with legal requirements.
 
-6. YOUR RIGHTS: You may request access to, correction of, or deletion of your personal information.
-
-7. CONTACT: For privacy-related questions, contact us at privacy@ridexp.com', 
+6. YOUR RIGHTS: You may request access to, correction of, or deletion of your personal information.', 
 '1.0', '2024-01-01'),
 
 ('Cancellation Policy', 
@@ -131,14 +115,13 @@ INSERT INTO `terms_and_policies` (`title`, `content`, `version`, `effective_date
 6. WEATHER CANCELLATIONS: In case of severe weather conditions, we may cancel rentals for safety reasons with full refund.', 
 '1.0', '2024-01-01'),
 
-('Damage and Liability Policy', 
-'1. DAMAGE ASSESSMENT: All vehicles are inspected before and after rental. Any new damage will be documented and charged to the renter.
+('Damage and Liability Policy',  '1. DAMAGE ASSESSMENT: All vehicles are inspected before and after rental. Any new damage will be documented and charged to the renter.
 
 2. MINOR DAMAGE: Small scratches, dents, or interior stains may result in repair charges ranging from PHP 1,000 to PHP 10,000.
 
 3. MAJOR DAMAGE: Significant damage may result in charges up to the full value of the vehicle.
 
-4. THEFT PROTECTION: In case of vehicle theft, the renter may be liable for the full value of the vehicle unless comprehensive insurance was purchased.
+4. THEFT PROTECTION: In case of vehicle theft, the renter may be liable for the full value of the vehicle.
 
 5. ACCIDENT PROCEDURES: In case of an accident, immediately contact local authorities and our 24-hour emergency hotline.
 
@@ -146,3 +129,60 @@ INSERT INTO `terms_and_policies` (`title`, `content`, `version`, `effective_date
 
 7. DISPUTE RESOLUTION: Any disputes regarding damage charges will be resolved through our internal review process.', 
 '1.0', '2024-01-01');
+
+
+-- -----------------------------------------------------
+-- Insert lookup table data
+-- -----------------------------------------------------
+INSERT INTO `transmission_types` (`transmission_type`) VALUES
+('manual'),
+('automatic'),
+('cvt');
+
+INSERT INTO `fuel_types` (`fuel_type`) VALUES
+('gasoline'),
+('diesel'),
+('electric'),
+('hybrid');
+
+INSERT INTO `vehicle_status` (`status_name`) VALUES
+('available'),
+('rented'),
+('reserved'),
+('under_maintenance'),
+('out_of_service'),
+('cleaning'),
+('damaged');
+
+INSERT INTO `payment_methods` (`method_name`) VALUES
+('cash'),
+('gcash'),
+('card');
+
+INSERT INTO `payment_status` (`status_name`) VALUES
+('paid'),
+('processing'),
+('down_payment');
+
+INSERT INTO `rental_status` (`status_name`) VALUES
+('active'),
+('completed'),
+('cancelled');
+
+INSERT INTO `reservation_status` (`status_name`) VALUES
+('pending'),
+('confirmed'),
+('cancelled');
+
+INSERT INTO `maintenance_status` (`status_name`) VALUES
+('scheduled'),
+('in_progress'),
+('completed');
+
+INSERT INTO `user_roles` (`role_name`) VALUES
+('admin'),
+('staff');
+
+INSERT INTO `inspection_types` (`inspection_type_name`) VALUES
+('before_rent'),
+('after_rent');

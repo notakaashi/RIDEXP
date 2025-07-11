@@ -350,62 +350,6 @@ CREATE TABLE IF NOT EXISTS `sales_report` (
   FOREIGN KEY (`generated_by`) REFERENCES `user`(`user_id`)
 ) ENGINE = InnoDB;
 
--- -----------------------------------------------------
--- Insert lookup table data
--- -----------------------------------------------------
-INSERT INTO `transmission_types` (`transmission_type`) VALUES
-('manual'),
-('automatic'),
-('cvt');
-
-INSERT INTO `fuel_types` (`fuel_type`) VALUES
-('gasoline'),
-('diesel'),
-('electric'),
-('hybrid');
-
-INSERT INTO `vehicle_status` (`status_name`) VALUES
-('available'),
-('rented'),
-('reserved'),
-('under_maintenance'),
-('out_of_service'),
-('cleaning'),
-('damaged');
-
-INSERT INTO `payment_methods` (`method_name`) VALUES
-('cash'),
-('gcash'),
-('card');
-
-INSERT INTO `payment_status` (`status_name`) VALUES
-('paid'),
-('processing'),
-('down_payment');
-
-INSERT INTO `rental_status` (`status_name`) VALUES
-('active'),
-('completed'),
-('cancelled');
-
-INSERT INTO `reservation_status` (`status_name`) VALUES
-('pending'),
-('confirmed'),
-('cancelled');
-
-INSERT INTO `maintenance_status` (`status_name`) VALUES
-('scheduled'),
-('in_progress'),
-('completed');
-
-INSERT INTO `user_roles` (`role_name`) VALUES
-('admin'),
-('staff');
-
-INSERT INTO `inspection_types` (`inspection_type_name`) VALUES
-('before_rent'),
-('after_rent');
-
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
