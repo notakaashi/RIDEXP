@@ -186,3 +186,50 @@ INSERT INTO `user_roles` (`role_name`) VALUES
 INSERT INTO `inspection_types` (`inspection_type_name`) VALUES
 ('before_rent'),
 ('after_rent');
+
+
+-- Insert rental rates for motorcycles (vehicle_id 1-10)
+INSERT INTO rental_rate (vehicle_id, rate_per_hour, rate_per_day, security_deposit, effective_date) VALUES
+-- Yamaha Mio Sporty (Budget scooter)
+(1, 80.00, 600.00, 2000.00, '2024-01-01'),
+-- Yamaha Mio Aerox 155 S (Sport scooter)
+(2, 120.00, 900.00, 3000.00, '2024-01-01'),
+-- Honda Click 125i (Premium scooter)
+(3, 100.00, 750.00, 2500.00, '2024-01-01'),
+-- Honda BeAT Premium (Budget scooter)
+(4, 85.00, 650.00, 2000.00, '2024-01-01'),
+-- Honda Genio (Budget scooter)
+(5, 90.00, 700.00, 2200.00, '2024-01-01'),
+-- Honda Super Cub C125 (Classic/Premium)
+(6, 110.00, 800.00, 2800.00, '2024-01-01'),
+-- Suzuki Raider R150 Fi (Sport manual)
+(7, 130.00, 1000.00, 3500.00, '2024-01-01'),
+-- Kawasaki Barako III (Sport manual)
+(8, 140.00, 1100.00, 4000.00, '2024-01-01'),
+-- Yamaha NMAX 155 (Premium scooter)
+(9, 150.00, 1200.00, 3500.00, '2024-01-01'),
+-- Honda ADV 160 (Adventure premium)
+(10, 160.00, 1300.00, 4000.00, '2024-01-01');
+
+-- Insert rental rates for cars (vehicle_id 11-20)
+INSERT INTO rental_rate (vehicle_id, rate_per_hour, rate_per_day, security_deposit, effective_date) VALUES
+-- Toyota Vios (Compact sedan)
+(11, 250.00, 1800.00, 8000.00, '2024-01-01'),
+-- Mitsubishi Xpander (MPV)
+(12, 320.00, 2500.00, 10000.00, '2024-01-01'),
+-- Toyota Innova Diesel (Premium MPV)
+(13, 400.00, 3200.00, 12000.00, '2024-01-01'),
+-- Suzuki Ertiga (Compact MPV)
+(14, 280.00, 2200.00, 9000.00, '2024-01-01'),
+-- Honda City (Compact sedan)
+(15, 270.00, 2000.00, 8500.00, '2024-01-01'),
+-- Toyota Fortuner (Premium SUV)
+(16, 500.00, 4000.00, 15000.00, '2024-01-01'),
+-- Suzuki Swift (Hatchback)
+(17, 220.00, 1600.00, 7000.00, '2024-01-01'),
+-- Honda BR-V (Compact SUV)
+(18, 300.00, 2400.00, 9500.00, '2024-01-01'),
+-- Toyota Corolla Altis Hybrid (Premium sedan)
+(19, 350.00, 2800.00, 11000.00, '2024-01-01'),
+-- Toyota Rush (Compact SUV)
+(20, 310.00, 2500.00, 10000.00, '2024-01-01');
