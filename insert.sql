@@ -130,7 +130,7 @@ INSERT INTO `terms_and_policies` (`title`, `content`, `version`, `effective_date
 7. DISPUTE RESOLUTION: Any disputes regarding damage charges will be resolved through our internal review process.', 
 '1.0', '2024-01-01');
 
-
+'
 -- -----------------------------------------------------
 -- Insert lookup table data
 -- -----------------------------------------------------

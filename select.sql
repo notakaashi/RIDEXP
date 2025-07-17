@@ -24,3 +24,5 @@ SELECT * FROM user;
 SELECT * FROM user_roles;
 SELECT * FROM vehicle_status;
 SELECT * FROM vehicles;
+
+use RIDEXP;
