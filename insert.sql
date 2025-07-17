@@ -21,7 +21,7 @@ INSERT INTO car_category (category_name, description, transmission_id, fuel_id) 
 ('Hatchback CVT', 'CVT compact hatchback cars', 3, 1),
 ('Hybrid CVT', 'CVT fuel-efficient hybrid sedans', 3, 4);
 
--- Insert Motor Categories (based on real motorcycle classifications)
+-- Insert Motor Categories 
 INSERT INTO motor_category (category_name, description, transmission_id, fuel_id, engine_capacity) VALUES
 ('Scooter CVT', 'CVT automatic scooters', 3, 1, '110-125cc'),
 ('Sport Scooter CVT', 'CVT performance scooters', 3, 1, '155cc'),
@@ -29,7 +29,7 @@ INSERT INTO motor_category (category_name, description, transmission_id, fuel_id
 ('Sport Manual', 'Manual sport motorcycles', 1, 1, '150cc'),
 ('Adventure CVT', 'CVT adventure-style scooters', 3, 1, '160cc');
 
--- Insert Cars (10 vehicles - one per model)
+-- Insert Cars 
 INSERT INTO cars (car_category_id, make, model_name, year, license_plate, color, seating_capacity, mileage, status_id) VALUES
 (1, 'Toyota', 'Vios 1.3 XE CVT', 2023, 'ABC-1234', 'Red Mica Metallic', 5, 15000, 1),
 (2, 'Mitsubishi', 'Xpander GLS AT', 2022, 'DEF-2345', 'Jet Black Mica', 7, 22000, 1),
@@ -42,7 +42,7 @@ INSERT INTO cars (car_category_id, make, model_name, year, license_plate, color,
 (6, 'Toyota', 'Corolla Altis 1.8 Hybrid CVT', 2023, 'YZA-9012', 'White Pearl', 5, 8000, 1),
 (4, 'Toyota', 'Rush 1.5 G AT', 2022, 'BCD-0123', 'Silver Mica Metallic', 7, 32000, 1);
 
--- Insert Motors (10 vehicles - one per model)
+-- Insert Motors
 INSERT INTO motors (motor_category_id, make, model, year, license_plate, color, mileage, status_id) VALUES
 (1, 'Yamaha', 'Mio Sporty', 2023, 'EFG-1134', 'Matte Blue', 8500, 1),
 (2, 'Yamaha', 'Mio Aerox 155 S', 2022, 'HIJ-1235', 'Black Raven', 12000, 1),
@@ -54,7 +54,7 @@ INSERT INTO motors (motor_category_id, make, model, year, license_plate, color, 
 (4, 'Kawasaki', 'Barako III', 2021, 'ZAB-1841', 'Black', 25000, 1),
 (2, 'Yamaha', 'NMAX 155 Standard', 2023, 'CDE-1942', 'Phantom Blue', 7800, 1),
 (5, 'Honda', 'ADV 160', 2022, 'FGH-2043', 'Matte Gunpowder Black', 13500, 1);
--- Insert vehicles (linking cars and motors to unified vehicle table)
+-- Insert vehicles 
 -- Cars
 INSERT INTO `vehicles` (`vehicle_type`, `item_id`) VALUES
 ('car', 1), ('car', 2), ('car', 3), ('car', 4), ('car', 5),
@@ -67,7 +67,7 @@ INSERT INTO `vehicles` (`vehicle_type`, `item_id`) VALUES
 ('motor', 6), ('motor', 7), ('motor', 8), ('motor', 9), ('motor', 10),
 ('motor', 11), ('motor', 12), ('motor', 13), ('motor', 14), ('motor', 15);
 
--- Insert sample terms and policies
+-- Insert terms and policies
 INSERT INTO `terms_and_policies` (`title`, `content`, `version`, `effective_date`) VALUES
 ('Rental Agreement Terms', 
 '1. RENTAL PERIOD: The rental period begins when the vehicle is delivered to the renter and ends when the vehicle is returned to the rental location.
