@@ -141,7 +141,7 @@ Partial Class Logjn
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(690, 654)
+        ClientSize = New Size(690, 701)
         Controls.Add(Label5)
         Controls.Add(Button2)
         Controls.Add(Label4)
