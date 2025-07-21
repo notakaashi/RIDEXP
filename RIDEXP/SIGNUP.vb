@@ -1,17 +1,26 @@
 ﻿Public Class SIGNUP
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Me.Hide()
-        Form1.Show()
-    End Sub
+
 
     Private Sub SIGNUP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        btnHOME.FlatAppearance.BorderSize = 0
-        btnCONTACT.FlatAppearance.BorderSize = 0
-        btnRENTALS.FlatAppearance.BorderSize = 0
+        FadeTimer.Start()
     End Sub
 
-    Private Sub btnHOME_Click(sender As Object, e As EventArgs) Handles btnHOME.Click
+    Private Sub FadeTimer_Tick(sender As Object, e As EventArgs) Handles FadeTimer.Tick
+        If Me.Opacity < 1 Then
+            Me.Opacity += 0.05
+        Else
+            FadeTimer.Stop()
+        End If
+    End Sub
+
+
+    Private Sub btnHOME_Click(sender As Object, e As EventArgs)
         Form1.Show()
-        Me.Hide()
+        Hide()
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        Me.Close()
+        Me.Opacity = 0
     End Sub
 End Class

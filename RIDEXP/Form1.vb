@@ -14,4 +14,9 @@
     Private Sub btnHOME_Click(sender As Object, e As EventArgs) Handles btnHOME.Click
         Me.Show()
     End Sub
+
+    Private Sub btnRENTALS_Click(sender As Object, e As EventArgs) Handles btnRENTALS.Click
+        Vehicle_type.Show()
+
+    End Sub
 End Class
