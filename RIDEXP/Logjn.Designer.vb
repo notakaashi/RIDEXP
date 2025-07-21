@@ -31,6 +31,7 @@ Partial Class Logjn
         Label2 = New Label()
         TextBox1 = New TextBox()
         Label1 = New Label()
+        Label7 = New Label()
         SuspendLayout()
         ' 
         ' Label5
@@ -51,7 +52,7 @@ Partial Class Logjn
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Reesha", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(199, 528)
+        Button2.Location = New Point(206, 528)
         Button2.Name = "Button2"
         Button2.Size = New Size(268, 72)
         Button2.TabIndex = 7
@@ -76,7 +77,7 @@ Partial Class Logjn
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Reesha", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(199, 355)
+        Button1.Location = New Point(206, 355)
         Button1.Name = "Button1"
         Button1.Size = New Size(268, 72)
         Button1.TabIndex = 5
@@ -90,7 +91,7 @@ Partial Class Logjn
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label3.Location = New Point(145, 248)
+        Label3.Location = New Point(159, 248)
         Label3.Name = "Label3"
         Label3.Size = New Size(141, 27)
         Label3.TabIndex = 4
@@ -99,7 +100,7 @@ Partial Class Logjn
         ' TextBox2
         ' 
         TextBox2.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(141, 278)
+        TextBox2.Location = New Point(159, 278)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(364, 40)
         TextBox2.TabIndex = 3
@@ -110,7 +111,7 @@ Partial Class Logjn
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label2.Location = New Point(145, 159)
+        Label2.Location = New Point(159, 159)
         Label2.Name = "Label2"
         Label2.Size = New Size(138, 27)
         Label2.TabIndex = 2
@@ -119,7 +120,7 @@ Partial Class Logjn
         ' TextBox1
         ' 
         TextBox1.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(145, 189)
+        TextBox1.Location = New Point(159, 189)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(364, 40)
         TextBox1.TabIndex = 1
@@ -130,11 +131,22 @@ Partial Class Logjn
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Reesha", 60F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label1.Location = New Point(127, 28)
+        Label1.Location = New Point(137, 29)
         Label1.Name = "Label1"
         Label1.Size = New Size(440, 120)
         Label1.TabIndex = 0
         Label1.Text = "SIGN IN"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Akira Expanded", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label7.Location = New Point(12, 9)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(50, 36)
+        Label7.TabIndex = 9
+        Label7.Text = "X"
         ' 
         ' Logjn
         ' 
@@ -142,6 +154,7 @@ Partial Class Logjn
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(690, 701)
+        Controls.Add(Label7)
         Controls.Add(Label5)
         Controls.Add(Button2)
         Controls.Add(Label4)
@@ -169,4 +182,5 @@ Partial Class Logjn
     Friend WithEvents Label5 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
 End Class
