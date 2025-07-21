@@ -1,4 +1,59 @@
 -- Additional INSERT statements for RIDEXP database
+-- -----------------------------------------------------
+-- Insert lookup table data
+-- -----------------------------------------------------
+INSERT INTO `transmission_types` (`transmission_type`) VALUES
+('manual'),
+('automatic'),
+('cvt');
+
+INSERT INTO `fuel_types` (`fuel_type`) VALUES
+('gasoline'),
+('diesel'),
+('electric'),
+('hybrid');
+
+INSERT INTO `vehicle_status` (`status_name`) VALUES
+('available'),
+('rented'),
+('reserved'),
+('under_maintenance'),
+('out_of_service'),
+('cleaning'),
+('damaged');
+
+INSERT INTO `payment_methods` (`method_name`) VALUES
+('cash'),
+('gcash'),
+('card');
+
+INSERT INTO `payment_status` (`status_name`) VALUES
+('paid'),
+('processing'),
+('down_payment');
+
+INSERT INTO `rental_status` (`status_name`) VALUES
+('active'),
+('completed'),
+('cancelled');
+
+INSERT INTO `reservation_status` (`status_name`) VALUES
+('pending'),
+('confirmed'),
+('cancelled');
+
+INSERT INTO `maintenance_status` (`status_name`) VALUES
+('scheduled'),
+('in_progress'),
+('completed');
+
+INSERT INTO `user_roles` (`role_name`) VALUES
+('admin'),
+('staff');
+
+INSERT INTO `inspection_types` (`inspection_type_name`) VALUES
+('before_rent'),
+('after_rent');
 
 -- Add more payment methods
 INSERT INTO `payment_methods` (`method_name`) VALUES
@@ -58,14 +113,12 @@ INSERT INTO motors (motor_category_id, make, model, year, license_plate, color, 
 -- Cars
 INSERT INTO `vehicles` (`vehicle_type`, `item_id`) VALUES
 ('car', 1), ('car', 2), ('car', 3), ('car', 4), ('car', 5),
-('car', 6), ('car', 7), ('car', 8), ('car', 9), ('car', 10),
-('car', 11), ('car', 12), ('car', 13), ('car', 14), ('car', 15);
+('car', 6), ('car', 7), ('car', 8), ('car', 9), ('car', 10);
 
 -- Motors
 INSERT INTO `vehicles` (`vehicle_type`, `item_id`) VALUES
 ('motor', 1), ('motor', 2), ('motor', 3), ('motor', 4), ('motor', 5),
-('motor', 6), ('motor', 7), ('motor', 8), ('motor', 9), ('motor', 10),
-('motor', 11), ('motor', 12), ('motor', 13), ('motor', 14), ('motor', 15);
+('motor', 6), ('motor', 7), ('motor', 8), ('motor', 9), ('motor', 10);
 
 -- Insert terms and policies
 INSERT INTO `terms_and_policies` (`title`, `content`, `version`, `effective_date`) VALUES
@@ -129,63 +182,6 @@ INSERT INTO `terms_and_policies` (`title`, `content`, `version`, `effective_date
 
 7. DISPUTE RESOLUTION: Any disputes regarding damage charges will be resolved through our internal review process.', 
 '1.0', '2024-01-01');
-
-'
--- -----------------------------------------------------
--- Insert lookup table data
--- -----------------------------------------------------
-INSERT INTO `transmission_types` (`transmission_type`) VALUES
-('manual'),
-('automatic'),
-('cvt');
-
-INSERT INTO `fuel_types` (`fuel_type`) VALUES
-('gasoline'),
-('diesel'),
-('electric'),
-('hybrid');
-
-INSERT INTO `vehicle_status` (`status_name`) VALUES
-('available'),
-('rented'),
-('reserved'),
-('under_maintenance'),
-('out_of_service'),
-('cleaning'),
-('damaged');
-
-INSERT INTO `payment_methods` (`method_name`) VALUES
-('cash'),
-('gcash'),
-('card');
-
-INSERT INTO `payment_status` (`status_name`) VALUES
-('paid'),
-('processing'),
-('down_payment');
-
-INSERT INTO `rental_status` (`status_name`) VALUES
-('active'),
-('completed'),
-('cancelled');
-
-INSERT INTO `reservation_status` (`status_name`) VALUES
-('pending'),
-('confirmed'),
-('cancelled');
-
-INSERT INTO `maintenance_status` (`status_name`) VALUES
-('scheduled'),
-('in_progress'),
-('completed');
-
-INSERT INTO `user_roles` (`role_name`) VALUES
-('admin'),
-('staff');
-
-INSERT INTO `inspection_types` (`inspection_type_name`) VALUES
-('before_rent'),
-('after_rent');
 
 
 -- Insert rental rates for motorcycles (vehicle_id 1-10)

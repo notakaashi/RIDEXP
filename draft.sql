@@ -23,10 +23,9 @@ USE `ridexp` ;
 CREATE TABLE IF NOT EXISTS `ridexp`.`transmission_types` (
   `transmission_id` INT(11) NOT NULL AUTO_INCREMENT,
   `transmission_type` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`transmission_id`),
-  UNIQUE INDEX `transmission_type` (`transmission_type` ASC) VISIBLE)
+  PRIMARY KEY (`transmission_id`)  )
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -36,10 +35,9 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ridexp`.`fuel_types` (
   `fuel_id` INT(11) NOT NULL AUTO_INCREMENT,
   `fuel_type` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`fuel_id`),
-  UNIQUE INDEX `fuel_type` (`fuel_type` ASC) VISIBLE)
+  PRIMARY KEY (`fuel_id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 5
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -53,8 +51,8 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`car_category` (
   `transmission_id` INT(11) NULL DEFAULT NULL,
   `fuel_id` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`car_category_id`),
-  INDEX `transmission_id` (`transmission_id` ASC) VISIBLE,
-  INDEX `fuel_id` (`fuel_id` ASC) VISIBLE,
+  INDEX (`transmission_id`) ,
+  INDEX (`fuel_id`)  ,
   CONSTRAINT `car_category_ibfk_1`
     FOREIGN KEY (`transmission_id`)
     REFERENCES `ridexp`.`transmission_types` (`transmission_id`),
@@ -62,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`car_category` (
     FOREIGN KEY (`fuel_id`)
     REFERENCES `ridexp`.`fuel_types` (`fuel_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 19
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -72,10 +70,9 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ridexp`.`vehicle_status` (
   `status_id` INT(11) NOT NULL AUTO_INCREMENT,
   `status_name` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`status_id`),
-  UNIQUE INDEX `status_name` (`status_name` ASC) VISIBLE)
+  PRIMARY KEY (`status_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 8
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -94,9 +91,9 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`cars` (
   `mileage` INT(11) NULL DEFAULT 0,
   `status_id` INT(11) NOT NULL,
   PRIMARY KEY (`car_id`),
-  UNIQUE INDEX `license_plate` (`license_plate` ASC) VISIBLE,
-  INDEX `car_category_id` (`car_category_id` ASC) VISIBLE,
-  INDEX `status_id` (`status_id` ASC) VISIBLE,
+  UNIQUE INDEX (`license_plate`)  ,
+  INDEX (`car_category_id`) ,
+  INDEX (`status_id`) ,
   CONSTRAINT `cars_ibfk_1`
     FOREIGN KEY (`car_category_id`)
     REFERENCES `ridexp`.`car_category` (`car_category_id`),
@@ -104,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`cars` (
     FOREIGN KEY (`status_id`)
     REFERENCES `ridexp`.`vehicle_status` (`status_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 31
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -115,10 +112,9 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`vehicles` (
   `vehicle_id` INT(11) NOT NULL AUTO_INCREMENT,
   `vehicle_type` ENUM('car', 'motor') NOT NULL,
   `item_id` INT(11) NOT NULL,
-  PRIMARY KEY (`vehicle_id`),
-  UNIQUE INDEX `unique_vehicle` (`vehicle_type` ASC, `item_id` ASC) VISIBLE)
+  PRIMARY KEY (`vehicle_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 21
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -135,8 +131,7 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`customers` (
   `address` VARCHAR(255) NOT NULL,
   `license_number` VARCHAR(50) NULL DEFAULT NULL,
   `license_expiry` DATE NULL DEFAULT NULL,
-  PRIMARY KEY (`customer_id`),
-  UNIQUE INDEX `email` (`email` ASC) VISIBLE)
+  PRIMARY KEY (`customer_id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
@@ -147,10 +142,9 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ridexp`.`reservation_status` (
   `reservation_status_id` INT(11) NOT NULL AUTO_INCREMENT,
   `status_name` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`reservation_status_id`),
-  UNIQUE INDEX `status_name` (`status_name` ASC) VISIBLE)
+  PRIMARY KEY (`reservation_status_id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -166,9 +160,9 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`reservation` (
   `amount` DECIMAL(10,2) NULL DEFAULT NULL,
   `reservation_status_id` INT(11) NOT NULL,
   PRIMARY KEY (`reservation_id`),
-  INDEX `customer_id` (`customer_id` ASC) VISIBLE,
-  INDEX `vehicle_id` (`vehicle_id` ASC) VISIBLE,
-  INDEX `reservation_status_id` (`reservation_status_id` ASC) VISIBLE,
+  INDEX (`customer_id`),
+  INDEX (`vehicle_id`) ,
+  INDEX (`reservation_status_id`)  ,
   CONSTRAINT `reservation_ibfk_1`
     FOREIGN KEY (`customer_id`)
     REFERENCES `ridexp`.`customers` (`customer_id`),
@@ -188,10 +182,9 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ridexp`.`rental_status` (
   `rental_status_id` INT(11) NOT NULL AUTO_INCREMENT,
   `status_name` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`rental_status_id`),
-  UNIQUE INDEX `status_name` (`status_name` ASC) VISIBLE)
+  PRIMARY KEY (`rental_status_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -210,10 +203,10 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`rentals` (
   `security_deposit` DECIMAL(10,2) NULL DEFAULT NULL,
   `rental_status_id` INT(11) NOT NULL,
   PRIMARY KEY (`rental_id`),
-  INDEX `customer_id` (`customer_id` ASC) VISIBLE,
-  INDEX `vehicle_id` (`vehicle_id` ASC) VISIBLE,
-  INDEX `reservation_id` (`reservation_id` ASC) VISIBLE,
-  INDEX `rental_status_id` (`rental_status_id` ASC) VISIBLE,
+  INDEX( `customer_id`) ,
+  INDEX (`vehicle_id` ),
+  INDEX (`reservation_id`) ,
+  INDEX (`rental_status_id`) ,
   CONSTRAINT `rentals_ibfk_1`
     FOREIGN KEY (`customer_id`)
     REFERENCES `ridexp`.`customers` (`customer_id`),
@@ -236,10 +229,9 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ridexp`.`inspection_types` (
   `inspection_type_id` INT(11) NOT NULL AUTO_INCREMENT,
   `inspection_type_name` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`inspection_type_id`),
-  UNIQUE INDEX `inspection_type_name` (`inspection_type_name` ASC) VISIBLE)
+  PRIMARY KEY (`inspection_type_id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -258,9 +250,9 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`checklist` (
   `notes` VARCHAR(100) NULL DEFAULT NULL,
   `vehicle_id` INT(11) NOT NULL,
   PRIMARY KEY (`checklist_id`),
-  INDEX `vehicle_id` (`vehicle_id` ASC) VISIBLE,
-  INDEX `rental_id` (`rental_id` ASC) VISIBLE,
-  INDEX `inspection_type_id` (`inspection_type_id` ASC) VISIBLE,
+  INDEX( `vehicle_id`),
+  INDEX( `rental_id` ) ,
+  INDEX (`inspection_type_id`)  ,
   CONSTRAINT `checklist_ibfk_1`
     FOREIGN KEY (`vehicle_id`)
     REFERENCES `ridexp`.`vehicles` (`vehicle_id`),
@@ -280,10 +272,9 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ridexp`.`maintenance_status` (
   `maintenance_status_id` INT(11) NOT NULL AUTO_INCREMENT,
   `status_name` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`maintenance_status_id`),
-  UNIQUE INDEX `status_name` (`status_name` ASC) VISIBLE)
+  PRIMARY KEY (`maintenance_status_id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -301,8 +292,8 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`maintenance` (
   `service_provider` VARCHAR(100) NULL DEFAULT NULL,
   `maintenance_status_id` INT(11) NOT NULL,
   PRIMARY KEY (`maintenance_id`),
-  INDEX `vehicle_id` (`vehicle_id` ASC) VISIBLE,
-  INDEX `maintenance_status_id` (`maintenance_status_id` ASC) VISIBLE,
+  INDEX (`vehicle_id` ) ,
+  INDEX (`maintenance_status_id`)  ,
   CONSTRAINT `maintenance_ibfk_1`
     FOREIGN KEY (`vehicle_id`)
     REFERENCES `ridexp`.`vehicles` (`vehicle_id`),
@@ -324,8 +315,8 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`motor_category` (
   `fuel_id` INT(11) NULL DEFAULT NULL,
   `engine_capacity` VARCHAR(20) NULL DEFAULT NULL,
   PRIMARY KEY (`motor_category_id`),
-  INDEX `transmission_id` (`transmission_id` ASC) VISIBLE,
-  INDEX `fuel_id` (`fuel_id` ASC) VISIBLE,
+  INDEX (`transmission_id`)  ,
+  INDEX (`fuel_id`) ,
   CONSTRAINT `motor_category_ibfk_1`
     FOREIGN KEY (`transmission_id`)
     REFERENCES `ridexp`.`transmission_types` (`transmission_id`),
@@ -333,7 +324,7 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`motor_category` (
     FOREIGN KEY (`fuel_id`)
     REFERENCES `ridexp`.`fuel_types` (`fuel_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 6
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -351,9 +342,9 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`motors` (
   `mileage` INT(11) NULL DEFAULT 0,
   `status_id` INT(11) NOT NULL,
   PRIMARY KEY (`motor_id`),
-  UNIQUE INDEX `license_plate` (`license_plate` ASC) VISIBLE,
-  INDEX `motor_category_id` (`motor_category_id` ASC) VISIBLE,
-  INDEX `status_id` (`status_id` ASC) VISIBLE,
+  UNIQUE INDEX (`license_plate`)  ,
+  INDEX (`motor_category_id` ) ,
+  INDEX (`status_id` ) ,
   CONSTRAINT `motors_ibfk_1`
     FOREIGN KEY (`motor_category_id`)
     REFERENCES `ridexp`.`motor_category` (`motor_category_id`),
@@ -361,7 +352,7 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`motors` (
     FOREIGN KEY (`status_id`)
     REFERENCES `ridexp`.`vehicle_status` (`status_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 11
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -371,10 +362,9 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ridexp`.`payment_status` (
   `payment_status_id` INT(11) NOT NULL AUTO_INCREMENT,
   `status_name` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`payment_status_id`),
-  UNIQUE INDEX `status_name` (`status_name` ASC) VISIBLE)
+  PRIMARY KEY (`payment_status_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -384,10 +374,9 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ridexp`.`payment_methods` (
   `method_id` INT(11) NOT NULL AUTO_INCREMENT,
   `method_name` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`method_id`),
-  UNIQUE INDEX `method_name` (`method_name` ASC) VISIBLE)
+  PRIMARY KEY (`method_id`) )
 ENGINE = InnoDB
-AUTO_INCREMENT = 10
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -402,9 +391,9 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`payment` (
   `method_id` INT(11) NOT NULL,
   `paid_at` DATETIME NULL DEFAULT NULL,
   PRIMARY KEY (`payment_id`),
-  INDEX `rental_id` (`rental_id` ASC) VISIBLE,
-  INDEX `payment_status_id` (`payment_status_id` ASC) VISIBLE,
-  INDEX `method_id` (`method_id` ASC) VISIBLE,
+  INDEX (`rental_id` ) ,
+  INDEX( `payment_status_id`)  ,
+  INDEX (`method_id` ) ,
   CONSTRAINT `payment_ibfk_1`
     FOREIGN KEY (`rental_id`)
     REFERENCES `ridexp`.`rentals` (`rental_id`),
@@ -428,7 +417,7 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`penalty` (
   `amount` DECIMAL(10,2) NOT NULL,
   `is_paid` TINYINT(1) NULL DEFAULT 0,
   PRIMARY KEY (`penalty_id`),
-  INDEX `rental_id` (`rental_id` ASC) VISIBLE,
+  INDEX (`rental_id` ) ,
   CONSTRAINT `penalty_ibfk_1`
     FOREIGN KEY (`rental_id`)
     REFERENCES `ridexp`.`rentals` (`rental_id`))
@@ -447,12 +436,12 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`rental_rate` (
   `security_deposit` DECIMAL(10,2) NOT NULL,
   `effective_date` DATE NOT NULL,
   PRIMARY KEY (`rate_id`),
-  INDEX `vehicle_id` (`vehicle_id` ASC) VISIBLE,
+  INDEX (`vehicle_id` ),
   CONSTRAINT `rental_rate_ibfk_1`
     FOREIGN KEY (`vehicle_id`)
     REFERENCES `ridexp`.`vehicles` (`vehicle_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 21
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -462,10 +451,9 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ridexp`.`user_roles` (
   `role_id` INT(11) NOT NULL AUTO_INCREMENT,
   `role_name` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`role_id`),
-  UNIQUE INDEX `role_name` (`role_name` ASC) VISIBLE)
+  PRIMARY KEY (`role_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -478,8 +466,7 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`user` (
   `password_hash` TEXT NOT NULL,
   `role_id` INT(11) NOT NULL,
   PRIMARY KEY (`user_id`),
-  UNIQUE INDEX `username` (`username` ASC) VISIBLE,
-  INDEX `role_id` (`role_id` ASC) VISIBLE,
+  INDEX (`role_id` ) ,
   CONSTRAINT `user_ibfk_1`
     FOREIGN KEY (`role_id`)
     REFERENCES `ridexp`.`user_roles` (`role_id`))
@@ -498,7 +485,7 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`sales_report` (
   `penalties` DECIMAL(12,2) NULL DEFAULT NULL,
   `generated_by` INT(11) NOT NULL,
   PRIMARY KEY (`report_id`),
-  INDEX `generated_by` (`generated_by` ASC) VISIBLE,
+  INDEX( `generated_by`  ),
   CONSTRAINT `sales_report_ibfk_1`
     FOREIGN KEY (`generated_by`)
     REFERENCES `ridexp`.`user` (`user_id`))
@@ -517,7 +504,7 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`terms_and_policies` (
   `effective_date` DATE NOT NULL,
   PRIMARY KEY (`terms_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 5
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
