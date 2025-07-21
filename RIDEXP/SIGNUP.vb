@@ -9,4 +9,9 @@
         btnCONTACT.FlatAppearance.BorderSize = 0
         btnRENTALS.FlatAppearance.BorderSize = 0
     End Sub
+
+    Private Sub btnHOME_Click(sender As Object, e As EventArgs) Handles btnHOME.Click
+        Form1.Show()
+        Me.Hide()
+    End Sub
 End Class

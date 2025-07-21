@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>RIDEXPRESS offers reliable and affordable 
+car and motorcycle rentals for every journey. 
+With well-maintained vehicles and a focus on 
+customer satisfaction, we make your travel 
+easy, safe, and convenient—whether for daily 
+use, road trips, or short-term needs.</value>
+  </data>
 </root>

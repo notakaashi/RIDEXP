@@ -354,6 +354,7 @@ Partial Class SIGNUP
         Controls.Add(Panel3)
         Controls.Add(Label9)
         Controls.Add(Panel1)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
         Name = "SIGNUP"
         Text = "SIGNUP"
