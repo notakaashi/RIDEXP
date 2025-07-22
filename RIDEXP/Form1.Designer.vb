@@ -164,7 +164,7 @@ Partial Class Form1
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Reesha", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label4.Location = New Point(102, 181)
+        Label4.Location = New Point(126, 181)
         Label4.Name = "Label4"
         Label4.Size = New Size(369, 53)
         Label4.TabIndex = 15
@@ -174,7 +174,7 @@ Partial Class Form1
         ' 
         PictureBox2.BackColor = Color.Transparent
         PictureBox2.Image = My.Resources.Resources.RideX
-        PictureBox2.Location = New Point(24, 118)
+        PictureBox2.Location = New Point(51, 101)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(528, 467)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
