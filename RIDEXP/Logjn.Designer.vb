@@ -26,15 +26,16 @@ Partial Class Logjn
         Label5 = New Label()
         Button2 = New Button()
         Label4 = New Label()
-        Button1 = New Button()
+        signinbtn = New Button()
         Label3 = New Label()
-        TextBox2 = New TextBox()
+        passwordtxt = New TextBox()
         Label2 = New Label()
-        TextBox1 = New TextBox()
+        usertxt = New TextBox()
         Label1 = New Label()
         Label7 = New Label()
         Panel1 = New Panel()
         FadeTimer = New Timer(components)
+        Label6 = New Label()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -44,9 +45,9 @@ Partial Class Logjn
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label5.Location = New Point(133, 403)
+        Label5.Location = New Point(132, 307)
         Label5.Name = "Label5"
-        Label5.Size = New Size(360, 36)
+        Label5.Size = New Size(289, 29)
         Label5.TabIndex = 8
         Label5.Text = "_______________________"
         ' 
@@ -56,9 +57,10 @@ Partial Class Logjn
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Reesha", 22.1999989F)
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(187, 485)
+        Button2.Location = New Point(173, 366)
+        Button2.Margin = New Padding(3, 2, 3, 2)
         Button2.Name = "Button2"
-        Button2.Size = New Size(213, 61)
+        Button2.Size = New Size(186, 46)
         Button2.TabIndex = 7
         Button2.Text = "SIGN UP"
         Button2.TextAlign = ContentAlignment.TopCenter
@@ -69,25 +71,26 @@ Partial Class Logjn
         Label4.AutoSize = True
         Label4.Font = New Font("Futura Hv BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label4.Location = New Point(173, 451)
+        Label4.Location = New Point(162, 343)
         Label4.Name = "Label4"
-        Label4.Size = New Size(261, 20)
+        Label4.Size = New Size(214, 16)
         Label4.TabIndex = 6
         Label4.Text = "Click here to create an account"
         ' 
-        ' Button1
+        ' signinbtn
         ' 
-        Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Reesha", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(187, 339)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(213, 61)
-        Button1.TabIndex = 5
-        Button1.Text = "SIGN IN"
-        Button1.TextAlign = ContentAlignment.TopCenter
-        Button1.UseVisualStyleBackColor = False
+        signinbtn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        signinbtn.FlatStyle = FlatStyle.Flat
+        signinbtn.Font = New Font("Reesha", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        signinbtn.ForeColor = Color.White
+        signinbtn.Location = New Point(173, 278)
+        signinbtn.Margin = New Padding(3, 2, 3, 2)
+        signinbtn.Name = "signinbtn"
+        signinbtn.Size = New Size(186, 46)
+        signinbtn.TabIndex = 5
+        signinbtn.Text = "SIGN IN"
+        signinbtn.TextAlign = ContentAlignment.TopCenter
+        signinbtn.UseVisualStyleBackColor = False
         ' 
         ' Label3
         ' 
@@ -95,19 +98,21 @@ Partial Class Logjn
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label3.Location = New Point(133, 248)
+        Label3.Location = New Point(116, 205)
         Label3.Name = "Label3"
-        Label3.Size = New Size(141, 27)
+        Label3.Size = New Size(118, 22)
         Label3.TabIndex = 4
         Label3.Text = "PASSWORD"
         ' 
-        ' TextBox2
+        ' passwordtxt
         ' 
-        TextBox2.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(133, 278)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(364, 40)
-        TextBox2.TabIndex = 3
+        passwordtxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        passwordtxt.Location = New Point(116, 227)
+        passwordtxt.Margin = New Padding(3, 2, 3, 2)
+        passwordtxt.Name = "passwordtxt"
+        passwordtxt.PasswordChar = "*"c
+        passwordtxt.Size = New Size(319, 33)
+        passwordtxt.TabIndex = 3
         ' 
         ' Label2
         ' 
@@ -115,19 +120,20 @@ Partial Class Logjn
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label2.Location = New Point(133, 144)
+        Label2.Location = New Point(116, 127)
         Label2.Name = "Label2"
-        Label2.Size = New Size(138, 27)
+        Label2.Size = New Size(117, 22)
         Label2.TabIndex = 2
         Label2.Text = "USERNAME"
         ' 
-        ' TextBox1
+        ' usertxt
         ' 
-        TextBox1.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(133, 186)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(364, 40)
-        TextBox1.TabIndex = 1
+        usertxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        usertxt.Location = New Point(116, 159)
+        usertxt.Margin = New Padding(3, 2, 3, 2)
+        usertxt.Name = "usertxt"
+        usertxt.Size = New Size(319, 33)
+        usertxt.TabIndex = 1
         ' 
         ' Label1
         ' 
@@ -135,20 +141,20 @@ Partial Class Logjn
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Reesha", 48F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label1.Location = New Point(145, 29)
+        Label1.Location = New Point(132, 50)
         Label1.Name = "Label1"
-        Label1.Size = New Size(352, 96)
+        Label1.Size = New Size(282, 77)
         Label1.TabIndex = 0
         Label1.Text = "SIGN IN"
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Akira Expanded", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.White
-        Label7.Location = New Point(12, 5)
+        Label7.Location = New Point(12, 9)
         Label7.Name = "Label7"
-        Label7.Size = New Size(42, 29)
+        Label7.Size = New Size(28, 26)
         Label7.TabIndex = 9
         Label7.Text = "X"
         ' 
@@ -158,32 +164,44 @@ Partial Class Logjn
         Panel1.Controls.Add(Label7)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(611, 40)
+        Panel1.Size = New Size(535, 48)
         Panel1.TabIndex = 10
         ' 
         ' FadeTimer
         ' 
         FadeTimer.Interval = 25
         ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Location = New Point(453, 239)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(36, 15)
+        Label6.TabIndex = 11
+        Label6.Text = "Show"
+        ' 
         ' Logjn
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(611, 579)
+        ClientSize = New Size(535, 434)
+        Controls.Add(Label6)
         Controls.Add(Panel1)
-        Controls.Add(Label5)
         Controls.Add(Button2)
         Controls.Add(Label4)
         Controls.Add(Label1)
-        Controls.Add(Button1)
-        Controls.Add(TextBox1)
+        Controls.Add(signinbtn)
+        Controls.Add(usertxt)
         Controls.Add(Label3)
         Controls.Add(Label2)
-        Controls.Add(TextBox2)
+        Controls.Add(passwordtxt)
+        Controls.Add(Label5)
         DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 2, 3, 2)
         Name = "Logjn"
         Opacity = 0R
         StartPosition = FormStartPosition.CenterScreen
@@ -195,11 +213,11 @@ Partial Class Logjn
     End Sub
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents signinbtn As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents passwordtxt As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents usertxt As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Label6 As Label
