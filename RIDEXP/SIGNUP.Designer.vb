@@ -44,6 +44,10 @@ Partial Class SIGNUP
         Panel3 = New Panel()
         Label1 = New Label()
         FadeTimer = New Timer(components)
+        Label10 = New Label()
+        TextBox8 = New TextBox()
+        Label11 = New Label()
+        TextBox9 = New TextBox()
         Panel1.SuspendLayout()
         Panel3.SuspendLayout()
         SuspendLayout()
@@ -51,6 +55,10 @@ Partial Class SIGNUP
         ' Panel1
         ' 
         Panel1.AutoScroll = True
+        Panel1.Controls.Add(TextBox9)
+        Panel1.Controls.Add(Label11)
+        Panel1.Controls.Add(TextBox8)
+        Panel1.Controls.Add(Label10)
         Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(Panel2)
         Panel1.Controls.Add(TextBox7)
@@ -78,7 +86,7 @@ Partial Class SIGNUP
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Speeday", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(92, 911)
+        Button1.Location = New Point(101, 1191)
         Button1.Name = "Button1"
         Button1.Size = New Size(268, 72)
         Button1.TabIndex = 19
@@ -87,7 +95,7 @@ Partial Class SIGNUP
         ' 
         ' Panel2
         ' 
-        Panel2.Location = New Point(110, 1038)
+        Panel2.Location = New Point(110, 1278)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(250, 71)
         Panel2.TabIndex = 18
@@ -108,9 +116,9 @@ Partial Class SIGNUP
         Label8.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label8.Location = New Point(70, 792)
         Label8.Name = "Label8"
-        Label8.Size = New Size(252, 27)
+        Label8.Size = New Size(115, 27)
         Label8.TabIndex = 16
-        Label8.Text = "LICENSE EXPIRY DATE"
+        Label8.Text = "ADDRESS"
         ' 
         ' TextBox6
         ' 
@@ -128,9 +136,9 @@ Partial Class SIGNUP
         Label7.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label7.Location = New Point(68, 670)
         Label7.Name = "Label7"
-        Label7.Size = New Size(210, 27)
+        Label7.Size = New Size(200, 27)
         Label7.TabIndex = 14
-        Label7.Text = "LICENSE NUMBER"
+        Label7.Text = "PHONE NUMBER"
         ' 
         ' TextBox5
         ' 
@@ -270,6 +278,46 @@ Partial Class SIGNUP
         ' 
         FadeTimer.Interval = 25
         ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.BackColor = Color.Transparent
+        Label10.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label10.Location = New Point(72, 905)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(210, 27)
+        Label10.TabIndex = 20
+        Label10.Text = "LICENSE NUMBER"
+        ' 
+        ' TextBox8
+        ' 
+        TextBox8.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox8.Location = New Point(72, 946)
+        TextBox8.Name = "TextBox8"
+        TextBox8.Size = New Size(332, 40)
+        TextBox8.TabIndex = 21
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.BackColor = Color.Transparent
+        Label11.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label11.Location = New Point(72, 1024)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(252, 27)
+        Label11.TabIndex = 22
+        Label11.Text = "LICENSE EXPIRY DATE"
+        ' 
+        ' TextBox9
+        ' 
+        TextBox9.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox9.Location = New Point(72, 1063)
+        TextBox9.Name = "TextBox9"
+        TextBox9.Size = New Size(332, 40)
+        TextBox9.TabIndex = 23
+        ' 
         ' SIGNUP
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -315,4 +363,8 @@ Partial Class SIGNUP
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents FadeTimer As Timer
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Label10 As Label
 End Class
