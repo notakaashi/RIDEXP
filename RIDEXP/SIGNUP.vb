@@ -108,7 +108,7 @@ Public Class SIGNUP
         dobtxt.Clear()
     End Sub
     Private passwordVisible As Boolean = False
-    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
+    Private Sub Label14_Click(sender As Object, e As EventArgs)
         passwordVisible = Not passwordVisible
 
         If passwordVisible Then
@@ -117,6 +117,18 @@ Public Class SIGNUP
         Else
             passwordtxt.PasswordChar = "*"c
             Label14.Text = "Show"
+        End If
+    End Sub
+
+    Private Sub pbxShow_Click(sender As Object, e As EventArgs) Handles pbxShow.Click
+        passwordVisible = Not passwordVisible
+
+        If passwordVisible Then
+            passwordtxt.PasswordChar = ChrW(0)
+            pbxShow.Image = My.Resources.Resource1.hide
+        Else
+            passwordtxt.PasswordChar = "*"c
+            pbxShow.Image = My.Resources.Resource1.show
         End If
     End Sub
 End Class

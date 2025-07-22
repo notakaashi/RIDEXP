@@ -40,7 +40,7 @@ Public Class Logjn
 
         If AuthenticateUser(usertxt.Text, passwordtxt.Text) Then
             MessageBox.Show("Sign in successful! Welcome to RidExp!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
+            Me.Close()
         Else
             MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
@@ -69,15 +69,17 @@ Public Class Logjn
         End Try
     End Function
     Private passwordVisible As Boolean = False
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+
+    Private Sub pbxShow_Click(sender As Object, e As EventArgs) Handles pbxShow.Click
         passwordVisible = Not passwordVisible
 
         If passwordVisible Then
             passwordtxt.PasswordChar = ChrW(0)
-            Label6.Text = "Hide"
+            pbxShow.Image = My.Resources.Resource1.hide
         Else
             passwordtxt.PasswordChar = "*"c
-            Label6.Text = "Show"
+            pbxShow.Image = My.Resources.Resource1.show
         End If
     End Sub
 End Class

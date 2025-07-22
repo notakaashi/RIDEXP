@@ -24,22 +24,26 @@ Namespace My.Resources
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
-     Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
-    Friend Module Resources
+     Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute()>  _
+    Friend Class Resource1
         
-        Private resourceMan As Global.System.Resources.ResourceManager
+        Private Shared resourceMan As Global.System.Resources.ResourceManager
         
-        Private resourceCulture As Global.System.Globalization.CultureInfo
+        Private Shared resourceCulture As Global.System.Globalization.CultureInfo
+        
+        <Global.System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")>  _
+        Friend Sub New()
+            MyBase.New
+        End Sub
         
         '''<summary>
         '''  Returns the cached ResourceManager instance used by this class.
         '''</summary>
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
-        Friend ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
+        Friend Shared ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
-                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("RIDEXP.Resources", GetType(Resources).Assembly)
+                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("RIDEXP.Resource1", GetType(Resource1).Assembly)
                     resourceMan = temp
                 End If
                 Return resourceMan
@@ -51,7 +55,7 @@ Namespace My.Resources
         '''  resource lookups using this strongly typed resource class.
         '''</summary>
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
-        Friend Property Culture() As Global.System.Globalization.CultureInfo
+        Friend Shared Property Culture() As Global.System.Globalization.CultureInfo
             Get
                 Return resourceCulture
             End Get
@@ -63,7 +67,17 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property RideX() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property hide() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("hide", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property RideX() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("RideX", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
@@ -73,7 +87,7 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property RIDEXPRESS() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property RIDEXPRESS() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("RIDEXPRESS", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
@@ -83,7 +97,7 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property RIDEXPRESS__1_() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property RIDEXPRESS__1_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("RIDEXPRESS (1)", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
@@ -93,17 +107,7 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property RIDEXPRESS__10_() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("RIDEXPRESS (10)", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property RIDEXPRESS__3_() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property RIDEXPRESS__3_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("RIDEXPRESS (3)", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
@@ -113,7 +117,7 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property RIDEXPRESS__4_() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property RIDEXPRESS__4_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("RIDEXPRESS (4)", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
@@ -123,7 +127,7 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property RIDEXPRESS__5_() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property RIDEXPRESS__5_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("RIDEXPRESS (5)", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
@@ -133,7 +137,7 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property RIDEXPRESS__6_() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property RIDEXPRESS__6_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("RIDEXPRESS (6)", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
@@ -143,7 +147,7 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property RIDEXPRESS__6_1() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property RIDEXPRESS__6_1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("RIDEXPRESS (6)1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
@@ -153,11 +157,21 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property USER_LOGO() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property show() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("show", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property USER_LOGO() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("USER_LOGO", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
-    End Module
+    End Class
 End Namespace

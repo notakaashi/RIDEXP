@@ -35,8 +35,9 @@ Partial Class Logjn
         Label7 = New Label()
         Panel1 = New Panel()
         FadeTimer = New Timer(components)
-        Label6 = New Label()
+        pbxShow = New PictureBox()
         Panel1.SuspendLayout()
+        CType(pbxShow, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label5
@@ -45,9 +46,9 @@ Partial Class Logjn
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label5.Location = New Point(132, 307)
+        Label5.Location = New Point(151, 409)
         Label5.Name = "Label5"
-        Label5.Size = New Size(289, 29)
+        Label5.Size = New Size(360, 36)
         Label5.TabIndex = 8
         Label5.Text = "_______________________"
         ' 
@@ -57,10 +58,9 @@ Partial Class Logjn
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Reesha", 22.1999989F)
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(173, 366)
-        Button2.Margin = New Padding(3, 2, 3, 2)
+        Button2.Location = New Point(198, 488)
         Button2.Name = "Button2"
-        Button2.Size = New Size(186, 46)
+        Button2.Size = New Size(213, 61)
         Button2.TabIndex = 7
         Button2.Text = "SIGN UP"
         Button2.TextAlign = ContentAlignment.TopCenter
@@ -71,9 +71,9 @@ Partial Class Logjn
         Label4.AutoSize = True
         Label4.Font = New Font("Futura Hv BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label4.Location = New Point(162, 343)
+        Label4.Location = New Point(185, 457)
         Label4.Name = "Label4"
-        Label4.Size = New Size(214, 16)
+        Label4.Size = New Size(261, 20)
         Label4.TabIndex = 6
         Label4.Text = "Click here to create an account"
         ' 
@@ -83,10 +83,9 @@ Partial Class Logjn
         signinbtn.FlatStyle = FlatStyle.Flat
         signinbtn.Font = New Font("Reesha", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         signinbtn.ForeColor = Color.White
-        signinbtn.Location = New Point(173, 278)
-        signinbtn.Margin = New Padding(3, 2, 3, 2)
+        signinbtn.Location = New Point(198, 371)
         signinbtn.Name = "signinbtn"
-        signinbtn.Size = New Size(186, 46)
+        signinbtn.Size = New Size(213, 61)
         signinbtn.TabIndex = 5
         signinbtn.Text = "SIGN IN"
         signinbtn.TextAlign = ContentAlignment.TopCenter
@@ -98,20 +97,19 @@ Partial Class Logjn
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label3.Location = New Point(116, 205)
+        Label3.Location = New Point(133, 273)
         Label3.Name = "Label3"
-        Label3.Size = New Size(118, 22)
+        Label3.Size = New Size(141, 27)
         Label3.TabIndex = 4
         Label3.Text = "PASSWORD"
         ' 
         ' passwordtxt
         ' 
         passwordtxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        passwordtxt.Location = New Point(116, 227)
-        passwordtxt.Margin = New Padding(3, 2, 3, 2)
+        passwordtxt.Location = New Point(133, 303)
         passwordtxt.Name = "passwordtxt"
         passwordtxt.PasswordChar = "*"c
-        passwordtxt.Size = New Size(319, 33)
+        passwordtxt.Size = New Size(364, 40)
         passwordtxt.TabIndex = 3
         ' 
         ' Label2
@@ -120,19 +118,18 @@ Partial Class Logjn
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label2.Location = New Point(116, 127)
+        Label2.Location = New Point(133, 169)
         Label2.Name = "Label2"
-        Label2.Size = New Size(117, 22)
+        Label2.Size = New Size(138, 27)
         Label2.TabIndex = 2
         Label2.Text = "USERNAME"
         ' 
         ' usertxt
         ' 
         usertxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        usertxt.Location = New Point(116, 159)
-        usertxt.Margin = New Padding(3, 2, 3, 2)
+        usertxt.Location = New Point(133, 212)
         usertxt.Name = "usertxt"
-        usertxt.Size = New Size(319, 33)
+        usertxt.Size = New Size(364, 40)
         usertxt.TabIndex = 1
         ' 
         ' Label1
@@ -141,9 +138,9 @@ Partial Class Logjn
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Reesha", 48F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label1.Location = New Point(132, 50)
+        Label1.Location = New Point(151, 67)
         Label1.Name = "Label1"
-        Label1.Size = New Size(282, 77)
+        Label1.Size = New Size(352, 96)
         Label1.TabIndex = 0
         Label1.Text = "SIGN IN"
         ' 
@@ -152,9 +149,9 @@ Partial Class Logjn
         Label7.AutoSize = True
         Label7.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.White
-        Label7.Location = New Point(12, 9)
+        Label7.Location = New Point(14, 12)
         Label7.Name = "Label7"
-        Label7.Size = New Size(28, 26)
+        Label7.Size = New Size(34, 32)
         Label7.TabIndex = 9
         Label7.Text = "X"
         ' 
@@ -164,31 +161,30 @@ Partial Class Logjn
         Panel1.Controls.Add(Label7)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
-        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(535, 48)
+        Panel1.Size = New Size(611, 64)
         Panel1.TabIndex = 10
         ' 
         ' FadeTimer
         ' 
         FadeTimer.Interval = 25
         ' 
-        ' Label6
+        ' pbxShow
         ' 
-        Label6.AutoSize = True
-        Label6.Location = New Point(453, 239)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(36, 15)
-        Label6.TabIndex = 11
-        Label6.Text = "Show"
+        pbxShow.Image = My.Resources.Resources.RIDEXPRESS__10_
+        pbxShow.Location = New Point(506, 312)
+        pbxShow.Name = "pbxShow"
+        pbxShow.Size = New Size(42, 22)
+        pbxShow.SizeMode = PictureBoxSizeMode.StretchImage
+        pbxShow.TabIndex = 12
+        pbxShow.TabStop = False
         ' 
         ' Logjn
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(535, 434)
-        Controls.Add(Label6)
+        ClientSize = New Size(611, 579)
         Controls.Add(Panel1)
         Controls.Add(Button2)
         Controls.Add(Label4)
@@ -199,15 +195,16 @@ Partial Class Logjn
         Controls.Add(Label2)
         Controls.Add(passwordtxt)
         Controls.Add(Label5)
+        Controls.Add(pbxShow)
         DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(3, 2, 3, 2)
         Name = "Logjn"
         Opacity = 0R
         StartPosition = FormStartPosition.CenterScreen
         Text = "Logjn"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        CType(pbxShow, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -220,8 +217,8 @@ Partial Class Logjn
     Friend WithEvents usertxt As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Button2 As Button
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents FadeTimer As Timer
+    Friend WithEvents pbxShow As PictureBox
 End Class
