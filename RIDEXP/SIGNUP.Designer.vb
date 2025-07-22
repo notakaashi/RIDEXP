@@ -48,6 +48,8 @@ Partial Class SIGNUP
         TextBox8 = New TextBox()
         Label11 = New Label()
         TextBox9 = New TextBox()
+        TextBox10 = New TextBox()
+        Label12 = New Label()
         Panel1.SuspendLayout()
         Panel3.SuspendLayout()
         SuspendLayout()
@@ -55,6 +57,8 @@ Partial Class SIGNUP
         ' Panel1
         ' 
         Panel1.AutoScroll = True
+        Panel1.Controls.Add(TextBox10)
+        Panel1.Controls.Add(Label12)
         Panel1.Controls.Add(TextBox9)
         Panel1.Controls.Add(Label11)
         Panel1.Controls.Add(TextBox8)
@@ -86,7 +90,7 @@ Partial Class SIGNUP
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Speeday", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(101, 1191)
+        Button1.Location = New Point(92, 1281)
         Button1.Name = "Button1"
         Button1.Size = New Size(268, 72)
         Button1.TabIndex = 19
@@ -95,7 +99,7 @@ Partial Class SIGNUP
         ' 
         ' Panel2
         ' 
-        Panel2.Location = New Point(110, 1278)
+        Panel2.Location = New Point(110, 1401)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(250, 71)
         Panel2.TabIndex = 18
@@ -318,6 +322,26 @@ Partial Class SIGNUP
         TextBox9.Size = New Size(332, 40)
         TextBox9.TabIndex = 23
         ' 
+        ' TextBox10
+        ' 
+        TextBox10.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox10.Location = New Point(72, 1182)
+        TextBox10.Name = "TextBox10"
+        TextBox10.Size = New Size(332, 40)
+        TextBox10.TabIndex = 25
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.BackColor = Color.Transparent
+        Label12.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label12.Location = New Point(72, 1143)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(181, 27)
+        Label12.TabIndex = 24
+        Label12.Text = "DATE OF BIRTH"
+        ' 
         ' SIGNUP
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -367,4 +391,6 @@ Partial Class SIGNUP
     Friend WithEvents Label11 As Label
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents Label12 As Label
 End Class
