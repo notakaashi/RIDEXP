@@ -196,19 +196,20 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`rentals` (
   `rental_id` INT(11) NOT NULL AUTO_INCREMENT,
   `reservation_id` INT(11) NULL DEFAULT NULL,
   `rental_duration_days` INT DEFAULT 1,
-  `start_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  `end_date` DATETIME NOT NULL,
+  `pickup_date` DATE NOT NULL,
+  `pickup_time` TIME NOT NULL,
+  `return_date` DATE NULL DEFAULT NULL,
+  `return_time` TIME NULL DEFAULT NULL,
   `actual_return_date` DATETIME NULL DEFAULT NULL,
   `customer_id` INT(11) NOT NULL,
   `vehicle_id` INT(11) NOT NULL,
   `amount` DECIMAL(10,2) NULL DEFAULT NULL,
-  `security_deposit` DECIMAL(10,2) NULL DEFAULT NULL,
   `rental_status_id` INT(11) NOT NULL,
   PRIMARY KEY (`rental_id`),
-  INDEX( `customer_id`) ,
-  INDEX (`vehicle_id` ),
-  INDEX (`reservation_id`) ,
-  INDEX (`rental_status_id`) ,
+  INDEX (`customer_id`),
+  INDEX (`vehicle_id`),
+  INDEX (`reservation_id`),
+  INDEX (`rental_status_id`),
   CONSTRAINT `rentals_ibfk_1`
     FOREIGN KEY (`customer_id`)
     REFERENCES `ridexp`.`customers` (`customer_id`),
@@ -220,8 +221,8 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`rentals` (
     REFERENCES `ridexp`.`reservation` (`reservation_id`),
   CONSTRAINT `rentals_ibfk_4`
     FOREIGN KEY (`rental_status_id`)
-    REFERENCES `ridexp`.`rental_status` (`rental_status_id`))
-ENGINE = InnoDB
+    REFERENCES `ridexp`.`rental_status` (`rental_status_id`)
+) ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -436,14 +437,13 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`rental_rate` (
   `vehicle_id` INT(11) NOT NULL,
   `rate_per_hour` DECIMAL(10,2) NOT NULL,
   `rate_per_day` DECIMAL(10,2) NULL DEFAULT NULL,
-  `security_deposit` DECIMAL(10,2) NOT NULL,
   `effective_date` DATE NOT NULL,
   PRIMARY KEY (`rate_id`),
-  INDEX (`vehicle_id` ),
+  INDEX (`vehicle_id`),
   CONSTRAINT `rental_rate_ibfk_1`
     FOREIGN KEY (`vehicle_id`)
-    REFERENCES `ridexp`.`vehicles` (`vehicle_id`))
-ENGINE = InnoDB
+    REFERENCES `ridexp`.`vehicles` (`vehicle_id`)
+) ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
@@ -518,7 +518,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
 DELIMITER $$
-CREATE TRIGGER rental_end_date_calculator
+CREATE TRIGGER rental_return_date_calculator
 BEFORE INSERT ON `ridexp`.`rentals`
 FOR EACH ROW
 BEGIN
@@ -526,6 +526,10 @@ BEGIN
         SET NEW.rental_duration_days = 1;
     END IF;
     
-    SET NEW.end_date = DATE_ADD(NEW.start_date, INTERVAL NEW.rental_duration_days DAY);
+    -- Calculate return_date based on pickup_date and rental_duration_days
+    IF NEW.return_date IS NULL THEN
+        SET NEW.return_date = DATE_ADD(NEW.pickup_date, INTERVAL NEW.rental_duration_days DAY);
+    END IF;
 END$$
 DELIMITER ;
+
