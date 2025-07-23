@@ -702,6 +702,8 @@ Partial Class FORM_UNDERBONE
         ' Button5
         ' 
         Button5.BackColor = Color.Transparent
+        Button5.Cursor = Cursors.Hand
+        Button5.FlatAppearance.BorderSize = 0
         Button5.FlatStyle = FlatStyle.Flat
         Button5.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
@@ -715,6 +717,8 @@ Partial Class FORM_UNDERBONE
         ' Button4
         ' 
         Button4.BackColor = Color.Transparent
+        Button4.Cursor = Cursors.Hand
+        Button4.FlatAppearance.BorderSize = 0
         Button4.FlatStyle = FlatStyle.Flat
         Button4.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
@@ -728,6 +732,8 @@ Partial Class FORM_UNDERBONE
         ' Button3
         ' 
         Button3.BackColor = Color.Transparent
+        Button3.Cursor = Cursors.Hand
+        Button3.FlatAppearance.BorderSize = 0
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
@@ -741,6 +747,8 @@ Partial Class FORM_UNDERBONE
         ' Button2
         ' 
         Button2.BackColor = Color.Transparent
+        Button2.Cursor = Cursors.Hand
+        Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))

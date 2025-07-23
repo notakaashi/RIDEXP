@@ -24,6 +24,9 @@ Partial Class FORMRENTAL_STEP2
     Private Sub InitializeComponent()
         DateTimePicker1 = New DateTimePicker()
         Panel2 = New Panel()
+        Panel5 = New Panel()
+        RadioButton2 = New RadioButton()
+        RadioButton1 = New RadioButton()
         TextBox2 = New TextBox()
         DateTimePicker2 = New DateTimePicker()
         TextBox1 = New TextBox()
@@ -34,7 +37,6 @@ Partial Class FORMRENTAL_STEP2
         PictureBox2 = New PictureBox()
         contactslbl = New Label()
         PictureBox1 = New PictureBox()
-        rentalslbl = New Label()
         homelbl = New Label()
         Label3 = New Label()
         Label5 = New Label()
@@ -46,25 +48,22 @@ Partial Class FORMRENTAL_STEP2
         Label2 = New Label()
         Label7 = New Label()
         Panel4 = New Panel()
+        Panel6 = New Panel()
+        RadioButton3 = New RadioButton()
+        RadioButton4 = New RadioButton()
         TextBox3 = New TextBox()
         DateTimePicker3 = New DateTimePicker()
         TextBox4 = New TextBox()
         Label13 = New Label()
         Label14 = New Label()
         Button1 = New Button()
-        Panel5 = New Panel()
-        RadioButton1 = New RadioButton()
-        RadioButton2 = New RadioButton()
-        Panel6 = New Panel()
-        RadioButton3 = New RadioButton()
-        RadioButton4 = New RadioButton()
         Panel2.SuspendLayout()
+        Panel5.SuspendLayout()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
         Panel4.SuspendLayout()
-        Panel5.SuspendLayout()
         Panel6.SuspendLayout()
         SuspendLayout()
         ' 
@@ -87,6 +86,41 @@ Partial Class FORMRENTAL_STEP2
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(1103, 106)
         Panel2.TabIndex = 2
+        ' 
+        ' Panel5
+        ' 
+        Panel5.Controls.Add(RadioButton2)
+        Panel5.Controls.Add(RadioButton1)
+        Panel5.Location = New Point(34, 18)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(453, 33)
+        Panel5.TabIndex = 22
+        ' 
+        ' RadioButton2
+        ' 
+        RadioButton2.AutoSize = True
+        RadioButton2.Font = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RadioButton2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        RadioButton2.Location = New Point(211, 4)
+        RadioButton2.Name = "RadioButton2"
+        RadioButton2.Size = New Size(216, 22)
+        RadioButton2.TabIndex = 1
+        RadioButton2.TabStop = True
+        RadioButton2.Text = "DELIVERED AT YOUR PLACE"
+        RadioButton2.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton1
+        ' 
+        RadioButton1.AutoSize = True
+        RadioButton1.Font = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RadioButton1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        RadioButton1.Location = New Point(13, 4)
+        RadioButton1.Name = "RadioButton1"
+        RadioButton1.Size = New Size(172, 22)
+        RadioButton1.TabIndex = 0
+        RadioButton1.TabStop = True
+        RadioButton1.Text = "PICK-UP AT STATION"
+        RadioButton1.UseVisualStyleBackColor = True
         ' 
         ' TextBox2
         ' 
@@ -154,7 +188,6 @@ Partial Class FORMRENTAL_STEP2
         Panel1.Controls.Add(PictureBox2)
         Panel1.Controls.Add(contactslbl)
         Panel1.Controls.Add(PictureBox1)
-        Panel1.Controls.Add(rentalslbl)
         Panel1.Controls.Add(homelbl)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
@@ -181,7 +214,7 @@ Partial Class FORMRENTAL_STEP2
         contactslbl.Cursor = Cursors.Hand
         contactslbl.Font = New Font("Reesha", 16.1999989F)
         contactslbl.ForeColor = Color.Black
-        contactslbl.Location = New Point(573, 21)
+        contactslbl.Location = New Point(300, 23)
         contactslbl.Name = "contactslbl"
         contactslbl.Size = New Size(220, 32)
         contactslbl.TabIndex = 25
@@ -196,19 +229,6 @@ Partial Class FORMRENTAL_STEP2
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
-        ' 
-        ' rentalslbl
-        ' 
-        rentalslbl.AutoSize = True
-        rentalslbl.BackColor = Color.White
-        rentalslbl.Cursor = Cursors.Hand
-        rentalslbl.Font = New Font("Reesha", 16.1999989F)
-        rentalslbl.ForeColor = Color.Black
-        rentalslbl.Location = New Point(304, 21)
-        rentalslbl.Name = "rentalslbl"
-        rentalslbl.Size = New Size(242, 32)
-        rentalslbl.TabIndex = 24
-        rentalslbl.Text = "OUR RENTALS"
         ' 
         ' homelbl
         ' 
@@ -348,6 +368,41 @@ Partial Class FORMRENTAL_STEP2
         Panel4.Size = New Size(1103, 106)
         Panel4.TabIndex = 22
         ' 
+        ' Panel6
+        ' 
+        Panel6.Controls.Add(RadioButton3)
+        Panel6.Controls.Add(RadioButton4)
+        Panel6.Location = New Point(34, 24)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(453, 33)
+        Panel6.TabIndex = 23
+        ' 
+        ' RadioButton3
+        ' 
+        RadioButton3.AutoSize = True
+        RadioButton3.Font = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RadioButton3.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        RadioButton3.Location = New Point(211, 4)
+        RadioButton3.Name = "RadioButton3"
+        RadioButton3.Size = New Size(226, 22)
+        RadioButton3.TabIndex = 1
+        RadioButton3.TabStop = True
+        RadioButton3.Text = "COLLECTED AT YOUR PLACE"
+        RadioButton3.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton4
+        ' 
+        RadioButton4.AutoSize = True
+        RadioButton4.Font = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RadioButton4.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        RadioButton4.Location = New Point(13, 4)
+        RadioButton4.Name = "RadioButton4"
+        RadioButton4.Size = New Size(171, 22)
+        RadioButton4.TabIndex = 0
+        RadioButton4.TabStop = True
+        RadioButton4.Text = "RETURN AT STATION"
+        RadioButton4.UseVisualStyleBackColor = True
+        ' 
         ' TextBox3
         ' 
         TextBox3.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -410,76 +465,6 @@ Partial Class FORMRENTAL_STEP2
         Button1.TextAlign = ContentAlignment.TopCenter
         Button1.UseVisualStyleBackColor = False
         ' 
-        ' Panel5
-        ' 
-        Panel5.Controls.Add(RadioButton2)
-        Panel5.Controls.Add(RadioButton1)
-        Panel5.Location = New Point(34, 18)
-        Panel5.Name = "Panel5"
-        Panel5.Size = New Size(453, 33)
-        Panel5.TabIndex = 22
-        ' 
-        ' RadioButton1
-        ' 
-        RadioButton1.AutoSize = True
-        RadioButton1.Font = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButton1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        RadioButton1.Location = New Point(13, 4)
-        RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(172, 22)
-        RadioButton1.TabIndex = 0
-        RadioButton1.TabStop = True
-        RadioButton1.Text = "PICK-UP AT STATION"
-        RadioButton1.UseVisualStyleBackColor = True
-        ' 
-        ' RadioButton2
-        ' 
-        RadioButton2.AutoSize = True
-        RadioButton2.Font = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButton2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        RadioButton2.Location = New Point(211, 4)
-        RadioButton2.Name = "RadioButton2"
-        RadioButton2.Size = New Size(216, 22)
-        RadioButton2.TabIndex = 1
-        RadioButton2.TabStop = True
-        RadioButton2.Text = "DELIVERED AT YOUR PLACE"
-        RadioButton2.UseVisualStyleBackColor = True
-        ' 
-        ' Panel6
-        ' 
-        Panel6.Controls.Add(RadioButton3)
-        Panel6.Controls.Add(RadioButton4)
-        Panel6.Location = New Point(34, 24)
-        Panel6.Name = "Panel6"
-        Panel6.Size = New Size(453, 33)
-        Panel6.TabIndex = 23
-        ' 
-        ' RadioButton3
-        ' 
-        RadioButton3.AutoSize = True
-        RadioButton3.Font = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButton3.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        RadioButton3.Location = New Point(211, 4)
-        RadioButton3.Name = "RadioButton3"
-        RadioButton3.Size = New Size(226, 22)
-        RadioButton3.TabIndex = 1
-        RadioButton3.TabStop = True
-        RadioButton3.Text = "COLLECTED AT YOUR PLACE"
-        RadioButton3.UseVisualStyleBackColor = True
-        ' 
-        ' RadioButton4
-        ' 
-        RadioButton4.AutoSize = True
-        RadioButton4.Font = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButton4.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        RadioButton4.Location = New Point(13, 4)
-        RadioButton4.Name = "RadioButton4"
-        RadioButton4.Size = New Size(171, 22)
-        RadioButton4.TabIndex = 0
-        RadioButton4.TabStop = True
-        RadioButton4.Text = "RETURN AT STATION"
-        RadioButton4.UseVisualStyleBackColor = True
-        ' 
         ' FORMRENTAL_STEP2
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -493,9 +478,12 @@ Partial Class FORMRENTAL_STEP2
         Controls.Add(Label1)
         Controls.Add(Panel1)
         Name = "FORMRENTAL_STEP2"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "FORM_RENTAL"
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        Panel5.ResumeLayout(False)
+        Panel5.PerformLayout()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
@@ -504,8 +492,6 @@ Partial Class FORMRENTAL_STEP2
         Panel3.PerformLayout()
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
-        Panel5.ResumeLayout(False)
-        Panel5.PerformLayout()
         Panel6.ResumeLayout(False)
         Panel6.PerformLayout()
         ResumeLayout(False)
@@ -518,7 +504,6 @@ Partial Class FORMRENTAL_STEP2
     Friend WithEvents Panel1 As Panel
     Friend WithEvents contactslbl As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents rentalslbl As Label
     Friend WithEvents homelbl As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label

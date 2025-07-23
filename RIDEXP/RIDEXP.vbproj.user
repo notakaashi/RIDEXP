@@ -19,6 +19,9 @@
     <Compile Update="FORMADMIN_INVENTORY.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FORMRENTAL_STEP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FORMRENTAL_STEP2.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -31,6 +34,9 @@
     <Compile Update="FORM_ADMIN.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FORM_PRIVACYPOLICY.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FORM_SPORTSMOTOR.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -38,6 +44,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FORM_HYBRID.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FORM_TERMSPOLICIES.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Logjn.vb">

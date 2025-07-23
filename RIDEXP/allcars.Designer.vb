@@ -24,11 +24,11 @@ Partial Class allcars
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(allcars))
-        Button6 = New Button()
-        Button5 = New Button()
-        Button4 = New Button()
-        Button3 = New Button()
-        Button2 = New Button()
+        btnHybrid = New Button()
+        btnHatch = New Button()
+        btnMPV = New Button()
+        btnSedan = New Button()
+        btnSuv = New Button()
         PictureBox3 = New PictureBox()
         TextBox1 = New TextBox()
         Panel4 = New Panel()
@@ -96,70 +96,80 @@ Partial Class allcars
         Panel6.SuspendLayout()
         SuspendLayout()
         ' 
-        ' Button6
+        ' btnHybrid
         ' 
-        Button6.BackColor = Color.Transparent
-        Button6.FlatStyle = FlatStyle.Flat
-        Button6.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button6.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button6.Location = New Point(816, 26)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(176, 45)
-        Button6.TabIndex = 38
-        Button6.Text = "HYBRID"
-        Button6.UseVisualStyleBackColor = False
+        btnHybrid.BackColor = Color.Transparent
+        btnHybrid.Cursor = Cursors.Hand
+        btnHybrid.FlatAppearance.BorderSize = 0
+        btnHybrid.FlatStyle = FlatStyle.Flat
+        btnHybrid.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnHybrid.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnHybrid.Location = New Point(816, 26)
+        btnHybrid.Name = "btnHybrid"
+        btnHybrid.Size = New Size(176, 45)
+        btnHybrid.TabIndex = 38
+        btnHybrid.Text = "HYBRID"
+        btnHybrid.UseVisualStyleBackColor = False
         ' 
-        ' Button5
+        ' btnHatch
         ' 
-        Button5.BackColor = Color.Transparent
-        Button5.FlatStyle = FlatStyle.Flat
-        Button5.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button5.Location = New Point(545, 26)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(255, 45)
-        Button5.TabIndex = 37
-        Button5.Text = "HATCHBACK"
-        Button5.UseVisualStyleBackColor = False
+        btnHatch.BackColor = Color.Transparent
+        btnHatch.Cursor = Cursors.Hand
+        btnHatch.FlatAppearance.BorderSize = 0
+        btnHatch.FlatStyle = FlatStyle.Flat
+        btnHatch.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnHatch.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnHatch.Location = New Point(545, 26)
+        btnHatch.Name = "btnHatch"
+        btnHatch.Size = New Size(255, 45)
+        btnHatch.TabIndex = 37
+        btnHatch.Text = "HATCHBACK"
+        btnHatch.UseVisualStyleBackColor = False
         ' 
-        ' Button4
+        ' btnMPV
         ' 
-        Button4.BackColor = Color.Transparent
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button4.Location = New Point(363, 26)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(163, 45)
-        Button4.TabIndex = 34
-        Button4.Text = "mpv"
-        Button4.UseVisualStyleBackColor = False
+        btnMPV.BackColor = Color.Transparent
+        btnMPV.Cursor = Cursors.Hand
+        btnMPV.FlatAppearance.BorderSize = 0
+        btnMPV.FlatStyle = FlatStyle.Flat
+        btnMPV.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnMPV.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnMPV.Location = New Point(363, 26)
+        btnMPV.Name = "btnMPV"
+        btnMPV.Size = New Size(163, 45)
+        btnMPV.TabIndex = 34
+        btnMPV.Text = "mpv"
+        btnMPV.UseVisualStyleBackColor = False
         ' 
-        ' Button3
+        ' btnSedan
         ' 
-        Button3.BackColor = Color.Transparent
-        Button3.FlatStyle = FlatStyle.Flat
-        Button3.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button3.Location = New Point(177, 26)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(163, 45)
-        Button3.TabIndex = 33
-        Button3.Text = "SEDAN"
-        Button3.UseVisualStyleBackColor = False
+        btnSedan.BackColor = Color.Transparent
+        btnSedan.Cursor = Cursors.Hand
+        btnSedan.FlatAppearance.BorderSize = 0
+        btnSedan.FlatStyle = FlatStyle.Flat
+        btnSedan.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnSedan.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnSedan.Location = New Point(177, 26)
+        btnSedan.Name = "btnSedan"
+        btnSedan.Size = New Size(163, 45)
+        btnSedan.TabIndex = 33
+        btnSedan.Text = "SEDAN"
+        btnSedan.UseVisualStyleBackColor = False
         ' 
-        ' Button2
+        ' btnSuv
         ' 
-        Button2.BackColor = Color.Transparent
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button2.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button2.Location = New Point(22, 26)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(133, 45)
-        Button2.TabIndex = 31
-        Button2.Text = "SUV"
-        Button2.UseVisualStyleBackColor = False
+        btnSuv.BackColor = Color.Transparent
+        btnSuv.Cursor = Cursors.Hand
+        btnSuv.FlatAppearance.BorderSize = 0
+        btnSuv.FlatStyle = FlatStyle.Flat
+        btnSuv.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnSuv.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnSuv.Location = New Point(22, 26)
+        btnSuv.Name = "btnSuv"
+        btnSuv.Size = New Size(133, 45)
+        btnSuv.TabIndex = 31
+        btnSuv.Text = "SUV"
+        btnSuv.UseVisualStyleBackColor = False
         ' 
         ' PictureBox3
         ' 
@@ -328,11 +338,11 @@ Partial Class allcars
         Panel1.Controls.Add(Panel3)
         Panel1.Controls.Add(Panel2)
         Panel1.Controls.Add(Panel4)
-        Panel1.Controls.Add(Button6)
-        Panel1.Controls.Add(Button5)
-        Panel1.Controls.Add(Button4)
-        Panel1.Controls.Add(Button3)
-        Panel1.Controls.Add(Button2)
+        Panel1.Controls.Add(btnHybrid)
+        Panel1.Controls.Add(btnHatch)
+        Panel1.Controls.Add(btnMPV)
+        Panel1.Controls.Add(btnSedan)
+        Panel1.Controls.Add(btnSuv)
         Panel1.Controls.Add(PictureBox3)
         Panel1.Controls.Add(TextBox1)
         Panel1.Location = New Point(11, 45)
@@ -820,11 +830,11 @@ Partial Class allcars
         Panel6.PerformLayout()
         ResumeLayout(False)
     End Sub
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnHybrid As Button
+    Friend WithEvents btnHatch As Button
+    Friend WithEvents btnMPV As Button
+    Friend WithEvents btnSedan As Button
+    Friend WithEvents btnSuv As Button
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Panel4 As Panel

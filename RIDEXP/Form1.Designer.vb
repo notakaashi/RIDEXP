@@ -42,11 +42,15 @@ Partial Class Form1
         contactslbl = New Label()
         Button3 = New Button()
         Button4 = New Button()
+        pnlVehicleType = New Panel()
+        btnMotor = New Button()
+        btnCar = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
+        pnlVehicleType.SuspendLayout()
         SuspendLayout()
         ' 
         ' PictureBox1
@@ -64,6 +68,7 @@ Partial Class Form1
         ' Button1
         ' 
         Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button1.Cursor = Cursors.Hand
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Reesha", 16.1999989F)
         Button1.ForeColor = Color.White
@@ -79,7 +84,7 @@ Partial Class Form1
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Reesha", 48.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Reesha", 48F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label1.Location = New Point(34, 139)
         Label1.Name = "Label1"
@@ -90,7 +95,7 @@ Partial Class Form1
         ' 
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label5.Location = New Point(102, 235)
         Label5.Name = "Label5"
@@ -101,7 +106,7 @@ Partial Class Form1
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label2.Location = New Point(78, 299)
         Label2.Name = "Label2"
@@ -112,7 +117,7 @@ Partial Class Form1
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label3.Location = New Point(102, 455)
         Label3.Name = "Label3"
@@ -279,13 +284,49 @@ Partial Class Form1
         Button4.Text = "Button4"
         Button4.UseVisualStyleBackColor = True
         ' 
+        ' pnlVehicleType
+        ' 
+        pnlVehicleType.BackColor = Color.White
+        pnlVehicleType.Controls.Add(btnMotor)
+        pnlVehicleType.Controls.Add(btnCar)
+        pnlVehicleType.Location = New Point(389, 87)
+        pnlVehicleType.Margin = New Padding(3, 4, 3, 4)
+        pnlVehicleType.Name = "pnlVehicleType"
+        pnlVehicleType.Size = New Size(242, 126)
+        pnlVehicleType.TabIndex = 20
+        pnlVehicleType.Visible = False
+        ' 
+        ' btnMotor
+        ' 
+        btnMotor.Cursor = Cursors.Hand
+        btnMotor.Font = New Font("Reesha", 10.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnMotor.Location = New Point(18, 64)
+        btnMotor.Name = "btnMotor"
+        btnMotor.Size = New Size(203, 44)
+        btnMotor.TabIndex = 1
+        btnMotor.Text = "MOTORCYCLES"
+        btnMotor.UseVisualStyleBackColor = True
+        ' 
+        ' btnCar
+        ' 
+        btnCar.Cursor = Cursors.Hand
+        btnCar.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnCar.Location = New Point(18, 14)
+        btnCar.Name = "btnCar"
+        btnCar.Size = New Size(203, 44)
+        btnCar.TabIndex = 0
+        btnCar.Text = "CARS"
+        btnCar.TextAlign = ContentAlignment.TopCenter
+        btnCar.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.RIDEXPRESS
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1262, 673)
+        Controls.Add(pnlVehicleType)
         Controls.Add(Button4)
         Controls.Add(Button3)
         Controls.Add(contactslbl)
@@ -312,6 +353,7 @@ Partial Class Form1
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        pnlVehicleType.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -336,5 +378,8 @@ Partial Class Form1
     Friend WithEvents contactslbl As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents pnlVehicleType As Panel
+    Friend WithEvents btnMotor As Button
+    Friend WithEvents btnCar As Button
 
 End Class

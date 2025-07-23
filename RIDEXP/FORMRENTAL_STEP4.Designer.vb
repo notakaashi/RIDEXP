@@ -36,9 +36,9 @@ Partial Class FORMRENTAL_STEP4
         PictureBox2 = New PictureBox()
         contactslbl = New Label()
         PictureBox1 = New PictureBox()
-        rentalslbl = New Label()
         homelbl = New Label()
         Panel2 = New Panel()
+        Button1 = New Button()
         Label20 = New Label()
         Label19 = New Label()
         Panel11 = New Panel()
@@ -76,7 +76,6 @@ Partial Class FORMRENTAL_STEP4
         RadioButton1 = New RadioButton()
         Panel6 = New Panel()
         Label21 = New Label()
-        Button1 = New Button()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -123,7 +122,7 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label9.AutoSize = True
         Label9.BackColor = Color.Transparent
-        Label9.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label9.Location = New Point(828, 22)
         Label9.Name = "Label9"
@@ -147,7 +146,7 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label7.AutoSize = True
         Label7.BackColor = Color.Transparent
-        Label7.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label7.Location = New Point(561, 22)
         Label7.Name = "Label7"
@@ -171,7 +170,7 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label6.AutoSize = True
         Label6.BackColor = Color.Transparent
-        Label6.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label6.Location = New Point(292, 22)
         Label6.Name = "Label6"
@@ -202,7 +201,7 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label5.Location = New Point(29, 22)
         Label5.Name = "Label5"
@@ -216,7 +215,6 @@ Partial Class FORMRENTAL_STEP4
         Panel1.Controls.Add(PictureBox2)
         Panel1.Controls.Add(contactslbl)
         Panel1.Controls.Add(PictureBox1)
-        Panel1.Controls.Add(rentalslbl)
         Panel1.Controls.Add(homelbl)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
@@ -243,7 +241,7 @@ Partial Class FORMRENTAL_STEP4
         contactslbl.Cursor = Cursors.Hand
         contactslbl.Font = New Font("Reesha", 16.1999989F)
         contactslbl.ForeColor = Color.Black
-        contactslbl.Location = New Point(573, 21)
+        contactslbl.Location = New Point(294, 22)
         contactslbl.Name = "contactslbl"
         contactslbl.Size = New Size(220, 32)
         contactslbl.TabIndex = 25
@@ -258,19 +256,6 @@ Partial Class FORMRENTAL_STEP4
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
-        ' 
-        ' rentalslbl
-        ' 
-        rentalslbl.AutoSize = True
-        rentalslbl.BackColor = Color.White
-        rentalslbl.Cursor = Cursors.Hand
-        rentalslbl.Font = New Font("Reesha", 16.1999989F)
-        rentalslbl.ForeColor = Color.Black
-        rentalslbl.Location = New Point(304, 21)
-        rentalslbl.Name = "rentalslbl"
-        rentalslbl.Size = New Size(242, 32)
-        rentalslbl.TabIndex = 24
-        rentalslbl.Text = "OUR RENTALS"
         ' 
         ' homelbl
         ' 
@@ -308,9 +293,23 @@ Partial Class FORMRENTAL_STEP4
         Panel2.Size = New Size(602, 439)
         Panel2.TabIndex = 29
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button1.Font = New Font("Reesha", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(108, 1086)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(353, 64)
+        Button1.TabIndex = 47
+        Button1.Text = "CHECKOUT"
+        Button1.TextAlign = ContentAlignment.TopCenter
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' Label20
         ' 
         Label20.AutoSize = True
+        Label20.Cursor = Cursors.Hand
         Label20.Font = New Font("Futura Bk BT", 10.2F)
         Label20.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label20.Location = New Point(70, 1034)
@@ -322,6 +321,7 @@ Partial Class FORMRENTAL_STEP4
         ' Label19
         ' 
         Label19.AutoSize = True
+        Label19.Cursor = Cursors.Hand
         Label19.Font = New Font("Futura Bk BT", 10.2F)
         Label19.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label19.Location = New Point(69, 1002)
@@ -614,7 +614,7 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label10.AutoSize = True
         Label10.BackColor = Color.Transparent
-        Label10.Font = New Font("Designer", 24.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Designer", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label10.Location = New Point(29, 123)
         Label10.Name = "Label10"
@@ -703,22 +703,9 @@ Partial Class FORMRENTAL_STEP4
         Label21.TabIndex = 16
         Label21.Text = "PAYMENT INFROMATION"
         ' 
-        ' Button1
-        ' 
-        Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button1.Font = New Font("Reesha", 24.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(108, 1086)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(353, 64)
-        Button1.TabIndex = 47
-        Button1.Text = "CHECKOUT"
-        Button1.TextAlign = ContentAlignment.TopCenter
-        Button1.UseVisualStyleBackColor = False
-        ' 
         ' FORMRENTAL_STEP4
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.RIDEXPRESS__5_
         ClientSize = New Size(1262, 673)
@@ -726,6 +713,7 @@ Partial Class FORMRENTAL_STEP4
         Controls.Add(Panel3)
         Controls.Add(Panel1)
         Name = "FORMRENTAL_STEP4"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "FORMRENTAL_STEP4"
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
@@ -766,7 +754,6 @@ Partial Class FORMRENTAL_STEP4
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents contactslbl As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents rentalslbl As Label
     Friend WithEvents homelbl As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label27 As Label

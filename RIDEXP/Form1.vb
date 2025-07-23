@@ -10,6 +10,8 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RefreshLoginState()
+        pnlVehicleType.Visible = False
+
     End Sub
 
 
@@ -38,7 +40,7 @@
     End Sub
 
     Private Sub rentalslbl_Click(sender As Object, e As EventArgs) Handles rentalslbl.Click
-        Vehicle_type.Show()
+        pnlVehicleType.Visible = True
         rentalslbl.ForeColor = Color.DarkRed
     End Sub
     Private Sub contactslbl_Click(sender As Object, e As EventArgs) Handles contactslbl.Click
@@ -81,12 +83,32 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        FORMRENTAL_STEP3.Show()
+        FORMRENTAL_STEP2.Show()
         Hide()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         FORM_ADMIN.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        FORMRENTAL_STEP1.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnCar.Click
+        allcars.Show()
+        btnCar.BackColor = Color.FromArgb(192, 0, 0)
+        btnMotor.BackColor = Color.White
+        btnCar.ForeColor = Color.White
+        btnMotor.ForeColor = Color.Black
+    End Sub
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnMotor.Click
+        allmotors.Show()
+        btnMotor.BackColor = Color.FromArgb(192, 0, 0)
+        btnCar.BackColor = Color.White
+        btnMotor.ForeColor = Color.White
+        btnCar.ForeColor = Color.Black
     End Sub
 End Class

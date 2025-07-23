@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>1. RENTAL PERIOD: The rental period begins when the vehicle is delivered to the renter and ends when the vehicle is returned to the rental location.
+
+2. DRIVER REQUIREMENTS: The renter must be at least 21 years old and possess a valid driver\'s license. For motorcycles, appropriate motorcycle license is required.
+
+3. VEHICLE CONDITION: The renter agrees to return the vehicle in the same condition as received, normal wear and tear excepted.
+
+4. PROHIBITED USES: The vehicle may not be used for racing, off-road driving (unless specifically rented for such purpose), or any illegal activities.
+
+5. INSURANCE: Basic insurance is included. Additional coverage options are available for purchase.
+
+6. FUEL POLICY: Vehicle must be returned with the same fuel level as when rented, or fuel charges will apply.
+
+7. LATE RETURNS: Late return fees apply for vehicles returned after the agreed time.
+
+8. DAMAGE RESPONSIBILITY: Renter is responsible for any damage to the vehicle during the rental period.</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>1. RESERVATION CANCELLATION: Reservations may be cancelled up to 24 hours before the scheduled rental time without penalty.
+
+2. CANCELLATION FEES: Cancellations made less than 24 hours before rental time are subject to a 50% cancellation fee.
+
+3. NO-SHOW POLICY: Failure to pick up a reserved vehicle within 2 hours of scheduled time results in automatic cancellation and full charge.
+
+4. REFUND PROCESSING: Refunds for eligible cancellations will be processed within 5-7 business days.
+
+5. EMERGENCY CANCELLATIONS: In case of emergencies or unforeseen circumstances, please contact us immediately for special consideration.
+
+6. WEATHER CANCELLATIONS: In case of severe weather conditions, we may cancel rentals for safety reasons with full refund.
+</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>1. DAMAGE ASSESSMENT: All vehicles are inspected before and after rental. Any new damage will be documented and charged to the renter.
+
+2. MINOR DAMAGE: Small scratches, dents, or interior stains may result in repair charges ranging from PHP 1,000 to PHP 10,000.
+
+3. MAJOR DAMAGE: Significant damage may result in charges up to the full value of the vehicle.
+
+4. THEFT PROTECTION: In case of vehicle theft, the renter may be liable for the full value of the vehicle.
+
+5. ACCIDENT PROCEDURES: In case of an accident, immediately contact local authorities and our 24-hour emergency hotline.
+
+6. INSURANCE CLAIMS: We will assist with insurance claims, but the renter remains responsible for deductibles and uncovered damages.
+
+7. DISPUTE RESOLUTION: Any disputes regarding damage charges will be resolved through our internal review process.</value>
+  </data>
+</root>
