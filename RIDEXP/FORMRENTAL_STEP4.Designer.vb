@@ -39,8 +39,25 @@ Partial Class FORMRENTAL_STEP4
         rentalslbl = New Label()
         homelbl = New Label()
         Panel2 = New Panel()
+        Label20 = New Label()
+        Label19 = New Label()
+        Panel11 = New Panel()
+        Panel9 = New Panel()
+        Panel10 = New Panel()
+        CheckBox2 = New CheckBox()
+        CheckBox3 = New CheckBox()
+        Panel8 = New Panel()
+        CheckBox1 = New CheckBox()
         Label16 = New Label()
         Panel7 = New Panel()
+        TextBox5 = New TextBox()
+        TextBox4 = New TextBox()
+        TextBox3 = New TextBox()
+        TextBox2 = New TextBox()
+        TextBox1 = New TextBox()
+        Label24 = New Label()
+        Label23 = New Label()
+        Label22 = New Label()
         Label18 = New Label()
         Label17 = New Label()
         Panel5 = New Panel()
@@ -59,37 +76,19 @@ Partial Class FORMRENTAL_STEP4
         RadioButton1 = New RadioButton()
         Panel6 = New Panel()
         Label21 = New Label()
-        Panel8 = New Panel()
-        Label22 = New Label()
-        Label23 = New Label()
-        Label24 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox3 = New TextBox()
-        TextBox4 = New TextBox()
-        TextBox5 = New TextBox()
-        CheckBox1 = New CheckBox()
-        Panel9 = New Panel()
-        CheckBox3 = New CheckBox()
-        Panel10 = New Panel()
-        CheckBox2 = New CheckBox()
-        Panel11 = New Panel()
-        CheckBox4 = New CheckBox()
-        Label19 = New Label()
-        Label20 = New Label()
+        Button1 = New Button()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
+        Panel9.SuspendLayout()
+        Panel10.SuspendLayout()
+        Panel8.SuspendLayout()
         Panel7.SuspendLayout()
         Panel5.SuspendLayout()
         Panel4.SuspendLayout()
         Panel6.SuspendLayout()
-        Panel8.SuspendLayout()
-        Panel9.SuspendLayout()
-        Panel10.SuspendLayout()
-        Panel11.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel3
@@ -113,7 +112,7 @@ Partial Class FORMRENTAL_STEP4
         Label8.AutoSize = True
         Label8.BackColor = Color.Transparent
         Label8.Font = New Font("Futura Hv BT", 10.2F)
-        Label8.ForeColor = Color.FromArgb(192, 0, 0)
+        Label8.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label8.Location = New Point(868, 22)
         Label8.Name = "Label8"
         Label8.Size = New Size(152, 20)
@@ -124,8 +123,8 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label9.AutoSize = True
         Label9.BackColor = Color.Transparent
-        Label9.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label9.ForeColor = Color.FromArgb(192, 0, 0)
+        Label9.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label9.Location = New Point(828, 22)
         Label9.Name = "Label9"
         Label9.Size = New Size(255, 36)
@@ -137,7 +136,7 @@ Partial Class FORMRENTAL_STEP4
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Futura Hv BT", 10.2F)
-        Label2.ForeColor = Color.FromArgb(192, 0, 0)
+        Label2.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label2.Location = New Point(620, 22)
         Label2.Name = "Label2"
         Label2.Size = New Size(136, 20)
@@ -148,8 +147,8 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label7.AutoSize = True
         Label7.BackColor = Color.Transparent
-        Label7.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label7.ForeColor = Color.FromArgb(192, 0, 0)
+        Label7.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label7.Location = New Point(561, 22)
         Label7.Name = "Label7"
         Label7.Size = New Size(255, 36)
@@ -161,7 +160,7 @@ Partial Class FORMRENTAL_STEP4
         Label4.AutoSize = True
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Futura Hv BT", 10.2F)
-        Label4.ForeColor = Color.FromArgb(192, 0, 0)
+        Label4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label4.Location = New Point(333, 22)
         Label4.Name = "Label4"
         Label4.Size = New Size(163, 20)
@@ -172,8 +171,8 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label6.AutoSize = True
         Label6.BackColor = Color.Transparent
-        Label6.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label6.ForeColor = Color.FromArgb(192, 0, 0)
+        Label6.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label6.Location = New Point(292, 22)
         Label6.Name = "Label6"
         Label6.Size = New Size(255, 36)
@@ -185,7 +184,7 @@ Partial Class FORMRENTAL_STEP4
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Futura Hv BT", 10.2F)
-        Label3.ForeColor = Color.FromArgb(192, 0, 0)
+        Label3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label3.Location = New Point(40, 22)
         Label3.Name = "Label3"
         Label3.Size = New Size(223, 20)
@@ -203,8 +202,8 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label5.ForeColor = Color.FromArgb(192, 0, 0)
+        Label5.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label5.Location = New Point(29, 22)
         Label5.Name = "Label5"
         Label5.Size = New Size(255, 36)
@@ -278,7 +277,7 @@ Partial Class FORMRENTAL_STEP4
         homelbl.AutoSize = True
         homelbl.BackColor = Color.White
         homelbl.Cursor = Cursors.Hand
-        homelbl.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        homelbl.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         homelbl.ForeColor = Color.Black
         homelbl.Location = New Point(164, 22)
         homelbl.Name = "homelbl"
@@ -289,6 +288,7 @@ Partial Class FORMRENTAL_STEP4
         ' Panel2
         ' 
         Panel2.AutoScroll = True
+        Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(Label20)
         Panel2.Controls.Add(Label19)
         Panel2.Controls.Add(Panel11)
@@ -308,12 +308,106 @@ Partial Class FORMRENTAL_STEP4
         Panel2.Size = New Size(602, 439)
         Panel2.TabIndex = 29
         ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Font = New Font("Futura Bk BT", 10.2F)
+        Label20.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label20.Location = New Point(70, 1034)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(292, 20)
+        Label20.TabIndex = 46
+        Label20.Text = "Click to read the Terms and Condition"
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.Font = New Font("Futura Bk BT", 10.2F)
+        Label19.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label19.Location = New Point(69, 1002)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(235, 20)
+        Label19.TabIndex = 45
+        Label19.Text = "Click to read the Privacy Policy"
+        ' 
+        ' Panel11
+        ' 
+        Panel11.BorderStyle = BorderStyle.FixedSingle
+        Panel11.ForeColor = Color.Black
+        Panel11.Location = New Point(29, 1171)
+        Panel11.Name = "Panel11"
+        Panel11.Size = New Size(507, 51)
+        Panel11.TabIndex = 44
+        ' 
+        ' Panel9
+        ' 
+        Panel9.BorderStyle = BorderStyle.FixedSingle
+        Panel9.Controls.Add(Panel10)
+        Panel9.Controls.Add(CheckBox3)
+        Panel9.ForeColor = Color.Black
+        Panel9.Location = New Point(29, 939)
+        Panel9.Name = "Panel9"
+        Panel9.Size = New Size(507, 51)
+        Panel9.TabIndex = 43
+        ' 
+        ' Panel10
+        ' 
+        Panel10.BorderStyle = BorderStyle.FixedSingle
+        Panel10.Controls.Add(CheckBox2)
+        Panel10.ForeColor = Color.Black
+        Panel10.Location = New Point(-1, -1)
+        Panel10.Name = "Panel10"
+        Panel10.Size = New Size(507, 51)
+        Panel10.TabIndex = 44
+        ' 
+        ' CheckBox2
+        ' 
+        CheckBox2.AutoSize = True
+        CheckBox2.Font = New Font("Futura Bk BT", 10.2F)
+        CheckBox2.Location = New Point(18, 16)
+        CheckBox2.Name = "CheckBox2"
+        CheckBox2.Size = New Size(429, 24)
+        CheckBox2.TabIndex = 42
+        CheckBox2.Text = "I agree to the Privacy Policy and Terms and Condition"
+        CheckBox2.UseVisualStyleBackColor = True
+        ' 
+        ' CheckBox3
+        ' 
+        CheckBox3.AutoSize = True
+        CheckBox3.Location = New Point(18, 16)
+        CheckBox3.Name = "CheckBox3"
+        CheckBox3.Size = New Size(272, 24)
+        CheckBox3.TabIndex = 42
+        CheckBox3.Text = "I have read and agree to the Privacy "
+        CheckBox3.UseVisualStyleBackColor = True
+        ' 
+        ' Panel8
+        ' 
+        Panel8.BorderStyle = BorderStyle.FixedSingle
+        Panel8.Controls.Add(CheckBox1)
+        Panel8.ForeColor = Color.Black
+        Panel8.Location = New Point(29, 882)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(507, 51)
+        Panel8.TabIndex = 42
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.Font = New Font("Futura Bk BT", 10.2F)
+        CheckBox1.Location = New Point(18, 16)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(404, 24)
+        CheckBox1.TabIndex = 42
+        CheckBox1.Text = "I would like to receive payment details to my email"
+        CheckBox1.UseVisualStyleBackColor = True
+        ' 
         ' Label16
         ' 
         Label16.AutoSize = True
         Label16.BackColor = Color.Transparent
-        Label16.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label16.ForeColor = Color.FromArgb(192, 0, 0)
+        Label16.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label16.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label16.Location = New Point(27, 594)
         Label16.Name = "Label16"
         Label16.Size = New Size(301, 28)
@@ -339,10 +433,80 @@ Partial Class FORMRENTAL_STEP4
         Panel7.Size = New Size(507, 222)
         Panel7.TabIndex = 4
         ' 
+        ' TextBox5
+        ' 
+        TextBox5.Font = New Font("Futura Bk BT", 10.2F)
+        TextBox5.Location = New Point(153, 172)
+        TextBox5.Name = "TextBox5"
+        TextBox5.Size = New Size(310, 28)
+        TextBox5.TabIndex = 49
+        ' 
+        ' TextBox4
+        ' 
+        TextBox4.Font = New Font("Futura Bk BT", 10.2F)
+        TextBox4.Location = New Point(153, 134)
+        TextBox4.Name = "TextBox4"
+        TextBox4.Size = New Size(310, 28)
+        TextBox4.TabIndex = 48
+        ' 
+        ' TextBox3
+        ' 
+        TextBox3.Font = New Font("Futura Bk BT", 10.2F)
+        TextBox3.Location = New Point(153, 97)
+        TextBox3.Name = "TextBox3"
+        TextBox3.Size = New Size(310, 28)
+        TextBox3.TabIndex = 47
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Font = New Font("Futura Bk BT", 10.2F)
+        TextBox2.Location = New Point(153, 59)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(310, 28)
+        TextBox2.TabIndex = 46
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Futura Bk BT", 10.2F)
+        TextBox1.Location = New Point(153, 18)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(310, 28)
+        TextBox1.TabIndex = 45
+        ' 
+        ' Label24
+        ' 
+        Label24.AutoSize = True
+        Label24.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label24.Location = New Point(17, 175)
+        Label24.Name = "Label24"
+        Label24.Size = New Size(97, 20)
+        Label24.TabIndex = 44
+        Label24.Text = "CVV / CVC:"
+        ' 
+        ' Label23
+        ' 
+        Label23.AutoSize = True
+        Label23.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label23.Location = New Point(17, 137)
+        Label23.Name = "Label23"
+        Label23.Size = New Size(95, 20)
+        Label23.TabIndex = 43
+        Label23.Text = "Expiry date:"
+        ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label22.Location = New Point(17, 100)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(114, 20)
+        Label22.TabIndex = 42
+        Label22.Text = "Card number:"
+        ' 
         ' Label18
         ' 
         Label18.AutoSize = True
-        Label18.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label18.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label18.Location = New Point(17, 59)
         Label18.Name = "Label18"
         Label18.Size = New Size(104, 20)
@@ -352,7 +516,7 @@ Partial Class FORMRENTAL_STEP4
         ' Label17
         ' 
         Label17.AutoSize = True
-        Label17.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label17.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label17.Location = New Point(17, 21)
         Label17.Name = "Label17"
         Label17.Size = New Size(87, 20)
@@ -407,7 +571,7 @@ Partial Class FORMRENTAL_STEP4
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label13.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label13.Location = New Point(17, 18)
         Label13.Name = "Label13"
         Label13.Size = New Size(122, 20)
@@ -417,7 +581,7 @@ Partial Class FORMRENTAL_STEP4
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label12.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label12.Location = New Point(17, 84)
         Label12.Name = "Label12"
         Label12.Size = New Size(103, 20)
@@ -427,7 +591,7 @@ Partial Class FORMRENTAL_STEP4
         ' Label29
         ' 
         Label29.AutoSize = True
-        Label29.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label29.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label29.Location = New Point(17, 50)
         Label29.Name = "Label29"
         Label29.Size = New Size(154, 20)
@@ -438,8 +602,8 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label11.AutoSize = True
         Label11.BackColor = Color.Transparent
-        Label11.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label11.ForeColor = Color.FromArgb(192, 0, 0)
+        Label11.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label11.Location = New Point(29, 203)
         Label11.Name = "Label11"
         Label11.Size = New Size(214, 28)
@@ -450,8 +614,8 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label10.AutoSize = True
         Label10.BackColor = Color.Transparent
-        Label10.Font = New Font("Designer", 24.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label10.ForeColor = Color.FromArgb(192, 0, 0)
+        Label10.Font = New Font("Designer", 24.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label10.Location = New Point(29, 123)
         Label10.Name = "Label10"
         Label10.Size = New Size(349, 52)
@@ -462,8 +626,8 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label1.ForeColor = Color.FromArgb(192, 0, 0)
+        Label1.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label1.Location = New Point(29, 86)
         Label1.Name = "Label1"
         Label1.Size = New Size(186, 28)
@@ -474,8 +638,8 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label27.AutoSize = True
         Label27.BackColor = Color.Transparent
-        Label27.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label27.ForeColor = Color.FromArgb(192, 0, 0)
+        Label27.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label27.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label27.Location = New Point(29, 416)
         Label27.Name = "Label27"
         Label27.Size = New Size(403, 28)
@@ -519,7 +683,7 @@ Partial Class FORMRENTAL_STEP4
         ' 
         ' Panel6
         ' 
-        Panel6.BackColor = Color.FromArgb(192, 0, 0)
+        Panel6.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Panel6.Controls.Add(Label21)
         Panel6.Dock = DockStyle.Top
         Panel6.Location = New Point(0, 0)
@@ -531,7 +695,7 @@ Partial Class FORMRENTAL_STEP4
         ' 
         Label21.AutoSize = True
         Label21.BackColor = Color.Transparent
-        Label21.Font = New Font("Reesha", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label21.Font = New Font("Reesha", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label21.ForeColor = Color.White
         Label21.Location = New Point(29, 11)
         Label21.Name = "Label21"
@@ -539,178 +703,18 @@ Partial Class FORMRENTAL_STEP4
         Label21.TabIndex = 16
         Label21.Text = "PAYMENT INFROMATION"
         ' 
-        ' Panel8
+        ' Button1
         ' 
-        Panel8.BorderStyle = BorderStyle.FixedSingle
-        Panel8.Controls.Add(CheckBox1)
-        Panel8.ForeColor = Color.Black
-        Panel8.Location = New Point(29, 882)
-        Panel8.Name = "Panel8"
-        Panel8.Size = New Size(507, 51)
-        Panel8.TabIndex = 42
-        ' 
-        ' Label22
-        ' 
-        Label22.AutoSize = True
-        Label22.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label22.Location = New Point(17, 100)
-        Label22.Name = "Label22"
-        Label22.Size = New Size(114, 20)
-        Label22.TabIndex = 42
-        Label22.Text = "Card number:"
-        ' 
-        ' Label23
-        ' 
-        Label23.AutoSize = True
-        Label23.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label23.Location = New Point(17, 137)
-        Label23.Name = "Label23"
-        Label23.Size = New Size(95, 20)
-        Label23.TabIndex = 43
-        Label23.Text = "Expiry date:"
-        ' 
-        ' Label24
-        ' 
-        Label24.AutoSize = True
-        Label24.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
-        Label24.Location = New Point(17, 175)
-        Label24.Name = "Label24"
-        Label24.Size = New Size(97, 20)
-        Label24.TabIndex = 44
-        Label24.Text = "CVV / CVC:"
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Futura Bk BT", 10.2F)
-        TextBox1.Location = New Point(153, 18)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(310, 28)
-        TextBox1.TabIndex = 45
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Font = New Font("Futura Bk BT", 10.2F)
-        TextBox2.Location = New Point(153, 59)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(310, 28)
-        TextBox2.TabIndex = 46
-        ' 
-        ' TextBox3
-        ' 
-        TextBox3.Font = New Font("Futura Bk BT", 10.2F)
-        TextBox3.Location = New Point(153, 97)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(310, 28)
-        TextBox3.TabIndex = 47
-        ' 
-        ' TextBox4
-        ' 
-        TextBox4.Font = New Font("Futura Bk BT", 10.2F)
-        TextBox4.Location = New Point(153, 134)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(310, 28)
-        TextBox4.TabIndex = 48
-        ' 
-        ' TextBox5
-        ' 
-        TextBox5.Font = New Font("Futura Bk BT", 10.2F)
-        TextBox5.Location = New Point(153, 172)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(310, 28)
-        TextBox5.TabIndex = 49
-        ' 
-        ' CheckBox1
-        ' 
-        CheckBox1.AutoSize = True
-        CheckBox1.Font = New Font("Futura Bk BT", 10.2F)
-        CheckBox1.Location = New Point(18, 16)
-        CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(404, 24)
-        CheckBox1.TabIndex = 42
-        CheckBox1.Text = "I would like to receive payment details to my email"
-        CheckBox1.UseVisualStyleBackColor = True
-        ' 
-        ' Panel9
-        ' 
-        Panel9.BorderStyle = BorderStyle.FixedSingle
-        Panel9.Controls.Add(Panel10)
-        Panel9.Controls.Add(CheckBox3)
-        Panel9.ForeColor = Color.Black
-        Panel9.Location = New Point(29, 939)
-        Panel9.Name = "Panel9"
-        Panel9.Size = New Size(507, 51)
-        Panel9.TabIndex = 43
-        ' 
-        ' CheckBox3
-        ' 
-        CheckBox3.AutoSize = True
-        CheckBox3.Location = New Point(18, 16)
-        CheckBox3.Name = "CheckBox3"
-        CheckBox3.Size = New Size(272, 24)
-        CheckBox3.TabIndex = 42
-        CheckBox3.Text = "I have read and agree to the Privacy "
-        CheckBox3.UseVisualStyleBackColor = True
-        ' 
-        ' Panel10
-        ' 
-        Panel10.BorderStyle = BorderStyle.FixedSingle
-        Panel10.Controls.Add(CheckBox2)
-        Panel10.ForeColor = Color.Black
-        Panel10.Location = New Point(-1, -1)
-        Panel10.Name = "Panel10"
-        Panel10.Size = New Size(507, 51)
-        Panel10.TabIndex = 44
-        ' 
-        ' CheckBox2
-        ' 
-        CheckBox2.AutoSize = True
-        CheckBox2.Font = New Font("Futura Bk BT", 10.2F)
-        CheckBox2.Location = New Point(18, 16)
-        CheckBox2.Name = "CheckBox2"
-        CheckBox2.Size = New Size(429, 24)
-        CheckBox2.TabIndex = 42
-        CheckBox2.Text = "I agree to the Privacy Policy and Terms and Condition"
-        CheckBox2.UseVisualStyleBackColor = True
-        ' 
-        ' Panel11
-        ' 
-        Panel11.BorderStyle = BorderStyle.FixedSingle
-        Panel11.Controls.Add(CheckBox4)
-        Panel11.ForeColor = Color.Black
-        Panel11.Location = New Point(29, 1089)
-        Panel11.Name = "Panel11"
-        Panel11.Size = New Size(507, 51)
-        Panel11.TabIndex = 44
-        ' 
-        ' CheckBox4
-        ' 
-        CheckBox4.AutoSize = True
-        CheckBox4.Location = New Point(18, 16)
-        CheckBox4.Name = "CheckBox4"
-        CheckBox4.Size = New Size(272, 24)
-        CheckBox4.TabIndex = 42
-        CheckBox4.Text = "I have read and agree to the Privacy "
-        CheckBox4.UseVisualStyleBackColor = True
-        ' 
-        ' Label19
-        ' 
-        Label19.AutoSize = True
-        Label19.Font = New Font("Futura Bk BT", 10.2F)
-        Label19.Location = New Point(69, 1002)
-        Label19.Name = "Label19"
-        Label19.Size = New Size(235, 20)
-        Label19.TabIndex = 45
-        Label19.Text = "Click to read the Privacy Policy"
-        ' 
-        ' Label20
-        ' 
-        Label20.AutoSize = True
-        Label20.Font = New Font("Futura Bk BT", 10.2F)
-        Label20.Location = New Point(70, 1034)
-        Label20.Name = "Label20"
-        Label20.Size = New Size(292, 20)
-        Label20.TabIndex = 46
-        Label20.Text = "Click to read the Terms and Condition"
+        Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button1.Font = New Font("Reesha", 24.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(108, 1086)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(353, 64)
+        Button1.TabIndex = 47
+        Button1.Text = "CHECKOUT"
+        Button1.TextAlign = ContentAlignment.TopCenter
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' FORMRENTAL_STEP4
         ' 
@@ -731,6 +735,12 @@ Partial Class FORMRENTAL_STEP4
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        Panel9.ResumeLayout(False)
+        Panel9.PerformLayout()
+        Panel10.ResumeLayout(False)
+        Panel10.PerformLayout()
+        Panel8.ResumeLayout(False)
+        Panel8.PerformLayout()
         Panel7.ResumeLayout(False)
         Panel7.PerformLayout()
         Panel5.ResumeLayout(False)
@@ -739,14 +749,6 @@ Partial Class FORMRENTAL_STEP4
         Panel4.PerformLayout()
         Panel6.ResumeLayout(False)
         Panel6.PerformLayout()
-        Panel8.ResumeLayout(False)
-        Panel8.PerformLayout()
-        Panel9.ResumeLayout(False)
-        Panel9.PerformLayout()
-        Panel10.ResumeLayout(False)
-        Panel10.PerformLayout()
-        Panel11.ResumeLayout(False)
-        Panel11.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -799,10 +801,10 @@ Partial Class FORMRENTAL_STEP4
     Friend WithEvents Label20 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Panel11 As Panel
-    Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Panel10 As Panel
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents CheckBox3 As CheckBox
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Button1 As Button
 End Class
