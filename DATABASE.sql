@@ -131,6 +131,7 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`customers` (
   `address` VARCHAR(255) NOT NULL,
   `license_number` VARCHAR(50) NULL DEFAULT NULL,
   `license_expiry` DATE NULL DEFAULT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`customer_id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -194,7 +195,8 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ridexp`.`rentals` (
   `rental_id` INT(11) NOT NULL AUTO_INCREMENT,
   `reservation_id` INT(11) NULL DEFAULT NULL,
-  `start_date` DATETIME NOT NULL,
+  `rental_duration_days` INT DEFAULT 1,
+  `start_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `end_date` DATETIME NOT NULL,
   `actual_return_date` DATETIME NULL DEFAULT NULL,
   `customer_id` INT(11) NOT NULL,
@@ -272,6 +274,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ridexp`.`maintenance_status` (
   `maintenance_status_id` INT(11) NOT NULL AUTO_INCREMENT,
   `status_name` VARCHAR(20) NOT NULL,
+  `start_date` DATE DEFAULT (CURRENT_DATE),
   PRIMARY KEY (`maintenance_status_id`) )
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
@@ -389,7 +392,7 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`payment` (
   `amount` DECIMAL(10,2) NOT NULL,
   `payment_status_id` INT(11) NOT NULL,
   `method_id` INT(11) NOT NULL,
-  `paid_at` DATETIME NULL DEFAULT NULL,
+  `paid_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   PRIMARY KEY (`payment_id`),
   INDEX (`rental_id` ) ,
   INDEX( `payment_status_id`)  ,
@@ -465,8 +468,9 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`user` (
   `username` VARCHAR(50) NOT NULL,
   `password_hash` TEXT NOT NULL,
   `role_id` INT(11) NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`user_id`),
-  INDEX (`role_id` ) ,
+  INDEX (`role_id`),
   CONSTRAINT `user_ibfk_1`
     FOREIGN KEY (`role_id`)
     REFERENCES `ridexp`.`user_roles` (`role_id`))
@@ -511,3 +515,17 @@ DEFAULT CHARACTER SET = utf8;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+DELIMITER $$
+CREATE TRIGGER rental_end_date_calculator
+BEFORE INSERT ON `ridexp`.`rentals`
+FOR EACH ROW
+BEGIN
+    IF NEW.rental_duration_days IS NULL THEN
+        SET NEW.rental_duration_days = 1;
+    END IF;
+    
+    SET NEW.end_date = DATE_ADD(NEW.start_date, INTERVAL NEW.rental_duration_days DAY);
+END$$
+DELIMITER ;
