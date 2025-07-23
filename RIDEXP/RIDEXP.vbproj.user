@@ -19,6 +19,12 @@
     <Compile Update="FORMADMIN_INVENTORY.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FORMRENTAL_STEP2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FORMRENTAL_STEP3.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FORM_ADMIN.vb">
       <SubType>Form</SubType>
     </Compile>

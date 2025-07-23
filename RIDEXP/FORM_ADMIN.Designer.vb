@@ -66,9 +66,10 @@ Partial Class FORM_ADMIN
         Panel14 = New Panel()
         Label19 = New Label()
         pnlAllDashboard = New Panel()
-        DataGridView1 = New DataGridView()
         DataGridView2 = New DataGridView()
+        DataGridView1 = New DataGridView()
         Panel2 = New Panel()
+        TextBox1 = New TextBox()
         DataGridView4 = New DataGridView()
         Panel4 = New Panel()
         Label4 = New Label()
@@ -80,7 +81,6 @@ Partial Class FORM_ADMIN
         Label20 = New Label()
         PictureBox3 = New PictureBox()
         Label21 = New Label()
-        TextBox1 = New TextBox()
         Panel1.SuspendLayout()
         pnlUsers.SuspendLayout()
         CType(iconUsers, ComponentModel.ISupportInitialize).BeginInit()
@@ -106,8 +106,8 @@ Partial Class FORM_ADMIN
         Panel13.SuspendLayout()
         Panel14.SuspendLayout()
         pnlAllDashboard.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(DataGridView4, ComponentModel.ISupportInitialize).BeginInit()
         Panel4.SuspendLayout()
@@ -589,16 +589,6 @@ Partial Class FORM_ADMIN
         pnlAllDashboard.Size = New Size(949, 564)
         pnlAllDashboard.TabIndex = 13
         ' 
-        ' DataGridView1
-        ' 
-        DataGridView1.BackgroundColor = Color.White
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(14, 230)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(593, 303)
-        DataGridView1.TabIndex = 13
-        ' 
         ' DataGridView2
         ' 
         DataGridView2.BackgroundColor = Color.White
@@ -608,6 +598,16 @@ Partial Class FORM_ADMIN
         DataGridView2.RowHeadersWidth = 51
         DataGridView2.Size = New Size(262, 303)
         DataGridView2.TabIndex = 14
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.BackgroundColor = Color.White
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(14, 230)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.RowHeadersWidth = 51
+        DataGridView1.Size = New Size(593, 303)
+        DataGridView1.TabIndex = 13
         ' 
         ' Panel2
         ' 
@@ -620,6 +620,14 @@ Partial Class FORM_ADMIN
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(915, 564)
         Panel2.TabIndex = 14
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Location = New Point(14, 127)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(231, 35)
+        TextBox1.TabIndex = 14
         ' 
         ' DataGridView4
         ' 
@@ -657,7 +665,7 @@ Partial Class FORM_ADMIN
         Panel5.Controls.Add(Label5)
         Panel5.Controls.Add(PictureBox1)
         Panel5.Controls.Add(Label6)
-        Panel5.Location = New Point(439, 42)
+        Panel5.Location = New Point(384, 42)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(223, 120)
         Panel5.TabIndex = 9
@@ -700,7 +708,7 @@ Partial Class FORM_ADMIN
         Panel7.Controls.Add(Label20)
         Panel7.Controls.Add(PictureBox3)
         Panel7.Controls.Add(Label21)
-        Panel7.Location = New Point(701, 42)
+        Panel7.Location = New Point(650, 42)
         Panel7.Name = "Panel7"
         Panel7.Size = New Size(223, 120)
         Panel7.TabIndex = 8
@@ -736,14 +744,6 @@ Partial Class FORM_ADMIN
         Label21.Size = New Size(72, 18)
         Label21.TabIndex = 6
         Label21.Text = "RENTALS"
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(14, 127)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(231, 35)
-        TextBox1.TabIndex = 14
         ' 
         ' FORM_ADMIN
         ' 
@@ -797,8 +797,8 @@ Partial Class FORM_ADMIN
         Panel14.ResumeLayout(False)
         Panel14.PerformLayout()
         pnlAllDashboard.ResumeLayout(False)
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(DataGridView4, ComponentModel.ISupportInitialize).EndInit()
