@@ -1,0 +1,808 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class FORMRENTAL_STEP4
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Panel3 = New Panel()
+        Label8 = New Label()
+        Label9 = New Label()
+        Label2 = New Label()
+        Label7 = New Label()
+        Label4 = New Label()
+        Label6 = New Label()
+        Label3 = New Label()
+        DateTimePicker1 = New DateTimePicker()
+        Label5 = New Label()
+        Panel1 = New Panel()
+        PictureBox2 = New PictureBox()
+        contactslbl = New Label()
+        PictureBox1 = New PictureBox()
+        rentalslbl = New Label()
+        homelbl = New Label()
+        Panel2 = New Panel()
+        Label16 = New Label()
+        Panel7 = New Panel()
+        Label18 = New Label()
+        Label17 = New Label()
+        Panel5 = New Panel()
+        Label15 = New Label()
+        Label14 = New Label()
+        Label28 = New Label()
+        Label13 = New Label()
+        Label12 = New Label()
+        Label29 = New Label()
+        Label11 = New Label()
+        Label10 = New Label()
+        Label1 = New Label()
+        Label27 = New Label()
+        Panel4 = New Panel()
+        RadioButton3 = New RadioButton()
+        RadioButton1 = New RadioButton()
+        Panel6 = New Panel()
+        Label21 = New Label()
+        Panel8 = New Panel()
+        Label22 = New Label()
+        Label23 = New Label()
+        Label24 = New Label()
+        TextBox1 = New TextBox()
+        TextBox2 = New TextBox()
+        TextBox3 = New TextBox()
+        TextBox4 = New TextBox()
+        TextBox5 = New TextBox()
+        CheckBox1 = New CheckBox()
+        Panel9 = New Panel()
+        CheckBox3 = New CheckBox()
+        Panel10 = New Panel()
+        CheckBox2 = New CheckBox()
+        Panel11 = New Panel()
+        CheckBox4 = New CheckBox()
+        Label19 = New Label()
+        Label20 = New Label()
+        Panel3.SuspendLayout()
+        Panel1.SuspendLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
+        Panel7.SuspendLayout()
+        Panel5.SuspendLayout()
+        Panel4.SuspendLayout()
+        Panel6.SuspendLayout()
+        Panel8.SuspendLayout()
+        Panel9.SuspendLayout()
+        Panel10.SuspendLayout()
+        Panel11.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' Panel3
+        ' 
+        Panel3.Controls.Add(Label8)
+        Panel3.Controls.Add(Label9)
+        Panel3.Controls.Add(Label2)
+        Panel3.Controls.Add(Label7)
+        Panel3.Controls.Add(Label4)
+        Panel3.Controls.Add(Label6)
+        Panel3.Controls.Add(Label3)
+        Panel3.Controls.Add(DateTimePicker1)
+        Panel3.Controls.Add(Label5)
+        Panel3.Location = New Point(100, 105)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(1103, 84)
+        Panel3.TabIndex = 28
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.BackColor = Color.Transparent
+        Label8.Font = New Font("Futura Hv BT", 10.2F)
+        Label8.ForeColor = Color.FromArgb(192, 0, 0)
+        Label8.Location = New Point(868, 22)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(152, 20)
+        Label8.TabIndex = 14
+        Label8.Text = "STEP 4: PAYMENT"
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.BackColor = Color.Transparent
+        Label9.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label9.ForeColor = Color.FromArgb(192, 0, 0)
+        Label9.Location = New Point(828, 22)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(255, 36)
+        Label9.TabIndex = 15
+        Label9.Text = "________________"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Futura Hv BT", 10.2F)
+        Label2.ForeColor = Color.FromArgb(192, 0, 0)
+        Label2.Location = New Point(620, 22)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(136, 20)
+        Label2.TabIndex = 12
+        Label2.Text = "STEP 3: REVIEW"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.BackColor = Color.Transparent
+        Label7.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label7.ForeColor = Color.FromArgb(192, 0, 0)
+        Label7.Location = New Point(561, 22)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(255, 36)
+        Label7.TabIndex = 13
+        Label7.Text = "________________"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.BackColor = Color.Transparent
+        Label4.Font = New Font("Futura Hv BT", 10.2F)
+        Label4.ForeColor = Color.FromArgb(192, 0, 0)
+        Label4.Location = New Point(333, 22)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(163, 20)
+        Label4.TabIndex = 10
+        Label4.Text = "STEP 2: ITENERARY"
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.BackColor = Color.Transparent
+        Label6.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label6.ForeColor = Color.FromArgb(192, 0, 0)
+        Label6.Location = New Point(292, 22)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(255, 36)
+        Label6.TabIndex = 11
+        Label6.Text = "________________"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Futura Hv BT", 10.2F)
+        Label3.ForeColor = Color.FromArgb(192, 0, 0)
+        Label3.Location = New Point(40, 22)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(223, 20)
+        Label3.TabIndex = 4
+        Label3.Text = "STEP 1: SELECT A VEHICLE"
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.Location = New Point(194, 54)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(0, 27)
+        DateTimePicker1.TabIndex = 0
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.BackColor = Color.Transparent
+        Label5.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label5.ForeColor = Color.FromArgb(192, 0, 0)
+        Label5.Location = New Point(29, 22)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(255, 36)
+        Label5.TabIndex = 9
+        Label5.Text = "________________"
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.White
+        Panel1.Controls.Add(PictureBox2)
+        Panel1.Controls.Add(contactslbl)
+        Panel1.Controls.Add(PictureBox1)
+        Panel1.Controls.Add(rentalslbl)
+        Panel1.Controls.Add(homelbl)
+        Panel1.Dock = DockStyle.Top
+        Panel1.Location = New Point(0, 0)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1262, 78)
+        Panel1.TabIndex = 27
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.BackColor = Color.Transparent
+        PictureBox2.BackgroundImage = My.Resources.Resources.USER_LOGO
+        PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
+        PictureBox2.Location = New Point(1185, 14)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(48, 41)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 24
+        PictureBox2.TabStop = False
+        ' 
+        ' contactslbl
+        ' 
+        contactslbl.AutoSize = True
+        contactslbl.BackColor = Color.White
+        contactslbl.Cursor = Cursors.Hand
+        contactslbl.Font = New Font("Reesha", 16.1999989F)
+        contactslbl.ForeColor = Color.Black
+        contactslbl.Location = New Point(573, 21)
+        contactslbl.Name = "contactslbl"
+        contactslbl.Size = New Size(220, 32)
+        contactslbl.TabIndex = 25
+        contactslbl.Text = "CONTACT US"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = My.Resources.Resources.RideX
+        PictureBox1.Location = New Point(0, -35)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(148, 146)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 0
+        PictureBox1.TabStop = False
+        ' 
+        ' rentalslbl
+        ' 
+        rentalslbl.AutoSize = True
+        rentalslbl.BackColor = Color.White
+        rentalslbl.Cursor = Cursors.Hand
+        rentalslbl.Font = New Font("Reesha", 16.1999989F)
+        rentalslbl.ForeColor = Color.Black
+        rentalslbl.Location = New Point(304, 21)
+        rentalslbl.Name = "rentalslbl"
+        rentalslbl.Size = New Size(242, 32)
+        rentalslbl.TabIndex = 24
+        rentalslbl.Text = "OUR RENTALS"
+        ' 
+        ' homelbl
+        ' 
+        homelbl.AutoSize = True
+        homelbl.BackColor = Color.White
+        homelbl.Cursor = Cursors.Hand
+        homelbl.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        homelbl.ForeColor = Color.Black
+        homelbl.Location = New Point(164, 22)
+        homelbl.Name = "homelbl"
+        homelbl.Size = New Size(107, 32)
+        homelbl.TabIndex = 23
+        homelbl.Text = "HOME"
+        ' 
+        ' Panel2
+        ' 
+        Panel2.AutoScroll = True
+        Panel2.Controls.Add(Label20)
+        Panel2.Controls.Add(Label19)
+        Panel2.Controls.Add(Panel11)
+        Panel2.Controls.Add(Panel9)
+        Panel2.Controls.Add(Panel8)
+        Panel2.Controls.Add(Label16)
+        Panel2.Controls.Add(Panel7)
+        Panel2.Controls.Add(Panel5)
+        Panel2.Controls.Add(Label11)
+        Panel2.Controls.Add(Label10)
+        Panel2.Controls.Add(Label1)
+        Panel2.Controls.Add(Label27)
+        Panel2.Controls.Add(Panel4)
+        Panel2.Controls.Add(Panel6)
+        Panel2.Location = New Point(363, 212)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(602, 439)
+        Panel2.TabIndex = 29
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.BackColor = Color.Transparent
+        Label16.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label16.ForeColor = Color.FromArgb(192, 0, 0)
+        Label16.Location = New Point(27, 594)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(301, 28)
+        Label16.TabIndex = 34
+        Label16.Text = "ENTER CARD DETAILS"
+        ' 
+        ' Panel7
+        ' 
+        Panel7.BorderStyle = BorderStyle.FixedSingle
+        Panel7.Controls.Add(TextBox5)
+        Panel7.Controls.Add(TextBox4)
+        Panel7.Controls.Add(TextBox3)
+        Panel7.Controls.Add(TextBox2)
+        Panel7.Controls.Add(TextBox1)
+        Panel7.Controls.Add(Label24)
+        Panel7.Controls.Add(Label23)
+        Panel7.Controls.Add(Label22)
+        Panel7.Controls.Add(Label18)
+        Panel7.Controls.Add(Label17)
+        Panel7.ForeColor = Color.Black
+        Panel7.Location = New Point(29, 634)
+        Panel7.Name = "Panel7"
+        Panel7.Size = New Size(507, 222)
+        Panel7.TabIndex = 4
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label18.Location = New Point(17, 59)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(104, 20)
+        Label18.TabIndex = 41
+        Label18.Text = "Postal Code:"
+        ' 
+        ' Label17
+        ' 
+        Label17.AutoSize = True
+        Label17.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label17.Location = New Point(17, 21)
+        Label17.Name = "Label17"
+        Label17.Size = New Size(87, 20)
+        Label17.TabIndex = 40
+        Label17.Text = "Full name:"
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BorderStyle = BorderStyle.FixedSingle
+        Panel5.Controls.Add(Label15)
+        Panel5.Controls.Add(Label14)
+        Panel5.Controls.Add(Label28)
+        Panel5.Controls.Add(Label13)
+        Panel5.Controls.Add(Label12)
+        Panel5.Controls.Add(Label29)
+        Panel5.ForeColor = Color.Black
+        Panel5.Location = New Point(29, 243)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(507, 129)
+        Panel5.TabIndex = 4
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Font = New Font("Futura Hv BT", 10.2F)
+        Label15.Location = New Point(190, 84)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(19, 20)
+        Label15.TabIndex = 39
+        Label15.Text = "3"
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Font = New Font("Futura Hv BT", 10.2F)
+        Label14.Location = New Point(190, 50)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(90, 20)
+        Label14.TabIndex = 38
+        Label14.Text = "PHP 6,900"
+        ' 
+        ' Label28
+        ' 
+        Label28.AutoSize = True
+        Label28.Font = New Font("Futura Hv BT", 10.2F)
+        Label28.Location = New Point(190, 18)
+        Label28.Name = "Label28"
+        Label28.Size = New Size(43, 20)
+        Label28.TabIndex = 37
+        Label28.Text = "SUV"
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label13.Location = New Point(17, 18)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(122, 20)
+        Label13.TabIndex = 36
+        Label13.Text = "Rented Vehicle:"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label12.Location = New Point(17, 84)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(103, 20)
+        Label12.TabIndex = 35
+        Label12.Text = "Rented days:"
+        ' 
+        ' Label29
+        ' 
+        Label29.AutoSize = True
+        Label29.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label29.Location = New Point(17, 50)
+        Label29.Name = "Label29"
+        Label29.Size = New Size(154, 20)
+        Label29.TabIndex = 34
+        Label29.Text = "Vehicle Rental Rate:"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.BackColor = Color.Transparent
+        Label11.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label11.ForeColor = Color.FromArgb(192, 0, 0)
+        Label11.Location = New Point(29, 203)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(214, 28)
+        Label11.TabIndex = 33
+        Label11.Text = "PRICE DETAILS:"
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.BackColor = Color.Transparent
+        Label10.Font = New Font("Designer", 24.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label10.ForeColor = Color.FromArgb(192, 0, 0)
+        Label10.Location = New Point(29, 123)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(349, 52)
+        Label10.TabIndex = 32
+        Label10.Text = "PHP 6,900.00"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label1.ForeColor = Color.FromArgb(192, 0, 0)
+        Label1.Location = New Point(29, 86)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(186, 28)
+        Label1.TabIndex = 31
+        Label1.Text = "TOTAL COST:"
+        ' 
+        ' Label27
+        ' 
+        Label27.AutoSize = True
+        Label27.BackColor = Color.Transparent
+        Label27.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label27.ForeColor = Color.FromArgb(192, 0, 0)
+        Label27.Location = New Point(29, 416)
+        Label27.Name = "Label27"
+        Label27.Size = New Size(403, 28)
+        Label27.TabIndex = 29
+        Label27.Text = "SELECT A PAYMENT METHOD"
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BorderStyle = BorderStyle.FixedSingle
+        Panel4.Controls.Add(RadioButton3)
+        Panel4.Controls.Add(RadioButton1)
+        Panel4.ForeColor = Color.Black
+        Panel4.Location = New Point(29, 464)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(507, 93)
+        Panel4.TabIndex = 3
+        ' 
+        ' RadioButton3
+        ' 
+        RadioButton3.AutoSize = True
+        RadioButton3.Font = New Font("Futura Bk BT", 10.8F)
+        RadioButton3.Location = New Point(39, 46)
+        RadioButton3.Name = "RadioButton3"
+        RadioButton3.Size = New Size(143, 25)
+        RadioButton3.TabIndex = 2
+        RadioButton3.TabStop = True
+        RadioButton3.Text = "Cash payment"
+        RadioButton3.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton1
+        ' 
+        RadioButton1.AutoSize = True
+        RadioButton1.Font = New Font("Futura Bk BT", 10.8F)
+        RadioButton1.Location = New Point(40, 15)
+        RadioButton1.Name = "RadioButton1"
+        RadioButton1.Size = New Size(142, 25)
+        RadioButton1.TabIndex = 0
+        RadioButton1.TabStop = True
+        RadioButton1.Text = "Card payment"
+        RadioButton1.UseVisualStyleBackColor = True
+        ' 
+        ' Panel6
+        ' 
+        Panel6.BackColor = Color.FromArgb(192, 0, 0)
+        Panel6.Controls.Add(Label21)
+        Panel6.Dock = DockStyle.Top
+        Panel6.Location = New Point(0, 0)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(581, 64)
+        Panel6.TabIndex = 30
+        ' 
+        ' Label21
+        ' 
+        Label21.AutoSize = True
+        Label21.BackColor = Color.Transparent
+        Label21.Font = New Font("Reesha", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label21.ForeColor = Color.White
+        Label21.Location = New Point(29, 11)
+        Label21.Name = "Label21"
+        Label21.Size = New Size(538, 44)
+        Label21.TabIndex = 16
+        Label21.Text = "PAYMENT INFROMATION"
+        ' 
+        ' Panel8
+        ' 
+        Panel8.BorderStyle = BorderStyle.FixedSingle
+        Panel8.Controls.Add(CheckBox1)
+        Panel8.ForeColor = Color.Black
+        Panel8.Location = New Point(29, 882)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(507, 51)
+        Panel8.TabIndex = 42
+        ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label22.Location = New Point(17, 100)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(114, 20)
+        Label22.TabIndex = 42
+        Label22.Text = "Card number:"
+        ' 
+        ' Label23
+        ' 
+        Label23.AutoSize = True
+        Label23.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label23.Location = New Point(17, 137)
+        Label23.Name = "Label23"
+        Label23.Size = New Size(95, 20)
+        Label23.TabIndex = 43
+        Label23.Text = "Expiry date:"
+        ' 
+        ' Label24
+        ' 
+        Label24.AutoSize = True
+        Label24.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label24.Location = New Point(17, 175)
+        Label24.Name = "Label24"
+        Label24.Size = New Size(97, 20)
+        Label24.TabIndex = 44
+        Label24.Text = "CVV / CVC:"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Futura Bk BT", 10.2F)
+        TextBox1.Location = New Point(153, 18)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(310, 28)
+        TextBox1.TabIndex = 45
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Font = New Font("Futura Bk BT", 10.2F)
+        TextBox2.Location = New Point(153, 59)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(310, 28)
+        TextBox2.TabIndex = 46
+        ' 
+        ' TextBox3
+        ' 
+        TextBox3.Font = New Font("Futura Bk BT", 10.2F)
+        TextBox3.Location = New Point(153, 97)
+        TextBox3.Name = "TextBox3"
+        TextBox3.Size = New Size(310, 28)
+        TextBox3.TabIndex = 47
+        ' 
+        ' TextBox4
+        ' 
+        TextBox4.Font = New Font("Futura Bk BT", 10.2F)
+        TextBox4.Location = New Point(153, 134)
+        TextBox4.Name = "TextBox4"
+        TextBox4.Size = New Size(310, 28)
+        TextBox4.TabIndex = 48
+        ' 
+        ' TextBox5
+        ' 
+        TextBox5.Font = New Font("Futura Bk BT", 10.2F)
+        TextBox5.Location = New Point(153, 172)
+        TextBox5.Name = "TextBox5"
+        TextBox5.Size = New Size(310, 28)
+        TextBox5.TabIndex = 49
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.Font = New Font("Futura Bk BT", 10.2F)
+        CheckBox1.Location = New Point(18, 16)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(404, 24)
+        CheckBox1.TabIndex = 42
+        CheckBox1.Text = "I would like to receive payment details to my email"
+        CheckBox1.UseVisualStyleBackColor = True
+        ' 
+        ' Panel9
+        ' 
+        Panel9.BorderStyle = BorderStyle.FixedSingle
+        Panel9.Controls.Add(Panel10)
+        Panel9.Controls.Add(CheckBox3)
+        Panel9.ForeColor = Color.Black
+        Panel9.Location = New Point(29, 939)
+        Panel9.Name = "Panel9"
+        Panel9.Size = New Size(507, 51)
+        Panel9.TabIndex = 43
+        ' 
+        ' CheckBox3
+        ' 
+        CheckBox3.AutoSize = True
+        CheckBox3.Location = New Point(18, 16)
+        CheckBox3.Name = "CheckBox3"
+        CheckBox3.Size = New Size(272, 24)
+        CheckBox3.TabIndex = 42
+        CheckBox3.Text = "I have read and agree to the Privacy "
+        CheckBox3.UseVisualStyleBackColor = True
+        ' 
+        ' Panel10
+        ' 
+        Panel10.BorderStyle = BorderStyle.FixedSingle
+        Panel10.Controls.Add(CheckBox2)
+        Panel10.ForeColor = Color.Black
+        Panel10.Location = New Point(-1, -1)
+        Panel10.Name = "Panel10"
+        Panel10.Size = New Size(507, 51)
+        Panel10.TabIndex = 44
+        ' 
+        ' CheckBox2
+        ' 
+        CheckBox2.AutoSize = True
+        CheckBox2.Font = New Font("Futura Bk BT", 10.2F)
+        CheckBox2.Location = New Point(18, 16)
+        CheckBox2.Name = "CheckBox2"
+        CheckBox2.Size = New Size(429, 24)
+        CheckBox2.TabIndex = 42
+        CheckBox2.Text = "I agree to the Privacy Policy and Terms and Condition"
+        CheckBox2.UseVisualStyleBackColor = True
+        ' 
+        ' Panel11
+        ' 
+        Panel11.BorderStyle = BorderStyle.FixedSingle
+        Panel11.Controls.Add(CheckBox4)
+        Panel11.ForeColor = Color.Black
+        Panel11.Location = New Point(29, 1089)
+        Panel11.Name = "Panel11"
+        Panel11.Size = New Size(507, 51)
+        Panel11.TabIndex = 44
+        ' 
+        ' CheckBox4
+        ' 
+        CheckBox4.AutoSize = True
+        CheckBox4.Location = New Point(18, 16)
+        CheckBox4.Name = "CheckBox4"
+        CheckBox4.Size = New Size(272, 24)
+        CheckBox4.TabIndex = 42
+        CheckBox4.Text = "I have read and agree to the Privacy "
+        CheckBox4.UseVisualStyleBackColor = True
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.Font = New Font("Futura Bk BT", 10.2F)
+        Label19.Location = New Point(69, 1002)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(235, 20)
+        Label19.TabIndex = 45
+        Label19.Text = "Click to read the Privacy Policy"
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Font = New Font("Futura Bk BT", 10.2F)
+        Label20.Location = New Point(70, 1034)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(292, 20)
+        Label20.TabIndex = 46
+        Label20.Text = "Click to read the Terms and Condition"
+        ' 
+        ' FORMRENTAL_STEP4
+        ' 
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackgroundImage = My.Resources.Resources.RIDEXPRESS__5_
+        ClientSize = New Size(1262, 673)
+        Controls.Add(Panel2)
+        Controls.Add(Panel3)
+        Controls.Add(Panel1)
+        Name = "FORMRENTAL_STEP4"
+        Text = "FORMRENTAL_STEP4"
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        Panel7.ResumeLayout(False)
+        Panel7.PerformLayout()
+        Panel5.ResumeLayout(False)
+        Panel5.PerformLayout()
+        Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
+        Panel6.ResumeLayout(False)
+        Panel6.PerformLayout()
+        Panel8.ResumeLayout(False)
+        Panel8.PerformLayout()
+        Panel9.ResumeLayout(False)
+        Panel9.PerformLayout()
+        Panel10.ResumeLayout(False)
+        Panel10.PerformLayout()
+        Panel11.ResumeLayout(False)
+        Panel11.PerformLayout()
+        ResumeLayout(False)
+    End Sub
+
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents contactslbl As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents rentalslbl As Label
+    Friend WithEvents homelbl As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents CheckBox1 As CheckBox
+End Class
