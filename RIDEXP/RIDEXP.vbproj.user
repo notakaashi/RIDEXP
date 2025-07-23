@@ -4,31 +4,43 @@
     <Compile Update="allcars.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="allmotors.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="carsform.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="HATCHBACKFORMS.vb">
+    <Compile Update="FORM_SPORTSMOTOR.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="HYBRIDFORMS.vb">
+    <Compile Update="FORM_HATCHBACK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FORM_HYBRID.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Logjn.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MPVFORMS.vb">
+    <Compile Update="FORM_MPV.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SEDANFORMS.vb">
+    <Compile Update="FORM_SCOOTER.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FORM_SEDAN.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SIGNUP.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SUVFORMS.vb">
+    <Compile Update="FORM_SUV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FORM_UNDERBONE.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vehicle_type.vb">

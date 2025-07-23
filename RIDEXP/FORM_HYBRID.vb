@@ -1,4 +1,4 @@
-﻿Public Class SUVFORMS
+﻿Public Class FORM_HYBRID
 
 
     Private Sub FadeTimer_tick(sender As Object, e As EventArgs) Handles FadeTimer.Tick
@@ -6,7 +6,7 @@
         If Me.Opacity >= 1 Then FadeTimer.Stop()
     End Sub
 
-    Private Sub SUVFORMS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub HYBRIDFORMS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Opacity = 0
         FadeTimer.Start()
     End Sub
@@ -15,23 +15,24 @@
         Me.Close()
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        FORM_SUV.Show()
+        Me.Close()
+    End Sub
+
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        SEDANFORMS.Show()
+        FORM_SEDAN.Show()
         Me.Close()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        MPVFORMS.Show()
-        Close()
+        FORM_MPV.Show()
+        Me.Close()
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        HATCHBACKFORMS.Show()
+        FORM_HATCHBACK.Show()
         Me.Close()
-    End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        HYBRIDFORMS.Show()
-        Me.Close()
     End Sub
 End Class

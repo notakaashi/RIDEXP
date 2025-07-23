@@ -1,4 +1,4 @@
-﻿Public Class SEDANFORMS
+﻿Public Class FORM_SEDAN
 
 
     Private Sub FadeTimer_tick(sender As Object, e As EventArgs) Handles FadeTimer.Tick
@@ -16,12 +16,18 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        MPVFORMS.Show()
+        FORM_MPV.Show()
         Me.Close()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        SUVFORMS.Show()
+        FORM_SUV.Show()
+        Me.Close()
+    End Sub
+
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        FORM_HATCHBACK.Show()
         Me.Close()
     End Sub
 End Class

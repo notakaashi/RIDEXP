@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class HYBRIDFORMS
+Partial Class FORM_MPV
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class HYBRIDFORMS
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HYBRIDFORMS))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FORM_MPV))
         Panel1 = New Panel()
         Panel5 = New Panel()
         Label28 = New Label()
@@ -169,7 +169,7 @@ Partial Class HYBRIDFORMS
         ' Label31
         ' 
         Label31.AutoSize = True
-        Label31.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label31.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label31.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label31.Location = New Point(333, 34)
         Label31.Name = "Label31"
@@ -194,7 +194,7 @@ Partial Class HYBRIDFORMS
         ' Label32
         ' 
         Label32.AutoSize = True
-        Label32.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label32.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label32.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label32.Location = New Point(685, 195)
         Label32.Name = "Label32"
@@ -205,7 +205,7 @@ Partial Class HYBRIDFORMS
         ' Label33
         ' 
         Label33.AutoSize = True
-        Label33.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label33.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label33.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label33.Location = New Point(484, 195)
         Label33.Name = "Label33"
@@ -216,7 +216,7 @@ Partial Class HYBRIDFORMS
         ' Label34
         ' 
         Label34.AutoSize = True
-        Label34.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label34.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label34.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label34.Location = New Point(358, 195)
         Label34.Name = "Label34"
@@ -310,7 +310,7 @@ Partial Class HYBRIDFORMS
         ' Label22
         ' 
         Label22.AutoSize = True
-        Label22.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label22.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label22.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label22.Location = New Point(333, 34)
         Label22.Name = "Label22"
@@ -335,7 +335,7 @@ Partial Class HYBRIDFORMS
         ' Label23
         ' 
         Label23.AutoSize = True
-        Label23.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label23.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label23.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label23.Location = New Point(685, 195)
         Label23.Name = "Label23"
@@ -346,7 +346,7 @@ Partial Class HYBRIDFORMS
         ' Label24
         ' 
         Label24.AutoSize = True
-        Label24.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label24.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label24.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label24.Location = New Point(484, 195)
         Label24.Name = "Label24"
@@ -357,7 +357,7 @@ Partial Class HYBRIDFORMS
         ' Label25
         ' 
         Label25.AutoSize = True
-        Label25.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label25.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label25.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label25.Location = New Point(358, 195)
         Label25.Name = "Label25"
@@ -451,7 +451,7 @@ Partial Class HYBRIDFORMS
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label13.Location = New Point(333, 34)
         Label13.Name = "Label13"
@@ -476,7 +476,7 @@ Partial Class HYBRIDFORMS
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label14.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label14.Location = New Point(685, 195)
         Label14.Name = "Label14"
@@ -487,7 +487,7 @@ Partial Class HYBRIDFORMS
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label15.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label15.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label15.Location = New Point(484, 195)
         Label15.Name = "Label15"
@@ -498,7 +498,7 @@ Partial Class HYBRIDFORMS
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label16.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label16.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label16.Location = New Point(358, 195)
         Label16.Name = "Label16"
@@ -592,7 +592,7 @@ Partial Class HYBRIDFORMS
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label7.Location = New Point(333, 34)
         Label7.Name = "Label7"
@@ -617,7 +617,7 @@ Partial Class HYBRIDFORMS
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label6.Location = New Point(685, 195)
         Label6.Name = "Label6"
@@ -628,7 +628,7 @@ Partial Class HYBRIDFORMS
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label5.Location = New Point(484, 195)
         Label5.Name = "Label5"
@@ -639,7 +639,7 @@ Partial Class HYBRIDFORMS
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label4.Location = New Point(358, 195)
         Label4.Name = "Label4"
@@ -789,15 +789,15 @@ Partial Class HYBRIDFORMS
         ' 
         FadeTimer.Interval = 25
         ' 
-        ' HYBRIDFORMS
+        ' MPVFORMS
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1145, 413)
         Controls.Add(Panel1)
         Controls.Add(Panel6)
         FormBorderStyle = FormBorderStyle.None
-        Name = "HYBRIDFORMS"
+        Name = "MPVFORMS"
         StartPosition = FormStartPosition.CenterScreen
         Text = "SUVFORMS"
         Panel1.ResumeLayout(False)
