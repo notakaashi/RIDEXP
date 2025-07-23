@@ -1,11 +1,14 @@
-﻿Imports System.Text
-Imports System.Security.Cryptography
+﻿Imports System.Security.Cryptography
+Imports System.Text
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 Public Class SIGNUP
 
     Public connectionString As String = "Server=localhost;Database=ridexp;User=root;Password=;"
     Private Sub SIGNUP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FadeTimer.Start()
+        dobtxt.PlaceholderText = "YYYY-MM-DD"
+        licenseexptxt.PlaceholderText = "YYYY-MM-DD"
     End Sub
 
     Private Sub FadeTimer_Tick(sender As Object, e As EventArgs) Handles FadeTimer.Tick
@@ -52,7 +55,6 @@ Public Class SIGNUP
 
                 Using transaction As MySqlTransaction = connection.BeginTransaction()
                     Try
-                        Dim hashedPassword As String = BitConverter.ToString(SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(passwordtxt.Text))).Replace("-", "").ToLower()
                         Dim customerQuery As String = "INSERT INTO customers (first_name, last_name, date_of_birth, email, phone, address, license_number, license_expiry) VALUES (@first_name, @last_name, @date_of_birth, @email, @phone, @address, @license_number, @license_expiry)"
 
                         Using customerCmd As New MySqlCommand(customerQuery, connection, transaction)
@@ -69,12 +71,12 @@ Public Class SIGNUP
                         End Using
 
 
-                        Dim userQuery As String = "INSERT INTO user (username, password_hash, role_id) VALUES (@username, @password_hash, @role_id)"
+                        Dim userQuery As String = "INSERT INTO user (username, password_hash, role_id) VALUES (@username, SHA2(@password_hash, 256), @role_id)"
 
                         Using userCmd As New MySqlCommand(userQuery, connection, transaction)
                             userCmd.Parameters.AddWithValue("@username", usertxt.Text)
-                            userCmd.Parameters.AddWithValue("@password_hash", hashedPassword)
-                            userCmd.Parameters.AddWithValue("@role_id", 1)
+                            userCmd.Parameters.AddWithValue("@password_hash", passwordtxt.Text)
+                            userCmd.Parameters.AddWithValue("@role_id", 2)
 
                             userCmd.ExecuteNonQuery()
                         End Using
@@ -120,4 +122,6 @@ Public Class SIGNUP
             pbxShow.Image = My.Resources.Resource1.show
         End If
     End Sub
+
+
 End Class

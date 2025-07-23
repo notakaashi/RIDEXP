@@ -49,24 +49,12 @@ INSERT INTO `maintenance_status` (`status_name`) VALUES
 
 INSERT INTO `user_roles` (`role_name`) VALUES
 ('admin'),
-('staff');
+('customers');
 
 INSERT INTO `inspection_types` (`inspection_type_name`) VALUES
 ('before_rent'),
 ('after_rent');
 
--- Add more payment methods
-INSERT INTO `payment_methods` (`method_name`) VALUES
-('bank_transfer'),
-('check'),
-('credit_card'),
-('debit_card'),
-('paypal'),
-('online_banking');
-
--- Add customer role to user_roles
-INSERT INTO `user_roles` (`role_name`) VALUES
-('customer');
 
 INSERT INTO car_category (category_name, description, transmission_id, fuel_id) VALUES
 ('Compact Sedan CVT', 'CVT sedans for city driving', 3, 1),
@@ -229,3 +217,9 @@ INSERT INTO rental_rate (vehicle_id, rate_per_hour, rate_per_day, security_depos
 (19, 350.00, 2800.00, 11000.00, '2024-01-01'),
 -- Toyota Rush (Compact SUV)
 (20, 310.00, 2500.00, 10000.00, '2024-01-01');
+
+
+INSERT INTO user (username, password_hash, role_id, created_at)
+VALUES 
+  ('JONEL', SHA2('admin', 256), 1, NOW()),
+  ('MARCUS', SHA2('admin', 256), 1, NOW());

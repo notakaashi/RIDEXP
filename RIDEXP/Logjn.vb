@@ -50,11 +50,17 @@ Public Class Logjn
             MessageBox.Show("Sign in successful! Welcome to RidExp!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
             loggedin = True
-            Form1.RefreshLoginState()
 
+            If userRole = 1 Then
+                MessageBox.Show("Welcome Admin! Opening admin panel...")
+                FORM_ADMIN.Show()
+                Form1.Hide()
+                Form1.RefreshLoginState()
+            Else
+                Form1.RefreshLoginState()
+            End If
         Else
             MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
         End If
     End Sub
 
@@ -63,15 +69,18 @@ Public Class Logjn
             Using connection As New MySqlConnection(connectionString)
                 connection.Open()
 
-                Dim hashedPassword As String = BitConverter.ToString(SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(passwordtxt.Text))).Replace("-", "").ToLower()
-                Dim query As String = "SELECT COUNT(*) FROM user WHERE username = @username AND password_hash = @password"
-
+                Dim query As String = "SELECT role_id FROM user WHERE username = @username AND password_hash = SHA2(@password, 256)"
                 Using command As New MySqlCommand(query, connection)
                     command.Parameters.AddWithValue("@username", username)
-                    command.Parameters.AddWithValue("@password", hashedPassword)
+                    command.Parameters.AddWithValue("@password", password)
 
-                    Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
-                    Return count > 0
+                    Dim result = command.ExecuteScalar()
+                    If result IsNot Nothing Then
+                        userRole = Convert.ToInt32(result)
+                        Return True
+                    Else
+                        Return False
+                    End If
                 End Using
             End Using
         Catch ex As Exception
@@ -79,6 +88,7 @@ Public Class Logjn
             Return False
         End Try
     End Function
+
     Private passwordVisible As Boolean = False
 
 
