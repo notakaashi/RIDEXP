@@ -6,7 +6,14 @@ Imports System.Data
 Public Class Logjn
     Public connectionString As String = "Server=localhost;Database=ridexp;User=root;Password=;"
     Private Sub Logjn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FadeTimer.Start()
+
+    End Sub
+
+    Private Sub Logjn_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+        If Me.Visible Then
+            Me.Opacity = 0
+            FadeTimer.Start()
+        End If
     End Sub
 
     Private Sub FadeTimer_Tick(sender As Object, e As EventArgs) Handles FadeTimer.Tick
@@ -39,8 +46,12 @@ Public Class Logjn
         End If
 
         If AuthenticateUser(usertxt.Text, passwordtxt.Text) Then
+            userlogged = usertxt.Text
             MessageBox.Show("Sign in successful! Welcome to RidExp!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
+            loggedin = True
+            Form1.RefreshLoginState()
+
         Else
             MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
