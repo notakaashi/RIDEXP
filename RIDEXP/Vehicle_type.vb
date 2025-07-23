@@ -1,5 +1,7 @@
 ﻿Public Class Vehicle_type
-
+    Private Sub Vehicle_type_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Form1.ResetRentalsLabelColor()
+    End Sub
     Private Sub Vehicle_type_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Me.Opacity = 0
         FadeTimer.Start()

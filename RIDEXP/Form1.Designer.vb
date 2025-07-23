@@ -24,9 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         PictureBox1 = New PictureBox()
         Button1 = New Button()
-        btnRENTALS = New Button()
-        btnHOME = New Button()
-        btnCONTACT = New Button()
         Label1 = New Label()
         Label5 = New Label()
         Label2 = New Label()
@@ -37,9 +34,12 @@ Partial Class Form1
         Panel1 = New Panel()
         PictureBox3 = New PictureBox()
         Panel2 = New Panel()
+        Button2 = New Button()
         Label6 = New Label()
         user = New Label()
-        Button2 = New Button()
+        homelbl = New Label()
+        rentalslbl = New Label()
+        contactslbl = New Label()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -74,50 +74,6 @@ Partial Class Form1
         Button1.Text = "BOOK NOW"
         Button1.TextAlign = ContentAlignment.TopCenter
         Button1.UseVisualStyleBackColor = False
-        ' 
-        ' btnRENTALS
-        ' 
-        btnRENTALS.BackColor = Color.Transparent
-        btnRENTALS.FlatStyle = FlatStyle.Flat
-        btnRENTALS.Font = New Font("Reesha", 16.1999989F)
-        btnRENTALS.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        btnRENTALS.ImageAlign = ContentAlignment.TopCenter
-        btnRENTALS.Location = New Point(339, 16)
-        btnRENTALS.Margin = New Padding(3, 2, 3, 2)
-        btnRENTALS.Name = "btnRENTALS"
-        btnRENTALS.Size = New Size(224, 34)
-        btnRENTALS.TabIndex = 8
-        btnRENTALS.Text = "OUR RENTALS"
-        btnRENTALS.UseVisualStyleBackColor = False
-        ' 
-        ' btnHOME
-        ' 
-        btnHOME.BackColor = Color.Transparent
-        btnHOME.FlatStyle = FlatStyle.Flat
-        btnHOME.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnHOME.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        btnHOME.Location = New Point(206, 16)
-        btnHOME.Margin = New Padding(3, 2, 3, 2)
-        btnHOME.Name = "btnHOME"
-        btnHOME.Size = New Size(116, 34)
-        btnHOME.TabIndex = 7
-        btnHOME.Text = "HOME"
-        btnHOME.UseVisualStyleBackColor = False
-        ' 
-        ' btnCONTACT
-        ' 
-        btnCONTACT.BackColor = Color.Transparent
-        btnCONTACT.FlatStyle = FlatStyle.Flat
-        btnCONTACT.Font = New Font("Reesha", 16.1999989F)
-        btnCONTACT.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        btnCONTACT.ImageAlign = ContentAlignment.TopCenter
-        btnCONTACT.Location = New Point(576, 16)
-        btnCONTACT.Margin = New Padding(3, 2, 3, 2)
-        btnCONTACT.Name = "btnCONTACT"
-        btnCONTACT.Size = New Size(215, 34)
-        btnCONTACT.TabIndex = 9
-        btnCONTACT.Text = "CONTACT US"
-        btnCONTACT.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
@@ -177,7 +133,7 @@ Partial Class Form1
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Reesha", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label4.Location = New Point(110, 136)
+        Label4.Location = New Point(123, 136)
         Label4.Name = "Label4"
         Label4.Size = New Size(295, 42)
         Label4.TabIndex = 15
@@ -230,6 +186,20 @@ Partial Class Form1
         Panel2.TabIndex = 19
         Panel2.Visible = False
         ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.Font = New Font("Reesha", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.ForeColor = Color.White
+        Button2.Location = New Point(29, 41)
+        Button2.Margin = New Padding(3, 2, 3, 2)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(107, 23)
+        Button2.TabIndex = 18
+        Button2.Text = "LOGOUT"
+        Button2.UseVisualStyleBackColor = False
+        ' 
         ' Label6
         ' 
         Label6.AutoSize = True
@@ -256,19 +226,44 @@ Partial Class Form1
         user.TextAlign = ContentAlignment.TopCenter
         user.Visible = False
         ' 
-        ' Button2
+        ' homelbl
         ' 
-        Button2.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Reesha", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button2.ForeColor = Color.White
-        Button2.Location = New Point(29, 41)
-        Button2.Margin = New Padding(3, 2, 3, 2)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(107, 23)
-        Button2.TabIndex = 18
-        Button2.Text = "LOGOUT"
-        Button2.UseVisualStyleBackColor = False
+        homelbl.AutoSize = True
+        homelbl.BackColor = Color.White
+        homelbl.Cursor = Cursors.Hand
+        homelbl.Font = New Font("Reesha", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        homelbl.ForeColor = Color.Black
+        homelbl.Location = New Point(224, 20)
+        homelbl.Name = "homelbl"
+        homelbl.Size = New Size(98, 29)
+        homelbl.TabIndex = 20
+        homelbl.Text = "HOME"
+        ' 
+        ' rentalslbl
+        ' 
+        rentalslbl.AutoSize = True
+        rentalslbl.BackColor = Color.White
+        rentalslbl.Cursor = Cursors.Hand
+        rentalslbl.Font = New Font("Reesha", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        rentalslbl.ForeColor = Color.Black
+        rentalslbl.Location = New Point(340, 20)
+        rentalslbl.Name = "rentalslbl"
+        rentalslbl.Size = New Size(221, 29)
+        rentalslbl.TabIndex = 21
+        rentalslbl.Text = "OUR RENTALS"
+        ' 
+        ' contactslbl
+        ' 
+        contactslbl.AutoSize = True
+        contactslbl.BackColor = Color.White
+        contactslbl.Cursor = Cursors.Hand
+        contactslbl.Font = New Font("Reesha", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        contactslbl.ForeColor = Color.Black
+        contactslbl.Location = New Point(576, 20)
+        contactslbl.Name = "contactslbl"
+        contactslbl.Size = New Size(201, 29)
+        contactslbl.TabIndex = 22
+        contactslbl.Text = "CONTACT US"
         ' 
         ' Form1
         ' 
@@ -277,6 +272,9 @@ Partial Class Form1
         BackgroundImage = My.Resources.Resources.RIDEXPRESS
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1120, 540)
+        Controls.Add(contactslbl)
+        Controls.Add(rentalslbl)
+        Controls.Add(homelbl)
         Controls.Add(Panel2)
         Controls.Add(PictureBox3)
         Controls.Add(Panel1)
@@ -285,9 +283,6 @@ Partial Class Form1
         Controls.Add(Label2)
         Controls.Add(Label5)
         Controls.Add(Label1)
-        Controls.Add(btnCONTACT)
-        Controls.Add(btnRENTALS)
-        Controls.Add(btnHOME)
         Controls.Add(Button1)
         Controls.Add(PictureBox1)
         Controls.Add(PictureBox2)
@@ -308,9 +303,6 @@ Partial Class Form1
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents btnRENTALS As Button
-    Friend WithEvents btnHOME As Button
-    Friend WithEvents btnCONTACT As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label2 As Label
@@ -324,5 +316,8 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents user As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents homelbl As Label
+    Friend WithEvents rentalslbl As Label
+    Friend WithEvents contactslbl As Label
 
 End Class
