@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="FORMADMIN_INVENTORY.vb" />
     <Compile Update="FORM_ADVENTUREBIKE.vb">
       <SubType>Form</SubType>
     </Compile>
