@@ -41,6 +41,7 @@ Partial Class Form1
         rentalslbl = New Label()
         contactslbl = New Label()
         Button3 = New Button()
+        Button4 = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -269,6 +270,15 @@ Partial Class Form1
         Button3.Text = "Button3"
         Button3.UseVisualStyleBackColor = True
         ' 
+        ' Button4
+        ' 
+        Button4.Location = New Point(660, 164)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(94, 29)
+        Button4.TabIndex = 24
+        Button4.Text = "Button4"
+        Button4.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -276,6 +286,7 @@ Partial Class Form1
         BackgroundImage = My.Resources.Resources.RIDEXPRESS
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1280, 720)
+        Controls.Add(Button4)
         Controls.Add(Button3)
         Controls.Add(contactslbl)
         Controls.Add(rentalslbl)
@@ -324,5 +335,6 @@ Partial Class Form1
     Friend WithEvents rentalslbl As Label
     Friend WithEvents contactslbl As Label
     Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 
 End Class

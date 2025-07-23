@@ -68,19 +68,88 @@ Partial Class FORM_ADMIN
         pnlAllDashboard = New Panel()
         DataGridView2 = New DataGridView()
         DataGridView1 = New DataGridView()
-        Panel2 = New Panel()
-        TextBox1 = New TextBox()
-        DataGridView4 = New DataGridView()
-        Panel4 = New Panel()
-        Label4 = New Label()
-        Panel5 = New Panel()
-        Label5 = New Label()
-        PictureBox1 = New PictureBox()
-        Label6 = New Label()
+        pnlcarinventory = New Panel()
         Panel7 = New Panel()
         Label20 = New Label()
         PictureBox3 = New PictureBox()
         Label21 = New Label()
+        Panel5 = New Panel()
+        Label6 = New Label()
+        PictureBox2 = New PictureBox()
+        Label7 = New Label()
+        Panel3 = New Panel()
+        Label3 = New Label()
+        PictureBox1 = New PictureBox()
+        Label5 = New Label()
+        Button1 = New Button()
+        Panel6 = New Panel()
+        Label8 = New Label()
+        PictureBox4 = New PictureBox()
+        Label22 = New Label()
+        TextBox1 = New TextBox()
+        DataGridView4 = New DataGridView()
+        Panel4 = New Panel()
+        Label4 = New Label()
+        pnlRentalContent = New Panel()
+        Panel18 = New Panel()
+        Label27 = New Label()
+        PictureBox11 = New PictureBox()
+        Label28 = New Label()
+        Button2 = New Button()
+        Panel19 = New Panel()
+        Label29 = New Label()
+        PictureBox12 = New PictureBox()
+        Label30 = New Label()
+        TextBox2 = New TextBox()
+        DataGridView3 = New DataGridView()
+        Panel20 = New Panel()
+        Label31 = New Label()
+        pnlMaintenanceContent = New Panel()
+        Panel21 = New Panel()
+        Label33 = New Label()
+        PictureBox13 = New PictureBox()
+        Label34 = New Label()
+        Panel15 = New Panel()
+        Label23 = New Label()
+        PictureBox5 = New PictureBox()
+        Label24 = New Label()
+        Button3 = New Button()
+        Panel16 = New Panel()
+        Label25 = New Label()
+        PictureBox6 = New PictureBox()
+        Label26 = New Label()
+        TextBox3 = New TextBox()
+        DataGridView5 = New DataGridView()
+        Panel17 = New Panel()
+        Label32 = New Label()
+        pnlSaleContent = New Panel()
+        Panel26 = New Panel()
+        Label42 = New Label()
+        PictureBox17 = New PictureBox()
+        Label43 = New Label()
+        Panel23 = New Panel()
+        Label37 = New Label()
+        PictureBox15 = New PictureBox()
+        Label38 = New Label()
+        Button4 = New Button()
+        Panel24 = New Panel()
+        Label39 = New Label()
+        PictureBox16 = New PictureBox()
+        Label40 = New Label()
+        TextBox4 = New TextBox()
+        DataGridView6 = New DataGridView()
+        Panel25 = New Panel()
+        Label41 = New Label()
+        pnlUsersContent = New Panel()
+        Button5 = New Button()
+        Panel28 = New Panel()
+        Label46 = New Label()
+        PictureBox19 = New PictureBox()
+        Label47 = New Label()
+        TextBox5 = New TextBox()
+        DataGridView7 = New DataGridView()
+        Panel29 = New Panel()
+        Label48 = New Label()
         Panel1.SuspendLayout()
         pnlUsers.SuspendLayout()
         CType(iconUsers, ComponentModel.ISupportInitialize).BeginInit()
@@ -108,13 +177,47 @@ Partial Class FORM_ADMIN
         pnlAllDashboard.SuspendLayout()
         CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
-        Panel2.SuspendLayout()
-        CType(DataGridView4, ComponentModel.ISupportInitialize).BeginInit()
-        Panel4.SuspendLayout()
-        Panel5.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        pnlcarinventory.SuspendLayout()
         Panel7.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        Panel5.SuspendLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        Panel3.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel6.SuspendLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DataGridView4, ComponentModel.ISupportInitialize).BeginInit()
+        Panel4.SuspendLayout()
+        pnlRentalContent.SuspendLayout()
+        Panel18.SuspendLayout()
+        CType(PictureBox11, ComponentModel.ISupportInitialize).BeginInit()
+        Panel19.SuspendLayout()
+        CType(PictureBox12, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DataGridView3, ComponentModel.ISupportInitialize).BeginInit()
+        Panel20.SuspendLayout()
+        pnlMaintenanceContent.SuspendLayout()
+        Panel21.SuspendLayout()
+        CType(PictureBox13, ComponentModel.ISupportInitialize).BeginInit()
+        Panel15.SuspendLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        Panel16.SuspendLayout()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DataGridView5, ComponentModel.ISupportInitialize).BeginInit()
+        Panel17.SuspendLayout()
+        pnlSaleContent.SuspendLayout()
+        Panel26.SuspendLayout()
+        CType(PictureBox17, ComponentModel.ISupportInitialize).BeginInit()
+        Panel23.SuspendLayout()
+        CType(PictureBox15, ComponentModel.ISupportInitialize).BeginInit()
+        Panel24.SuspendLayout()
+        CType(PictureBox16, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DataGridView6, ComponentModel.ISupportInitialize).BeginInit()
+        Panel25.SuspendLayout()
+        pnlUsersContent.SuspendLayout()
+        Panel28.SuspendLayout()
+        CType(PictureBox19, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DataGridView7, ComponentModel.ISupportInitialize).BeginInit()
+        Panel29.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -293,6 +396,7 @@ Partial Class FORM_ADMIN
         ' 
         pnlDashboard.Controls.Add(iconDashboard)
         pnlDashboard.Controls.Add(lblDashboard)
+        pnlDashboard.Cursor = Cursors.Hand
         pnlDashboard.Location = New Point(33, 177)
         pnlDashboard.Name = "pnlDashboard"
         pnlDashboard.Size = New Size(260, 43)
@@ -609,98 +713,20 @@ Partial Class FORM_ADMIN
         DataGridView1.Size = New Size(593, 303)
         DataGridView1.TabIndex = 13
         ' 
-        ' Panel2
+        ' pnlcarinventory
         ' 
-        Panel2.Controls.Add(TextBox1)
-        Panel2.Controls.Add(DataGridView4)
-        Panel2.Controls.Add(Panel4)
-        Panel2.Controls.Add(Panel5)
-        Panel2.Controls.Add(Panel7)
-        Panel2.Location = New Point(301, 84)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(915, 564)
-        Panel2.TabIndex = 14
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(14, 127)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(231, 35)
-        TextBox1.TabIndex = 14
-        ' 
-        ' DataGridView4
-        ' 
-        DataGridView4.BackgroundColor = Color.White
-        DataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView4.Location = New Point(14, 230)
-        DataGridView4.Name = "DataGridView4"
-        DataGridView4.RowHeadersWidth = 51
-        DataGridView4.Size = New Size(593, 303)
-        DataGridView4.TabIndex = 13
-        ' 
-        ' Panel4
-        ' 
-        Panel4.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Panel4.Controls.Add(Label4)
-        Panel4.Location = New Point(14, 188)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(593, 44)
-        Panel4.TabIndex = 11
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.White
-        Label4.Location = New Point(11, 8)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(240, 28)
-        Label4.TabIndex = 7
-        Label4.Text = "CARS INVENTORY"
-        ' 
-        ' Panel5
-        ' 
-        Panel5.BackColor = Color.White
-        Panel5.Controls.Add(Label5)
-        Panel5.Controls.Add(PictureBox1)
-        Panel5.Controls.Add(Label6)
-        Panel5.Location = New Point(384, 42)
-        Panel5.Name = "Panel5"
-        Panel5.Size = New Size(223, 120)
-        Panel5.TabIndex = 9
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Designer", 25.8000011F)
-        Label5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label5.Location = New Point(29, 30)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(96, 57)
-        Label5.TabIndex = 7
-        Label5.Text = "69"
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = My.Resources.Resources.car_icon
-        PictureBox1.Location = New Point(141, 36)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(47, 35)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 7
-        PictureBox1.TabStop = False
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label6.ForeColor = Color.Gray
-        Label6.Location = New Point(39, 83)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(88, 18)
-        Label6.TabIndex = 6
-        Label6.Text = "AVAILABLE"
+        pnlcarinventory.Controls.Add(Panel7)
+        pnlcarinventory.Controls.Add(Panel5)
+        pnlcarinventory.Controls.Add(Panel3)
+        pnlcarinventory.Controls.Add(Button1)
+        pnlcarinventory.Controls.Add(Panel6)
+        pnlcarinventory.Controls.Add(TextBox1)
+        pnlcarinventory.Controls.Add(DataGridView4)
+        pnlcarinventory.Controls.Add(Panel4)
+        pnlcarinventory.Location = New Point(310, 667)
+        pnlcarinventory.Name = "pnlcarinventory"
+        pnlcarinventory.Size = New Size(915, 564)
+        pnlcarinventory.TabIndex = 14
         ' 
         ' Panel7
         ' 
@@ -708,17 +734,17 @@ Partial Class FORM_ADMIN
         Panel7.Controls.Add(Label20)
         Panel7.Controls.Add(PictureBox3)
         Panel7.Controls.Add(Label21)
-        Panel7.Location = New Point(650, 42)
+        Panel7.Location = New Point(705, 7)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(223, 120)
-        Panel7.TabIndex = 8
+        Panel7.Size = New Size(210, 120)
+        Panel7.TabIndex = 10
         ' 
         ' Label20
         ' 
         Label20.AutoSize = True
         Label20.Font = New Font("Designer", 25.8000011F)
         Label20.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label20.Location = New Point(29, 30)
+        Label20.Location = New Point(25, 27)
         Label20.Name = "Label20"
         Label20.Size = New Size(96, 57)
         Label20.TabIndex = 7
@@ -739,11 +765,835 @@ Partial Class FORM_ADMIN
         Label21.AutoSize = True
         Label21.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label21.ForeColor = Color.Gray
-        Label21.Location = New Point(39, 83)
+        Label21.Location = New Point(35, 80)
         Label21.Name = "Label21"
         Label21.Size = New Size(72, 18)
         Label21.TabIndex = 6
         Label21.Text = "RENTALS"
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BackColor = Color.White
+        Panel5.Controls.Add(Label6)
+        Panel5.Controls.Add(PictureBox2)
+        Panel5.Controls.Add(Label7)
+        Panel5.Location = New Point(480, 7)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(210, 120)
+        Panel5.TabIndex = 10
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Designer", 25.8000011F)
+        Label6.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label6.Location = New Point(25, 27)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(96, 57)
+        Label6.TabIndex = 7
+        Label6.Text = "69"
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = My.Resources.Resources.car_icon
+        PictureBox2.Location = New Point(127, 36)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(47, 35)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 7
+        PictureBox2.TabStop = False
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = Color.Gray
+        Label7.Location = New Point(25, 80)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(87, 18)
+        Label7.TabIndex = 6
+        Label7.Text = "DAMAGED"
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.White
+        Panel3.Controls.Add(Label3)
+        Panel3.Controls.Add(PictureBox1)
+        Panel3.Controls.Add(Label5)
+        Panel3.Location = New Point(252, 7)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(210, 120)
+        Panel3.TabIndex = 10
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Designer", 25.8000011F)
+        Label3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label3.Location = New Point(25, 27)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(96, 57)
+        Label3.TabIndex = 7
+        Label3.Text = "69"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = My.Resources.Resources.car_icon
+        PictureBox1.Location = New Point(127, 36)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(47, 35)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 7
+        PictureBox1.TabStop = False
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label5.ForeColor = Color.Gray
+        Label5.Location = New Point(35, 80)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(122, 18)
+        Label5.TabIndex = 6
+        Label5.Text = "MAINTENANCE"
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(281, 141)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(123, 35)
+        Button1.TabIndex = 15
+        Button1.Text = "SEARCH"
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' Panel6
+        ' 
+        Panel6.BackColor = Color.White
+        Panel6.Controls.Add(Label8)
+        Panel6.Controls.Add(PictureBox4)
+        Panel6.Controls.Add(Label22)
+        Panel6.Location = New Point(25, 7)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(210, 120)
+        Panel6.TabIndex = 9
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Designer", 25.8000011F)
+        Label8.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label8.Location = New Point(25, 27)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(96, 57)
+        Label8.TabIndex = 7
+        Label8.Text = "69"
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.Image = My.Resources.Resources.car_icon
+        PictureBox4.Location = New Point(127, 36)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(47, 35)
+        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox4.TabIndex = 7
+        PictureBox4.TabStop = False
+        ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label22.ForeColor = Color.Gray
+        Label22.Location = New Point(35, 80)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(88, 18)
+        Label22.TabIndex = 6
+        Label22.Text = "AVAILABLE"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Location = New Point(25, 142)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(231, 35)
+        TextBox1.TabIndex = 14
+        ' 
+        ' DataGridView4
+        ' 
+        DataGridView4.BackgroundColor = Color.White
+        DataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView4.Location = New Point(25, 233)
+        DataGridView4.Name = "DataGridView4"
+        DataGridView4.RowHeadersWidth = 51
+        DataGridView4.Size = New Size(854, 318)
+        DataGridView4.TabIndex = 13
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Panel4.Controls.Add(Label4)
+        Panel4.Location = New Point(25, 191)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(854, 44)
+        Panel4.TabIndex = 11
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.ForeColor = Color.White
+        Label4.Location = New Point(11, 8)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(240, 28)
+        Label4.TabIndex = 7
+        Label4.Text = "CARS INVENTORY"
+        ' 
+        ' pnlRentalContent
+        ' 
+        pnlRentalContent.Controls.Add(Panel18)
+        pnlRentalContent.Controls.Add(Button2)
+        pnlRentalContent.Controls.Add(Panel19)
+        pnlRentalContent.Controls.Add(TextBox2)
+        pnlRentalContent.Controls.Add(DataGridView3)
+        pnlRentalContent.Controls.Add(Panel20)
+        pnlRentalContent.Location = New Point(1239, 654)
+        pnlRentalContent.Name = "pnlRentalContent"
+        pnlRentalContent.Size = New Size(915, 564)
+        pnlRentalContent.TabIndex = 15
+        ' 
+        ' Panel18
+        ' 
+        Panel18.BackColor = Color.White
+        Panel18.Controls.Add(Label27)
+        Panel18.Controls.Add(PictureBox11)
+        Panel18.Controls.Add(Label28)
+        Panel18.Location = New Point(252, 7)
+        Panel18.Name = "Panel18"
+        Panel18.Size = New Size(210, 120)
+        Panel18.TabIndex = 10
+        ' 
+        ' Label27
+        ' 
+        Label27.AutoSize = True
+        Label27.Font = New Font("Designer", 25.8000011F)
+        Label27.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label27.Location = New Point(25, 27)
+        Label27.Name = "Label27"
+        Label27.Size = New Size(96, 57)
+        Label27.TabIndex = 7
+        Label27.Text = "69"
+        ' 
+        ' PictureBox11
+        ' 
+        PictureBox11.Image = My.Resources.Resources.car_icon
+        PictureBox11.Location = New Point(127, 36)
+        PictureBox11.Name = "PictureBox11"
+        PictureBox11.Size = New Size(47, 35)
+        PictureBox11.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox11.TabIndex = 7
+        PictureBox11.TabStop = False
+        ' 
+        ' Label28
+        ' 
+        Label28.AutoSize = True
+        Label28.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label28.ForeColor = Color.Gray
+        Label28.Location = New Point(35, 80)
+        Label28.Name = "Label28"
+        Label28.Size = New Size(122, 18)
+        Label28.TabIndex = 6
+        Label28.Text = "MAINTENANCE"
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.ForeColor = Color.White
+        Button2.Location = New Point(281, 141)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(123, 35)
+        Button2.TabIndex = 15
+        Button2.Text = "SEARCH"
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' Panel19
+        ' 
+        Panel19.BackColor = Color.White
+        Panel19.Controls.Add(Label29)
+        Panel19.Controls.Add(PictureBox12)
+        Panel19.Controls.Add(Label30)
+        Panel19.Location = New Point(25, 7)
+        Panel19.Name = "Panel19"
+        Panel19.Size = New Size(210, 120)
+        Panel19.TabIndex = 9
+        ' 
+        ' Label29
+        ' 
+        Label29.AutoSize = True
+        Label29.Font = New Font("Designer", 25.8000011F)
+        Label29.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label29.Location = New Point(25, 27)
+        Label29.Name = "Label29"
+        Label29.Size = New Size(96, 57)
+        Label29.TabIndex = 7
+        Label29.Text = "69"
+        ' 
+        ' PictureBox12
+        ' 
+        PictureBox12.Image = My.Resources.Resources.car_icon
+        PictureBox12.Location = New Point(127, 36)
+        PictureBox12.Name = "PictureBox12"
+        PictureBox12.Size = New Size(47, 35)
+        PictureBox12.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox12.TabIndex = 7
+        PictureBox12.TabStop = False
+        ' 
+        ' Label30
+        ' 
+        Label30.AutoSize = True
+        Label30.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label30.ForeColor = Color.Gray
+        Label30.Location = New Point(35, 80)
+        Label30.Name = "Label30"
+        Label30.Size = New Size(72, 18)
+        Label30.TabIndex = 6
+        Label30.Text = "RENTALS"
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox2.Location = New Point(25, 142)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(231, 35)
+        TextBox2.TabIndex = 14
+        ' 
+        ' DataGridView3
+        ' 
+        DataGridView3.BackgroundColor = Color.White
+        DataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView3.Location = New Point(25, 233)
+        DataGridView3.Name = "DataGridView3"
+        DataGridView3.RowHeadersWidth = 51
+        DataGridView3.Size = New Size(854, 318)
+        DataGridView3.TabIndex = 13
+        ' 
+        ' Panel20
+        ' 
+        Panel20.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Panel20.Controls.Add(Label31)
+        Panel20.Location = New Point(25, 191)
+        Panel20.Name = "Panel20"
+        Panel20.Size = New Size(854, 44)
+        Panel20.TabIndex = 11
+        ' 
+        ' Label31
+        ' 
+        Label31.AutoSize = True
+        Label31.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label31.ForeColor = Color.White
+        Label31.Location = New Point(11, 8)
+        Label31.Name = "Label31"
+        Label31.Size = New Size(258, 28)
+        Label31.TabIndex = 7
+        Label31.Text = "VEHICLE RENTALS"
+        ' 
+        ' pnlMaintenanceContent
+        ' 
+        pnlMaintenanceContent.Controls.Add(Panel21)
+        pnlMaintenanceContent.Controls.Add(Panel15)
+        pnlMaintenanceContent.Controls.Add(Button3)
+        pnlMaintenanceContent.Controls.Add(Panel16)
+        pnlMaintenanceContent.Controls.Add(TextBox3)
+        pnlMaintenanceContent.Controls.Add(DataGridView5)
+        pnlMaintenanceContent.Controls.Add(Panel17)
+        pnlMaintenanceContent.Location = New Point(1242, 325)
+        pnlMaintenanceContent.Name = "pnlMaintenanceContent"
+        pnlMaintenanceContent.Size = New Size(915, 564)
+        pnlMaintenanceContent.TabIndex = 16
+        ' 
+        ' Panel21
+        ' 
+        Panel21.BackColor = Color.White
+        Panel21.Controls.Add(Label33)
+        Panel21.Controls.Add(PictureBox13)
+        Panel21.Controls.Add(Label34)
+        Panel21.Location = New Point(480, 7)
+        Panel21.Name = "Panel21"
+        Panel21.Size = New Size(210, 120)
+        Panel21.TabIndex = 11
+        ' 
+        ' Label33
+        ' 
+        Label33.AutoSize = True
+        Label33.Font = New Font("Designer", 25.8000011F)
+        Label33.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label33.Location = New Point(25, 27)
+        Label33.Name = "Label33"
+        Label33.Size = New Size(96, 57)
+        Label33.TabIndex = 7
+        Label33.Text = "69"
+        ' 
+        ' PictureBox13
+        ' 
+        PictureBox13.Image = My.Resources.Resources.car_icon
+        PictureBox13.Location = New Point(127, 36)
+        PictureBox13.Name = "PictureBox13"
+        PictureBox13.Size = New Size(47, 35)
+        PictureBox13.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox13.TabIndex = 7
+        PictureBox13.TabStop = False
+        ' 
+        ' Label34
+        ' 
+        Label34.AutoSize = True
+        Label34.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label34.ForeColor = Color.Gray
+        Label34.Location = New Point(35, 84)
+        Label34.Name = "Label34"
+        Label34.Size = New Size(151, 18)
+        Label34.TabIndex = 6
+        Label34.Text = "GOOD CONDITION"
+        ' 
+        ' Panel15
+        ' 
+        Panel15.BackColor = Color.White
+        Panel15.Controls.Add(Label23)
+        Panel15.Controls.Add(PictureBox5)
+        Panel15.Controls.Add(Label24)
+        Panel15.Location = New Point(252, 7)
+        Panel15.Name = "Panel15"
+        Panel15.Size = New Size(210, 120)
+        Panel15.TabIndex = 10
+        ' 
+        ' Label23
+        ' 
+        Label23.AutoSize = True
+        Label23.Font = New Font("Designer", 25.8000011F)
+        Label23.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label23.Location = New Point(25, 27)
+        Label23.Name = "Label23"
+        Label23.Size = New Size(96, 57)
+        Label23.TabIndex = 7
+        Label23.Text = "69"
+        ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.Image = My.Resources.Resources.car_icon
+        PictureBox5.Location = New Point(127, 36)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(47, 35)
+        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox5.TabIndex = 7
+        PictureBox5.TabStop = False
+        ' 
+        ' Label24
+        ' 
+        Label24.AutoSize = True
+        Label24.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label24.ForeColor = Color.Gray
+        Label24.Location = New Point(35, 84)
+        Label24.Name = "Label24"
+        Label24.Size = New Size(87, 18)
+        Label24.TabIndex = 6
+        Label24.Text = "DAMAGED"
+        ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button3.FlatStyle = FlatStyle.Flat
+        Button3.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(281, 141)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(123, 35)
+        Button3.TabIndex = 15
+        Button3.Text = "SEARCH"
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' Panel16
+        ' 
+        Panel16.BackColor = Color.White
+        Panel16.Controls.Add(Label25)
+        Panel16.Controls.Add(PictureBox6)
+        Panel16.Controls.Add(Label26)
+        Panel16.Location = New Point(25, 7)
+        Panel16.Name = "Panel16"
+        Panel16.Size = New Size(210, 120)
+        Panel16.TabIndex = 9
+        ' 
+        ' Label25
+        ' 
+        Label25.AutoSize = True
+        Label25.Font = New Font("Designer", 25.8000011F)
+        Label25.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label25.Location = New Point(25, 27)
+        Label25.Name = "Label25"
+        Label25.Size = New Size(96, 57)
+        Label25.TabIndex = 7
+        Label25.Text = "69"
+        ' 
+        ' PictureBox6
+        ' 
+        PictureBox6.Image = My.Resources.Resources.car_icon
+        PictureBox6.Location = New Point(127, 36)
+        PictureBox6.Name = "PictureBox6"
+        PictureBox6.Size = New Size(47, 35)
+        PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox6.TabIndex = 7
+        PictureBox6.TabStop = False
+        ' 
+        ' Label26
+        ' 
+        Label26.AutoSize = True
+        Label26.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label26.ForeColor = Color.Gray
+        Label26.Location = New Point(35, 84)
+        Label26.Name = "Label26"
+        Label26.Size = New Size(87, 18)
+        Label26.TabIndex = 6
+        Label26.Text = "ONGOING"
+        ' 
+        ' TextBox3
+        ' 
+        TextBox3.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox3.Location = New Point(25, 142)
+        TextBox3.Name = "TextBox3"
+        TextBox3.Size = New Size(231, 35)
+        TextBox3.TabIndex = 14
+        ' 
+        ' DataGridView5
+        ' 
+        DataGridView5.BackgroundColor = Color.White
+        DataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView5.Location = New Point(25, 233)
+        DataGridView5.Name = "DataGridView5"
+        DataGridView5.RowHeadersWidth = 51
+        DataGridView5.Size = New Size(854, 318)
+        DataGridView5.TabIndex = 13
+        ' 
+        ' Panel17
+        ' 
+        Panel17.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Panel17.Controls.Add(Label32)
+        Panel17.Location = New Point(25, 191)
+        Panel17.Name = "Panel17"
+        Panel17.Size = New Size(854, 44)
+        Panel17.TabIndex = 11
+        ' 
+        ' Label32
+        ' 
+        Label32.AutoSize = True
+        Label32.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label32.ForeColor = Color.White
+        Label32.Location = New Point(11, 8)
+        Label32.Name = "Label32"
+        Label32.Size = New Size(322, 28)
+        Label32.TabIndex = 7
+        Label32.Text = "VEHICLE MAINTENANCE"
+        ' 
+        ' pnlSaleContent
+        ' 
+        pnlSaleContent.Controls.Add(Panel26)
+        pnlSaleContent.Controls.Add(Panel23)
+        pnlSaleContent.Controls.Add(Button4)
+        pnlSaleContent.Controls.Add(Panel24)
+        pnlSaleContent.Controls.Add(TextBox4)
+        pnlSaleContent.Controls.Add(DataGridView6)
+        pnlSaleContent.Controls.Add(Panel25)
+        pnlSaleContent.Location = New Point(296, 667)
+        pnlSaleContent.Name = "pnlSaleContent"
+        pnlSaleContent.Size = New Size(915, 564)
+        pnlSaleContent.TabIndex = 17
+        ' 
+        ' Panel26
+        ' 
+        Panel26.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Panel26.Controls.Add(Label42)
+        Panel26.Controls.Add(PictureBox17)
+        Panel26.Controls.Add(Label43)
+        Panel26.Location = New Point(480, 7)
+        Panel26.Name = "Panel26"
+        Panel26.Size = New Size(212, 120)
+        Panel26.TabIndex = 16
+        ' 
+        ' Label42
+        ' 
+        Label42.AutoSize = True
+        Label42.Font = New Font("Designer", 25.8000011F)
+        Label42.ForeColor = Color.White
+        Label42.Location = New Point(29, 26)
+        Label42.Name = "Label42"
+        Label42.Size = New Size(96, 57)
+        Label42.TabIndex = 7
+        Label42.Text = "69"
+        ' 
+        ' PictureBox17
+        ' 
+        PictureBox17.Image = My.Resources.Resources.income_iconwhite
+        PictureBox17.Location = New Point(131, 35)
+        PictureBox17.Name = "PictureBox17"
+        PictureBox17.Size = New Size(54, 48)
+        PictureBox17.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox17.TabIndex = 7
+        PictureBox17.TabStop = False
+        ' 
+        ' Label43
+        ' 
+        Label43.AutoSize = True
+        Label43.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label43.ForeColor = Color.White
+        Label43.Location = New Point(39, 83)
+        Label43.Name = "Label43"
+        Label43.Size = New Size(72, 18)
+        Label43.TabIndex = 6
+        Label43.Text = "INCOME"
+        ' 
+        ' Panel23
+        ' 
+        Panel23.BackColor = Color.White
+        Panel23.Controls.Add(Label37)
+        Panel23.Controls.Add(PictureBox15)
+        Panel23.Controls.Add(Label38)
+        Panel23.Location = New Point(252, 7)
+        Panel23.Name = "Panel23"
+        Panel23.Size = New Size(210, 120)
+        Panel23.TabIndex = 10
+        ' 
+        ' Label37
+        ' 
+        Label37.AutoSize = True
+        Label37.Font = New Font("Designer", 25.8000011F)
+        Label37.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label37.Location = New Point(25, 27)
+        Label37.Name = "Label37"
+        Label37.Size = New Size(96, 57)
+        Label37.TabIndex = 7
+        Label37.Text = "69"
+        ' 
+        ' PictureBox15
+        ' 
+        PictureBox15.Image = My.Resources.Resources.car_icon
+        PictureBox15.Location = New Point(127, 36)
+        PictureBox15.Name = "PictureBox15"
+        PictureBox15.Size = New Size(47, 35)
+        PictureBox15.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox15.TabIndex = 7
+        PictureBox15.TabStop = False
+        ' 
+        ' Label38
+        ' 
+        Label38.AutoSize = True
+        Label38.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label38.ForeColor = Color.Gray
+        Label38.Location = New Point(35, 84)
+        Label38.Name = "Label38"
+        Label38.Size = New Size(87, 18)
+        Label38.TabIndex = 6
+        Label38.Text = "DAMAGED"
+        ' 
+        ' Button4
+        ' 
+        Button4.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button4.FlatStyle = FlatStyle.Flat
+        Button4.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button4.ForeColor = Color.White
+        Button4.Location = New Point(281, 141)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(123, 35)
+        Button4.TabIndex = 15
+        Button4.Text = "SEARCH"
+        Button4.UseVisualStyleBackColor = False
+        ' 
+        ' Panel24
+        ' 
+        Panel24.BackColor = Color.White
+        Panel24.Controls.Add(Label39)
+        Panel24.Controls.Add(PictureBox16)
+        Panel24.Controls.Add(Label40)
+        Panel24.Location = New Point(25, 7)
+        Panel24.Name = "Panel24"
+        Panel24.Size = New Size(210, 120)
+        Panel24.TabIndex = 9
+        ' 
+        ' Label39
+        ' 
+        Label39.AutoSize = True
+        Label39.Font = New Font("Designer", 25.8000011F)
+        Label39.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label39.Location = New Point(25, 27)
+        Label39.Name = "Label39"
+        Label39.Size = New Size(96, 57)
+        Label39.TabIndex = 7
+        Label39.Text = "69"
+        ' 
+        ' PictureBox16
+        ' 
+        PictureBox16.Image = My.Resources.Resources.car_icon
+        PictureBox16.Location = New Point(127, 36)
+        PictureBox16.Name = "PictureBox16"
+        PictureBox16.Size = New Size(47, 35)
+        PictureBox16.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox16.TabIndex = 7
+        PictureBox16.TabStop = False
+        ' 
+        ' Label40
+        ' 
+        Label40.AutoSize = True
+        Label40.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label40.ForeColor = Color.Gray
+        Label40.Location = New Point(35, 84)
+        Label40.Name = "Label40"
+        Label40.Size = New Size(72, 18)
+        Label40.TabIndex = 6
+        Label40.Text = "RENTALS"
+        ' 
+        ' TextBox4
+        ' 
+        TextBox4.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox4.Location = New Point(25, 142)
+        TextBox4.Name = "TextBox4"
+        TextBox4.Size = New Size(231, 35)
+        TextBox4.TabIndex = 14
+        ' 
+        ' DataGridView6
+        ' 
+        DataGridView6.BackgroundColor = Color.White
+        DataGridView6.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView6.Location = New Point(25, 233)
+        DataGridView6.Name = "DataGridView6"
+        DataGridView6.RowHeadersWidth = 51
+        DataGridView6.Size = New Size(854, 318)
+        DataGridView6.TabIndex = 13
+        ' 
+        ' Panel25
+        ' 
+        Panel25.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Panel25.Controls.Add(Label41)
+        Panel25.Location = New Point(25, 191)
+        Panel25.Name = "Panel25"
+        Panel25.Size = New Size(854, 44)
+        Panel25.TabIndex = 11
+        ' 
+        ' Label41
+        ' 
+        Label41.AutoSize = True
+        Label41.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label41.ForeColor = Color.White
+        Label41.Location = New Point(11, 8)
+        Label41.Name = "Label41"
+        Label41.Size = New Size(102, 28)
+        Label41.TabIndex = 7
+        Label41.Text = "SALES"
+        ' 
+        ' pnlUsersContent
+        ' 
+        pnlUsersContent.Controls.Add(Button5)
+        pnlUsersContent.Controls.Add(Panel28)
+        pnlUsersContent.Controls.Add(TextBox5)
+        pnlUsersContent.Controls.Add(DataGridView7)
+        pnlUsersContent.Controls.Add(Panel29)
+        pnlUsersContent.Location = New Point(1251, 78)
+        pnlUsersContent.Name = "pnlUsersContent"
+        pnlUsersContent.Size = New Size(915, 564)
+        pnlUsersContent.TabIndex = 18
+        ' 
+        ' Button5
+        ' 
+        Button5.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button5.FlatStyle = FlatStyle.Flat
+        Button5.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button5.ForeColor = Color.White
+        Button5.Location = New Point(281, 141)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(123, 35)
+        Button5.TabIndex = 15
+        Button5.Text = "SEARCH"
+        Button5.UseVisualStyleBackColor = False
+        ' 
+        ' Panel28
+        ' 
+        Panel28.BackColor = Color.White
+        Panel28.Controls.Add(Label46)
+        Panel28.Controls.Add(PictureBox19)
+        Panel28.Controls.Add(Label47)
+        Panel28.Location = New Point(25, 7)
+        Panel28.Name = "Panel28"
+        Panel28.Size = New Size(210, 120)
+        Panel28.TabIndex = 9
+        ' 
+        ' Label46
+        ' 
+        Label46.AutoSize = True
+        Label46.Font = New Font("Designer", 25.8000011F)
+        Label46.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label46.Location = New Point(25, 27)
+        Label46.Name = "Label46"
+        Label46.Size = New Size(96, 57)
+        Label46.TabIndex = 7
+        Label46.Text = "69"
+        ' 
+        ' PictureBox19
+        ' 
+        PictureBox19.Image = My.Resources.Resources.car_icon
+        PictureBox19.Location = New Point(127, 36)
+        PictureBox19.Name = "PictureBox19"
+        PictureBox19.Size = New Size(47, 35)
+        PictureBox19.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox19.TabIndex = 7
+        PictureBox19.TabStop = False
+        ' 
+        ' Label47
+        ' 
+        Label47.AutoSize = True
+        Label47.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label47.ForeColor = Color.Gray
+        Label47.Location = New Point(35, 84)
+        Label47.Name = "Label47"
+        Label47.Size = New Size(53, 18)
+        Label47.TabIndex = 6
+        Label47.Text = "USERS"
+        ' 
+        ' TextBox5
+        ' 
+        TextBox5.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox5.Location = New Point(25, 142)
+        TextBox5.Name = "TextBox5"
+        TextBox5.Size = New Size(231, 35)
+        TextBox5.TabIndex = 14
+        ' 
+        ' DataGridView7
+        ' 
+        DataGridView7.BackgroundColor = Color.White
+        DataGridView7.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView7.Location = New Point(25, 233)
+        DataGridView7.Name = "DataGridView7"
+        DataGridView7.RowHeadersWidth = 51
+        DataGridView7.Size = New Size(854, 318)
+        DataGridView7.TabIndex = 13
+        ' 
+        ' Panel29
+        ' 
+        Panel29.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Panel29.Controls.Add(Label48)
+        Panel29.Location = New Point(25, 191)
+        Panel29.Name = "Panel29"
+        Panel29.Size = New Size(854, 44)
+        Panel29.TabIndex = 11
+        ' 
+        ' Label48
+        ' 
+        Label48.AutoSize = True
+        Label48.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label48.ForeColor = Color.White
+        Label48.Location = New Point(11, 8)
+        Label48.Name = "Label48"
+        Label48.Size = New Size(102, 28)
+        Label48.TabIndex = 7
+        Label48.Text = "USERS"
         ' 
         ' FORM_ADMIN
         ' 
@@ -751,7 +1601,11 @@ Partial Class FORM_ADMIN
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Gainsboro
         ClientSize = New Size(1262, 673)
-        Controls.Add(Panel2)
+        Controls.Add(pnlUsersContent)
+        Controls.Add(pnlSaleContent)
+        Controls.Add(pnlMaintenanceContent)
+        Controls.Add(pnlRentalContent)
+        Controls.Add(pnlcarinventory)
         Controls.Add(Panel8)
         Controls.Add(pnlAllDashboard)
         Controls.Add(Panel1)
@@ -799,17 +1653,70 @@ Partial Class FORM_ADMIN
         pnlAllDashboard.ResumeLayout(False)
         CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
-        Panel2.ResumeLayout(False)
-        Panel2.PerformLayout()
-        CType(DataGridView4, ComponentModel.ISupportInitialize).EndInit()
-        Panel4.ResumeLayout(False)
-        Panel4.PerformLayout()
-        Panel5.ResumeLayout(False)
-        Panel5.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        pnlcarinventory.ResumeLayout(False)
+        pnlcarinventory.PerformLayout()
         Panel7.ResumeLayout(False)
         Panel7.PerformLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        Panel5.ResumeLayout(False)
+        Panel5.PerformLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel6.ResumeLayout(False)
+        Panel6.PerformLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(DataGridView4, ComponentModel.ISupportInitialize).EndInit()
+        Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
+        pnlRentalContent.ResumeLayout(False)
+        pnlRentalContent.PerformLayout()
+        Panel18.ResumeLayout(False)
+        Panel18.PerformLayout()
+        CType(PictureBox11, ComponentModel.ISupportInitialize).EndInit()
+        Panel19.ResumeLayout(False)
+        Panel19.PerformLayout()
+        CType(PictureBox12, ComponentModel.ISupportInitialize).EndInit()
+        CType(DataGridView3, ComponentModel.ISupportInitialize).EndInit()
+        Panel20.ResumeLayout(False)
+        Panel20.PerformLayout()
+        pnlMaintenanceContent.ResumeLayout(False)
+        pnlMaintenanceContent.PerformLayout()
+        Panel21.ResumeLayout(False)
+        Panel21.PerformLayout()
+        CType(PictureBox13, ComponentModel.ISupportInitialize).EndInit()
+        Panel15.ResumeLayout(False)
+        Panel15.PerformLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        Panel16.ResumeLayout(False)
+        Panel16.PerformLayout()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
+        CType(DataGridView5, ComponentModel.ISupportInitialize).EndInit()
+        Panel17.ResumeLayout(False)
+        Panel17.PerformLayout()
+        pnlSaleContent.ResumeLayout(False)
+        pnlSaleContent.PerformLayout()
+        Panel26.ResumeLayout(False)
+        Panel26.PerformLayout()
+        CType(PictureBox17, ComponentModel.ISupportInitialize).EndInit()
+        Panel23.ResumeLayout(False)
+        Panel23.PerformLayout()
+        CType(PictureBox15, ComponentModel.ISupportInitialize).EndInit()
+        Panel24.ResumeLayout(False)
+        Panel24.PerformLayout()
+        CType(PictureBox16, ComponentModel.ISupportInitialize).EndInit()
+        CType(DataGridView6, ComponentModel.ISupportInitialize).EndInit()
+        Panel25.ResumeLayout(False)
+        Panel25.PerformLayout()
+        pnlUsersContent.ResumeLayout(False)
+        pnlUsersContent.PerformLayout()
+        Panel28.ResumeLayout(False)
+        Panel28.PerformLayout()
+        CType(PictureBox19, ComponentModel.ISupportInitialize).EndInit()
+        CType(DataGridView7, ComponentModel.ISupportInitialize).EndInit()
+        Panel29.ResumeLayout(False)
+        Panel29.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -859,17 +1766,86 @@ Partial Class FORM_ADMIN
     Friend WithEvents pnlAllDashboard As Panel
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pnlcarinventory As Panel
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents DataGridView4 As DataGridView
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label4 As Label
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Label5 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label6 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Label8 As Label
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Label22 As Label
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Label20 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label21 As Label
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents pnlRentalContent As Panel
+    Friend WithEvents Panel18 As Panel
+    Friend WithEvents Label27 As Label
+    Friend WithEvents PictureBox11 As PictureBox
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Panel19 As Panel
+    Friend WithEvents Label29 As Label
+    Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents Panel20 As Panel
+    Friend WithEvents Label31 As Label
+    Friend WithEvents pnlMaintenanceContent As Panel
+    Friend WithEvents Panel21 As Panel
+    Friend WithEvents Label33 As Label
+    Friend WithEvents PictureBox13 As PictureBox
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Panel15 As Panel
+    Friend WithEvents Label23 As Label
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Panel16 As Panel
+    Friend WithEvents Label25 As Label
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Label26 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents DataGridView5 As DataGridView
+    Friend WithEvents Panel17 As Panel
+    Friend WithEvents Label32 As Label
+    Friend WithEvents pnlSaleContent As Panel
+    Friend WithEvents Panel26 As Panel
+    Friend WithEvents Label42 As Label
+    Friend WithEvents PictureBox17 As PictureBox
+    Friend WithEvents Label43 As Label
+    Friend WithEvents Panel23 As Panel
+    Friend WithEvents Label37 As Label
+    Friend WithEvents PictureBox15 As PictureBox
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Panel24 As Panel
+    Friend WithEvents Label39 As Label
+    Friend WithEvents PictureBox16 As PictureBox
+    Friend WithEvents Label40 As Label
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents DataGridView6 As DataGridView
+    Friend WithEvents Panel25 As Panel
+    Friend WithEvents Label41 As Label
+    Friend WithEvents pnlUsersContent As Panel
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Panel28 As Panel
+    Friend WithEvents Label46 As Label
+    Friend WithEvents PictureBox19 As PictureBox
+    Friend WithEvents Label47 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents DataGridView7 As DataGridView
+    Friend WithEvents Panel29 As Panel
+    Friend WithEvents Label48 As Label
 End Class
