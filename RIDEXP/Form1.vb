@@ -82,6 +82,16 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         FORMRENTAL_STEP3.Show()
-        Me.Hide()
+        Hide()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        FORMRENTAL_STEP2.Show()
+        Hide()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        FORMRENTAL_STEP4.Show()
+        Hide()
     End Sub
 End Class
