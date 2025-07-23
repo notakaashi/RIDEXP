@@ -332,7 +332,6 @@ Partial Class FORMRENTAL_STEP4
         ' 
         ' Panel11
         ' 
-        Panel11.BorderStyle = BorderStyle.FixedSingle
         Panel11.ForeColor = Color.Black
         Panel11.Location = New Point(29, 1171)
         Panel11.Name = "Panel11"
@@ -352,7 +351,6 @@ Partial Class FORMRENTAL_STEP4
         ' 
         ' Panel10
         ' 
-        Panel10.BorderStyle = BorderStyle.FixedSingle
         Panel10.Controls.Add(CheckBox2)
         Panel10.ForeColor = Color.Black
         Panel10.Location = New Point(-1, -1)
@@ -383,7 +381,6 @@ Partial Class FORMRENTAL_STEP4
         ' 
         ' Panel8
         ' 
-        Panel8.BorderStyle = BorderStyle.FixedSingle
         Panel8.Controls.Add(CheckBox1)
         Panel8.ForeColor = Color.Black
         Panel8.Location = New Point(29, 882)
