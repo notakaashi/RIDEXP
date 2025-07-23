@@ -42,10 +42,6 @@ Partial Class FORMRENTAL_STEP4
         Label20 = New Label()
         Label19 = New Label()
         Panel11 = New Panel()
-        Panel9 = New Panel()
-        Panel10 = New Panel()
-        CheckBox2 = New CheckBox()
-        CheckBox3 = New CheckBox()
         Panel8 = New Panel()
         CheckBox1 = New CheckBox()
         Label16 = New Label()
@@ -76,18 +72,19 @@ Partial Class FORMRENTAL_STEP4
         RadioButton1 = New RadioButton()
         Panel6 = New Panel()
         Label21 = New Label()
+        Panel9 = New Panel()
+        CheckBox2 = New CheckBox()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
-        Panel9.SuspendLayout()
-        Panel10.SuspendLayout()
         Panel8.SuspendLayout()
         Panel7.SuspendLayout()
         Panel5.SuspendLayout()
         Panel4.SuspendLayout()
         Panel6.SuspendLayout()
+        Panel9.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel3
@@ -273,11 +270,11 @@ Partial Class FORMRENTAL_STEP4
         ' Panel2
         ' 
         Panel2.AutoScroll = True
+        Panel2.Controls.Add(Panel9)
         Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(Label20)
         Panel2.Controls.Add(Label19)
         Panel2.Controls.Add(Panel11)
-        Panel2.Controls.Add(Panel9)
         Panel2.Controls.Add(Panel8)
         Panel2.Controls.Add(Label16)
         Panel2.Controls.Add(Panel7)
@@ -337,47 +334,6 @@ Partial Class FORMRENTAL_STEP4
         Panel11.Name = "Panel11"
         Panel11.Size = New Size(507, 51)
         Panel11.TabIndex = 44
-        ' 
-        ' Panel9
-        ' 
-        Panel9.BorderStyle = BorderStyle.FixedSingle
-        Panel9.Controls.Add(Panel10)
-        Panel9.Controls.Add(CheckBox3)
-        Panel9.ForeColor = Color.Black
-        Panel9.Location = New Point(29, 939)
-        Panel9.Name = "Panel9"
-        Panel9.Size = New Size(507, 51)
-        Panel9.TabIndex = 43
-        ' 
-        ' Panel10
-        ' 
-        Panel10.Controls.Add(CheckBox2)
-        Panel10.ForeColor = Color.Black
-        Panel10.Location = New Point(-1, -1)
-        Panel10.Name = "Panel10"
-        Panel10.Size = New Size(507, 51)
-        Panel10.TabIndex = 44
-        ' 
-        ' CheckBox2
-        ' 
-        CheckBox2.AutoSize = True
-        CheckBox2.Font = New Font("Futura Bk BT", 10.2F)
-        CheckBox2.Location = New Point(18, 16)
-        CheckBox2.Name = "CheckBox2"
-        CheckBox2.Size = New Size(429, 24)
-        CheckBox2.TabIndex = 42
-        CheckBox2.Text = "I agree to the Privacy Policy and Terms and Condition"
-        CheckBox2.UseVisualStyleBackColor = True
-        ' 
-        ' CheckBox3
-        ' 
-        CheckBox3.AutoSize = True
-        CheckBox3.Location = New Point(18, 16)
-        CheckBox3.Name = "CheckBox3"
-        CheckBox3.Size = New Size(272, 24)
-        CheckBox3.TabIndex = 42
-        CheckBox3.Text = "I have read and agree to the Privacy "
-        CheckBox3.UseVisualStyleBackColor = True
         ' 
         ' Panel8
         ' 
@@ -700,6 +656,26 @@ Partial Class FORMRENTAL_STEP4
         Label21.TabIndex = 16
         Label21.Text = "PAYMENT INFROMATION"
         ' 
+        ' Panel9
+        ' 
+        Panel9.Controls.Add(CheckBox2)
+        Panel9.ForeColor = Color.Black
+        Panel9.Location = New Point(29, 939)
+        Panel9.Name = "Panel9"
+        Panel9.Size = New Size(507, 51)
+        Panel9.TabIndex = 43
+        ' 
+        ' CheckBox2
+        ' 
+        CheckBox2.AutoSize = True
+        CheckBox2.Font = New Font("Futura Bk BT", 10.2F)
+        CheckBox2.Location = New Point(18, 16)
+        CheckBox2.Name = "CheckBox2"
+        CheckBox2.Size = New Size(436, 24)
+        CheckBox2.TabIndex = 42
+        CheckBox2.Text = "I agree to the Privacy Policy and Terms and Conditions"
+        CheckBox2.UseVisualStyleBackColor = True
+        ' 
         ' FORMRENTAL_STEP4
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -720,10 +696,6 @@ Partial Class FORMRENTAL_STEP4
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        Panel9.ResumeLayout(False)
-        Panel9.PerformLayout()
-        Panel10.ResumeLayout(False)
-        Panel10.PerformLayout()
         Panel8.ResumeLayout(False)
         Panel8.PerformLayout()
         Panel7.ResumeLayout(False)
@@ -734,6 +706,8 @@ Partial Class FORMRENTAL_STEP4
         Panel4.PerformLayout()
         Panel6.ResumeLayout(False)
         Panel6.PerformLayout()
+        Panel9.ResumeLayout(False)
+        Panel9.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -785,10 +759,8 @@ Partial Class FORMRENTAL_STEP4
     Friend WithEvents Label20 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Panel11 As Panel
-    Friend WithEvents Panel9 As Panel
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents CheckBox2 As CheckBox
 End Class
