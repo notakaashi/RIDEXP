@@ -157,29 +157,17 @@ Partial Class allcars
         PictureBox3 = New PictureBox()
         TextBox1 = New TextBox()
         pnlSuvContent = New Panel()
-        Panel22 = New Panel()
-        Label164 = New Label()
-        Label165 = New Label()
-        Label166 = New Label()
-        Label167 = New Label()
-        Button19 = New Button()
-        Label168 = New Label()
-        Label169 = New Label()
-        Label170 = New Label()
-        PictureBox20 = New PictureBox()
-        Label171 = New Label()
-        Label172 = New Label()
         Panel23 = New Panel()
-        Label173 = New Label()
-        Label174 = New Label()
-        Label175 = New Label()
-        Label176 = New Label()
+        color6txt = New Label()
+        mileage6txt = New Label()
+        seatcapacity6txt = New Label()
+        make6txt = New Label()
         Button20 = New Button()
         Label177 = New Label()
         Label178 = New Label()
         Label179 = New Label()
-        PictureBox21 = New PictureBox()
-        Label180 = New Label()
+        car6img = New PictureBox()
+        model6txt = New Label()
         Label181 = New Label()
         pnlSedan = New Panel()
         Panel14 = New Panel()
@@ -294,16 +282,16 @@ Partial Class allcars
         Label217 = New Label()
         pnlHybrid = New Panel()
         Panel24 = New Panel()
-        Label182 = New Label()
-        Label183 = New Label()
-        Label184 = New Label()
-        Label185 = New Label()
-        Button21 = New Button()
+        color9txt = New Label()
+        mileage9txt = New Label()
+        seatcapacitytxt = New Label()
+        make9txt = New Label()
+        car9btn = New Button()
         Label186 = New Label()
         Label187 = New Label()
         Label188 = New Label()
-        PictureBox22 = New PictureBox()
-        Label189 = New Label()
+        car9img = New PictureBox()
+        model9txt = New Label()
         Label190 = New Label()
         Panel4.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
@@ -330,10 +318,8 @@ Partial Class allcars
         Panel13.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         pnlSuvContent.SuspendLayout()
-        Panel22.SuspendLayout()
-        CType(PictureBox20, ComponentModel.ISupportInitialize).BeginInit()
         Panel23.SuspendLayout()
-        CType(PictureBox21, ComponentModel.ISupportInitialize).BeginInit()
+        CType(car6img, ComponentModel.ISupportInitialize).BeginInit()
         pnlSedan.SuspendLayout()
         Panel14.SuspendLayout()
         CType(PictureBox12, ComponentModel.ISupportInitialize).BeginInit()
@@ -357,7 +343,7 @@ Partial Class allcars
         CType(PictureBox25, ComponentModel.ISupportInitialize).BeginInit()
         pnlHybrid.SuspendLayout()
         Panel24.SuspendLayout()
-        CType(PictureBox22, ComponentModel.ISupportInitialize).BeginInit()
+        CType(car9img, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnHybrid
@@ -368,9 +354,10 @@ Partial Class allcars
         btnHybrid.FlatStyle = FlatStyle.Flat
         btnHybrid.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnHybrid.ForeColor = Color.Black
-        btnHybrid.Location = New Point(852, 7)
+        btnHybrid.Location = New Point(746, 5)
+        btnHybrid.Margin = New Padding(3, 2, 3, 2)
         btnHybrid.Name = "btnHybrid"
-        btnHybrid.Size = New Size(176, 45)
+        btnHybrid.Size = New Size(154, 34)
         btnHybrid.TabIndex = 38
         btnHybrid.Text = "HYBRID"
         btnHybrid.UseVisualStyleBackColor = False
@@ -383,9 +370,10 @@ Partial Class allcars
         btnHatch.FlatStyle = FlatStyle.Flat
         btnHatch.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnHatch.ForeColor = Color.Black
-        btnHatch.Location = New Point(581, 7)
+        btnHatch.Location = New Point(508, 5)
+        btnHatch.Margin = New Padding(3, 2, 3, 2)
         btnHatch.Name = "btnHatch"
-        btnHatch.Size = New Size(255, 45)
+        btnHatch.Size = New Size(223, 34)
         btnHatch.TabIndex = 37
         btnHatch.Text = "HATCHBACK"
         btnHatch.UseVisualStyleBackColor = False
@@ -398,9 +386,10 @@ Partial Class allcars
         btnMPV.FlatStyle = FlatStyle.Flat
         btnMPV.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnMPV.ForeColor = Color.Black
-        btnMPV.Location = New Point(399, 7)
+        btnMPV.Location = New Point(349, 5)
+        btnMPV.Margin = New Padding(3, 2, 3, 2)
         btnMPV.Name = "btnMPV"
-        btnMPV.Size = New Size(163, 45)
+        btnMPV.Size = New Size(143, 34)
         btnMPV.TabIndex = 34
         btnMPV.Text = "mpv"
         btnMPV.UseVisualStyleBackColor = False
@@ -413,9 +402,10 @@ Partial Class allcars
         btnSedan.FlatStyle = FlatStyle.Flat
         btnSedan.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnSedan.ForeColor = Color.Black
-        btnSedan.Location = New Point(213, 7)
+        btnSedan.Location = New Point(186, 5)
+        btnSedan.Margin = New Padding(3, 2, 3, 2)
         btnSedan.Name = "btnSedan"
-        btnSedan.Size = New Size(163, 45)
+        btnSedan.Size = New Size(143, 34)
         btnSedan.TabIndex = 33
         btnSedan.Text = "SEDAN"
         btnSedan.UseVisualStyleBackColor = False
@@ -428,9 +418,10 @@ Partial Class allcars
         btnSuv.FlatStyle = FlatStyle.Flat
         btnSuv.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnSuv.ForeColor = Color.Black
-        btnSuv.Location = New Point(52, 7)
+        btnSuv.Location = New Point(46, 5)
+        btnSuv.Margin = New Padding(3, 2, 3, 2)
         btnSuv.Name = "btnSuv"
-        btnSuv.Size = New Size(133, 45)
+        btnSuv.Size = New Size(116, 34)
         btnSuv.TabIndex = 31
         btnSuv.Text = "SUV"
         btnSuv.UseVisualStyleBackColor = False
@@ -448,52 +439,53 @@ Partial Class allcars
         Panel4.Controls.Add(PictureBox4)
         Panel4.Controls.Add(Label2)
         Panel4.Controls.Add(Label3)
-        Panel4.Location = New Point(12, 18)
+        Panel4.Location = New Point(10, 14)
+        Panel4.Margin = New Padding(3, 2, 3, 2)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(1115, 252)
+        Panel4.Size = New Size(976, 189)
         Panel4.TabIndex = 39
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label8.Location = New Point(333, 134)
+        Label8.Location = New Point(291, 100)
         Label8.Name = "Label8"
-        Label8.Size = New Size(130, 61)
+        Label8.Size = New Size(74, 44)
         Label8.TabIndex = 21
         Label8.Text = "red"
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label10.Location = New Point(642, 151)
+        Label10.Location = New Point(562, 113)
         Label10.Name = "Label10"
-        Label10.Size = New Size(172, 39)
+        Label10.Size = New Size(116, 29)
         Label10.TabIndex = 20
         Label10.Text = "11,456km"
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label9.Location = New Point(529, 134)
+        Label9.Location = New Point(463, 100)
         Label9.Name = "Label9"
-        Label9.Size = New Size(66, 61)
+        Label9.Size = New Size(40, 44)
         Label9.TabIndex = 19
         Label9.Text = "5"
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label7.Location = New Point(333, 34)
+        Label7.Location = New Point(291, 26)
         Label7.Name = "Label7"
-        Label7.Size = New Size(62, 24)
+        Label7.Size = New Size(51, 19)
         Label7.TabIndex = 17
         Label7.Text = "MAKE"
         ' 
@@ -503,9 +495,10 @@ Partial Class allcars
         Button7.FlatStyle = FlatStyle.Flat
         Button7.Font = New Font("Reesha", 16.1999989F)
         Button7.ForeColor = Color.White
-        Button7.Location = New Point(855, 134)
+        Button7.Location = New Point(748, 100)
+        Button7.Margin = New Padding(3, 2, 3, 2)
         Button7.Name = "Button7"
-        Button7.Size = New Size(230, 46)
+        Button7.Size = New Size(201, 34)
         Button7.TabIndex = 16
         Button7.Text = "BOOK NOW"
         Button7.TextAlign = ContentAlignment.TopCenter
@@ -514,42 +507,43 @@ Partial Class allcars
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label6.Location = New Point(685, 195)
+        Label6.Location = New Point(599, 146)
         Label6.Name = "Label6"
-        Label6.Size = New Size(90, 24)
+        Label6.Size = New Size(72, 19)
         Label6.TabIndex = 5
         Label6.Text = "MILEAGE"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label5.Location = New Point(484, 195)
+        Label5.Location = New Point(424, 146)
         Label5.Name = "Label5"
-        Label5.Size = New Size(151, 24)
+        Label5.Size = New Size(121, 19)
         Label5.TabIndex = 4
         Label5.Text = "SEAT CAPACITY"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label4.Location = New Point(358, 195)
+        Label4.Location = New Point(313, 146)
         Label4.Name = "Label4"
-        Label4.Size = New Size(79, 24)
+        Label4.Size = New Size(65, 19)
         Label4.TabIndex = 3
         Label4.Text = "COLOR"
         ' 
         ' PictureBox4
         ' 
         PictureBox4.Image = My.Resources.Resources.RideX
-        PictureBox4.Location = New Point(33, 96)
+        PictureBox4.Location = New Point(29, 72)
+        PictureBox4.Margin = New Padding(3, 2, 3, 2)
         PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(264, 123)
+        PictureBox4.Size = New Size(231, 92)
         PictureBox4.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox4.TabIndex = 2
         PictureBox4.TabStop = False
@@ -559,9 +553,9 @@ Partial Class allcars
         Label2.AutoSize = True
         Label2.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label2.Location = New Point(22, 17)
+        Label2.Location = New Point(19, 13)
         Label2.Name = "Label2"
-        Label2.Size = New Size(303, 41)
+        Label2.Size = New Size(245, 32)
         Label2.TabIndex = 0
         Label2.Text = "CAR NUMBER 1"
         ' 
@@ -570,9 +564,9 @@ Partial Class allcars
         Label3.AutoSize = True
         Label3.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label3.Location = New Point(22, 35)
+        Label3.Location = New Point(19, 26)
         Label3.Name = "Label3"
-        Label3.Size = New Size(1072, 41)
+        Label3.Size = New Size(882, 32)
         Label3.TabIndex = 1
         Label3.Text = "______________________________________________________________"
         ' 
@@ -590,9 +584,10 @@ Partial Class allcars
         pnlAllCarsContent.Controls.Add(Panel3)
         pnlAllCarsContent.Controls.Add(Panel2)
         pnlAllCarsContent.Controls.Add(Panel4)
-        pnlAllCarsContent.Location = New Point(1300, 167)
+        pnlAllCarsContent.Location = New Point(1138, 125)
+        pnlAllCarsContent.Margin = New Padding(3, 2, 3, 2)
         pnlAllCarsContent.Name = "pnlAllCarsContent"
-        pnlAllCarsContent.Size = New Size(1162, 351)
+        pnlAllCarsContent.Size = New Size(1017, 263)
         pnlAllCarsContent.TabIndex = 40
         ' 
         ' Panel12
@@ -608,52 +603,53 @@ Partial Class allcars
         Panel12.Controls.Add(PictureBox11)
         Panel12.Controls.Add(Label90)
         Panel12.Controls.Add(Label91)
-        Panel12.Location = New Point(12, 2599)
+        Panel12.Location = New Point(10, 1949)
+        Panel12.Margin = New Padding(3, 2, 3, 2)
         Panel12.Name = "Panel12"
-        Panel12.Size = New Size(1115, 252)
+        Panel12.Size = New Size(976, 189)
         Panel12.TabIndex = 47
         ' 
         ' Label83
         ' 
         Label83.AutoSize = True
-        Label83.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label83.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label83.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label83.Location = New Point(333, 134)
+        Label83.Location = New Point(291, 100)
         Label83.Name = "Label83"
-        Label83.Size = New Size(130, 61)
+        Label83.Size = New Size(74, 44)
         Label83.TabIndex = 21
         Label83.Text = "red"
         ' 
         ' Label84
         ' 
         Label84.AutoSize = True
-        Label84.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label84.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label84.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label84.Location = New Point(642, 151)
+        Label84.Location = New Point(562, 113)
         Label84.Name = "Label84"
-        Label84.Size = New Size(172, 39)
+        Label84.Size = New Size(116, 29)
         Label84.TabIndex = 20
         Label84.Text = "11,456km"
         ' 
         ' Label85
         ' 
         Label85.AutoSize = True
-        Label85.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label85.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label85.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label85.Location = New Point(529, 134)
+        Label85.Location = New Point(463, 100)
         Label85.Name = "Label85"
-        Label85.Size = New Size(66, 61)
+        Label85.Size = New Size(40, 44)
         Label85.TabIndex = 19
         Label85.Text = "5"
         ' 
         ' Label86
         ' 
         Label86.AutoSize = True
-        Label86.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label86.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label86.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label86.Location = New Point(333, 34)
+        Label86.Location = New Point(291, 26)
         Label86.Name = "Label86"
-        Label86.Size = New Size(62, 24)
+        Label86.Size = New Size(51, 19)
         Label86.TabIndex = 17
         Label86.Text = "MAKE"
         ' 
@@ -663,9 +659,10 @@ Partial Class allcars
         Button10.FlatStyle = FlatStyle.Flat
         Button10.Font = New Font("Reesha", 16.1999989F)
         Button10.ForeColor = Color.White
-        Button10.Location = New Point(855, 134)
+        Button10.Location = New Point(748, 100)
+        Button10.Margin = New Padding(3, 2, 3, 2)
         Button10.Name = "Button10"
-        Button10.Size = New Size(230, 46)
+        Button10.Size = New Size(201, 34)
         Button10.TabIndex = 16
         Button10.Text = "BOOK NOW"
         Button10.TextAlign = ContentAlignment.TopCenter
@@ -674,42 +671,43 @@ Partial Class allcars
         ' Label87
         ' 
         Label87.AutoSize = True
-        Label87.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label87.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label87.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label87.Location = New Point(685, 195)
+        Label87.Location = New Point(599, 146)
         Label87.Name = "Label87"
-        Label87.Size = New Size(90, 24)
+        Label87.Size = New Size(72, 19)
         Label87.TabIndex = 5
         Label87.Text = "MILEAGE"
         ' 
         ' Label88
         ' 
         Label88.AutoSize = True
-        Label88.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label88.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label88.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label88.Location = New Point(484, 195)
+        Label88.Location = New Point(424, 146)
         Label88.Name = "Label88"
-        Label88.Size = New Size(151, 24)
+        Label88.Size = New Size(121, 19)
         Label88.TabIndex = 4
         Label88.Text = "SEAT CAPACITY"
         ' 
         ' Label89
         ' 
         Label89.AutoSize = True
-        Label89.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label89.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label89.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label89.Location = New Point(358, 195)
+        Label89.Location = New Point(313, 146)
         Label89.Name = "Label89"
-        Label89.Size = New Size(79, 24)
+        Label89.Size = New Size(65, 19)
         Label89.TabIndex = 3
         Label89.Text = "COLOR"
         ' 
         ' PictureBox11
         ' 
         PictureBox11.Image = My.Resources.Resources.RideX
-        PictureBox11.Location = New Point(33, 96)
+        PictureBox11.Location = New Point(29, 72)
+        PictureBox11.Margin = New Padding(3, 2, 3, 2)
         PictureBox11.Name = "PictureBox11"
-        PictureBox11.Size = New Size(264, 123)
+        PictureBox11.Size = New Size(231, 92)
         PictureBox11.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox11.TabIndex = 2
         PictureBox11.TabStop = False
@@ -719,9 +717,9 @@ Partial Class allcars
         Label90.AutoSize = True
         Label90.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label90.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label90.Location = New Point(22, 17)
+        Label90.Location = New Point(19, 13)
         Label90.Name = "Label90"
-        Label90.Size = New Size(303, 41)
+        Label90.Size = New Size(245, 32)
         Label90.TabIndex = 0
         Label90.Text = "CAR NUMBER 1"
         ' 
@@ -730,9 +728,9 @@ Partial Class allcars
         Label91.AutoSize = True
         Label91.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label91.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label91.Location = New Point(22, 35)
+        Label91.Location = New Point(19, 26)
         Label91.Name = "Label91"
-        Label91.Size = New Size(1072, 41)
+        Label91.Size = New Size(882, 32)
         Label91.TabIndex = 1
         Label91.Text = "______________________________________________________________"
         ' 
@@ -749,52 +747,53 @@ Partial Class allcars
         Panel11.Controls.Add(PictureBox10)
         Panel11.Controls.Add(Label81)
         Panel11.Controls.Add(Label82)
-        Panel11.Location = New Point(12, 2321)
+        Panel11.Location = New Point(10, 1741)
+        Panel11.Margin = New Padding(3, 2, 3, 2)
         Panel11.Name = "Panel11"
-        Panel11.Size = New Size(1115, 252)
+        Panel11.Size = New Size(976, 189)
         Panel11.TabIndex = 46
         ' 
         ' Label74
         ' 
         Label74.AutoSize = True
-        Label74.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label74.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label74.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label74.Location = New Point(333, 134)
+        Label74.Location = New Point(291, 100)
         Label74.Name = "Label74"
-        Label74.Size = New Size(130, 61)
+        Label74.Size = New Size(74, 44)
         Label74.TabIndex = 21
         Label74.Text = "red"
         ' 
         ' Label75
         ' 
         Label75.AutoSize = True
-        Label75.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label75.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label75.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label75.Location = New Point(642, 151)
+        Label75.Location = New Point(562, 113)
         Label75.Name = "Label75"
-        Label75.Size = New Size(172, 39)
+        Label75.Size = New Size(116, 29)
         Label75.TabIndex = 20
         Label75.Text = "11,456km"
         ' 
         ' Label76
         ' 
         Label76.AutoSize = True
-        Label76.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label76.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label76.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label76.Location = New Point(529, 134)
+        Label76.Location = New Point(463, 100)
         Label76.Name = "Label76"
-        Label76.Size = New Size(66, 61)
+        Label76.Size = New Size(40, 44)
         Label76.TabIndex = 19
         Label76.Text = "5"
         ' 
         ' Label77
         ' 
         Label77.AutoSize = True
-        Label77.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label77.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label77.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label77.Location = New Point(333, 34)
+        Label77.Location = New Point(291, 26)
         Label77.Name = "Label77"
-        Label77.Size = New Size(62, 24)
+        Label77.Size = New Size(51, 19)
         Label77.TabIndex = 17
         Label77.Text = "MAKE"
         ' 
@@ -804,9 +803,10 @@ Partial Class allcars
         Button6.FlatStyle = FlatStyle.Flat
         Button6.Font = New Font("Reesha", 16.1999989F)
         Button6.ForeColor = Color.White
-        Button6.Location = New Point(855, 134)
+        Button6.Location = New Point(748, 100)
+        Button6.Margin = New Padding(3, 2, 3, 2)
         Button6.Name = "Button6"
-        Button6.Size = New Size(230, 46)
+        Button6.Size = New Size(201, 34)
         Button6.TabIndex = 16
         Button6.Text = "BOOK NOW"
         Button6.TextAlign = ContentAlignment.TopCenter
@@ -815,42 +815,43 @@ Partial Class allcars
         ' Label78
         ' 
         Label78.AutoSize = True
-        Label78.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label78.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label78.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label78.Location = New Point(685, 195)
+        Label78.Location = New Point(599, 146)
         Label78.Name = "Label78"
-        Label78.Size = New Size(90, 24)
+        Label78.Size = New Size(72, 19)
         Label78.TabIndex = 5
         Label78.Text = "MILEAGE"
         ' 
         ' Label79
         ' 
         Label79.AutoSize = True
-        Label79.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label79.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label79.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label79.Location = New Point(484, 195)
+        Label79.Location = New Point(424, 146)
         Label79.Name = "Label79"
-        Label79.Size = New Size(151, 24)
+        Label79.Size = New Size(121, 19)
         Label79.TabIndex = 4
         Label79.Text = "SEAT CAPACITY"
         ' 
         ' Label80
         ' 
         Label80.AutoSize = True
-        Label80.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label80.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label80.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label80.Location = New Point(358, 195)
+        Label80.Location = New Point(313, 146)
         Label80.Name = "Label80"
-        Label80.Size = New Size(79, 24)
+        Label80.Size = New Size(65, 19)
         Label80.TabIndex = 3
         Label80.Text = "COLOR"
         ' 
         ' PictureBox10
         ' 
         PictureBox10.Image = My.Resources.Resources.RideX
-        PictureBox10.Location = New Point(33, 96)
+        PictureBox10.Location = New Point(29, 72)
+        PictureBox10.Margin = New Padding(3, 2, 3, 2)
         PictureBox10.Name = "PictureBox10"
-        PictureBox10.Size = New Size(264, 123)
+        PictureBox10.Size = New Size(231, 92)
         PictureBox10.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox10.TabIndex = 2
         PictureBox10.TabStop = False
@@ -860,9 +861,9 @@ Partial Class allcars
         Label81.AutoSize = True
         Label81.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label81.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label81.Location = New Point(22, 17)
+        Label81.Location = New Point(19, 13)
         Label81.Name = "Label81"
-        Label81.Size = New Size(303, 41)
+        Label81.Size = New Size(245, 32)
         Label81.TabIndex = 0
         Label81.Text = "CAR NUMBER 1"
         ' 
@@ -871,9 +872,9 @@ Partial Class allcars
         Label82.AutoSize = True
         Label82.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label82.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label82.Location = New Point(22, 35)
+        Label82.Location = New Point(19, 26)
         Label82.Name = "Label82"
-        Label82.Size = New Size(1072, 41)
+        Label82.Size = New Size(882, 32)
         Label82.TabIndex = 1
         Label82.Text = "______________________________________________________________"
         ' 
@@ -890,52 +891,53 @@ Partial Class allcars
         Panel10.Controls.Add(PictureBox9)
         Panel10.Controls.Add(Label72)
         Panel10.Controls.Add(Label73)
-        Panel10.Location = New Point(12, 2039)
+        Panel10.Location = New Point(10, 1529)
+        Panel10.Margin = New Padding(3, 2, 3, 2)
         Panel10.Name = "Panel10"
-        Panel10.Size = New Size(1115, 252)
+        Panel10.Size = New Size(976, 189)
         Panel10.TabIndex = 45
         ' 
         ' Label65
         ' 
         Label65.AutoSize = True
-        Label65.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label65.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label65.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label65.Location = New Point(333, 134)
+        Label65.Location = New Point(291, 100)
         Label65.Name = "Label65"
-        Label65.Size = New Size(130, 61)
+        Label65.Size = New Size(74, 44)
         Label65.TabIndex = 21
         Label65.Text = "red"
         ' 
         ' Label66
         ' 
         Label66.AutoSize = True
-        Label66.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label66.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label66.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label66.Location = New Point(642, 151)
+        Label66.Location = New Point(562, 113)
         Label66.Name = "Label66"
-        Label66.Size = New Size(172, 39)
+        Label66.Size = New Size(116, 29)
         Label66.TabIndex = 20
         Label66.Text = "11,456km"
         ' 
         ' Label67
         ' 
         Label67.AutoSize = True
-        Label67.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label67.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label67.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label67.Location = New Point(529, 134)
+        Label67.Location = New Point(463, 100)
         Label67.Name = "Label67"
-        Label67.Size = New Size(66, 61)
+        Label67.Size = New Size(40, 44)
         Label67.TabIndex = 19
         Label67.Text = "5"
         ' 
         ' Label68
         ' 
         Label68.AutoSize = True
-        Label68.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label68.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label68.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label68.Location = New Point(333, 34)
+        Label68.Location = New Point(291, 26)
         Label68.Name = "Label68"
-        Label68.Size = New Size(62, 24)
+        Label68.Size = New Size(51, 19)
         Label68.TabIndex = 17
         Label68.Text = "MAKE"
         ' 
@@ -945,9 +947,10 @@ Partial Class allcars
         Button5.FlatStyle = FlatStyle.Flat
         Button5.Font = New Font("Reesha", 16.1999989F)
         Button5.ForeColor = Color.White
-        Button5.Location = New Point(855, 134)
+        Button5.Location = New Point(748, 100)
+        Button5.Margin = New Padding(3, 2, 3, 2)
         Button5.Name = "Button5"
-        Button5.Size = New Size(230, 46)
+        Button5.Size = New Size(201, 34)
         Button5.TabIndex = 16
         Button5.Text = "BOOK NOW"
         Button5.TextAlign = ContentAlignment.TopCenter
@@ -956,42 +959,43 @@ Partial Class allcars
         ' Label69
         ' 
         Label69.AutoSize = True
-        Label69.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label69.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label69.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label69.Location = New Point(685, 195)
+        Label69.Location = New Point(599, 146)
         Label69.Name = "Label69"
-        Label69.Size = New Size(90, 24)
+        Label69.Size = New Size(72, 19)
         Label69.TabIndex = 5
         Label69.Text = "MILEAGE"
         ' 
         ' Label70
         ' 
         Label70.AutoSize = True
-        Label70.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label70.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label70.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label70.Location = New Point(484, 195)
+        Label70.Location = New Point(424, 146)
         Label70.Name = "Label70"
-        Label70.Size = New Size(151, 24)
+        Label70.Size = New Size(121, 19)
         Label70.TabIndex = 4
         Label70.Text = "SEAT CAPACITY"
         ' 
         ' Label71
         ' 
         Label71.AutoSize = True
-        Label71.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label71.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label71.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label71.Location = New Point(358, 195)
+        Label71.Location = New Point(313, 146)
         Label71.Name = "Label71"
-        Label71.Size = New Size(79, 24)
+        Label71.Size = New Size(65, 19)
         Label71.TabIndex = 3
         Label71.Text = "COLOR"
         ' 
         ' PictureBox9
         ' 
         PictureBox9.Image = My.Resources.Resources.RideX
-        PictureBox9.Location = New Point(33, 96)
+        PictureBox9.Location = New Point(29, 72)
+        PictureBox9.Margin = New Padding(3, 2, 3, 2)
         PictureBox9.Name = "PictureBox9"
-        PictureBox9.Size = New Size(264, 123)
+        PictureBox9.Size = New Size(231, 92)
         PictureBox9.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox9.TabIndex = 2
         PictureBox9.TabStop = False
@@ -1001,9 +1005,9 @@ Partial Class allcars
         Label72.AutoSize = True
         Label72.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label72.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label72.Location = New Point(22, 17)
+        Label72.Location = New Point(19, 13)
         Label72.Name = "Label72"
-        Label72.Size = New Size(303, 41)
+        Label72.Size = New Size(245, 32)
         Label72.TabIndex = 0
         Label72.Text = "CAR NUMBER 1"
         ' 
@@ -1012,9 +1016,9 @@ Partial Class allcars
         Label73.AutoSize = True
         Label73.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label73.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label73.Location = New Point(22, 35)
+        Label73.Location = New Point(19, 26)
         Label73.Name = "Label73"
-        Label73.Size = New Size(1072, 41)
+        Label73.Size = New Size(882, 32)
         Label73.TabIndex = 1
         Label73.Text = "______________________________________________________________"
         ' 
@@ -1031,52 +1035,53 @@ Partial Class allcars
         Panel9.Controls.Add(PictureBox8)
         Panel9.Controls.Add(Label63)
         Panel9.Controls.Add(Label64)
-        Panel9.Location = New Point(12, 1763)
+        Panel9.Location = New Point(10, 1322)
+        Panel9.Margin = New Padding(3, 2, 3, 2)
         Panel9.Name = "Panel9"
-        Panel9.Size = New Size(1115, 252)
+        Panel9.Size = New Size(976, 189)
         Panel9.TabIndex = 44
         ' 
         ' Label56
         ' 
         Label56.AutoSize = True
-        Label56.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label56.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label56.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label56.Location = New Point(333, 134)
+        Label56.Location = New Point(291, 100)
         Label56.Name = "Label56"
-        Label56.Size = New Size(130, 61)
+        Label56.Size = New Size(74, 44)
         Label56.TabIndex = 21
         Label56.Text = "red"
         ' 
         ' Label57
         ' 
         Label57.AutoSize = True
-        Label57.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label57.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label57.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label57.Location = New Point(642, 151)
+        Label57.Location = New Point(562, 113)
         Label57.Name = "Label57"
-        Label57.Size = New Size(172, 39)
+        Label57.Size = New Size(116, 29)
         Label57.TabIndex = 20
         Label57.Text = "11,456km"
         ' 
         ' Label58
         ' 
         Label58.AutoSize = True
-        Label58.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label58.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label58.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label58.Location = New Point(529, 134)
+        Label58.Location = New Point(463, 100)
         Label58.Name = "Label58"
-        Label58.Size = New Size(66, 61)
+        Label58.Size = New Size(40, 44)
         Label58.TabIndex = 19
         Label58.Text = "5"
         ' 
         ' Label59
         ' 
         Label59.AutoSize = True
-        Label59.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label59.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label59.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label59.Location = New Point(333, 34)
+        Label59.Location = New Point(291, 26)
         Label59.Name = "Label59"
-        Label59.Size = New Size(62, 24)
+        Label59.Size = New Size(51, 19)
         Label59.TabIndex = 17
         Label59.Text = "MAKE"
         ' 
@@ -1086,9 +1091,10 @@ Partial Class allcars
         Button4.FlatStyle = FlatStyle.Flat
         Button4.Font = New Font("Reesha", 16.1999989F)
         Button4.ForeColor = Color.White
-        Button4.Location = New Point(855, 134)
+        Button4.Location = New Point(748, 100)
+        Button4.Margin = New Padding(3, 2, 3, 2)
         Button4.Name = "Button4"
-        Button4.Size = New Size(230, 46)
+        Button4.Size = New Size(201, 34)
         Button4.TabIndex = 16
         Button4.Text = "BOOK NOW"
         Button4.TextAlign = ContentAlignment.TopCenter
@@ -1097,42 +1103,43 @@ Partial Class allcars
         ' Label60
         ' 
         Label60.AutoSize = True
-        Label60.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label60.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label60.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label60.Location = New Point(685, 195)
+        Label60.Location = New Point(599, 146)
         Label60.Name = "Label60"
-        Label60.Size = New Size(90, 24)
+        Label60.Size = New Size(72, 19)
         Label60.TabIndex = 5
         Label60.Text = "MILEAGE"
         ' 
         ' Label61
         ' 
         Label61.AutoSize = True
-        Label61.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label61.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label61.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label61.Location = New Point(484, 195)
+        Label61.Location = New Point(424, 146)
         Label61.Name = "Label61"
-        Label61.Size = New Size(151, 24)
+        Label61.Size = New Size(121, 19)
         Label61.TabIndex = 4
         Label61.Text = "SEAT CAPACITY"
         ' 
         ' Label62
         ' 
         Label62.AutoSize = True
-        Label62.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label62.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label62.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label62.Location = New Point(358, 195)
+        Label62.Location = New Point(313, 146)
         Label62.Name = "Label62"
-        Label62.Size = New Size(79, 24)
+        Label62.Size = New Size(65, 19)
         Label62.TabIndex = 3
         Label62.Text = "COLOR"
         ' 
         ' PictureBox8
         ' 
         PictureBox8.Image = My.Resources.Resources.RideX
-        PictureBox8.Location = New Point(33, 96)
+        PictureBox8.Location = New Point(29, 72)
+        PictureBox8.Margin = New Padding(3, 2, 3, 2)
         PictureBox8.Name = "PictureBox8"
-        PictureBox8.Size = New Size(264, 123)
+        PictureBox8.Size = New Size(231, 92)
         PictureBox8.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox8.TabIndex = 2
         PictureBox8.TabStop = False
@@ -1142,9 +1149,9 @@ Partial Class allcars
         Label63.AutoSize = True
         Label63.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label63.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label63.Location = New Point(22, 17)
+        Label63.Location = New Point(19, 13)
         Label63.Name = "Label63"
-        Label63.Size = New Size(303, 41)
+        Label63.Size = New Size(245, 32)
         Label63.TabIndex = 0
         Label63.Text = "CAR NUMBER 1"
         ' 
@@ -1153,9 +1160,9 @@ Partial Class allcars
         Label64.AutoSize = True
         Label64.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label64.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label64.Location = New Point(22, 35)
+        Label64.Location = New Point(19, 26)
         Label64.Name = "Label64"
-        Label64.Size = New Size(1072, 41)
+        Label64.Size = New Size(882, 32)
         Label64.TabIndex = 1
         Label64.Text = "______________________________________________________________"
         ' 
@@ -1172,52 +1179,53 @@ Partial Class allcars
         Panel8.Controls.Add(PictureBox7)
         Panel8.Controls.Add(Label54)
         Panel8.Controls.Add(Label55)
-        Panel8.Location = New Point(12, 1486)
+        Panel8.Location = New Point(10, 1114)
+        Panel8.Margin = New Padding(3, 2, 3, 2)
         Panel8.Name = "Panel8"
-        Panel8.Size = New Size(1115, 252)
+        Panel8.Size = New Size(976, 189)
         Panel8.TabIndex = 43
         ' 
         ' Label47
         ' 
         Label47.AutoSize = True
-        Label47.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label47.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label47.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label47.Location = New Point(333, 134)
+        Label47.Location = New Point(291, 100)
         Label47.Name = "Label47"
-        Label47.Size = New Size(130, 61)
+        Label47.Size = New Size(74, 44)
         Label47.TabIndex = 21
         Label47.Text = "red"
         ' 
         ' Label48
         ' 
         Label48.AutoSize = True
-        Label48.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label48.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label48.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label48.Location = New Point(642, 151)
+        Label48.Location = New Point(562, 113)
         Label48.Name = "Label48"
-        Label48.Size = New Size(172, 39)
+        Label48.Size = New Size(116, 29)
         Label48.TabIndex = 20
         Label48.Text = "11,456km"
         ' 
         ' Label49
         ' 
         Label49.AutoSize = True
-        Label49.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label49.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label49.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label49.Location = New Point(529, 134)
+        Label49.Location = New Point(463, 100)
         Label49.Name = "Label49"
-        Label49.Size = New Size(66, 61)
+        Label49.Size = New Size(40, 44)
         Label49.TabIndex = 19
         Label49.Text = "5"
         ' 
         ' Label50
         ' 
         Label50.AutoSize = True
-        Label50.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label50.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label50.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label50.Location = New Point(333, 34)
+        Label50.Location = New Point(291, 26)
         Label50.Name = "Label50"
-        Label50.Size = New Size(62, 24)
+        Label50.Size = New Size(51, 19)
         Label50.TabIndex = 17
         Label50.Text = "MAKE"
         ' 
@@ -1227,9 +1235,10 @@ Partial Class allcars
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Reesha", 16.1999989F)
         Button3.ForeColor = Color.White
-        Button3.Location = New Point(855, 134)
+        Button3.Location = New Point(748, 100)
+        Button3.Margin = New Padding(3, 2, 3, 2)
         Button3.Name = "Button3"
-        Button3.Size = New Size(230, 46)
+        Button3.Size = New Size(201, 34)
         Button3.TabIndex = 16
         Button3.Text = "BOOK NOW"
         Button3.TextAlign = ContentAlignment.TopCenter
@@ -1238,42 +1247,43 @@ Partial Class allcars
         ' Label51
         ' 
         Label51.AutoSize = True
-        Label51.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label51.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label51.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label51.Location = New Point(685, 195)
+        Label51.Location = New Point(599, 146)
         Label51.Name = "Label51"
-        Label51.Size = New Size(90, 24)
+        Label51.Size = New Size(72, 19)
         Label51.TabIndex = 5
         Label51.Text = "MILEAGE"
         ' 
         ' Label52
         ' 
         Label52.AutoSize = True
-        Label52.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label52.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label52.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label52.Location = New Point(484, 195)
+        Label52.Location = New Point(424, 146)
         Label52.Name = "Label52"
-        Label52.Size = New Size(151, 24)
+        Label52.Size = New Size(121, 19)
         Label52.TabIndex = 4
         Label52.Text = "SEAT CAPACITY"
         ' 
         ' Label53
         ' 
         Label53.AutoSize = True
-        Label53.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label53.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label53.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label53.Location = New Point(358, 195)
+        Label53.Location = New Point(313, 146)
         Label53.Name = "Label53"
-        Label53.Size = New Size(79, 24)
+        Label53.Size = New Size(65, 19)
         Label53.TabIndex = 3
         Label53.Text = "COLOR"
         ' 
         ' PictureBox7
         ' 
         PictureBox7.Image = My.Resources.Resources.RideX
-        PictureBox7.Location = New Point(33, 96)
+        PictureBox7.Location = New Point(29, 72)
+        PictureBox7.Margin = New Padding(3, 2, 3, 2)
         PictureBox7.Name = "PictureBox7"
-        PictureBox7.Size = New Size(264, 123)
+        PictureBox7.Size = New Size(231, 92)
         PictureBox7.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox7.TabIndex = 2
         PictureBox7.TabStop = False
@@ -1283,9 +1293,9 @@ Partial Class allcars
         Label54.AutoSize = True
         Label54.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label54.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label54.Location = New Point(22, 17)
+        Label54.Location = New Point(19, 13)
         Label54.Name = "Label54"
-        Label54.Size = New Size(303, 41)
+        Label54.Size = New Size(245, 32)
         Label54.TabIndex = 0
         Label54.Text = "CAR NUMBER 1"
         ' 
@@ -1294,9 +1304,9 @@ Partial Class allcars
         Label55.AutoSize = True
         Label55.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label55.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label55.Location = New Point(22, 35)
+        Label55.Location = New Point(19, 26)
         Label55.Name = "Label55"
-        Label55.Size = New Size(1072, 41)
+        Label55.Size = New Size(882, 32)
         Label55.TabIndex = 1
         Label55.Text = "______________________________________________________________"
         ' 
@@ -1313,52 +1323,53 @@ Partial Class allcars
         Panel7.Controls.Add(PictureBox6)
         Panel7.Controls.Add(Label45)
         Panel7.Controls.Add(Label46)
-        Panel7.Location = New Point(12, 1216)
+        Panel7.Location = New Point(10, 912)
+        Panel7.Margin = New Padding(3, 2, 3, 2)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(1115, 252)
+        Panel7.Size = New Size(976, 189)
         Panel7.TabIndex = 43
         ' 
         ' Label38
         ' 
         Label38.AutoSize = True
-        Label38.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label38.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label38.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label38.Location = New Point(333, 134)
+        Label38.Location = New Point(291, 100)
         Label38.Name = "Label38"
-        Label38.Size = New Size(130, 61)
+        Label38.Size = New Size(74, 44)
         Label38.TabIndex = 21
         Label38.Text = "red"
         ' 
         ' Label39
         ' 
         Label39.AutoSize = True
-        Label39.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label39.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label39.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label39.Location = New Point(642, 151)
+        Label39.Location = New Point(562, 113)
         Label39.Name = "Label39"
-        Label39.Size = New Size(172, 39)
+        Label39.Size = New Size(116, 29)
         Label39.TabIndex = 20
         Label39.Text = "11,456km"
         ' 
         ' Label40
         ' 
         Label40.AutoSize = True
-        Label40.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label40.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label40.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label40.Location = New Point(529, 134)
+        Label40.Location = New Point(463, 100)
         Label40.Name = "Label40"
-        Label40.Size = New Size(66, 61)
+        Label40.Size = New Size(40, 44)
         Label40.TabIndex = 19
         Label40.Text = "5"
         ' 
         ' Label41
         ' 
         Label41.AutoSize = True
-        Label41.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label41.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label41.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label41.Location = New Point(333, 34)
+        Label41.Location = New Point(291, 26)
         Label41.Name = "Label41"
-        Label41.Size = New Size(62, 24)
+        Label41.Size = New Size(51, 19)
         Label41.TabIndex = 17
         Label41.Text = "MAKE"
         ' 
@@ -1368,9 +1379,10 @@ Partial Class allcars
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Reesha", 16.1999989F)
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(855, 134)
+        Button2.Location = New Point(748, 100)
+        Button2.Margin = New Padding(3, 2, 3, 2)
         Button2.Name = "Button2"
-        Button2.Size = New Size(230, 46)
+        Button2.Size = New Size(201, 34)
         Button2.TabIndex = 16
         Button2.Text = "BOOK NOW"
         Button2.TextAlign = ContentAlignment.TopCenter
@@ -1379,42 +1391,43 @@ Partial Class allcars
         ' Label42
         ' 
         Label42.AutoSize = True
-        Label42.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label42.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label42.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label42.Location = New Point(685, 195)
+        Label42.Location = New Point(599, 146)
         Label42.Name = "Label42"
-        Label42.Size = New Size(90, 24)
+        Label42.Size = New Size(72, 19)
         Label42.TabIndex = 5
         Label42.Text = "MILEAGE"
         ' 
         ' Label43
         ' 
         Label43.AutoSize = True
-        Label43.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label43.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label43.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label43.Location = New Point(484, 195)
+        Label43.Location = New Point(424, 146)
         Label43.Name = "Label43"
-        Label43.Size = New Size(151, 24)
+        Label43.Size = New Size(121, 19)
         Label43.TabIndex = 4
         Label43.Text = "SEAT CAPACITY"
         ' 
         ' Label44
         ' 
         Label44.AutoSize = True
-        Label44.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label44.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label44.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label44.Location = New Point(358, 195)
+        Label44.Location = New Point(313, 146)
         Label44.Name = "Label44"
-        Label44.Size = New Size(79, 24)
+        Label44.Size = New Size(65, 19)
         Label44.TabIndex = 3
         Label44.Text = "COLOR"
         ' 
         ' PictureBox6
         ' 
         PictureBox6.Image = My.Resources.Resources.RideX
-        PictureBox6.Location = New Point(33, 96)
+        PictureBox6.Location = New Point(29, 72)
+        PictureBox6.Margin = New Padding(3, 2, 3, 2)
         PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(264, 123)
+        PictureBox6.Size = New Size(231, 92)
         PictureBox6.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox6.TabIndex = 2
         PictureBox6.TabStop = False
@@ -1424,9 +1437,9 @@ Partial Class allcars
         Label45.AutoSize = True
         Label45.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label45.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label45.Location = New Point(22, 17)
+        Label45.Location = New Point(19, 13)
         Label45.Name = "Label45"
-        Label45.Size = New Size(303, 41)
+        Label45.Size = New Size(245, 32)
         Label45.TabIndex = 0
         Label45.Text = "CAR NUMBER 1"
         ' 
@@ -1435,9 +1448,9 @@ Partial Class allcars
         Label46.AutoSize = True
         Label46.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label46.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label46.Location = New Point(22, 35)
+        Label46.Location = New Point(19, 26)
         Label46.Name = "Label46"
-        Label46.Size = New Size(1072, 41)
+        Label46.Size = New Size(882, 32)
         Label46.TabIndex = 1
         Label46.Text = "______________________________________________________________"
         ' 
@@ -1454,52 +1467,53 @@ Partial Class allcars
         Panel5.Controls.Add(PictureBox5)
         Panel5.Controls.Add(Label35)
         Panel5.Controls.Add(Label36)
-        Panel5.Location = New Point(12, 944)
+        Panel5.Location = New Point(10, 708)
+        Panel5.Margin = New Padding(3, 2, 3, 2)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(1115, 252)
+        Panel5.Size = New Size(976, 189)
         Panel5.TabIndex = 42
         ' 
         ' Label28
         ' 
         Label28.AutoSize = True
-        Label28.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label28.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label28.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label28.Location = New Point(333, 134)
+        Label28.Location = New Point(291, 100)
         Label28.Name = "Label28"
-        Label28.Size = New Size(130, 61)
+        Label28.Size = New Size(74, 44)
         Label28.TabIndex = 21
         Label28.Text = "red"
         ' 
         ' Label29
         ' 
         Label29.AutoSize = True
-        Label29.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label29.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label29.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label29.Location = New Point(642, 151)
+        Label29.Location = New Point(562, 113)
         Label29.Name = "Label29"
-        Label29.Size = New Size(172, 39)
+        Label29.Size = New Size(116, 29)
         Label29.TabIndex = 20
         Label29.Text = "11,456km"
         ' 
         ' Label30
         ' 
         Label30.AutoSize = True
-        Label30.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label30.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label30.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label30.Location = New Point(529, 134)
+        Label30.Location = New Point(463, 100)
         Label30.Name = "Label30"
-        Label30.Size = New Size(66, 61)
+        Label30.Size = New Size(40, 44)
         Label30.TabIndex = 19
         Label30.Text = "5"
         ' 
         ' Label31
         ' 
         Label31.AutoSize = True
-        Label31.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label31.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label31.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label31.Location = New Point(333, 34)
+        Label31.Location = New Point(291, 26)
         Label31.Name = "Label31"
-        Label31.Size = New Size(62, 24)
+        Label31.Size = New Size(51, 19)
         Label31.TabIndex = 17
         Label31.Text = "MAKE"
         ' 
@@ -1509,9 +1523,10 @@ Partial Class allcars
         Button9.FlatStyle = FlatStyle.Flat
         Button9.Font = New Font("Reesha", 16.1999989F)
         Button9.ForeColor = Color.White
-        Button9.Location = New Point(855, 134)
+        Button9.Location = New Point(748, 100)
+        Button9.Margin = New Padding(3, 2, 3, 2)
         Button9.Name = "Button9"
-        Button9.Size = New Size(230, 46)
+        Button9.Size = New Size(201, 34)
         Button9.TabIndex = 16
         Button9.Text = "BOOK NOW"
         Button9.TextAlign = ContentAlignment.TopCenter
@@ -1520,42 +1535,43 @@ Partial Class allcars
         ' Label32
         ' 
         Label32.AutoSize = True
-        Label32.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label32.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label32.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label32.Location = New Point(685, 195)
+        Label32.Location = New Point(599, 146)
         Label32.Name = "Label32"
-        Label32.Size = New Size(90, 24)
+        Label32.Size = New Size(72, 19)
         Label32.TabIndex = 5
         Label32.Text = "MILEAGE"
         ' 
         ' Label33
         ' 
         Label33.AutoSize = True
-        Label33.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label33.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label33.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label33.Location = New Point(484, 195)
+        Label33.Location = New Point(424, 146)
         Label33.Name = "Label33"
-        Label33.Size = New Size(151, 24)
+        Label33.Size = New Size(121, 19)
         Label33.TabIndex = 4
         Label33.Text = "SEAT CAPACITY"
         ' 
         ' Label34
         ' 
         Label34.AutoSize = True
-        Label34.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label34.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label34.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label34.Location = New Point(358, 195)
+        Label34.Location = New Point(313, 146)
         Label34.Name = "Label34"
-        Label34.Size = New Size(79, 24)
+        Label34.Size = New Size(65, 19)
         Label34.TabIndex = 3
         Label34.Text = "COLOR"
         ' 
         ' PictureBox5
         ' 
         PictureBox5.Image = My.Resources.Resources.RideX
-        PictureBox5.Location = New Point(33, 96)
+        PictureBox5.Location = New Point(29, 72)
+        PictureBox5.Margin = New Padding(3, 2, 3, 2)
         PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(264, 123)
+        PictureBox5.Size = New Size(231, 92)
         PictureBox5.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox5.TabIndex = 2
         PictureBox5.TabStop = False
@@ -1565,9 +1581,9 @@ Partial Class allcars
         Label35.AutoSize = True
         Label35.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label35.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label35.Location = New Point(22, 17)
+        Label35.Location = New Point(19, 13)
         Label35.Name = "Label35"
-        Label35.Size = New Size(303, 41)
+        Label35.Size = New Size(245, 32)
         Label35.TabIndex = 0
         Label35.Text = "CAR NUMBER 1"
         ' 
@@ -1576,9 +1592,9 @@ Partial Class allcars
         Label36.AutoSize = True
         Label36.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label36.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label36.Location = New Point(22, 35)
+        Label36.Location = New Point(19, 26)
         Label36.Name = "Label36"
-        Label36.Size = New Size(1072, 41)
+        Label36.Size = New Size(882, 32)
         Label36.TabIndex = 1
         Label36.Text = "______________________________________________________________"
         ' 
@@ -1595,52 +1611,53 @@ Partial Class allcars
         Panel3.Controls.Add(PictureBox2)
         Panel3.Controls.Add(Label26)
         Panel3.Controls.Add(Label27)
-        Panel3.Location = New Point(12, 647)
+        Panel3.Location = New Point(10, 485)
+        Panel3.Margin = New Padding(3, 2, 3, 2)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(1115, 252)
+        Panel3.Size = New Size(976, 189)
         Panel3.TabIndex = 41
         ' 
         ' Label19
         ' 
         Label19.AutoSize = True
-        Label19.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label19.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label19.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label19.Location = New Point(333, 134)
+        Label19.Location = New Point(291, 100)
         Label19.Name = "Label19"
-        Label19.Size = New Size(130, 61)
+        Label19.Size = New Size(74, 44)
         Label19.TabIndex = 21
         Label19.Text = "red"
         ' 
         ' Label20
         ' 
         Label20.AutoSize = True
-        Label20.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label20.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label20.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label20.Location = New Point(642, 151)
+        Label20.Location = New Point(562, 113)
         Label20.Name = "Label20"
-        Label20.Size = New Size(172, 39)
+        Label20.Size = New Size(116, 29)
         Label20.TabIndex = 20
         Label20.Text = "11,456km"
         ' 
         ' Label21
         ' 
         Label21.AutoSize = True
-        Label21.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label21.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label21.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label21.Location = New Point(529, 134)
+        Label21.Location = New Point(463, 100)
         Label21.Name = "Label21"
-        Label21.Size = New Size(66, 61)
+        Label21.Size = New Size(40, 44)
         Label21.TabIndex = 19
         Label21.Text = "5"
         ' 
         ' Label22
         ' 
         Label22.AutoSize = True
-        Label22.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label22.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label22.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label22.Location = New Point(333, 34)
+        Label22.Location = New Point(291, 26)
         Label22.Name = "Label22"
-        Label22.Size = New Size(62, 24)
+        Label22.Size = New Size(51, 19)
         Label22.TabIndex = 17
         Label22.Text = "MAKE"
         ' 
@@ -1650,9 +1667,10 @@ Partial Class allcars
         Button8.FlatStyle = FlatStyle.Flat
         Button8.Font = New Font("Reesha", 16.1999989F)
         Button8.ForeColor = Color.White
-        Button8.Location = New Point(855, 134)
+        Button8.Location = New Point(748, 100)
+        Button8.Margin = New Padding(3, 2, 3, 2)
         Button8.Name = "Button8"
-        Button8.Size = New Size(230, 46)
+        Button8.Size = New Size(201, 34)
         Button8.TabIndex = 16
         Button8.Text = "BOOK NOW"
         Button8.TextAlign = ContentAlignment.TopCenter
@@ -1661,42 +1679,43 @@ Partial Class allcars
         ' Label23
         ' 
         Label23.AutoSize = True
-        Label23.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label23.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label23.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label23.Location = New Point(685, 195)
+        Label23.Location = New Point(599, 146)
         Label23.Name = "Label23"
-        Label23.Size = New Size(90, 24)
+        Label23.Size = New Size(72, 19)
         Label23.TabIndex = 5
         Label23.Text = "MILEAGE"
         ' 
         ' Label24
         ' 
         Label24.AutoSize = True
-        Label24.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label24.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label24.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label24.Location = New Point(484, 195)
+        Label24.Location = New Point(424, 146)
         Label24.Name = "Label24"
-        Label24.Size = New Size(151, 24)
+        Label24.Size = New Size(121, 19)
         Label24.TabIndex = 4
         Label24.Text = "SEAT CAPACITY"
         ' 
         ' Label25
         ' 
         Label25.AutoSize = True
-        Label25.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label25.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label25.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label25.Location = New Point(358, 195)
+        Label25.Location = New Point(313, 146)
         Label25.Name = "Label25"
-        Label25.Size = New Size(79, 24)
+        Label25.Size = New Size(65, 19)
         Label25.TabIndex = 3
         Label25.Text = "COLOR"
         ' 
         ' PictureBox2
         ' 
         PictureBox2.Image = My.Resources.Resources.RideX
-        PictureBox2.Location = New Point(33, 96)
+        PictureBox2.Location = New Point(29, 72)
+        PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(264, 123)
+        PictureBox2.Size = New Size(231, 92)
         PictureBox2.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox2.TabIndex = 2
         PictureBox2.TabStop = False
@@ -1706,9 +1725,9 @@ Partial Class allcars
         Label26.AutoSize = True
         Label26.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label26.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label26.Location = New Point(22, 17)
+        Label26.Location = New Point(19, 13)
         Label26.Name = "Label26"
-        Label26.Size = New Size(303, 41)
+        Label26.Size = New Size(245, 32)
         Label26.TabIndex = 0
         Label26.Text = "CAR NUMBER 1"
         ' 
@@ -1717,9 +1736,9 @@ Partial Class allcars
         Label27.AutoSize = True
         Label27.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label27.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label27.Location = New Point(22, 35)
+        Label27.Location = New Point(19, 26)
         Label27.Name = "Label27"
-        Label27.Size = New Size(1072, 41)
+        Label27.Size = New Size(882, 32)
         Label27.TabIndex = 1
         Label27.Text = "______________________________________________________________"
         ' 
@@ -1736,52 +1755,53 @@ Partial Class allcars
         Panel2.Controls.Add(PictureBox1)
         Panel2.Controls.Add(Label17)
         Panel2.Controls.Add(Label18)
-        Panel2.Location = New Point(12, 335)
+        Panel2.Location = New Point(10, 251)
+        Panel2.Margin = New Padding(3, 2, 3, 2)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1115, 252)
+        Panel2.Size = New Size(976, 189)
         Panel2.TabIndex = 40
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label1.Location = New Point(333, 134)
+        Label1.Location = New Point(291, 100)
         Label1.Name = "Label1"
-        Label1.Size = New Size(130, 61)
+        Label1.Size = New Size(74, 44)
         Label1.TabIndex = 21
         Label1.Text = "red"
         ' 
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label11.Location = New Point(642, 151)
+        Label11.Location = New Point(562, 113)
         Label11.Name = "Label11"
-        Label11.Size = New Size(172, 39)
+        Label11.Size = New Size(116, 29)
         Label11.TabIndex = 20
         Label11.Text = "11,456km"
         ' 
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label12.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label12.Location = New Point(529, 134)
+        Label12.Location = New Point(463, 100)
         Label12.Name = "Label12"
-        Label12.Size = New Size(66, 61)
+        Label12.Size = New Size(40, 44)
         Label12.TabIndex = 19
         Label12.Text = "5"
         ' 
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label13.Location = New Point(333, 34)
+        Label13.Location = New Point(291, 26)
         Label13.Name = "Label13"
-        Label13.Size = New Size(62, 24)
+        Label13.Size = New Size(51, 19)
         Label13.TabIndex = 17
         Label13.Text = "MAKE"
         ' 
@@ -1791,9 +1811,10 @@ Partial Class allcars
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Reesha", 16.1999989F)
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(855, 134)
+        Button1.Location = New Point(748, 100)
+        Button1.Margin = New Padding(3, 2, 3, 2)
         Button1.Name = "Button1"
-        Button1.Size = New Size(230, 46)
+        Button1.Size = New Size(201, 34)
         Button1.TabIndex = 16
         Button1.Text = "BOOK NOW"
         Button1.TextAlign = ContentAlignment.TopCenter
@@ -1802,42 +1823,43 @@ Partial Class allcars
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label14.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label14.Location = New Point(685, 195)
+        Label14.Location = New Point(599, 146)
         Label14.Name = "Label14"
-        Label14.Size = New Size(90, 24)
+        Label14.Size = New Size(72, 19)
         Label14.TabIndex = 5
         Label14.Text = "MILEAGE"
         ' 
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label15.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label15.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label15.Location = New Point(484, 195)
+        Label15.Location = New Point(424, 146)
         Label15.Name = "Label15"
-        Label15.Size = New Size(151, 24)
+        Label15.Size = New Size(121, 19)
         Label15.TabIndex = 4
         Label15.Text = "SEAT CAPACITY"
         ' 
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label16.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label16.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label16.Location = New Point(358, 195)
+        Label16.Location = New Point(313, 146)
         Label16.Name = "Label16"
-        Label16.Size = New Size(79, 24)
+        Label16.Size = New Size(65, 19)
         Label16.TabIndex = 3
         Label16.Text = "COLOR"
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Image = My.Resources.Resources.RideX
-        PictureBox1.Location = New Point(33, 96)
+        PictureBox1.Location = New Point(29, 72)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(264, 123)
+        PictureBox1.Size = New Size(231, 92)
         PictureBox1.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox1.TabIndex = 2
         PictureBox1.TabStop = False
@@ -1847,9 +1869,9 @@ Partial Class allcars
         Label17.AutoSize = True
         Label17.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label17.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label17.Location = New Point(22, 17)
+        Label17.Location = New Point(19, 13)
         Label17.Name = "Label17"
-        Label17.Size = New Size(303, 41)
+        Label17.Size = New Size(245, 32)
         Label17.TabIndex = 0
         Label17.Text = "CAR NUMBER 1"
         ' 
@@ -1858,9 +1880,9 @@ Partial Class allcars
         Label18.AutoSize = True
         Label18.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label18.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label18.Location = New Point(22, 35)
+        Label18.Location = New Point(19, 26)
         Label18.Name = "Label18"
-        Label18.Size = New Size(1072, 41)
+        Label18.Size = New Size(882, 32)
         Label18.TabIndex = 1
         Label18.Text = "______________________________________________________________"
         ' 
@@ -1870,19 +1892,20 @@ Partial Class allcars
         Panel6.Controls.Add(Label37)
         Panel6.Dock = DockStyle.Top
         Panel6.Location = New Point(0, 0)
+        Panel6.Margin = New Padding(3, 2, 3, 2)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(1235, 37)
+        Panel6.Size = New Size(1055, 28)
         Panel6.TabIndex = 41
         ' 
         ' Label37
         ' 
         Label37.AutoSize = True
         Label37.BackColor = Color.Transparent
-        Label37.Font = New Font("Akira Expanded", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label37.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label37.ForeColor = Color.White
-        Label37.Location = New Point(11, 9)
+        Label37.Location = New Point(10, 7)
         Label37.Name = "Label37"
-        Label37.Size = New Size(34, 24)
+        Label37.Size = New Size(25, 24)
         Label37.TabIndex = 42
         Label37.Text = "X"
         ' 
@@ -1898,18 +1921,20 @@ Partial Class allcars
         Panel13.Controls.Add(btnMPV)
         Panel13.Controls.Add(btnHatch)
         Panel13.Controls.Add(btnHybrid)
-        Panel13.Location = New Point(55, 47)
+        Panel13.Location = New Point(48, 35)
+        Panel13.Margin = New Padding(3, 2, 3, 2)
         Panel13.Name = "Panel13"
-        Panel13.Size = New Size(1135, 61)
+        Panel13.Size = New Size(993, 46)
         Panel13.TabIndex = 42
         ' 
         ' PictureBox3
         ' 
         PictureBox3.BackColor = Color.Transparent
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(54, 125)
+        PictureBox3.Location = New Point(47, 94)
+        PictureBox3.Margin = New Padding(3, 2, 3, 2)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(51, 43)
+        PictureBox3.Size = New Size(45, 32)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox3.TabIndex = 29
         PictureBox3.TabStop = False
@@ -1917,224 +1942,85 @@ Partial Class allcars
         ' TextBox1
         ' 
         TextBox1.Font = New Font("Futura Bk BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(126, 128)
+        TextBox1.Location = New Point(110, 96)
+        TextBox1.Margin = New Padding(3, 2, 3, 2)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(201, 40)
+        TextBox1.Size = New Size(176, 33)
         TextBox1.TabIndex = 22
         ' 
         ' pnlSuvContent
         ' 
         pnlSuvContent.AutoScroll = True
         pnlSuvContent.BackColor = Color.White
-        pnlSuvContent.Controls.Add(Panel22)
         pnlSuvContent.Controls.Add(Panel23)
-        pnlSuvContent.Location = New Point(1300, 167)
+        pnlSuvContent.Location = New Point(47, 142)
+        pnlSuvContent.Margin = New Padding(3, 2, 3, 2)
         pnlSuvContent.Name = "pnlSuvContent"
-        pnlSuvContent.Size = New Size(1162, 351)
+        pnlSuvContent.Size = New Size(1017, 263)
         pnlSuvContent.TabIndex = 43
-        ' 
-        ' Panel22
-        ' 
-        Panel22.Controls.Add(Label164)
-        Panel22.Controls.Add(Label165)
-        Panel22.Controls.Add(Label166)
-        Panel22.Controls.Add(Label167)
-        Panel22.Controls.Add(Button19)
-        Panel22.Controls.Add(Label168)
-        Panel22.Controls.Add(Label169)
-        Panel22.Controls.Add(Label170)
-        Panel22.Controls.Add(PictureBox20)
-        Panel22.Controls.Add(Label171)
-        Panel22.Controls.Add(Label172)
-        Panel22.Location = New Point(12, 335)
-        Panel22.Name = "Panel22"
-        Panel22.Size = New Size(1115, 252)
-        Panel22.TabIndex = 40
-        ' 
-        ' Label164
-        ' 
-        Label164.AutoSize = True
-        Label164.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label164.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label164.Location = New Point(333, 134)
-        Label164.Name = "Label164"
-        Label164.Size = New Size(130, 61)
-        Label164.TabIndex = 21
-        Label164.Text = "red"
-        ' 
-        ' Label165
-        ' 
-        Label165.AutoSize = True
-        Label165.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label165.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label165.Location = New Point(642, 151)
-        Label165.Name = "Label165"
-        Label165.Size = New Size(172, 39)
-        Label165.TabIndex = 20
-        Label165.Text = "11,456km"
-        ' 
-        ' Label166
-        ' 
-        Label166.AutoSize = True
-        Label166.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label166.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label166.Location = New Point(529, 134)
-        Label166.Name = "Label166"
-        Label166.Size = New Size(66, 61)
-        Label166.TabIndex = 19
-        Label166.Text = "5"
-        ' 
-        ' Label167
-        ' 
-        Label167.AutoSize = True
-        Label167.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label167.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label167.Location = New Point(333, 34)
-        Label167.Name = "Label167"
-        Label167.Size = New Size(62, 24)
-        Label167.TabIndex = 17
-        Label167.Text = "MAKE"
-        ' 
-        ' Button19
-        ' 
-        Button19.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button19.FlatStyle = FlatStyle.Flat
-        Button19.Font = New Font("Reesha", 16.1999989F)
-        Button19.ForeColor = Color.White
-        Button19.Location = New Point(855, 134)
-        Button19.Name = "Button19"
-        Button19.Size = New Size(230, 46)
-        Button19.TabIndex = 16
-        Button19.Text = "BOOK NOW"
-        Button19.TextAlign = ContentAlignment.TopCenter
-        Button19.UseVisualStyleBackColor = False
-        ' 
-        ' Label168
-        ' 
-        Label168.AutoSize = True
-        Label168.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label168.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label168.Location = New Point(685, 195)
-        Label168.Name = "Label168"
-        Label168.Size = New Size(90, 24)
-        Label168.TabIndex = 5
-        Label168.Text = "MILEAGE"
-        ' 
-        ' Label169
-        ' 
-        Label169.AutoSize = True
-        Label169.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label169.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label169.Location = New Point(484, 195)
-        Label169.Name = "Label169"
-        Label169.Size = New Size(151, 24)
-        Label169.TabIndex = 4
-        Label169.Text = "SEAT CAPACITY"
-        ' 
-        ' Label170
-        ' 
-        Label170.AutoSize = True
-        Label170.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label170.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label170.Location = New Point(358, 195)
-        Label170.Name = "Label170"
-        Label170.Size = New Size(79, 24)
-        Label170.TabIndex = 3
-        Label170.Text = "COLOR"
-        ' 
-        ' PictureBox20
-        ' 
-        PictureBox20.Image = My.Resources.Resources.RideX
-        PictureBox20.Location = New Point(33, 96)
-        PictureBox20.Name = "PictureBox20"
-        PictureBox20.Size = New Size(264, 123)
-        PictureBox20.SizeMode = PictureBoxSizeMode.CenterImage
-        PictureBox20.TabIndex = 2
-        PictureBox20.TabStop = False
-        ' 
-        ' Label171
-        ' 
-        Label171.AutoSize = True
-        Label171.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label171.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label171.Location = New Point(22, 17)
-        Label171.Name = "Label171"
-        Label171.Size = New Size(303, 41)
-        Label171.TabIndex = 0
-        Label171.Text = "CAR NUMBER 1"
-        ' 
-        ' Label172
-        ' 
-        Label172.AutoSize = True
-        Label172.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label172.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label172.Location = New Point(22, 35)
-        Label172.Name = "Label172"
-        Label172.Size = New Size(1072, 41)
-        Label172.TabIndex = 1
-        Label172.Text = "______________________________________________________________"
         ' 
         ' Panel23
         ' 
-        Panel23.Controls.Add(Label173)
-        Panel23.Controls.Add(Label174)
-        Panel23.Controls.Add(Label175)
-        Panel23.Controls.Add(Label176)
+        Panel23.Controls.Add(color6txt)
+        Panel23.Controls.Add(mileage6txt)
+        Panel23.Controls.Add(seatcapacity6txt)
+        Panel23.Controls.Add(make6txt)
         Panel23.Controls.Add(Button20)
         Panel23.Controls.Add(Label177)
         Panel23.Controls.Add(Label178)
         Panel23.Controls.Add(Label179)
-        Panel23.Controls.Add(PictureBox21)
-        Panel23.Controls.Add(Label180)
+        Panel23.Controls.Add(car6img)
+        Panel23.Controls.Add(model6txt)
         Panel23.Controls.Add(Label181)
-        Panel23.Location = New Point(12, 18)
+        Panel23.Location = New Point(10, 14)
+        Panel23.Margin = New Padding(3, 2, 3, 2)
         Panel23.Name = "Panel23"
-        Panel23.Size = New Size(1115, 252)
+        Panel23.Size = New Size(976, 189)
         Panel23.TabIndex = 39
         ' 
-        ' Label173
+        ' color6txt
         ' 
-        Label173.AutoSize = True
-        Label173.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label173.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label173.Location = New Point(333, 134)
-        Label173.Name = "Label173"
-        Label173.Size = New Size(130, 61)
-        Label173.TabIndex = 21
-        Label173.Text = "red"
+        color6txt.AutoSize = True
+        color6txt.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        color6txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        color6txt.Location = New Point(338, 104)
+        color6txt.Name = "color6txt"
+        color6txt.Size = New Size(74, 44)
+        color6txt.TabIndex = 21
+        color6txt.Text = "red"
         ' 
-        ' Label174
+        ' mileage6txt
         ' 
-        Label174.AutoSize = True
-        Label174.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label174.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label174.Location = New Point(642, 151)
-        Label174.Name = "Label174"
-        Label174.Size = New Size(172, 39)
-        Label174.TabIndex = 20
-        Label174.Text = "11,456km"
+        mileage6txt.AutoSize = True
+        mileage6txt.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        mileage6txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        mileage6txt.Location = New Point(593, 117)
+        mileage6txt.Name = "mileage6txt"
+        mileage6txt.Size = New Size(116, 29)
+        mileage6txt.TabIndex = 20
+        mileage6txt.Text = "11,456km"
         ' 
-        ' Label175
+        ' seatcapacity6txt
         ' 
-        Label175.AutoSize = True
-        Label175.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label175.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label175.Location = New Point(529, 134)
-        Label175.Name = "Label175"
-        Label175.Size = New Size(66, 61)
-        Label175.TabIndex = 19
-        Label175.Text = "5"
+        seatcapacity6txt.AutoSize = True
+        seatcapacity6txt.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        seatcapacity6txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        seatcapacity6txt.Location = New Point(485, 100)
+        seatcapacity6txt.Name = "seatcapacity6txt"
+        seatcapacity6txt.Size = New Size(40, 44)
+        seatcapacity6txt.TabIndex = 19
+        seatcapacity6txt.Text = "5"
         ' 
-        ' Label176
+        ' make6txt
         ' 
-        Label176.AutoSize = True
-        Label176.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label176.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label176.Location = New Point(333, 34)
-        Label176.Name = "Label176"
-        Label176.Size = New Size(62, 24)
-        Label176.TabIndex = 17
-        Label176.Text = "MAKE"
+        make6txt.AutoSize = True
+        make6txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        make6txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        make6txt.Location = New Point(27, 0)
+        make6txt.Name = "make6txt"
+        make6txt.Size = New Size(60, 22)
+        make6txt.TabIndex = 17
+        make6txt.Text = "MAKE"
         ' 
         ' Button20
         ' 
@@ -2142,9 +2028,10 @@ Partial Class allcars
         Button20.FlatStyle = FlatStyle.Flat
         Button20.Font = New Font("Reesha", 16.1999989F)
         Button20.ForeColor = Color.White
-        Button20.Location = New Point(855, 134)
+        Button20.Location = New Point(748, 100)
+        Button20.Margin = New Padding(3, 2, 3, 2)
         Button20.Name = "Button20"
-        Button20.Size = New Size(230, 46)
+        Button20.Size = New Size(201, 34)
         Button20.TabIndex = 16
         Button20.Text = "BOOK NOW"
         Button20.TextAlign = ContentAlignment.TopCenter
@@ -2153,65 +2040,66 @@ Partial Class allcars
         ' Label177
         ' 
         Label177.AutoSize = True
-        Label177.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label177.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label177.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label177.Location = New Point(685, 195)
+        Label177.Location = New Point(606, 146)
         Label177.Name = "Label177"
-        Label177.Size = New Size(90, 24)
+        Label177.Size = New Size(72, 19)
         Label177.TabIndex = 5
         Label177.Text = "MILEAGE"
         ' 
         ' Label178
         ' 
         Label178.AutoSize = True
-        Label178.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label178.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label178.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label178.Location = New Point(484, 195)
+        Label178.Location = New Point(444, 146)
         Label178.Name = "Label178"
-        Label178.Size = New Size(151, 24)
+        Label178.Size = New Size(121, 19)
         Label178.TabIndex = 4
         Label178.Text = "SEAT CAPACITY"
         ' 
         ' Label179
         ' 
         Label179.AutoSize = True
-        Label179.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label179.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label179.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label179.Location = New Point(358, 195)
+        Label179.Location = New Point(340, 144)
         Label179.Name = "Label179"
-        Label179.Size = New Size(79, 24)
+        Label179.Size = New Size(65, 19)
         Label179.TabIndex = 3
         Label179.Text = "COLOR"
         ' 
-        ' PictureBox21
+        ' car6img
         ' 
-        PictureBox21.Image = My.Resources.Resources.RideX
-        PictureBox21.Location = New Point(33, 96)
-        PictureBox21.Name = "PictureBox21"
-        PictureBox21.Size = New Size(264, 123)
-        PictureBox21.SizeMode = PictureBoxSizeMode.CenterImage
-        PictureBox21.TabIndex = 2
-        PictureBox21.TabStop = False
+        car6img.Image = My.Resources.Resources.RideX
+        car6img.Location = New Point(19, 62)
+        car6img.Margin = New Padding(3, 2, 3, 2)
+        car6img.Name = "car6img"
+        car6img.Size = New Size(302, 125)
+        car6img.SizeMode = PictureBoxSizeMode.CenterImage
+        car6img.TabIndex = 2
+        car6img.TabStop = False
         ' 
-        ' Label180
+        ' model6txt
         ' 
-        Label180.AutoSize = True
-        Label180.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label180.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label180.Location = New Point(22, 17)
-        Label180.Name = "Label180"
-        Label180.Size = New Size(303, 41)
-        Label180.TabIndex = 0
-        Label180.Text = "CAR NUMBER 1"
+        model6txt.AutoSize = True
+        model6txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        model6txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        model6txt.Location = New Point(19, 13)
+        model6txt.Name = "model6txt"
+        model6txt.Size = New Size(245, 32)
+        model6txt.TabIndex = 0
+        model6txt.Text = "CAR NUMBER 1"
         ' 
         ' Label181
         ' 
         Label181.AutoSize = True
         Label181.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label181.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label181.Location = New Point(22, 35)
+        Label181.Location = New Point(19, 26)
         Label181.Name = "Label181"
-        Label181.Size = New Size(1072, 41)
+        Label181.Size = New Size(882, 32)
         Label181.TabIndex = 1
         Label181.Text = "______________________________________________________________"
         ' 
@@ -2221,9 +2109,10 @@ Partial Class allcars
         pnlSedan.BackColor = Color.White
         pnlSedan.Controls.Add(Panel14)
         pnlSedan.Controls.Add(Panel15)
-        pnlSedan.Location = New Point(1300, 185)
+        pnlSedan.Location = New Point(1138, 139)
+        pnlSedan.Margin = New Padding(3, 2, 3, 2)
         pnlSedan.Name = "pnlSedan"
-        pnlSedan.Size = New Size(1162, 351)
+        pnlSedan.Size = New Size(1017, 263)
         pnlSedan.TabIndex = 44
         ' 
         ' Panel14
@@ -2239,52 +2128,53 @@ Partial Class allcars
         Panel14.Controls.Add(PictureBox12)
         Panel14.Controls.Add(Label99)
         Panel14.Controls.Add(Label100)
-        Panel14.Location = New Point(12, 335)
+        Panel14.Location = New Point(10, 251)
+        Panel14.Margin = New Padding(3, 2, 3, 2)
         Panel14.Name = "Panel14"
-        Panel14.Size = New Size(1115, 252)
+        Panel14.Size = New Size(976, 189)
         Panel14.TabIndex = 40
         ' 
         ' Label92
         ' 
         Label92.AutoSize = True
-        Label92.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label92.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label92.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label92.Location = New Point(333, 134)
+        Label92.Location = New Point(291, 100)
         Label92.Name = "Label92"
-        Label92.Size = New Size(130, 61)
+        Label92.Size = New Size(74, 44)
         Label92.TabIndex = 21
         Label92.Text = "red"
         ' 
         ' Label93
         ' 
         Label93.AutoSize = True
-        Label93.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label93.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label93.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label93.Location = New Point(642, 151)
+        Label93.Location = New Point(562, 113)
         Label93.Name = "Label93"
-        Label93.Size = New Size(172, 39)
+        Label93.Size = New Size(116, 29)
         Label93.TabIndex = 20
         Label93.Text = "11,456km"
         ' 
         ' Label94
         ' 
         Label94.AutoSize = True
-        Label94.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label94.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label94.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label94.Location = New Point(529, 134)
+        Label94.Location = New Point(463, 100)
         Label94.Name = "Label94"
-        Label94.Size = New Size(66, 61)
+        Label94.Size = New Size(40, 44)
         Label94.TabIndex = 19
         Label94.Text = "5"
         ' 
         ' Label95
         ' 
         Label95.AutoSize = True
-        Label95.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label95.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label95.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label95.Location = New Point(333, 34)
+        Label95.Location = New Point(291, 26)
         Label95.Name = "Label95"
-        Label95.Size = New Size(62, 24)
+        Label95.Size = New Size(51, 19)
         Label95.TabIndex = 17
         Label95.Text = "MAKE"
         ' 
@@ -2294,9 +2184,10 @@ Partial Class allcars
         Button11.FlatStyle = FlatStyle.Flat
         Button11.Font = New Font("Reesha", 16.1999989F)
         Button11.ForeColor = Color.White
-        Button11.Location = New Point(855, 134)
+        Button11.Location = New Point(748, 100)
+        Button11.Margin = New Padding(3, 2, 3, 2)
         Button11.Name = "Button11"
-        Button11.Size = New Size(230, 46)
+        Button11.Size = New Size(201, 34)
         Button11.TabIndex = 16
         Button11.Text = "BOOK NOW"
         Button11.TextAlign = ContentAlignment.TopCenter
@@ -2305,42 +2196,43 @@ Partial Class allcars
         ' Label96
         ' 
         Label96.AutoSize = True
-        Label96.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label96.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label96.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label96.Location = New Point(685, 195)
+        Label96.Location = New Point(599, 146)
         Label96.Name = "Label96"
-        Label96.Size = New Size(90, 24)
+        Label96.Size = New Size(72, 19)
         Label96.TabIndex = 5
         Label96.Text = "MILEAGE"
         ' 
         ' Label97
         ' 
         Label97.AutoSize = True
-        Label97.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label97.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label97.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label97.Location = New Point(484, 195)
+        Label97.Location = New Point(424, 146)
         Label97.Name = "Label97"
-        Label97.Size = New Size(151, 24)
+        Label97.Size = New Size(121, 19)
         Label97.TabIndex = 4
         Label97.Text = "SEAT CAPACITY"
         ' 
         ' Label98
         ' 
         Label98.AutoSize = True
-        Label98.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label98.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label98.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label98.Location = New Point(358, 195)
+        Label98.Location = New Point(313, 146)
         Label98.Name = "Label98"
-        Label98.Size = New Size(79, 24)
+        Label98.Size = New Size(65, 19)
         Label98.TabIndex = 3
         Label98.Text = "COLOR"
         ' 
         ' PictureBox12
         ' 
         PictureBox12.Image = My.Resources.Resources.RideX
-        PictureBox12.Location = New Point(33, 96)
+        PictureBox12.Location = New Point(29, 72)
+        PictureBox12.Margin = New Padding(3, 2, 3, 2)
         PictureBox12.Name = "PictureBox12"
-        PictureBox12.Size = New Size(264, 123)
+        PictureBox12.Size = New Size(231, 92)
         PictureBox12.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox12.TabIndex = 2
         PictureBox12.TabStop = False
@@ -2350,9 +2242,9 @@ Partial Class allcars
         Label99.AutoSize = True
         Label99.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label99.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label99.Location = New Point(22, 17)
+        Label99.Location = New Point(19, 13)
         Label99.Name = "Label99"
-        Label99.Size = New Size(303, 41)
+        Label99.Size = New Size(245, 32)
         Label99.TabIndex = 0
         Label99.Text = "CAR NUMBER 1"
         ' 
@@ -2361,9 +2253,9 @@ Partial Class allcars
         Label100.AutoSize = True
         Label100.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label100.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label100.Location = New Point(22, 35)
+        Label100.Location = New Point(19, 26)
         Label100.Name = "Label100"
-        Label100.Size = New Size(1072, 41)
+        Label100.Size = New Size(882, 32)
         Label100.TabIndex = 1
         Label100.Text = "______________________________________________________________"
         ' 
@@ -2380,52 +2272,53 @@ Partial Class allcars
         Panel15.Controls.Add(PictureBox13)
         Panel15.Controls.Add(Label108)
         Panel15.Controls.Add(Label109)
-        Panel15.Location = New Point(12, 18)
+        Panel15.Location = New Point(10, 14)
+        Panel15.Margin = New Padding(3, 2, 3, 2)
         Panel15.Name = "Panel15"
-        Panel15.Size = New Size(1115, 252)
+        Panel15.Size = New Size(976, 189)
         Panel15.TabIndex = 39
         ' 
         ' Label101
         ' 
         Label101.AutoSize = True
-        Label101.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label101.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label101.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label101.Location = New Point(333, 134)
+        Label101.Location = New Point(291, 100)
         Label101.Name = "Label101"
-        Label101.Size = New Size(130, 61)
+        Label101.Size = New Size(74, 44)
         Label101.TabIndex = 21
         Label101.Text = "red"
         ' 
         ' Label102
         ' 
         Label102.AutoSize = True
-        Label102.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label102.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label102.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label102.Location = New Point(642, 151)
+        Label102.Location = New Point(562, 113)
         Label102.Name = "Label102"
-        Label102.Size = New Size(172, 39)
+        Label102.Size = New Size(116, 29)
         Label102.TabIndex = 20
         Label102.Text = "11,456km"
         ' 
         ' Label103
         ' 
         Label103.AutoSize = True
-        Label103.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label103.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label103.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label103.Location = New Point(529, 134)
+        Label103.Location = New Point(463, 100)
         Label103.Name = "Label103"
-        Label103.Size = New Size(66, 61)
+        Label103.Size = New Size(40, 44)
         Label103.TabIndex = 19
         Label103.Text = "5"
         ' 
         ' Label104
         ' 
         Label104.AutoSize = True
-        Label104.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label104.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label104.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label104.Location = New Point(333, 34)
+        Label104.Location = New Point(291, 26)
         Label104.Name = "Label104"
-        Label104.Size = New Size(62, 24)
+        Label104.Size = New Size(51, 19)
         Label104.TabIndex = 17
         Label104.Text = "MAKE"
         ' 
@@ -2435,9 +2328,10 @@ Partial Class allcars
         Button12.FlatStyle = FlatStyle.Flat
         Button12.Font = New Font("Reesha", 16.1999989F)
         Button12.ForeColor = Color.White
-        Button12.Location = New Point(855, 134)
+        Button12.Location = New Point(748, 100)
+        Button12.Margin = New Padding(3, 2, 3, 2)
         Button12.Name = "Button12"
-        Button12.Size = New Size(230, 46)
+        Button12.Size = New Size(201, 34)
         Button12.TabIndex = 16
         Button12.Text = "BOOK NOW"
         Button12.TextAlign = ContentAlignment.TopCenter
@@ -2446,42 +2340,43 @@ Partial Class allcars
         ' Label105
         ' 
         Label105.AutoSize = True
-        Label105.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label105.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label105.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label105.Location = New Point(685, 195)
+        Label105.Location = New Point(599, 146)
         Label105.Name = "Label105"
-        Label105.Size = New Size(90, 24)
+        Label105.Size = New Size(72, 19)
         Label105.TabIndex = 5
         Label105.Text = "MILEAGE"
         ' 
         ' Label106
         ' 
         Label106.AutoSize = True
-        Label106.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label106.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label106.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label106.Location = New Point(484, 195)
+        Label106.Location = New Point(424, 146)
         Label106.Name = "Label106"
-        Label106.Size = New Size(151, 24)
+        Label106.Size = New Size(121, 19)
         Label106.TabIndex = 4
         Label106.Text = "SEAT CAPACITY"
         ' 
         ' Label107
         ' 
         Label107.AutoSize = True
-        Label107.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label107.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label107.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label107.Location = New Point(358, 195)
+        Label107.Location = New Point(313, 146)
         Label107.Name = "Label107"
-        Label107.Size = New Size(79, 24)
+        Label107.Size = New Size(65, 19)
         Label107.TabIndex = 3
         Label107.Text = "COLOR"
         ' 
         ' PictureBox13
         ' 
         PictureBox13.Image = My.Resources.Resources.RideX
-        PictureBox13.Location = New Point(33, 96)
+        PictureBox13.Location = New Point(29, 72)
+        PictureBox13.Margin = New Padding(3, 2, 3, 2)
         PictureBox13.Name = "PictureBox13"
-        PictureBox13.Size = New Size(264, 123)
+        PictureBox13.Size = New Size(231, 92)
         PictureBox13.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox13.TabIndex = 2
         PictureBox13.TabStop = False
@@ -2491,9 +2386,9 @@ Partial Class allcars
         Label108.AutoSize = True
         Label108.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label108.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label108.Location = New Point(22, 17)
+        Label108.Location = New Point(19, 13)
         Label108.Name = "Label108"
-        Label108.Size = New Size(303, 41)
+        Label108.Size = New Size(245, 32)
         Label108.TabIndex = 0
         Label108.Text = "CAR NUMBER 1"
         ' 
@@ -2502,9 +2397,9 @@ Partial Class allcars
         Label109.AutoSize = True
         Label109.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label109.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label109.Location = New Point(22, 35)
+        Label109.Location = New Point(19, 26)
         Label109.Name = "Label109"
-        Label109.Size = New Size(1072, 41)
+        Label109.Size = New Size(882, 32)
         Label109.TabIndex = 1
         Label109.Text = "______________________________________________________________"
         ' 
@@ -2517,9 +2412,10 @@ Partial Class allcars
         pnlMpv.Controls.Add(Panel1)
         pnlMpv.Controls.Add(Panel16)
         pnlMpv.Controls.Add(Panel17)
-        pnlMpv.Location = New Point(1300, 185)
+        pnlMpv.Location = New Point(1138, 139)
+        pnlMpv.Margin = New Padding(3, 2, 3, 2)
         pnlMpv.Name = "pnlMpv"
-        pnlMpv.Size = New Size(1162, 351)
+        pnlMpv.Size = New Size(1017, 263)
         pnlMpv.TabIndex = 45
         ' 
         ' Panel19
@@ -2535,52 +2431,53 @@ Partial Class allcars
         Panel19.Controls.Add(PictureBox18)
         Panel19.Controls.Add(Label153)
         Panel19.Controls.Add(Label154)
-        Panel19.Location = New Point(12, 1141)
+        Panel19.Location = New Point(10, 856)
+        Panel19.Margin = New Padding(3, 2, 3, 2)
         Panel19.Name = "Panel19"
-        Panel19.Size = New Size(1115, 252)
+        Panel19.Size = New Size(976, 189)
         Panel19.TabIndex = 43
         ' 
         ' Label146
         ' 
         Label146.AutoSize = True
-        Label146.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label146.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label146.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label146.Location = New Point(333, 134)
+        Label146.Location = New Point(291, 100)
         Label146.Name = "Label146"
-        Label146.Size = New Size(130, 61)
+        Label146.Size = New Size(74, 44)
         Label146.TabIndex = 21
         Label146.Text = "red"
         ' 
         ' Label147
         ' 
         Label147.AutoSize = True
-        Label147.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label147.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label147.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label147.Location = New Point(642, 151)
+        Label147.Location = New Point(562, 113)
         Label147.Name = "Label147"
-        Label147.Size = New Size(172, 39)
+        Label147.Size = New Size(116, 29)
         Label147.TabIndex = 20
         Label147.Text = "11,456km"
         ' 
         ' Label148
         ' 
         Label148.AutoSize = True
-        Label148.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label148.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label148.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label148.Location = New Point(529, 134)
+        Label148.Location = New Point(463, 100)
         Label148.Name = "Label148"
-        Label148.Size = New Size(66, 61)
+        Label148.Size = New Size(40, 44)
         Label148.TabIndex = 19
         Label148.Text = "5"
         ' 
         ' Label149
         ' 
         Label149.AutoSize = True
-        Label149.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label149.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label149.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label149.Location = New Point(333, 34)
+        Label149.Location = New Point(291, 26)
         Label149.Name = "Label149"
-        Label149.Size = New Size(62, 24)
+        Label149.Size = New Size(51, 19)
         Label149.TabIndex = 17
         Label149.Text = "MAKE"
         ' 
@@ -2590,9 +2487,10 @@ Partial Class allcars
         Button17.FlatStyle = FlatStyle.Flat
         Button17.Font = New Font("Reesha", 16.1999989F)
         Button17.ForeColor = Color.White
-        Button17.Location = New Point(855, 134)
+        Button17.Location = New Point(748, 100)
+        Button17.Margin = New Padding(3, 2, 3, 2)
         Button17.Name = "Button17"
-        Button17.Size = New Size(230, 46)
+        Button17.Size = New Size(201, 34)
         Button17.TabIndex = 16
         Button17.Text = "BOOK NOW"
         Button17.TextAlign = ContentAlignment.TopCenter
@@ -2601,42 +2499,43 @@ Partial Class allcars
         ' Label150
         ' 
         Label150.AutoSize = True
-        Label150.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label150.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label150.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label150.Location = New Point(685, 195)
+        Label150.Location = New Point(599, 146)
         Label150.Name = "Label150"
-        Label150.Size = New Size(90, 24)
+        Label150.Size = New Size(72, 19)
         Label150.TabIndex = 5
         Label150.Text = "MILEAGE"
         ' 
         ' Label151
         ' 
         Label151.AutoSize = True
-        Label151.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label151.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label151.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label151.Location = New Point(484, 195)
+        Label151.Location = New Point(424, 146)
         Label151.Name = "Label151"
-        Label151.Size = New Size(151, 24)
+        Label151.Size = New Size(121, 19)
         Label151.TabIndex = 4
         Label151.Text = "SEAT CAPACITY"
         ' 
         ' Label152
         ' 
         Label152.AutoSize = True
-        Label152.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label152.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label152.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label152.Location = New Point(358, 195)
+        Label152.Location = New Point(313, 146)
         Label152.Name = "Label152"
-        Label152.Size = New Size(79, 24)
+        Label152.Size = New Size(65, 19)
         Label152.TabIndex = 3
         Label152.Text = "COLOR"
         ' 
         ' PictureBox18
         ' 
         PictureBox18.Image = My.Resources.Resources.RideX
-        PictureBox18.Location = New Point(33, 96)
+        PictureBox18.Location = New Point(29, 72)
+        PictureBox18.Margin = New Padding(3, 2, 3, 2)
         PictureBox18.Name = "PictureBox18"
-        PictureBox18.Size = New Size(264, 123)
+        PictureBox18.Size = New Size(231, 92)
         PictureBox18.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox18.TabIndex = 2
         PictureBox18.TabStop = False
@@ -2646,9 +2545,9 @@ Partial Class allcars
         Label153.AutoSize = True
         Label153.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label153.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label153.Location = New Point(22, 17)
+        Label153.Location = New Point(19, 13)
         Label153.Name = "Label153"
-        Label153.Size = New Size(303, 41)
+        Label153.Size = New Size(245, 32)
         Label153.TabIndex = 0
         Label153.Text = "CAR NUMBER 1"
         ' 
@@ -2657,9 +2556,9 @@ Partial Class allcars
         Label154.AutoSize = True
         Label154.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label154.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label154.Location = New Point(22, 35)
+        Label154.Location = New Point(19, 26)
         Label154.Name = "Label154"
-        Label154.Size = New Size(1072, 41)
+        Label154.Size = New Size(882, 32)
         Label154.TabIndex = 1
         Label154.Text = "______________________________________________________________"
         ' 
@@ -2676,52 +2575,53 @@ Partial Class allcars
         Panel18.Controls.Add(PictureBox17)
         Panel18.Controls.Add(Label144)
         Panel18.Controls.Add(Label145)
-        Panel18.Location = New Point(12, 868)
+        Panel18.Location = New Point(10, 651)
+        Panel18.Margin = New Padding(3, 2, 3, 2)
         Panel18.Name = "Panel18"
-        Panel18.Size = New Size(1115, 252)
+        Panel18.Size = New Size(976, 189)
         Panel18.TabIndex = 42
         ' 
         ' Label137
         ' 
         Label137.AutoSize = True
-        Label137.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label137.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label137.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label137.Location = New Point(333, 134)
+        Label137.Location = New Point(291, 100)
         Label137.Name = "Label137"
-        Label137.Size = New Size(130, 61)
+        Label137.Size = New Size(74, 44)
         Label137.TabIndex = 21
         Label137.Text = "red"
         ' 
         ' Label138
         ' 
         Label138.AutoSize = True
-        Label138.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label138.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label138.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label138.Location = New Point(642, 151)
+        Label138.Location = New Point(562, 113)
         Label138.Name = "Label138"
-        Label138.Size = New Size(172, 39)
+        Label138.Size = New Size(116, 29)
         Label138.TabIndex = 20
         Label138.Text = "11,456km"
         ' 
         ' Label139
         ' 
         Label139.AutoSize = True
-        Label139.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label139.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label139.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label139.Location = New Point(529, 134)
+        Label139.Location = New Point(463, 100)
         Label139.Name = "Label139"
-        Label139.Size = New Size(66, 61)
+        Label139.Size = New Size(40, 44)
         Label139.TabIndex = 19
         Label139.Text = "5"
         ' 
         ' Label140
         ' 
         Label140.AutoSize = True
-        Label140.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label140.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label140.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label140.Location = New Point(333, 34)
+        Label140.Location = New Point(291, 26)
         Label140.Name = "Label140"
-        Label140.Size = New Size(62, 24)
+        Label140.Size = New Size(51, 19)
         Label140.TabIndex = 17
         Label140.Text = "MAKE"
         ' 
@@ -2731,9 +2631,10 @@ Partial Class allcars
         Button16.FlatStyle = FlatStyle.Flat
         Button16.Font = New Font("Reesha", 16.1999989F)
         Button16.ForeColor = Color.White
-        Button16.Location = New Point(855, 134)
+        Button16.Location = New Point(748, 100)
+        Button16.Margin = New Padding(3, 2, 3, 2)
         Button16.Name = "Button16"
-        Button16.Size = New Size(230, 46)
+        Button16.Size = New Size(201, 34)
         Button16.TabIndex = 16
         Button16.Text = "BOOK NOW"
         Button16.TextAlign = ContentAlignment.TopCenter
@@ -2742,42 +2643,43 @@ Partial Class allcars
         ' Label141
         ' 
         Label141.AutoSize = True
-        Label141.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label141.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label141.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label141.Location = New Point(685, 195)
+        Label141.Location = New Point(599, 146)
         Label141.Name = "Label141"
-        Label141.Size = New Size(90, 24)
+        Label141.Size = New Size(72, 19)
         Label141.TabIndex = 5
         Label141.Text = "MILEAGE"
         ' 
         ' Label142
         ' 
         Label142.AutoSize = True
-        Label142.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label142.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label142.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label142.Location = New Point(484, 195)
+        Label142.Location = New Point(424, 146)
         Label142.Name = "Label142"
-        Label142.Size = New Size(151, 24)
+        Label142.Size = New Size(121, 19)
         Label142.TabIndex = 4
         Label142.Text = "SEAT CAPACITY"
         ' 
         ' Label143
         ' 
         Label143.AutoSize = True
-        Label143.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label143.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label143.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label143.Location = New Point(358, 195)
+        Label143.Location = New Point(313, 146)
         Label143.Name = "Label143"
-        Label143.Size = New Size(79, 24)
+        Label143.Size = New Size(65, 19)
         Label143.TabIndex = 3
         Label143.Text = "COLOR"
         ' 
         ' PictureBox17
         ' 
         PictureBox17.Image = My.Resources.Resources.RideX
-        PictureBox17.Location = New Point(33, 96)
+        PictureBox17.Location = New Point(29, 72)
+        PictureBox17.Margin = New Padding(3, 2, 3, 2)
         PictureBox17.Name = "PictureBox17"
-        PictureBox17.Size = New Size(264, 123)
+        PictureBox17.Size = New Size(231, 92)
         PictureBox17.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox17.TabIndex = 2
         PictureBox17.TabStop = False
@@ -2787,9 +2689,9 @@ Partial Class allcars
         Label144.AutoSize = True
         Label144.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label144.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label144.Location = New Point(22, 17)
+        Label144.Location = New Point(19, 13)
         Label144.Name = "Label144"
-        Label144.Size = New Size(303, 41)
+        Label144.Size = New Size(245, 32)
         Label144.TabIndex = 0
         Label144.Text = "CAR NUMBER 1"
         ' 
@@ -2798,9 +2700,9 @@ Partial Class allcars
         Label145.AutoSize = True
         Label145.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label145.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label145.Location = New Point(22, 35)
+        Label145.Location = New Point(19, 26)
         Label145.Name = "Label145"
-        Label145.Size = New Size(1072, 41)
+        Label145.Size = New Size(882, 32)
         Label145.TabIndex = 1
         Label145.Text = "______________________________________________________________"
         ' 
@@ -2817,52 +2719,53 @@ Partial Class allcars
         Panel1.Controls.Add(PictureBox16)
         Panel1.Controls.Add(Label135)
         Panel1.Controls.Add(Label136)
-        Panel1.Location = New Point(12, 588)
+        Panel1.Location = New Point(10, 441)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1115, 252)
+        Panel1.Size = New Size(976, 189)
         Panel1.TabIndex = 41
         ' 
         ' Label128
         ' 
         Label128.AutoSize = True
-        Label128.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label128.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label128.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label128.Location = New Point(333, 134)
+        Label128.Location = New Point(291, 100)
         Label128.Name = "Label128"
-        Label128.Size = New Size(130, 61)
+        Label128.Size = New Size(74, 44)
         Label128.TabIndex = 21
         Label128.Text = "red"
         ' 
         ' Label129
         ' 
         Label129.AutoSize = True
-        Label129.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label129.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label129.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label129.Location = New Point(642, 151)
+        Label129.Location = New Point(562, 113)
         Label129.Name = "Label129"
-        Label129.Size = New Size(172, 39)
+        Label129.Size = New Size(116, 29)
         Label129.TabIndex = 20
         Label129.Text = "11,456km"
         ' 
         ' Label130
         ' 
         Label130.AutoSize = True
-        Label130.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label130.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label130.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label130.Location = New Point(529, 134)
+        Label130.Location = New Point(463, 100)
         Label130.Name = "Label130"
-        Label130.Size = New Size(66, 61)
+        Label130.Size = New Size(40, 44)
         Label130.TabIndex = 19
         Label130.Text = "5"
         ' 
         ' Label131
         ' 
         Label131.AutoSize = True
-        Label131.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label131.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label131.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label131.Location = New Point(333, 34)
+        Label131.Location = New Point(291, 26)
         Label131.Name = "Label131"
-        Label131.Size = New Size(62, 24)
+        Label131.Size = New Size(51, 19)
         Label131.TabIndex = 17
         Label131.Text = "MAKE"
         ' 
@@ -2872,9 +2775,10 @@ Partial Class allcars
         Button15.FlatStyle = FlatStyle.Flat
         Button15.Font = New Font("Reesha", 16.1999989F)
         Button15.ForeColor = Color.White
-        Button15.Location = New Point(855, 134)
+        Button15.Location = New Point(748, 100)
+        Button15.Margin = New Padding(3, 2, 3, 2)
         Button15.Name = "Button15"
-        Button15.Size = New Size(230, 46)
+        Button15.Size = New Size(201, 34)
         Button15.TabIndex = 16
         Button15.Text = "BOOK NOW"
         Button15.TextAlign = ContentAlignment.TopCenter
@@ -2883,42 +2787,43 @@ Partial Class allcars
         ' Label132
         ' 
         Label132.AutoSize = True
-        Label132.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label132.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label132.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label132.Location = New Point(685, 195)
+        Label132.Location = New Point(599, 146)
         Label132.Name = "Label132"
-        Label132.Size = New Size(90, 24)
+        Label132.Size = New Size(72, 19)
         Label132.TabIndex = 5
         Label132.Text = "MILEAGE"
         ' 
         ' Label133
         ' 
         Label133.AutoSize = True
-        Label133.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label133.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label133.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label133.Location = New Point(484, 195)
+        Label133.Location = New Point(424, 146)
         Label133.Name = "Label133"
-        Label133.Size = New Size(151, 24)
+        Label133.Size = New Size(121, 19)
         Label133.TabIndex = 4
         Label133.Text = "SEAT CAPACITY"
         ' 
         ' Label134
         ' 
         Label134.AutoSize = True
-        Label134.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label134.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label134.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label134.Location = New Point(358, 195)
+        Label134.Location = New Point(313, 146)
         Label134.Name = "Label134"
-        Label134.Size = New Size(79, 24)
+        Label134.Size = New Size(65, 19)
         Label134.TabIndex = 3
         Label134.Text = "COLOR"
         ' 
         ' PictureBox16
         ' 
         PictureBox16.Image = My.Resources.Resources.RideX
-        PictureBox16.Location = New Point(33, 96)
+        PictureBox16.Location = New Point(29, 72)
+        PictureBox16.Margin = New Padding(3, 2, 3, 2)
         PictureBox16.Name = "PictureBox16"
-        PictureBox16.Size = New Size(264, 123)
+        PictureBox16.Size = New Size(231, 92)
         PictureBox16.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox16.TabIndex = 2
         PictureBox16.TabStop = False
@@ -2928,9 +2833,9 @@ Partial Class allcars
         Label135.AutoSize = True
         Label135.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label135.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label135.Location = New Point(22, 17)
+        Label135.Location = New Point(19, 13)
         Label135.Name = "Label135"
-        Label135.Size = New Size(303, 41)
+        Label135.Size = New Size(245, 32)
         Label135.TabIndex = 0
         Label135.Text = "CAR NUMBER 1"
         ' 
@@ -2939,9 +2844,9 @@ Partial Class allcars
         Label136.AutoSize = True
         Label136.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label136.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label136.Location = New Point(22, 35)
+        Label136.Location = New Point(19, 26)
         Label136.Name = "Label136"
-        Label136.Size = New Size(1072, 41)
+        Label136.Size = New Size(882, 32)
         Label136.TabIndex = 1
         Label136.Text = "______________________________________________________________"
         ' 
@@ -2958,52 +2863,53 @@ Partial Class allcars
         Panel16.Controls.Add(PictureBox14)
         Panel16.Controls.Add(Label117)
         Panel16.Controls.Add(Label118)
-        Panel16.Location = New Point(12, 311)
+        Panel16.Location = New Point(10, 233)
+        Panel16.Margin = New Padding(3, 2, 3, 2)
         Panel16.Name = "Panel16"
-        Panel16.Size = New Size(1115, 252)
+        Panel16.Size = New Size(976, 189)
         Panel16.TabIndex = 40
         ' 
         ' Label110
         ' 
         Label110.AutoSize = True
-        Label110.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label110.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label110.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label110.Location = New Point(333, 134)
+        Label110.Location = New Point(291, 100)
         Label110.Name = "Label110"
-        Label110.Size = New Size(130, 61)
+        Label110.Size = New Size(74, 44)
         Label110.TabIndex = 21
         Label110.Text = "red"
         ' 
         ' Label111
         ' 
         Label111.AutoSize = True
-        Label111.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label111.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label111.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label111.Location = New Point(642, 151)
+        Label111.Location = New Point(562, 113)
         Label111.Name = "Label111"
-        Label111.Size = New Size(172, 39)
+        Label111.Size = New Size(116, 29)
         Label111.TabIndex = 20
         Label111.Text = "11,456km"
         ' 
         ' Label112
         ' 
         Label112.AutoSize = True
-        Label112.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label112.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label112.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label112.Location = New Point(529, 134)
+        Label112.Location = New Point(463, 100)
         Label112.Name = "Label112"
-        Label112.Size = New Size(66, 61)
+        Label112.Size = New Size(40, 44)
         Label112.TabIndex = 19
         Label112.Text = "5"
         ' 
         ' Label113
         ' 
         Label113.AutoSize = True
-        Label113.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label113.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label113.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label113.Location = New Point(333, 34)
+        Label113.Location = New Point(291, 26)
         Label113.Name = "Label113"
-        Label113.Size = New Size(62, 24)
+        Label113.Size = New Size(51, 19)
         Label113.TabIndex = 17
         Label113.Text = "MAKE"
         ' 
@@ -3013,9 +2919,10 @@ Partial Class allcars
         Button13.FlatStyle = FlatStyle.Flat
         Button13.Font = New Font("Reesha", 16.1999989F)
         Button13.ForeColor = Color.White
-        Button13.Location = New Point(855, 134)
+        Button13.Location = New Point(748, 100)
+        Button13.Margin = New Padding(3, 2, 3, 2)
         Button13.Name = "Button13"
-        Button13.Size = New Size(230, 46)
+        Button13.Size = New Size(201, 34)
         Button13.TabIndex = 16
         Button13.Text = "BOOK NOW"
         Button13.TextAlign = ContentAlignment.TopCenter
@@ -3024,42 +2931,43 @@ Partial Class allcars
         ' Label114
         ' 
         Label114.AutoSize = True
-        Label114.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label114.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label114.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label114.Location = New Point(685, 195)
+        Label114.Location = New Point(599, 146)
         Label114.Name = "Label114"
-        Label114.Size = New Size(90, 24)
+        Label114.Size = New Size(72, 19)
         Label114.TabIndex = 5
         Label114.Text = "MILEAGE"
         ' 
         ' Label115
         ' 
         Label115.AutoSize = True
-        Label115.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label115.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label115.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label115.Location = New Point(484, 195)
+        Label115.Location = New Point(424, 146)
         Label115.Name = "Label115"
-        Label115.Size = New Size(151, 24)
+        Label115.Size = New Size(121, 19)
         Label115.TabIndex = 4
         Label115.Text = "SEAT CAPACITY"
         ' 
         ' Label116
         ' 
         Label116.AutoSize = True
-        Label116.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label116.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label116.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label116.Location = New Point(358, 195)
+        Label116.Location = New Point(313, 146)
         Label116.Name = "Label116"
-        Label116.Size = New Size(79, 24)
+        Label116.Size = New Size(65, 19)
         Label116.TabIndex = 3
         Label116.Text = "COLOR"
         ' 
         ' PictureBox14
         ' 
         PictureBox14.Image = My.Resources.Resources.RideX
-        PictureBox14.Location = New Point(33, 96)
+        PictureBox14.Location = New Point(29, 72)
+        PictureBox14.Margin = New Padding(3, 2, 3, 2)
         PictureBox14.Name = "PictureBox14"
-        PictureBox14.Size = New Size(264, 123)
+        PictureBox14.Size = New Size(231, 92)
         PictureBox14.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox14.TabIndex = 2
         PictureBox14.TabStop = False
@@ -3069,9 +2977,9 @@ Partial Class allcars
         Label117.AutoSize = True
         Label117.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label117.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label117.Location = New Point(22, 17)
+        Label117.Location = New Point(19, 13)
         Label117.Name = "Label117"
-        Label117.Size = New Size(303, 41)
+        Label117.Size = New Size(245, 32)
         Label117.TabIndex = 0
         Label117.Text = "CAR NUMBER 1"
         ' 
@@ -3080,9 +2988,9 @@ Partial Class allcars
         Label118.AutoSize = True
         Label118.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label118.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label118.Location = New Point(22, 35)
+        Label118.Location = New Point(19, 26)
         Label118.Name = "Label118"
-        Label118.Size = New Size(1072, 41)
+        Label118.Size = New Size(882, 32)
         Label118.TabIndex = 1
         Label118.Text = "______________________________________________________________"
         ' 
@@ -3099,52 +3007,53 @@ Partial Class allcars
         Panel17.Controls.Add(PictureBox15)
         Panel17.Controls.Add(Label126)
         Panel17.Controls.Add(Label127)
-        Panel17.Location = New Point(12, 18)
+        Panel17.Location = New Point(10, 14)
+        Panel17.Margin = New Padding(3, 2, 3, 2)
         Panel17.Name = "Panel17"
-        Panel17.Size = New Size(1115, 252)
+        Panel17.Size = New Size(976, 189)
         Panel17.TabIndex = 39
         ' 
         ' Label119
         ' 
         Label119.AutoSize = True
-        Label119.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label119.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label119.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label119.Location = New Point(333, 134)
+        Label119.Location = New Point(291, 100)
         Label119.Name = "Label119"
-        Label119.Size = New Size(130, 61)
+        Label119.Size = New Size(74, 44)
         Label119.TabIndex = 21
         Label119.Text = "red"
         ' 
         ' Label120
         ' 
         Label120.AutoSize = True
-        Label120.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label120.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label120.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label120.Location = New Point(642, 151)
+        Label120.Location = New Point(562, 113)
         Label120.Name = "Label120"
-        Label120.Size = New Size(172, 39)
+        Label120.Size = New Size(116, 29)
         Label120.TabIndex = 20
         Label120.Text = "11,456km"
         ' 
         ' Label121
         ' 
         Label121.AutoSize = True
-        Label121.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label121.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label121.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label121.Location = New Point(529, 134)
+        Label121.Location = New Point(463, 100)
         Label121.Name = "Label121"
-        Label121.Size = New Size(66, 61)
+        Label121.Size = New Size(40, 44)
         Label121.TabIndex = 19
         Label121.Text = "5"
         ' 
         ' Label122
         ' 
         Label122.AutoSize = True
-        Label122.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label122.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label122.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label122.Location = New Point(333, 34)
+        Label122.Location = New Point(291, 26)
         Label122.Name = "Label122"
-        Label122.Size = New Size(62, 24)
+        Label122.Size = New Size(51, 19)
         Label122.TabIndex = 17
         Label122.Text = "MAKE"
         ' 
@@ -3154,9 +3063,10 @@ Partial Class allcars
         Button14.FlatStyle = FlatStyle.Flat
         Button14.Font = New Font("Reesha", 16.1999989F)
         Button14.ForeColor = Color.White
-        Button14.Location = New Point(855, 134)
+        Button14.Location = New Point(748, 100)
+        Button14.Margin = New Padding(3, 2, 3, 2)
         Button14.Name = "Button14"
-        Button14.Size = New Size(230, 46)
+        Button14.Size = New Size(201, 34)
         Button14.TabIndex = 16
         Button14.Text = "BOOK NOW"
         Button14.TextAlign = ContentAlignment.TopCenter
@@ -3165,42 +3075,43 @@ Partial Class allcars
         ' Label123
         ' 
         Label123.AutoSize = True
-        Label123.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label123.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label123.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label123.Location = New Point(685, 195)
+        Label123.Location = New Point(599, 146)
         Label123.Name = "Label123"
-        Label123.Size = New Size(90, 24)
+        Label123.Size = New Size(72, 19)
         Label123.TabIndex = 5
         Label123.Text = "MILEAGE"
         ' 
         ' Label124
         ' 
         Label124.AutoSize = True
-        Label124.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label124.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label124.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label124.Location = New Point(484, 195)
+        Label124.Location = New Point(424, 146)
         Label124.Name = "Label124"
-        Label124.Size = New Size(151, 24)
+        Label124.Size = New Size(121, 19)
         Label124.TabIndex = 4
         Label124.Text = "SEAT CAPACITY"
         ' 
         ' Label125
         ' 
         Label125.AutoSize = True
-        Label125.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label125.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label125.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label125.Location = New Point(358, 195)
+        Label125.Location = New Point(313, 146)
         Label125.Name = "Label125"
-        Label125.Size = New Size(79, 24)
+        Label125.Size = New Size(65, 19)
         Label125.TabIndex = 3
         Label125.Text = "COLOR"
         ' 
         ' PictureBox15
         ' 
         PictureBox15.Image = My.Resources.Resources.RideX
-        PictureBox15.Location = New Point(33, 96)
+        PictureBox15.Location = New Point(29, 72)
+        PictureBox15.Margin = New Padding(3, 2, 3, 2)
         PictureBox15.Name = "PictureBox15"
-        PictureBox15.Size = New Size(264, 123)
+        PictureBox15.Size = New Size(231, 92)
         PictureBox15.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox15.TabIndex = 2
         PictureBox15.TabStop = False
@@ -3210,9 +3121,9 @@ Partial Class allcars
         Label126.AutoSize = True
         Label126.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label126.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label126.Location = New Point(22, 17)
+        Label126.Location = New Point(19, 13)
         Label126.Name = "Label126"
-        Label126.Size = New Size(303, 41)
+        Label126.Size = New Size(245, 32)
         Label126.TabIndex = 0
         Label126.Text = "CAR NUMBER 1"
         ' 
@@ -3221,9 +3132,9 @@ Partial Class allcars
         Label127.AutoSize = True
         Label127.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label127.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label127.Location = New Point(22, 35)
+        Label127.Location = New Point(19, 26)
         Label127.Name = "Label127"
-        Label127.Size = New Size(1072, 41)
+        Label127.Size = New Size(882, 32)
         Label127.TabIndex = 1
         Label127.Text = "______________________________________________________________"
         ' 
@@ -3233,9 +3144,10 @@ Partial Class allcars
         pnlHatchback.BackColor = Color.White
         pnlHatchback.Controls.Add(Panel26)
         pnlHatchback.Controls.Add(Panel27)
-        pnlHatchback.Location = New Point(1300, 185)
+        pnlHatchback.Location = New Point(1138, 139)
+        pnlHatchback.Margin = New Padding(3, 2, 3, 2)
         pnlHatchback.Name = "pnlHatchback"
-        pnlHatchback.Size = New Size(1162, 351)
+        pnlHatchback.Size = New Size(1017, 263)
         pnlHatchback.TabIndex = 46
         ' 
         ' Panel26
@@ -3251,52 +3163,53 @@ Partial Class allcars
         Panel26.Controls.Add(PictureBox24)
         Panel26.Controls.Add(Label207)
         Panel26.Controls.Add(Label208)
-        Panel26.Location = New Point(12, 311)
+        Panel26.Location = New Point(10, 233)
+        Panel26.Margin = New Padding(3, 2, 3, 2)
         Panel26.Name = "Panel26"
-        Panel26.Size = New Size(1115, 252)
+        Panel26.Size = New Size(976, 189)
         Panel26.TabIndex = 40
         ' 
         ' Label200
         ' 
         Label200.AutoSize = True
-        Label200.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label200.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label200.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label200.Location = New Point(333, 134)
+        Label200.Location = New Point(291, 100)
         Label200.Name = "Label200"
-        Label200.Size = New Size(130, 61)
+        Label200.Size = New Size(74, 44)
         Label200.TabIndex = 21
         Label200.Text = "red"
         ' 
         ' Label201
         ' 
         Label201.AutoSize = True
-        Label201.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label201.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label201.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label201.Location = New Point(642, 151)
+        Label201.Location = New Point(562, 113)
         Label201.Name = "Label201"
-        Label201.Size = New Size(172, 39)
+        Label201.Size = New Size(116, 29)
         Label201.TabIndex = 20
         Label201.Text = "11,456km"
         ' 
         ' Label202
         ' 
         Label202.AutoSize = True
-        Label202.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label202.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label202.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label202.Location = New Point(529, 134)
+        Label202.Location = New Point(463, 100)
         Label202.Name = "Label202"
-        Label202.Size = New Size(66, 61)
+        Label202.Size = New Size(40, 44)
         Label202.TabIndex = 19
         Label202.Text = "5"
         ' 
         ' Label203
         ' 
         Label203.AutoSize = True
-        Label203.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label203.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label203.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label203.Location = New Point(333, 34)
+        Label203.Location = New Point(291, 26)
         Label203.Name = "Label203"
-        Label203.Size = New Size(62, 24)
+        Label203.Size = New Size(51, 19)
         Label203.TabIndex = 17
         Label203.Text = "MAKE"
         ' 
@@ -3306,9 +3219,10 @@ Partial Class allcars
         Button23.FlatStyle = FlatStyle.Flat
         Button23.Font = New Font("Reesha", 16.1999989F)
         Button23.ForeColor = Color.White
-        Button23.Location = New Point(855, 134)
+        Button23.Location = New Point(748, 100)
+        Button23.Margin = New Padding(3, 2, 3, 2)
         Button23.Name = "Button23"
-        Button23.Size = New Size(230, 46)
+        Button23.Size = New Size(201, 34)
         Button23.TabIndex = 16
         Button23.Text = "BOOK NOW"
         Button23.TextAlign = ContentAlignment.TopCenter
@@ -3317,42 +3231,43 @@ Partial Class allcars
         ' Label204
         ' 
         Label204.AutoSize = True
-        Label204.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label204.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label204.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label204.Location = New Point(685, 195)
+        Label204.Location = New Point(599, 146)
         Label204.Name = "Label204"
-        Label204.Size = New Size(90, 24)
+        Label204.Size = New Size(72, 19)
         Label204.TabIndex = 5
         Label204.Text = "MILEAGE"
         ' 
         ' Label205
         ' 
         Label205.AutoSize = True
-        Label205.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label205.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label205.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label205.Location = New Point(484, 195)
+        Label205.Location = New Point(424, 146)
         Label205.Name = "Label205"
-        Label205.Size = New Size(151, 24)
+        Label205.Size = New Size(121, 19)
         Label205.TabIndex = 4
         Label205.Text = "SEAT CAPACITY"
         ' 
         ' Label206
         ' 
         Label206.AutoSize = True
-        Label206.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label206.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label206.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label206.Location = New Point(358, 195)
+        Label206.Location = New Point(313, 146)
         Label206.Name = "Label206"
-        Label206.Size = New Size(79, 24)
+        Label206.Size = New Size(65, 19)
         Label206.TabIndex = 3
         Label206.Text = "COLOR"
         ' 
         ' PictureBox24
         ' 
         PictureBox24.Image = My.Resources.Resources.RideX
-        PictureBox24.Location = New Point(33, 96)
+        PictureBox24.Location = New Point(29, 72)
+        PictureBox24.Margin = New Padding(3, 2, 3, 2)
         PictureBox24.Name = "PictureBox24"
-        PictureBox24.Size = New Size(264, 123)
+        PictureBox24.Size = New Size(231, 92)
         PictureBox24.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox24.TabIndex = 2
         PictureBox24.TabStop = False
@@ -3362,9 +3277,9 @@ Partial Class allcars
         Label207.AutoSize = True
         Label207.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label207.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label207.Location = New Point(22, 17)
+        Label207.Location = New Point(19, 13)
         Label207.Name = "Label207"
-        Label207.Size = New Size(303, 41)
+        Label207.Size = New Size(245, 32)
         Label207.TabIndex = 0
         Label207.Text = "CAR NUMBER 1"
         ' 
@@ -3373,9 +3288,9 @@ Partial Class allcars
         Label208.AutoSize = True
         Label208.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label208.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label208.Location = New Point(22, 35)
+        Label208.Location = New Point(19, 26)
         Label208.Name = "Label208"
-        Label208.Size = New Size(1072, 41)
+        Label208.Size = New Size(882, 32)
         Label208.TabIndex = 1
         Label208.Text = "______________________________________________________________"
         ' 
@@ -3392,52 +3307,53 @@ Partial Class allcars
         Panel27.Controls.Add(PictureBox25)
         Panel27.Controls.Add(Label216)
         Panel27.Controls.Add(Label217)
-        Panel27.Location = New Point(12, 18)
+        Panel27.Location = New Point(10, 14)
+        Panel27.Margin = New Padding(3, 2, 3, 2)
         Panel27.Name = "Panel27"
-        Panel27.Size = New Size(1115, 252)
+        Panel27.Size = New Size(976, 189)
         Panel27.TabIndex = 39
         ' 
         ' Label209
         ' 
         Label209.AutoSize = True
-        Label209.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label209.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label209.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label209.Location = New Point(333, 134)
+        Label209.Location = New Point(291, 100)
         Label209.Name = "Label209"
-        Label209.Size = New Size(130, 61)
+        Label209.Size = New Size(74, 44)
         Label209.TabIndex = 21
         Label209.Text = "red"
         ' 
         ' Label210
         ' 
         Label210.AutoSize = True
-        Label210.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label210.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label210.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label210.Location = New Point(642, 151)
+        Label210.Location = New Point(562, 113)
         Label210.Name = "Label210"
-        Label210.Size = New Size(172, 39)
+        Label210.Size = New Size(116, 29)
         Label210.TabIndex = 20
         Label210.Text = "11,456km"
         ' 
         ' Label211
         ' 
         Label211.AutoSize = True
-        Label211.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label211.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label211.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label211.Location = New Point(529, 134)
+        Label211.Location = New Point(463, 100)
         Label211.Name = "Label211"
-        Label211.Size = New Size(66, 61)
+        Label211.Size = New Size(40, 44)
         Label211.TabIndex = 19
         Label211.Text = "5"
         ' 
         ' Label212
         ' 
         Label212.AutoSize = True
-        Label212.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label212.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label212.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label212.Location = New Point(333, 34)
+        Label212.Location = New Point(291, 26)
         Label212.Name = "Label212"
-        Label212.Size = New Size(62, 24)
+        Label212.Size = New Size(51, 19)
         Label212.TabIndex = 17
         Label212.Text = "MAKE"
         ' 
@@ -3447,9 +3363,10 @@ Partial Class allcars
         Button24.FlatStyle = FlatStyle.Flat
         Button24.Font = New Font("Reesha", 16.1999989F)
         Button24.ForeColor = Color.White
-        Button24.Location = New Point(855, 134)
+        Button24.Location = New Point(748, 100)
+        Button24.Margin = New Padding(3, 2, 3, 2)
         Button24.Name = "Button24"
-        Button24.Size = New Size(230, 46)
+        Button24.Size = New Size(201, 34)
         Button24.TabIndex = 16
         Button24.Text = "BOOK NOW"
         Button24.TextAlign = ContentAlignment.TopCenter
@@ -3458,42 +3375,43 @@ Partial Class allcars
         ' Label213
         ' 
         Label213.AutoSize = True
-        Label213.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label213.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label213.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label213.Location = New Point(685, 195)
+        Label213.Location = New Point(599, 146)
         Label213.Name = "Label213"
-        Label213.Size = New Size(90, 24)
+        Label213.Size = New Size(72, 19)
         Label213.TabIndex = 5
         Label213.Text = "MILEAGE"
         ' 
         ' Label214
         ' 
         Label214.AutoSize = True
-        Label214.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label214.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label214.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label214.Location = New Point(484, 195)
+        Label214.Location = New Point(424, 146)
         Label214.Name = "Label214"
-        Label214.Size = New Size(151, 24)
+        Label214.Size = New Size(121, 19)
         Label214.TabIndex = 4
         Label214.Text = "SEAT CAPACITY"
         ' 
         ' Label215
         ' 
         Label215.AutoSize = True
-        Label215.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label215.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label215.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label215.Location = New Point(358, 195)
+        Label215.Location = New Point(313, 146)
         Label215.Name = "Label215"
-        Label215.Size = New Size(79, 24)
+        Label215.Size = New Size(65, 19)
         Label215.TabIndex = 3
         Label215.Text = "COLOR"
         ' 
         ' PictureBox25
         ' 
         PictureBox25.Image = My.Resources.Resources.RideX
-        PictureBox25.Location = New Point(33, 96)
+        PictureBox25.Location = New Point(29, 72)
+        PictureBox25.Margin = New Padding(3, 2, 3, 2)
         PictureBox25.Name = "PictureBox25"
-        PictureBox25.Size = New Size(264, 123)
+        PictureBox25.Size = New Size(231, 92)
         PictureBox25.SizeMode = PictureBoxSizeMode.CenterImage
         PictureBox25.TabIndex = 2
         PictureBox25.TabStop = False
@@ -3503,9 +3421,9 @@ Partial Class allcars
         Label216.AutoSize = True
         Label216.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label216.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label216.Location = New Point(22, 17)
+        Label216.Location = New Point(19, 13)
         Label216.Name = "Label216"
-        Label216.Size = New Size(303, 41)
+        Label216.Size = New Size(245, 32)
         Label216.TabIndex = 0
         Label216.Text = "CAR NUMBER 1"
         ' 
@@ -3514,9 +3432,9 @@ Partial Class allcars
         Label217.AutoSize = True
         Label217.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label217.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label217.Location = New Point(22, 35)
+        Label217.Location = New Point(19, 26)
         Label217.Name = "Label217"
-        Label217.Size = New Size(1072, 41)
+        Label217.Size = New Size(882, 32)
         Label217.TabIndex = 1
         Label217.Text = "______________________________________________________________"
         ' 
@@ -3525,169 +3443,174 @@ Partial Class allcars
         pnlHybrid.AutoScroll = True
         pnlHybrid.BackColor = Color.White
         pnlHybrid.Controls.Add(Panel24)
-        pnlHybrid.Location = New Point(54, 186)
+        pnlHybrid.Location = New Point(47, 140)
+        pnlHybrid.Margin = New Padding(3, 2, 3, 2)
         pnlHybrid.Name = "pnlHybrid"
-        pnlHybrid.Size = New Size(1136, 317)
+        pnlHybrid.Size = New Size(994, 238)
         pnlHybrid.TabIndex = 47
         ' 
         ' Panel24
         ' 
-        Panel24.Controls.Add(Label182)
-        Panel24.Controls.Add(Label183)
-        Panel24.Controls.Add(Label184)
-        Panel24.Controls.Add(Label185)
-        Panel24.Controls.Add(Button21)
+        Panel24.Controls.Add(color9txt)
+        Panel24.Controls.Add(mileage9txt)
+        Panel24.Controls.Add(seatcapacitytxt)
+        Panel24.Controls.Add(make9txt)
+        Panel24.Controls.Add(car9btn)
         Panel24.Controls.Add(Label186)
         Panel24.Controls.Add(Label187)
         Panel24.Controls.Add(Label188)
-        Panel24.Controls.Add(PictureBox22)
-        Panel24.Controls.Add(Label189)
+        Panel24.Controls.Add(car9img)
+        Panel24.Controls.Add(model9txt)
         Panel24.Controls.Add(Label190)
-        Panel24.Location = New Point(21, 33)
+        Panel24.Location = New Point(18, 25)
+        Panel24.Margin = New Padding(3, 2, 3, 2)
         Panel24.Name = "Panel24"
-        Panel24.Size = New Size(1097, 252)
+        Panel24.Size = New Size(960, 189)
         Panel24.TabIndex = 39
         ' 
-        ' Label182
+        ' color9txt
         ' 
-        Label182.AutoSize = True
-        Label182.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label182.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label182.Location = New Point(333, 134)
-        Label182.Name = "Label182"
-        Label182.Size = New Size(130, 61)
-        Label182.TabIndex = 21
-        Label182.Text = "red"
+        color9txt.AutoSize = True
+        color9txt.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        color9txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        color9txt.Location = New Point(330, 100)
+        color9txt.Name = "color9txt"
+        color9txt.Size = New Size(74, 44)
+        color9txt.TabIndex = 21
+        color9txt.Text = "red"
         ' 
-        ' Label183
+        ' mileage9txt
         ' 
-        Label183.AutoSize = True
-        Label183.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label183.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label183.Location = New Point(642, 151)
-        Label183.Name = "Label183"
-        Label183.Size = New Size(172, 39)
-        Label183.TabIndex = 20
-        Label183.Text = "11,456km"
+        mileage9txt.AutoSize = True
+        mileage9txt.Font = New Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        mileage9txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        mileage9txt.Location = New Point(585, 115)
+        mileage9txt.Name = "mileage9txt"
+        mileage9txt.Size = New Size(116, 29)
+        mileage9txt.TabIndex = 20
+        mileage9txt.Text = "11,456km"
         ' 
-        ' Label184
+        ' seatcapacitytxt
         ' 
-        Label184.AutoSize = True
-        Label184.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label184.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label184.Location = New Point(529, 134)
-        Label184.Name = "Label184"
-        Label184.Size = New Size(66, 61)
-        Label184.TabIndex = 19
-        Label184.Text = "5"
+        seatcapacitytxt.AutoSize = True
+        seatcapacitytxt.Font = New Font("Microsoft Sans Serif", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        seatcapacitytxt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        seatcapacitytxt.Location = New Point(487, 99)
+        seatcapacitytxt.Name = "seatcapacitytxt"
+        seatcapacitytxt.Size = New Size(40, 44)
+        seatcapacitytxt.TabIndex = 19
+        seatcapacitytxt.Text = "5"
         ' 
-        ' Label185
+        ' make9txt
         ' 
-        Label185.AutoSize = True
-        Label185.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label185.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label185.Location = New Point(333, 34)
-        Label185.Name = "Label185"
-        Label185.Size = New Size(62, 24)
-        Label185.TabIndex = 17
-        Label185.Text = "MAKE"
+        make9txt.AutoSize = True
+        make9txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        make9txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        make9txt.Location = New Point(22, -3)
+        make9txt.Name = "make9txt"
+        make9txt.Size = New Size(123, 22)
+        make9txt.TabIndex = 17
+        make9txt.Text = "AFASASDASD"
         ' 
-        ' Button21
+        ' car9btn
         ' 
-        Button21.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button21.FlatStyle = FlatStyle.Flat
-        Button21.Font = New Font("Reesha", 16.1999989F)
-        Button21.ForeColor = Color.White
-        Button21.Location = New Point(855, 134)
-        Button21.Name = "Button21"
-        Button21.Size = New Size(230, 46)
-        Button21.TabIndex = 16
-        Button21.Text = "BOOK NOW"
-        Button21.TextAlign = ContentAlignment.TopCenter
-        Button21.UseVisualStyleBackColor = False
+        car9btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        car9btn.FlatStyle = FlatStyle.Flat
+        car9btn.Font = New Font("Reesha", 16.1999989F)
+        car9btn.ForeColor = Color.White
+        car9btn.Location = New Point(729, 120)
+        car9btn.Margin = New Padding(3, 2, 3, 2)
+        car9btn.Name = "car9btn"
+        car9btn.Size = New Size(201, 34)
+        car9btn.TabIndex = 16
+        car9btn.Text = "BOOK NOW"
+        car9btn.TextAlign = ContentAlignment.TopCenter
+        car9btn.UseVisualStyleBackColor = False
         ' 
         ' Label186
         ' 
         Label186.AutoSize = True
-        Label186.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label186.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label186.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label186.Location = New Point(685, 195)
+        Label186.Location = New Point(606, 146)
         Label186.Name = "Label186"
-        Label186.Size = New Size(90, 24)
+        Label186.Size = New Size(72, 19)
         Label186.TabIndex = 5
         Label186.Text = "MILEAGE"
         ' 
         ' Label187
         ' 
         Label187.AutoSize = True
-        Label187.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label187.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label187.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label187.Location = New Point(484, 195)
+        Label187.Location = New Point(447, 146)
         Label187.Name = "Label187"
-        Label187.Size = New Size(151, 24)
+        Label187.Size = New Size(121, 19)
         Label187.TabIndex = 4
         Label187.Text = "SEAT CAPACITY"
         ' 
         ' Label188
         ' 
         Label188.AutoSize = True
-        Label188.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label188.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label188.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label188.Location = New Point(358, 195)
+        Label188.Location = New Point(332, 146)
         Label188.Name = "Label188"
-        Label188.Size = New Size(79, 24)
+        Label188.Size = New Size(65, 19)
         Label188.TabIndex = 3
         Label188.Text = "COLOR"
         ' 
-        ' PictureBox22
+        ' car9img
         ' 
-        PictureBox22.Image = My.Resources.Resources.RideX
-        PictureBox22.Location = New Point(33, 96)
-        PictureBox22.Name = "PictureBox22"
-        PictureBox22.Size = New Size(264, 123)
-        PictureBox22.SizeMode = PictureBoxSizeMode.CenterImage
-        PictureBox22.TabIndex = 2
-        PictureBox22.TabStop = False
+        car9img.Image = My.Resources.Resources.RideX
+        car9img.Location = New Point(8, 60)
+        car9img.Margin = New Padding(3, 2, 3, 2)
+        car9img.Name = "car9img"
+        car9img.Size = New Size(304, 127)
+        car9img.SizeMode = PictureBoxSizeMode.StretchImage
+        car9img.TabIndex = 2
+        car9img.TabStop = False
         ' 
-        ' Label189
+        ' model9txt
         ' 
-        Label189.AutoSize = True
-        Label189.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label189.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label189.Location = New Point(22, 17)
-        Label189.Name = "Label189"
-        Label189.Size = New Size(303, 41)
-        Label189.TabIndex = 0
-        Label189.Text = "CAR NUMBER 1"
+        model9txt.AutoSize = True
+        model9txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        model9txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        model9txt.Location = New Point(19, 13)
+        model9txt.Name = "model9txt"
+        model9txt.Size = New Size(245, 32)
+        model9txt.TabIndex = 0
+        model9txt.Text = "CAR NUMBER 1"
         ' 
         ' Label190
         ' 
         Label190.AutoSize = True
         Label190.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label190.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label190.Location = New Point(22, 35)
+        Label190.Location = New Point(19, 26)
         Label190.Name = "Label190"
-        Label190.Size = New Size(1072, 41)
+        Label190.Size = New Size(882, 32)
         Label190.TabIndex = 1
         Label190.Text = "______________________________________________________________"
         ' 
         ' allcars
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
-        ClientSize = New Size(1235, 570)
+        ClientSize = New Size(1055, 428)
+        Controls.Add(pnlSuvContent)
         Controls.Add(pnlHybrid)
         Controls.Add(pnlHatchback)
         Controls.Add(pnlMpv)
         Controls.Add(pnlSedan)
-        Controls.Add(pnlSuvContent)
         Controls.Add(Panel13)
         Controls.Add(Panel6)
         Controls.Add(pnlAllCarsContent)
         Controls.Add(TextBox1)
         Controls.Add(PictureBox3)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 2, 3, 2)
         Name = "allcars"
         Opacity = 0R
         StartPosition = FormStartPosition.CenterScreen
@@ -3728,12 +3651,9 @@ Partial Class allcars
         Panel13.ResumeLayout(False)
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         pnlSuvContent.ResumeLayout(False)
-        Panel22.ResumeLayout(False)
-        Panel22.PerformLayout()
-        CType(PictureBox20, ComponentModel.ISupportInitialize).EndInit()
         Panel23.ResumeLayout(False)
         Panel23.PerformLayout()
-        CType(PictureBox21, ComponentModel.ISupportInitialize).EndInit()
+        CType(car6img, ComponentModel.ISupportInitialize).EndInit()
         pnlSedan.ResumeLayout(False)
         Panel14.ResumeLayout(False)
         Panel14.PerformLayout()
@@ -3767,7 +3687,7 @@ Partial Class allcars
         pnlHybrid.ResumeLayout(False)
         Panel24.ResumeLayout(False)
         Panel24.PerformLayout()
-        CType(PictureBox22, ComponentModel.ISupportInitialize).EndInit()
+        CType(car9img, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -3925,8 +3845,8 @@ Partial Class allcars
     Friend WithEvents Label177 As Label
     Friend WithEvents Label178 As Label
     Friend WithEvents Label179 As Label
-    Friend WithEvents PictureBox21 As PictureBox
-    Friend WithEvents Label180 As Label
+    Friend WithEvents car6img As PictureBox
+    Friend WithEvents model6txt As Label
     Friend WithEvents Label181 As Label
     Friend WithEvents pnlSedan As Panel
     Friend WithEvents Panel14 As Panel
@@ -4041,15 +3961,20 @@ Partial Class allcars
     Friend WithEvents Label217 As Label
     Friend WithEvents pnlHybrid As Panel
     Friend WithEvents Panel24 As Panel
-    Friend WithEvents Label182 As Label
-    Friend WithEvents Label183 As Label
-    Friend WithEvents Label184 As Label
-    Friend WithEvents Label185 As Label
-    Friend WithEvents Button21 As Button
+    Friend WithEvents color9txt As Label
+    Friend WithEvents mileage9txt As Label
+    Friend WithEvents seatcapacitytxt As Label
+    Friend WithEvents make9txt As Label
+    Friend WithEvents car9btn As Button
     Friend WithEvents Label186 As Label
     Friend WithEvents Label187 As Label
     Friend WithEvents Label188 As Label
-    Friend WithEvents PictureBox22 As PictureBox
-    Friend WithEvents Label189 As Label
+    Friend WithEvents car9img As PictureBox
+    Friend WithEvents model9txt As Label
     Friend WithEvents Label190 As Label
+    Friend WithEvents color6txt As System.Windows.Forms.Label
+    Friend WithEvents mileage6txt As System.Windows.Forms.Label
+    Friend WithEvents seatcapacity6txt As System.Windows.Forms.Label
+    Friend WithEvents make6txt As System.Windows.Forms.Label
+
 End Class
