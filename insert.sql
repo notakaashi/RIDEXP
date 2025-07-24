@@ -81,7 +81,7 @@ INSERT INTO cars (car_category_id, make, model_name, year, license_plate, color,
 (1, 'Honda', 'City 1.5 S CVT', 2022, 'MNO-5678', 'Ignite Red', 5, 28000, 1),
 (3, 'Toyota', 'Fortuner 2.4 G Diesel 4x2 AT', 2021, 'PQR-6789', 'Attitude Black', 7, 45000, 1),
 (5, 'Suzuki', 'Swift GL 1.2 CVT', 2023, 'STU-7890', 'Burning Red', 5, 12000, 1),
-(2, 'Honda', 'BR-V 1.5 VX CVT', 2022, 'VWX-8901', 'Crystal Black', 7, 25000, 1),
+(2, 'Honda', ' Civic Type R VTEC ', 2021, 'VWX-8901', 'Red', 7, 25000, 1),
 (6, 'Toyota', 'Corolla Altis 1.8 Hybrid CVT', 2023, 'YZA-9012', 'White Pearl', 5, 8000, 1),
 (4, 'Toyota', 'Rush 1.5 G AT', 2022, 'BCD-0123', 'Silver Mica Metallic', 7, 32000, 1);
 
@@ -211,7 +211,7 @@ INSERT INTO rental_rate (vehicle_id, rate_per_hour, rate_per_day, effective_date
 (16, 500.00, 4000.00,  '2024-01-01'),
 -- Suzuki Swift (Hatchback)
 (17, 220.00, 1600.00, '2024-01-01'),
--- Honda BR-V (Compact SUV)
+-- Honda  Civic Type R VTEC 
 (18, 300.00, 2400.00,  '2024-01-01'),
 -- Toyota Corolla Altis Hybrid (Premium sedan)
 (19, 350.00, 2800.00,  '2024-01-01'),
@@ -222,3 +222,14 @@ INSERT INTO user (username, password_hash, role_id, created_at)
 VALUES 
   ('JONEL', SHA2('admin', 256), 1, NOW()),
   ('MARCUS', SHA2('admin', 256), 1, NOW());
+
+INSERT INTO cars_pic (car_id, image) VALUES (1, 'vios');
+INSERT INTO cars_pic (car_id, image) VALUES (2, 'xpander');
+INSERT INTO cars_pic (car_id, image) VALUES (3, 'innova');
+INSERT INTO cars_pic (car_id, image) VALUES (4, 'ertiga');
+INSERT INTO cars_pic (car_id, image) VALUES (5, 'city');
+INSERT INTO cars_pic (car_id, image) VALUES (6, 'fortuner');
+INSERT INTO cars_pic (car_id, image) VALUES (7, 'swift');
+INSERT INTO cars_pic (car_id, image) VALUES (8, 'civic');
+INSERT INTO cars_pic (car_id, image) VALUES (9, 'corolla');
+INSERT INTO cars_pic (car_id, image) VALUES (10, 'rush');

@@ -127,14 +127,14 @@
   <data name="USER_LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\USER_LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RIDEXPRESS (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RIDEXPRESS (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RIDEXPRESS (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RIDEXPRESS (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="income_iconwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\income_iconwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RIDEXPRESS (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RIDEXPRESS (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="vios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="users_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\users_logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -147,6 +147,9 @@
   </data>
   <data name="arrow_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_red1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RIDEXPRESS (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RIDEXPRESS (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RIDEXPRESS (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RIDEXPRESS (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +169,31 @@
   <data name="arrow_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="city" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\city.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ertiga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ertiga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="innova" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\innova.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xpander" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xpander.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rush" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rush.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="corolla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\corolla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="civic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\civic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="swift" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\swift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fortuner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fortuner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

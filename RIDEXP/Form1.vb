@@ -103,6 +103,8 @@
         btnMotor.BackColor = Color.White
         btnCar.ForeColor = Color.White
         btnMotor.ForeColor = Color.Black
+        pnlVehicleType.Visible = False
+        ResetRentalsLabelColor()
     End Sub
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnMotor.Click
         allmotors.Show()
@@ -110,5 +112,7 @@
         btnCar.BackColor = Color.White
         btnMotor.ForeColor = Color.White
         btnCar.ForeColor = Color.Black
+        pnlVehicleType.Visible = False
+        ResetRentalsLabelColor()
     End Sub
 End Class
