@@ -1,11 +1,14 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class FORMRENTAL_STEP3
-    Dim conn As New MySqlConnection("server=localhost;userid=root;password=;database=ridexp")
 
     Private Sub LoadCarInfo(carId As Integer)
         Try
-            conn.Open()
+            ' Check if we have a valid connection and transaction
+            If RentalTransactionModule.conn Is Nothing OrElse RentalTransactionModule.conn.State <> ConnectionState.Open Then
+                MessageBox.Show("No active database connection.")
+                Return
+            End If
 
             Dim cmd As New MySqlCommand("
             SELECT 
@@ -20,62 +23,195 @@ Public Class FORMRENTAL_STEP3
             LEFT JOIN fuel_types ft ON cc.fuel_id = ft.fuel_id
             LEFT JOIN transmission_types tt ON cc.transmission_id = tt.transmission_id
             LEFT JOIN cars_pic cp ON c.car_id = cp.car_id
-            WHERE c.car_id = @carId", conn)
+            WHERE c.car_id = @carId", RentalTransactionModule.conn)
 
             cmd.Parameters.AddWithValue("@carId", carId)
-
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
             If reader.Read() Then
-                mileagetxt.Text = reader("mileage").ToString()
-                seatcapacitytxt.Text = reader("seating_capacity").ToString()
-                fueltxt.Text = reader("fuel_type").ToString()
-                transmissiontxt.Text = reader("transmission_type").ToString()
+                mileagetxt.Text = If(IsDBNull(reader("mileage")), "N/A", reader("mileage").ToString())
+                seatcapacitytxt.Text = If(IsDBNull(reader("seating_capacity")), "N/A", reader("seating_capacity").ToString())
+                fueltxt.Text = If(IsDBNull(reader("fuel_type")), "N/A", reader("fuel_type").ToString())
+                transmissiontxt.Text = If(IsDBNull(reader("transmission_type")), "N/A", reader("transmission_type").ToString())
 
-                ' Get image name from DB and fetch it from resources
+                ' Handle image loading
                 If Not IsDBNull(reader("image")) Then
-                    Dim imageName As String = IO.Path.GetFileNameWithoutExtension(reader("image").ToString())
-                    Dim resImage = My.Resources.ResourceManager.GetObject(imageName)
+                    Dim imageName As String = reader("image").ToString().Trim()
 
-                    If resImage IsNot Nothing Then
-                        PictureBox4.Image = CType(resImage, Image)
-                    Else
+                    Try
+                        ' Use reflection to get the resource property
+                        Dim resourcesType As Type = GetType(My.Resources.Resources)
+                        Dim imageProperty As Reflection.PropertyInfo = resourcesType.GetProperty(imageName)
+
+                        If imageProperty IsNot Nothing Then
+                            Dim resImage = imageProperty.GetValue(Nothing, Nothing)
+                            If resImage IsNot Nothing AndAlso TypeOf resImage Is Image Then
+                                PictureBox4.Image = CType(resImage, Image)
+                            Else
+                                PictureBox4.Image = Nothing
+                            End If
+                        Else
+                            PictureBox4.Image = Nothing
+                        End If
+
+                    Catch resEx As Exception
                         PictureBox4.Image = Nothing
-                        MessageBox.Show("Image '" & imageName & "' not found in resources.")
-                    End If
+                    End Try
                 Else
                     PictureBox4.Image = Nothing
                 End If
 
                 PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
             Else
-                MessageBox.Show("Car not found.")
+                MessageBox.Show("Car not found with ID: " & carId)
+                ' Set default values
+                mileagetxt.Text = "N/A"
+                seatcapacitytxt.Text = "N/A"
+                fueltxt.Text = "N/A"
+                transmissiontxt.Text = "N/A"
+                PictureBox4.Image = Nothing
             End If
 
             reader.Close()
-            conn.Close()
 
         Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-            If conn.State = ConnectionState.Open Then conn.Close()
+            MessageBox.Show("Error loading car info: " & ex.Message)
         End Try
     End Sub
 
+    ' Load and display all transaction data
+    Private Sub LoadTransactionDataToLabels()
+        Try
+            With RentalTransactionModule.TransactionData
 
+                ' Debug: Show what data we have
+                MessageBox.Show($"Loading data for Car ID: { .SelectedCarId}" & vbCrLf &
+                               $"Pickup Date: { .PickupDate}" & vbCrLf &
+                               $"Pickup Time: { .PickupTime}" & vbCrLf &
+                               $"Pickup Place: { .PickupPlace}" & vbCrLf &
+                               $"Return Date: { .ReturnDate}" & vbCrLf &
+                               $"Return Place: { .ReturnPlace}")
+
+                ' Display pickup information
+                If .PickupDate <> Nothing Then
+                    ' Assuming you want pickup date somewhere - you didn't mention a pickup date label
+                    ' If you have one, uncomment: pickupdatelbl.Text = .PickupDate.ToString("MMMM dd, yyyy")
+                End If
+
+                If Not String.IsNullOrEmpty(.PickupTime) Then
+                    pickuptimelbl.Text = .PickupTime
+                Else
+                    pickuptimelbl.Text = "Not set"
+                End If
+
+                If Not String.IsNullOrEmpty(.PickupPlace) Then
+                    pickuploclbl.Text = .PickupPlace
+                Else
+                    pickuploclbl.Text = "Not set"
+                End If
+
+                ' Display return information  
+                If .ReturnDate <> Nothing Then
+                    returndatelbl.Text = .ReturnDate.ToString("MMMM dd, yyyy")
+                Else
+                    returndatelbl.Text = "Not set"
+                End If
+
+                If Not String.IsNullOrEmpty(.ReturnPlace) Then
+                    returnloclbl.Text = .ReturnPlace
+                Else
+                    returnloclbl.Text = "Not set"
+                End If
+
+            End With
+        Catch ex As Exception
+            MessageBox.Show("Error loading transaction data: " & ex.Message)
+        End Try
+    End Sub
 
     Private Sub FORMRENTAL_STEP3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadCarInfo(3)
+        Try
+            ' Check if we have transaction data
+            If RentalTransactionModule.TransactionData.SelectedCarId <= 0 Then
+                MessageBox.Show("No car selected. Please start from car selection.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Me.Close()
+                Return
+            End If
+
+            ' If transaction is null but we have data, try to reconnect
+            If RentalTransactionModule.transaction Is Nothing OrElse RentalTransactionModule.conn Is Nothing OrElse RentalTransactionModule.conn.State <> ConnectionState.Open Then
+                MessageBox.Show("Reconnecting to database...")
+                If Not RentalTransactionModule.StartTransaction() Then
+                    MessageBox.Show("Failed to reconnect. Please start over.")
+                    Me.Close()
+                    Return
+                End If
+            End If
+
+            ' Load car information using the selected car ID from transaction
+            LoadCarInfo(RentalTransactionModule.TransactionData.SelectedCarId)
+
+            ' Load and display all transaction data
+            LoadTransactionDataToLabels()
+
+        Catch ex As Exception
+            MessageBox.Show("Error in Form Load: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        FORMRENTAL_STEP4.Show()
-        Me.Close()
+        Try
+            ' Simple validation
+            If RentalTransactionModule.TransactionData.SelectedCarId <= 0 Then
+                MessageBox.Show("No car selected.")
+                Return
+            End If
+
+            ' Mark as confirmed
+            RentalTransactionModule.TransactionData.CustomerConfirmed = True
+
+            ' Proceed to payment form
+            FORMRENTAL_STEP4.Show()
+            Me.Hide() ' Hide instead of close to preserve transaction
+
+        Catch ex As Exception
+            MessageBox.Show("Error proceeding to payment: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub homelbl_Click(sender As Object, e As EventArgs) Handles homelbl.Click
-        Form1.Show()
-        Me.Close()
+        Try
+            ' Ask for confirmation before cancelling
+            If MessageBox.Show("Are you sure you want to cancel this booking? All data will be lost.",
+                              "Confirm Cancellation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+
+                ' Rollback transaction
+                RentalTransactionModule.RollbackTransaction()
+
+                ' Go to home
+                Form1.Show()
+                Me.Close()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error cancelling booking: " & ex.Message)
+        End Try
     End Sub
 
+    ' Optional: Add a back button handler
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Try
+            ' Go back to previous form (Step 2)
+            Dim step2Form As New FORMRENTAL_STEP2() ' Replace with your actual step 2 form name
+            step2Form.Show()
+            Me.Hide()
+        Catch ex As Exception
+            MessageBox.Show("Error going back: " & ex.Message)
+        End Try
+    End Sub
+
+    ' Form closing event
+    Private Sub FORMRENTAL_STEP3_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        ' Don't automatically rollback here since user might be navigating between forms
+    End Sub
 
 End Class

@@ -55,22 +55,23 @@ Partial Class FORMRENTAL_STEP3
         Label24 = New Label()
         Label22 = New Label()
         Panel5 = New Panel()
-        Label15 = New Label()
-        Label16 = New Label()
-        Label17 = New Label()
+        returntimelbl = New Label()
+        returndatelbl = New Label()
+        returnloclbl = New Label()
         Label18 = New Label()
         Label19 = New Label()
         Label20 = New Label()
         Label27 = New Label()
         Panel4 = New Panel()
-        Label14 = New Label()
-        Label13 = New Label()
-        Label1 = New Label()
+        pickuptimelbl = New Label()
+        pickupdatelbl = New Label()
+        pickuploclbl = New Label()
         Label12 = New Label()
         Label11 = New Label()
         Label10 = New Label()
         Panel6 = New Panel()
         Label21 = New Label()
+        btnBack = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -457,9 +458,9 @@ Partial Class FORMRENTAL_STEP3
         ' Panel5
         ' 
         Panel5.BorderStyle = BorderStyle.FixedSingle
-        Panel5.Controls.Add(Label15)
-        Panel5.Controls.Add(Label16)
-        Panel5.Controls.Add(Label17)
+        Panel5.Controls.Add(returntimelbl)
+        Panel5.Controls.Add(returndatelbl)
+        Panel5.Controls.Add(returnloclbl)
         Panel5.Controls.Add(Label18)
         Panel5.Controls.Add(Label19)
         Panel5.Controls.Add(Label20)
@@ -469,35 +470,35 @@ Partial Class FORMRENTAL_STEP3
         Panel5.Size = New Size(444, 252)
         Panel5.TabIndex = 22
         ' 
-        ' Label15
+        ' returntimelbl
         ' 
-        Label15.AutoSize = True
-        Label15.Font = New Font("Futura Hv BT", 13.8F)
-        Label15.Location = New Point(54, 214)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(83, 22)
-        Label15.TabIndex = 21
-        Label15.Text = "Label15"
+        returntimelbl.AutoSize = True
+        returntimelbl.Font = New Font("Futura Hv BT", 13.8F)
+        returntimelbl.Location = New Point(54, 214)
+        returntimelbl.Name = "returntimelbl"
+        returntimelbl.Size = New Size(83, 22)
+        returntimelbl.TabIndex = 21
+        returntimelbl.Text = "Label15"
         ' 
-        ' Label16
+        ' returndatelbl
         ' 
-        Label16.AutoSize = True
-        Label16.Font = New Font("Futura Hv BT", 13.8F)
-        Label16.Location = New Point(54, 130)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(83, 22)
-        Label16.TabIndex = 20
-        Label16.Text = "Label16"
+        returndatelbl.AutoSize = True
+        returndatelbl.Font = New Font("Futura Hv BT", 13.8F)
+        returndatelbl.Location = New Point(54, 130)
+        returndatelbl.Name = "returndatelbl"
+        returndatelbl.Size = New Size(83, 22)
+        returndatelbl.TabIndex = 20
+        returndatelbl.Text = "Label16"
         ' 
-        ' Label17
+        ' returnloclbl
         ' 
-        Label17.AutoSize = True
-        Label17.Font = New Font("Futura Hv BT", 13.8F)
-        Label17.Location = New Point(54, 46)
-        Label17.Name = "Label17"
-        Label17.Size = New Size(83, 22)
-        Label17.TabIndex = 19
-        Label17.Text = "Label17"
+        returnloclbl.AutoSize = True
+        returnloclbl.Font = New Font("Futura Hv BT", 13.8F)
+        returnloclbl.Location = New Point(54, 46)
+        returnloclbl.Name = "returnloclbl"
+        returnloclbl.Size = New Size(83, 22)
+        returnloclbl.TabIndex = 19
+        returnloclbl.Text = "Label17"
         ' 
         ' Label18
         ' 
@@ -550,9 +551,9 @@ Partial Class FORMRENTAL_STEP3
         ' Panel4
         ' 
         Panel4.BorderStyle = BorderStyle.FixedSingle
-        Panel4.Controls.Add(Label14)
-        Panel4.Controls.Add(Label13)
-        Panel4.Controls.Add(Label1)
+        Panel4.Controls.Add(pickuptimelbl)
+        Panel4.Controls.Add(pickupdatelbl)
+        Panel4.Controls.Add(pickuploclbl)
         Panel4.Controls.Add(Label12)
         Panel4.Controls.Add(Label11)
         Panel4.Controls.Add(Label10)
@@ -563,38 +564,38 @@ Partial Class FORMRENTAL_STEP3
         Panel4.Size = New Size(444, 252)
         Panel4.TabIndex = 3
         ' 
-        ' Label14
+        ' pickuptimelbl
         ' 
-        Label14.AutoSize = True
-        Label14.Font = New Font("Futura Hv BT", 13.8F)
-        Label14.ForeColor = Color.Black
-        Label14.Location = New Point(54, 211)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(83, 22)
-        Label14.TabIndex = 21
-        Label14.Text = "Label14"
+        pickuptimelbl.AutoSize = True
+        pickuptimelbl.Font = New Font("Futura Hv BT", 13.8F)
+        pickuptimelbl.ForeColor = Color.Black
+        pickuptimelbl.Location = New Point(54, 211)
+        pickuptimelbl.Name = "pickuptimelbl"
+        pickuptimelbl.Size = New Size(83, 22)
+        pickuptimelbl.TabIndex = 21
+        pickuptimelbl.Text = "Label14"
         ' 
-        ' Label13
+        ' pickupdatelbl
         ' 
-        Label13.AutoSize = True
-        Label13.Font = New Font("Futura Hv BT", 13.8F)
-        Label13.ForeColor = Color.Black
-        Label13.Location = New Point(54, 130)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(83, 22)
-        Label13.TabIndex = 20
-        Label13.Text = "Label13"
+        pickupdatelbl.AutoSize = True
+        pickupdatelbl.Font = New Font("Futura Hv BT", 13.8F)
+        pickupdatelbl.ForeColor = Color.Black
+        pickupdatelbl.Location = New Point(54, 130)
+        pickupdatelbl.Name = "pickupdatelbl"
+        pickupdatelbl.Size = New Size(83, 22)
+        pickupdatelbl.TabIndex = 20
+        pickupdatelbl.Text = "Label13"
         ' 
-        ' Label1
+        ' pickuploclbl
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Futura Hv BT", 13.8F)
-        Label1.ForeColor = Color.Black
-        Label1.Location = New Point(54, 46)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(71, 22)
-        Label1.TabIndex = 19
-        Label1.Text = "Label1"
+        pickuploclbl.AutoSize = True
+        pickuploclbl.Font = New Font("Futura Hv BT", 13.8F)
+        pickuploclbl.ForeColor = Color.Black
+        pickuploclbl.Location = New Point(54, 46)
+        pickuploclbl.Name = "pickuploclbl"
+        pickuploclbl.Size = New Size(71, 22)
+        pickuploclbl.TabIndex = 19
+        pickuploclbl.Text = "Label1"
         ' 
         ' Label12
         ' 
@@ -655,19 +656,29 @@ Partial Class FORMRENTAL_STEP3
         Label21.TabIndex = 16
         Label21.Text = "BOOKING INFORMATION"
         ' 
+        ' btnBack
+        ' 
+        btnBack.Location = New Point(-5, 112)
+        btnBack.Name = "btnBack"
+        btnBack.Size = New Size(75, 23)
+        btnBack.TabIndex = 28
+        btnBack.Text = "Button2"
+        btnBack.UseVisualStyleBackColor = True
+        ' 
         ' FORMRENTAL_STEP3
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.RIDEXPRESS__5_
         ClientSize = New Size(1104, 505)
+        Controls.Add(btnBack)
         Controls.Add(Panel2)
         Controls.Add(Panel3)
         Controls.Add(Panel1)
         Margin = New Padding(3, 2, 3, 2)
         Name = "FORMRENTAL_STEP3"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "FORMRENTAL_STEP2"
+        Text = "FORMRENTAL_STEP3"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
@@ -705,9 +716,9 @@ Partial Class FORMRENTAL_STEP3
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents pickuptimelbl As Label
+    Friend WithEvents pickupdatelbl As Label
+    Friend WithEvents pickuploclbl As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
@@ -715,9 +726,9 @@ Partial Class FORMRENTAL_STEP3
     Friend WithEvents Label27 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
+    Friend WithEvents returntimelbl As Label
+    Friend WithEvents returndatelbl As Label
+    Friend WithEvents returnloclbl As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
@@ -736,4 +747,5 @@ Partial Class FORMRENTAL_STEP3
     Friend WithEvents mileagetxt As Label
     Friend WithEvents Panel7 As Panel
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents btnBack As Button
 End Class

@@ -27,8 +27,8 @@ Partial Class FORMRENTAL_STEP2
         Panel5 = New Panel()
         deliverbtn = New RadioButton()
         pickupbtn = New RadioButton()
-        TextBox2 = New TextBox()
-        DateTimePicker2 = New DateTimePicker()
+        pickuptimetxtbox = New TextBox()
+        PickupDatePicker = New DateTimePicker()
         pickuptxtbox = New TextBox()
         Label12 = New Label()
         Label11 = New Label()
@@ -51,8 +51,8 @@ Partial Class FORMRENTAL_STEP2
         Panel6 = New Panel()
         collectbtn = New RadioButton()
         returnbtn = New RadioButton()
-        TextBox3 = New TextBox()
-        DateTimePicker3 = New DateTimePicker()
+        returntimetxtbox = New TextBox()
+        ReturnDatePicker = New DateTimePicker()
         returntxtbox = New TextBox()
         Label13 = New Label()
         Label14 = New Label()
@@ -79,8 +79,8 @@ Partial Class FORMRENTAL_STEP2
         ' 
         Panel2.BackColor = Color.White
         Panel2.Controls.Add(Panel5)
-        Panel2.Controls.Add(TextBox2)
-        Panel2.Controls.Add(DateTimePicker2)
+        Panel2.Controls.Add(pickuptimetxtbox)
+        Panel2.Controls.Add(PickupDatePicker)
         Panel2.Controls.Add(pickuptxtbox)
         Panel2.Controls.Add(Label12)
         Panel2.Controls.Add(Label11)
@@ -128,23 +128,23 @@ Partial Class FORMRENTAL_STEP2
         pickupbtn.Text = "PICK-UP AT STATION"
         pickupbtn.UseVisualStyleBackColor = True
         ' 
-        ' TextBox2
+        ' pickuptimetxtbox
         ' 
-        TextBox2.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(767, 42)
-        TextBox2.Margin = New Padding(3, 2, 3, 2)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(168, 27)
-        TextBox2.TabIndex = 21
+        pickuptimetxtbox.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        pickuptimetxtbox.Location = New Point(767, 42)
+        pickuptimetxtbox.Margin = New Padding(3, 2, 3, 2)
+        pickuptimetxtbox.Name = "pickuptimetxtbox"
+        pickuptimetxtbox.Size = New Size(168, 27)
+        pickuptimetxtbox.TabIndex = 21
         ' 
-        ' DateTimePicker2
+        ' PickupDatePicker
         ' 
-        DateTimePicker2.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker2.Location = New Point(471, 42)
-        DateTimePicker2.Margin = New Padding(3, 2, 3, 2)
-        DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(281, 27)
-        DateTimePicker2.TabIndex = 20
+        PickupDatePicker.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        PickupDatePicker.Location = New Point(471, 42)
+        PickupDatePicker.Margin = New Padding(3, 2, 3, 2)
+        PickupDatePicker.Name = "PickupDatePicker"
+        PickupDatePicker.Size = New Size(281, 27)
+        PickupDatePicker.TabIndex = 20
         ' 
         ' pickuptxtbox
         ' 
@@ -372,8 +372,8 @@ Partial Class FORMRENTAL_STEP2
         ' 
         Panel4.BackColor = Color.White
         Panel4.Controls.Add(Panel6)
-        Panel4.Controls.Add(TextBox3)
-        Panel4.Controls.Add(DateTimePicker3)
+        Panel4.Controls.Add(returntimetxtbox)
+        Panel4.Controls.Add(ReturnDatePicker)
         Panel4.Controls.Add(returntxtbox)
         Panel4.Controls.Add(Label13)
         Panel4.Controls.Add(Label14)
@@ -421,23 +421,23 @@ Partial Class FORMRENTAL_STEP2
         returnbtn.Text = "RETURN AT STATION"
         returnbtn.UseVisualStyleBackColor = True
         ' 
-        ' TextBox3
+        ' returntimetxtbox
         ' 
-        TextBox3.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox3.Location = New Point(767, 42)
-        TextBox3.Margin = New Padding(3, 2, 3, 2)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(168, 27)
-        TextBox3.TabIndex = 21
+        returntimetxtbox.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        returntimetxtbox.Location = New Point(767, 42)
+        returntimetxtbox.Margin = New Padding(3, 2, 3, 2)
+        returntimetxtbox.Name = "returntimetxtbox"
+        returntimetxtbox.Size = New Size(168, 27)
+        returntimetxtbox.TabIndex = 21
         ' 
-        ' DateTimePicker3
+        ' ReturnDatePicker
         ' 
-        DateTimePicker3.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker3.Location = New Point(471, 42)
-        DateTimePicker3.Margin = New Padding(3, 2, 3, 2)
-        DateTimePicker3.Name = "DateTimePicker3"
-        DateTimePicker3.Size = New Size(281, 27)
-        DateTimePicker3.TabIndex = 20
+        ReturnDatePicker.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        ReturnDatePicker.Location = New Point(471, 42)
+        ReturnDatePicker.Margin = New Padding(3, 2, 3, 2)
+        ReturnDatePicker.Name = "ReturnDatePicker"
+        ReturnDatePicker.Size = New Size(281, 27)
+        ReturnDatePicker.TabIndex = 20
         ' 
         ' returntxtbox
         ' 
@@ -540,11 +540,11 @@ Partial Class FORMRENTAL_STEP2
     Friend WithEvents Label9 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents pickuptimetxtbox As TextBox
+    Friend WithEvents PickupDatePicker As DateTimePicker
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents DateTimePicker3 As DateTimePicker
+    Friend WithEvents returntimetxtbox As TextBox
+    Friend WithEvents ReturnDatePicker As DateTimePicker
     Friend WithEvents returntxtbox As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label

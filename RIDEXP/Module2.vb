@@ -2,20 +2,22 @@
 
 Public Module RentalTransactionModule
 
+    ' Database connection and transaction objects
     Public conn As MySqlConnection
     Public transaction As MySqlTransaction
 
+    ' Transaction data structure
     Public Structure RentalTransactionData
         ' Form 1 - Car Selection
         Public SelectedCarId As Integer
         Public SelectedCarName As String
         Public DailyRate As Decimal
 
-        ' Form 2 - Date, Time, Location 
+        ' Form 2 - Date, Time, Location (Current Form)
         Public PickupDate As Date
-        Public PickupTime As TimeSpan
+        Public PickupTime As String
         Public ReturnDate As Date
-        Public ReturnTime As TimeSpan
+        Public ReturnTime As String
         Public RentalDurationDays As Integer
         Public PickupPlace As String
         Public ReturnPlace As String
@@ -44,7 +46,7 @@ Public Module RentalTransactionModule
     Public Function StartTransaction() As Boolean
         Try
             If conn Is Nothing Then
-                conn = New MySqlConnection("your_connection_string_here") ' Replace with your connection string
+                conn = New MySqlConnection("server=localhost;userid=root;password=;database=ridexp")
             End If
 
             If conn.State <> ConnectionState.Open Then
@@ -52,9 +54,14 @@ Public Module RentalTransactionModule
             End If
 
             transaction = conn.BeginTransaction()
+
+            ' Initialize transaction data
+            TransactionData = New RentalTransactionData()
+
             Return True
         Catch ex As Exception
             MessageBox.Show("Error starting transaction: " & ex.Message)
+            CleanupTransaction()
             Return False
         End Try
     End Function
@@ -113,15 +120,25 @@ Public Module RentalTransactionModule
         TransactionData = New RentalTransactionData()
     End Sub
 
+    ' Save Form 1 data (Car Selection)
+    Public Sub SaveForm1Data(carId As Integer, carName As String, dailyRate As Decimal, vehicleType As String)
+        With TransactionData
+            .SelectedCarId = carId
+            .SelectedCarName = carName
+            .DailyRate = dailyRate
+        End With
+    End Sub
+
     ' Save Form 2 data (Date, Time, Location)
-    Public Sub SaveForm2Data(pickupDate As Date, pickupTime As TimeSpan, returnDate As Date, returnTime As TimeSpan,
+    Public Sub SaveForm2Data(pickupDate As Date, pickupTime As String, returnDate As Date, returnTime As String,
                            pickupPlace As String, returnPlace As String, isPickupAtStation As Boolean, isReturnAtStation As Boolean)
         With TransactionData
-            .PickupDate = pickupDate
+            ' Save only the date part (remove time component)
+            .PickupDate = pickupDate.Date
             .PickupTime = pickupTime
-            .ReturnDate = returnDate
+            .ReturnDate = returnDate.Date
             .ReturnTime = returnTime
-            .RentalDurationDays = CInt((returnDate - pickupDate).TotalDays)
+            .RentalDurationDays = CInt((returnDate.Date - pickupDate.Date).TotalDays)
             If .RentalDurationDays < 1 Then .RentalDurationDays = 1
             .PickupPlace = pickupPlace
             .ReturnPlace = returnPlace
@@ -148,10 +165,12 @@ Public Module RentalTransactionModule
             With cmd.Parameters
                 .AddWithValue("@reservation_id", If(TransactionData.ReservationId = 0, DBNull.Value, TransactionData.ReservationId))
                 .AddWithValue("@rental_duration_days", TransactionData.RentalDurationDays)
-                .AddWithValue("@pickup_date", TransactionData.PickupDate)
-                .AddWithValue("@pickup_time", TransactionData.PickupTime)
-                .AddWithValue("@return_date", TransactionData.ReturnDate)
-                .AddWithValue("@return_time", TransactionData.ReturnTime)
+                ' Format dates properly for MySQL (YYYY-MM-DD)
+                .AddWithValue("@pickup_date", TransactionData.PickupDate.ToString("yyyy-MM-dd"))
+                ' Parse time string to TimeSpan for MySQL TIME format
+                .AddWithValue("@pickup_time", If(String.IsNullOrEmpty(TransactionData.PickupTime), DBNull.Value, TimeSpan.Parse(TransactionData.PickupTime)))
+                .AddWithValue("@return_date", TransactionData.ReturnDate.ToString("yyyy-MM-dd"))
+                .AddWithValue("@return_time", If(String.IsNullOrEmpty(TransactionData.ReturnTime), DBNull.Value, TimeSpan.Parse(TransactionData.ReturnTime)))
                 .AddWithValue("@customer_id", TransactionData.CustomerId)
                 .AddWithValue("@vehicle_id", TransactionData.SelectedCarId)
                 .AddWithValue("@amount", TransactionData.TotalAmount)

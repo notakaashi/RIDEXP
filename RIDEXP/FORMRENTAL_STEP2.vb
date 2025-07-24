@@ -4,7 +4,7 @@
         If ValidateForm() Then
 
             FORMRENTAL_STEP3.Show()
-
+            SaveFormDataToModule()
             Me.Close()
         End If
 
@@ -16,7 +16,6 @@
             End If
         End If
 
-        ' Load any existing data (if coming back from next form)
         LoadExistingData()
     End Sub
 
@@ -26,6 +25,14 @@
     End Sub
 
     Private Sub FORMRENTAL_STEP2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If RentalTransactionModule.transaction Is Nothing Then
+            MessageBox.Show("No active transaction found. Returning to car selection.")
+            Dim step1Form As New FORMRENTAL_STEP1()
+            step1Form.Show()
+            Me.Close()
+            Return
+        End If
+
         pickupbtn.Checked = True
         returnbtn.Checked = True
 
@@ -74,6 +81,17 @@
         End If
     End Sub
     Public Function ValidateForm() As Boolean
+        If PickupDatePicker.Value.Date < Date.Today Then
+            MessageBox.Show("Pickup date cannot be in the past.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            PickupDatePicker.Focus()
+            Return False
+        End If
+
+        If ReturnDatePicker.Value.Date <= PickupDatePicker.Value.Date Then
+            MessageBox.Show("Return date must be after pickup date.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            ReturnDatePicker.Focus()
+            Return False
+        End If
         If deliverbtn.Checked AndAlso String.IsNullOrWhiteSpace(pickuptxtbox.Text) Then
             MessageBox.Show("Please enter a delivery address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             pickuptxtbox.Focus()
@@ -88,4 +106,55 @@
 
         Return True
     End Function
+
+    Private Sub SaveFormDataToModule()
+        RentalTransactionModule.SaveForm2Data(
+            PickupDatePicker.Value.Date,        ' .Date removes the time component
+            pickuptimetxtbox.Text.Trim(),      ' Time as string from textbox
+            ReturnDatePicker.Value.Date,        ' .Date removes the time component  
+            returntimetxtbox.Text.Trim(),      ' Time as string from textbox
+            pickuptxtbox.Text.Trim(),
+            returntxtbox.Text.Trim(),
+            pickupbtn.Checked,
+            returnbtn.Checked
+        )
+    End Sub
+
+
+    Private Sub LoadExistingData()
+        With RentalTransactionModule.TransactionData
+            If .PickupDate <> Nothing Then
+                PickupDatePicker.Value = .PickupDate
+            End If
+            If .ReturnDate <> Nothing Then
+                ReturnDatePicker.Value = .ReturnDate
+            End If
+            If .PickupTime <> Nothing Then
+                returntimetxtbox.Text = .PickupTime
+            End If
+            If .ReturnTime <> Nothing Then
+                returntimetxtbox.Text = .ReturnTime
+            End If
+
+
+            If Not String.IsNullOrEmpty(.PickupPlace) Then
+                If .IsPickupAtStation Then
+                    pickupbtn.Checked = True
+                Else
+                    deliverbtn.Checked = True
+                    pickuptxtbox.Text = .PickupPlace
+                End If
+            End If
+
+            If Not String.IsNullOrEmpty(.ReturnPlace) Then
+                If .IsReturnAtStation Then
+                    returnbtn.Checked = True
+                Else
+                    collectbtn.Checked = True
+                    returntxtbox.Text = .ReturnPlace
+                End If
+            End If
+        End With
+    End Sub
+
 End Class
