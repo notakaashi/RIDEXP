@@ -28,7 +28,7 @@ Public Class allcars
 
     Private Sub LoadSingleCar(conn As MySqlConnection, carId As Integer)
         Try
-            Dim query As String = "SELECT c.model_name, c.make, c.color, c.mileage, cp.image
+            Dim query As String = "SELECT c.model_name, c.make, c.color, c.mileage, c.seating_capacity, cp.image
                                 FROM cars c
                                 LEFT JOIN cars_pic cp ON c.car_id = cp.car_id 
                                 WHERE c.car_id = @carId"
@@ -40,67 +40,76 @@ Public Class allcars
                     If reader.Read() Then
                         ' Set data based on car ID
                         Select Case carId
-                            'Case 1
-                            '    If Not IsDBNull(reader("model_name")) Then model1txt.Text = reader("model_name").ToString()
-                            '    If Not IsDBNull(reader("make")) Then make1txt.Text = reader("make").ToString()
-                            '    If Not IsDBNull(reader("color")) Then color1txt.Text = reader("color").ToString()
-                            '    If Not IsDBNull(reader("mileage")) Then mileage1txt.Text = reader("mileage").ToString() & " km"
-                            '    If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car1PictureBox)
+                            Case 1
+                                If Not IsDBNull(reader("model_name")) Then model1txt.Text = reader("model_name").ToString()
+                                If Not IsDBNull(reader("make")) Then make1txt.Text = reader("make").ToString()
+                                If Not IsDBNull(reader("color")) Then color1txt.Text = reader("color").ToString()
+                                If Not IsDBNull(reader("mileage")) Then mileage1txt.Text = reader("mileage").ToString() & " km"
+                                If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity1txt.Text = reader("seating_capacity").ToString()
+                                If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car1img)
 
-                            'Case 2
-                            '    If Not IsDBNull(reader("model_name")) Then model2txt.Text = reader("model_name").ToString()
-                            '    If Not IsDBNull(reader("make")) Then make2txt.Text = reader("make").ToString()
-                            '    If Not IsDBNull(reader("color")) Then color2txt.Text = reader("color").ToString()
-                            '    If Not IsDBNull(reader("mileage")) Then mileage2txt.Text = reader("mileage").ToString() & " km"
-                            '    If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car2PictureBox)
+                            Case 2
+                                If Not IsDBNull(reader("model_name")) Then model2txt.Text = reader("model_name").ToString()
+                                If Not IsDBNull(reader("make")) Then make2txt.Text = reader("make").ToString()
+                                If Not IsDBNull(reader("color")) Then color2txt.Text = reader("color").ToString()
+                                If Not IsDBNull(reader("mileage")) Then mileage2txt.Text = reader("mileage").ToString() & " km"
+                                If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity2txt.Text = reader("seating_capacity").ToString()
+                                If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car2img)
 
-                            'Case 3
-                            '    If Not IsDBNull(reader("model_name")) Then model3txt.Text = reader("model_name").ToString()
-                            '    If Not IsDBNull(reader("make")) Then make3txt.Text = reader("make").ToString()
-                            '    If Not IsDBNull(reader("color")) Then color3txt.Text = reader("color").ToString()
-                            '    If Not IsDBNull(reader("mileage")) Then mileage3txt.Text = reader("mileage").ToString() & " km"
-                            '    If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car3PictureBox)
+                            Case 3
+                                If Not IsDBNull(reader("model_name")) Then model3txt.Text = reader("model_name").ToString()
+                                If Not IsDBNull(reader("make")) Then make3txt.Text = reader("make").ToString()
+                                If Not IsDBNull(reader("color")) Then color3txt.Text = reader("color").ToString()
+                                If Not IsDBNull(reader("mileage")) Then mileage3txt.Text = reader("mileage").ToString() & " km"
+                                If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity3txt.Text = reader("seating_capacity").ToString()
+                                If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car3img)
 
-                            'Case 4
-                            '    If Not IsDBNull(reader("model_name")) Then model4txt.Text = reader("model_name").ToString()
-                            '    If Not IsDBNull(reader("make")) Then make4txt.Text = reader("make").ToString()
-                            '    If Not IsDBNull(reader("color")) Then color4txt.Text = reader("color").ToString()
-                            '    If Not IsDBNull(reader("mileage")) Then mileage4txt.Text = reader("mileage").ToString() & " km"
-                            '    If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car4PictureBox)
+                            Case 4
+                                If Not IsDBNull(reader("model_name")) Then model4txt.Text = reader("model_name").ToString()
+                                If Not IsDBNull(reader("make")) Then make4txt.Text = reader("make").ToString()
+                                If Not IsDBNull(reader("color")) Then color4txt.Text = reader("color").ToString()
+                                If Not IsDBNull(reader("mileage")) Then mileage4txt.Text = reader("mileage").ToString() & " km"
+                                If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity4txt.Text = reader("seating_capacity").ToString()
+                                If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car4img)
 
                             'Case 5
                             '    If Not IsDBNull(reader("model_name")) Then model5txt.Text = reader("model_name").ToString()
                             '    If Not IsDBNull(reader("make")) Then make5txt.Text = reader("make").ToString()
                             '    If Not IsDBNull(reader("color")) Then color5txt.Text = reader("color").ToString()
                             '    If Not IsDBNull(reader("mileage")) Then mileage5txt.Text = reader("mileage").ToString() & " km"
+                            '    If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity5txt.Text = reader("seating_capacity").ToString()
                             '    If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car5PictureBox)
 
-                            'Case 6
-                            '    If Not IsDBNull(reader("model_name")) Then model6txt.Text = reader("model_name").ToString()
-                            '    If Not IsDBNull(reader("make")) Then make6txt.Text = reader("make").ToString()
-                            '    If Not IsDBNull(reader("color")) Then color6txt.Text = reader("color").ToString()
-                            '    If Not IsDBNull(reader("mileage")) Then mileage6txt.Text = reader("mileage").ToString() & " km"
-                            '    If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car6PictureBox)
+                            Case 6
+                                If Not IsDBNull(reader("model_name")) Then model6txt.Text = reader("model_name").ToString()
+                                If Not IsDBNull(reader("make")) Then make6txt.Text = reader("make").ToString()
+                                If Not IsDBNull(reader("color")) Then color6txt.Text = reader("color").ToString()
+                                If Not IsDBNull(reader("mileage")) Then mileage6txt.Text = reader("mileage").ToString() & " km"
+                                If Not IsDBNull(reader("seating_capacity")) Then seatcapacity6txt.Text = reader("seating_capacity").ToString()
+                                If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car6img)
 
-                            'Case 7
-                            '    If Not IsDBNull(reader("model_name")) Then model7txt.Text = reader("model_name").ToString()
-                            '    If Not IsDBNull(reader("make")) Then make7txt.Text = reader("make").ToString()
-                            '    If Not IsDBNull(reader("color")) Then color7txt.Text = reader("color").ToString()
-                            '    If Not IsDBNull(reader("mileage")) Then mileage7txt.Text = reader("mileage").ToString() & " km"
-                            '    If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car7PictureBox)
+                            Case 7
+                                If Not IsDBNull(reader("model_name")) Then model7txt.Text = reader("model_name").ToString()
+                                If Not IsDBNull(reader("make")) Then make7txt.Text = reader("make").ToString()
+                                If Not IsDBNull(reader("color")) Then color7txt.Text = reader("color").ToString()
+                                If Not IsDBNull(reader("mileage")) Then mileage7txt.Text = reader("mileage").ToString() & " km"
+                                If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity7txt.Text = reader("seating_capacity").ToString()
+                                If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car7img)
 
-                            'Case 8
-                            '    If Not IsDBNull(reader("model_name")) Then model8txt.Text = reader("model_name").ToString()
-                            '    If Not IsDBNull(reader("make")) Then make8txt.Text = reader("make").ToString()
-                            '    If Not IsDBNull(reader("color")) Then color8txt.Text = reader("color").ToString()
-                            '    If Not IsDBNull(reader("mileage")) Then mileage8txt.Text = reader("mileage").ToString() & " km"
-                            '    If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car8PictureBox)
+                            Case 8
+                                If Not IsDBNull(reader("model_name")) Then model8txt.Text = reader("model_name").ToString()
+                                If Not IsDBNull(reader("make")) Then make8txt.Text = reader("make").ToString()
+                                If Not IsDBNull(reader("color")) Then color8txt.Text = reader("color").ToString()
+                                If Not IsDBNull(reader("mileage")) Then mileage8txt.Text = reader("mileage").ToString() & " km"
+                                If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity8txt.Text = reader("seating_capacity").ToString()
+                                If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car8img)
 
                             Case 9
                                 If Not IsDBNull(reader("model_name")) Then model9txt.Text = reader("model_name").ToString()
                                 If Not IsDBNull(reader("make")) Then make9txt.Text = reader("make").ToString()
                                 If Not IsDBNull(reader("color")) Then color9txt.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then mileage9txt.Text = reader("mileage").ToString() & " km"
+                                If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity9txt.Text = reader("seating_capacity").ToString()
                                 If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car9img)
 
                                 'Case 10
@@ -108,6 +117,7 @@ Public Class allcars
                                 '    If Not IsDBNull(reader("make")) Then make10txt.Text = reader("make").ToString()
                                 '    If Not IsDBNull(reader("color")) Then color10txt.Text = reader("color").ToString()
                                 '    If Not IsDBNull(reader("mileage")) Then mileage10txt.Text = reader("mileage").ToString() & " km"
+                                '    If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity10txt.Text = reader("seating_capacity").ToString()
                                 '    If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car10PictureBox)
                         End Select
                     End If
@@ -271,4 +281,67 @@ Public Class allcars
 
         Return True
     End Function
+
+    Private Sub car6btn_Click(sender As Object, e As EventArgs) Handles car6btn.Click
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectCar(6, "Toyota Fortuner", 800, "Car")
+    End Sub
+
+    Private Sub car7btn_Click(sender As Object, e As EventArgs) Handles car7btn.Click
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectCar(7, "Suzuki Swift", 1000, "Car")
+    End Sub
+
+    Private Sub car2btn_Click(sender As Object, e As EventArgs) Handles car2btn.Click
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectCar(2, "Mitsubishi Xpander", 900, "Car")
+    End Sub
+
+    Private Sub car3btn_Click(sender As Object, e As EventArgs) Handles car3btn.Click
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectCar(3, "Toyota Innova", 750, "Car")
+    End Sub
+
+    Private Sub car4btn_Click(sender As Object, e As EventArgs) Handles car4btn.Click
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectCar(4, "Suzuki Ertiga", 650, "Car")
+    End Sub
+
+    Private Sub car8btn_Click(sender As Object, e As EventArgs) Handles car8btn.Click
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectCar(8, "Honda Civic", 1100, "Car")
+    End Sub
+
+    Private Sub car1btn_Click(sender As Object, e As EventArgs) Handles car1btn.Click
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectCar(1, "Toyota Vios", 600, "Car")
+    End Sub
 End Class
