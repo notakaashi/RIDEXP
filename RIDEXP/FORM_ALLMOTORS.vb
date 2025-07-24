@@ -212,39 +212,84 @@ Public Class FORM_ALLMOTORS
     End Sub
 
     Private Sub motor10btn_Click(sender As Object, e As EventArgs) Handles motor10btn.Click
-
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectMotor(10, "Honda ADV", 2500, "Motor", 20)
     End Sub
 
     Private Sub motor7btn_Click(sender As Object, e As EventArgs) Handles motor7btn.Click
-
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectMotor(7, "Suzuki Raider", 1600, "Motor", 17)
     End Sub
 
     Private Sub motor8btn_Click(sender As Object, e As EventArgs) Handles motor8btn.Click
-
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectMotor(8, "Kawasaki Barako", 2400, "Motor", 18)
     End Sub
 
     Private Sub motor2btn_Click(sender As Object, e As EventArgs) Handles motor2btn.Click
-
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectMotor(2, "Yamaha Mio Aerox", 2500, "Motor", 12)
     End Sub
 
     Private Sub btnmotor3_Click(sender As Object, e As EventArgs) Handles btnmotor3.Click
-
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectMotor(3, "Honda Click125i", 3200, "Motor", 13)
     End Sub
 
     Private Sub motor9btn_Click(sender As Object, e As EventArgs) Handles motor9btn.Click
-
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectMotor(9, "Yamaha NMAX", 2800, "Motor", 19)
     End Sub
 
     Private Sub motor6btn_Click(sender As Object, e As EventArgs) Handles motor6btn.Click
-
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectMotor(6, "Honda PCX", 4000, "Motor", 16)
     End Sub
 
     Private Sub motor5btn_Click(sender As Object, e As EventArgs) Handles motor5btn.Click
-
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectMotor(5, "Honda Genio", 2000, "Motor", 15)
     End Sub
 
     Private Sub motor4btn_Click(sender As Object, e As EventArgs) Handles motor4btn.Click
-
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectMotor(4, "Honda BeAT", 2200, "Motor", 14)
     End Sub
 
     Private Sub motor1btn_Click(sender As Object, e As EventArgs) Handles motor1btn.Click

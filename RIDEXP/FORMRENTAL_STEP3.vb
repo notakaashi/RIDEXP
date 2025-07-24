@@ -42,7 +42,8 @@ c.make,
                 Dim make As String = If(IsDBNull(reader("make")), "N/A", reader("make").ToString())
                 Dim model As String = If(IsDBNull(reader("model_name")), "", reader("model_name").ToString())
                 Label33.Text = $"{make} {model}".Trim()
-                ' Handle image loading using ResourceManager
+                Label26.Visible = True
+
                 If Not IsDBNull(reader("image")) Then
                     Try
                         Dim imageName As String = IO.Path.GetFileNameWithoutExtension(reader("image").ToString())
@@ -84,43 +85,50 @@ c.make,
     End Sub
     Private Sub LoadMotorInfo(motorId As Integer)
         Try
-
             If RentalTransactionModule.conn Is Nothing OrElse RentalTransactionModule.conn.State <> ConnectionState.Open Then
                 MessageBox.Show("No active database connection.")
                 Return
             End If
 
             Dim cmd As New MySqlCommand("
-                                 SELECT 
-                                m.color,
-                                tt.transmission_type,
-                                m.mileage,
-                                m.year,
-                                rr.rate_per_day,
-                                m.make,
-                                m.model,
-                                mp.image  
-                                FROM motors m
-                                JOIN vehicles v ON m.motor_id = v.item_id
-                                JOIN rental_rate rr ON rr.vehicle_id = v.vehicle_id
-                                JOIN motor_category mc ON m.motor_category_id = mc.motor_category_id
-                                JOIN transmission_types tt ON mc.transmission_id = tt.transmission_id
-                                JOIN motors_pic mp ON m.motor_id = mp.motor_id
-                                WHERE v.vehicle_type = 'motor'
-                                AND m.motor_id = @motorId", RentalTransactionModule.conn)
+            SELECT 
+                m.color,
+                tt.transmission_type,
+                m.mileage,
+                m.year,
+                rr.rate_per_day,
+                m.make,
+                m.model,
+                mp.image  
+            FROM motors m
+            JOIN vehicles v ON m.motor_id = v.item_id
+            JOIN rental_rate rr ON rr.vehicle_id = v.vehicle_id
+            JOIN motor_category mc ON m.motor_category_id = mc.motor_category_id
+            JOIN transmission_types tt ON mc.transmission_id = tt.transmission_id
+            JOIN motors_pic mp ON m.motor_id = mp.motor_id
+            WHERE v.vehicle_type = 'motor'
+              AND m.motor_id = @motorId", RentalTransactionModule.conn)
 
             cmd.Parameters.AddWithValue("@motorId", motorId)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
             If reader.Read() Then
+                ' Show these values
                 mileagetxt.Text = If(IsDBNull(reader("mileage")), "N/A", reader("mileage").ToString())
-                fueltxt.Text = If(IsDBNull(reader("fuel_type")), "N/A", reader("fuel_type").ToString())
-                transmissiontxt.Text = If(IsDBNull(reader("transmission_type")), "N/A", reader("transmission_type").ToString())
+                fueltxt.Text = If(IsDBNull(reader("color")), "N/A", reader("color").ToString())
+                transmissiontxt.Text = If(IsDBNull(reader("year")), "N/A", reader("year").ToString())
+
+                Label23.Text = "Color"
+                Label25.Text = "Year"
+                Label26.Visible = False
+                seatcapacitytxt.Visible = False
+
+                ' Show make + model
                 Dim make As String = If(IsDBNull(reader("make")), "N/A", reader("make").ToString())
                 Dim model As String = If(IsDBNull(reader("model")), "", reader("model").ToString())
                 Label33.Text = $"{make} {model}".Trim()
 
-
+                ' Load image from resource name
                 If Not IsDBNull(reader("image")) Then
                     Try
                         Dim imageName As String = IO.Path.GetFileNameWithoutExtension(reader("image").ToString())
@@ -128,9 +136,7 @@ c.make,
 
                         If resImage IsNot Nothing AndAlso TypeOf resImage Is Image Then
                             PictureBox4.Image = CType(resImage, Image)
-                            MessageBox.Show($"Image '{imageName}' loaded successfully")
                         Else
-                            MessageBox.Show($"Image '{imageName}' not found in resources or is not an Image type")
                             PictureBox4.Image = Nothing
                         End If
 
@@ -139,18 +145,17 @@ c.make,
                         PictureBox4.Image = Nothing
                     End Try
                 Else
-                    MessageBox.Show("No image found in database")
                     PictureBox4.Image = Nothing
                 End If
 
                 PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
+
             Else
                 MessageBox.Show("Motor not found with ID: " & motorId)
-                ' Set default values
+                ' Set defaults
                 mileagetxt.Text = "N/A"
-                seatcapacitytxt.Text = "N/A"
-                fueltxt.Text = "N/A"
                 transmissiontxt.Text = "N/A"
+                seatcapacitytxt.Visible = False
                 PictureBox4.Image = Nothing
             End If
 
@@ -159,8 +164,8 @@ c.make,
         Catch ex As Exception
             MessageBox.Show("Error loading motor info: " & ex.Message)
         End Try
-
     End Sub
+
 
     ' Load and display all transaction data
     Private Sub LoadTransactionDataToLabels()
