@@ -335,9 +335,9 @@ Partial Class FORM_HYBRID
         ' 
         ' Panel7
         ' 
-        Panel7.Location = New Point(7, 442)
+        Panel7.Location = New Point(7, 401)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(50, 78)
+        Panel7.Size = New Size(50, 47)
         Panel7.TabIndex = 44
         ' 
         ' FORM_HYBRID

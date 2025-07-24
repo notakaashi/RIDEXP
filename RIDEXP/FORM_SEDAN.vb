@@ -36,9 +36,9 @@ Public Class FORM_SEDAN
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        If Not RentalTransactionModule.StartTransaction() Then
+        If Not StartTransaction Then
             MessageBox.Show("Failed to start transaction. Please try again.")
-            Me.Close()
+            Close
             Return
         End If
         SelectCar(1, "Toyota Vios", 2500, "Car")

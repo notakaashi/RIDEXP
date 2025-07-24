@@ -27,6 +27,7 @@ Partial Class FORM_UNDERBONE
         Label37 = New Label()
         Panel6 = New Panel()
         Panel1 = New Panel()
+        Panel7 = New Panel()
         Panel4 = New Panel()
         Label8 = New Label()
         Label10 = New Label()
@@ -40,13 +41,11 @@ Partial Class FORM_UNDERBONE
         Label2 = New Label()
         Label3 = New Label()
         Button5 = New Button()
-        Button4 = New Button()
         Button3 = New Button()
         Button2 = New Button()
         PictureBox3 = New PictureBox()
         TextBox1 = New TextBox()
         FadeTimer = New Timer(components)
-        Panel7 = New Panel()
         Panel6.SuspendLayout()
         Panel1.SuspendLayout()
         Panel4.SuspendLayout()
@@ -82,7 +81,6 @@ Partial Class FORM_UNDERBONE
         Panel1.Controls.Add(Panel7)
         Panel1.Controls.Add(Panel4)
         Panel1.Controls.Add(Button5)
-        Panel1.Controls.Add(Button4)
         Panel1.Controls.Add(Button3)
         Panel1.Controls.Add(Button2)
         Panel1.Controls.Add(PictureBox3)
@@ -91,6 +89,13 @@ Partial Class FORM_UNDERBONE
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1134, 401)
         Panel1.TabIndex = 43
+        ' 
+        ' Panel7
+        ' 
+        Panel7.Location = New Point(3, 388)
+        Panel7.Name = "Panel7"
+        Panel7.Size = New Size(50, 78)
+        Panel7.TabIndex = 44
         ' 
         ' Panel4
         ' 
@@ -241,27 +246,12 @@ Partial Class FORM_UNDERBONE
         Button5.FlatStyle = FlatStyle.Flat
         Button5.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button5.Location = New Point(695, 26)
+        Button5.Location = New Point(503, 26)
         Button5.Name = "Button5"
         Button5.Size = New Size(255, 45)
         Button5.TabIndex = 37
         Button5.Text = "ADVENTURE"
         Button5.UseVisualStyleBackColor = False
-        ' 
-        ' Button4
-        ' 
-        Button4.BackColor = Color.Transparent
-        Button4.Cursor = Cursors.Hand
-        Button4.FlatAppearance.BorderSize = 0
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button4.Location = New Point(516, 26)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(163, 45)
-        Button4.TabIndex = 34
-        Button4.Text = "SPORTS"
-        Button4.UseVisualStyleBackColor = False
         ' 
         ' Button3
         ' 
@@ -316,13 +306,6 @@ Partial Class FORM_UNDERBONE
         ' 
         FadeTimer.Interval = 25
         ' 
-        ' Panel7
-        ' 
-        Panel7.Location = New Point(3, 388)
-        Panel7.Name = "Panel7"
-        Panel7.Size = New Size(50, 78)
-        Panel7.TabIndex = 44
-        ' 
         ' FORM_UNDERBONE
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -361,7 +344,6 @@ Partial Class FORM_UNDERBONE
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents PictureBox3 As PictureBox

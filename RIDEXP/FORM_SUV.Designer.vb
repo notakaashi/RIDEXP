@@ -48,16 +48,31 @@ Partial Class FORM_SUV
         Panel6 = New Panel()
         FadeTimer = New Timer(components)
         Panel7 = New Panel()
+        Panel2 = New Panel()
+        Label1 = New Label()
+        Label11 = New Label()
+        Label12 = New Label()
+        Label13 = New Label()
+        Button1 = New Button()
+        Label14 = New Label()
+        Label15 = New Label()
+        Label16 = New Label()
+        PictureBox1 = New PictureBox()
+        Label17 = New Label()
+        Label18 = New Label()
         Panel1.SuspendLayout()
         Panel4.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         Panel6.SuspendLayout()
+        Panel2.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.AutoScroll = True
+        Panel1.Controls.Add(Panel2)
         Panel1.Controls.Add(Panel7)
         Panel1.Controls.Add(Panel4)
         Panel1.Controls.Add(Button6)
@@ -335,10 +350,151 @@ Partial Class FORM_SUV
         ' 
         ' Panel7
         ' 
-        Panel7.Location = New Point(6, 388)
+        Panel7.Location = New Point(3, 700)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(50, 78)
+        Panel7.Size = New Size(50, 45)
         Panel7.TabIndex = 44
+        ' 
+        ' Panel2
+        ' 
+        Panel2.Controls.Add(Label1)
+        Panel2.Controls.Add(Label11)
+        Panel2.Controls.Add(Label12)
+        Panel2.Controls.Add(Label13)
+        Panel2.Controls.Add(Button1)
+        Panel2.Controls.Add(Label14)
+        Panel2.Controls.Add(Label15)
+        Panel2.Controls.Add(Label16)
+        Panel2.Controls.Add(PictureBox1)
+        Panel2.Controls.Add(Label17)
+        Panel2.Controls.Add(Label18)
+        Panel2.Location = New Point(7, 442)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(1115, 252)
+        Panel2.TabIndex = 40
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label1.Location = New Point(333, 134)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(130, 61)
+        Label1.TabIndex = 21
+        Label1.Text = "red"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Designer", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label11.Location = New Point(642, 151)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(172, 39)
+        Label11.TabIndex = 20
+        Label11.Text = "11,456km"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Designer", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label12.Location = New Point(529, 134)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(66, 61)
+        Label12.TabIndex = 19
+        Label12.Text = "5"
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label13.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label13.Location = New Point(333, 34)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(62, 24)
+        Label13.TabIndex = 17
+        Label13.Text = "MAKE"
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Reesha", 16.1999989F)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(855, 134)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(230, 46)
+        Button1.TabIndex = 16
+        Button1.Text = "BOOK NOW"
+        Button1.TextAlign = ContentAlignment.TopCenter
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label14.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label14.Location = New Point(685, 195)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(90, 24)
+        Label14.TabIndex = 5
+        Label14.Text = "MILEAGE"
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label15.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label15.Location = New Point(484, 195)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(151, 24)
+        Label15.TabIndex = 4
+        Label15.Text = "SEAT CAPACITY"
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label16.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label16.Location = New Point(358, 195)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(79, 24)
+        Label16.TabIndex = 3
+        Label16.Text = "COLOR"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = My.Resources.Resources.RideX
+        PictureBox1.Location = New Point(33, 96)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(264, 123)
+        PictureBox1.SizeMode = PictureBoxSizeMode.CenterImage
+        PictureBox1.TabIndex = 2
+        PictureBox1.TabStop = False
+        ' 
+        ' Label17
+        ' 
+        Label17.AutoSize = True
+        Label17.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label17.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label17.Location = New Point(22, 17)
+        Label17.Name = "Label17"
+        Label17.Size = New Size(303, 41)
+        Label17.TabIndex = 0
+        Label17.Text = "CAR NUMBER 1"
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label18.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label18.Location = New Point(22, 35)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(1072, 41)
+        Label18.TabIndex = 1
+        Label18.Text = "______________________________________________________________"
         ' 
         ' FORM_SUV
         ' 
@@ -359,6 +515,9 @@ Partial Class FORM_SUV
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         Panel6.ResumeLayout(False)
         Panel6.PerformLayout()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -386,4 +545,16 @@ Partial Class FORM_SUV
     Friend WithEvents Panel6 As Panel
     Friend WithEvents FadeTimer As Timer
     Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
 End Class
