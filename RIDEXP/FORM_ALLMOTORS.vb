@@ -17,9 +17,21 @@ Public Class FORM_ALLMOTORS
 
     Private Sub LoadSingleMotor(conn As MySqlConnection, motorId As Integer)
         Try
-            Dim query As String = "SELECT model, make, color, mileage, year
-                                FROM motors 
-                                WHERE motor_id = @motorId"
+            Dim query As String = "SELECT 
+                                    m.color,
+                                    tt.transmission_type,
+                                    m.mileage,
+                                    m.year,
+                                    rr.rate_per_day,
+                                    m.make,
+                                    m.model
+                                    FROM motors m
+                                    JOIN vehicles v ON m.motor_id = v.item_id
+                                    JOIN rental_rate rr ON rr.vehicle_id = v.vehicle_id
+                                    JOIN motor_category mc ON m.motor_category_id = mc.motor_category_id
+                                    JOIN transmission_types tt ON mc.transmission_id = tt.transmission_id
+                                    WHERE v.vehicle_type = 'motor'
+                                    AND m.motor_id = @motorId;"
 
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@motorId", motorId)
@@ -34,7 +46,7 @@ Public Class FORM_ALLMOTORS
                                 If Not IsDBNull(reader("color")) Then color1txt.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then mileage1txt.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("year")) Then lblyear1.Text = reader("year").ToString()
-                                'If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car1img)
+                                If Not IsDBNull(reader("image")) Then LoadMotorImage(reader("image").ToString(), motor1img)
 
                             Case 2
                                 If Not IsDBNull(reader("model")) Then model2txt.Text = reader("model").ToString()
@@ -138,7 +150,22 @@ Public Class FORM_ALLMOTORS
         targetPanel.Location = New Point(54, 185)
         targetPanel.BringToFront()
     End Sub
+    Private Sub LoadMotorImage(imageName As String, pictureBox As PictureBox)
+        Try
+            If Not String.IsNullOrEmpty(imageName) Then
+                Dim imageNameWithoutExt As String = IO.Path.GetFileNameWithoutExtension(imageName)
+                Dim resImage = My.Resources.ResourceManager.GetObject(imageNameWithoutExt)
 
+                If resImage IsNot Nothing Then
+                    pictureBox.Image = CType(resImage, Image)
+                Else
+                    pictureBox.Image = Nothing
+                End If
+            End If
+        Catch ex As Exception
+            pictureBox.Image = Nothing
+        End Try
+    End Sub
     Private Sub btnScooter_Click(sender As Object, e As EventArgs) Handles btnScooter.Click
         ShowOnlyPanel(pnlScooter)
         HighlightButton(btnScooter)

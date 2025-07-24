@@ -26,9 +26,11 @@ Public Class allcars
 
     Private Sub LoadSingleCar(conn As MySqlConnection, carId As Integer)
         Try
-            Dim query As String = "SELECT c.model_name, c.make, c.color, c.mileage, c.seating_capacity,c.year, cp.image
+            Dim query As String = "SELECT rr.rate_per_day, c.model_name, c.make, c.color, c.mileage, c.seating_capacity,c.year, cp.image
                                 FROM cars c
-                                LEFT JOIN cars_pic cp ON c.car_id = cp.car_id 
+                                JOIN cars_pic cp ON c.car_id = cp.car_id 
+                                JOIN vehicles v ON c.car_id = v.vehicle_id
+                                JOIN rental_rate rr ON rr.vehicle_id = v.vehicle_id
                                 WHERE c.car_id = @carId"
 
             Using cmd As New MySqlCommand(query, conn)
@@ -46,6 +48,7 @@ Public Class allcars
                                 If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity1txt.Text = reader("seating_capacity").ToString()
                                 If Not IsDBNull(reader("year")) Then year1txt.Text = reader("year").ToString()
                                 If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car1img)
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate1txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 2
                                 If Not IsDBNull(reader("model_name")) Then model2txt.Text = reader("model_name").ToString()
@@ -55,6 +58,7 @@ Public Class allcars
                                 If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity2txt.Text = reader("seating_capacity").ToString()
                                 If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car2img)
                                 If Not IsDBNull(reader("year")) Then year2txt.Text = reader("year").ToString()
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate2txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 3
                                 If Not IsDBNull(reader("model_name")) Then model3txt.Text = reader("model_name").ToString()
@@ -64,6 +68,7 @@ Public Class allcars
                                 If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity3txt.Text = reader("seating_capacity").ToString()
                                 If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car3img)
                                 If Not IsDBNull(reader("year")) Then year3txt.Text = reader("year").ToString()
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate3txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 4
                                 If Not IsDBNull(reader("model_name")) Then model4txt.Text = reader("model_name").ToString()
@@ -73,6 +78,7 @@ Public Class allcars
                                 If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity4txt.Text = reader("seating_capacity").ToString()
                                 If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car4img)
                                 If Not IsDBNull(reader("year")) Then year4txt.Text = reader("year").ToString()
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate4txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 5
                                 If Not IsDBNull(reader("model_name")) Then model5txt.Text = reader("model_name").ToString()
@@ -82,6 +88,7 @@ Public Class allcars
                                 If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity5txt.Text = reader("seating_capacity").ToString()
                                 If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car5img)
                                 If Not IsDBNull(reader("year")) Then year5txt.Text = reader("year").ToString()
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate5txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 6
                                 If Not IsDBNull(reader("model_name")) Then lblModel6.Text = reader("model_name").ToString()
@@ -91,6 +98,7 @@ Public Class allcars
                                 If Not IsDBNull(reader("seating_capacity")) Then lblSeat6.Text = reader("seating_capacity").ToString()
                                 If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), imgCar6)
                                 If Not IsDBNull(reader("year")) Then year6txt.Text = reader("year").ToString()
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate6txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 7
                                 If Not IsDBNull(reader("model_name")) Then model7txt.Text = reader("model_name").ToString()
@@ -100,6 +108,7 @@ Public Class allcars
                                 If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity7txt.Text = reader("seating_capacity").ToString()
                                 If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car7img)
                                 If Not IsDBNull(reader("year")) Then year7txt.Text = reader("year").ToString()
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate7txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 8
                                 If Not IsDBNull(reader("model_name")) Then model8txt.Text = reader("model_name").ToString()
@@ -109,6 +118,7 @@ Public Class allcars
                                 If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity8txt.Text = reader("seating_capacity").ToString()
                                 If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car8img)
                                 If Not IsDBNull(reader("year")) Then year8txt.Text = reader("year").ToString()
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate8txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 9
                                 If Not IsDBNull(reader("model_name")) Then model9txt.Text = reader("model_name").ToString()
@@ -118,6 +128,7 @@ Public Class allcars
                                 If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity9txt.Text = reader("seating_capacity").ToString()
                                 If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car9img)
                                 If Not IsDBNull(reader("year")) Then year9txt.Text = reader("year").ToString()
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate9txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 10
                                 If Not IsDBNull(reader("model_name")) Then model10txt.Text = reader("model_name").ToString()
@@ -127,6 +138,7 @@ Public Class allcars
                                 If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity10txt.Text = reader("seating_capacity").ToString()
                                 If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car10img)
                                 If Not IsDBNull(reader("year")) Then year10txt.Text = reader("year").ToString()
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate10txt.Text = reader("rate_per_day").ToString() & " per day"
 
                         End Select
                     End If
