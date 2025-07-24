@@ -24,326 +24,305 @@ Partial Class SIGNUP
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Panel1 = New Panel()
-        pbxShow = New PictureBox()
+        Panel10 = New Panel()
+        passwordtxt = New TextBox()
+        Panel9 = New Panel()
+        usertxt = New TextBox()
+        Panel6 = New Panel()
         dobtxt = New TextBox()
-        Label12 = New Label()
-        licenseexptxt = New TextBox()
-        Label11 = New Label()
-        licensenumbertxt = New TextBox()
-        Label10 = New Label()
+        Panel5 = New Panel()
+        lnametxt = New TextBox()
+        Panel4 = New Panel()
+        fnametxt = New TextBox()
+        Label9 = New Label()
+        pbxShow = New PictureBox()
         signupbtn = New Button()
         Panel2 = New Panel()
+        Panel7 = New Panel()
         addresstxt = New TextBox()
-        Label8 = New Label()
-        phonenumbertxt = New TextBox()
-        Label7 = New Label()
-        passwordtxt = New TextBox()
-        Label6 = New Label()
-        usertxt = New TextBox()
-        Label5 = New Label()
+        Panel11 = New Panel()
         emailtxt = New TextBox()
-        Label4 = New Label()
-        lnametxt = New TextBox()
-        Label3 = New Label()
-        fnametxt = New TextBox()
-        Label2 = New Label()
-        Label9 = New Label()
+        Panel12 = New Panel()
+        phonenumbertxt = New TextBox()
+        Panel13 = New Panel()
+        licensenumbertxt = New TextBox()
+        Panel14 = New Panel()
+        licenseexptxt = New TextBox()
         Panel3 = New Panel()
         Label1 = New Label()
         FadeTimer = New Timer(components)
         Panel1.SuspendLayout()
+        Panel10.SuspendLayout()
+        Panel9.SuspendLayout()
+        Panel6.SuspendLayout()
+        Panel5.SuspendLayout()
+        Panel4.SuspendLayout()
         CType(pbxShow, ComponentModel.ISupportInitialize).BeginInit()
+        Panel7.SuspendLayout()
+        Panel11.SuspendLayout()
+        Panel12.SuspendLayout()
+        Panel13.SuspendLayout()
+        Panel14.SuspendLayout()
         Panel3.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.AutoScroll = True
+        Panel1.BackColor = Color.White
+        Panel1.Controls.Add(Panel10)
+        Panel1.Controls.Add(Panel9)
+        Panel1.Controls.Add(Panel6)
+        Panel1.Controls.Add(Panel5)
+        Panel1.Controls.Add(Panel4)
+        Panel1.Controls.Add(Label9)
         Panel1.Controls.Add(pbxShow)
-        Panel1.Controls.Add(dobtxt)
-        Panel1.Controls.Add(Label12)
-        Panel1.Controls.Add(licenseexptxt)
-        Panel1.Controls.Add(Label11)
-        Panel1.Controls.Add(licensenumbertxt)
-        Panel1.Controls.Add(Label10)
         Panel1.Controls.Add(signupbtn)
         Panel1.Controls.Add(Panel2)
-        Panel1.Controls.Add(addresstxt)
-        Panel1.Controls.Add(Label8)
-        Panel1.Controls.Add(phonenumbertxt)
-        Panel1.Controls.Add(Label7)
-        Panel1.Controls.Add(passwordtxt)
-        Panel1.Controls.Add(Label6)
-        Panel1.Controls.Add(usertxt)
-        Panel1.Controls.Add(Label5)
-        Panel1.Controls.Add(emailtxt)
-        Panel1.Controls.Add(Label4)
-        Panel1.Controls.Add(lnametxt)
-        Panel1.Controls.Add(Label3)
-        Panel1.Controls.Add(fnametxt)
-        Panel1.Controls.Add(Label2)
-        Panel1.Location = New Point(44, 131)
-        Panel1.Margin = New Padding(3, 2, 3, 2)
+        Panel1.Controls.Add(Panel7)
+        Panel1.Controls.Add(Panel11)
+        Panel1.Controls.Add(Panel12)
+        Panel1.Controls.Add(Panel13)
+        Panel1.Controls.Add(Panel14)
+        Panel1.Location = New Point(84, 91)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(421, 287)
+        Panel1.Size = New Size(873, 512)
         Panel1.TabIndex = 0
+        ' 
+        ' Panel10
+        ' 
+        Panel10.BackColor = SystemColors.Control
+        Panel10.Controls.Add(passwordtxt)
+        Panel10.Location = New Point(428, 382)
+        Panel10.Name = "Panel10"
+        Panel10.Size = New Size(336, 58)
+        Panel10.TabIndex = 33
+        ' 
+        ' passwordtxt
+        ' 
+        passwordtxt.BackColor = SystemColors.Control
+        passwordtxt.BorderStyle = BorderStyle.None
+        passwordtxt.Font = New Font("Futura Lt BT", 12F)
+        passwordtxt.Location = New Point(22, 18)
+        passwordtxt.Name = "passwordtxt"
+        passwordtxt.PasswordChar = "*"c
+        passwordtxt.RightToLeft = RightToLeft.No
+        passwordtxt.Size = New Size(292, 24)
+        passwordtxt.TabIndex = 11
+        ' 
+        ' Panel9
+        ' 
+        Panel9.BackColor = SystemColors.Control
+        Panel9.Controls.Add(usertxt)
+        Panel9.Location = New Point(70, 382)
+        Panel9.Name = "Panel9"
+        Panel9.Size = New Size(336, 58)
+        Panel9.TabIndex = 33
+        ' 
+        ' usertxt
+        ' 
+        usertxt.BackColor = SystemColors.Control
+        usertxt.BorderStyle = BorderStyle.None
+        usertxt.Font = New Font("Futura Lt BT", 12F)
+        usertxt.Location = New Point(22, 18)
+        usertxt.Name = "usertxt"
+        usertxt.Size = New Size(292, 24)
+        usertxt.TabIndex = 9
+        ' 
+        ' Panel6
+        ' 
+        Panel6.BackColor = SystemColors.Control
+        Panel6.Controls.Add(dobtxt)
+        Panel6.Location = New Point(70, 211)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(336, 58)
+        Panel6.TabIndex = 30
+        ' 
+        ' dobtxt
+        ' 
+        dobtxt.BackColor = SystemColors.Control
+        dobtxt.BorderStyle = BorderStyle.None
+        dobtxt.Font = New Font("Futura Lt BT", 12F)
+        dobtxt.Location = New Point(22, 18)
+        dobtxt.Name = "dobtxt"
+        dobtxt.Size = New Size(292, 24)
+        dobtxt.TabIndex = 25
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BackColor = SystemColors.Control
+        Panel5.Controls.Add(lnametxt)
+        Panel5.Location = New Point(428, 135)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(336, 58)
+        Panel5.TabIndex = 29
+        ' 
+        ' lnametxt
+        ' 
+        lnametxt.BackColor = SystemColors.Control
+        lnametxt.BorderStyle = BorderStyle.None
+        lnametxt.Font = New Font("Futura Lt BT", 12F)
+        lnametxt.Location = New Point(22, 18)
+        lnametxt.Name = "lnametxt"
+        lnametxt.Size = New Size(292, 24)
+        lnametxt.TabIndex = 5
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = SystemColors.Control
+        Panel4.Controls.Add(fnametxt)
+        Panel4.Location = New Point(70, 135)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(336, 58)
+        Panel4.TabIndex = 28
+        ' 
+        ' fnametxt
+        ' 
+        fnametxt.BackColor = SystemColors.Control
+        fnametxt.BorderStyle = BorderStyle.None
+        fnametxt.Font = New Font("Futura Lt BT", 12F)
+        fnametxt.Location = New Point(22, 18)
+        fnametxt.Name = "fnametxt"
+        fnametxt.Size = New Size(292, 24)
+        fnametxt.TabIndex = 3
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.BackColor = Color.Transparent
+        Label9.Font = New Font("Reesha", 30F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label9.Location = New Point(27, 34)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(655, 60)
+        Label9.TabIndex = 3
+        Label9.Text = "CREATE AN ACCOUNT"
+        Label9.TextAlign = ContentAlignment.TopCenter
         ' 
         ' pbxShow
         ' 
         pbxShow.Image = My.Resources.Resources.RIDEXPRESS__10_
-        pbxShow.Location = New Point(358, 606)
-        pbxShow.Margin = New Padding(3, 2, 3, 2)
+        pbxShow.Location = New Point(779, 406)
         pbxShow.Name = "pbxShow"
-        pbxShow.Size = New Size(37, 16)
+        pbxShow.Size = New Size(42, 21)
         pbxShow.SizeMode = PictureBoxSizeMode.StretchImage
         pbxShow.TabIndex = 27
         pbxShow.TabStop = False
-        ' 
-        ' dobtxt
-        ' 
-        dobtxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dobtxt.Location = New Point(61, 253)
-        dobtxt.Margin = New Padding(3, 2, 3, 2)
-        dobtxt.Name = "dobtxt"
-        dobtxt.Size = New Size(291, 33)
-        dobtxt.TabIndex = 25
-        ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.BackColor = Color.Transparent
-        Label12.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label12.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label12.Location = New Point(59, 229)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(151, 22)
-        Label12.TabIndex = 24
-        Label12.Text = "DATE OF BIRTH"
-        ' 
-        ' licenseexptxt
-        ' 
-        licenseexptxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        licenseexptxt.Location = New Point(57, 872)
-        licenseexptxt.Margin = New Padding(3, 2, 3, 2)
-        licenseexptxt.Name = "licenseexptxt"
-        licenseexptxt.Size = New Size(291, 33)
-        licenseexptxt.TabIndex = 23
-        ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.BackColor = Color.Transparent
-        Label11.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label11.Location = New Point(60, 848)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(212, 22)
-        Label11.TabIndex = 22
-        Label11.Text = "LICENSE EXPIRY DATE"
-        ' 
-        ' licensenumbertxt
-        ' 
-        licensenumbertxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        licensenumbertxt.Location = New Point(57, 784)
-        licensenumbertxt.Margin = New Padding(3, 2, 3, 2)
-        licensenumbertxt.Name = "licensenumbertxt"
-        licensenumbertxt.Size = New Size(291, 33)
-        licensenumbertxt.TabIndex = 21
-        ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.BackColor = Color.Transparent
-        Label10.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label10.Location = New Point(57, 760)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(176, 22)
-        Label10.TabIndex = 20
-        Label10.Text = "LICENSE NUMBER"
         ' 
         ' signupbtn
         ' 
         signupbtn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         signupbtn.FlatStyle = FlatStyle.Flat
-        signupbtn.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        signupbtn.Font = New Font("Reesha", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         signupbtn.ForeColor = Color.White
-        signupbtn.Location = New Point(92, 926)
-        signupbtn.Margin = New Padding(3, 2, 3, 2)
+        signupbtn.Location = New Point(213, 760)
         signupbtn.Name = "signupbtn"
-        signupbtn.Size = New Size(234, 54)
+        signupbtn.Size = New Size(404, 95)
         signupbtn.TabIndex = 19
         signupbtn.Text = "SIGN UP"
         signupbtn.UseVisualStyleBackColor = False
         ' 
         ' Panel2
         ' 
-        Panel2.Location = New Point(96, 1031)
-        Panel2.Margin = New Padding(3, 2, 3, 2)
+        Panel2.Location = New Point(272, 925)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(219, 53)
+        Panel2.Size = New Size(250, 71)
         Panel2.TabIndex = 18
+        ' 
+        ' Panel7
+        ' 
+        Panel7.BackColor = SystemColors.Control
+        Panel7.Controls.Add(addresstxt)
+        Panel7.Location = New Point(70, 297)
+        Panel7.Name = "Panel7"
+        Panel7.Size = New Size(694, 58)
+        Panel7.TabIndex = 31
         ' 
         ' addresstxt
         ' 
-        addresstxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        addresstxt.Location = New Point(61, 341)
-        addresstxt.Margin = New Padding(3, 2, 3, 2)
+        addresstxt.BackColor = SystemColors.Control
+        addresstxt.BorderStyle = BorderStyle.None
+        addresstxt.Font = New Font("Futura Lt BT", 12F)
+        addresstxt.Location = New Point(22, 18)
         addresstxt.Name = "addresstxt"
-        addresstxt.Size = New Size(291, 33)
+        addresstxt.Size = New Size(650, 24)
         addresstxt.TabIndex = 15
         ' 
-        ' Label8
+        ' Panel11
         ' 
-        Label8.AutoSize = True
-        Label8.BackColor = Color.Transparent
-        Label8.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label8.Location = New Point(61, 317)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(97, 22)
-        Label8.TabIndex = 16
-        Label8.Text = "ADDRESS"
-        ' 
-        ' phonenumbertxt
-        ' 
-        phonenumbertxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        phonenumbertxt.Location = New Point(60, 695)
-        phonenumbertxt.Margin = New Padding(3, 2, 3, 2)
-        phonenumbertxt.Name = "phonenumbertxt"
-        phonenumbertxt.Size = New Size(293, 33)
-        phonenumbertxt.TabIndex = 13
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.BackColor = Color.Transparent
-        Label7.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label7.Location = New Point(57, 671)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(167, 22)
-        Label7.TabIndex = 14
-        Label7.Text = "PHONE NUMBER"
-        ' 
-        ' passwordtxt
-        ' 
-        passwordtxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        passwordtxt.Location = New Point(60, 600)
-        passwordtxt.Margin = New Padding(3, 2, 3, 2)
-        passwordtxt.Name = "passwordtxt"
-        passwordtxt.PasswordChar = "*"c
-        passwordtxt.Size = New Size(293, 33)
-        passwordtxt.TabIndex = 11
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.BackColor = Color.Transparent
-        Label6.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label6.Location = New Point(57, 576)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(118, 22)
-        Label6.TabIndex = 12
-        Label6.Text = "PASSWORD"
-        ' 
-        ' usertxt
-        ' 
-        usertxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        usertxt.Location = New Point(61, 509)
-        usertxt.Margin = New Padding(3, 2, 3, 2)
-        usertxt.Name = "usertxt"
-        usertxt.Size = New Size(293, 33)
-        usertxt.TabIndex = 9
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label5.Location = New Point(57, 485)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(117, 22)
-        Label5.TabIndex = 10
-        Label5.Text = "USERNAME"
+        Panel11.BackColor = SystemColors.Control
+        Panel11.Controls.Add(emailtxt)
+        Panel11.Location = New Point(70, 468)
+        Panel11.Name = "Panel11"
+        Panel11.Size = New Size(336, 58)
+        Panel11.TabIndex = 33
         ' 
         ' emailtxt
         ' 
-        emailtxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        emailtxt.Location = New Point(61, 423)
-        emailtxt.Margin = New Padding(3, 2, 3, 2)
+        emailtxt.BackColor = SystemColors.Control
+        emailtxt.BorderStyle = BorderStyle.None
+        emailtxt.Font = New Font("Futura Lt BT", 12F)
+        emailtxt.Location = New Point(22, 18)
         emailtxt.Name = "emailtxt"
-        emailtxt.Size = New Size(293, 33)
+        emailtxt.Size = New Size(292, 24)
         emailtxt.TabIndex = 7
         ' 
-        ' Label4
+        ' Panel12
         ' 
-        Label4.AutoSize = True
-        Label4.BackColor = Color.Transparent
-        Label4.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label4.Location = New Point(60, 399)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(67, 22)
-        Label4.TabIndex = 8
-        Label4.Text = "EMAIL"
+        Panel12.BackColor = SystemColors.Control
+        Panel12.Controls.Add(phonenumbertxt)
+        Panel12.Location = New Point(428, 468)
+        Panel12.Name = "Panel12"
+        Panel12.Size = New Size(336, 58)
+        Panel12.TabIndex = 34
         ' 
-        ' lnametxt
+        ' phonenumbertxt
         ' 
-        lnametxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lnametxt.Location = New Point(61, 167)
-        lnametxt.Margin = New Padding(3, 2, 3, 2)
-        lnametxt.Name = "lnametxt"
-        lnametxt.Size = New Size(293, 33)
-        lnametxt.TabIndex = 5
+        phonenumbertxt.BackColor = SystemColors.Control
+        phonenumbertxt.BorderStyle = BorderStyle.None
+        phonenumbertxt.Font = New Font("Futura Lt BT", 12F)
+        phonenumbertxt.Location = New Point(22, 18)
+        phonenumbertxt.Name = "phonenumbertxt"
+        phonenumbertxt.Size = New Size(292, 24)
+        phonenumbertxt.TabIndex = 13
         ' 
-        ' Label3
+        ' Panel13
         ' 
-        Label3.AutoSize = True
-        Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label3.Location = New Point(59, 143)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(118, 22)
-        Label3.TabIndex = 6
-        Label3.Text = "LAST NAME"
+        Panel13.BackColor = SystemColors.Control
+        Panel13.Controls.Add(licensenumbertxt)
+        Panel13.Location = New Point(70, 558)
+        Panel13.Name = "Panel13"
+        Panel13.Size = New Size(694, 58)
+        Panel13.TabIndex = 32
         ' 
-        ' fnametxt
+        ' licensenumbertxt
         ' 
-        fnametxt.Font = New Font("Futura Hv BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        fnametxt.Location = New Point(61, 75)
-        fnametxt.Margin = New Padding(3, 2, 3, 2)
-        fnametxt.Name = "fnametxt"
-        fnametxt.Size = New Size(293, 33)
-        fnametxt.TabIndex = 3
+        licensenumbertxt.BackColor = SystemColors.Control
+        licensenumbertxt.BorderStyle = BorderStyle.None
+        licensenumbertxt.Font = New Font("Futura Lt BT", 12F)
+        licensenumbertxt.Location = New Point(22, 18)
+        licensenumbertxt.Name = "licensenumbertxt"
+        licensenumbertxt.Size = New Size(650, 24)
+        licensenumbertxt.TabIndex = 21
         ' 
-        ' Label2
+        ' Panel14
         ' 
-        Label2.AutoSize = True
-        Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label2.Location = New Point(59, 51)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(123, 22)
-        Label2.TabIndex = 4
-        Label2.Text = "FIRST NAME"
+        Panel14.BackColor = SystemColors.Control
+        Panel14.Controls.Add(licenseexptxt)
+        Panel14.Location = New Point(70, 645)
+        Panel14.Name = "Panel14"
+        Panel14.Size = New Size(694, 58)
+        Panel14.TabIndex = 33
         ' 
-        ' Label9
+        ' licenseexptxt
         ' 
-        Label9.AutoSize = True
-        Label9.BackColor = Color.Transparent
-        Label9.Font = New Font("Reesha", 48F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label9.Location = New Point(96, 52)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(320, 77)
-        Label9.TabIndex = 3
-        Label9.Text = "SIGN UP"
-        Label9.TextAlign = ContentAlignment.TopCenter
+        licenseexptxt.BackColor = SystemColors.Control
+        licenseexptxt.BorderStyle = BorderStyle.None
+        licenseexptxt.Font = New Font("Futura Lt BT", 12F)
+        licenseexptxt.Location = New Point(22, 18)
+        licenseexptxt.Name = "licenseexptxt"
+        licenseexptxt.Size = New Size(650, 24)
+        licenseexptxt.TabIndex = 23
         ' 
         ' Panel3
         ' 
@@ -351,9 +330,8 @@ Partial Class SIGNUP
         Panel3.Controls.Add(Label1)
         Panel3.Dock = DockStyle.Top
         Panel3.Location = New Point(0, 0)
-        Panel3.Margin = New Padding(3, 2, 3, 2)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(535, 50)
+        Panel3.Size = New Size(1039, 49)
         Panel3.TabIndex = 4
         ' 
         ' Label1
@@ -362,9 +340,9 @@ Partial Class SIGNUP
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(12, 9)
+        Label1.Location = New Point(14, 12)
         Label1.Name = "Label1"
-        Label1.Size = New Size(25, 24)
+        Label1.Size = New Size(31, 29)
         Label1.TabIndex = 5
         Label1.Text = "X"
         ' 
@@ -374,45 +352,54 @@ Partial Class SIGNUP
         ' 
         ' SIGNUP
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackgroundImage = My.Resources.Resources.RIDEXPRESS__5_
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(535, 434)
+        ClientSize = New Size(1039, 647)
         Controls.Add(Panel3)
-        Controls.Add(Label9)
         Controls.Add(Panel1)
         DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(3, 2, 3, 2)
         Name = "SIGNUP"
         Opacity = 0R
         StartPosition = FormStartPosition.CenterScreen
         Text = " "
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        Panel10.ResumeLayout(False)
+        Panel10.PerformLayout()
+        Panel9.ResumeLayout(False)
+        Panel9.PerformLayout()
+        Panel6.ResumeLayout(False)
+        Panel6.PerformLayout()
+        Panel5.ResumeLayout(False)
+        Panel5.PerformLayout()
+        Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
         CType(pbxShow, ComponentModel.ISupportInitialize).EndInit()
+        Panel7.ResumeLayout(False)
+        Panel7.PerformLayout()
+        Panel11.ResumeLayout(False)
+        Panel11.PerformLayout()
+        Panel12.ResumeLayout(False)
+        Panel12.PerformLayout()
+        Panel13.ResumeLayout(False)
+        Panel13.PerformLayout()
+        Panel14.ResumeLayout(False)
+        Panel14.PerformLayout()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents usertxt As TextBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents emailtxt As TextBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents lnametxt As TextBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents fnametxt As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents addresstxt As TextBox
-    Friend WithEvents Label8 As Label
     Friend WithEvents phonenumbertxt As TextBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents passwordtxt As TextBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents signupbtn As Button
     Friend WithEvents Label9 As Label
@@ -420,10 +407,17 @@ Partial Class SIGNUP
     Friend WithEvents Label1 As Label
     Friend WithEvents FadeTimer As Timer
     Friend WithEvents licenseexptxt As TextBox
-    Friend WithEvents Label11 As Label
     Friend WithEvents licensenumbertxt As TextBox
-    Friend WithEvents Label10 As Label
     Friend WithEvents dobtxt As TextBox
-    Friend WithEvents Label12 As Label
     Friend WithEvents pbxShow As PictureBox
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents Panel13 As Panel
+    Friend WithEvents Panel14 As Panel
 End Class
