@@ -16,7 +16,9 @@ Public Class FORMRENTAL_STEP3
             c.seating_capacity,
             ft.fuel_type,
             tt.transmission_type,
-            cp.image
+            cp.image,
+c.make,
+            c.model_name
         FROM 
             cars c
         JOIN car_category cc ON c.car_category_id = cc.car_category_id
@@ -25,15 +27,21 @@ Public Class FORMRENTAL_STEP3
         LEFT JOIN cars_pic cp ON c.car_id = cp.car_id
         WHERE c.car_id = @carId", RentalTransactionModule.conn)
 
+
             cmd.Parameters.AddWithValue("@carId", carId)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+
+
 
             If reader.Read() Then
                 mileagetxt.Text = If(IsDBNull(reader("mileage")), "N/A", reader("mileage").ToString())
                 seatcapacitytxt.Text = If(IsDBNull(reader("seating_capacity")), "N/A", reader("seating_capacity").ToString())
                 fueltxt.Text = If(IsDBNull(reader("fuel_type")), "N/A", reader("fuel_type").ToString())
                 transmissiontxt.Text = If(IsDBNull(reader("transmission_type")), "N/A", reader("transmission_type").ToString())
-
+                Dim make As String = If(IsDBNull(reader("make")), "N/A", reader("make").ToString())
+                Dim model As String = If(IsDBNull(reader("model_name")), "", reader("model_name").ToString())
+                Label33.Text = $"{make} {model}".Trim()
                 ' Handle image loading using ResourceManager
                 If Not IsDBNull(reader("image")) Then
                     Try
@@ -108,6 +116,9 @@ Public Class FORMRENTAL_STEP3
                 mileagetxt.Text = If(IsDBNull(reader("mileage")), "N/A", reader("mileage").ToString())
                 fueltxt.Text = If(IsDBNull(reader("fuel_type")), "N/A", reader("fuel_type").ToString())
                 transmissiontxt.Text = If(IsDBNull(reader("transmission_type")), "N/A", reader("transmission_type").ToString())
+                Dim make As String = If(IsDBNull(reader("make")), "N/A", reader("make").ToString())
+                Dim model As String = If(IsDBNull(reader("model")), "", reader("model").ToString())
+                Label33.Text = $"{make} {model}".Trim()
 
 
                 If Not IsDBNull(reader("image")) Then
@@ -230,9 +241,13 @@ Public Class FORMRENTAL_STEP3
             End If
             MessageBox.Show("VehicleType: " & RentalTransactionModule.TransactionData.VehicleType)
 
-            ' Load car information using the selected car ID from transaction
-            LoadCarInfo(RentalTransactionModule.TransactionData.SelectedCarId)
-            LoadMotorInfo(RentalTransactionModule.TransactionData.SelectedMotorId)
+            If RentalTransactionModule.TransactionData.VehicleType = "Car" Then
+                LoadCarInfo(RentalTransactionModule.TransactionData.SelectedCarId)
+            ElseIf RentalTransactionModule.TransactionData.VehicleType = "Motor" Then
+                LoadMotorInfo(RentalTransactionModule.TransactionData.SelectedMotorId)
+            Else
+                MessageBox.Show("Unknown vehicle type: " & RentalTransactionModule.TransactionData.VehicleType)
+            End If
             LoadTransactionDataToLabels()
 
         Catch ex As Exception
@@ -291,13 +306,7 @@ Public Class FORMRENTAL_STEP3
     End Sub
 
     Private Sub FORMRENTAL_STEP3_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If RentalTransactionModule.TransactionData.VehicleType = "Car" Then
-            LoadCarInfo(RentalTransactionModule.TransactionData.SelectedCarId)
-        ElseIf RentalTransactionModule.TransactionData.VehicleType = "Motor" Then
-            LoadMotorInfo(RentalTransactionModule.TransactionData.SelectedMotorId)
-        Else
-            MessageBox.Show("Unknown vehicle type: " & RentalTransactionModule.TransactionData.VehicleType)
-        End If
+
 
         MessageBox.Show("SelectedCarId: " & RentalTransactionModule.TransactionData.SelectedCarId & vbCrLf &
                 "SelectedMotorId: " & RentalTransactionModule.TransactionData.SelectedMotorId & vbCrLf &

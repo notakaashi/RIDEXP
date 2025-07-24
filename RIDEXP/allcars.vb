@@ -337,23 +337,7 @@ Public Class allcars
         SelectCar(1, "Toyota Vios", 600, "Car", 1)
     End Sub
 
-    Private Sub car10btn_Click(sender As Object, e As EventArgs)
-        If Not StartTransaction() Then
-            MessageBox.Show("Failed to start transaction. Please try again.")
-            Close()
-            Return
-        End If
-        SelectCar(10, "Toyota Rush", 1300, "Car", 10)
-    End Sub
 
-    Private Sub car5btn_Click(sender As Object, e As EventArgs)
-        If Not StartTransaction() Then
-            MessageBox.Show("Failed to start transaction. Please try again.")
-            Close()
-            Return
-        End If
-        SelectCar(5, "Honda City", 700, "Car", 5)
-    End Sub
 
     Private Sub btnCar6_Click(sender As Object, e As EventArgs) Handles btnCar6.Click
         If Not StartTransaction() Then
@@ -362,5 +346,23 @@ Public Class allcars
             Return
         End If
         SelectCar(6, "Toyota Fortuner", 800, "Car", 6)
+    End Sub
+
+    Private Sub car10btn_Click_1(sender As Object, e As EventArgs) Handles car10btn.Click
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectCar(10, "Toyota Rush", 1300, "Car", 10)
+    End Sub
+
+    Private Sub car5btn_Click_1(sender As Object, e As EventArgs) Handles car5btn.Click
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectCar(5, "Honda City", 700, "Car", 5)
     End Sub
 End Class
