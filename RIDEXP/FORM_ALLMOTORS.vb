@@ -24,12 +24,14 @@ Public Class FORM_ALLMOTORS
                                     m.year,
                                     rr.rate_per_day,
                                     m.make,
-                                    m.model
+                                    m.model,
+                                    mp.image  
                                     FROM motors m
                                     JOIN vehicles v ON m.motor_id = v.item_id
                                     JOIN rental_rate rr ON rr.vehicle_id = v.vehicle_id
                                     JOIN motor_category mc ON m.motor_category_id = mc.motor_category_id
                                     JOIN transmission_types tt ON mc.transmission_id = tt.transmission_id
+                                    JOIN motors_pic mp ON m.motor_id = mp.motor_id
                                     WHERE v.vehicle_type = 'motor'
                                     AND m.motor_id = @motorId;"
 
@@ -38,7 +40,6 @@ Public Class FORM_ALLMOTORS
 
                 Using reader As MySqlDataReader = cmd.ExecuteReader()
                     If reader.Read() Then
-                        ' Set data based on car ID
                         Select Case motorId
                             Case 1
                                 If Not IsDBNull(reader("model")) Then model1txt.Text = reader("model").ToString()
@@ -47,6 +48,7 @@ Public Class FORM_ALLMOTORS
                                 If Not IsDBNull(reader("mileage")) Then mileage1txt.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("year")) Then lblyear1.Text = reader("year").ToString()
                                 If Not IsDBNull(reader("image")) Then LoadMotorImage(reader("image").ToString(), motor1img)
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate1txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 2
                                 If Not IsDBNull(reader("model")) Then model2txt.Text = reader("model").ToString()
@@ -54,7 +56,8 @@ Public Class FORM_ALLMOTORS
                                 If Not IsDBNull(reader("color")) Then color2txt.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then mileage2txt.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("year")) Then lblyear2.Text = reader("year").ToString()
-                                'If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car2img)
+                                If Not IsDBNull(reader("image")) Then LoadMotorImage(reader("image").ToString(), motor2img)
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate2txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 3
                                 If Not IsDBNull(reader("model")) Then lblmodel3.Text = reader("model").ToString()
@@ -62,7 +65,8 @@ Public Class FORM_ALLMOTORS
                                 If Not IsDBNull(reader("color")) Then lblcolor3.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then lblmileage3.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("year")) Then lblyear3.Text = reader("year").ToString()
-                                'If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car3img)
+                                If Not IsDBNull(reader("image")) Then LoadMotorImage(reader("image").ToString(), imgmotor3)
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate3txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 4
                                 If Not IsDBNull(reader("model")) Then model4txt.Text = reader("model").ToString()
@@ -70,7 +74,8 @@ Public Class FORM_ALLMOTORS
                                 If Not IsDBNull(reader("color")) Then color4txt.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then mileage4txt.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("year")) Then lblyear4.Text = reader("year").ToString()
-                                'If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car4img)
+                                If Not IsDBNull(reader("image")) Then LoadMotorImage(reader("image").ToString(), motor4img)
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate4txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 5
                                 If Not IsDBNull(reader("model")) Then model5txt.Text = reader("model").ToString()
@@ -78,7 +83,8 @@ Public Class FORM_ALLMOTORS
                                 If Not IsDBNull(reader("color")) Then color5txt.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then mileage5txt.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("year")) Then lblyear5.Text = reader("year").ToString()
-                                'If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car5img)
+                                If Not IsDBNull(reader("image")) Then LoadMotorImage(reader("image").ToString(), motor5img)
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate5txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 6
                                 If Not IsDBNull(reader("model")) Then make6txt.Text = reader("model").ToString()
@@ -86,7 +92,8 @@ Public Class FORM_ALLMOTORS
                                 If Not IsDBNull(reader("color")) Then color6txt.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then mileage6txt.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("year")) Then lblyear6.Text = reader("year").ToString()
-                                'If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), imgCar6)
+                                If Not IsDBNull(reader("image")) Then LoadMotorImage(reader("image").ToString(), motor6img)
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate6txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 7
                                 If Not IsDBNull(reader("model")) Then model7txt.Text = reader("model").ToString()
@@ -94,7 +101,8 @@ Public Class FORM_ALLMOTORS
                                 If Not IsDBNull(reader("color")) Then color7txt.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then mileage7txt.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("year")) Then lblyear7.Text = reader("year").ToString()
-                                'If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car7img)
+                                If Not IsDBNull(reader("image")) Then LoadMotorImage(reader("image").ToString(), motor7img)
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate7txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 8
                                 If Not IsDBNull(reader("model")) Then model8txt.Text = reader("model").ToString()
@@ -102,7 +110,8 @@ Public Class FORM_ALLMOTORS
                                 If Not IsDBNull(reader("color")) Then color8txt.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then mileage8txt.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("year")) Then lblyear8.Text = reader("year").ToString()
-                                'If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car8img)
+                                If Not IsDBNull(reader("image")) Then LoadMotorImage(reader("image").ToString(), motor8img)
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate8txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 9
                                 If Not IsDBNull(reader("model")) Then model9txt.Text = reader("model").ToString()
@@ -110,7 +119,8 @@ Public Class FORM_ALLMOTORS
                                 If Not IsDBNull(reader("color")) Then color9txt.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then mileage9txt.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("year")) Then lblyear9.Text = reader("year").ToString()
-                                'If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car9img)
+                                If Not IsDBNull(reader("image")) Then LoadMotorImage(reader("image").ToString(), motor9img)
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate9txt.Text = reader("rate_per_day").ToString() & " per day"
 
                             Case 10
                                 If Not IsDBNull(reader("model")) Then model10txt.Text = reader("model").ToString()
@@ -118,7 +128,8 @@ Public Class FORM_ALLMOTORS
                                 If Not IsDBNull(reader("color")) Then color10txt.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then mileage10txt.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("year")) Then lblyear10.Text = reader("year").ToString()
-                                'If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car10img)
+                                If Not IsDBNull(reader("image")) Then LoadMotorImage(reader("image").ToString(), motor10img)
+                                If Not IsDBNull(reader("rate_per_day")) Then rentalrate10txt.Text = reader("rate_per_day").ToString() & " per day"
                         End Select
                     End If
                 End Using
@@ -198,5 +209,45 @@ Public Class FORM_ALLMOTORS
 
     Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
         Me.Close()
+    End Sub
+
+    Private Sub motor10btn_Click(sender As Object, e As EventArgs) Handles motor10btn.Click
+
+    End Sub
+
+    Private Sub motor7btn_Click(sender As Object, e As EventArgs) Handles motor7btn.Click
+
+    End Sub
+
+    Private Sub motor8btn_Click(sender As Object, e As EventArgs) Handles motor8btn.Click
+
+    End Sub
+
+    Private Sub motor2btn_Click(sender As Object, e As EventArgs) Handles motor2btn.Click
+
+    End Sub
+
+    Private Sub btnmotor3_Click(sender As Object, e As EventArgs) Handles btnmotor3.Click
+
+    End Sub
+
+    Private Sub motor9btn_Click(sender As Object, e As EventArgs) Handles motor9btn.Click
+
+    End Sub
+
+    Private Sub motor6btn_Click(sender As Object, e As EventArgs) Handles motor6btn.Click
+
+    End Sub
+
+    Private Sub motor5btn_Click(sender As Object, e As EventArgs) Handles motor5btn.Click
+
+    End Sub
+
+    Private Sub motor4btn_Click(sender As Object, e As EventArgs) Handles motor4btn.Click
+
+    End Sub
+
+    Private Sub motor1btn_Click(sender As Object, e As EventArgs) Handles motor1btn.Click
+
     End Sub
 End Class
