@@ -89,7 +89,7 @@
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         FORM_ADMIN.Show()
-        Me.Hide()
+        Hide()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -108,11 +108,16 @@
     End Sub
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnMotor.Click
         allmotors.Show()
+        allmotors.BringToFront()
         btnMotor.BackColor = Color.FromArgb(192, 0, 0)
         btnCar.BackColor = Color.White
         btnMotor.ForeColor = Color.White
         btnCar.ForeColor = Color.Black
         pnlVehicleType.Visible = False
         ResetRentalsLabelColor()
+    End Sub
+
+    Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
+        allmotors.Show()
     End Sub
 End Class

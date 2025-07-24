@@ -166,17 +166,17 @@ Public Class FORMRENTAL_STEP3
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             ' Simple validation
-            If RentalTransactionModule.TransactionData.SelectedCarId <= 0 Then
+            If TransactionData.SelectedCarId <= 0 Then
                 MessageBox.Show("No car selected.")
                 Return
             End If
 
             ' Mark as confirmed
-            RentalTransactionModule.TransactionData.CustomerConfirmed = True
+            TransactionData.CustomerConfirmed = True
 
             ' Proceed to payment form
-            FORMRENTAL_STEP4.Show()
-            Me.Hide() ' Hide instead of close to preserve transaction
+            FORMRENTAL_STEP4.Show
+            Hide ' Hide instead of close to preserve transaction
 
         Catch ex As Exception
             MessageBox.Show("Error proceeding to payment: " & ex.Message)
@@ -202,12 +202,12 @@ Public Class FORMRENTAL_STEP3
     End Sub
 
     ' Optional: Add a back button handler
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs)
         Try
             ' Go back to previous form (Step 2)
-            Dim step2Form As New FORMRENTAL_STEP2() ' Replace with your actual step 2 form name
-            step2Form.Show()
-            Me.Hide()
+            Dim step2Form As New FORMRENTAL_STEP2 ' Replace with your actual step 2 form name
+            step2Form.Show
+            Hide
         Catch ex As Exception
             MessageBox.Show("Error going back: " & ex.Message)
         End Try
@@ -218,4 +218,8 @@ Public Class FORMRENTAL_STEP3
         ' Don't automatically rollback here since user might be navigating between forms
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Close()
+        FORMRENTAL_STEP2.Show()
+    End Sub
 End Class

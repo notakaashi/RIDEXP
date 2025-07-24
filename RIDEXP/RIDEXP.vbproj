@@ -26,11 +26,8 @@
 
   <ItemGroup>
     <Compile Update="FORMADMIN_INVENTORY.vb" />
-    <Compile Update="FORM_ADVENTUREBIKE.vb" />
-    <Compile Update="FORM_UNDERBONE.vb" />
     <Compile Update="FORM_SCOOTER.vb" />
     <Compile Update="FORM_HYBRID.vb" />
-    <Compile Update="FORM_HATCHBACK.vb" />
     <Compile Update="My Project\Application.Designer.vb">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -41,7 +38,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="FORM_MPV.vb" />
     <Compile Update="My Project\Settings.Designer.vb">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>

@@ -1,9 +1,9 @@
 ﻿Public Class FORMRENTAL_STEP2
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If RentalTransactionModule.transaction Is Nothing Then
-            If Not RentalTransactionModule.StartTransaction() Then
+        If transaction Is Nothing Then
+            If Not StartTransaction() Then
                 MessageBox.Show("Failed to start transaction. Please try again.")
-                Me.Close()
+                Close()
                 Return
             End If
         End If
@@ -15,7 +15,7 @@
 
             ' Now proceed to next form
             FORMRENTAL_STEP3.Show()
-            Me.Close()
+            Close()
         End If
     End Sub
 
@@ -147,5 +147,11 @@
                 End If
             End If
         End With
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Close()
+        FORMRENTAL_STEP1.Show()
+
     End Sub
 End Class
