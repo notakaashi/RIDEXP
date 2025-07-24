@@ -367,7 +367,7 @@ Partial Class allcars
         btnHybrid.FlatAppearance.BorderSize = 0
         btnHybrid.FlatStyle = FlatStyle.Flat
         btnHybrid.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnHybrid.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnHybrid.ForeColor = Color.Black
         btnHybrid.Location = New Point(852, 7)
         btnHybrid.Name = "btnHybrid"
         btnHybrid.Size = New Size(176, 45)
@@ -382,7 +382,7 @@ Partial Class allcars
         btnHatch.FlatAppearance.BorderSize = 0
         btnHatch.FlatStyle = FlatStyle.Flat
         btnHatch.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnHatch.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnHatch.ForeColor = Color.Black
         btnHatch.Location = New Point(581, 7)
         btnHatch.Name = "btnHatch"
         btnHatch.Size = New Size(255, 45)
@@ -397,7 +397,7 @@ Partial Class allcars
         btnMPV.FlatAppearance.BorderSize = 0
         btnMPV.FlatStyle = FlatStyle.Flat
         btnMPV.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnMPV.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnMPV.ForeColor = Color.Black
         btnMPV.Location = New Point(399, 7)
         btnMPV.Name = "btnMPV"
         btnMPV.Size = New Size(163, 45)
@@ -412,7 +412,7 @@ Partial Class allcars
         btnSedan.FlatAppearance.BorderSize = 0
         btnSedan.FlatStyle = FlatStyle.Flat
         btnSedan.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnSedan.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnSedan.ForeColor = Color.Black
         btnSedan.Location = New Point(213, 7)
         btnSedan.Name = "btnSedan"
         btnSedan.Size = New Size(163, 45)
@@ -427,7 +427,7 @@ Partial Class allcars
         btnSuv.FlatAppearance.BorderSize = 0
         btnSuv.FlatStyle = FlatStyle.Flat
         btnSuv.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnSuv.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnSuv.ForeColor = Color.Black
         btnSuv.Location = New Point(52, 7)
         btnSuv.Name = "btnSuv"
         btnSuv.Size = New Size(133, 45)

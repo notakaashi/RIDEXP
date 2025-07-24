@@ -150,6 +150,7 @@ Partial Class FORM_ADMIN
         DataGridView7 = New DataGridView()
         Panel29 = New Panel()
         Label48 = New Label()
+        Button6 = New Button()
         Panel1.SuspendLayout()
         pnlUsers.SuspendLayout()
         CType(iconUsers, ComponentModel.ISupportInitialize).BeginInit()
@@ -448,6 +449,7 @@ Partial Class FORM_ADMIN
         ' Panel8
         ' 
         Panel8.BackColor = Color.White
+        Panel8.Controls.Add(Button6)
         Panel8.Controls.Add(Label9)
         Panel8.Dock = DockStyle.Top
         Panel8.Location = New Point(290, 0)
@@ -1595,6 +1597,18 @@ Partial Class FORM_ADMIN
         Label48.TabIndex = 7
         Label48.Text = "USERS"
         ' 
+        ' Button6
+        ' 
+        Button6.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button6.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button6.ForeColor = Color.White
+        Button6.Location = New Point(837, 19)
+        Button6.Name = "Button6"
+        Button6.Size = New Size(109, 36)
+        Button6.TabIndex = 7
+        Button6.Text = "LOGOUT"
+        Button6.UseVisualStyleBackColor = False
+        ' 
         ' FORM_ADMIN
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -1848,4 +1862,5 @@ Partial Class FORM_ADMIN
     Friend WithEvents DataGridView7 As DataGridView
     Friend WithEvents Panel29 As Panel
     Friend WithEvents Label48 As Label
+    Friend WithEvents Button6 As Button
 End Class

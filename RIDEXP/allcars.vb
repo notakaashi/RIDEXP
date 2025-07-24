@@ -7,6 +7,23 @@
 
     End Sub
 
+    Private Sub ResetButtonStyles()
+        Dim buttons As Button() = {btnSedan, btnSuv, btnMPV, btnHatch, btnHybrid}
+        For Each btn In buttons
+            btn.ForeColor = Color.Black
+            btn.Font = New Font(btn.Font, FontStyle.Regular)
+        Next
+    End Sub
+
+    Private Sub HighlightButton(clickedButton As Button)
+
+        ResetButtonStyles()
+
+        clickedButton.ForeColor = Color.FromArgb(192, 0, 0)
+        clickedButton.Font = New Font(clickedButton.Font, FontStyle.Underline)
+    End Sub
+
+
     Private Sub ShowOnlyPanel(targetPanel As Panel)
         pnlAllCarsContent.Location = New Point(1300, 167)
         pnlSuvContent.Location = New Point(1300, 167)
@@ -30,22 +47,27 @@
 
     Private Sub btnSuv_Click(sender As Object, e As EventArgs) Handles btnSuv.Click
         ShowOnlyPanel(pnlSuvContent)
+        HighlightButton(btnSuv)
     End Sub
 
     Private Sub btnSedan_Click(sender As Object, e As EventArgs) Handles btnSedan.Click
         ShowOnlyPanel(pnlSedan)
+        HighlightButton(btnSedan)
     End Sub
 
     Private Sub btnMPV_Click(sender As Object, e As EventArgs) Handles btnMPV.Click
         ShowOnlyPanel(pnlMpv)
+        HighlightButton(btnMPV)
     End Sub
 
     Private Sub btnHatch_Click(sender As Object, e As EventArgs) Handles btnHatch.Click
         ShowOnlyPanel(pnlHatchback)
+        HighlightButton(btnHatch)
     End Sub
 
     Private Sub btnHybrid_Click(sender As Object, e As EventArgs) Handles btnHybrid.Click
         ShowOnlyPanel(pnlHybrid)
+        HighlightButton(btnHybrid)
     End Sub
 
 
