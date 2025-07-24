@@ -7,8 +7,17 @@ Public Class SIGNUP
     Public connectionString As String = "Server=localhost;Database=ridexp;User=root;Password=;"
     Private Sub SIGNUP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FadeTimer.Start()
-        dobtxt.PlaceholderText = "YYYY-MM-DD"
-        licenseexptxt.PlaceholderText = "YYYY-MM-DD"
+        dobtxt.PlaceholderText = "Birthdate (YYYY-MM-DD)"
+        licenseexptxt.PlaceholderText = "Licence Expiry (YYYY-MM-DD)"
+        fnametxt.PlaceholderText = "First Name"
+        lnametxt.PlaceholderText = "Last Name"
+        emailtxt.PlaceholderText = "Email Address"
+        phonenumbertxt.PlaceholderText = "Phone Number"
+        addresstxt.PlaceholderText = "Address"
+        licensenumbertxt.PlaceholderText = "License Number"
+        usertxt.PlaceholderText = "Username"
+        passwordtxt.PlaceholderText = "Password"
+
     End Sub
 
     Private Sub FadeTimer_Tick(sender As Object, e As EventArgs) Handles FadeTimer.Tick
@@ -55,7 +64,7 @@ Public Class SIGNUP
 
                 Using transaction As MySqlTransaction = connection.BeginTransaction()
                     Try
-                        Dim customerQuery As String = "INSERT INTO customers (first_name, last_name, date_of_birth, email, phone, address, license_number, license_expiry) VALUES (@first_name, @last_name, @date_of_birth, @email, @phone, @address, @license_number, @license_expiry)"
+                        Dim customerQuery As String = "INSERT INTO customers (first_name, last_name, date_of_birth, email, phone, address, license_number, license_expiry, created_at) VALUES (@first_name, @last_name, @date_of_birth, @email, @phone, @address, @license_number, @license_expiry, CURDATE())"
 
                         Using customerCmd As New MySqlCommand(customerQuery, connection, transaction)
                             customerCmd.Parameters.AddWithValue("@first_name", fnametxt.Text)
@@ -122,6 +131,5 @@ Public Class SIGNUP
             pbxShow.Image = My.Resources.Resource1.show
         End If
     End Sub
-
 
 End Class
