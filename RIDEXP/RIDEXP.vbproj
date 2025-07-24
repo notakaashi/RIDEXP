@@ -26,9 +26,7 @@
 
   <ItemGroup>
     <Compile Update="FORMADMIN_INVENTORY.vb" />
-    <Compile Update="FORM_ADVENTUREBIKE.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="FORM_ADVENTUREBIKE.vb" />
     <Compile Update="FORM_UNDERBONE.vb" />
     <Compile Update="FORM_SCOOTER.vb" />
     <Compile Update="FORM_HYBRID.vb" />
