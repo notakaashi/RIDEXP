@@ -43,6 +43,8 @@
 
         pickupdatetxt.PlaceholderText = "YYYY-MM-DD"
         returndatetxt.PlaceholderText = "YYYY-MM-DD"
+        LoadExistingData()
+
     End Sub
 
 
@@ -147,9 +149,20 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Close()
-        FORMRENTAL_STEP1.Show()
+        Dim result As DialogResult = MessageBox.Show(
+       "Going back will discard all progress. Do you want to continue?",
+       "Confirm Navigation",
+       MessageBoxButtons.YesNo,
+       MessageBoxIcon.Warning
+   )
 
+        If result = DialogResult.Yes Then
+            RentalTransactionModule.RollbackTransaction()
+            RentalTransactionModule.ClearTransactionData()
+
+            FORMRENTAL_STEP1.Show()
+            Me.Close()
+        End If
     End Sub
 
 

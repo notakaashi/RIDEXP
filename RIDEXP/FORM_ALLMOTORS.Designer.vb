@@ -40,11 +40,9 @@ Partial Class FORM_ALLMOTORS
         Label31 = New Label()
         lblcolor3 = New Label()
         lblmileage3 = New Label()
-        Label48 = New Label()
         lblmake3 = New Label()
         btnmotor3 = New Button()
         Label56 = New Label()
-        Label78 = New Label()
         Label79 = New Label()
         imgmotor3 = New PictureBox()
         lblmodel3 = New Label()
@@ -56,11 +54,9 @@ Partial Class FORM_ALLMOTORS
         Label46 = New Label()
         color9txt = New Label()
         mileage9txt = New Label()
-        Label53 = New Label()
         make9txt = New Label()
         motor9btn = New Button()
         Label58 = New Label()
-        Label60 = New Label()
         Label61 = New Label()
         motor9img = New PictureBox()
         model9txt = New Label()
@@ -72,11 +68,9 @@ Partial Class FORM_ALLMOTORS
         Label17 = New Label()
         color6txt = New Label()
         mileage6txt = New Label()
-        Label27 = New Label()
         make6txt = New Label()
         motor6btn = New Button()
         Label35 = New Label()
-        Label43 = New Label()
         Label44 = New Label()
         motor6img = New PictureBox()
         model6txt = New Label()
@@ -88,11 +82,9 @@ Partial Class FORM_ALLMOTORS
         Label42 = New Label()
         color5txt = New Label()
         mileage5txt = New Label()
-        Label45 = New Label()
         make5txt = New Label()
         motor5btn = New Button()
         Label63 = New Label()
-        Label66 = New Label()
         Label67 = New Label()
         motor5img = New PictureBox()
         model5txt = New Label()
@@ -104,11 +96,9 @@ Partial Class FORM_ALLMOTORS
         Label34 = New Label()
         color4txt = New Label()
         mileage4txt = New Label()
-        Label39 = New Label()
         make4txt = New Label()
         motor4btn = New Button()
         Label54 = New Label()
-        Label57 = New Label()
         Label59 = New Label()
         motor4img = New PictureBox()
         model4txt = New Label()
@@ -120,11 +110,9 @@ Partial Class FORM_ALLMOTORS
         Label6 = New Label()
         color2txt = New Label()
         mileage2txt = New Label()
-        Label11 = New Label()
         make2txt = New Label()
         motor2btn = New Button()
         Label14 = New Label()
-        Label15 = New Label()
         Label16 = New Label()
         motor2img = New PictureBox()
         model2txt = New Label()
@@ -136,11 +124,9 @@ Partial Class FORM_ALLMOTORS
         Label8 = New Label()
         color1txt = New Label()
         mileage1txt = New Label()
-        Label13 = New Label()
         make1txt = New Label()
         motor1btn = New Button()
         Label19 = New Label()
-        Label20 = New Label()
         Label22 = New Label()
         motor1img = New PictureBox()
         model1txt = New Label()
@@ -153,11 +139,9 @@ Partial Class FORM_ALLMOTORS
         Label76 = New Label()
         color8txt = New Label()
         mileage8txt = New Label()
-        Label80 = New Label()
         make8txt = New Label()
         motor8btn = New Button()
         Label82 = New Label()
-        Label83 = New Label()
         Label84 = New Label()
         motor8img = New PictureBox()
         model8txt = New Label()
@@ -169,11 +153,9 @@ Partial Class FORM_ALLMOTORS
         Label62 = New Label()
         color7txt = New Label()
         mileage7txt = New Label()
-        Label71 = New Label()
         make7txt = New Label()
         motor7btn = New Button()
         Label73 = New Label()
-        Label74 = New Label()
         Label75 = New Label()
         motor7img = New PictureBox()
         model7txt = New Label()
@@ -186,11 +168,9 @@ Partial Class FORM_ALLMOTORS
         Label182 = New Label()
         color10txt = New Label()
         mileage10txt = New Label()
-        seatingcapacity2txt = New Label()
         make10txt = New Label()
         motor10btn = New Button()
         Label191 = New Label()
-        Label192 = New Label()
         Label193 = New Label()
         motor10img = New PictureBox()
         model10txt = New Label()
@@ -292,7 +272,7 @@ Partial Class FORM_ALLMOTORS
         Panel6.Location = New Point(0, 0)
         Panel6.Margin = New Padding(3, 2, 3, 2)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(1386, 28)
+        Panel6.Size = New Size(1080, 28)
         Panel6.TabIndex = 45
         ' 
         ' Label37
@@ -355,11 +335,9 @@ Partial Class FORM_ALLMOTORS
         Panel4.Controls.Add(Label31)
         Panel4.Controls.Add(lblcolor3)
         Panel4.Controls.Add(lblmileage3)
-        Panel4.Controls.Add(Label48)
         Panel4.Controls.Add(lblmake3)
         Panel4.Controls.Add(btnmotor3)
         Panel4.Controls.Add(Label56)
-        Panel4.Controls.Add(Label78)
         Panel4.Controls.Add(Label79)
         Panel4.Controls.Add(imgmotor3)
         Panel4.Controls.Add(lblmodel3)
@@ -431,22 +409,11 @@ Partial Class FORM_ALLMOTORS
         lblmileage3.AutoSize = True
         lblmileage3.Font = New Font("Futura Hv BT", 12F)
         lblmileage3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblmileage3.Location = New Point(487, 131)
+        lblmileage3.Location = New Point(487, 118)
         lblmileage3.Name = "lblmileage3"
         lblmileage3.Size = New Size(88, 19)
         lblmileage3.TabIndex = 20
         lblmileage3.Text = "11,456km"
-        ' 
-        ' Label48
-        ' 
-        Label48.AutoSize = True
-        Label48.Font = New Font("Futura Hv BT", 12F)
-        Label48.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label48.Location = New Point(487, 103)
-        Label48.Name = "Label48"
-        Label48.Size = New Size(19, 19)
-        Label48.TabIndex = 19
-        Label48.Text = "5"
         ' 
         ' lblmake3
         ' 
@@ -478,22 +445,11 @@ Partial Class FORM_ALLMOTORS
         Label56.AutoSize = True
         Label56.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
         Label56.ForeColor = Color.Black
-        Label56.Location = New Point(324, 131)
+        Label56.Location = New Point(324, 118)
         Label56.Name = "Label56"
         Label56.Size = New Size(78, 19)
         Label56.TabIndex = 5
         Label56.Text = "MILEAGE:"
-        ' 
-        ' Label78
-        ' 
-        Label78.AutoSize = True
-        Label78.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label78.ForeColor = Color.Black
-        Label78.Location = New Point(324, 103)
-        Label78.Name = "Label78"
-        Label78.Size = New Size(125, 19)
-        Label78.TabIndex = 4
-        Label78.Text = "TRANSMISSION:"
         ' 
         ' Label79
         ' 
@@ -549,11 +505,9 @@ Partial Class FORM_ALLMOTORS
         Panel8.Controls.Add(Label46)
         Panel8.Controls.Add(color9txt)
         Panel8.Controls.Add(mileage9txt)
-        Panel8.Controls.Add(Label53)
         Panel8.Controls.Add(make9txt)
         Panel8.Controls.Add(motor9btn)
         Panel8.Controls.Add(Label58)
-        Panel8.Controls.Add(Label60)
         Panel8.Controls.Add(Label61)
         Panel8.Controls.Add(motor9img)
         Panel8.Controls.Add(model9txt)
@@ -625,22 +579,11 @@ Partial Class FORM_ALLMOTORS
         mileage9txt.AutoSize = True
         mileage9txt.Font = New Font("Futura Hv BT", 12F)
         mileage9txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        mileage9txt.Location = New Point(487, 131)
+        mileage9txt.Location = New Point(487, 120)
         mileage9txt.Name = "mileage9txt"
         mileage9txt.Size = New Size(88, 19)
         mileage9txt.TabIndex = 20
         mileage9txt.Text = "11,456km"
-        ' 
-        ' Label53
-        ' 
-        Label53.AutoSize = True
-        Label53.Font = New Font("Futura Hv BT", 12F)
-        Label53.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label53.Location = New Point(487, 103)
-        Label53.Name = "Label53"
-        Label53.Size = New Size(19, 19)
-        Label53.TabIndex = 19
-        Label53.Text = "5"
         ' 
         ' make9txt
         ' 
@@ -672,22 +615,11 @@ Partial Class FORM_ALLMOTORS
         Label58.AutoSize = True
         Label58.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
         Label58.ForeColor = Color.Black
-        Label58.Location = New Point(324, 131)
+        Label58.Location = New Point(324, 120)
         Label58.Name = "Label58"
         Label58.Size = New Size(78, 19)
         Label58.TabIndex = 5
         Label58.Text = "MILEAGE:"
-        ' 
-        ' Label60
-        ' 
-        Label60.AutoSize = True
-        Label60.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label60.ForeColor = Color.Black
-        Label60.Location = New Point(324, 103)
-        Label60.Name = "Label60"
-        Label60.Size = New Size(125, 19)
-        Label60.TabIndex = 4
-        Label60.Text = "TRANSMISSION:"
         ' 
         ' Label61
         ' 
@@ -743,11 +675,9 @@ Partial Class FORM_ALLMOTORS
         Panel3.Controls.Add(Label17)
         Panel3.Controls.Add(color6txt)
         Panel3.Controls.Add(mileage6txt)
-        Panel3.Controls.Add(Label27)
         Panel3.Controls.Add(make6txt)
         Panel3.Controls.Add(motor6btn)
         Panel3.Controls.Add(Label35)
-        Panel3.Controls.Add(Label43)
         Panel3.Controls.Add(Label44)
         Panel3.Controls.Add(motor6img)
         Panel3.Controls.Add(model6txt)
@@ -819,22 +749,11 @@ Partial Class FORM_ALLMOTORS
         mileage6txt.AutoSize = True
         mileage6txt.Font = New Font("Futura Hv BT", 12F)
         mileage6txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        mileage6txt.Location = New Point(487, 131)
+        mileage6txt.Location = New Point(487, 119)
         mileage6txt.Name = "mileage6txt"
         mileage6txt.Size = New Size(88, 19)
         mileage6txt.TabIndex = 20
         mileage6txt.Text = "11,456km"
-        ' 
-        ' Label27
-        ' 
-        Label27.AutoSize = True
-        Label27.Font = New Font("Futura Hv BT", 12F)
-        Label27.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label27.Location = New Point(487, 103)
-        Label27.Name = "Label27"
-        Label27.Size = New Size(19, 19)
-        Label27.TabIndex = 19
-        Label27.Text = "5"
         ' 
         ' make6txt
         ' 
@@ -866,22 +785,11 @@ Partial Class FORM_ALLMOTORS
         Label35.AutoSize = True
         Label35.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
         Label35.ForeColor = Color.Black
-        Label35.Location = New Point(324, 131)
+        Label35.Location = New Point(324, 119)
         Label35.Name = "Label35"
         Label35.Size = New Size(78, 19)
         Label35.TabIndex = 5
         Label35.Text = "MILEAGE:"
-        ' 
-        ' Label43
-        ' 
-        Label43.AutoSize = True
-        Label43.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label43.ForeColor = Color.Black
-        Label43.Location = New Point(324, 103)
-        Label43.Name = "Label43"
-        Label43.Size = New Size(125, 19)
-        Label43.TabIndex = 4
-        Label43.Text = "TRANSMISSION:"
         ' 
         ' Label44
         ' 
@@ -937,11 +845,9 @@ Partial Class FORM_ALLMOTORS
         Panel7.Controls.Add(Label42)
         Panel7.Controls.Add(color5txt)
         Panel7.Controls.Add(mileage5txt)
-        Panel7.Controls.Add(Label45)
         Panel7.Controls.Add(make5txt)
         Panel7.Controls.Add(motor5btn)
         Panel7.Controls.Add(Label63)
-        Panel7.Controls.Add(Label66)
         Panel7.Controls.Add(Label67)
         Panel7.Controls.Add(motor5img)
         Panel7.Controls.Add(model5txt)
@@ -1013,22 +919,11 @@ Partial Class FORM_ALLMOTORS
         mileage5txt.AutoSize = True
         mileage5txt.Font = New Font("Futura Hv BT", 12F)
         mileage5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        mileage5txt.Location = New Point(487, 131)
+        mileage5txt.Location = New Point(487, 118)
         mileage5txt.Name = "mileage5txt"
         mileage5txt.Size = New Size(88, 19)
         mileage5txt.TabIndex = 20
         mileage5txt.Text = "11,456km"
-        ' 
-        ' Label45
-        ' 
-        Label45.AutoSize = True
-        Label45.Font = New Font("Futura Hv BT", 12F)
-        Label45.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label45.Location = New Point(487, 103)
-        Label45.Name = "Label45"
-        Label45.Size = New Size(19, 19)
-        Label45.TabIndex = 19
-        Label45.Text = "5"
         ' 
         ' make5txt
         ' 
@@ -1060,22 +955,11 @@ Partial Class FORM_ALLMOTORS
         Label63.AutoSize = True
         Label63.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
         Label63.ForeColor = Color.Black
-        Label63.Location = New Point(324, 131)
+        Label63.Location = New Point(324, 118)
         Label63.Name = "Label63"
         Label63.Size = New Size(78, 19)
         Label63.TabIndex = 5
         Label63.Text = "MILEAGE:"
-        ' 
-        ' Label66
-        ' 
-        Label66.AutoSize = True
-        Label66.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label66.ForeColor = Color.Black
-        Label66.Location = New Point(324, 103)
-        Label66.Name = "Label66"
-        Label66.Size = New Size(125, 19)
-        Label66.TabIndex = 4
-        Label66.Text = "TRANSMISSION:"
         ' 
         ' Label67
         ' 
@@ -1131,11 +1015,9 @@ Partial Class FORM_ALLMOTORS
         Panel5.Controls.Add(Label34)
         Panel5.Controls.Add(color4txt)
         Panel5.Controls.Add(mileage4txt)
-        Panel5.Controls.Add(Label39)
         Panel5.Controls.Add(make4txt)
         Panel5.Controls.Add(motor4btn)
         Panel5.Controls.Add(Label54)
-        Panel5.Controls.Add(Label57)
         Panel5.Controls.Add(Label59)
         Panel5.Controls.Add(motor4img)
         Panel5.Controls.Add(model4txt)
@@ -1207,22 +1089,11 @@ Partial Class FORM_ALLMOTORS
         mileage4txt.AutoSize = True
         mileage4txt.Font = New Font("Futura Hv BT", 12F)
         mileage4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        mileage4txt.Location = New Point(487, 131)
+        mileage4txt.Location = New Point(487, 116)
         mileage4txt.Name = "mileage4txt"
         mileage4txt.Size = New Size(88, 19)
         mileage4txt.TabIndex = 20
         mileage4txt.Text = "11,456km"
-        ' 
-        ' Label39
-        ' 
-        Label39.AutoSize = True
-        Label39.Font = New Font("Futura Hv BT", 12F)
-        Label39.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label39.Location = New Point(487, 103)
-        Label39.Name = "Label39"
-        Label39.Size = New Size(19, 19)
-        Label39.TabIndex = 19
-        Label39.Text = "5"
         ' 
         ' make4txt
         ' 
@@ -1254,22 +1125,11 @@ Partial Class FORM_ALLMOTORS
         Label54.AutoSize = True
         Label54.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
         Label54.ForeColor = Color.Black
-        Label54.Location = New Point(324, 131)
+        Label54.Location = New Point(324, 116)
         Label54.Name = "Label54"
         Label54.Size = New Size(78, 19)
         Label54.TabIndex = 5
         Label54.Text = "MILEAGE:"
-        ' 
-        ' Label57
-        ' 
-        Label57.AutoSize = True
-        Label57.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label57.ForeColor = Color.Black
-        Label57.Location = New Point(324, 103)
-        Label57.Name = "Label57"
-        Label57.Size = New Size(125, 19)
-        Label57.TabIndex = 4
-        Label57.Text = "TRANSMISSION:"
         ' 
         ' Label59
         ' 
@@ -1325,11 +1185,9 @@ Partial Class FORM_ALLMOTORS
         Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(color2txt)
         Panel2.Controls.Add(mileage2txt)
-        Panel2.Controls.Add(Label11)
         Panel2.Controls.Add(make2txt)
         Panel2.Controls.Add(motor2btn)
         Panel2.Controls.Add(Label14)
-        Panel2.Controls.Add(Label15)
         Panel2.Controls.Add(Label16)
         Panel2.Controls.Add(motor2img)
         Panel2.Controls.Add(model2txt)
@@ -1401,22 +1259,11 @@ Partial Class FORM_ALLMOTORS
         mileage2txt.AutoSize = True
         mileage2txt.Font = New Font("Futura Hv BT", 12F)
         mileage2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        mileage2txt.Location = New Point(487, 131)
+        mileage2txt.Location = New Point(487, 122)
         mileage2txt.Name = "mileage2txt"
         mileage2txt.Size = New Size(88, 19)
         mileage2txt.TabIndex = 20
         mileage2txt.Text = "11,456km"
-        ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.Font = New Font("Futura Hv BT", 12F)
-        Label11.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label11.Location = New Point(487, 103)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(19, 19)
-        Label11.TabIndex = 19
-        Label11.Text = "5"
         ' 
         ' make2txt
         ' 
@@ -1448,22 +1295,11 @@ Partial Class FORM_ALLMOTORS
         Label14.AutoSize = True
         Label14.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
         Label14.ForeColor = Color.Black
-        Label14.Location = New Point(324, 131)
+        Label14.Location = New Point(324, 122)
         Label14.Name = "Label14"
         Label14.Size = New Size(78, 19)
         Label14.TabIndex = 5
         Label14.Text = "MILEAGE:"
-        ' 
-        ' Label15
-        ' 
-        Label15.AutoSize = True
-        Label15.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label15.ForeColor = Color.Black
-        Label15.Location = New Point(324, 103)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(125, 19)
-        Label15.TabIndex = 4
-        Label15.Text = "TRANSMISSION:"
         ' 
         ' Label16
         ' 
@@ -1519,11 +1355,9 @@ Partial Class FORM_ALLMOTORS
         Panel1.Controls.Add(Label8)
         Panel1.Controls.Add(color1txt)
         Panel1.Controls.Add(mileage1txt)
-        Panel1.Controls.Add(Label13)
         Panel1.Controls.Add(make1txt)
         Panel1.Controls.Add(motor1btn)
         Panel1.Controls.Add(Label19)
-        Panel1.Controls.Add(Label20)
         Panel1.Controls.Add(Label22)
         Panel1.Controls.Add(motor1img)
         Panel1.Controls.Add(model1txt)
@@ -1595,22 +1429,11 @@ Partial Class FORM_ALLMOTORS
         mileage1txt.AutoSize = True
         mileage1txt.Font = New Font("Futura Hv BT", 12F)
         mileage1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        mileage1txt.Location = New Point(487, 131)
+        mileage1txt.Location = New Point(487, 115)
         mileage1txt.Name = "mileage1txt"
         mileage1txt.Size = New Size(88, 19)
         mileage1txt.TabIndex = 20
         mileage1txt.Text = "11,456km"
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Font = New Font("Futura Hv BT", 12F)
-        Label13.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label13.Location = New Point(487, 103)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(19, 19)
-        Label13.TabIndex = 19
-        Label13.Text = "5"
         ' 
         ' make1txt
         ' 
@@ -1642,22 +1465,11 @@ Partial Class FORM_ALLMOTORS
         Label19.AutoSize = True
         Label19.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
         Label19.ForeColor = Color.Black
-        Label19.Location = New Point(324, 131)
+        Label19.Location = New Point(324, 115)
         Label19.Name = "Label19"
         Label19.Size = New Size(78, 19)
         Label19.TabIndex = 5
         Label19.Text = "MILEAGE:"
-        ' 
-        ' Label20
-        ' 
-        Label20.AutoSize = True
-        Label20.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label20.ForeColor = Color.Black
-        Label20.Location = New Point(324, 103)
-        Label20.Name = "Label20"
-        Label20.Size = New Size(125, 19)
-        Label20.TabIndex = 4
-        Label20.Text = "TRANSMISSION:"
         ' 
         ' Label22
         ' 
@@ -1709,7 +1521,7 @@ Partial Class FORM_ALLMOTORS
         pnlUnderbone.BackColor = SystemColors.Control
         pnlUnderbone.Controls.Add(Panel10)
         pnlUnderbone.Controls.Add(Panel9)
-        pnlUnderbone.Location = New Point(1279, 40)
+        pnlUnderbone.Location = New Point(1299, 109)
         pnlUnderbone.Margin = New Padding(3, 2, 3, 2)
         pnlUnderbone.Name = "pnlUnderbone"
         pnlUnderbone.Size = New Size(1017, 263)
@@ -1725,11 +1537,9 @@ Partial Class FORM_ALLMOTORS
         Panel10.Controls.Add(Label76)
         Panel10.Controls.Add(color8txt)
         Panel10.Controls.Add(mileage8txt)
-        Panel10.Controls.Add(Label80)
         Panel10.Controls.Add(make8txt)
         Panel10.Controls.Add(motor8btn)
         Panel10.Controls.Add(Label82)
-        Panel10.Controls.Add(Label83)
         Panel10.Controls.Add(Label84)
         Panel10.Controls.Add(motor8img)
         Panel10.Controls.Add(model8txt)
@@ -1801,22 +1611,11 @@ Partial Class FORM_ALLMOTORS
         mileage8txt.AutoSize = True
         mileage8txt.Font = New Font("Futura Hv BT", 12F)
         mileage8txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        mileage8txt.Location = New Point(487, 131)
+        mileage8txt.Location = New Point(486, 120)
         mileage8txt.Name = "mileage8txt"
         mileage8txt.Size = New Size(88, 19)
         mileage8txt.TabIndex = 20
         mileage8txt.Text = "11,456km"
-        ' 
-        ' Label80
-        ' 
-        Label80.AutoSize = True
-        Label80.Font = New Font("Futura Hv BT", 12F)
-        Label80.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label80.Location = New Point(487, 103)
-        Label80.Name = "Label80"
-        Label80.Size = New Size(19, 19)
-        Label80.TabIndex = 19
-        Label80.Text = "5"
         ' 
         ' make8txt
         ' 
@@ -1848,22 +1647,11 @@ Partial Class FORM_ALLMOTORS
         Label82.AutoSize = True
         Label82.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
         Label82.ForeColor = Color.Black
-        Label82.Location = New Point(324, 131)
+        Label82.Location = New Point(323, 120)
         Label82.Name = "Label82"
         Label82.Size = New Size(78, 19)
         Label82.TabIndex = 5
         Label82.Text = "MILEAGE:"
-        ' 
-        ' Label83
-        ' 
-        Label83.AutoSize = True
-        Label83.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label83.ForeColor = Color.Black
-        Label83.Location = New Point(324, 103)
-        Label83.Name = "Label83"
-        Label83.Size = New Size(125, 19)
-        Label83.TabIndex = 4
-        Label83.Text = "TRANSMISSION:"
         ' 
         ' Label84
         ' 
@@ -1919,11 +1707,9 @@ Partial Class FORM_ALLMOTORS
         Panel9.Controls.Add(Label62)
         Panel9.Controls.Add(color7txt)
         Panel9.Controls.Add(mileage7txt)
-        Panel9.Controls.Add(Label71)
         Panel9.Controls.Add(make7txt)
         Panel9.Controls.Add(motor7btn)
         Panel9.Controls.Add(Label73)
-        Panel9.Controls.Add(Label74)
         Panel9.Controls.Add(Label75)
         Panel9.Controls.Add(motor7img)
         Panel9.Controls.Add(model7txt)
@@ -1995,22 +1781,11 @@ Partial Class FORM_ALLMOTORS
         mileage7txt.AutoSize = True
         mileage7txt.Font = New Font("Futura Hv BT", 12F)
         mileage7txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        mileage7txt.Location = New Point(487, 131)
+        mileage7txt.Location = New Point(487, 118)
         mileage7txt.Name = "mileage7txt"
         mileage7txt.Size = New Size(88, 19)
         mileage7txt.TabIndex = 20
         mileage7txt.Text = "11,456km"
-        ' 
-        ' Label71
-        ' 
-        Label71.AutoSize = True
-        Label71.Font = New Font("Futura Hv BT", 12F)
-        Label71.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label71.Location = New Point(487, 103)
-        Label71.Name = "Label71"
-        Label71.Size = New Size(19, 19)
-        Label71.TabIndex = 19
-        Label71.Text = "5"
         ' 
         ' make7txt
         ' 
@@ -2042,22 +1817,11 @@ Partial Class FORM_ALLMOTORS
         Label73.AutoSize = True
         Label73.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
         Label73.ForeColor = Color.Black
-        Label73.Location = New Point(324, 131)
+        Label73.Location = New Point(324, 118)
         Label73.Name = "Label73"
         Label73.Size = New Size(78, 19)
         Label73.TabIndex = 5
         Label73.Text = "MILEAGE:"
-        ' 
-        ' Label74
-        ' 
-        Label74.AutoSize = True
-        Label74.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label74.ForeColor = Color.Black
-        Label74.Location = New Point(324, 103)
-        Label74.Name = "Label74"
-        Label74.Size = New Size(125, 19)
-        Label74.TabIndex = 4
-        Label74.Text = "TRANSMISSION:"
         ' 
         ' Label75
         ' 
@@ -2108,7 +1872,7 @@ Partial Class FORM_ALLMOTORS
         pnlAdventure.AutoScroll = True
         pnlAdventure.BackColor = SystemColors.Control
         pnlAdventure.Controls.Add(Panel27)
-        pnlAdventure.Location = New Point(1259, 272)
+        pnlAdventure.Location = New Point(1137, 129)
         pnlAdventure.Margin = New Padding(3, 2, 3, 2)
         pnlAdventure.Name = "pnlAdventure"
         pnlAdventure.Size = New Size(1017, 263)
@@ -2124,11 +1888,9 @@ Partial Class FORM_ALLMOTORS
         Panel27.Controls.Add(Label182)
         Panel27.Controls.Add(color10txt)
         Panel27.Controls.Add(mileage10txt)
-        Panel27.Controls.Add(seatingcapacity2txt)
         Panel27.Controls.Add(make10txt)
         Panel27.Controls.Add(motor10btn)
         Panel27.Controls.Add(Label191)
-        Panel27.Controls.Add(Label192)
         Panel27.Controls.Add(Label193)
         Panel27.Controls.Add(motor10img)
         Panel27.Controls.Add(model10txt)
@@ -2200,22 +1962,11 @@ Partial Class FORM_ALLMOTORS
         mileage10txt.AutoSize = True
         mileage10txt.Font = New Font("Futura Hv BT", 12F)
         mileage10txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        mileage10txt.Location = New Point(487, 131)
+        mileage10txt.Location = New Point(487, 121)
         mileage10txt.Name = "mileage10txt"
         mileage10txt.Size = New Size(88, 19)
         mileage10txt.TabIndex = 20
         mileage10txt.Text = "11,456km"
-        ' 
-        ' seatingcapacity2txt
-        ' 
-        seatingcapacity2txt.AutoSize = True
-        seatingcapacity2txt.Font = New Font("Futura Hv BT", 12F)
-        seatingcapacity2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        seatingcapacity2txt.Location = New Point(487, 103)
-        seatingcapacity2txt.Name = "seatingcapacity2txt"
-        seatingcapacity2txt.Size = New Size(19, 19)
-        seatingcapacity2txt.TabIndex = 19
-        seatingcapacity2txt.Text = "5"
         ' 
         ' make10txt
         ' 
@@ -2247,22 +1998,11 @@ Partial Class FORM_ALLMOTORS
         Label191.AutoSize = True
         Label191.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
         Label191.ForeColor = Color.Black
-        Label191.Location = New Point(324, 131)
+        Label191.Location = New Point(324, 121)
         Label191.Name = "Label191"
         Label191.Size = New Size(78, 19)
         Label191.TabIndex = 5
         Label191.Text = "MILEAGE:"
-        ' 
-        ' Label192
-        ' 
-        Label192.AutoSize = True
-        Label192.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label192.ForeColor = Color.Black
-        Label192.Location = New Point(324, 103)
-        Label192.Name = "Label192"
-        Label192.Size = New Size(125, 19)
-        Label192.TabIndex = 4
-        Label192.Text = "TRANSMISSION:"
         ' 
         ' Label193
         ' 
@@ -2316,7 +2056,7 @@ Partial Class FORM_ALLMOTORS
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1386, 428)
+        ClientSize = New Size(1080, 428)
         Controls.Add(pnlUnderbone)
         Controls.Add(pnlAdventure)
         Controls.Add(pnlScooter)
@@ -2431,11 +2171,9 @@ Partial Class FORM_ALLMOTORS
     Friend WithEvents Label6 As Label
     Friend WithEvents color2txt As Label
     Friend WithEvents mileage2txt As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents make2txt As Label
     Friend WithEvents motor2btn As Button
     Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents motor2img As PictureBox
     Friend WithEvents model2txt As Label
@@ -2447,17 +2185,13 @@ Partial Class FORM_ALLMOTORS
     Friend WithEvents Label8 As Label
     Friend WithEvents color1txt As Label
     Friend WithEvents mileage1txt As Label
-    Friend WithEvents Label13 As Label
     Friend WithEvents make1txt As Label
     Friend WithEvents motor1btn As Button
     Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents motor1img As PictureBox
     Friend WithEvents model1txt As Label
     Friend WithEvents Label28 As Label
-    Friend WithEvents seatingcapacity2txt As Label
-    Friend WithEvents Label192 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents lblyear6 As Label
     Friend WithEvents Label10 As Label
@@ -2465,11 +2199,9 @@ Partial Class FORM_ALLMOTORS
     Friend WithEvents Label17 As Label
     Friend WithEvents color6txt As Label
     Friend WithEvents mileage6txt As Label
-    Friend WithEvents Label27 As Label
     Friend WithEvents make6txt As Label
     Friend WithEvents motor6btn As Button
     Friend WithEvents Label35 As Label
-    Friend WithEvents Label43 As Label
     Friend WithEvents Label44 As Label
     Friend WithEvents motor6img As PictureBox
     Friend WithEvents model6txt As Label
@@ -2481,11 +2213,9 @@ Partial Class FORM_ALLMOTORS
     Friend WithEvents Label42 As Label
     Friend WithEvents color5txt As Label
     Friend WithEvents mileage5txt As Label
-    Friend WithEvents Label45 As Label
     Friend WithEvents make5txt As Label
     Friend WithEvents motor5btn As Button
     Friend WithEvents Label63 As Label
-    Friend WithEvents Label66 As Label
     Friend WithEvents Label67 As Label
     Friend WithEvents motor5img As PictureBox
     Friend WithEvents model5txt As Label
@@ -2497,11 +2227,9 @@ Partial Class FORM_ALLMOTORS
     Friend WithEvents Label34 As Label
     Friend WithEvents color4txt As Label
     Friend WithEvents mileage4txt As Label
-    Friend WithEvents Label39 As Label
     Friend WithEvents make4txt As Label
     Friend WithEvents motor4btn As Button
     Friend WithEvents Label54 As Label
-    Friend WithEvents Label57 As Label
     Friend WithEvents Label59 As Label
     Friend WithEvents motor4img As PictureBox
     Friend WithEvents model4txt As Label
@@ -2511,22 +2239,6 @@ Partial Class FORM_ALLMOTORS
     Friend WithEvents lblmake3 As Label
     Friend WithEvents btnmotor3 As Button
     Friend WithEvents imgmotor3 As PictureBox
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents lblyear9 As Label
-    Friend WithEvents Label26 As Label
-    Friend WithEvents rentalrate9txt As Label
-    Friend WithEvents Label46 As Label
-    Friend WithEvents color9txt As Label
-    Friend WithEvents mileage9txt As Label
-    Friend WithEvents Label53 As Label
-    Friend WithEvents make9txt As Label
-    Friend WithEvents motor9btn As Button
-    Friend WithEvents Label58 As Label
-    Friend WithEvents Label60 As Label
-    Friend WithEvents Label61 As Label
-    Friend WithEvents motor9img As PictureBox
-    Friend WithEvents model9txt As Label
-    Friend WithEvents Label64 As Label
     Friend WithEvents Panel10 As Panel
     Friend WithEvents lblyear8 As Label
     Friend WithEvents Label70 As Label
@@ -2534,11 +2246,9 @@ Partial Class FORM_ALLMOTORS
     Friend WithEvents Label76 As Label
     Friend WithEvents color8txt As Label
     Friend WithEvents mileage8txt As Label
-    Friend WithEvents Label80 As Label
     Friend WithEvents make8txt As Label
     Friend WithEvents motor8btn As Button
     Friend WithEvents Label82 As Label
-    Friend WithEvents Label83 As Label
     Friend WithEvents Label84 As Label
     Friend WithEvents motor8img As PictureBox
     Friend WithEvents model8txt As Label
@@ -2550,11 +2260,9 @@ Partial Class FORM_ALLMOTORS
     Friend WithEvents Label62 As Label
     Friend WithEvents color7txt As Label
     Friend WithEvents mileage7txt As Label
-    Friend WithEvents Label71 As Label
     Friend WithEvents make7txt As Label
     Friend WithEvents motor7btn As Button
     Friend WithEvents Label73 As Label
-    Friend WithEvents Label74 As Label
     Friend WithEvents Label75 As Label
     Friend WithEvents motor7img As PictureBox
     Friend WithEvents model7txt As Label
@@ -2564,10 +2272,22 @@ Partial Class FORM_ALLMOTORS
     Friend WithEvents Label23 As Label
     Friend WithEvents rentalrate3txt As Label
     Friend WithEvents Label31 As Label
-    Friend WithEvents Label48 As Label
     Friend WithEvents Label56 As Label
-    Friend WithEvents Label78 As Label
     Friend WithEvents Label79 As Label
     Friend WithEvents lblmodel3 As Label
     Friend WithEvents Label85 As Label
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents lblyear9 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents rentalrate9txt As Label
+    Friend WithEvents Label46 As Label
+    Friend WithEvents color9txt As Label
+    Friend WithEvents mileage9txt As Label
+    Friend WithEvents make9txt As Label
+    Friend WithEvents motor9btn As Button
+    Friend WithEvents Label58 As Label
+    Friend WithEvents Label61 As Label
+    Friend WithEvents motor9img As PictureBox
+    Friend WithEvents model9txt As Label
+    Friend WithEvents Label64 As Label
 End Class

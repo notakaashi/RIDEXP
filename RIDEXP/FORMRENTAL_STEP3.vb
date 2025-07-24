@@ -167,12 +167,10 @@ c.make,
     End Sub
 
 
-    ' Load and display all transaction data
     Private Sub LoadTransactionDataToLabels()
         Try
             With RentalTransactionModule.TransactionData
 
-                ' Debug: Show what data we have (FIXED - added return time)
                 MessageBox.Show($"Loading data for Car ID: { .SelectedCarId}" & vbCrLf &
                            $"Pickup Date: { .PickupDate}" & vbCrLf &
                            $"Pickup Time: { .PickupTime}" & vbCrLf &
