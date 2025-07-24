@@ -4,9 +4,6 @@
     <Compile Update="allcars.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="allmotors.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="CONTACTUS.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -26,6 +23,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FORM_ADMIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FORM_ALLMOTORS.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FORM_PRIVACYPOLICY.vb">

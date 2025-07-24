@@ -9,8 +9,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        allmotors.Show()
-        allmotors.BringToFront()
+        FORM_ALLMOTORS.Show()
     End Sub
 
     Private Sub homelbl_Click(sender As Object, e As EventArgs) Handles homelbl.Click

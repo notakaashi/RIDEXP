@@ -107,8 +107,7 @@
         ResetRentalsLabelColor()
     End Sub
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnMotor.Click
-        allmotors.Show()
-        allmotors.BringToFront()
+        FORM_ALLMOTORS.Show()
         btnMotor.BackColor = Color.FromArgb(192, 0, 0)
         btnCar.BackColor = Color.White
         btnMotor.ForeColor = Color.White
@@ -118,6 +117,6 @@
     End Sub
 
     Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
-        allmotors.Show()
+        FORM_ALLMOTORS.Show()
     End Sub
 End Class
