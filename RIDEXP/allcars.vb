@@ -78,7 +78,7 @@ Public Class allcars
                                 If Not IsDBNull(reader("color")) Then color5txt.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then mileage5txt.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity5txt.Text = reader("seating_capacity").ToString()
-                                If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car5PictureBox)
+                                If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car5img)
 
                             Case 6
                                 If Not IsDBNull(reader("model_name")) Then model6txt.Text = reader("model_name").ToString()
@@ -118,7 +118,7 @@ Public Class allcars
                                 If Not IsDBNull(reader("color")) Then color10txt.Text = reader("color").ToString()
                                 If Not IsDBNull(reader("mileage")) Then mileage10txt.Text = reader("mileage").ToString() & " km"
                                 If Not IsDBNull(reader("seating_capacity")) Then seatingcapacity10txt.Text = reader("seating_capacity").ToString()
-                                If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car10PictureBox)
+                                If Not IsDBNull(reader("image")) Then LoadCarImage(reader("image").ToString(), car10img)
                         End Select
                     End If
                 End Using
