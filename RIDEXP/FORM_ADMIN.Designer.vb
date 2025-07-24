@@ -22,6 +22,10 @@ Partial Class FORM_ADMIN
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         pnlUsers = New Panel()
         iconUsers = New PictureBox()
@@ -44,6 +48,7 @@ Partial Class FORM_ADMIN
         Label2 = New Label()
         Label1 = New Label()
         Panel8 = New Panel()
+        Button6 = New Button()
         Label9 = New Label()
         Panel9 = New Panel()
         Label11 = New Label()
@@ -66,9 +71,11 @@ Partial Class FORM_ADMIN
         Panel14 = New Panel()
         Label19 = New Label()
         pnlAllDashboard = New Panel()
-        DataGridView2 = New DataGridView()
-        DataGridView1 = New DataGridView()
+        dgvNewUsers = New DataGridView()
+        dgvRentals = New DataGridView()
         pnlcarinventory = New Panel()
+        Panel2 = New Panel()
+        cbVehicle = New ComboBox()
         Panel7 = New Panel()
         Label20 = New Label()
         PictureBox3 = New PictureBox()
@@ -87,10 +94,12 @@ Partial Class FORM_ADMIN
         PictureBox4 = New PictureBox()
         Label22 = New Label()
         TextBox1 = New TextBox()
-        DataGridView4 = New DataGridView()
+        dgvVehicles = New DataGridView()
         Panel4 = New Panel()
         Label4 = New Label()
         pnlRentalContent = New Panel()
+        Panel22 = New Panel()
+        ComboBox1 = New ComboBox()
         Panel18 = New Panel()
         Label27 = New Label()
         PictureBox11 = New PictureBox()
@@ -101,7 +110,7 @@ Partial Class FORM_ADMIN
         PictureBox12 = New PictureBox()
         Label30 = New Label()
         TextBox2 = New TextBox()
-        DataGridView3 = New DataGridView()
+        dgvRentals2 = New DataGridView()
         Panel20 = New Panel()
         Label31 = New Label()
         pnlMaintenanceContent = New Panel()
@@ -119,7 +128,7 @@ Partial Class FORM_ADMIN
         PictureBox6 = New PictureBox()
         Label26 = New Label()
         TextBox3 = New TextBox()
-        DataGridView5 = New DataGridView()
+        dgvMaintenance = New DataGridView()
         Panel17 = New Panel()
         Label32 = New Label()
         pnlSaleContent = New Panel()
@@ -137,7 +146,7 @@ Partial Class FORM_ADMIN
         PictureBox16 = New PictureBox()
         Label40 = New Label()
         TextBox4 = New TextBox()
-        DataGridView6 = New DataGridView()
+        dgvSales = New DataGridView()
         Panel25 = New Panel()
         Label41 = New Label()
         pnlUsersContent = New Panel()
@@ -147,10 +156,9 @@ Partial Class FORM_ADMIN
         PictureBox19 = New PictureBox()
         Label47 = New Label()
         TextBox5 = New TextBox()
-        DataGridView7 = New DataGridView()
+        dgvAllUSERS = New DataGridView()
         Panel29 = New Panel()
         Label48 = New Label()
-        Button6 = New Button()
         Panel1.SuspendLayout()
         pnlUsers.SuspendLayout()
         CType(iconUsers, ComponentModel.ISupportInitialize).BeginInit()
@@ -176,9 +184,10 @@ Partial Class FORM_ADMIN
         Panel13.SuspendLayout()
         Panel14.SuspendLayout()
         pnlAllDashboard.SuspendLayout()
-        CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvNewUsers, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvRentals, ComponentModel.ISupportInitialize).BeginInit()
         pnlcarinventory.SuspendLayout()
+        Panel2.SuspendLayout()
         Panel7.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         Panel5.SuspendLayout()
@@ -187,14 +196,15 @@ Partial Class FORM_ADMIN
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel6.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
-        CType(DataGridView4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvVehicles, ComponentModel.ISupportInitialize).BeginInit()
         Panel4.SuspendLayout()
         pnlRentalContent.SuspendLayout()
+        Panel22.SuspendLayout()
         Panel18.SuspendLayout()
         CType(PictureBox11, ComponentModel.ISupportInitialize).BeginInit()
         Panel19.SuspendLayout()
         CType(PictureBox12, ComponentModel.ISupportInitialize).BeginInit()
-        CType(DataGridView3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvRentals2, ComponentModel.ISupportInitialize).BeginInit()
         Panel20.SuspendLayout()
         pnlMaintenanceContent.SuspendLayout()
         Panel21.SuspendLayout()
@@ -203,7 +213,7 @@ Partial Class FORM_ADMIN
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         Panel16.SuspendLayout()
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
-        CType(DataGridView5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvMaintenance, ComponentModel.ISupportInitialize).BeginInit()
         Panel17.SuspendLayout()
         pnlSaleContent.SuspendLayout()
         Panel26.SuspendLayout()
@@ -212,12 +222,12 @@ Partial Class FORM_ADMIN
         CType(PictureBox15, ComponentModel.ISupportInitialize).BeginInit()
         Panel24.SuspendLayout()
         CType(PictureBox16, ComponentModel.ISupportInitialize).BeginInit()
-        CType(DataGridView6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvSales, ComponentModel.ISupportInitialize).BeginInit()
         Panel25.SuspendLayout()
         pnlUsersContent.SuspendLayout()
         Panel28.SuspendLayout()
         CType(PictureBox19, ComponentModel.ISupportInitialize).BeginInit()
-        CType(DataGridView7, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvAllUSERS, ComponentModel.ISupportInitialize).BeginInit()
         Panel29.SuspendLayout()
         SuspendLayout()
         ' 
@@ -457,6 +467,18 @@ Partial Class FORM_ADMIN
         Panel8.Size = New Size(972, 75)
         Panel8.TabIndex = 1
         ' 
+        ' Button6
+        ' 
+        Button6.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button6.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button6.ForeColor = Color.White
+        Button6.Location = New Point(837, 19)
+        Button6.Name = "Button6"
+        Button6.Size = New Size(109, 36)
+        Button6.TabIndex = 7
+        Button6.Text = "LOGOUT"
+        Button6.UseVisualStyleBackColor = False
+        ' 
         ' Label9
         ' 
         Label9.AutoSize = True
@@ -682,53 +704,91 @@ Partial Class FORM_ADMIN
         ' 
         ' pnlAllDashboard
         ' 
-        pnlAllDashboard.Controls.Add(DataGridView2)
-        pnlAllDashboard.Controls.Add(DataGridView1)
+        pnlAllDashboard.Controls.Add(dgvNewUsers)
+        pnlAllDashboard.Controls.Add(dgvRentals)
         pnlAllDashboard.Controls.Add(Panel14)
         pnlAllDashboard.Controls.Add(Panel13)
         pnlAllDashboard.Controls.Add(Panel12)
         pnlAllDashboard.Controls.Add(Panel11)
         pnlAllDashboard.Controls.Add(Panel10)
         pnlAllDashboard.Controls.Add(Panel9)
-        pnlAllDashboard.Location = New Point(1251, 81)
+        pnlAllDashboard.Location = New Point(1300, 465)
         pnlAllDashboard.Name = "pnlAllDashboard"
         pnlAllDashboard.Size = New Size(949, 564)
         pnlAllDashboard.TabIndex = 13
         ' 
-        ' DataGridView2
+        ' dgvNewUsers
         ' 
-        DataGridView2.BackgroundColor = Color.White
-        DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView2.Location = New Point(668, 230)
-        DataGridView2.Name = "DataGridView2"
-        DataGridView2.RowHeadersWidth = 51
-        DataGridView2.Size = New Size(262, 303)
-        DataGridView2.TabIndex = 14
+        dgvNewUsers.BackgroundColor = Color.White
+        dgvNewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvNewUsers.Location = New Point(668, 230)
+        dgvNewUsers.Name = "dgvNewUsers"
+        dgvNewUsers.RowHeadersWidth = 51
+        dgvNewUsers.Size = New Size(262, 303)
+        dgvNewUsers.TabIndex = 14
         ' 
-        ' DataGridView1
+        ' dgvRentals
         ' 
-        DataGridView1.BackgroundColor = Color.White
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(14, 230)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(593, 303)
-        DataGridView1.TabIndex = 13
+        dgvRentals.BackgroundColor = Color.White
+        dgvRentals.BorderStyle = BorderStyle.Fixed3D
+        dgvRentals.CellBorderStyle = DataGridViewCellBorderStyle.Raised
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvRentals.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        dgvRentals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.White
+        DataGridViewCellStyle2.Font = New Font("Futura Lt BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        dgvRentals.DefaultCellStyle = DataGridViewCellStyle2
+        dgvRentals.Location = New Point(14, 230)
+        dgvRentals.Name = "dgvRentals"
+        dgvRentals.RowHeadersWidth = 51
+        dgvRentals.Size = New Size(593, 303)
+        dgvRentals.TabIndex = 13
         ' 
         ' pnlcarinventory
         ' 
+        pnlcarinventory.Controls.Add(Panel2)
         pnlcarinventory.Controls.Add(Panel7)
         pnlcarinventory.Controls.Add(Panel5)
         pnlcarinventory.Controls.Add(Panel3)
         pnlcarinventory.Controls.Add(Button1)
         pnlcarinventory.Controls.Add(Panel6)
         pnlcarinventory.Controls.Add(TextBox1)
-        pnlcarinventory.Controls.Add(DataGridView4)
+        pnlcarinventory.Controls.Add(dgvVehicles)
         pnlcarinventory.Controls.Add(Panel4)
-        pnlcarinventory.Location = New Point(310, 667)
+        pnlcarinventory.Location = New Point(1300, 91)
         pnlcarinventory.Name = "pnlcarinventory"
         pnlcarinventory.Size = New Size(915, 564)
         pnlcarinventory.TabIndex = 14
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.White
+        Panel2.Controls.Add(cbVehicle)
+        Panel2.Location = New Point(413, 135)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(213, 45)
+        Panel2.TabIndex = 17
+        ' 
+        ' cbVehicle
+        ' 
+        cbVehicle.FlatStyle = FlatStyle.Flat
+        cbVehicle.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cbVehicle.FormattingEnabled = True
+        cbVehicle.Location = New Point(21, 9)
+        cbVehicle.Name = "cbVehicle"
+        cbVehicle.Size = New Size(189, 28)
+        cbVehicle.TabIndex = 16
         ' 
         ' Panel7
         ' 
@@ -923,15 +983,31 @@ Partial Class FORM_ADMIN
         TextBox1.Size = New Size(231, 35)
         TextBox1.TabIndex = 14
         ' 
-        ' DataGridView4
+        ' dgvVehicles
         ' 
-        DataGridView4.BackgroundColor = Color.White
-        DataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView4.Location = New Point(25, 233)
-        DataGridView4.Name = "DataGridView4"
-        DataGridView4.RowHeadersWidth = 51
-        DataGridView4.Size = New Size(854, 318)
-        DataGridView4.TabIndex = 13
+        dgvVehicles.BackgroundColor = Color.White
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = SystemColors.Control
+        DataGridViewCellStyle3.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        dgvVehicles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        dgvVehicles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = SystemColors.Window
+        DataGridViewCellStyle4.Font = New Font("Futura Lt BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle4.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
+        dgvVehicles.DefaultCellStyle = DataGridViewCellStyle4
+        dgvVehicles.Location = New Point(25, 233)
+        dgvVehicles.Name = "dgvVehicles"
+        dgvVehicles.RowHeadersWidth = 51
+        dgvVehicles.Size = New Size(854, 318)
+        dgvVehicles.TabIndex = 13
         ' 
         ' Panel4
         ' 
@@ -949,22 +1025,42 @@ Partial Class FORM_ADMIN
         Label4.ForeColor = Color.White
         Label4.Location = New Point(11, 8)
         Label4.Name = "Label4"
-        Label4.Size = New Size(240, 28)
+        Label4.Size = New Size(281, 28)
         Label4.TabIndex = 7
-        Label4.Text = "CARS INVENTORY"
+        Label4.Text = "VEHICLE INVENTORY"
         ' 
         ' pnlRentalContent
         ' 
+        pnlRentalContent.Controls.Add(Panel22)
         pnlRentalContent.Controls.Add(Panel18)
         pnlRentalContent.Controls.Add(Button2)
         pnlRentalContent.Controls.Add(Panel19)
         pnlRentalContent.Controls.Add(TextBox2)
-        pnlRentalContent.Controls.Add(DataGridView3)
+        pnlRentalContent.Controls.Add(dgvRentals2)
         pnlRentalContent.Controls.Add(Panel20)
-        pnlRentalContent.Location = New Point(1239, 654)
+        pnlRentalContent.Location = New Point(1300, 91)
         pnlRentalContent.Name = "pnlRentalContent"
         pnlRentalContent.Size = New Size(915, 564)
         pnlRentalContent.TabIndex = 15
+        ' 
+        ' Panel22
+        ' 
+        Panel22.BackColor = Color.White
+        Panel22.Controls.Add(ComboBox1)
+        Panel22.Location = New Point(420, 135)
+        Panel22.Name = "Panel22"
+        Panel22.Size = New Size(213, 45)
+        Panel22.TabIndex = 18
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.FlatStyle = FlatStyle.Flat
+        ComboBox1.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(21, 9)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(189, 28)
+        ComboBox1.TabIndex = 16
         ' 
         ' Panel18
         ' 
@@ -1073,15 +1169,15 @@ Partial Class FORM_ADMIN
         TextBox2.Size = New Size(231, 35)
         TextBox2.TabIndex = 14
         ' 
-        ' DataGridView3
+        ' dgvRentals2
         ' 
-        DataGridView3.BackgroundColor = Color.White
-        DataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView3.Location = New Point(25, 233)
-        DataGridView3.Name = "DataGridView3"
-        DataGridView3.RowHeadersWidth = 51
-        DataGridView3.Size = New Size(854, 318)
-        DataGridView3.TabIndex = 13
+        dgvRentals2.BackgroundColor = Color.White
+        dgvRentals2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvRentals2.Location = New Point(25, 233)
+        dgvRentals2.Name = "dgvRentals2"
+        dgvRentals2.RowHeadersWidth = 51
+        dgvRentals2.Size = New Size(854, 318)
+        dgvRentals2.TabIndex = 13
         ' 
         ' Panel20
         ' 
@@ -1110,9 +1206,9 @@ Partial Class FORM_ADMIN
         pnlMaintenanceContent.Controls.Add(Button3)
         pnlMaintenanceContent.Controls.Add(Panel16)
         pnlMaintenanceContent.Controls.Add(TextBox3)
-        pnlMaintenanceContent.Controls.Add(DataGridView5)
+        pnlMaintenanceContent.Controls.Add(dgvMaintenance)
         pnlMaintenanceContent.Controls.Add(Panel17)
-        pnlMaintenanceContent.Location = New Point(1242, 325)
+        pnlMaintenanceContent.Location = New Point(1300, 98)
         pnlMaintenanceContent.Name = "pnlMaintenanceContent"
         pnlMaintenanceContent.Size = New Size(915, 564)
         pnlMaintenanceContent.TabIndex = 16
@@ -1267,15 +1363,15 @@ Partial Class FORM_ADMIN
         TextBox3.Size = New Size(231, 35)
         TextBox3.TabIndex = 14
         ' 
-        ' DataGridView5
+        ' dgvMaintenance
         ' 
-        DataGridView5.BackgroundColor = Color.White
-        DataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView5.Location = New Point(25, 233)
-        DataGridView5.Name = "DataGridView5"
-        DataGridView5.RowHeadersWidth = 51
-        DataGridView5.Size = New Size(854, 318)
-        DataGridView5.TabIndex = 13
+        dgvMaintenance.BackgroundColor = Color.White
+        dgvMaintenance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvMaintenance.Location = New Point(25, 233)
+        dgvMaintenance.Name = "dgvMaintenance"
+        dgvMaintenance.RowHeadersWidth = 51
+        dgvMaintenance.Size = New Size(854, 318)
+        dgvMaintenance.TabIndex = 13
         ' 
         ' Panel17
         ' 
@@ -1304,9 +1400,9 @@ Partial Class FORM_ADMIN
         pnlSaleContent.Controls.Add(Button4)
         pnlSaleContent.Controls.Add(Panel24)
         pnlSaleContent.Controls.Add(TextBox4)
-        pnlSaleContent.Controls.Add(DataGridView6)
+        pnlSaleContent.Controls.Add(dgvSales)
         pnlSaleContent.Controls.Add(Panel25)
-        pnlSaleContent.Location = New Point(296, 667)
+        pnlSaleContent.Location = New Point(321, 105)
         pnlSaleContent.Name = "pnlSaleContent"
         pnlSaleContent.Size = New Size(915, 564)
         pnlSaleContent.TabIndex = 17
@@ -1461,15 +1557,15 @@ Partial Class FORM_ADMIN
         TextBox4.Size = New Size(231, 35)
         TextBox4.TabIndex = 14
         ' 
-        ' DataGridView6
+        ' dgvSales
         ' 
-        DataGridView6.BackgroundColor = Color.White
-        DataGridView6.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView6.Location = New Point(25, 233)
-        DataGridView6.Name = "DataGridView6"
-        DataGridView6.RowHeadersWidth = 51
-        DataGridView6.Size = New Size(854, 318)
-        DataGridView6.TabIndex = 13
+        dgvSales.BackgroundColor = Color.White
+        dgvSales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvSales.Location = New Point(25, 233)
+        dgvSales.Name = "dgvSales"
+        dgvSales.RowHeadersWidth = 51
+        dgvSales.Size = New Size(854, 318)
+        dgvSales.TabIndex = 13
         ' 
         ' Panel25
         ' 
@@ -1496,9 +1592,9 @@ Partial Class FORM_ADMIN
         pnlUsersContent.Controls.Add(Button5)
         pnlUsersContent.Controls.Add(Panel28)
         pnlUsersContent.Controls.Add(TextBox5)
-        pnlUsersContent.Controls.Add(DataGridView7)
+        pnlUsersContent.Controls.Add(dgvAllUSERS)
         pnlUsersContent.Controls.Add(Panel29)
-        pnlUsersContent.Location = New Point(1251, 78)
+        pnlUsersContent.Location = New Point(1300, 105)
         pnlUsersContent.Name = "pnlUsersContent"
         pnlUsersContent.Size = New Size(915, 564)
         pnlUsersContent.TabIndex = 18
@@ -1567,15 +1663,15 @@ Partial Class FORM_ADMIN
         TextBox5.Size = New Size(231, 35)
         TextBox5.TabIndex = 14
         ' 
-        ' DataGridView7
+        ' dgvAllUSERS
         ' 
-        DataGridView7.BackgroundColor = Color.White
-        DataGridView7.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView7.Location = New Point(25, 233)
-        DataGridView7.Name = "DataGridView7"
-        DataGridView7.RowHeadersWidth = 51
-        DataGridView7.Size = New Size(854, 318)
-        DataGridView7.TabIndex = 13
+        dgvAllUSERS.BackgroundColor = Color.White
+        dgvAllUSERS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvAllUSERS.Location = New Point(25, 233)
+        dgvAllUSERS.Name = "dgvAllUSERS"
+        dgvAllUSERS.RowHeadersWidth = 51
+        dgvAllUSERS.Size = New Size(854, 318)
+        dgvAllUSERS.TabIndex = 13
         ' 
         ' Panel29
         ' 
@@ -1597,32 +1693,20 @@ Partial Class FORM_ADMIN
         Label48.TabIndex = 7
         Label48.Text = "USERS"
         ' 
-        ' Button6
-        ' 
-        Button6.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button6.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button6.ForeColor = Color.White
-        Button6.Location = New Point(837, 19)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(109, 36)
-        Button6.TabIndex = 7
-        Button6.Text = "LOGOUT"
-        Button6.UseVisualStyleBackColor = False
-        ' 
         ' FORM_ADMIN
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Gainsboro
         ClientSize = New Size(1262, 673)
-        Controls.Add(pnlUsersContent)
-        Controls.Add(pnlSaleContent)
-        Controls.Add(pnlMaintenanceContent)
-        Controls.Add(pnlRentalContent)
-        Controls.Add(pnlcarinventory)
         Controls.Add(Panel8)
-        Controls.Add(pnlAllDashboard)
         Controls.Add(Panel1)
+        Controls.Add(pnlMaintenanceContent)
+        Controls.Add(pnlUsersContent)
+        Controls.Add(pnlRentalContent)
+        Controls.Add(pnlSaleContent)
+        Controls.Add(pnlAllDashboard)
+        Controls.Add(pnlcarinventory)
         Name = "FORM_ADMIN"
         StartPosition = FormStartPosition.CenterScreen
         Text = "FORM_ADMIN"
@@ -1665,10 +1749,11 @@ Partial Class FORM_ADMIN
         Panel14.ResumeLayout(False)
         Panel14.PerformLayout()
         pnlAllDashboard.ResumeLayout(False)
-        CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvNewUsers, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvRentals, ComponentModel.ISupportInitialize).EndInit()
         pnlcarinventory.ResumeLayout(False)
         pnlcarinventory.PerformLayout()
+        Panel2.ResumeLayout(False)
         Panel7.ResumeLayout(False)
         Panel7.PerformLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
@@ -1681,18 +1766,19 @@ Partial Class FORM_ADMIN
         Panel6.ResumeLayout(False)
         Panel6.PerformLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
-        CType(DataGridView4, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvVehicles, ComponentModel.ISupportInitialize).EndInit()
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
         pnlRentalContent.ResumeLayout(False)
         pnlRentalContent.PerformLayout()
+        Panel22.ResumeLayout(False)
         Panel18.ResumeLayout(False)
         Panel18.PerformLayout()
         CType(PictureBox11, ComponentModel.ISupportInitialize).EndInit()
         Panel19.ResumeLayout(False)
         Panel19.PerformLayout()
         CType(PictureBox12, ComponentModel.ISupportInitialize).EndInit()
-        CType(DataGridView3, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvRentals2, ComponentModel.ISupportInitialize).EndInit()
         Panel20.ResumeLayout(False)
         Panel20.PerformLayout()
         pnlMaintenanceContent.ResumeLayout(False)
@@ -1706,7 +1792,7 @@ Partial Class FORM_ADMIN
         Panel16.ResumeLayout(False)
         Panel16.PerformLayout()
         CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
-        CType(DataGridView5, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvMaintenance, ComponentModel.ISupportInitialize).EndInit()
         Panel17.ResumeLayout(False)
         Panel17.PerformLayout()
         pnlSaleContent.ResumeLayout(False)
@@ -1720,7 +1806,7 @@ Partial Class FORM_ADMIN
         Panel24.ResumeLayout(False)
         Panel24.PerformLayout()
         CType(PictureBox16, ComponentModel.ISupportInitialize).EndInit()
-        CType(DataGridView6, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvSales, ComponentModel.ISupportInitialize).EndInit()
         Panel25.ResumeLayout(False)
         Panel25.PerformLayout()
         pnlUsersContent.ResumeLayout(False)
@@ -1728,7 +1814,7 @@ Partial Class FORM_ADMIN
         Panel28.ResumeLayout(False)
         Panel28.PerformLayout()
         CType(PictureBox19, ComponentModel.ISupportInitialize).EndInit()
-        CType(DataGridView7, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvAllUSERS, ComponentModel.ISupportInitialize).EndInit()
         Panel29.ResumeLayout(False)
         Panel29.PerformLayout()
         ResumeLayout(False)
@@ -1778,11 +1864,11 @@ Partial Class FORM_ADMIN
     Friend WithEvents Panel14 As Panel
     Friend WithEvents Label19 As Label
     Friend WithEvents pnlAllDashboard As Panel
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvNewUsers As DataGridView
+    Friend WithEvents dgvRentals As DataGridView
     Friend WithEvents pnlcarinventory As Panel
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents DataGridView4 As DataGridView
+    Friend WithEvents dgvVehicles As DataGridView
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents Button1 As Button
@@ -1813,7 +1899,7 @@ Partial Class FORM_ADMIN
     Friend WithEvents PictureBox12 As PictureBox
     Friend WithEvents Label30 As Label
     Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents dgvRentals2 As DataGridView
     Friend WithEvents Panel20 As Panel
     Friend WithEvents Label31 As Label
     Friend WithEvents pnlMaintenanceContent As Panel
@@ -1831,7 +1917,7 @@ Partial Class FORM_ADMIN
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents Label26 As Label
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents DataGridView5 As DataGridView
+    Friend WithEvents dgvMaintenance As DataGridView
     Friend WithEvents Panel17 As Panel
     Friend WithEvents Label32 As Label
     Friend WithEvents pnlSaleContent As Panel
@@ -1849,7 +1935,7 @@ Partial Class FORM_ADMIN
     Friend WithEvents PictureBox16 As PictureBox
     Friend WithEvents Label40 As Label
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents DataGridView6 As DataGridView
+    Friend WithEvents dgvSales As DataGridView
     Friend WithEvents Panel25 As Panel
     Friend WithEvents Label41 As Label
     Friend WithEvents pnlUsersContent As Panel
@@ -1859,8 +1945,12 @@ Partial Class FORM_ADMIN
     Friend WithEvents PictureBox19 As PictureBox
     Friend WithEvents Label47 As Label
     Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents DataGridView7 As DataGridView
+    Friend WithEvents dgvAllUSERS As DataGridView
     Friend WithEvents Panel29 As Panel
     Friend WithEvents Label48 As Label
     Friend WithEvents Button6 As Button
+    Friend WithEvents cbVehicle As ComboBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel22 As Panel
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

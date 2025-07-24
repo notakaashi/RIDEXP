@@ -159,6 +159,7 @@ Public Class FORM_ALLMOTORS
         Me.Opacity = 0
         FadeTimer.Start()
         LoadAllMotorData()
+
     End Sub
     Private Sub FadeTimer_Tick(sender As Object, e As EventArgs) Handles FadeTimer.Tick
         If Me.Opacity < 1 Then
