@@ -8,12 +8,9 @@
             End If
         End If
 
-        ' Validate the form
         If ValidateForm() Then
-            ' Save the current form data BEFORE proceeding
             SaveFormDataToModule()
 
-            ' Now proceed to next form
             FORMRENTAL_STEP3.Show()
             Close()
         End If
@@ -26,7 +23,7 @@
 
     Private Sub FORMRENTAL_STEP2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If RentalTransactionModule.transaction Is Nothing Then
-            MessageBox.Show("No active transaction found. Returning to car selection.")
+            MessageBox.Show("No active transaction found. Returning to car/motor selection.")
             Dim step1Form As New FORMRENTAL_STEP1()
             step1Form.Show()
             Me.Close()

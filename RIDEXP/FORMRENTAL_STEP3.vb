@@ -4,7 +4,7 @@ Public Class FORMRENTAL_STEP3
 
     Private Sub LoadCarInfo(carId As Integer)
         Try
-            ' Check if we have a valid connection and transaction
+
             If RentalTransactionModule.conn Is Nothing OrElse RentalTransactionModule.conn.State <> ConnectionState.Open Then
                 MessageBox.Show("No active database connection.")
                 Return
@@ -74,6 +74,82 @@ Public Class FORMRENTAL_STEP3
             MessageBox.Show("Error loading car info: " & ex.Message)
         End Try
     End Sub
+    Private Sub LoadMotorInfo(motorId As Integer)
+        Try
+
+            If RentalTransactionModule.conn Is Nothing OrElse RentalTransactionModule.conn.State <> ConnectionState.Open Then
+                MessageBox.Show("No active database connection.")
+                Return
+            End If
+
+            Dim cmd As New MySqlCommand("
+                                 SELECT 
+                                m.color,
+                                tt.transmission_type,
+                                m.mileage,
+                                m.year,
+                                rr.rate_per_day,
+                                m.make,
+                                m.model,
+                                mp.image  
+                                FROM motors m
+                                JOIN vehicles v ON m.motor_id = v.item_id
+                                JOIN rental_rate rr ON rr.vehicle_id = v.vehicle_id
+                                JOIN motor_category mc ON m.motor_category_id = mc.motor_category_id
+                                JOIN transmission_types tt ON mc.transmission_id = tt.transmission_id
+                                JOIN motors_pic mp ON m.motor_id = mp.motor_id
+                                WHERE v.vehicle_type = 'motor'
+                                AND m.motor_id = @motorId", RentalTransactionModule.conn)
+
+            cmd.Parameters.AddWithValue("@motorId", motorId)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+            If reader.Read() Then
+                mileagetxt.Text = If(IsDBNull(reader("mileage")), "N/A", reader("mileage").ToString())
+                fueltxt.Text = If(IsDBNull(reader("fuel_type")), "N/A", reader("fuel_type").ToString())
+                transmissiontxt.Text = If(IsDBNull(reader("transmission_type")), "N/A", reader("transmission_type").ToString())
+
+
+                If Not IsDBNull(reader("image")) Then
+                    Try
+                        Dim imageName As String = IO.Path.GetFileNameWithoutExtension(reader("image").ToString())
+                        Dim resImage = My.Resources.ResourceManager.GetObject(imageName)
+
+                        If resImage IsNot Nothing AndAlso TypeOf resImage Is Image Then
+                            PictureBox4.Image = CType(resImage, Image)
+                            MessageBox.Show($"Image '{imageName}' loaded successfully")
+                        Else
+                            MessageBox.Show($"Image '{imageName}' not found in resources or is not an Image type")
+                            PictureBox4.Image = Nothing
+                        End If
+
+                    Catch resEx As Exception
+                        MessageBox.Show($"Error loading image: {resEx.Message}")
+                        PictureBox4.Image = Nothing
+                    End Try
+                Else
+                    MessageBox.Show("No image found in database")
+                    PictureBox4.Image = Nothing
+                End If
+
+                PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
+            Else
+                MessageBox.Show("Motor not found with ID: " & motorId)
+                ' Set default values
+                mileagetxt.Text = "N/A"
+                seatcapacitytxt.Text = "N/A"
+                fueltxt.Text = "N/A"
+                transmissiontxt.Text = "N/A"
+                PictureBox4.Image = Nothing
+            End If
+
+            reader.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Error loading motor info: " & ex.Message)
+        End Try
+
+    End Sub
 
     ' Load and display all transaction data
     Private Sub LoadTransactionDataToLabels()
@@ -136,11 +212,12 @@ Public Class FORMRENTAL_STEP3
     Private Sub FORMRENTAL_STEP3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             ' Check if we have transaction data
-            If RentalTransactionModule.TransactionData.SelectedCarId <= 0 Then
-                MessageBox.Show("No car selected. Please start from car selection.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If RentalTransactionModule.TransactionData.SelectedCarId <= 0 AndAlso RentalTransactionModule.TransactionData.SelectedMotorId <= 0 Then
+                MessageBox.Show("No vehicle selected. Please start from car or motor selection.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Me.Close()
                 Return
             End If
+
 
             ' If transaction is null but we have data, try to reconnect
             If RentalTransactionModule.transaction Is Nothing OrElse RentalTransactionModule.conn Is Nothing OrElse RentalTransactionModule.conn.State <> ConnectionState.Open Then
@@ -151,11 +228,11 @@ Public Class FORMRENTAL_STEP3
                     Return
                 End If
             End If
+            MessageBox.Show("VehicleType: " & RentalTransactionModule.TransactionData.VehicleType)
 
             ' Load car information using the selected car ID from transaction
             LoadCarInfo(RentalTransactionModule.TransactionData.SelectedCarId)
-
-            ' Load and display all transaction data
+            LoadMotorInfo(RentalTransactionModule.TransactionData.SelectedMotorId)
             LoadTransactionDataToLabels()
 
         Catch ex As Exception
@@ -166,12 +243,12 @@ Public Class FORMRENTAL_STEP3
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             ' Simple validation
-            If TransactionData.SelectedCarId <= 0 Then
-                MessageBox.Show("No car selected.")
+            If TransactionData.SelectedCarId <= 0 AndAlso TransactionData.SelectedMotorId <= 0 Then
+                MessageBox.Show("No vehicle selected.")
                 Return
             End If
 
-            ' Mark as confirmed
+
             TransactionData.CustomerConfirmed = True
 
             ' Proceed to payment form
@@ -213,9 +290,19 @@ Public Class FORMRENTAL_STEP3
         End Try
     End Sub
 
-    ' Form closing event
     Private Sub FORMRENTAL_STEP3_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        ' Don't automatically rollback here since user might be navigating between forms
+        If RentalTransactionModule.TransactionData.VehicleType = "Car" Then
+            LoadCarInfo(RentalTransactionModule.TransactionData.SelectedCarId)
+        ElseIf RentalTransactionModule.TransactionData.VehicleType = "Motor" Then
+            LoadMotorInfo(RentalTransactionModule.TransactionData.SelectedMotorId)
+        Else
+            MessageBox.Show("Unknown vehicle type: " & RentalTransactionModule.TransactionData.VehicleType)
+        End If
+
+        MessageBox.Show("SelectedCarId: " & RentalTransactionModule.TransactionData.SelectedCarId & vbCrLf &
+                "SelectedMotorId: " & RentalTransactionModule.TransactionData.SelectedMotorId & vbCrLf &
+                "VehicleType: " & RentalTransactionModule.TransactionData.VehicleType)
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

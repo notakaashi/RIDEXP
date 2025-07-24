@@ -239,17 +239,17 @@ Public Class allcars
             Close()
             Return
         End If
-        SelectCar(9, "Toyota Corolla Altis", 1200, "Car")
+        SelectCar(9, "Toyota Corolla Altis", 1200, "Car", 9)
     End Sub
 
-    Private Sub SelectCar(carId As Integer, carName As String, dailyRate As Decimal, vehicleType As String)
+    Private Sub SelectCar(carId As Integer, carName As String, dailyRate As Decimal, vehicleType As String, vehicleId As Integer)
         Try
             If RentalTransactionModule.transaction Is Nothing Then
                 MessageBox.Show("Transaction is null in SelectCar!")
                 Return
             End If
 
-            RentalTransactionModule.SaveForm1Data(carId, carName, dailyRate, vehicleType)
+            RentalTransactionModule.SaveForm1CarData(carId, carName, dailyRate, vehicleType, vehicleId)
             MessageBox.Show("Car data saved: " & carName)
 
             Dim step2Form As New FORMRENTAL_STEP2()
@@ -262,49 +262,17 @@ Public Class allcars
     End Sub
 
 
-    Public Sub SaveForm1Data(carId As Integer, carName As String, dailyRate As Decimal, vehicleType As String)
+    Public Sub SaveForm1CarData(carId As Integer, carName As String, dailyRate As Decimal, vehicleType As String, vehicleId As Integer)
         With TransactionData
             .SelectedCarId = carId
             .SelectedCarName = carName
             .DailyRate = dailyRate
+            .VehicleType = vehicleType
+
+            .SelectedVehicleId = vehicleId
         End With
     End Sub
 
-    Public Function ValidateTransactionData() As Boolean
-        With TransactionData
-            If .SelectedCarId <= 0 Then
-                MessageBox.Show("Please select a car.")
-                Return False
-            End If
-
-            If .CustomerId <= 0 Then
-                MessageBox.Show("Customer ID is required.")
-                Return False
-            End If
-
-            If .PickupDate = Nothing OrElse .ReturnDate = Nothing Then
-                MessageBox.Show("Please select pickup and return dates.")
-                Return False
-            End If
-
-            If .PickupDate >= .ReturnDate Then
-                MessageBox.Show("Return date must be after pickup date.")
-                Return False
-            End If
-
-            If String.IsNullOrWhiteSpace(.PickupPlace) OrElse String.IsNullOrWhiteSpace(.ReturnPlace) Then
-                MessageBox.Show("Pickup and return places are required.")
-                Return False
-            End If
-
-            If .TotalAmount <= 0 Then
-                MessageBox.Show("Invalid rental amount.")
-                Return False
-            End If
-        End With
-
-        Return True
-    End Function
 
     Private Sub car6btn_Click(sender As Object, e As EventArgs)
         If Not StartTransaction() Then
@@ -312,7 +280,7 @@ Public Class allcars
             Close()
             Return
         End If
-        SelectCar(6, "Toyota Fortuner", 800, "Car")
+        SelectCar(6, "Toyota Fortuner", 800, "Car", 6)
     End Sub
 
     Private Sub car7btn_Click(sender As Object, e As EventArgs)
@@ -321,7 +289,7 @@ Public Class allcars
             Close()
             Return
         End If
-        SelectCar(7, "Suzuki Swift", 1000, "Car")
+        SelectCar(7, "Suzuki Swift", 1000, "Car", 7)
     End Sub
 
     Private Sub car2btn_Click(sender As Object, e As EventArgs) Handles car2btn.Click
@@ -330,7 +298,7 @@ Public Class allcars
             Close()
             Return
         End If
-        SelectCar(2, "Mitsubishi Xpander", 900, "Car")
+        SelectCar(2, "Mitsubishi Xpander", 900, "Car", 2)
     End Sub
 
     Private Sub car3btn_Click(sender As Object, e As EventArgs)
@@ -339,7 +307,7 @@ Public Class allcars
             Close()
             Return
         End If
-        SelectCar(3, "Toyota Innova", 750, "Car")
+        SelectCar(3, "Toyota Innova", 750, "Car", 3)
     End Sub
 
     Private Sub car4btn_Click(sender As Object, e As EventArgs) Handles car4btn.Click
@@ -348,7 +316,7 @@ Public Class allcars
             Close()
             Return
         End If
-        SelectCar(4, "Suzuki Ertiga", 650, "Car")
+        SelectCar(4, "Suzuki Ertiga", 650, "Car", 4)
     End Sub
 
     Private Sub car8btn_Click(sender As Object, e As EventArgs) Handles car8btn.Click
@@ -357,7 +325,7 @@ Public Class allcars
             Close()
             Return
         End If
-        SelectCar(8, "Honda Civic", 1100, "Car")
+        SelectCar(8, "Honda Civic", 1100, "Car", 8)
     End Sub
 
     Private Sub car1btn_Click(sender As Object, e As EventArgs) Handles car1btn.Click
@@ -366,7 +334,7 @@ Public Class allcars
             Close()
             Return
         End If
-        SelectCar(1, "Toyota Vios", 600, "Car")
+        SelectCar(1, "Toyota Vios", 600, "Car", 1)
     End Sub
 
     Private Sub car10btn_Click(sender As Object, e As EventArgs)
@@ -375,7 +343,7 @@ Public Class allcars
             Close()
             Return
         End If
-        SelectCar(10, "Toyota Rush", 1300, "Car")
+        SelectCar(10, "Toyota Rush", 1300, "Car", 10)
     End Sub
 
     Private Sub car5btn_Click(sender As Object, e As EventArgs)
@@ -384,7 +352,7 @@ Public Class allcars
             Close()
             Return
         End If
-        SelectCar(5, "Honda City", 700, "Car")
+        SelectCar(5, "Honda City", 700, "Car", 5)
     End Sub
 
     Private Sub btnCar6_Click(sender As Object, e As EventArgs) Handles btnCar6.Click
@@ -393,6 +361,6 @@ Public Class allcars
             Close()
             Return
         End If
-        SelectCar(6, "Toyota Fortuner", 800, "Car")
+        SelectCar(6, "Toyota Fortuner", 800, "Car", 6)
     End Sub
 End Class

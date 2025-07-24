@@ -13,6 +13,11 @@ Public Module RentalTransactionModule
         Public SelectedCarName As String
         Public DailyRate As Decimal
 
+        Public SelectedMotorId As Integer
+        Public SelectedMotorName As String
+        Public VehicleType As String
+        Public SelectedVehicleId As Integer
+
         ' Form 2 - Date, Time, Location
         Public PickupDate As Date
         Public PickupTime As String
@@ -120,14 +125,25 @@ Public Module RentalTransactionModule
     End Sub
 
     ' Save Form 1 data (Car Selection)
-    Public Sub SaveForm1Data(carId As Integer, carName As String, dailyRate As Decimal, vehicleType As String)
+    Public Sub SaveForm1CarData(carId As Integer, carName As String, dailyRate As Decimal, vehicleType As String, vehicleId As Integer)
         With TransactionData
             .SelectedCarId = carId
             .SelectedCarName = carName
             .DailyRate = dailyRate
+            .VehicleType = vehicleType
+            .SelectedVehicleId = vehicleId
         End With
     End Sub
 
+    Public Sub SaveForm1MotorData(motorId As Integer, motorName As String, dailyRate As Decimal, vehicleType As String, vehicleId As Integer)
+        With TransactionData
+            .SelectedMotorId = motorId
+            .SelectedMotorName = motorName
+            .DailyRate = dailyRate
+            .SelectedVehicleId = vehicleId
+            .VehicleType = vehicleType
+        End With
+    End Sub
     ' Save Form 2 data (Date, Time, Location) - Updated to handle string dates
     Public Sub SaveForm2Data(pickupDate As String, pickupTime As String, returnDate As String, returnTime As String,
                            pickupPlace As String, returnPlace As String, isPickupAtStation As Boolean, isReturnAtStation As Boolean)
@@ -169,7 +185,7 @@ Public Module RentalTransactionModule
                 .AddWithValue("@return_date", TransactionData.ReturnDate.ToString("yyyy-MM-dd"))
                 .AddWithValue("@return_time", If(String.IsNullOrEmpty(TransactionData.ReturnTime), DBNull.Value, TimeSpan.Parse(TransactionData.ReturnTime)))
                 .AddWithValue("@customer_id", TransactionData.CustomerId)
-                .AddWithValue("@vehicle_id", TransactionData.SelectedCarId)
+                .AddWithValue("@vehicle_id", TransactionData.SelectedVehicleId)
                 .AddWithValue("@amount", TransactionData.TotalAmount)
                 .AddWithValue("@rental_status_id", TransactionData.RentalStatusId)
                 .AddWithValue("@pickup_place", TransactionData.PickupPlace)

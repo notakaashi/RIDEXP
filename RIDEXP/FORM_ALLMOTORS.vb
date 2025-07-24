@@ -248,6 +248,35 @@ Public Class FORM_ALLMOTORS
     End Sub
 
     Private Sub motor1btn_Click(sender As Object, e As EventArgs) Handles motor1btn.Click
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectMotor(1, "Yamaha Mio", 1800, "Motor", 11)
+    End Sub
+    Public Sub SaveForm1MotorData(motorId As Integer, motorName As String, dailyRate As Decimal, vehicleType As String, vehicleId As Integer)
+        With TransactionData
+            .SelectedMotorId = motorId
+            .SelectedMotorName = motorName
+            .DailyRate = dailyRate
+            .VehicleType = vehicleType
+            .SelectedVehicleId = vehicleId
+        End With
+    End Sub
 
+    Private Sub SelectMotor(motorId As Integer, motorName As String, dailyRate As Decimal, vehicleType As String, vehicleId As Integer)
+        Try
+
+            RentalTransactionModule.SaveForm1MotorData(motorId, motorName, dailyRate, vehicleType, vehicleId)
+            MessageBox.Show("Motor data saved: " & motorName)
+
+            Dim step2Form As New FORMRENTAL_STEP2()
+            step2Form.Show()
+            Me.Hide()
+
+        Catch ex As Exception
+            MessageBox.Show("Error in SelectCar: " & ex.Message)
+        End Try
     End Sub
 End Class
