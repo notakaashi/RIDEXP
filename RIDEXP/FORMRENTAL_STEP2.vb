@@ -1,13 +1,5 @@
 ﻿Public Class FORMRENTAL_STEP2
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-        If ValidateForm() Then
-
-            FORMRENTAL_STEP3.Show()
-            SaveFormDataToModule()
-            Me.Close()
-        End If
-
         If RentalTransactionModule.transaction Is Nothing Then
             If Not RentalTransactionModule.StartTransaction() Then
                 MessageBox.Show("Failed to start transaction. Please try again.")
@@ -16,7 +8,15 @@
             End If
         End If
 
-        LoadExistingData()
+        ' Validate the form
+        If ValidateForm() Then
+            ' Save the current form data BEFORE proceeding
+            SaveFormDataToModule()
+
+            ' Now proceed to next form
+            FORMRENTAL_STEP3.Show()
+            Me.Close()
+        End If
     End Sub
 
     Private Sub homelbl_Click(sender As Object, e As EventArgs) Handles homelbl.Click
@@ -43,6 +43,9 @@
         returntxtbox.Enabled = False
         returntxtbox.Text = "Main Station - 123 Central Ave, Downtown"
         returntxtbox.BackColor = Color.LightGray
+
+        pickupdatetxt.PlaceholderText = "YYYY-MM-DD"
+        returndatetxt.PlaceholderText = "YYYY-MM-DD"
     End Sub
 
 
@@ -81,17 +84,7 @@
         End If
     End Sub
     Public Function ValidateForm() As Boolean
-        If PickupDatePicker.Value.Date < Date.Today Then
-            MessageBox.Show("Pickup date cannot be in the past.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            PickupDatePicker.Focus()
-            Return False
-        End If
 
-        If ReturnDatePicker.Value.Date <= PickupDatePicker.Value.Date Then
-            MessageBox.Show("Return date must be after pickup date.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            ReturnDatePicker.Focus()
-            Return False
-        End If
         If deliverbtn.Checked AndAlso String.IsNullOrWhiteSpace(pickuptxtbox.Text) Then
             MessageBox.Show("Please enter a delivery address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             pickuptxtbox.Focus()
@@ -109,9 +102,9 @@
 
     Private Sub SaveFormDataToModule()
         RentalTransactionModule.SaveForm2Data(
-            PickupDatePicker.Value.Date,
+            pickupdatetxt.Text.Trim(),
             pickuptimetxtbox.Text.Trim(),
-            ReturnDatePicker.Value.Date,
+            returndatetxt.Text.Trim(),
             returntimetxtbox.Text.Trim(),
             pickuptxtbox.Text.Trim(),
             returntxtbox.Text.Trim(),
@@ -124,18 +117,17 @@
     Private Sub LoadExistingData()
         With RentalTransactionModule.TransactionData
             If .PickupDate <> Nothing Then
-                PickupDatePicker.Value = .PickupDate
+                pickupdatetxt.Text = .PickupDate.ToString("yyyy-MM-dd")
             End If
             If .ReturnDate <> Nothing Then
-                ReturnDatePicker.Value = .ReturnDate
+                returndatetxt.Text = .ReturnDate.ToString("yyyy-MM-dd")
             End If
-            If .PickupTime <> Nothing Then
-                returntimetxtbox.Text = .PickupTime
+            If Not String.IsNullOrEmpty(.PickupTime) Then
+                pickuptimetxtbox.Text = .PickupTime
             End If
-            If .ReturnTime <> Nothing Then
+            If Not String.IsNullOrEmpty(.ReturnTime) Then
                 returntimetxtbox.Text = .ReturnTime
             End If
-
 
             If Not String.IsNullOrEmpty(.PickupPlace) Then
                 If .IsPickupAtStation Then
@@ -156,5 +148,4 @@
             End If
         End With
     End Sub
-
 End Class

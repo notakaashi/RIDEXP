@@ -1,4 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 
 Public Class FORM_SEDAN
     Private Sub Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load

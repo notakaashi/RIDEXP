@@ -11,19 +11,19 @@ Public Class FORMRENTAL_STEP3
             End If
 
             Dim cmd As New MySqlCommand("
-            SELECT 
-                c.mileage,
-                c.seating_capacity,
-                ft.fuel_type,
-                tt.transmission_type,
-                cp.image
-            FROM 
-                cars c
-            JOIN car_category cc ON c.car_category_id = cc.car_category_id
-            LEFT JOIN fuel_types ft ON cc.fuel_id = ft.fuel_id
-            LEFT JOIN transmission_types tt ON cc.transmission_id = tt.transmission_id
-            LEFT JOIN cars_pic cp ON c.car_id = cp.car_id
-            WHERE c.car_id = @carId", RentalTransactionModule.conn)
+        SELECT 
+            c.mileage,
+            c.seating_capacity,
+            ft.fuel_type,
+            tt.transmission_type,
+            cp.image
+        FROM 
+            cars c
+        JOIN car_category cc ON c.car_category_id = cc.car_category_id
+        LEFT JOIN fuel_types ft ON cc.fuel_id = ft.fuel_id
+        LEFT JOIN transmission_types tt ON cc.transmission_id = tt.transmission_id
+        LEFT JOIN cars_pic cp ON c.car_id = cp.car_id
+        WHERE c.car_id = @carId", RentalTransactionModule.conn)
 
             cmd.Parameters.AddWithValue("@carId", carId)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
@@ -34,30 +34,26 @@ Public Class FORMRENTAL_STEP3
                 fueltxt.Text = If(IsDBNull(reader("fuel_type")), "N/A", reader("fuel_type").ToString())
                 transmissiontxt.Text = If(IsDBNull(reader("transmission_type")), "N/A", reader("transmission_type").ToString())
 
-                ' Handle image loading
+                ' Handle image loading using ResourceManager
                 If Not IsDBNull(reader("image")) Then
-                    Dim imageName As String = reader("image").ToString().Trim()
-
                     Try
-                        ' Use reflection to get the resource property
-                        Dim resourcesType As Type = GetType(My.Resources.Resources)
-                        Dim imageProperty As Reflection.PropertyInfo = resourcesType.GetProperty(imageName)
+                        Dim imageName As String = IO.Path.GetFileNameWithoutExtension(reader("image").ToString())
+                        Dim resImage = My.Resources.ResourceManager.GetObject(imageName)
 
-                        If imageProperty IsNot Nothing Then
-                            Dim resImage = imageProperty.GetValue(Nothing, Nothing)
-                            If resImage IsNot Nothing AndAlso TypeOf resImage Is Image Then
-                                PictureBox4.Image = CType(resImage, Image)
-                            Else
-                                PictureBox4.Image = Nothing
-                            End If
+                        If resImage IsNot Nothing AndAlso TypeOf resImage Is Image Then
+                            PictureBox4.Image = CType(resImage, Image)
+                            MessageBox.Show($"Image '{imageName}' loaded successfully")
                         Else
+                            MessageBox.Show($"Image '{imageName}' not found in resources or is not an Image type")
                             PictureBox4.Image = Nothing
                         End If
 
                     Catch resEx As Exception
+                        MessageBox.Show($"Error loading image: {resEx.Message}")
                         PictureBox4.Image = Nothing
                     End Try
                 Else
+                    MessageBox.Show("No image found in database")
                     PictureBox4.Image = Nothing
                 End If
 
@@ -84,18 +80,19 @@ Public Class FORMRENTAL_STEP3
         Try
             With RentalTransactionModule.TransactionData
 
-                ' Debug: Show what data we have
+                ' Debug: Show what data we have (FIXED - added return time)
                 MessageBox.Show($"Loading data for Car ID: { .SelectedCarId}" & vbCrLf &
-                               $"Pickup Date: { .PickupDate}" & vbCrLf &
-                               $"Pickup Time: { .PickupTime}" & vbCrLf &
-                               $"Pickup Place: { .PickupPlace}" & vbCrLf &
-                               $"Return Date: { .ReturnDate}" & vbCrLf &
-                               $"Return Place: { .ReturnPlace}")
+                           $"Pickup Date: { .PickupDate}" & vbCrLf &
+                           $"Pickup Time: { .PickupTime}" & vbCrLf &
+                           $"Pickup Place: { .PickupPlace}" & vbCrLf &
+                           $"Return Date: { .ReturnDate}" & vbCrLf &
+                           $"Return Time: { .ReturnTime}" & vbCrLf &
+                           $"Return Place: { .ReturnPlace}")
 
                 ' Display pickup information
                 If .PickupDate <> Nothing Then
-                    ' Assuming you want pickup date somewhere - you didn't mention a pickup date label
-                    ' If you have one, uncomment: pickupdatelbl.Text = .PickupDate.ToString("MMMM dd, yyyy")
+                    ' If you have a pickup date label, uncomment this:
+                    pickupdatelbl.Text = .PickupDate.ToString("MMMM dd, yyyy")
                 End If
 
                 If Not String.IsNullOrEmpty(.PickupTime) Then
@@ -115,6 +112,13 @@ Public Class FORMRENTAL_STEP3
                     returndatelbl.Text = .ReturnDate.ToString("MMMM dd, yyyy")
                 Else
                     returndatelbl.Text = "Not set"
+                End If
+
+                ' FIXED: Return time label (was returntimetxtbox.Text)
+                If Not String.IsNullOrEmpty(.ReturnTime) Then
+                    returntimelbl.Text = .ReturnTime
+                Else
+                    returntimelbl.Text = "Not set"
                 End If
 
                 If Not String.IsNullOrEmpty(.ReturnPlace) Then

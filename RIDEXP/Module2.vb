@@ -13,12 +13,12 @@ Public Module RentalTransactionModule
         Public SelectedCarName As String
         Public DailyRate As Decimal
 
-        ' Form 2 - Date, Time, Location (Current Form)
+        ' Form 2 - Date, Time, Location
         Public PickupDate As Date
         Public PickupTime As String
         Public ReturnDate As Date
         Public ReturnTime As String
-        Public RentalDurationDays As Integer
+        Public RentalDurationDays As Integer ' For display only
         Public PickupPlace As String
         Public ReturnPlace As String
         Public IsPickupAtStation As Boolean
@@ -35,7 +35,6 @@ Public Module RentalTransactionModule
 
         ' Additional fields
         Public CustomerId As Integer
-        Public ReservationId As Integer
         Public RentalStatusId As Integer
     End Structure
 
@@ -129,45 +128,43 @@ Public Module RentalTransactionModule
         End With
     End Sub
 
-    ' Save Form 2 data (Date, Time, Location)
-    Public Sub SaveForm2Data(pickupDate As Date, pickupTime As String, returnDate As Date, returnTime As String,
+    ' Save Form 2 data (Date, Time, Location) - Updated to handle string dates
+    Public Sub SaveForm2Data(pickupDate As String, pickupTime As String, returnDate As String, returnTime As String,
                            pickupPlace As String, returnPlace As String, isPickupAtStation As Boolean, isReturnAtStation As Boolean)
         With TransactionData
-            ' Save only the date part (remove time component)
-            .PickupDate = pickupDate.Date
+            .PickupDate = Date.Parse(pickupDate)
             .PickupTime = pickupTime
-            .ReturnDate = returnDate.Date
+            .ReturnDate = Date.Parse(returnDate)
             .ReturnTime = returnTime
-            .RentalDurationDays = CInt((returnDate.Date - pickupDate.Date).TotalDays)
-            If .RentalDurationDays < 1 Then .RentalDurationDays = 1
             .PickupPlace = pickupPlace
             .ReturnPlace = returnPlace
             .IsPickupAtStation = isPickupAtStation
             .IsReturnAtStation = isReturnAtStation
+
+            ' Calculate duration for display only (trigger will handle actual DB value)
+            .RentalDurationDays = CInt((Date.Parse(returnDate).Date - Date.Parse(pickupDate).Date).TotalDays)
+            If .RentalDurationDays < 1 Then .RentalDurationDays = 1
             .TotalAmount = .DailyRate * .RentalDurationDays
         End With
     End Sub
 
-    ' Insert rental data (called from final form)
+    ' Insert rental data - Updated to match your database structure
     Public Function InsertRentalData() As Integer
         Try
             Dim cmd As New MySqlCommand("
                 INSERT INTO rentals (
-                    reservation_id, rental_duration_days, pickup_date, pickup_time, 
-                    return_date, return_time, customer_id, vehicle_id, amount, 
-                    rental_status_id, pickup_place, return_place
+                    pickup_date, pickup_time, return_date, return_time, 
+                    customer_id, vehicle_id, amount, rental_status_id, 
+                    pickup_place, return_place
                 ) VALUES (
-                    @reservation_id, @rental_duration_days, @pickup_date, @pickup_time,
-                    @return_date, @return_time, @customer_id, @vehicle_id, @amount,
-                    @rental_status_id, @pickup_place, @return_place
+                    @pickup_date, @pickup_time, @return_date, @return_time,
+                    @customer_id, @vehicle_id, @amount, @rental_status_id,
+                    @pickup_place, @return_place
                 )", conn, transaction)
 
             With cmd.Parameters
-                .AddWithValue("@reservation_id", If(TransactionData.ReservationId = 0, DBNull.Value, TransactionData.ReservationId))
-                .AddWithValue("@rental_duration_days", TransactionData.RentalDurationDays)
-                ' Format dates properly for MySQL (YYYY-MM-DD)
+                ' Format dates for MySQL (YYYY-MM-DD)
                 .AddWithValue("@pickup_date", TransactionData.PickupDate.ToString("yyyy-MM-dd"))
-                ' Parse time string to TimeSpan for MySQL TIME format
                 .AddWithValue("@pickup_time", If(String.IsNullOrEmpty(TransactionData.PickupTime), DBNull.Value, TimeSpan.Parse(TransactionData.PickupTime)))
                 .AddWithValue("@return_date", TransactionData.ReturnDate.ToString("yyyy-MM-dd"))
                 .AddWithValue("@return_time", If(String.IsNullOrEmpty(TransactionData.ReturnTime), DBNull.Value, TimeSpan.Parse(TransactionData.ReturnTime)))
@@ -190,11 +187,27 @@ Public Module RentalTransactionModule
         End Try
     End Function
 
+    ' Get rental duration from database after insert (computed by trigger)
+    Public Function GetRentalDurationFromDB(rentalId As Integer) As Integer
+        Try
+            Dim cmd As New MySqlCommand("SELECT rental_duration_days FROM rentals WHERE rental_id = @rental_id", conn, transaction)
+            cmd.Parameters.AddWithValue("@rental_id", rentalId)
+
+            Dim result = cmd.ExecuteScalar()
+            If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                Return Convert.ToInt32(result)
+            End If
+            Return 1 ' Default value
+        Catch ex As Exception
+            Throw New Exception("Error getting rental duration: " & ex.Message)
+        End Try
+    End Function
+
     ' Validate transaction data
     Public Function ValidateTransactionData() As Boolean
         With TransactionData
             If .SelectedCarId <= 0 Then
-                MessageBox.Show("Please select a car.")
+                MessageBox.Show("Please select a vehicle.")
                 Return False
             End If
 
@@ -220,6 +233,11 @@ Public Module RentalTransactionModule
 
             If .TotalAmount <= 0 Then
                 MessageBox.Show("Invalid rental amount.")
+                Return False
+            End If
+
+            If .RentalStatusId <= 0 Then
+                MessageBox.Show("Rental status is required.")
                 Return False
             End If
         End With
