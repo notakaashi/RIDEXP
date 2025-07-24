@@ -63,31 +63,34 @@ Public Class Logjn
             MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
-
     Private Function AuthenticateUser(username As String, password As String) As Boolean
         Try
             Using connection As New MySqlConnection(connectionString)
                 connection.Open()
 
-                Dim query As String = "SELECT role_id FROM user WHERE username = @username AND password_hash = SHA2(@password, 256)"
+                Dim query As String = "SELECT user_id, role_id FROM user WHERE username = @username AND password_hash = SHA2(@password, 256)"
                 Using command As New MySqlCommand(query, connection)
                     command.Parameters.AddWithValue("@username", username)
                     command.Parameters.AddWithValue("@password", password)
 
-                    Dim result = command.ExecuteScalar()
-                    If result IsNot Nothing Then
-                        userRole = Convert.ToInt32(result)
-                        Return True
-                    Else
-                        Return False
-                    End If
+                    Using reader = command.ExecuteReader()
+                        If reader.Read() Then
+                            userId = Convert.ToInt32(reader("user_id"))
+                            userRole = Convert.ToInt32(reader("role_id"))
+                            Return True
+                        End If
+                    End Using
                 End Using
             End Using
         Catch ex As Exception
             MessageBox.Show($"Database error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
         End Try
+
+        Return False
     End Function
+
+    Public loggedin As Boolean = False
 
     Private passwordVisible As Boolean = False
 

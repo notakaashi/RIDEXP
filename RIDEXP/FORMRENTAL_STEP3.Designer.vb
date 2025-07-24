@@ -658,7 +658,7 @@ Partial Class FORMRENTAL_STEP3
         ' 
         ' btnBack
         ' 
-        btnBack.Location = New Point(-5, 112)
+        btnBack.Location = New Point(-5, 93)
         btnBack.Name = "btnBack"
         btnBack.Size = New Size(75, 23)
         btnBack.TabIndex = 28

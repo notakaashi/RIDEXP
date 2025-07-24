@@ -2,13 +2,7 @@
 
 Public Class FORM_SEDAN
     Private Sub Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Not RentalTransactionModule.StartTransaction() Then
-            MessageBox.Show("Failed to start transaction. Please try again.")
-            Me.Close()
-            Return
-        End If
 
-        MessageBox.Show("Transaction started successfully!")
     End Sub
 
     Private Sub FadeTimer_tick(sender As Object, e As EventArgs) Handles FadeTimer.Tick
@@ -42,6 +36,11 @@ Public Class FORM_SEDAN
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        If Not RentalTransactionModule.StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Me.Close()
+            Return
+        End If
         SelectCar(1, "Toyota Vios", 2500, "Car")
     End Sub
 
@@ -165,4 +164,8 @@ Public Class FORM_SEDAN
 
         Return True
     End Function
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

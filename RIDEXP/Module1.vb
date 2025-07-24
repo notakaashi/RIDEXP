@@ -2,4 +2,5 @@
     Public loggedin As Boolean = False
     Public userlogged As String = ""
     Public userRole As Integer = 0
+    Public userId As Integer = 0
 End Module

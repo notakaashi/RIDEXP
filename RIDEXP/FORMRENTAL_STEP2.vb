@@ -109,10 +109,10 @@
 
     Private Sub SaveFormDataToModule()
         RentalTransactionModule.SaveForm2Data(
-            PickupDatePicker.Value.Date,        ' .Date removes the time component
-            pickuptimetxtbox.Text.Trim(),      ' Time as string from textbox
-            ReturnDatePicker.Value.Date,        ' .Date removes the time component  
-            returntimetxtbox.Text.Trim(),      ' Time as string from textbox
+            PickupDatePicker.Value.Date,
+            pickuptimetxtbox.Text.Trim(),
+            ReturnDatePicker.Value.Date,
+            returntimetxtbox.Text.Trim(),
             pickuptxtbox.Text.Trim(),
             returntxtbox.Text.Trim(),
             pickupbtn.Checked,
