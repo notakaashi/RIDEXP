@@ -144,6 +144,7 @@ Public Module RentalTransactionModule
             .VehicleType = vehicleType
         End With
     End Sub
+
     ' Save Form 2 data (Date, Time, Location) - Updated to handle string dates
     Public Sub SaveForm2Data(pickupDate As String, pickupTime As String, returnDate As String, returnTime As String,
                            pickupPlace As String, returnPlace As String, isPickupAtStation As Boolean, isReturnAtStation As Boolean)
@@ -222,8 +223,14 @@ Public Module RentalTransactionModule
     ' Validate transaction data
     Public Function ValidateTransactionData() As Boolean
         With TransactionData
-            If .SelectedCarId <= 0 Then
-                MessageBox.Show("Please select a vehicle.")
+            If .SelectedVehicleId <= 0 Then
+                MessageBox.Show("Please select a vehicle." & vbCrLf &
+                              "Debug Info:" & vbCrLf &
+                              "SelectedVehicleId: " & .SelectedVehicleId & vbCrLf &
+                              "SelectedCarId: " & .SelectedCarId & vbCrLf &
+                              "SelectedMotorId: " & .SelectedMotorId & vbCrLf &
+                              "CarName: " & .SelectedCarName & vbCrLf &
+                              "MotorName: " & .SelectedMotorName)
                 Return False
             End If
 
@@ -262,24 +269,24 @@ Public Module RentalTransactionModule
     End Function
 
     Public Function GetCustomerIdForCurrentUser() As Integer
-        Using conn = New MySqlConnection("Server=localhost;Database=ridexp;User=root;Password=;")
-            conn.Open()
-            Dim cmd = New MySqlCommand("SELECT customer_id FROM customers WHERE user_id = @uid LIMIT 1", conn)
-            cmd.Parameters.AddWithValue("@uid", Module1.userId)
+        Try
+            Using conn = New MySqlConnection("Server=localhost;Database=ridexp;User=root;Password=;")
+                conn.Open()
+                Dim cmd = New MySqlCommand("SELECT customer_id FROM customers WHERE user_id = @uid LIMIT 1", conn)
+                cmd.Parameters.AddWithValue("@uid", Module1.userId)
 
-            Dim result = cmd.ExecuteScalar()
-            If result IsNot Nothing Then
-                Dim customerId = Convert.ToInt32(result)
-                MessageBox.Show("Retrieved customer ID: " & customerId, "Debug")
-                Return customerId
-            Else
-                MessageBox.Show("No customer found for user ID: " & Module1.userId, "Debug")
-            End If
-        End Using
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot Nothing Then
+                    Dim customerId = Convert.ToInt32(result)
+                    Return customerId
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error getting customer ID: " & ex.Message)
+        End Try
 
         Return 0
     End Function
-
 
     Public Sub SaveForm4PaymentData(method As String, status As String, reference As String)
         With TransactionData
@@ -289,5 +296,24 @@ Public Module RentalTransactionModule
         End With
     End Sub
 
+    ' Debug method to show current transaction data
+    Public Sub ShowTransactionDataDebug()
+        With TransactionData
+            Dim debugInfo As String = "=== Transaction Data Debug ===" & vbCrLf &
+                                    "SelectedVehicleId: " & .SelectedVehicleId & vbCrLf &
+                                    "SelectedCarId: " & .SelectedCarId & vbCrLf &
+                                    "SelectedMotorId: " & .SelectedMotorId & vbCrLf &
+                                    "SelectedCarName: " & .SelectedCarName & vbCrLf &
+                                    "SelectedMotorName: " & .SelectedMotorName & vbCrLf &
+                                    "VehicleType: " & .VehicleType & vbCrLf &
+                                    "DailyRate: " & .DailyRate & vbCrLf &
+                                    "CustomerId: " & .CustomerId & vbCrLf &
+                                    "PickupDate: " & .PickupDate & vbCrLf &
+                                    "ReturnDate: " & .ReturnDate & vbCrLf &
+                                    "TotalAmount: " & .TotalAmount & vbCrLf &
+                                    "RentalStatusId: " & .RentalStatusId
+            MessageBox.Show(debugInfo, "Transaction Data Debug")
+        End With
+    End Sub
 
 End Module

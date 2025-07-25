@@ -66,7 +66,7 @@ Partial Class FORMRENTAL_STEP4
         Label12 = New Label()
         Label29 = New Label()
         Label11 = New Label()
-        Label10 = New Label()
+        totalrentalratetxt = New Label()
         Label1 = New Label()
         Label27 = New Label()
         Panel4 = New Panel()
@@ -74,7 +74,6 @@ Partial Class FORMRENTAL_STEP4
         RadioButton1 = New RadioButton()
         Panel6 = New Panel()
         Label21 = New Label()
-        Button1 = New Button()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -286,7 +285,7 @@ Partial Class FORMRENTAL_STEP4
         Panel2.Controls.Add(Panel7)
         Panel2.Controls.Add(Panel5)
         Panel2.Controls.Add(Label11)
-        Panel2.Controls.Add(Label10)
+        Panel2.Controls.Add(totalrentalratetxt)
         Panel2.Controls.Add(Label1)
         Panel2.Controls.Add(Label27)
         Panel2.Controls.Add(Panel4)
@@ -603,17 +602,17 @@ Partial Class FORMRENTAL_STEP4
         Label11.TabIndex = 33
         Label11.Text = "PRICE DETAILS:"
         ' 
-        ' Label10
+        ' totalrentalratetxt
         ' 
-        Label10.AutoSize = True
-        Label10.BackColor = Color.Transparent
-        Label10.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label10.Location = New Point(25, 92)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(217, 37)
-        Label10.TabIndex = 32
-        Label10.Text = "PHP 6,900.00"
+        totalrentalratetxt.AutoSize = True
+        totalrentalratetxt.BackColor = Color.Transparent
+        totalrentalratetxt.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        totalrentalratetxt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        totalrentalratetxt.Location = New Point(25, 92)
+        totalrentalratetxt.Name = "totalrentalratetxt"
+        totalrentalratetxt.Size = New Size(217, 37)
+        totalrentalratetxt.TabIndex = 32
+        totalrentalratetxt.Text = "PHP 6,900.00"
         ' 
         ' Label1
         ' 
@@ -655,26 +654,26 @@ Partial Class FORMRENTAL_STEP4
         ' 
         RadioButton3.AutoSize = True
         RadioButton3.Font = New Font("Futura Bk BT", 10.8F)
-        RadioButton3.Location = New Point(34, 34)
+        RadioButton3.Location = New Point(235, 21)
         RadioButton3.Margin = New Padding(3, 2, 3, 2)
         RadioButton3.Name = "RadioButton3"
-        RadioButton3.Size = New Size(122, 22)
+        RadioButton3.Size = New Size(121, 22)
         RadioButton3.TabIndex = 2
         RadioButton3.TabStop = True
-        RadioButton3.Text = "Cash payment"
+        RadioButton3.Text = "Card Payment"
         RadioButton3.UseVisualStyleBackColor = True
         ' 
         ' RadioButton1
         ' 
         RadioButton1.AutoSize = True
         RadioButton1.Font = New Font("Futura Bk BT", 10.8F)
-        RadioButton1.Location = New Point(35, 11)
+        RadioButton1.Location = New Point(60, 21)
         RadioButton1.Margin = New Padding(3, 2, 3, 2)
         RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(122, 22)
+        RadioButton1.Size = New Size(121, 22)
         RadioButton1.TabIndex = 0
         RadioButton1.TabStop = True
-        RadioButton1.Text = "Card payment"
+        RadioButton1.Text = "Cash Payment"
         RadioButton1.UseVisualStyleBackColor = True
         ' 
         ' Panel6
@@ -700,22 +699,12 @@ Partial Class FORMRENTAL_STEP4
         Label21.TabIndex = 16
         Label21.Text = "PAYMENT INFROMATION"
         ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(151, 208)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
-        Button1.TabIndex = 30
-        Button1.Text = "Button1"
-        Button1.UseVisualStyleBackColor = True
-        ' 
         ' FORMRENTAL_STEP4
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.RIDEXPRESS__5_
         ClientSize = New Size(1104, 505)
-        Controls.Add(Button1)
         Controls.Add(Panel2)
         Controls.Add(Panel3)
         Controls.Add(Panel1)
@@ -770,7 +759,7 @@ Partial Class FORMRENTAL_STEP4
     Friend WithEvents Label21 As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
+    Friend WithEvents totalrentalratetxt As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label29 As Label
@@ -798,5 +787,4 @@ Partial Class FORMRENTAL_STEP4
     Friend WithEvents checkoutbtn As Button
     Friend WithEvents Panel9 As Panel
     Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents Button1 As Button
 End Class
