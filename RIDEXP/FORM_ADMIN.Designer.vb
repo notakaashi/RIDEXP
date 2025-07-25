@@ -1413,7 +1413,7 @@ Partial Class FORM_ADMIN
         Panel26.Controls.Add(Label42)
         Panel26.Controls.Add(PictureBox17)
         Panel26.Controls.Add(Label43)
-        Panel26.Location = New Point(480, 7)
+        Panel26.Location = New Point(491, 7)
         Panel26.Name = "Panel26"
         Panel26.Size = New Size(212, 120)
         Panel26.TabIndex = 16
