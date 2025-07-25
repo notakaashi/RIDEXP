@@ -261,4 +261,33 @@ Public Module RentalTransactionModule
         Return True
     End Function
 
+    Public Function GetCustomerIdForCurrentUser() As Integer
+        Using conn = New MySqlConnection("Server=localhost;Database=ridexp;User=root;Password=;")
+            conn.Open()
+            Dim cmd = New MySqlCommand("SELECT customer_id FROM customers WHERE user_id = @uid LIMIT 1", conn)
+            cmd.Parameters.AddWithValue("@uid", Module1.userId)
+
+            Dim result = cmd.ExecuteScalar()
+            If result IsNot Nothing Then
+                Dim customerId = Convert.ToInt32(result)
+                MessageBox.Show("Retrieved customer ID: " & customerId, "Debug")
+                Return customerId
+            Else
+                MessageBox.Show("No customer found for user ID: " & Module1.userId, "Debug")
+            End If
+        End Using
+
+        Return 0
+    End Function
+
+
+    Public Sub SaveForm4PaymentData(method As String, status As String, reference As String)
+        With TransactionData
+            .PaymentMethod = method
+            .PaymentStatus = status
+            .PaymentReference = reference
+        End With
+    End Sub
+
+
 End Module

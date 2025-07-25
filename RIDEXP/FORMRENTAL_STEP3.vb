@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports Microsoft.VisualBasic.Logging
+Imports MySql.Data.MySqlClient
 
 Public Class FORMRENTAL_STEP3
 
@@ -261,17 +262,16 @@ c.make,
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             ' Simple validation
-            If TransactionData.SelectedCarId <= 0 AndAlso TransactionData.SelectedMotorId <= 0 Then
-                MessageBox.Show("No vehicle selected.")
-                Return
+
+            ' Check if user is logged in
+            If loggedin = False Then
+                MessageBox.Show("You need to log in before proceeding to payment.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Logjn.Show()
+            Else
+                FORMRENTAL_STEP4.Show()
+                TransactionData.CustomerConfirmed = True
             End If
 
-
-            TransactionData.CustomerConfirmed = True
-
-            ' Proceed to payment form
-            FORMRENTAL_STEP4.Show
-            Hide ' Hide instead of close to preserve transaction
 
         Catch ex As Exception
             MessageBox.Show("Error proceeding to payment: " & ex.Message)

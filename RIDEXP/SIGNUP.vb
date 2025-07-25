@@ -64,7 +64,24 @@ Public Class SIGNUP
 
                 Using transaction As MySqlTransaction = connection.BeginTransaction()
                     Try
-                        Dim customerQuery As String = "INSERT INTO customers (first_name, last_name, date_of_birth, email, phone, address, license_number, license_expiry, created_at) VALUES (@first_name, @last_name, @date_of_birth, @email, @phone, @address, @license_number, @license_expiry, CURDATE())"
+                        ' 1. INSERT USER FIRST so we can get the generated user_id
+                        Dim userQuery As String = "INSERT INTO user (username, password_hash, role_id) VALUES (@username, SHA2(@password_hash, 256), @role_id); SELECT LAST_INSERT_ID();"
+                        Dim userId As Integer
+
+                        Using userCmd As New MySqlCommand(userQuery, connection, transaction)
+                            userCmd.Parameters.AddWithValue("@username", usertxt.Text)
+                            userCmd.Parameters.AddWithValue("@password_hash", passwordtxt.Text)
+                            userCmd.Parameters.AddWithValue("@role_id", 2)
+
+                            ' 2. GET the auto-incremented user_id
+                            userId = Convert.ToInt32(userCmd.ExecuteScalar())
+
+                            ' 3. Store to global module variable if needed
+                            Module1.userId = userId ' <--- You said this exists already
+                        End Using
+
+                        ' 4. INSERT CUSTOMER using retrieved user_id
+                        Dim customerQuery As String = "INSERT INTO customers (first_name, last_name, date_of_birth, email, phone, address, license_number, license_expiry, created_at, user_id) VALUES (@first_name, @last_name, @date_of_birth, @email, @phone, @address, @license_number, @license_expiry, CURDATE(), @user_id)"
 
                         Using customerCmd As New MySqlCommand(customerQuery, connection, transaction)
                             customerCmd.Parameters.AddWithValue("@first_name", fnametxt.Text)
@@ -76,18 +93,9 @@ Public Class SIGNUP
                             customerCmd.Parameters.AddWithValue("@license_number", licensenumbertxt.Text)
                             customerCmd.Parameters.AddWithValue("@license_expiry", licenseexptxt.Text)
 
+                            customerCmd.Parameters.AddWithValue("@user_id", userId)
+
                             customerCmd.ExecuteNonQuery()
-                        End Using
-
-
-                        Dim userQuery As String = "INSERT INTO user (username, password_hash, role_id) VALUES (@username, SHA2(@password_hash, 256), @role_id)"
-
-                        Using userCmd As New MySqlCommand(userQuery, connection, transaction)
-                            userCmd.Parameters.AddWithValue("@username", usertxt.Text)
-                            userCmd.Parameters.AddWithValue("@password_hash", passwordtxt.Text)
-                            userCmd.Parameters.AddWithValue("@role_id", 2)
-
-                            userCmd.ExecuteNonQuery()
                         End Using
 
                         transaction.Commit()
@@ -105,6 +113,7 @@ Public Class SIGNUP
             Return False
         End Try
     End Function
+
 
     Private Sub ClearForm()
         fnametxt.Clear()

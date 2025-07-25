@@ -10,7 +10,6 @@
 
         If ValidateForm() Then
             SaveFormDataToModule()
-
             FORMRENTAL_STEP3.Show()
             Close()
         End If

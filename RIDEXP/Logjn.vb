@@ -48,8 +48,9 @@ Public Class Logjn
         If AuthenticateUser(usertxt.Text, passwordtxt.Text) Then
             userlogged = usertxt.Text
             MessageBox.Show("Sign in successful! Welcome to RidExp!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Me.Close()
             loggedin = True
+            Me.Close()
+
 
             If userRole = 1 Then
                 MessageBox.Show("Welcome Admin! Opening admin panel...")
@@ -89,8 +90,6 @@ Public Class Logjn
 
         Return False
     End Function
-
-    Public loggedin As Boolean = False
 
     Private passwordVisible As Boolean = False
 
