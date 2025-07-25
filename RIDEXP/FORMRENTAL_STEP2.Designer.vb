@@ -28,7 +28,6 @@ Partial Class FORMRENTAL_STEP2
         Panel5 = New Panel()
         deliverbtn = New RadioButton()
         pickupbtn = New RadioButton()
-        pickuptimetxtbox = New TextBox()
         pickuptxtbox = New TextBox()
         Label12 = New Label()
         Label11 = New Label()
@@ -52,12 +51,13 @@ Partial Class FORMRENTAL_STEP2
         Panel6 = New Panel()
         collectbtn = New RadioButton()
         returnbtn = New RadioButton()
-        returntimetxtbox = New TextBox()
         returntxtbox = New TextBox()
         Label13 = New Label()
         Label14 = New Label()
         Button1 = New Button()
         Button2 = New Button()
+        cbxPickup = New ComboBox()
+        cbxReturn = New ComboBox()
         Panel2.SuspendLayout()
         Panel5.SuspendLayout()
         Panel1.SuspendLayout()
@@ -78,9 +78,9 @@ Partial Class FORMRENTAL_STEP2
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
+        Panel2.Controls.Add(cbxPickup)
         Panel2.Controls.Add(pickupdatetxt)
         Panel2.Controls.Add(Panel5)
-        Panel2.Controls.Add(pickuptimetxtbox)
         Panel2.Controls.Add(pickuptxtbox)
         Panel2.Controls.Add(Label12)
         Panel2.Controls.Add(Label11)
@@ -131,14 +131,6 @@ Partial Class FORMRENTAL_STEP2
         pickupbtn.TabStop = True
         pickupbtn.Text = "PICK-UP AT STATION"
         pickupbtn.UseVisualStyleBackColor = True
-        ' 
-        ' pickuptimetxtbox
-        ' 
-        pickuptimetxtbox.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        pickuptimetxtbox.Location = New Point(877, 56)
-        pickuptimetxtbox.Name = "pickuptimetxtbox"
-        pickuptimetxtbox.Size = New Size(191, 31)
-        pickuptimetxtbox.TabIndex = 21
         ' 
         ' pickuptxtbox
         ' 
@@ -360,9 +352,9 @@ Partial Class FORMRENTAL_STEP2
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
+        Panel4.Controls.Add(cbxReturn)
         Panel4.Controls.Add(returndatetxt)
         Panel4.Controls.Add(Panel6)
-        Panel4.Controls.Add(returntimetxtbox)
         Panel4.Controls.Add(returntxtbox)
         Panel4.Controls.Add(Label13)
         Panel4.Controls.Add(Label14)
@@ -413,14 +405,6 @@ Partial Class FORMRENTAL_STEP2
         returnbtn.TabStop = True
         returnbtn.Text = "RETURN AT STATION"
         returnbtn.UseVisualStyleBackColor = True
-        ' 
-        ' returntimetxtbox
-        ' 
-        returntimetxtbox.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        returntimetxtbox.Location = New Point(877, 56)
-        returntimetxtbox.Name = "returntimetxtbox"
-        returntimetxtbox.Size = New Size(191, 31)
-        returntimetxtbox.TabIndex = 21
         ' 
         ' returntxtbox
         ' 
@@ -480,6 +464,26 @@ Partial Class FORMRENTAL_STEP2
         Button2.TabIndex = 24
         Button2.Text = "CHANGE CAR"
         Button2.UseVisualStyleBackColor = False
+        ' 
+        ' cbxPickup
+        ' 
+        cbxPickup.Font = New Font("Futura Bk BT", 12F)
+        cbxPickup.FormattingEnabled = True
+        cbxPickup.Items.AddRange(New Object() {"8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 AM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"})
+        cbxPickup.Location = New Point(877, 48)
+        cbxPickup.Name = "cbxPickup"
+        cbxPickup.Size = New Size(191, 32)
+        cbxPickup.TabIndex = 24
+        ' 
+        ' cbxReturn
+        ' 
+        cbxReturn.Font = New Font("Futura Bk BT", 12F)
+        cbxReturn.FormattingEnabled = True
+        cbxReturn.Items.AddRange(New Object() {"8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 AM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"})
+        cbxReturn.Location = New Point(877, 47)
+        cbxReturn.Name = "cbxReturn"
+        cbxReturn.Size = New Size(191, 32)
+        cbxReturn.TabIndex = 25
         ' 
         ' FORMRENTAL_STEP2
         ' 
@@ -551,4 +555,6 @@ Partial Class FORMRENTAL_STEP2
     Friend WithEvents pickupdatetxt As TextBox
     Friend WithEvents returndatetxt As TextBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents cbxPickup As ComboBox
+    Friend WithEvents cbxReturn As ComboBox
 End Class
