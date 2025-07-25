@@ -4,6 +4,7 @@ Public Class FORM_ADMIN
 
     Dim connStr As String = "server=localhost;user=root;password=;database=ridexp"
     Dim conn As New MySqlConnection(connStr)
+
     Private Sub FORM_ADMIN_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ClickDashboard()
         LoadTableRentals(dgvRentals)
@@ -11,7 +12,336 @@ Public Class FORM_ADMIN
         cbVehicle.Items.Add("CARS")
         cbVehicle.Items.Add("MOTORCYCLES")
         cbVehicle.SelectedIndex = 0
+        LoadTotalRentals(lblDashRentals)
+        LoadTotalUsers(lblDashUsers)
+        LoadTotalIncome(lblDashIncome)
+        LoadTotalAvailableCars(lblDashAvailableCars)
     End Sub
+
+    Private Sub LoadTotalCompletedRentals(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(rental_id) AS total_completed FROM rentals WHERE rental_status_id = 2"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString()
+                Else
+                    lblPlaceholder.Text = "0"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total completed rentals: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadTotalCancelledRentals(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(rental_id) AS total_cancelled FROM rentals WHERE rental_status_id = 3"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString()
+                Else
+                    lblPlaceholder.Text = "0"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total canceled rentals: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+    Private Sub LoadTotalEarnings(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT SUM(earnings) AS total_earnings FROM sales_report"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString("N2")
+                Else
+                    lblPlaceholder.Text = "0.00"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total earnings: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadTotalPenalties(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT SUM(penalties) AS total_penalties FROM sales_report"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString("N2")
+                Else
+                    lblPlaceholder.Text = "0.00"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total penalties: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadTotalCost(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT SUM(cost) AS total_cost FROM maintenance"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString("N2")
+                Else
+                    lblPlaceholder.Text = "0.00"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total penalties: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadTotalPaid(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(penalty_id) AS total_paid FROM penalty WHERE is_paid = 1"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString()
+                Else
+                    lblPlaceholder.Text = "0"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total paid rentals: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+    Private Sub LoadTotalUnpaid(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(penalty_id) AS total_unpaid FROM penalty WHERE is_paid = 0"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString()
+                Else
+                    lblPlaceholder.Text = "0"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total unpaid rentals: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+    Private Sub LoadTotalOngoing(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(maintenance_id) AS total_ongoing FROM maintenance WHERE maintenance_status_id = 2"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString()
+                Else
+                    lblPlaceholder.Text = "0"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total ongoing rentals: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadTotalCompleted(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(maintenance_id) AS total_completed FROM maintenance WHERE maintenance_status_id = 3"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString()
+                Else
+                    lblPlaceholder.Text = "0"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total ongoing rentals: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadTotalScheduled(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(maintenance_id) AS total_scheduled FROM maintenance WHERE maintenance_status_id = 3"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString()
+                Else
+                    lblPlaceholder.Text = "0"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total ongoing rentals: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadTotalDamaged(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(vehicle_id) AS total_damaged FROM vehicles WHERE status_id = 6"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString()
+                Else
+                    lblPlaceholder.Text = "0"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total damaged vehicles: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadTotalMaintenance(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(vehicle_id) AS total_maintenance FROM vehicles where status_id = 3"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString()
+                Else
+                    lblPlaceholder.Text = "0"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total maintenance: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadTotalAvailableCars(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(vehicle_id) AS total_cars FROM vehicles WHERE status_id = 1"
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString()
+                Else
+                    lblPlaceholder.Text = "0"
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading total available cars: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadTotalIncome(lblPlaceholder As Label)
+        Dim earnings As Integer = 0
+        Dim maintenance_cost As Integer = 0
+        Dim total_income As Integer = 0
+
+        Try
+            conn.Open()
+
+            Dim query1 As String = "SELECT SUM(earnings) AS total_earnings FROM sales_report"
+            Using cmd1 As New MySqlCommand(query1, conn)
+                Dim result1 = cmd1.ExecuteScalar()
+                If result1 IsNot Nothing AndAlso Not IsDBNull(result1) Then
+                    earnings = Convert.ToInt32(result1)
+                End If
+            End Using
+
+            Dim query2 As String = "SELECT SUM(cost) AS total_cost FROM maintenance"
+            Using cmd2 As New MySqlCommand(query2, conn)
+                Dim result2 = cmd2.ExecuteScalar()
+                If result2 IsNot Nothing AndAlso Not IsDBNull(result2) Then
+                    maintenance_cost = Convert.ToInt32(result2)
+                End If
+            End Using
+
+            total_income = earnings - maintenance_cost
+            If total_income < 0 Then total_income = 0
+
+            lblPlaceholder.Text = total_income.ToString("N2")
+
+        Catch ex As Exception
+            MessageBox.Show("Error loading total income: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+
+    Private Sub LoadTotalUsers(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(customer_id) AS total_users FROM customers"
+
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString()
+                Else
+                    lblPlaceholder.Text = "0"
+                End If
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show("Error loading total rentals: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub LoadTotalRentals(lblPlaceholder As Label)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(rental_id) AS total_rentals FROM rentals"
+
+            Using cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot DBNull.Value Then
+                    lblPlaceholder.Text = result.ToString()
+                Else
+                    lblPlaceholder.Text = "0"
+                End If
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show("Error loading total rentals: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbVehicle.SelectedIndexChanged
         Dim selectedTable = cbVehicle.SelectedItem.ToString
@@ -187,27 +517,49 @@ Public Class FORM_ADMIN
     Private Sub pnlDashboard_Click(sender As Object, e As EventArgs) Handles pnlDashboard.Click
         ClickDashboard()
         LoadTableRentals(dgvRentals)
+        LoadTotalRentals(lblDashRentals)
+        LoadTotalUsers(lblDashUsers)
+        LoadTotalIncome(lblDashIncome)
+        LoadTotalAvailableCars(lblDashAvailableCars)
     End Sub
 
     Private Sub pnlInventory_Click(sender As Object, e As EventArgs) Handles pnlInventory.Click
         ClickInventory()
+        LoadTotalRentals(lblInventoryRentals)
+        LoadTotalAvailableCars(lblInventoryAvailable)
+        LoadTotalMaintenance(lblInventoryMaintenance)
+        LoadTotalDamaged(lblInventoryDamaged)
     End Sub
 
     Private Sub pnlRentals_Click(sender As Object, e As EventArgs) Handles pnlRentals.Click
         ClickRentals()
         LoadTableRentals(dgvRentals2)
+        LoadTotalRentals(lblRentalRentals)
+        LoadTotalCompleted(lblRentalCompleted)
+        LoadTotalCancelledRentals(lblRentalCancelled)
     End Sub
     Private Sub pnlSales_Click(sender As Object, e As EventArgs) Handles pnlSales.Click
         ClickSales()
         LoadTableSales()
+        LoadTotalEarnings(lblSalesEarnings)
+        LoadTotalPenalties(lblSalesPenalties)
+        LoadTotalCost(lblSalesCost)
+        LoadTotalIncome(lblSalesIncome)
     End Sub
     Private Sub pnlMaintenance_Click(sender As Object, e As EventArgs) Handles pnlMaintenance.Click
         ClickMaintenance()
         LoadTableMaintenance()
+        LoadTotalDamaged(lblMaintenanceDamaged)
+        LoadTotalOngoing(lblMaintenanceOngoing)
+        LoadTotalCompleted(lblMaintenanceGoods)
+        LoadTotalScheduled(lblMaintenanceScheduled)
     End Sub
     Private Sub pnlUsers_Click(sender As Object, e As EventArgs) Handles pnlUsers.Click
         ClickUsers()
         LoadTabUsers()
+        LoadTotalUsers(lblUserUsers)
+        LoadTotalUnpaid(lblUserUnpaid)
+        LoadTotalPaid(lblUserPaid)
     End Sub
 
 
