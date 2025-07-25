@@ -101,9 +101,9 @@
     Private Sub SaveFormDataToModule()
         RentalTransactionModule.SaveForm2Data(
             pickupdatetxt.Text.Trim(),
-            pickuptimetxtbox.Text.Trim(),
+            cbxPickup.SelectedItem.ToString(),
             returndatetxt.Text.Trim(),
-            returntimetxtbox.Text.Trim(),
+            cbxReturn.SelectedItem.ToString(),
             pickuptxtbox.Text.Trim(),
             returntxtbox.Text.Trim(),
             pickupbtn.Checked,
@@ -121,10 +121,10 @@
                 returndatetxt.Text = .ReturnDate.ToString("yyyy-MM-dd")
             End If
             If Not String.IsNullOrEmpty(.PickupTime) Then
-                pickuptimetxtbox.Text = .PickupTime
+                cbxPickup.SelectedItem = .PickupTime
             End If
             If Not String.IsNullOrEmpty(.ReturnTime) Then
-                returntimetxtbox.Text = .ReturnTime
+                cbxReturn.SelectedItem = .ReturnDate
             End If
 
             If Not String.IsNullOrEmpty(.PickupPlace) Then

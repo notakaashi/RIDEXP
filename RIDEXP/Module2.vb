@@ -182,9 +182,9 @@ Public Module RentalTransactionModule
             With cmd.Parameters
                 ' Format dates for MySQL (YYYY-MM-DD)
                 .AddWithValue("@pickup_date", TransactionData.PickupDate.ToString("yyyy-MM-dd"))
-                .AddWithValue("@pickup_time", If(String.IsNullOrEmpty(TransactionData.PickupTime), DBNull.Value, TimeSpan.Parse(TransactionData.PickupTime)))
+                .AddWithValue("@pickup_time", TransactionData.PickupTime)
                 .AddWithValue("@return_date", TransactionData.ReturnDate.ToString("yyyy-MM-dd"))
-                .AddWithValue("@return_time", If(String.IsNullOrEmpty(TransactionData.ReturnTime), DBNull.Value, TimeSpan.Parse(TransactionData.ReturnTime)))
+                .AddWithValue("@return_time", TransactionData.ReturnTime)
                 .AddWithValue("@customer_id", TransactionData.CustomerId)
                 .AddWithValue("@vehicle_id", TransactionData.SelectedVehicleId)
                 .AddWithValue("@amount", TransactionData.TotalAmount)
