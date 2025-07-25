@@ -89,18 +89,13 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`cars` (
   `color` VARCHAR(30) NULL DEFAULT NULL,
   `seating_capacity` INT(11) NULL DEFAULT NULL,
   `mileage` INT(11) NULL DEFAULT 0,
-  `status_id` INT(11) NOT NULL,
   PRIMARY KEY (`car_id`),
-  UNIQUE INDEX (`license_plate`)  ,
-  INDEX (`car_category_id`) ,
-  INDEX (`status_id`) ,
+  UNIQUE INDEX (`license_plate`),
+  INDEX (`car_category_id`),
   CONSTRAINT `cars_ibfk_1`
     FOREIGN KEY (`car_category_id`)
-    REFERENCES `ridexp`.`car_category` (`car_category_id`),
-  CONSTRAINT `cars_ibfk_2`
-    FOREIGN KEY (`status_id`)
-    REFERENCES `ridexp`.`vehicle_status` (`status_id`))
-ENGINE = InnoDB
+    REFERENCES `ridexp`.`car_category` (`car_category_id`)
+) ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
@@ -112,17 +107,20 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`vehicles` (
   `vehicle_id` INT(11) NOT NULL AUTO_INCREMENT,
   `vehicle_type` ENUM('car', 'motor') NOT NULL,
   `item_id` INT(11) NOT NULL,
-  PRIMARY KEY (`vehicle_id`))
-ENGINE = InnoDB
+  `status_id` INT(11) NOT NULL,
+  PRIMARY KEY (`vehicle_id`),
+  INDEX (`status_id`),
+  CONSTRAINT `vehicles_ibfk_1`
+    FOREIGN KEY (`status_id`)
+    REFERENCES `ridexp`.`vehicle_status` (`status_id`)
+) ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
--- -----------------------------------------------------
--- Table `ridexp`.`customers`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ridexp`.`customers` (
   `customer_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `user_id` INT(11) NOT NULL,
   `first_name` VARCHAR(45) NOT NULL,
   `last_name` VARCHAR(45) NOT NULL,
   `date_of_birth` DATE NOT NULL,
@@ -132,47 +130,11 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`customers` (
   `license_number` VARCHAR(50) NULL DEFAULT NULL,
   `license_expiry` DATE NULL DEFAULT NULL,
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`customer_id`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `ridexp`.`reservation_status`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ridexp`.`reservation_status` (
-  `reservation_status_id` INT(11) NOT NULL AUTO_INCREMENT,
-  `status_name` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`reservation_status_id`) )
-ENGINE = InnoDB
-AUTO_INCREMENT = 1
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `ridexp`.`reservation`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ridexp`.`reservation` (
-  `reservation_id` INT(11) NOT NULL AUTO_INCREMENT,
-  `customer_id` INT(11) NOT NULL,
-  `vehicle_id` INT(11) NOT NULL,
-  `start_datetime` DATETIME NOT NULL,
-  `end_datetime` DATETIME NOT NULL,
-  `amount` DECIMAL(10,2) NULL DEFAULT NULL,
-  `reservation_status_id` INT(11) NOT NULL,
-  PRIMARY KEY (`reservation_id`),
-  INDEX (`customer_id`),
-  INDEX (`vehicle_id`) ,
-  INDEX (`reservation_status_id`)  ,
-  CONSTRAINT `reservation_ibfk_1`
-    FOREIGN KEY (`customer_id`)
-    REFERENCES `ridexp`.`customers` (`customer_id`),
-  CONSTRAINT `reservation_ibfk_2`
-    FOREIGN KEY (`vehicle_id`)
-    REFERENCES `ridexp`.`vehicles` (`vehicle_id`),
-  CONSTRAINT `reservation_ibfk_3`
-    FOREIGN KEY (`reservation_status_id`)
-    REFERENCES `ridexp`.`reservation_status` (`reservation_status_id`))
+  PRIMARY KEY (`customer_id`),
+  CONSTRAINT `fk_customers_user`
+    FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
+    ON DELETE CASCADE
+)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
@@ -194,21 +156,20 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ridexp`.`rentals` (
   `rental_id` INT(11) NOT NULL AUTO_INCREMENT,
-  `reservation_id` INT(11) NULL DEFAULT NULL,
   `rental_duration_days` INT DEFAULT 1,
   `pickup_date` DATE NOT NULL,
   `pickup_time` TIME NOT NULL,
   `return_date` DATE NULL DEFAULT NULL,
   `return_time` TIME NULL DEFAULT NULL,
-  `actual_return_date` DATETIME NULL DEFAULT NULL,
   `customer_id` INT(11) NOT NULL,
   `vehicle_id` INT(11) NOT NULL,
   `amount` DECIMAL(10,2) NULL DEFAULT NULL,
   `rental_status_id` INT(11) NOT NULL,
+  `pickup_place` VARCHAR(255) NOT NULL DEFAULT 'Main Station - 123 Central Ave, Downtown',
+  `return_place` VARCHAR(255) NOT NULL DEFAULT 'Main Station - 123 Central Ave, Downtown',
   PRIMARY KEY (`rental_id`),
   INDEX (`customer_id`),
   INDEX (`vehicle_id`),
-  INDEX (`reservation_id`),
   INDEX (`rental_status_id`),
   CONSTRAINT `rentals_ibfk_1`
     FOREIGN KEY (`customer_id`)
@@ -217,14 +178,10 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`rentals` (
     FOREIGN KEY (`vehicle_id`)
     REFERENCES `ridexp`.`vehicles` (`vehicle_id`),
   CONSTRAINT `rentals_ibfk_3`
-    FOREIGN KEY (`reservation_id`)
-    REFERENCES `ridexp`.`reservation` (`reservation_id`),
-  CONSTRAINT `rentals_ibfk_4`
     FOREIGN KEY (`rental_status_id`)
     REFERENCES `ridexp`.`rental_status` (`rental_status_id`)
 ) ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
-
 
 -- -----------------------------------------------------
 -- Table `ridexp`.`inspection_types`
@@ -344,18 +301,13 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`motors` (
   `license_plate` VARCHAR(45) NOT NULL,
   `color` VARCHAR(30) NULL DEFAULT NULL,
   `mileage` INT(11) NULL DEFAULT 0,
-  `status_id` INT(11) NOT NULL,
   PRIMARY KEY (`motor_id`),
-  UNIQUE INDEX (`license_plate`)  ,
-  INDEX (`motor_category_id` ) ,
-  INDEX (`status_id` ) ,
+  UNIQUE INDEX (`license_plate`),
+  INDEX (`motor_category_id`),
   CONSTRAINT `motors_ibfk_1`
     FOREIGN KEY (`motor_category_id`)
-    REFERENCES `ridexp`.`motor_category` (`motor_category_id`),
-  CONSTRAINT `motors_ibfk_2`
-    FOREIGN KEY (`status_id`)
-    REFERENCES `ridexp`.`vehicle_status` (`status_id`))
-ENGINE = InnoDB
+    REFERENCES `ridexp`.`motor_category` (`motor_category_id`)
+) ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
@@ -463,19 +415,19 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 -- Table `ridexp`.`user`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ridexp`.`user` (
-  `user_id` INT(11) NOT NULL AUTO_INCREMENT,
-  `username` VARCHAR(50) NOT NULL,
-  `password_hash` TEXT NOT NULL,
-  `role_id` INT(11) NOT NULL,
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`user_id`),
-  INDEX (`role_id`),
-  CONSTRAINT `user_ibfk_1`
-    FOREIGN KEY (`role_id`)
-    REFERENCES `ridexp`.`user_roles` (`role_id`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+CREATE TABLE IF NOT EXISTS `user` (
+    `user_id` INT(11) NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(50) NOT NULL UNIQUE,
+    `password_hash` VARCHAR(64) NOT NULL,
+    `role_id` INT(11) NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`user_id`),
+    INDEX (`role_id`),
+    CONSTRAINT `user_ibk_1`
+        FOREIGN KEY (`role_id`) REFERENCES `ridexp`.`user_roles` (`role_id`)
+        ON DELETE CASCADE
+) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
 
 
 -- -----------------------------------------------------
@@ -520,6 +472,14 @@ CREATE TABLE IF NOT EXISTS cars_pic (
         ON UPDATE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS motors_pic (
+    pic_id INT AUTO_INCREMENT PRIMARY KEY,
+    motor_id INT NOT NULL,
+    image VARCHAR(100) NOT NULL,
+    FOREIGN KEY (motor_id) REFERENCES motors(motor_id)
+);
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
@@ -527,17 +487,15 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 DELIMITER $$
 CREATE TRIGGER rental_return_date_calculator
-BEFORE INSERT ON `ridexp`.`rentals`
+BEFORE INSERT ON rentals
 FOR EACH ROW
 BEGIN
-    IF NEW.rental_duration_days IS NULL THEN
-        SET NEW.rental_duration_days = 1;
-    END IF;
+    -- Calculate rental duration in days based on the difference between return and pickup dates
+    SET NEW.rental_duration_days = DATEDIFF(NEW.return_date, NEW.pickup_date);
     
-    -- Calculate return_date based on pickup_date and rental_duration_days
-    IF NEW.return_date IS NULL THEN
-        SET NEW.return_date = DATE_ADD(NEW.pickup_date, INTERVAL NEW.rental_duration_days DAY);
+    -- Ensure minimum 1 day rental (in case of same-day returns)
+    IF NEW.rental_duration_days < 1 THEN
+        SET NEW.rental_duration_days = 1;
     END IF;
 END$$
 DELIMITER ;
-

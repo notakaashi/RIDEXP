@@ -7,16 +7,15 @@ INSERT INTO `transmission_types` (`transmission_type`) VALUES
 ('automatic'),
 ('cvt');
 
-INSERT INTO `fuel_types` (`fuel_type`) VALUES
-('gasoline'),
-('diesel'),
-('electric'),
-('hybrid');
+INSERT INTO fuel_types (fuel_type) VALUES
+('Gasoline'),
+( 'Diesel'),
+('Electric'),
+('Hybrid');
 
 INSERT INTO `vehicle_status` (`status_name`) VALUES
 ('available'),
 ('rented'),
-('reserved'),
 ('under_maintenance'),
 ('out_of_service'),
 ('cleaning'),
@@ -35,11 +34,6 @@ INSERT INTO `payment_status` (`status_name`) VALUES
 INSERT INTO `rental_status` (`status_name`) VALUES
 ('active'),
 ('completed'),
-('cancelled');
-
-INSERT INTO `reservation_status` (`status_name`) VALUES
-('pending'),
-('confirmed'),
 ('cancelled');
 
 INSERT INTO `maintenance_status` (`status_name`) VALUES
@@ -67,48 +61,49 @@ INSERT INTO car_category (category_name, description, transmission_id, fuel_id) 
 -- Insert Motor Categories 
 INSERT INTO motor_category (category_name, description, transmission_id, fuel_id, engine_capacity) VALUES
 ('Scooter CVT', 'CVT automatic scooters', 3, 1, '110-125cc'),
-('Sport Scooter CVT', 'CVT performance scooters', 3, 1, '155cc'),
 ('Underbone Semi-Auto', 'Semi-automatic underbone motorcycles', 2, 1, '125cc'),
-('Sport Manual', 'Manual sport motorcycles', 1, 1, '150cc'),
 ('Adventure CVT', 'CVT adventure-style scooters', 3, 1, '160cc');
 
 -- Insert Cars 
-INSERT INTO cars (car_category_id, make, model_name, year, license_plate, color, seating_capacity, mileage, status_id) VALUES
-(1, 'Toyota', 'Vios 1.3 XE CVT', 2023, 'ABC-1234', 'Red Mica Metallic', 5, 15000, 1),
-(2, 'Mitsubishi', 'Xpander GLS AT', 2022, 'DEF-2345', 'Jet Black Mica', 7, 22000, 1),
-(2, 'Toyota', 'Innova 2.8 E Diesel AT', 2021, 'GHI-3456', 'White Pearl', 8, 35000, 1),
-(2, 'Suzuki', 'Ertiga GL 1.5 AT', 2023, 'JKL-4567', 'Snow White', 7, 18000, 1),
-(1, 'Honda', 'City 1.5 S CVT', 2022, 'MNO-5678', 'Ignite Red', 5, 28000, 1),
-(3, 'Toyota', 'Fortuner 2.4 G Diesel 4x2 AT', 2021, 'PQR-6789', 'Attitude Black', 7, 45000, 1),
-(5, 'Suzuki', 'Swift GL 1.2 CVT', 2023, 'STU-7890', 'Burning Red', 5, 12000, 1),
-(2, 'Honda', ' Civic Type R VTEC ', 2021, 'VWX-8901', 'Red', 7, 25000, 1),
-(6, 'Toyota', 'Corolla Altis 1.8 Hybrid CVT', 2023, 'YZA-9012', 'White Pearl', 5, 8000, 1),
-(4, 'Toyota', 'Rush 1.5 G AT', 2022, 'BCD-0123', 'Silver Mica Metallic', 7, 32000, 1);
+INSERT INTO cars (car_category_id, make, model_name, year, license_plate, color, seating_capacity, mileage) VALUES
+(1, 'Toyota', 'Vios ', 2023, 'ABC-1234', 'Red ', 5, 15000),
+(2, 'Mitsubishi', 'Xpander', 2022, 'DEF-2345', 'Black a', 7, 22000),
+(2, 'Toyota', 'Innova ', 2021, 'GHI-3456', 'White ', 8, 35000),
+(2, 'Suzuki', 'Ertiga ', 2023, 'JKL-4567', 'White', 7, 18000),
+(1, 'Honda', 'City ', 2022, 'MNO-5678', 'Red', 5, 28000),
+(3, 'Toyota', 'Fortuner', 2021, 'PQR-6789', 'Black', 7, 45000),
+(5, 'Suzuki', 'Swift', 2023, 'STU-7890', 'Red', 5, 12000),
+(2, 'Honda', ' Civic', 2021, 'VWX-8901', 'Red', 7, 25000),
+(6, 'Toyota', 'Corolla ', 2023, 'YZA-9012', 'Pearl', 5, 8000),
+(4, 'Toyota', 'Rush ', 2022, 'BCD-0123', 'Silver ', 7, 32000);
 
 -- Insert Motors
-INSERT INTO motors (motor_category_id, make, model, year, license_plate, color, mileage, status_id) VALUES
-(1, 'Yamaha', 'Mio Sporty', 2023, 'EFG-1134', 'Matte Blue', 8500, 1),
-(2, 'Yamaha', 'Mio Aerox 155 S', 2022, 'HIJ-1235', 'Black Raven', 12000, 1),
-(3, 'Honda', 'Click 125i', 2023, 'KLM-1336', 'Red', 6500, 1),
-(1, 'Honda', 'BeAT Premium ISS/CBS', 2022, 'NOP-1437', 'Matte Black', 11000, 1),
-(1, 'Honda', 'Genio', 2023, 'QRS-1538', 'Blue', 4200, 1),
-(3, 'Honda', 'Super Cub C125', 2021, 'TUV-1639', 'Pearl Niltava Blue', 15000, 1),
-(4, 'Suzuki', 'Raider R150 Fi', 2022, 'WXY-1740', 'Blue', 18000, 1),
-(4, 'Kawasaki', 'Barako III', 2021, 'ZAB-1841', 'Black', 25000, 1),
-(2, 'Yamaha', 'NMAX 155 Standard', 2023, 'CDE-1942', 'Phantom Blue', 7800, 1),
-(5, 'Honda', 'ADV 160', 2022, 'FGH-2043', 'Matte Gunpowder Black', 13500, 1);
+INSERT INTO motors (motor_category_id, make, model, year, license_plate, color, mileage) VALUES
+(1, 'Yamaha', 'Mio Sporty', 2023, 'EFG-1134', 'Matte Blue', 8500),
+(1, 'Yamaha', 'Mio Aerox 155 S', 2022, 'HIJ-1235', 'Black Raven', 12000),
+(1, 'Honda', 'Click 125i', 2023, 'KLM-1336', 'Red', 6500),
+(1, 'Honda', 'BeAT Premium ISS/CBS', 2022, 'NOP-1437', 'Matte Black', 11000),
+(1, 'Honda', 'Genio', 2023, 'QRS-1538', 'Blue', 4200),
+(1, 'Honda', 'PCX 160', 2023, 'XYZ-8888', 'White', 7000),
+(2, 'Suzuki', 'Raider R150 Fi', 2022, 'WXY-1740', 'Blue', 18000),
+(2, 'Kawasaki', 'Barako III', 2021, 'ZAB-1841', 'Black', 25000),
+(1, 'Yamaha', 'NMAX 155 Standard', 2023, 'CDE-1942', 'Phantom Blue', 7800),
+(3, 'Honda', 'ADV 160', 2022, 'FGH-2043', 'Matte Gunpowder Black', 13500);
+
 -- Insert vehicles 
--- Cars
-INSERT INTO `vehicles` (`vehicle_type`, `item_id`) VALUES
-('car', 1), ('car', 2), ('car', 3), ('car', 4), ('car', 5),
-('car', 6), ('car', 7), ('car', 8), ('car', 9), ('car', 10);
 
--- Motors
-INSERT INTO `vehicles` (`vehicle_type`, `item_id`) VALUES
-('motor', 1), ('motor', 2), ('motor', 3), ('motor', 4), ('motor', 5),
-('motor', 6), ('motor', 7), ('motor', 8), ('motor', 9), ('motor', 10);
+-- Cars 
+INSERT INTO `vehicles` (`vehicle_type`, `item_id`, `status_id`) VALUES
+('car', 1, 1), ('car', 2, 1), ('car', 3, 1), ('car', 4, 1), ('car', 5, 1),
+('car', 6, 1), ('car', 7, 1), ('car', 8, 1), ('car', 9, 1), ('car', 10, 1);
 
--- Insert terms and policies
+-- Motors 
+INSERT INTO `vehicles` (`vehicle_type`, `item_id`, `status_id`) VALUES
+('motor', 1, 1), ('motor', 2, 1), ('motor', 3, 1), ('motor', 4, 1), ('motor', 5, 1),
+('motor', 6, 1), ('motor', 7, 1), ('motor', 8, 1), ('motor', 9, 1), ('motor', 10, 1);
+
+-- Insert terms and policie
+
 INSERT INTO `terms_and_policies` (`title`, `content`, `version`, `effective_date`) VALUES
 ('Rental Agreement Terms', 
 '1. RENTAL PERIOD: The rental period begins when the vehicle is delivered to the renter and ends when the vehicle is returned to the rental location.
@@ -233,3 +228,15 @@ INSERT INTO cars_pic (car_id, image) VALUES (7, 'swift');
 INSERT INTO cars_pic (car_id, image) VALUES (8, 'civic');
 INSERT INTO cars_pic (car_id, image) VALUES (9, 'corolla');
 INSERT INTO cars_pic (car_id, image) VALUES (10, 'rush');
+
+INSERT INTO motors_pic (motor_id, image) VALUES
+(1, 'imgSporty'),
+(2, 'imgAerox'),
+(3, 'imgClick'),
+(4, 'imgBeat'),
+(5, 'imgGenio'),
+(6, 'imgPCX'),
+(7, 'imgRaider'),
+(8, 'imgBarako'),
+(9, 'imgNMAX'),
+(10, 'imgADV');
