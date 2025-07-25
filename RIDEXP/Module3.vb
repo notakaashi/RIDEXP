@@ -591,18 +591,10 @@ WHERE r.rental_id = @rental_id
                     doc.Add(New Paragraph(" "))
                 End With
 
-                ' Footer
                 Dim line2 As New LineSeparator(1.0F, 100.0F, BaseColor.LIGHT_GRAY, Element.ALIGN_CENTER, -1)
                 doc.Add(New Chunk(line2))
                 doc.Add(New Paragraph(" "))
 
-                Dim footerPara As New Paragraph("Thank you for choosing RideExpress!", infoFont)
-                footerPara.Alignment = Element.ALIGN_CENTER
-                doc.Add(footerPara)
-
-                Dim footerNote As New Paragraph("For inquiries, please contact us at rentals@ridexpress.com or call +63 2 987-6543", infoFont)
-                footerNote.Alignment = Element.ALIGN_CENTER
-                doc.Add(footerNote)
 
                 doc.Close()
                 writer.Close()

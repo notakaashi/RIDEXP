@@ -11,6 +11,7 @@ Public Class FORM_ADMIN
         LoadTabNewUsers()
         cbVehicle.Items.Add("CARS")
         cbVehicle.Items.Add("MOTORCYCLES")
+        cbVehicle.Items.Add("VEHICLES")
         cbVehicle.SelectedIndex = 0
         LoadTotalRentals(lblDashRentals)
         LoadTotalUsers(lblDashUsers)
@@ -351,6 +352,21 @@ Public Class FORM_ADMIN
             query = "SELECT * FROM cars"
         ElseIf selectedTable = "MOTORCYCLES" Then
             query = "SELECT * FROM motors"
+        ElseIf selectedTable = "VEHICLES" Then
+            query = "SELECT  v.vehicle_id,
+                    v.vehicle_type,
+                    v.status_id,
+                    CASE WHEN v.vehicle_type = 'car' THEN c.make ELSE m.make END AS make,
+                    CASE WHEN v.vehicle_type = 'car' THEN c.model_name ELSE m.model END AS model_name,
+                    CASE WHEN v.vehicle_type = 'car' THEN c.year ELSE m.year END AS year,
+                    CASE WHEN v.vehicle_type = 'car' THEN c.license_plate ELSE m.license_plate END AS license_plate,
+                    CASE WHEN v.vehicle_type = 'car' THEN c.color ELSE m.color END AS color,
+                    CASE WHEN v.vehicle_type = 'car' THEN c.mileage ELSE m.mileage END AS mileage
+                    FROM vehicles v
+                    LEFT JOIN cars c 
+                        ON v.vehicle_type = 'car' AND v.item_id = c.car_id
+                    LEFT JOIN motors m 
+                        ON v.vehicle_type = 'motor' AND v.item_id = m.motor_id;"
         Else
             Exit Sub
         End If
