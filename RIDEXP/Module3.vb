@@ -20,10 +20,8 @@ Public Module Module3
         End Try
     End Sub
 
-    ' Generate invoice from current transaction data
     Public Sub GenerateInvoiceFromCurrentTransaction(rentalId As Integer)
         Try
-            ' Generate immediately using current transaction data (no database needed)
             CreatePDFFromTransactionData(rentalId)
         Catch ex As Exception
             MessageBox.Show("Error generating invoice from transaction data: " & ex.Message)
@@ -66,7 +64,7 @@ Public Module Module3
         WHEN v.vehicle_type = 'motor' THEN CONCAT(motors.make, ' ', motors.model)
         ELSE 'Unknown Vehicle'
     END AS vehicle_name,
-    rr.rate_per_day AS daily_rate
+    rr.rate_per_day 
 FROM rentals r
 INNER JOIN customers c ON r.customer_id = c.customer_id
 LEFT JOIN user u ON c.user_id = u.user_id
@@ -88,7 +86,7 @@ WHERE r.rental_id = @rental_id
 
                     Using reader As MySqlDataReader = cmd.ExecuteReader()
                         If reader.Read() Then
-                            ' Combine first_name and last_name to create full customer name
+
                             Dim firstName As String = If(IsDBNull(reader("first_name")), "", reader("first_name").ToString())
                             Dim lastName As String = If(IsDBNull(reader("last_name")), "", reader("last_name").ToString())
                             Dim fullName As String = $"{firstName} {lastName}".Trim()
@@ -116,9 +114,9 @@ WHERE r.rental_id = @rental_id
                                 .ReturnTime = If(IsDBNull(reader("return_time_str")), "N/A", reader("return_time_str").ToString()),
                                 .PickupPlace = If(IsDBNull(reader("pickup_place")), "N/A", reader("pickup_place").ToString()),
                                 .ReturnPlace = If(IsDBNull(reader("return_place")), "N/A", reader("return_place").ToString()),
-                                .DailyRate = If(IsDBNull(reader("daily_rate")), 0D, reader("daily_rate")),
-                                .RentalDays = If(IsDBNull(reader("rental_duration_days")), 1, reader("rental_duration_days")),
-                                .TotalAmount = If(IsDBNull(reader("amount")), 0D, reader("amount"))
+                                .DailyRate = If(Not IsDBNull(reader("rate_per_day")) AndAlso IsNumeric(reader("rate_per_day")), Convert.ToDecimal(reader("daily_rate")), -1D),
+                                .RentalDays = If(IsDBNull(reader("rental_duration_days")), 1, Convert.ToInt32(reader("rental_duration_days"))),
+                                .TotalAmount = If(IsDBNull(reader("amount")), 0D, Convert.ToDecimal(reader("amount")))
                             }
                         End If
                     End Using
@@ -136,22 +134,24 @@ WHERE r.rental_id = @rental_id
             Dim invoicePath As String = $"RideExpress_Invoice_{rentalId}_{DateTime.Now:yyyyMMdd_HHmmss}.pdf"
 
             Using fs As New FileStream(invoicePath, FileMode.Create, FileAccess.Write, FileShare.None)
-                Dim doc As New Document(PageSize.A4, 40, 40, 40, 40)
+                ' Reduce margins to fit more content
+                Dim doc As New Document(PageSize.A4, 30, 30, 30, 30)
                 Dim writer As PdfWriter = PdfWriter.GetInstance(doc, fs)
                 doc.Open()
 
                 ' Define fonts
-                Dim titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 24, BaseColor.DARK_GRAY)
-                Dim headerFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14, BaseColor.BLACK)
-                Dim labelFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 11, BaseColor.DARK_GRAY)
-                Dim infoFont = FontFactory.GetFont(FontFactory.HELVETICA, 11, BaseColor.BLACK)
-                Dim totalFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14, BaseColor.BLACK)
+                Dim titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 20, BaseColor.DARK_GRAY)
+                Dim headerFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, BaseColor.BLACK)
+                Dim labelFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 9, BaseColor.DARK_GRAY)
+                Dim infoFont = FontFactory.GetFont(FontFactory.HELVETICA, 9, BaseColor.BLACK)
+                Dim totalFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, BaseColor.BLACK)
 
                 ' Company Header
                 Dim companyTable As New PdfPTable(2)
                 companyTable.WidthPercentage = 100
                 companyTable.SetWidths({3, 1})
                 companyTable.DefaultCell.Border = Rectangle.NO_BORDER
+                companyTable.SpacingAfter = 10
 
                 ' Left side - Company info
                 Dim companyCell As New PdfPCell()
@@ -175,7 +175,6 @@ WHERE r.rental_id = @rental_id
                 companyTable.AddCell(invoiceCell)
 
                 doc.Add(companyTable)
-                doc.Add(New Paragraph(" "))
 
                 ' Horizontal line
                 Dim line As New LineSeparator(1.0F, 100.0F, BaseColor.LIGHT_GRAY, Element.ALIGN_CENTER, -1)
@@ -190,7 +189,8 @@ WHERE r.rental_id = @rental_id
                 customerTable.WidthPercentage = 100
                 customerTable.SetWidths({1, 1})
                 customerTable.DefaultCell.Border = Rectangle.NO_BORDER
-                customerTable.DefaultCell.PaddingBottom = 5
+                customerTable.DefaultCell.PaddingBottom = 3
+                customerTable.SpacingAfter = 10
 
                 customerTable.AddCell(New Phrase("Customer Name:", labelFont))
                 customerTable.AddCell(New Phrase(data.CustomerName, infoFont))
@@ -202,7 +202,6 @@ WHERE r.rental_id = @rental_id
                 customerTable.AddCell(New Phrase(data.CustomerAddress, infoFont))
 
                 doc.Add(customerTable)
-                doc.Add(New Paragraph(" "))
 
                 ' Rental Details
                 doc.Add(New Paragraph("RENTAL DETAILS", headerFont))
@@ -212,68 +211,95 @@ WHERE r.rental_id = @rental_id
                 Dim detailTable As New PdfPTable(4)
                 detailTable.WidthPercentage = 100
                 detailTable.SetWidths({3, 1, 1, 1})
+                detailTable.SpacingAfter = 10
 
                 ' Table headers
                 Dim headerCell1 As New PdfPCell(New Phrase("Description", labelFont))
                 headerCell1.BackgroundColor = BaseColor.LIGHT_GRAY
                 headerCell1.HorizontalAlignment = Element.ALIGN_CENTER
-                headerCell1.Padding = 8
+                headerCell1.Padding = 5
                 detailTable.AddCell(headerCell1)
 
                 Dim headerCell2 As New PdfPCell(New Phrase("Days", labelFont))
                 headerCell2.BackgroundColor = BaseColor.LIGHT_GRAY
                 headerCell2.HorizontalAlignment = Element.ALIGN_CENTER
-                headerCell2.Padding = 8
+                headerCell2.Padding = 5
                 detailTable.AddCell(headerCell2)
 
                 Dim headerCell3 As New PdfPCell(New Phrase("Rate/Day", labelFont))
                 headerCell3.BackgroundColor = BaseColor.LIGHT_GRAY
                 headerCell3.HorizontalAlignment = Element.ALIGN_CENTER
-                headerCell3.Padding = 8
+                headerCell3.Padding = 5
                 detailTable.AddCell(headerCell3)
 
                 Dim headerCell4 As New PdfPCell(New Phrase("Amount", labelFont))
                 headerCell4.BackgroundColor = BaseColor.LIGHT_GRAY
                 headerCell4.HorizontalAlignment = Element.ALIGN_CENTER
-                headerCell4.Padding = 8
+                headerCell4.Padding = 5
                 detailTable.AddCell(headerCell4)
 
-                ' Table data
+                ' Table data - Fixed date formatting
+                Dim pickupDateStr As String = "N/A"
+                Dim returnDateStr As String = "N/A"
+
+                ' Parse dates properly
+                If data.PickupDate <> "N/A" Then
+                    Try
+                        Dim pickupDate As DateTime = DateTime.Parse(data.PickupDate)
+                        pickupDateStr = pickupDate.ToString("MMM dd, yyyy")
+                    Catch
+                        pickupDateStr = data.PickupDate
+                    End Try
+                End If
+
+                If data.ReturnDate <> "N/A" Then
+                    Try
+                        Dim returnDate As DateTime = DateTime.Parse(data.ReturnDate)
+                        returnDateStr = returnDate.ToString("MMM dd, yyyy")
+                    Catch
+                        returnDateStr = data.ReturnDate
+                    End Try
+                End If
+
                 Dim description As String = $"{data.VehicleName} ({data.VehicleType})" & Chr(10) &
-                                          $"Pickup: {data.PickupDate:MMM dd, yyyy} {data.PickupTime}" & Chr(10) &
-                                          $"Return: {data.ReturnDate:MMM dd, yyyy} {data.ReturnTime}" & Chr(10) &
+                                          $"Pickup: {pickupDateStr} {data.PickupTime}" & Chr(10) &
+                                          $"Return: {returnDateStr} {data.ReturnTime}" & Chr(10) &
                                           $"From: {data.PickupPlace}" & Chr(10) &
                                           $"To: {data.ReturnPlace}"
 
                 Dim dataCell1 As New PdfPCell(New Phrase(description, infoFont))
-                dataCell1.Padding = 8
+                dataCell1.Padding = 5
                 dataCell1.VerticalAlignment = Element.ALIGN_MIDDLE
                 detailTable.AddCell(dataCell1)
 
                 Dim dataCell2 As New PdfPCell(New Phrase(data.RentalDays.ToString(), infoFont))
                 dataCell2.HorizontalAlignment = Element.ALIGN_CENTER
-                dataCell2.Padding = 8
+                dataCell2.Padding = 5
                 detailTable.AddCell(dataCell2)
 
-                Dim dataCell3 As New PdfPCell(New Phrase($"₱{data.DailyRate:N2}", infoFont))
+                ' Fixed daily rate display
+                Dim dailyRateDecimal As Decimal = Convert.ToDecimal(data.DailyRate)
+                Dim dataCell3 As New PdfPCell(New Phrase($"₱{dailyRateDecimal:N2}", infoFont))
                 dataCell3.HorizontalAlignment = Element.ALIGN_RIGHT
-                dataCell3.Padding = 8
+                dataCell3.Padding = 5
                 detailTable.AddCell(dataCell3)
 
-                Dim subtotal As Decimal = data.DailyRate * data.RentalDays
+                ' Calculate subtotal properly
+                Dim rentalDaysInt As Integer = Convert.ToInt32(data.RentalDays)
+                Dim subtotal As Decimal = dailyRateDecimal * rentalDaysInt
                 Dim dataCell4 As New PdfPCell(New Phrase($"₱{subtotal:N2}", infoFont))
                 dataCell4.HorizontalAlignment = Element.ALIGN_RIGHT
-                dataCell4.Padding = 8
+                dataCell4.Padding = 5
                 detailTable.AddCell(dataCell4)
 
                 doc.Add(detailTable)
-                doc.Add(New Paragraph(" "))
 
-                ' Summary section
+                ' Summary section - more compact
                 Dim summaryTable As New PdfPTable(2)
                 summaryTable.WidthPercentage = 100
                 summaryTable.SetWidths({3, 1})
                 summaryTable.DefaultCell.Border = Rectangle.NO_BORDER
+                summaryTable.SpacingAfter = 10
 
                 ' Left side empty
                 summaryTable.AddCell("")
@@ -282,10 +308,12 @@ WHERE r.rental_id = @rental_id
                 Dim totalsTable As New PdfPTable(2)
                 totalsTable.WidthPercentage = 100
                 totalsTable.DefaultCell.Border = Rectangle.NO_BORDER
-                totalsTable.DefaultCell.PaddingBottom = 3
+                totalsTable.DefaultCell.PaddingBottom = 2
 
+                ' Fix VAT and service fee calculations
                 Dim vatAmount As Decimal = subtotal * 0.12D
                 Dim serviceAmount As Decimal = 100D
+                Dim totalAmount As Decimal = Convert.ToDecimal(data.TotalAmount)
 
                 totalsTable.AddCell(New Phrase("Subtotal:", labelFont))
                 Dim subtotalCell As New PdfPCell(New Phrase($"₱{subtotal:N2}", infoFont))
@@ -309,15 +337,14 @@ WHERE r.rental_id = @rental_id
                 Dim totalCell1 As New PdfPCell(New Phrase("TOTAL AMOUNT:", totalFont))
                 totalCell1.Border = Rectangle.TOP_BORDER
                 totalCell1.BorderWidth = 1
-                totalCell1.PaddingTop = 8
+                totalCell1.PaddingTop = 5
                 totalsTable.AddCell(totalCell1)
 
-                Dim finalTotal As Decimal = data.TotalAmount
-                Dim totalCell2 As New PdfPCell(New Phrase($"₱{finalTotal:N2}", totalFont))
+                Dim totalCell2 As New PdfPCell(New Phrase($"₱{totalAmount:N2}", totalFont))
                 totalCell2.Border = Rectangle.TOP_BORDER
                 totalCell2.BorderWidth = 1
                 totalCell2.HorizontalAlignment = Element.ALIGN_RIGHT
-                totalCell2.PaddingTop = 8
+                totalCell2.PaddingTop = 5
                 totalsTable.AddCell(totalCell2)
 
                 Dim summaryCell As New PdfPCell(totalsTable)
@@ -325,10 +352,8 @@ WHERE r.rental_id = @rental_id
                 summaryTable.AddCell(summaryCell)
 
                 doc.Add(summaryTable)
-                doc.Add(New Paragraph(" "))
-                doc.Add(New Paragraph(" "))
 
-                ' Payment info
+                ' Payment info - more compact
                 doc.Add(New Paragraph("PAYMENT INFORMATION", headerFont))
                 doc.Add(New Paragraph(" "))
 
@@ -336,7 +361,8 @@ WHERE r.rental_id = @rental_id
                 paymentTable.WidthPercentage = 100
                 paymentTable.SetWidths({1, 1})
                 paymentTable.DefaultCell.Border = Rectangle.NO_BORDER
-                paymentTable.DefaultCell.PaddingBottom = 5
+                paymentTable.DefaultCell.PaddingBottom = 3
+                paymentTable.SpacingAfter = 15
 
                 paymentTable.AddCell(New Phrase("Payment Method:", labelFont))
                 paymentTable.AddCell(New Phrase("Online Payment", infoFont))
@@ -346,15 +372,14 @@ WHERE r.rental_id = @rental_id
                 paymentTable.AddCell(New Phrase($"TXN-{DateTime.Now:yyyyMMdd}-{rentalId}", infoFont))
 
                 doc.Add(paymentTable)
-                doc.Add(New Paragraph(" "))
-                doc.Add(New Paragraph(" "))
 
-                ' Footer
+                ' Footer - more compact
                 doc.Add(New Chunk(line))
                 doc.Add(New Paragraph(" "))
 
                 Dim footerPara As New Paragraph("Thank you for choosing RideExpress!", infoFont)
                 footerPara.Alignment = Element.ALIGN_CENTER
+                footerPara.SpacingAfter = 5
                 doc.Add(footerPara)
 
                 Dim footerNote As New Paragraph("For inquiries, please contact us at rentals@ridexpress.com or call +63 2 987-6543", infoFont)
@@ -378,16 +403,17 @@ WHERE r.rental_id = @rental_id
             Dim invoicePath As String = $"RideExpress_Invoice_{rentalId}_{DateTime.Now:yyyyMMdd_HHmmss}.pdf"
 
             Using fs As New FileStream(invoicePath, FileMode.Create, FileAccess.Write, FileShare.None)
-                Dim doc As New Document(PageSize.A4, 40, 40, 40, 40)
+                ' Reduce margins to fit more content
+                Dim doc As New Document(PageSize.A4, 30, 30, 30, 30)
                 Dim writer As PdfWriter = PdfWriter.GetInstance(doc, fs)
                 doc.Open()
 
                 ' Define fonts
-                Dim titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 24, BaseColor.DARK_GRAY)
-                Dim headerFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14, BaseColor.BLACK)
-                Dim labelFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 11, BaseColor.DARK_GRAY)
-                Dim infoFont = FontFactory.GetFont(FontFactory.HELVETICA, 11, BaseColor.BLACK)
-                Dim totalFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14, BaseColor.BLACK)
+                Dim titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 20, BaseColor.DARK_GRAY)
+                Dim headerFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, BaseColor.BLACK)
+                Dim labelFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 9, BaseColor.DARK_GRAY)
+                Dim infoFont = FontFactory.GetFont(FontFactory.HELVETICA, 9, BaseColor.BLACK)
+                Dim totalFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, BaseColor.BLACK)
 
                 ' Use transaction data
                 With RentalTransactionModule.TransactionData
@@ -396,6 +422,7 @@ WHERE r.rental_id = @rental_id
                     companyTable.WidthPercentage = 100
                     companyTable.SetWidths({3, 1})
                     companyTable.DefaultCell.Border = Rectangle.NO_BORDER
+                    companyTable.SpacingAfter = 10
 
                     ' Left side - Company info
                     Dim companyCell As New PdfPCell()
@@ -419,7 +446,6 @@ WHERE r.rental_id = @rental_id
                     companyTable.AddCell(invoiceCell)
 
                     doc.Add(companyTable)
-                    doc.Add(New Paragraph(" "))
 
                     ' Horizontal line
                     Dim line As New LineSeparator(1.0F, 100.0F, BaseColor.LIGHT_GRAY, Element.ALIGN_CENTER, -1)
@@ -434,7 +460,8 @@ WHERE r.rental_id = @rental_id
                     customerTable.WidthPercentage = 100
                     customerTable.SetWidths({1, 1})
                     customerTable.DefaultCell.Border = Rectangle.NO_BORDER
-                    customerTable.DefaultCell.PaddingBottom = 5
+                    customerTable.DefaultCell.PaddingBottom = 3
+                    customerTable.SpacingAfter = 10
 
                     customerTable.AddCell(New Phrase("Customer ID:", labelFont))
                     customerTable.AddCell(New Phrase(.CustomerId.ToString(), infoFont))
@@ -442,7 +469,6 @@ WHERE r.rental_id = @rental_id
                     customerTable.AddCell(New Phrase(rentalId.ToString(), infoFont))
 
                     doc.Add(customerTable)
-                    doc.Add(New Paragraph(" "))
 
                     ' Rental Details
                     doc.Add(New Paragraph("RENTAL DETAILS", headerFont))
@@ -452,30 +478,31 @@ WHERE r.rental_id = @rental_id
                     Dim detailTable As New PdfPTable(4)
                     detailTable.WidthPercentage = 100
                     detailTable.SetWidths({3, 1, 1, 1})
+                    detailTable.SpacingAfter = 10
 
                     ' Table headers
                     Dim headerCell1 As New PdfPCell(New Phrase("Description", labelFont))
                     headerCell1.BackgroundColor = BaseColor.LIGHT_GRAY
                     headerCell1.HorizontalAlignment = Element.ALIGN_CENTER
-                    headerCell1.Padding = 8
+                    headerCell1.Padding = 5
                     detailTable.AddCell(headerCell1)
 
                     Dim headerCell2 As New PdfPCell(New Phrase("Days", labelFont))
                     headerCell2.BackgroundColor = BaseColor.LIGHT_GRAY
                     headerCell2.HorizontalAlignment = Element.ALIGN_CENTER
-                    headerCell2.Padding = 8
+                    headerCell2.Padding = 5
                     detailTable.AddCell(headerCell2)
 
                     Dim headerCell3 As New PdfPCell(New Phrase("Rate/Day", labelFont))
                     headerCell3.BackgroundColor = BaseColor.LIGHT_GRAY
                     headerCell3.HorizontalAlignment = Element.ALIGN_CENTER
-                    headerCell3.Padding = 8
+                    headerCell3.Padding = 5
                     detailTable.AddCell(headerCell3)
 
                     Dim headerCell4 As New PdfPCell(New Phrase("Amount", labelFont))
                     headerCell4.BackgroundColor = BaseColor.LIGHT_GRAY
                     headerCell4.HorizontalAlignment = Element.ALIGN_CENTER
-                    headerCell4.Padding = 8
+                    headerCell4.Padding = 5
                     detailTable.AddCell(headerCell4)
 
                     ' Table data
@@ -487,34 +514,36 @@ WHERE r.rental_id = @rental_id
                                               $"To: { .ReturnPlace}"
 
                     Dim dataCell1 As New PdfPCell(New Phrase(description, infoFont))
-                    dataCell1.Padding = 8
+                    dataCell1.Padding = 5
                     dataCell1.VerticalAlignment = Element.ALIGN_MIDDLE
                     detailTable.AddCell(dataCell1)
 
                     Dim dataCell2 As New PdfPCell(New Phrase(.RentalDurationDays.ToString(), infoFont))
                     dataCell2.HorizontalAlignment = Element.ALIGN_CENTER
-                    dataCell2.Padding = 8
+                    dataCell2.Padding = 5
                     detailTable.AddCell(dataCell2)
 
+                    ' Fixed daily rate display
                     Dim dataCell3 As New PdfPCell(New Phrase($"₱{ .DailyRate:N2}", infoFont))
                     dataCell3.HorizontalAlignment = Element.ALIGN_RIGHT
-                    dataCell3.Padding = 8
+                    dataCell3.Padding = 5
                     detailTable.AddCell(dataCell3)
 
+                    ' Calculate subtotal properly
                     Dim subtotal As Decimal = .DailyRate * .RentalDurationDays
                     Dim dataCell4 As New PdfPCell(New Phrase($"₱{subtotal:N2}", infoFont))
                     dataCell4.HorizontalAlignment = Element.ALIGN_RIGHT
-                    dataCell4.Padding = 8
+                    dataCell4.Padding = 5
                     detailTable.AddCell(dataCell4)
 
                     doc.Add(detailTable)
-                    doc.Add(New Paragraph(" "))
 
-                    ' Summary section
+                    ' Summary section - more compact
                     Dim summaryTable As New PdfPTable(2)
                     summaryTable.WidthPercentage = 100
                     summaryTable.SetWidths({3, 1})
                     summaryTable.DefaultCell.Border = Rectangle.NO_BORDER
+                    summaryTable.SpacingAfter = 10
 
                     ' Left side empty
                     summaryTable.AddCell("")
@@ -523,8 +552,9 @@ WHERE r.rental_id = @rental_id
                     Dim totalsTable As New PdfPTable(2)
                     totalsTable.WidthPercentage = 100
                     totalsTable.DefaultCell.Border = Rectangle.NO_BORDER
-                    totalsTable.DefaultCell.PaddingBottom = 3
+                    totalsTable.DefaultCell.PaddingBottom = 2
 
+                    ' Fix VAT and service fee calculations
                     Dim vatAmount As Decimal = subtotal * 0.12D
                     Dim serviceAmount As Decimal = 100D
 
@@ -550,7 +580,7 @@ WHERE r.rental_id = @rental_id
                     Dim totalCell1 As New PdfPCell(New Phrase("TOTAL AMOUNT:", totalFont))
                     totalCell1.Border = Rectangle.TOP_BORDER
                     totalCell1.BorderWidth = 1
-                    totalCell1.PaddingTop = 8
+                    totalCell1.PaddingTop = 5
                     totalsTable.AddCell(totalCell1)
 
                     Dim finalTotal As Decimal = .TotalAmount
@@ -558,7 +588,7 @@ WHERE r.rental_id = @rental_id
                     totalCell2.Border = Rectangle.TOP_BORDER
                     totalCell2.BorderWidth = 1
                     totalCell2.HorizontalAlignment = Element.ALIGN_RIGHT
-                    totalCell2.PaddingTop = 8
+                    totalCell2.PaddingTop = 5
                     totalsTable.AddCell(totalCell2)
 
                     Dim summaryCell As New PdfPCell(totalsTable)
@@ -566,10 +596,8 @@ WHERE r.rental_id = @rental_id
                     summaryTable.AddCell(summaryCell)
 
                     doc.Add(summaryTable)
-                    doc.Add(New Paragraph(" "))
-                    doc.Add(New Paragraph(" "))
 
-                    ' Payment info
+                    ' Payment info - more compact
                     doc.Add(New Paragraph("PAYMENT INFORMATION", headerFont))
                     doc.Add(New Paragraph(" "))
 
@@ -577,7 +605,8 @@ WHERE r.rental_id = @rental_id
                     paymentTable.WidthPercentage = 100
                     paymentTable.SetWidths({1, 1})
                     paymentTable.DefaultCell.Border = Rectangle.NO_BORDER
-                    paymentTable.DefaultCell.PaddingBottom = 5
+                    paymentTable.DefaultCell.PaddingBottom = 3
+                    paymentTable.SpacingAfter = 15
 
                     paymentTable.AddCell(New Phrase("Payment Method:", labelFont))
                     paymentTable.AddCell(New Phrase(If(String.IsNullOrEmpty(.PaymentMethod), "Online Payment", .PaymentMethod), infoFont))
@@ -587,14 +616,21 @@ WHERE r.rental_id = @rental_id
                     paymentTable.AddCell(New Phrase(If(String.IsNullOrEmpty(.PaymentReference), $"TXN-{DateTime.Now:yyyyMMdd}-{rentalId}", .PaymentReference), infoFont))
 
                     doc.Add(paymentTable)
-                    doc.Add(New Paragraph(" "))
-                    doc.Add(New Paragraph(" "))
                 End With
 
+                ' Footer - more compact
                 Dim line2 As New LineSeparator(1.0F, 100.0F, BaseColor.LIGHT_GRAY, Element.ALIGN_CENTER, -1)
                 doc.Add(New Chunk(line2))
                 doc.Add(New Paragraph(" "))
 
+                Dim footerPara As New Paragraph("Thank you for choosing RideExpress!", infoFont)
+                footerPara.Alignment = Element.ALIGN_CENTER
+                footerPara.SpacingAfter = 5
+                doc.Add(footerPara)
+
+                Dim footerNote As New Paragraph("For inquiries, please contact us at rentals@ridexpress.com or call +63 2 987-6543", infoFont)
+                footerNote.Alignment = Element.ALIGN_CENTER
+                doc.Add(footerNote)
 
                 doc.Close()
                 writer.Close()
