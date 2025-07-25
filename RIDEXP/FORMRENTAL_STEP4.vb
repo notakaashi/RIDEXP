@@ -1,6 +1,8 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
 Imports MySql.Data.MySqlClient
-
+Imports iTextSharp.text
+Imports iTextSharp.text.pdf
+Imports System.IO
 Public Class FORMRENTAL_STEP4
     Private Sub Label24_Click(sender As Object, e As EventArgs)
 
@@ -117,9 +119,13 @@ Public Class FORMRENTAL_STEP4
                 If RentalTransactionModule.CommitTransaction() Then
                     MessageBox.Show("Rental placed successfully!" & vbCrLf & "Rental ID: " & rentalId, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                    ' Clear transaction data and return to main form
+                    ' Clear transaction data
                     RentalTransactionModule.ClearTransactionData()
-                    Form1.Show()
+
+
+                    Dim transacCompleteForm As New TRANSAC_COMPLETE()
+                    transacCompleteForm.RentalId = rentalId  ' Pass the rental ID
+                    transacCompleteForm.Show()
                     Me.Close()
                 Else
                     MessageBox.Show("Failed to complete the rental transaction.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

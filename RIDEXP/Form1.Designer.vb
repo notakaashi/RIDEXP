@@ -46,6 +46,7 @@ Partial Class Form1
         btnMotor = New Button()
         btnCar = New Button()
         Button5 = New Button()
+        Button6 = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -339,6 +340,15 @@ Partial Class Form1
         Button5.Text = "Button5"
         Button5.UseVisualStyleBackColor = True
         ' 
+        ' Button6
+        ' 
+        Button6.Location = New Point(659, 261)
+        Button6.Name = "Button6"
+        Button6.Size = New Size(75, 23)
+        Button6.TabIndex = 26
+        Button6.Text = "Button6"
+        Button6.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -346,6 +356,7 @@ Partial Class Form1
         BackgroundImage = My.Resources.Resources.RIDEXPRESS
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1104, 505)
+        Controls.Add(Button6)
         Controls.Add(Button5)
         Controls.Add(pnlVehicleType)
         Controls.Add(Button4)
@@ -404,5 +415,6 @@ Partial Class Form1
     Friend WithEvents btnMotor As Button
     Friend WithEvents btnCar As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 
 End Class

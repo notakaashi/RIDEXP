@@ -40,5 +40,8 @@
     <Compile Update="SIGNUP.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TRANSAC_COMPLETE.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

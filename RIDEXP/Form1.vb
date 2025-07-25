@@ -119,4 +119,8 @@
     Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
         FORM_ALLMOTORS.Show()
     End Sub
+
+    Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
+        TRANSAC_COMPLETE.Show()
+    End Sub
 End Class
