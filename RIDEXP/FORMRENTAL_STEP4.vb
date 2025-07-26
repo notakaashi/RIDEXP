@@ -73,23 +73,19 @@ Public Class FORMRENTAL_STEP4
 
     Private Sub checkoutbtn_Click(sender As Object, e As EventArgs) Handles checkoutbtn.Click
         Try
-            ' Validate form data first
             If Not ValidatePaymentForm() Then
                 Return
             End If
 
-            ' Save payment data to transaction
             Dim paymentMethod As String = If(RadioButton1.Checked, "Cash", "Card")
             Dim paymentReference As String = If(RadioButton3.Checked, TextBox1.Text, "CASH-" & DateTime.Now.ToString("yyyyMMddHHmmss"))
 
-            ' Save Form 4 payment data using existing structure
             With RentalTransactionModule.TransactionData
                 .PaymentMethod = paymentMethod
                 .PaymentStatus = "Paid"
                 .PaymentReference = paymentReference
                 .CustomerConfirmed = True
 
-                ' Set customer ID if not already set
                 If .CustomerId <= 0 Then
                     .CustomerId = RentalTransactionModule.GetCustomerIdForCurrentUser()
                     If .CustomerId <= 0 Then
@@ -98,7 +94,6 @@ Public Class FORMRENTAL_STEP4
                     End If
                 End If
 
-                ' Set rental status (1 = Active/Ongoing)
                 .RentalStatusId = 1
             End With
 
@@ -115,16 +110,16 @@ Public Class FORMRENTAL_STEP4
                 InsertPaymentRecord(rentalId)
                 InsertInitialChecklist(rentalId)
                 UpdateVehicleStatus()
+                GenerateRideExpressInvoice(rentalId)
 
                 If RentalTransactionModule.CommitTransaction() Then
                     MessageBox.Show("Rental placed successfully!" & vbCrLf & "Rental ID: " & rentalId, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                    ' Clear transaction data
                     RentalTransactionModule.ClearTransactionData()
 
 
                     Dim transacCompleteForm As New TRANSAC_COMPLETE()
-                    transacCompleteForm.RentalId = rentalId  ' Pass the rental ID
+                    transacCompleteForm.RentalId = rentalId 
                     transacCompleteForm.Show()
                     Me.Close()
                 Else
