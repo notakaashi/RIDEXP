@@ -118,112 +118,118 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="xpander" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xpander.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="car_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\car_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ertiga" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ertiga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RIDEXPRESS (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RIDEXPRESS (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="USER_LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\USER_LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RIDEXPRESS (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RIDEXPRESS (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="income_iconwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\income_iconwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RIDEXPRESS (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RIDEXPRESS (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rush" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rush.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="users_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\users_logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RIDEXPRESS (6)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RIDEXPRESS (6)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="civic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\civic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_red1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RIDEXPRESS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RIDEXPRESS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RideX" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RideX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_red1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fortuner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fortuner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="swift" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\swift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RIDEXPRESS (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RIDEXPRESS (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_call" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_call.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="innova" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\innova.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RIDEXPRESS (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RIDEXPRESS (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="car_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\car_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="corolla" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\corolla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="city" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\city.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RIDEXPRESS (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RIDEXPRESS (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RIDEXPRESS (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RIDEXPRESS (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="income_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\income_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="USER_LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\USER_LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fortuner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fortuner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RIDEXPRESS (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RIDEXPRESS (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgSporty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgSporty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="income_iconwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\income_iconwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgRaider" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgRaider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgPCX" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgPCX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="civic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\civic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="swift" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\swift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\city.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgNMAX" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgNMAX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgGenio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgGenio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="vios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RIDEXPRESS (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RIDEXPRESS (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rush" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rush.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RIDEXPRESS (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RIDEXPRESS (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xpander" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xpander.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgGenio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgGenio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgADV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgADV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="income_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\income_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RideX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RideX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RIDEXPRESS (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RIDEXPRESS (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="users_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\users_logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgSporty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgSporty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imgBeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgBeat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgPCX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgPCX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgBarako" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgBarako.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ertiga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ertiga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RIDEXPRESS (6)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RIDEXPRESS (6)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imgAerox" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgAerox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgADV" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgADV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_email" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

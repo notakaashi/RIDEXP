@@ -1,9 +1,33 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
+Imports Mysqlx.Notice
 Public Class FORM_ADMIN
 
     Dim connStr As String = "server=localhost;user=root;password=;database=ridexp"
     Dim conn As New MySqlConnection(connStr)
+
+    Dim categories() As String = {"Minor", "Major", "Total Loss", "Other"}
+
+    Dim minorPenalties As (Description As String, Penalty As Integer)() = {
+    ("Light surface scratches (door/key marks)", 1500),
+    ("Small dent (no paint damage)", 2500),
+    ("Interior stains", 4000)
+}
+
+    Dim majorPenalties As (Description As String, Penalty As Integer)() = {
+    ("Deep dent with paint removal", 15000),
+    ("Broken windshield or windows", 30000)
+}
+
+    Dim totalLossPenalties As (Description As String, Penalty As Integer)() = {
+    ("Totaled vehicle", 500000),
+    ("Theft with negligence", 650000)
+}
+
+    Dim otherPenalties As (Description As String, Penalty As Integer)() = {
+    ("Unreported accident", 8000),
+    ("Smoking in vehicle", 3000)
+}
 
     Private Sub FORM_ADMIN_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -24,6 +48,8 @@ Public Class FORM_ADMIN
         txtbxMaintenance.PlaceholderText = "Search Maintenance ID"
         txtbxUsers.PlaceholderText = "Search User ID"
         pnlUsersEditUser.Location = New Point(1300, 97)
+        cbPenaltyType.Items.AddRange(categories)
+        pnlAddPenalty.Location = New Point(1300, 97)
 
     End Sub
 
@@ -594,6 +620,8 @@ Public Class FORM_ADMIN
         txtEditAddress.PlaceholderText = "Input Address"
         txtEditLicense.PlaceholderText = "Input License Number"
         txtEditExpiry.PlaceholderText = "Input License Expiry (YYYY-MM-DD)"
+
+
     End Sub
 
 
@@ -725,34 +753,34 @@ Public Class FORM_ADMIN
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnEditUser.Click
-        If txtEditID.Text.Trim() = "" Then
+        If txtEditID.Text.Trim = "" Then
             MessageBox.Show("User ID is required.")
             Exit Sub
         End If
 
-        Dim userId As Integer = Integer.Parse(txtEditID.Text.Trim())
+        Dim userId = Integer.Parse(txtEditID.Text.Trim)
 
-        Dim updates As String = ""
+        Dim updates = ""
         Dim cmdParams As New List(Of MySqlParameter)
 
-        If txtEditFirst.Text.Trim() <> "" Then
+        If txtEditFirst.Text.Trim <> "" Then
             updates &= "first_name = @fname, "
-            cmdParams.Add(New MySqlParameter("@fname", txtEditFirst.Text.Trim()))
+            cmdParams.Add(New MySqlParameter("@fname", txtEditFirst.Text.Trim))
         End If
 
-        If txtEditLast.Text.Trim() <> "" Then
+        If txtEditLast.Text.Trim <> "" Then
             updates &= "last_name = @lname, "
-            cmdParams.Add(New MySqlParameter("@lname", txtEditLast.Text.Trim()))
+            cmdParams.Add(New MySqlParameter("@lname", txtEditLast.Text.Trim))
         End If
 
-        If txtEditEmail.Text.Trim() <> "" Then
+        If txtEditEmail.Text.Trim <> "" Then
             updates &= "email = @email, "
-            cmdParams.Add(New MySqlParameter("@email", txtEditEmail.Text.Trim()))
+            cmdParams.Add(New MySqlParameter("@email", txtEditEmail.Text.Trim))
         End If
 
-        If txtEditBirth.Text.Trim() <> "" Then
+        If txtEditBirth.Text.Trim <> "" Then
             Try
-                Dim birthDate As Date = Date.Parse(txtEditBirth.Text.Trim())
+                Dim birthDate = Date.Parse(txtEditBirth.Text.Trim)
                 updates &= "date_of_birth = @bdate, "
                 cmdParams.Add(New MySqlParameter("@bdate", birthDate))
             Catch ex As Exception
@@ -761,24 +789,24 @@ Public Class FORM_ADMIN
             End Try
         End If
 
-        If txtEditPhone.Text.Trim() <> "" Then
+        If txtEditPhone.Text.Trim <> "" Then
             updates &= "phone = @phone, "
-            cmdParams.Add(New MySqlParameter("@phone", txtEditPhone.Text.Trim()))
+            cmdParams.Add(New MySqlParameter("@phone", txtEditPhone.Text.Trim))
         End If
 
-        If txtEditAddress.Text.Trim() <> "" Then
+        If txtEditAddress.Text.Trim <> "" Then
             updates &= "address = @addr, "
-            cmdParams.Add(New MySqlParameter("@addr", txtEditAddress.Text.Trim()))
+            cmdParams.Add(New MySqlParameter("@addr", txtEditAddress.Text.Trim))
         End If
 
-        If txtEditLicense.Text.Trim() <> "" Then
+        If txtEditLicense.Text.Trim <> "" Then
             updates &= "license_number = @licno, "
-            cmdParams.Add(New MySqlParameter("@licno", txtEditLicense.Text.Trim()))
+            cmdParams.Add(New MySqlParameter("@licno", txtEditLicense.Text.Trim))
         End If
 
-        If txtEditExpiry.Text.Trim() <> "" Then
+        If txtEditExpiry.Text.Trim <> "" Then
             Try
-                Dim expiryDate As Date = Date.Parse(txtEditExpiry.Text.Trim())
+                Dim expiryDate = Date.Parse(txtEditExpiry.Text.Trim)
                 updates &= "license_expiry = @licexp, "
                 cmdParams.Add(New MySqlParameter("@licexp", expiryDate))
             Catch ex As Exception
@@ -796,19 +824,20 @@ Public Class FORM_ADMIN
             Exit Sub
         End If
 
-        Dim query As String = "UPDATE customers SET " & updates & " WHERE customer_id = @id"
+        Dim query = "UPDATE customers SET " & updates & " WHERE customer_id = @id"
 
         Try
             Using conn As New MySqlConnection("server=localhost;user=root;password=;database=ridexp")
                 conn.Open()
+
                 Using cmd As New MySqlCommand(query, conn)
 
-                    For Each p As MySqlParameter In cmdParams
+                    For Each p In cmdParams
                         cmd.Parameters.Add(p)
                     Next
                     cmd.Parameters.AddWithValue("@id", userId)
 
-                    Dim rowsAffected = cmd.ExecuteNonQuery()
+                    Dim rowsAffected = cmd.ExecuteNonQuery
                     If rowsAffected > 0 Then
                         MessageBox.Show("User updated successfully.")
                         pnlUsersEditUser.Location = New Point(1300, 97)
@@ -834,16 +863,16 @@ Public Class FORM_ADMIN
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         If dgvAllUSERS.SelectedRows.Count > 0 Then
-            Dim selectedRow As DataGridViewRow = dgvAllUSERS.SelectedRows(0)
-            Dim userId As Integer = Convert.ToInt32(selectedRow.Cells(0).Value)
+            Dim selectedRow = dgvAllUSERS.SelectedRows(0)
+            Dim userId = Convert.ToInt32(selectedRow.Cells(0).Value)
 
             Dim confirm = MessageBox.Show("Are you sure you want to delete this user?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
             If confirm = DialogResult.Yes Then
-                Dim connStr As String = "server=localhost;user=root;password=;database=ridexp"
+                Dim connStr = "server=localhost;user=root;password=;database=ridexp"
                 Using conn As New MySqlConnection(connStr)
                     conn.Open()
-                    Dim query As String = "DELETE FROM customers WHERE customer_id = @id"
+                    Dim query = "DELETE FROM customers WHERE customer_id = @id"
                     Using cmd As New MySqlCommand(query, conn)
                         cmd.Parameters.AddWithValue("@id", userId)
                         cmd.ExecuteNonQuery()
@@ -856,5 +885,121 @@ Public Class FORM_ADMIN
         Else
             MessageBox.Show("Please select a row to delete.")
         End If
+    End Sub
+
+    Private Sub cbPenaltyType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPenaltyType.SelectedIndexChanged
+        cbPenaltyDescription.Items.Clear()
+        cbPenaltyDescription.SelectedIndex = -1
+
+        If cbPenaltyType.SelectedItem Is Nothing Then Exit Sub
+
+        Select Case cbPenaltyType.SelectedItem.ToString
+            Case "Minor"
+                For Each item In minorPenalties
+                    cbPenaltyDescription.Items.Add(item.Description)
+                Next
+            Case "Major"
+                For Each item In majorPenalties
+                    cbPenaltyDescription.Items.Add(item.Description)
+                Next
+            Case "Total Loss"
+                For Each item In totalLossPenalties
+                    cbPenaltyDescription.Items.Add(item.Description)
+                Next
+            Case "Other"
+                For Each item In otherPenalties
+                    cbPenaltyDescription.Items.Add(item.Description)
+                Next
+        End Select
+    End Sub
+
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPenaltyDescription.SelectedIndexChanged
+        Dim selectedCategory As String = cbPenaltyType.SelectedItem.ToString()
+        Dim index As Integer = cbPenaltyDescription.SelectedIndex
+        Dim penaltyAmount As Integer = 0
+
+        Select Case selectedCategory
+            Case "Minor"
+                penaltyAmount = minorPenalties(index).Penalty
+            Case "Major"
+                penaltyAmount = majorPenalties(index).Penalty
+            Case "Total Loss"
+                penaltyAmount = totalLossPenalties(index).Penalty
+            Case "Other"
+                penaltyAmount = otherPenalties(index).Penalty
+        End Select
+
+        txtPenaltyAmount.Text = "₱ " & penaltyAmount.ToString("N2")
+    End Sub
+
+    Private Sub Label25_Click(sender As Object, e As EventArgs) Handles Label25.Click
+        pnlAddPenalty.Location = New Point(1300, 97)
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        pnlAddPenalty.Location = New Point(122, 92)
+        txtPenaltyRentalID.PlaceholderText = "Input Rental ID"
+        cbPenaltyType.Text = "Penalty Type"
+        cbPenaltyDescription.Text = "Penalty Description"
+        txtPenaltyAmount.Text = "₱ 0.00"
+        txtPenaltyAmount.Enabled = False
+    End Sub
+
+    Private Sub ComboBox2_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+        If ComboBox2.SelectedItem = "PENALTIES" Then
+            Try
+                conn.Open()
+                Dim query As String = "SELECT * FROM penalty"
+                Dim adapter As New MySqlDataAdapter(query, conn)
+                Dim table As New DataTable()
+                adapter.Fill(table)
+                dgvAllUSERS.DataSource = table
+            Catch ex As Exception
+                MessageBox.Show("Error loading data: " & ex.Message)
+            Finally
+                conn.Close()
+            End Try
+        ElseIf ComboBox2.SelectedItem = "USERS" Then
+            LoadTabUsers()
+        End If
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Dim selectedCategory As String = cbPenaltyType.SelectedItem.ToString()
+        Dim index As Integer = cbPenaltyDescription.SelectedIndex
+        Dim penaltyAmount As Integer = 0
+
+        Select Case selectedCategory
+            Case "Minor"
+                penaltyAmount = minorPenalties(index).Penalty
+            Case "Major"
+                penaltyAmount = majorPenalties(index).Penalty
+            Case "Total Loss"
+                penaltyAmount = totalLossPenalties(index).Penalty
+            Case "Other"
+                penaltyAmount = otherPenalties(index).Penalty
+        End Select
+
+        Using conn As New MySqlConnection(connStr)
+            Try
+                conn.Open()
+                Dim query As String = "INSERT INTO penalty (rental_id, description, amount) VALUES (@rental_id, @description, @amount)"
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@rental_id", txtPenaltyRentalID.Text)
+                    cmd.Parameters.AddWithValue("@description", cbPenaltyDescription.SelectedItem)
+                    cmd.Parameters.AddWithValue("@amount", penaltyAmount)
+
+                    Dim result = cmd.ExecuteNonQuery()
+                    If result > 0 Then
+                        MessageBox.Show("Penalty inserted successfully!")
+                    Else
+                        MessageBox.Show("Failed to insert penalty.")
+                    End If
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+        End Using
+
     End Sub
 End Class

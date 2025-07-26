@@ -19,4 +19,7 @@ Public Class TRANSAC_COMPLETE
         MessageBox.Show("Invoice generated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        Me.Close()
+    End Sub
 End Class
