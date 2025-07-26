@@ -152,20 +152,16 @@ Public Class allcars
     Private Sub LoadCarImage(imageName As String, pictureBox As PictureBox)
         Try
             If Not String.IsNullOrEmpty(imageName) Then
-                ' Get filename without extension from the database filepath
                 Dim imageNameWithoutExt As String = IO.Path.GetFileNameWithoutExtension(imageName)
-                ' Load image from resources using the filename
                 Dim resImage = My.Resources.ResourceManager.GetObject(imageNameWithoutExt)
 
                 If resImage IsNot Nothing Then
                     pictureBox.Image = CType(resImage, Image)
                 Else
-                    ' Set a default image or leave empty if resource not found
                     pictureBox.Image = Nothing
                 End If
             End If
         Catch ex As Exception
-            ' Image loading failed, set to nothing or default image
             pictureBox.Image = Nothing
         End Try
     End Sub
@@ -284,12 +280,7 @@ Public Class allcars
     End Sub
 
     Private Sub car7btn_Click(sender As Object, e As EventArgs)
-        If Not StartTransaction() Then
-            MessageBox.Show("Failed to start transaction. Please try again.")
-            Close()
-            Return
-        End If
-        SelectCar(7, "Suzuki Swift", 1000, "Car", 7)
+
     End Sub
 
     Private Sub car2btn_Click(sender As Object, e As EventArgs) Handles car2btn.Click
@@ -299,15 +290,6 @@ Public Class allcars
             Return
         End If
         SelectCar(2, "Mitsubishi Xpander", 900, "Car", 2)
-    End Sub
-
-    Private Sub car3btn_Click(sender As Object, e As EventArgs)
-        If Not StartTransaction() Then
-            MessageBox.Show("Failed to start transaction. Please try again.")
-            Close()
-            Return
-        End If
-        SelectCar(3, "Toyota Innova", 750, "Car", 3)
     End Sub
 
     Private Sub car4btn_Click(sender As Object, e As EventArgs) Handles car4btn.Click
@@ -338,7 +320,6 @@ Public Class allcars
     End Sub
 
 
-
     Private Sub btnCar6_Click(sender As Object, e As EventArgs) Handles btnCar6.Click
         If Not StartTransaction() Then
             MessageBox.Show("Failed to start transaction. Please try again.")
@@ -364,5 +345,23 @@ Public Class allcars
             Return
         End If
         SelectCar(5, "Honda City", 700, "Car", 5)
+    End Sub
+
+    Private Sub car7btn_Click_1(sender As Object, e As EventArgs) Handles car7btn.Click
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectCar(7, "Suzuki Swift", 1000, "Car", 7)
+    End Sub
+
+    Private Sub car3btn_Click_1(sender As Object, e As EventArgs) Handles car3btn.Click
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+        SelectCar(3, "Toyota Innova", 750, "Car", 3)
     End Sub
 End Class

@@ -22,7 +22,6 @@
     End Sub
 
 
-
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Panel2.Visible = Not Panel2.Visible
     End Sub

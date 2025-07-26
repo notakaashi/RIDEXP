@@ -64,7 +64,6 @@ Public Class SIGNUP
 
                 Using transaction As MySqlTransaction = connection.BeginTransaction()
                     Try
-                        ' 1. INSERT USER FIRST so we can get the generated user_id
                         Dim userQuery As String = "INSERT INTO user (username, password_hash, role_id) VALUES (@username, SHA2(@password_hash, 256), @role_id); SELECT LAST_INSERT_ID();"
                         Dim userId As Integer
 
@@ -73,14 +72,11 @@ Public Class SIGNUP
                             userCmd.Parameters.AddWithValue("@password_hash", passwordtxt.Text)
                             userCmd.Parameters.AddWithValue("@role_id", 2)
 
-                            ' 2. GET the auto-incremented user_id
                             userId = Convert.ToInt32(userCmd.ExecuteScalar())
 
-                            ' 3. Store to global module variable if needed
-                            Module1.userId = userId ' <--- You said this exists already
+                            Module1.userId = userId
                         End Using
 
-                        ' 4. INSERT CUSTOMER using retrieved user_id
                         Dim customerQuery As String = "INSERT INTO customers (first_name, last_name, date_of_birth, email, phone, address, license_number, license_expiry, created_at, user_id) VALUES (@first_name, @last_name, @date_of_birth, @email, @phone, @address, @license_number, @license_expiry, CURDATE(), @user_id)"
 
                         Using customerCmd As New MySqlCommand(customerQuery, connection, transaction)

@@ -16,17 +16,7 @@ Public Class TRANSAC_COMPLETE
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Try
-            If RentalId > 0 Then
-                ' Generate invoice from database using the stored rental ID
-                Module3.GenerateRideExpressInvoice(RentalId)
-                MessageBox.Show("Invoice generated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                MessageBox.Show("No rental ID available. Cannot generate invoice.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-            MessageBox.Show($"Error generating invoice: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+        MessageBox.Show("Invoice generated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
 End Class

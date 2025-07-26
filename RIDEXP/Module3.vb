@@ -100,9 +100,6 @@ Public Module Module3
                 customerTable.AddCell(New Phrase("Address:", labelFont))
                 customerTable.AddCell(New Phrase(If(customerInfo.Address, "N/A"), infoFont))
 
-                customerTable.AddCell(New Phrase("Customer ID:", labelFont))
-                customerTable.AddCell(New Phrase(data.CustomerId.ToString(), infoFont))
-
                 customerTable.AddCell(New Phrase("Rental ID:", labelFont))
                 customerTable.AddCell(New Phrase(rentalId.ToString(), infoFont))
 
@@ -116,7 +113,7 @@ Public Module Module3
                 detailTable.SetWidths({3, 1, 1, 1})
                 detailTable.SpacingAfter = 10
 
-                ' Table headers
+
                 Dim headerCell1 As New PdfPCell(New Phrase("Description", labelFont)) With {
                     .BackgroundColor = BaseColor.LIGHT_GRAY,
                     .HorizontalAlignment = Element.ALIGN_CENTER,
@@ -145,13 +142,11 @@ Public Module Module3
                 }
                 detailTable.AddCell(headerCell4)
 
-                ' Table data - Enhanced description with actual make and model from database
                 Dim vehicleDescription As String = ""
                 If Not String.IsNullOrEmpty(vehicleInfo.Make) AndAlso vehicleInfo.Make <> "Unknown" AndAlso
                    Not String.IsNullOrEmpty(vehicleInfo.Model) AndAlso vehicleInfo.Model <> "Unknown" Then
                     vehicleDescription = $"{vehicleInfo.Make} {vehicleInfo.Model} ({vehicleInfo.VehicleType})"
                 Else
-                    ' Fallback to transaction data if database query failed
                     Dim fallbackName As String = If(data.VehicleType.ToLower() = "car", data.SelectedCarName, data.SelectedMotorName)
                     vehicleDescription = $"{fallbackName} ({data.VehicleType})"
                 End If
@@ -186,7 +181,6 @@ Public Module Module3
 
                 doc.Add(detailTable)
 
-                ' ======= Summary Section =======
                 Dim summaryTable As New PdfPTable(2)
                 summaryTable.WidthPercentage = 100
                 summaryTable.SetWidths({3, 1})
@@ -202,9 +196,7 @@ Public Module Module3
 
                 Dim vatAmount As Decimal = subtotal * 0.12D
                 Dim serviceAmount As Decimal = 100D
-                ' Calculate correct total: subtotal + VAT + service fee
                 Dim calculatedTotal As Decimal = subtotal + vatAmount + serviceAmount
-                ' Use calculated total instead of data.TotalAmount to ensure accuracy
                 Dim totalAmount As Decimal = calculatedTotal
 
                 totalsTable.AddCell(New Phrase("Subtotal:", labelFont))
@@ -240,7 +232,6 @@ Public Module Module3
                 summaryTable.AddCell(New PdfPCell(totalsTable) With {.Border = Rectangle.NO_BORDER})
                 doc.Add(summaryTable)
 
-                ' ======= Payment Info =======
                 doc.Add(New Paragraph("PAYMENT INFORMATION", headerFont))
                 doc.Add(New Paragraph(" "))
 
@@ -264,7 +255,6 @@ Public Module Module3
 
                 doc.Add(paymentTable)
 
-                ' Footer
                 doc.Add(New Chunk(line))
                 doc.Add(New Paragraph(" "))
 
@@ -281,10 +271,7 @@ Public Module Module3
                 writer.Close()
             End Using
 
-            ' Clear Transaction Data after PDF is created
             RentalTransactionModule.ClearTransactionData()
-
-            MessageBox.Show($"RideExpress Invoice Created: {Path.GetFullPath(invoicePath)}")
 
         Catch ex As Exception
             MessageBox.Show("Error creating PDF: " & ex.Message)
@@ -318,7 +305,6 @@ Public Module Module3
                 End Using
             End Using
         Catch ex As Exception
-            ' If database query fails, return empty object
             MessageBox.Show("Could not retrieve customer information: " & ex.Message)
         End Try
 
@@ -330,7 +316,6 @@ Public Module Module3
         }
     End Function
 
-    ' Get vehicle details (make and model) from database
     Private Function GetVehicleInfo(vehicleId As Integer) As Object
         Try
             Using conn As New MySqlConnection("server=localhost;userid=root;password=;database=ridexp;Convert Zero Datetime=True;Allow Zero Datetime=True;")

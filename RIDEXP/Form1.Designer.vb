@@ -189,9 +189,9 @@ Partial Class Form1
         Panel2.Controls.Add(Button2)
         Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(user)
-        Panel2.Location = New Point(957, 56)
+        Panel2.Location = New Point(855, 65)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(160, 68)
+        Panel2.Size = New Size(252, 140)
         Panel2.TabIndex = 19
         Panel2.Visible = False
         ' 
@@ -201,7 +201,7 @@ Partial Class Form1
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Reesha", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(29, 41)
+        Button2.Location = New Point(73, 73)
         Button2.Margin = New Padding(3, 2, 3, 2)
         Button2.Name = "Button2"
         Button2.Size = New Size(107, 23)
@@ -215,7 +215,7 @@ Partial Class Form1
         Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Reesha", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label6.Location = New Point(19, 9)
+        Label6.Location = New Point(26, 21)
         Label6.Name = "Label6"
         Label6.Size = New Size(127, 18)
         Label6.TabIndex = 16
@@ -227,7 +227,7 @@ Partial Class Form1
         user.BackColor = Color.Transparent
         user.Font = New Font("Reesha", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         user.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        user.Location = New Point(43, 23)
+        user.Location = New Point(73, 39)
         user.Name = "user"
         user.Size = New Size(80, 18)
         user.TabIndex = 17
@@ -361,7 +361,6 @@ Partial Class Form1
         Controls.Add(pnlVehicleType)
         Controls.Add(Button4)
         Controls.Add(Button3)
-        Controls.Add(PictureBox3)
         Controls.Add(contactslbl)
         Controls.Add(rentalslbl)
         Controls.Add(homelbl)
@@ -375,6 +374,7 @@ Partial Class Form1
         Controls.Add(Button1)
         Controls.Add(PictureBox1)
         Controls.Add(PictureBox2)
+        Controls.Add(PictureBox3)
         DoubleBuffered = True
         Margin = New Padding(3, 2, 3, 2)
         Name = "Form1"

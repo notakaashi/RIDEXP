@@ -330,7 +330,7 @@ Partial Class allcars
         mileage7txt = New Label()
         seatingcapacity7txt = New Label()
         make7txt = New Label()
-        car7txt = New Button()
+        car7btn = New Button()
         Label183 = New Label()
         Label184 = New Label()
         Label185 = New Label()
@@ -628,7 +628,7 @@ Partial Class allcars
         pnlAllCarsContent.Controls.Add(Panel3)
         pnlAllCarsContent.Controls.Add(Panel2)
         pnlAllCarsContent.Controls.Add(Panel4)
-        pnlAllCarsContent.Location = New Point(1101, 59)
+        pnlAllCarsContent.Location = New Point(1107, 101)
         pnlAllCarsContent.Margin = New Padding(3, 2, 3, 2)
         pnlAllCarsContent.Name = "pnlAllCarsContent"
         pnlAllCarsContent.Size = New Size(1017, 263)
@@ -1938,7 +1938,7 @@ Partial Class allcars
         Panel6.Location = New Point(0, 0)
         Panel6.Margin = New Padding(3, 2, 3, 2)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(1067, 28)
+        Panel6.Size = New Size(1077, 28)
         Panel6.TabIndex = 41
         ' 
         ' Label37
@@ -1998,7 +1998,7 @@ Partial Class allcars
         pnlSuvContent.BackColor = SystemColors.Control
         pnlSuvContent.Controls.Add(Panel22)
         pnlSuvContent.Controls.Add(Panel25)
-        pnlSuvContent.Location = New Point(1090, 82)
+        pnlSuvContent.Location = New Point(1101, 349)
         pnlSuvContent.Margin = New Padding(3, 2, 3, 2)
         pnlSuvContent.Name = "pnlSuvContent"
         pnlSuvContent.Size = New Size(1017, 263)
@@ -3185,7 +3185,7 @@ Partial Class allcars
         pnlMpv.Controls.Add(Panel1)
         pnlMpv.Controls.Add(Panel16)
         pnlMpv.Controls.Add(Panel27)
-        pnlMpv.Location = New Point(1123, 59)
+        pnlMpv.Location = New Point(1146, 64)
         pnlMpv.Margin = New Padding(3, 2, 3, 2)
         pnlMpv.Name = "pnlMpv"
         pnlMpv.Size = New Size(1017, 263)
@@ -3778,7 +3778,7 @@ Partial Class allcars
         pnlHybrid.AutoScroll = True
         pnlHybrid.BackColor = SystemColors.Control
         pnlHybrid.Controls.Add(Panel23)
-        pnlHybrid.Location = New Point(1078, 330)
+        pnlHybrid.Location = New Point(1101, 361)
         pnlHybrid.Margin = New Padding(3, 2, 3, 2)
         pnlHybrid.Name = "pnlHybrid"
         pnlHybrid.Size = New Size(994, 238)
@@ -3983,7 +3983,7 @@ Partial Class allcars
         pnlHatchback.AutoScroll = True
         pnlHatchback.BackColor = SystemColors.Control
         pnlHatchback.Controls.Add(Panel24)
-        pnlHatchback.Location = New Point(1071, 346)
+        pnlHatchback.Location = New Point(1104, 337)
         pnlHatchback.Margin = New Padding(3, 2, 3, 2)
         pnlHatchback.Name = "pnlHatchback"
         pnlHatchback.Size = New Size(1017, 263)
@@ -4001,7 +4001,7 @@ Partial Class allcars
         Panel24.Controls.Add(mileage7txt)
         Panel24.Controls.Add(seatingcapacity7txt)
         Panel24.Controls.Add(make7txt)
-        Panel24.Controls.Add(car7txt)
+        Panel24.Controls.Add(car7btn)
         Panel24.Controls.Add(Label183)
         Panel24.Controls.Add(Label184)
         Panel24.Controls.Add(Label185)
@@ -4103,19 +4103,19 @@ Partial Class allcars
         make7txt.TabIndex = 17
         make7txt.Text = "MAKE"
         ' 
-        ' car7txt
+        ' car7btn
         ' 
-        car7txt.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        car7txt.FlatStyle = FlatStyle.Flat
-        car7txt.Font = New Font("Reesha", 16.1999989F)
-        car7txt.ForeColor = Color.White
-        car7txt.Location = New Point(708, 129)
-        car7txt.Margin = New Padding(3, 2, 3, 2)
-        car7txt.Name = "car7txt"
-        car7txt.Size = New Size(233, 43)
-        car7txt.TabIndex = 16
-        car7txt.Text = "BOOK NOW"
-        car7txt.UseVisualStyleBackColor = False
+        car7btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        car7btn.FlatStyle = FlatStyle.Flat
+        car7btn.Font = New Font("Reesha", 16.1999989F)
+        car7btn.ForeColor = Color.White
+        car7btn.Location = New Point(708, 129)
+        car7btn.Margin = New Padding(3, 2, 3, 2)
+        car7btn.Name = "car7btn"
+        car7btn.Size = New Size(233, 43)
+        car7btn.TabIndex = 16
+        car7btn.Text = "BOOK NOW"
+        car7btn.UseVisualStyleBackColor = False
         ' 
         ' Label183
         ' 
@@ -4188,7 +4188,9 @@ Partial Class allcars
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
-        ClientSize = New Size(1067, 428)
+        ClientSize = New Size(1077, 428)
+        Controls.Add(pnlMpv)
+        Controls.Add(pnlSuvContent)
         Controls.Add(pnlHatchback)
         Controls.Add(pnlSedan)
         Controls.Add(pnlHybrid)
@@ -4197,8 +4199,6 @@ Partial Class allcars
         Controls.Add(pnlAllCarsContent)
         Controls.Add(TextBox1)
         Controls.Add(PictureBox3)
-        Controls.Add(pnlSuvContent)
-        Controls.Add(pnlMpv)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(3, 2, 3, 2)
         Name = "allcars"
@@ -4559,7 +4559,7 @@ Partial Class allcars
     Friend WithEvents mileage7txt As Label
     Friend WithEvents seatingcapacity7txt As Label
     Friend WithEvents make7txt As Label
-    Friend WithEvents car7txt As Button
+    Friend WithEvents car7btn As Button
     Friend WithEvents Label183 As Label
     Friend WithEvents Label184 As Label
     Friend WithEvents Label185 As Label
