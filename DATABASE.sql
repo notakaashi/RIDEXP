@@ -165,8 +165,8 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`rentals` (
   `vehicle_id` INT(11) NOT NULL,
   `amount` DECIMAL(10,2) NULL DEFAULT NULL,
   `rental_status_id` INT(11) NOT NULL,
-  `pickup_place` VARCHAR(255) NOT NULL DEFAULT 'Main Station - 123 Central Ave, Downtown',
-  `return_place` VARCHAR(255) NOT NULL DEFAULT 'Main Station - 123 Central Ave, Downtown',
+  `pickup_place` VARCHAR(255) NOT NULL DEFAULT 'RDXP Ave, Taguig City',
+  `return_place` VARCHAR(255) NOT NULL DEFAULT 'RDXP Ave, Taguig City',
   PRIMARY KEY (`rental_id`),
   INDEX (`customer_id`),
   INDEX (`vehicle_id`),
@@ -387,7 +387,6 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ridexp`.`rental_rate` (
   `rate_id` INT(11) NOT NULL AUTO_INCREMENT,
   `vehicle_id` INT(11) NOT NULL,
-  `rate_per_hour` DECIMAL(10,2) NOT NULL,
   `rate_per_day` DECIMAL(10,2) NULL DEFAULT NULL,
   `effective_date` DATE NOT NULL,
   PRIMARY KEY (`rate_id`),
