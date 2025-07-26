@@ -1,5 +1,9 @@
 ﻿Public Class FORMRENTAL_STEP2
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+
         If transaction Is Nothing Then
             If Not StartTransaction() Then
                 MessageBox.Show("Failed to start transaction. Please try again.")
@@ -40,8 +44,6 @@
         returntxtbox.Text = "RDXP Ave, Taguig City"
         returntxtbox.BackColor = Color.LightGray
 
-        pickupdatetxt.PlaceholderText = "YYYY-MM-DD"
-        returndatetxt.PlaceholderText = "YYYY-MM-DD"
         LoadExistingData()
 
     End Sub
@@ -51,7 +53,7 @@
     Private Sub pickupbtn_CheckedChanged(sender As Object, e As EventArgs) Handles pickupbtn.CheckedChanged
         If pickupbtn.Checked Then
             pickuptxtbox.Enabled = False
-            pickuptxtbox.Text = "Main Station - 123 Central Ave, Downtown"
+            pickuptxtbox.Text = "RDXP Ave, Taguig City"
             pickuptxtbox.BackColor = Color.LightGray
         End If
     End Sub
@@ -68,7 +70,7 @@
     Private Sub returnbtn_CheckedChanged(sender As Object, e As EventArgs) Handles returnbtn.CheckedChanged
         If returnbtn.Checked Then
             returntxtbox.Enabled = False
-            returntxtbox.Text = "Main Station - 123 Central Ave, Downtown"
+            returntxtbox.Text = "RDXP Ave, Taguig City"
             returntxtbox.BackColor = Color.LightGray
         End If
     End Sub
@@ -99,10 +101,13 @@
     End Function
 
     Private Sub SaveFormDataToModule()
+        Dim pickup As String = pickupdate.Value.ToString("yyyy-MM-dd")
+        Dim returnDate As String = returndated.Value.ToString("yyyy-MM-dd")
+
         RentalTransactionModule.SaveForm2Data(
-            pickupdatetxt.Text.Trim(),
+            pickup,
             cbxPickup.SelectedItem.ToString(),
-            returndatetxt.Text.Trim(),
+            returnDate,
             cbxReturn.SelectedItem.ToString(),
             pickuptxtbox.Text.Trim(),
             returntxtbox.Text.Trim(),
@@ -114,11 +119,12 @@
 
     Private Sub LoadExistingData()
         With RentalTransactionModule.TransactionData
-            If .PickupDate <> Nothing Then
-                pickupdatetxt.Text = .PickupDate.ToString("yyyy-MM-dd")
+            If .PickupDate <> Date.MinValue Then
+                pickupdate.Text = .PickupDate.ToString("yyyy-MM-dd")
             End If
-            If .ReturnDate <> Nothing Then
-                returndatetxt.Text = .ReturnDate.ToString("yyyy-MM-dd")
+
+            If .ReturnDate <> Date.MinValue Then
+                returndated.Text = .ReturnDate.ToString("yyyy-MM-dd")
             End If
             If Not String.IsNullOrEmpty(.PickupTime) Then
                 cbxPickup.SelectedItem = .PickupTime

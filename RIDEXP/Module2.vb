@@ -145,22 +145,35 @@ Public Module RentalTransactionModule
         End With
     End Sub
 
-    ' Save Form 2 data (Date, Time, Location) - Updated to handle string dates
     Public Sub SaveForm2Data(pickupDate As String, pickupTime As String, returnDate As String, returnTime As String,
-                           pickupPlace As String, returnPlace As String, isPickupAtStation As Boolean, isReturnAtStation As Boolean)
+                         pickupPlace As String, returnPlace As String, isPickupAtStation As Boolean, isReturnAtStation As Boolean)
+
+        Dim parsedPickupDate As Date
+        Dim parsedReturnDate As Date
+
+        If Not Date.TryParseExact(pickupDate, "yyyy-MM-dd", Globalization.CultureInfo.InvariantCulture,
+                               Globalization.DateTimeStyles.None, parsedPickupDate) Then
+            Throw New Exception("Invalid Pickup Date format.")
+        End If
+
+        If Not Date.TryParseExact(returnDate, "yyyy-MM-dd", Globalization.CultureInfo.InvariantCulture,
+                               Globalization.DateTimeStyles.None, parsedReturnDate) Then
+            Throw New Exception("Invalid Return Date format.")
+        End If
+
         With TransactionData
-            .PickupDate = Date.Parse(pickupDate)
+            .PickupDate = parsedPickupDate
             .PickupTime = pickupTime
-            .ReturnDate = Date.Parse(returnDate)
+            .ReturnDate = parsedReturnDate
             .ReturnTime = returnTime
             .PickupPlace = pickupPlace
             .ReturnPlace = returnPlace
             .IsPickupAtStation = isPickupAtStation
             .IsReturnAtStation = isReturnAtStation
 
-            ' Calculate duration for display only (trigger will handle actual DB value)
-            .RentalDurationDays = CInt((Date.Parse(returnDate).Date - Date.Parse(pickupDate).Date).TotalDays)
+            .RentalDurationDays = CInt((.ReturnDate.Date - .PickupDate.Date).TotalDays)
             If .RentalDurationDays < 1 Then .RentalDurationDays = 1
+
             .TotalAmount = .DailyRate * .RentalDurationDays
         End With
     End Sub
