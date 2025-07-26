@@ -1,4 +1,7 @@
-﻿Public Class FORMRENTAL_STEP2
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports MySql.Data.MySqlClient
+
+Public Class FORMRENTAL_STEP2
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -13,6 +16,18 @@
         End If
 
         If ValidateForm() Then
+            Dim vehicleId As Integer = RentalTransactionModule.TransactionData.SelectedVehicleId
+
+            If Not IsVehicleAvailable(vehicleId, pickupdate.Value, returndated.Value) Then
+                Dim unavailableUntil = GetVehicleUnavailableUntil(vehicleId, pickupdate.Value, returndated.Value)
+                If unavailableUntil.HasValue Then
+                    MessageBox.Show("This vehicle is not available. It will be free after " & unavailableUntil.Value.ToString("yyyy-MM-dd"), "Unavailable", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Else
+                    MessageBox.Show("This vehicle is currently unavailable or under maintenance.", "Unavailable", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
+                Return
+            End If
+
             SaveFormDataToModule()
             FORMRENTAL_STEP3.Show()
             Close()
@@ -104,17 +119,27 @@
         Dim pickup As String = pickupdate.Value.ToString("yyyy-MM-dd")
         Dim returnDate As String = returndated.Value.ToString("yyyy-MM-dd")
 
+        Dim pickupTimeStr As String = cbxPickup.SelectedItem.ToString()
+        Dim returnTimeStr As String = cbxReturn.SelectedItem.ToString()
+
+        If String.IsNullOrWhiteSpace(pickupTimeStr) OrElse String.IsNullOrWhiteSpace(returnTimeStr) Then
+            MessageBox.Show("Please select valid pickup and return times.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
         RentalTransactionModule.SaveForm2Data(
-            pickup,
-            cbxPickup.SelectedItem.ToString(),
-            returnDate,
-            cbxReturn.SelectedItem.ToString(),
-            pickuptxtbox.Text.Trim(),
-            returntxtbox.Text.Trim(),
-            pickupbtn.Checked,
-            returnbtn.Checked
-        )
+        pickup,
+        pickupTimeStr,
+        returnDate,
+        returnTimeStr,
+        pickuptxtbox.Text.Trim(),
+        returntxtbox.Text.Trim(),
+        pickupbtn.Checked,
+        returnbtn.Checked
+    )
     End Sub
+
+
 
 
     Private Sub LoadExistingData()
@@ -170,5 +195,42 @@
         End If
     End Sub
 
+    Private Function IsVehicleAvailable(vehicleId As Integer, pickup As Date, returnDate As Date) As Boolean
+        Dim rentalQuery As String = "
+        SELECT COUNT(*) FROM rentals 
+        WHERE vehicle_id = @vehicle_id 
+          AND rental_status_id = 1
+          AND pickup_date <= @return_date
+          AND (return_date IS NULL OR return_date >= @pickup_date)
+    "
+        Using cmd As New MySqlCommand(rentalQuery, RentalTransactionModule.conn, RentalTransactionModule.transaction)
+            cmd.Parameters.AddWithValue("@vehicle_id", vehicleId)
+            cmd.Parameters.AddWithValue("@pickup_date", pickup.ToString("yyyy-MM-dd"))
+            cmd.Parameters.AddWithValue("@return_date", returnDate.ToString("yyyy-MM-dd"))
+            Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+            Return count = 0
+        End Using
+    End Function
+
+
+    Private Function GetVehicleUnavailableUntil(vehicleId As Integer, pickup As Date, returnDate As Date) As Date?
+        Dim query As String = "
+        SELECT MAX(return_date) FROM rentals 
+        WHERE vehicle_id = @vehicle_id 
+          AND rental_status_id = 1
+          AND pickup_date <= @return_date
+          AND (return_date IS NULL OR return_date >= @pickup_date)
+    "
+        Using cmd As New MySqlCommand(query, RentalTransactionModule.conn, RentalTransactionModule.transaction)
+            cmd.Parameters.AddWithValue("@vehicle_id", vehicleId)
+            cmd.Parameters.AddWithValue("@pickup_date", pickup.ToString("yyyy-MM-dd"))
+            cmd.Parameters.AddWithValue("@return_date", returnDate.ToString("yyyy-MM-dd"))
+            Dim result = cmd.ExecuteScalar()
+            If result Is DBNull.Value OrElse result Is Nothing Then
+                Return Nothing
+            End If
+            Return Convert.ToDateTime(result)
+        End Using
+    End Function
 
 End Class

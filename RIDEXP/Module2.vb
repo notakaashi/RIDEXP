@@ -23,7 +23,9 @@ Public Module RentalTransactionModule
         Public PickupTime As String
         Public ReturnDate As Date
         Public ReturnTime As String
-        Public RentalDurationDays As Integer ' For display only
+
+
+        Public RentalDurationDays As Decimal
         Public PickupPlace As String
         Public ReturnPlace As String
         Public IsPickupAtStation As Boolean
@@ -147,19 +149,32 @@ Public Module RentalTransactionModule
 
     Public Sub SaveForm2Data(pickupDate As String, pickupTime As String, returnDate As String, returnTime As String,
                          pickupPlace As String, returnPlace As String, isPickupAtStation As Boolean, isReturnAtStation As Boolean)
-
         Dim parsedPickupDate As Date
         Dim parsedReturnDate As Date
 
+        ' Validate date formats
         If Not Date.TryParseExact(pickupDate, "yyyy-MM-dd", Globalization.CultureInfo.InvariantCulture,
                                Globalization.DateTimeStyles.None, parsedPickupDate) Then
             Throw New Exception("Invalid Pickup Date format.")
         End If
-
         If Not Date.TryParseExact(returnDate, "yyyy-MM-dd", Globalization.CultureInfo.InvariantCulture,
                                Globalization.DateTimeStyles.None, parsedReturnDate) Then
             Throw New Exception("Invalid Return Date format.")
         End If
+
+        Dim pickupTimeParsed As DateTime = DateTime.ParseExact(pickupTime, "h:mm tt", Globalization.CultureInfo.InvariantCulture)
+        Dim returnTimeParsed As DateTime = DateTime.ParseExact(returnTime, "h:mm tt", Globalization.CultureInfo.InvariantCulture)
+
+        Dim pickupDateTime As DateTime = parsedPickupDate.Add(pickupTimeParsed.TimeOfDay)
+        Dim returnDateTime As DateTime = parsedReturnDate.Add(returnTimeParsed.TimeOfDay)
+
+
+
+        Dim rentalDays As Decimal = CDec((returnDateTime - pickupDateTime).TotalHours / 24D)
+        If rentalDays < 1D Then rentalDays = 1D
+
+        MessageBox.Show($"Final Rental Days: {rentalDays}")
+        MessageBox.Show($"About to save - Rental Days: {rentalDays}")
 
         With TransactionData
             .PickupDate = parsedPickupDate
@@ -170,15 +185,15 @@ Public Module RentalTransactionModule
             .ReturnPlace = returnPlace
             .IsPickupAtStation = isPickupAtStation
             .IsReturnAtStation = isReturnAtStation
-
-            .RentalDurationDays = CInt((.ReturnDate.Date - .PickupDate.Date).TotalDays)
-            If .RentalDurationDays < 1 Then .RentalDurationDays = 1
-
+            .RentalDurationDays = rentalDays
             .TotalAmount = .DailyRate * .RentalDurationDays
         End With
+
     End Sub
 
-    ' Insert rental data - Updated to match your database structure
+
+
+
     Public Function InsertRentalData() As Integer
         Try
             Dim cmd As New MySqlCommand("
@@ -193,7 +208,7 @@ Public Module RentalTransactionModule
                 )", conn, transaction)
 
             With cmd.Parameters
-                ' Format dates for MySQL (YYYY-MM-DD)
+
                 .AddWithValue("@pickup_date", TransactionData.PickupDate.ToString("yyyy-MM-dd"))
                 .AddWithValue("@pickup_time", TransactionData.PickupTime)
                 .AddWithValue("@return_date", TransactionData.ReturnDate.ToString("yyyy-MM-dd"))

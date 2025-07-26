@@ -25,6 +25,7 @@ Partial Class FORMRENTAL_STEP2
         DateTimePicker1 = New DateTimePicker()
         Panel2 = New Panel()
         cbxPickup = New ComboBox()
+        pickupdate = New DateTimePicker()
         Panel5 = New Panel()
         deliverbtn = New RadioButton()
         pickupbtn = New RadioButton()
@@ -47,6 +48,7 @@ Partial Class FORMRENTAL_STEP2
         Label2 = New Label()
         Label7 = New Label()
         Panel4 = New Panel()
+        returndated = New DateTimePicker()
         cbxReturn = New ComboBox()
         Panel6 = New Panel()
         collectbtn = New RadioButton()
@@ -56,8 +58,6 @@ Partial Class FORMRENTAL_STEP2
         Label14 = New Label()
         Button1 = New Button()
         Button2 = New Button()
-        pickupdate = New DateTimePicker()
-        returndated = New DateTimePicker()
         Panel2.SuspendLayout()
         Panel5.SuspendLayout()
         Panel1.SuspendLayout()
@@ -95,12 +95,21 @@ Partial Class FORMRENTAL_STEP2
         ' 
         cbxPickup.Font = New Font("Futura Bk BT", 12F)
         cbxPickup.FormattingEnabled = True
-        cbxPickup.Items.AddRange(New Object() {"8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 AM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"})
+        cbxPickup.Items.AddRange(New Object() {"8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"})
         cbxPickup.Location = New Point(767, 36)
         cbxPickup.Margin = New Padding(3, 2, 3, 2)
         cbxPickup.Name = "cbxPickup"
         cbxPickup.Size = New Size(168, 27)
         cbxPickup.TabIndex = 24
+        ' 
+        ' pickupdate
+        ' 
+        pickupdate.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        pickupdate.Location = New Point(471, 37)
+        pickupdate.MinDate = New Date(2025, 7, 26, 0, 0, 0, 0)
+        pickupdate.Name = "pickupdate"
+        pickupdate.Size = New Size(248, 29)
+        pickupdate.TabIndex = 25
         ' 
         ' Panel5
         ' 
@@ -377,11 +386,20 @@ Partial Class FORMRENTAL_STEP2
         Panel4.Size = New Size(965, 80)
         Panel4.TabIndex = 22
         ' 
+        ' returndated
+        ' 
+        returndated.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        returndated.Location = New Point(471, 37)
+        returndated.MinDate = New Date(2025, 7, 26, 0, 0, 0, 0)
+        returndated.Name = "returndated"
+        returndated.Size = New Size(248, 29)
+        returndated.TabIndex = 26
+        ' 
         ' cbxReturn
         ' 
         cbxReturn.Font = New Font("Futura Bk BT", 12F)
         cbxReturn.FormattingEnabled = True
-        cbxReturn.Items.AddRange(New Object() {"8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 AM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"})
+        cbxReturn.Items.AddRange(New Object() {"8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"})
         cbxReturn.Location = New Point(767, 35)
         cbxReturn.Margin = New Padding(3, 2, 3, 2)
         cbxReturn.Name = "cbxReturn"
@@ -487,24 +505,6 @@ Partial Class FORMRENTAL_STEP2
         Button2.TabIndex = 24
         Button2.Text = "CHANGE CAR"
         Button2.UseVisualStyleBackColor = False
-        ' 
-        ' pickupdate
-        ' 
-        pickupdate.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        pickupdate.Location = New Point(471, 37)
-        pickupdate.MinDate = New Date(2025, 7, 26, 0, 0, 0, 0)
-        pickupdate.Name = "pickupdate"
-        pickupdate.Size = New Size(248, 29)
-        pickupdate.TabIndex = 25
-        ' 
-        ' returndated
-        ' 
-        returndated.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
-        returndated.Location = New Point(471, 37)
-        returndated.MinDate = New Date(2025, 7, 26, 0, 0, 0, 0)
-        returndated.Name = "returndated"
-        returndated.Size = New Size(248, 29)
-        returndated.TabIndex = 26
         ' 
         ' FORMRENTAL_STEP2
         ' 

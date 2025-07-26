@@ -22,18 +22,28 @@ Public Class FORMRENTAL_STEP4
     End Sub
 
     Private Sub FORMRENTAL_STEP4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Display vehicle name - check both car and motor names
-        If Not String.IsNullOrEmpty(RentalTransactionModule.TransactionData.SelectedCarName) Then
-            vehicletxt.Text = RentalTransactionModule.TransactionData.SelectedCarName
-        ElseIf Not String.IsNullOrEmpty(RentalTransactionModule.TransactionData.SelectedMotorName) Then
-            vehicletxt.Text = RentalTransactionModule.TransactionData.SelectedMotorName
+        Dim td = RentalTransactionModule.TransactionData
+
+        ' Recalculate fractional days just in case
+        Dim pickupDateTime As DateTime = td.PickupDate.Add(DateTime.Parse(td.PickupTime).TimeOfDay)
+        Dim returnDateTime As DateTime = td.ReturnDate.Add(DateTime.Parse(td.ReturnTime).TimeOfDay)
+
+        td.RentalDurationDays = CDec((returnDateTime - pickupDateTime).TotalHours / 24)
+        If td.RentalDurationDays < 1D Then td.RentalDurationDays = 1D
+        td.TotalAmount = td.DailyRate * td.RentalDurationDays
+
+        ' Display vehicle name
+        If Not String.IsNullOrEmpty(td.SelectedCarName) Then
+            vehicletxt.Text = td.SelectedCarName
+        ElseIf Not String.IsNullOrEmpty(td.SelectedMotorName) Then
+            vehicletxt.Text = td.SelectedMotorName
         Else
             vehicletxt.Text = "No vehicle selected"
         End If
 
-        totalrentalratetxt.Text = "₱" & RentalTransactionModule.TransactionData.TotalAmount.ToString("N2")
-        renteddaystxt.Text = RentalTransactionModule.TransactionData.RentalDurationDays & " day(s)"
-        rentalratetxt.Text = "₱" & RentalTransactionModule.TransactionData.DailyRate.ToString("N2")
+        totalrentalratetxt.Text = "₱" & td.TotalAmount.ToString("N2")
+        renteddaystxt.Text = td.RentalDurationDays & " day(s)"
+        rentalratetxt.Text = "₱" & td.DailyRate.ToString("N2")
 
         ToggleCardInputs(False)
         checkoutbtn.Enabled = False
