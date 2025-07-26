@@ -6,17 +6,24 @@ Public Class FORM_ADMIN
     Dim conn As New MySqlConnection(connStr)
 
     Private Sub FORM_ADMIN_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         ClickDashboard()
         LoadTableRentals(dgvRentals)
         LoadTabNewUsers()
         cbVehicle.Items.Add("CARS")
         cbVehicle.Items.Add("MOTORCYCLES")
-        cbVehicle.Items.Add("VEHICLES")
+        cbVehicle.Items.Add("ALL")
         cbVehicle.SelectedIndex = 0
         LoadTotalRentals(lblDashRentals)
         LoadTotalUsers(lblDashUsers)
         LoadTotalIncome(lblDashIncome)
         LoadTotalAvailableCars(lblDashAvailableCars)
+        txtbxRental.PlaceholderText = "Search Rental ID"
+        txtbxSales.PlaceholderText = "Search Report ID"
+        txtbxInventory.PlaceholderText = "Search Vehicle ID"
+        txtbxMaintenance.PlaceholderText = "Search Maintenance ID"
+        txtbxUsers.PlaceholderText = "Search User ID"
+
     End Sub
 
     Private Sub LoadTotalCompletedRentals(lblPlaceholder As Label)
@@ -352,7 +359,7 @@ Public Class FORM_ADMIN
             query = "SELECT * FROM cars"
         ElseIf selectedTable = "MOTORCYCLES" Then
             query = "SELECT * FROM motors"
-        ElseIf selectedTable = "VEHICLES" Then
+        ElseIf selectedTable = "ALL" Then
             query = "SELECT  v.vehicle_id,
                     v.vehicle_type,
                     v.status_id,
@@ -585,4 +592,124 @@ Public Class FORM_ADMIN
         Form1.Show()
     End Sub
 
+    Private Sub txtbxRental_TextChanged(sender As Object, e As EventArgs) Handles txtbxRental.TextChanged
+        Dim searchText As String = txtbxRental.Text
+
+        dgvRentals2.ClearSelection()
+
+        If searchText = "" Then Exit Sub
+
+        For Each row As DataGridViewRow In dgvRentals2.Rows
+            If row.IsNewRow Then Continue For
+
+            Dim cellValue As String = row.Cells("rental_id").Value.ToString()
+
+            If cellValue.Contains(searchText) Then
+                row.Selected = True
+                dgvRentals2.FirstDisplayedScrollingRowIndex = row.Index
+                Exit For
+            End If
+        Next
+    End Sub
+
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles txtbxSales.TextChanged
+        Dim searchText As String = txtbxSales.Text
+
+        dgvRentals2.ClearSelection()
+
+        If searchText = "" Then Exit Sub
+
+        For Each row As DataGridViewRow In dgvRentals2.Rows
+            If row.IsNewRow Then Continue For
+
+            Dim cellValue As String = row.Cells("report_id").Value.ToString()
+
+            If cellValue.Contains(searchText) Then
+                row.Selected = True
+                dgvRentals2.FirstDisplayedScrollingRowIndex = row.Index
+                Exit For
+            End If
+        Next
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtbxInventory.TextChanged
+        Dim searchText As String = txtbxInventory.Text.ToLower
+
+        dgvRentals2.ClearSelection()
+
+        If searchText = "" Then Exit Sub
+
+        If cbVehicle.SelectedItem.ToString() = "ALL" Then
+            For Each row As DataGridViewRow In dgvVehicles.Rows
+                If row.IsNewRow Then Continue For
+                Dim cellValue As String = row.Cells("vehicle_id").Value.ToString()
+                If cellValue.Contains(searchText) Then
+                    row.Selected = True
+                    dgvVehicles.FirstDisplayedScrollingRowIndex = row.Index
+                    Exit For
+                End If
+            Next
+        ElseIf cbVehicle.SelectedItem.ToString() = "CARS" Then
+            For Each row As DataGridViewRow In dgvVehicles.Rows
+                If row.IsNewRow Then Continue For
+                Dim cellValue As String = row.Cells("car_id").Value.ToString()
+                If cellValue.Contains(searchText) Then
+                    row.Selected = True
+                    dgvVehicles.FirstDisplayedScrollingRowIndex = row.Index
+                    Exit For
+                End If
+            Next
+        ElseIf cbVehicle.SelectedItem.ToString() = "MOTORCYCLES" Then
+            For Each row As DataGridViewRow In dgvVehicles.Rows
+                If row.IsNewRow Then Continue For
+                Dim cellValue As String = row.Cells("motor_id").Value.ToString()
+                If cellValue.Contains(searchText) Then
+                    row.Selected = True
+                    dgvVehicles.FirstDisplayedScrollingRowIndex = row.Index
+                    Exit For
+                End If
+            Next
+        End If
+
+    End Sub
+
+    Private Sub txtbxMaintenance_TextChanged(sender As Object, e As EventArgs) Handles txtbxMaintenance.TextChanged
+        Dim searchText As String = txtbxMaintenance.Text
+
+        dgvRentals2.ClearSelection()
+
+        If searchText = "" Then Exit Sub
+
+        For Each row As DataGridViewRow In dgvRentals2.Rows
+            If row.IsNewRow Then Continue For
+
+            Dim cellValue As String = row.Cells("maintenance_id").Value.ToString()
+
+            If cellValue.Contains(searchText) Then
+                row.Selected = True
+                dgvRentals2.FirstDisplayedScrollingRowIndex = row.Index
+                Exit For
+            End If
+        Next
+    End Sub
+
+    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles txtbxUsers.TextChanged
+        Dim searchText As String = txtbxUsers.Text
+
+        dgvRentals2.ClearSelection()
+
+        If searchText = "" Then Exit Sub
+
+        For Each row As DataGridViewRow In dgvRentals2.Rows
+            If row.IsNewRow Then Continue For
+
+            Dim cellValue As String = row.Cells("customer_id").Value.ToString()
+
+            If cellValue.Contains(searchText) Then
+                row.Selected = True
+                dgvRentals2.FirstDisplayedScrollingRowIndex = row.Index
+                Exit For
+            End If
+        Next
+    End Sub
 End Class
