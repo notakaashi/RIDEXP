@@ -56,8 +56,8 @@ Public Module Module3
                 Dim companyCell As New PdfPCell()
                 companyCell.Border = Rectangle.NO_BORDER
                 companyCell.AddElement(New Paragraph("RIDEXPRESS", titleFont))
-                companyCell.AddElement(New Paragraph("456 Transportation Avenue, Makati City", infoFont))
-                companyCell.AddElement(New Paragraph("Metro Manila, Philippines 1234", infoFont))
+                companyCell.AddElement(New Paragraph("RDXP Ave, Taguig City", infoFont))
+                companyCell.AddElement(New Paragraph("Metro Manila, Philippines 1630", infoFont))
                 companyCell.AddElement(New Paragraph("Phone: +6399 946 9090", infoFont))
                 companyCell.AddElement(New Paragraph("Email: rentals@ridexpress.com", infoFont))
                 companyTable.AddCell(companyCell)

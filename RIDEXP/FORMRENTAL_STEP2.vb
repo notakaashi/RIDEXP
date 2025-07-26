@@ -33,11 +33,11 @@
         returnbtn.Checked = True
 
         pickuptxtbox.Enabled = False
-        pickuptxtbox.Text = "Main Station - 123 Central Ave, Downtown"
+        pickuptxtbox.Text = "RDXP Ave, Taguig City"
         pickuptxtbox.BackColor = Color.LightGray
 
         returntxtbox.Enabled = False
-        returntxtbox.Text = "Main Station - 123 Central Ave, Downtown"
+        returntxtbox.Text = "RDXP Ave, Taguig City"
         returntxtbox.BackColor = Color.LightGray
 
         pickupdatetxt.PlaceholderText = "YYYY-MM-DD"

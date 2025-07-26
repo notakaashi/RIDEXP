@@ -17,6 +17,9 @@ Public Class allcars
                 conn.Open()
                 For carId As Integer = 1 To 10
                     LoadSingleCar(conn, carId)
+
+                    Dim isAvailable As Boolean = IsVehicleAvailable(conn, carId)
+                    EnableCarButton(carId, isAvailable)
                 Next
             End Using
         Catch ex As Exception
@@ -38,7 +41,6 @@ Public Class allcars
 
                 Using reader As MySqlDataReader = cmd.ExecuteReader()
                     If reader.Read() Then
-                        ' Set data based on car ID
                         Select Case carId
                             Case 1
                                 If Not IsDBNull(reader("model_name")) Then model1txt.Text = reader("model_name").ToString()
@@ -363,5 +365,42 @@ Public Class allcars
             Return
         End If
         SelectCar(3, "Toyota Innova", 750, "Car", 3)
+    End Sub
+
+    Private Function IsVehicleAvailable(conn As MySqlConnection, vehicleId As Integer) As Boolean
+        Dim query As String = "
+        SELECT 
+            CASE 
+                WHEN vehicle_type = 'car' THEN status_id 
+                ELSE NULL 
+            END AS status_id
+        FROM vehicles 
+        WHERE vehicle_id = @vehicleId AND vehicle_type = 'car';"
+
+        Using cmd As New MySqlCommand(query, conn)
+            cmd.Parameters.AddWithValue("@vehicleId", vehicleId)
+            Dim result = cmd.ExecuteScalar()
+
+            If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                Return Convert.ToInt32(result) = 1
+            End If
+        End Using
+
+        Return False
+    End Function
+
+    Private Sub EnableCarButton(carId As Integer, isAvailable As Boolean)
+        Select Case carId
+            Case 1 : car1btn.Enabled = isAvailable
+            Case 2 : car2btn.Enabled = isAvailable
+            Case 3 : car3btn.Enabled = isAvailable
+            Case 4 : car4btn.Enabled = isAvailable
+            Case 5 : car5btn.Enabled = isAvailable
+            Case 6 : btnCar6.Enabled = isAvailable
+            Case 7 : car7btn.Enabled = isAvailable
+            Case 8 : car8btn.Enabled = isAvailable
+            Case 9 : car9btn.Enabled = isAvailable
+            Case 10 : car10btn.Enabled = isAvailable
+        End Select
     End Sub
 End Class
