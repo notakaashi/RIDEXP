@@ -162,6 +162,8 @@ Partial Class FORM_ADMIN
         Panel25 = New Panel()
         Label41 = New Label()
         pnlUsersContent = New Panel()
+        Button8 = New Button()
+        Button7 = New Button()
         Panel31 = New Panel()
         lblUserPaid = New Label()
         PictureBox20 = New PictureBox()
@@ -179,6 +181,30 @@ Partial Class FORM_ADMIN
         dgvAllUSERS = New DataGridView()
         Panel29 = New Panel()
         Label48 = New Label()
+        pnlUsersEditUser = New Panel()
+        Panel45 = New Panel()
+        btnEditUser = New Button()
+        Panel44 = New Panel()
+        txtEditExpiry = New TextBox()
+        Panel43 = New Panel()
+        txtEditLicense = New TextBox()
+        Panel41 = New Panel()
+        txtEditAddress = New TextBox()
+        Panel42 = New Panel()
+        txtEditPhone = New TextBox()
+        Panel39 = New Panel()
+        txtEditBirth = New TextBox()
+        Panel40 = New Panel()
+        txtEditEmail = New TextBox()
+        Panel38 = New Panel()
+        txtEditLast = New TextBox()
+        Panel37 = New Panel()
+        txtEditFirst = New TextBox()
+        Panel36 = New Panel()
+        txtEditID = New TextBox()
+        Label3 = New Label()
+        Panel35 = New Panel()
+        Label20 = New Label()
         Panel1.SuspendLayout()
         pnlUsers.SuspendLayout()
         CType(iconUsers, ComponentModel.ISupportInitialize).BeginInit()
@@ -259,6 +285,17 @@ Partial Class FORM_ADMIN
         CType(PictureBox19, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvAllUSERS, ComponentModel.ISupportInitialize).BeginInit()
         Panel29.SuspendLayout()
+        pnlUsersEditUser.SuspendLayout()
+        Panel44.SuspendLayout()
+        Panel43.SuspendLayout()
+        Panel41.SuspendLayout()
+        Panel42.SuspendLayout()
+        Panel39.SuspendLayout()
+        Panel40.SuspendLayout()
+        Panel38.SuspendLayout()
+        Panel37.SuspendLayout()
+        Panel36.SuspendLayout()
+        Panel35.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -1751,6 +1788,8 @@ Partial Class FORM_ADMIN
         ' 
         ' pnlUsersContent
         ' 
+        pnlUsersContent.Controls.Add(Button8)
+        pnlUsersContent.Controls.Add(Button7)
         pnlUsersContent.Controls.Add(Panel31)
         pnlUsersContent.Controls.Add(Panel30)
         pnlUsersContent.Controls.Add(Button5)
@@ -1758,10 +1797,36 @@ Partial Class FORM_ADMIN
         pnlUsersContent.Controls.Add(txtbxUsers)
         pnlUsersContent.Controls.Add(dgvAllUSERS)
         pnlUsersContent.Controls.Add(Panel29)
-        pnlUsersContent.Location = New Point(317, 100)
+        pnlUsersContent.Location = New Point(321, 105)
         pnlUsersContent.Name = "pnlUsersContent"
         pnlUsersContent.Size = New Size(915, 564)
         pnlUsersContent.TabIndex = 18
+        ' 
+        ' Button8
+        ' 
+        Button8.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button8.FlatStyle = FlatStyle.Flat
+        Button8.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button8.ForeColor = Color.White
+        Button8.Location = New Point(568, 141)
+        Button8.Name = "Button8"
+        Button8.Size = New Size(150, 35)
+        Button8.TabIndex = 17
+        Button8.Text = "DELETE USER"
+        Button8.UseVisualStyleBackColor = False
+        ' 
+        ' Button7
+        ' 
+        Button7.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button7.FlatStyle = FlatStyle.Flat
+        Button7.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button7.ForeColor = Color.White
+        Button7.Location = New Point(424, 141)
+        Button7.Name = "Button7"
+        Button7.Size = New Size(123, 35)
+        Button7.TabIndex = 16
+        Button7.Text = "EDIT USER"
+        Button7.UseVisualStyleBackColor = False
         ' 
         ' Panel31
         ' 
@@ -1943,6 +2008,243 @@ Partial Class FORM_ADMIN
         Label48.TabIndex = 7
         Label48.Text = "USERS"
         ' 
+        ' pnlUsersEditUser
+        ' 
+        pnlUsersEditUser.AutoScroll = True
+        pnlUsersEditUser.BackColor = Color.White
+        pnlUsersEditUser.BorderStyle = BorderStyle.FixedSingle
+        pnlUsersEditUser.Controls.Add(Panel45)
+        pnlUsersEditUser.Controls.Add(btnEditUser)
+        pnlUsersEditUser.Controls.Add(Panel44)
+        pnlUsersEditUser.Controls.Add(Panel43)
+        pnlUsersEditUser.Controls.Add(Panel41)
+        pnlUsersEditUser.Controls.Add(Panel42)
+        pnlUsersEditUser.Controls.Add(Panel39)
+        pnlUsersEditUser.Controls.Add(Panel40)
+        pnlUsersEditUser.Controls.Add(Panel38)
+        pnlUsersEditUser.Controls.Add(Panel37)
+        pnlUsersEditUser.Controls.Add(Panel36)
+        pnlUsersEditUser.Controls.Add(Label3)
+        pnlUsersEditUser.Controls.Add(Panel35)
+        pnlUsersEditUser.Location = New Point(1300, 127)
+        pnlUsersEditUser.Name = "pnlUsersEditUser"
+        pnlUsersEditUser.Size = New Size(670, 337)
+        pnlUsersEditUser.TabIndex = 19
+        ' 
+        ' Panel45
+        ' 
+        Panel45.Location = New Point(52, 633)
+        Panel45.Name = "Panel45"
+        Panel45.Size = New Size(567, 46)
+        Panel45.TabIndex = 13
+        ' 
+        ' btnEditUser
+        ' 
+        btnEditUser.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnEditUser.Cursor = Cursors.Hand
+        btnEditUser.Font = New Font("Futura Hv BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnEditUser.ForeColor = Color.White
+        btnEditUser.Location = New Point(226, 591)
+        btnEditUser.Name = "btnEditUser"
+        btnEditUser.Size = New Size(199, 47)
+        btnEditUser.TabIndex = 12
+        btnEditUser.Text = "SUBMIT"
+        btnEditUser.UseVisualStyleBackColor = False
+        ' 
+        ' Panel44
+        ' 
+        Panel44.BorderStyle = BorderStyle.FixedSingle
+        Panel44.Controls.Add(txtEditExpiry)
+        Panel44.Location = New Point(52, 501)
+        Panel44.Name = "Panel44"
+        Panel44.Size = New Size(567, 46)
+        Panel44.TabIndex = 11
+        ' 
+        ' txtEditExpiry
+        ' 
+        txtEditExpiry.BorderStyle = BorderStyle.None
+        txtEditExpiry.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtEditExpiry.Location = New Point(20, 12)
+        txtEditExpiry.Name = "txtEditExpiry"
+        txtEditExpiry.Size = New Size(523, 21)
+        txtEditExpiry.TabIndex = 2
+        ' 
+        ' Panel43
+        ' 
+        Panel43.BorderStyle = BorderStyle.FixedSingle
+        Panel43.Controls.Add(txtEditLicense)
+        Panel43.Location = New Point(52, 435)
+        Panel43.Name = "Panel43"
+        Panel43.Size = New Size(567, 46)
+        Panel43.TabIndex = 10
+        ' 
+        ' txtEditLicense
+        ' 
+        txtEditLicense.BorderStyle = BorderStyle.None
+        txtEditLicense.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtEditLicense.Location = New Point(20, 12)
+        txtEditLicense.Name = "txtEditLicense"
+        txtEditLicense.Size = New Size(523, 21)
+        txtEditLicense.TabIndex = 2
+        ' 
+        ' Panel41
+        ' 
+        Panel41.BorderStyle = BorderStyle.FixedSingle
+        Panel41.Controls.Add(txtEditAddress)
+        Panel41.Location = New Point(52, 373)
+        Panel41.Name = "Panel41"
+        Panel41.Size = New Size(567, 46)
+        Panel41.TabIndex = 9
+        ' 
+        ' txtEditAddress
+        ' 
+        txtEditAddress.BorderStyle = BorderStyle.None
+        txtEditAddress.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtEditAddress.Location = New Point(20, 12)
+        txtEditAddress.Name = "txtEditAddress"
+        txtEditAddress.Size = New Size(523, 21)
+        txtEditAddress.TabIndex = 2
+        ' 
+        ' Panel42
+        ' 
+        Panel42.BorderStyle = BorderStyle.FixedSingle
+        Panel42.Controls.Add(txtEditPhone)
+        Panel42.Location = New Point(52, 308)
+        Panel42.Name = "Panel42"
+        Panel42.Size = New Size(273, 46)
+        Panel42.TabIndex = 8
+        ' 
+        ' txtEditPhone
+        ' 
+        txtEditPhone.BorderStyle = BorderStyle.None
+        txtEditPhone.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtEditPhone.Location = New Point(20, 12)
+        txtEditPhone.Name = "txtEditPhone"
+        txtEditPhone.Size = New Size(229, 21)
+        txtEditPhone.TabIndex = 2
+        ' 
+        ' Panel39
+        ' 
+        Panel39.BorderStyle = BorderStyle.FixedSingle
+        Panel39.Controls.Add(txtEditBirth)
+        Panel39.Location = New Point(346, 244)
+        Panel39.Name = "Panel39"
+        Panel39.Size = New Size(273, 46)
+        Panel39.TabIndex = 7
+        ' 
+        ' txtEditBirth
+        ' 
+        txtEditBirth.BorderStyle = BorderStyle.None
+        txtEditBirth.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtEditBirth.Location = New Point(20, 12)
+        txtEditBirth.Name = "txtEditBirth"
+        txtEditBirth.Size = New Size(229, 21)
+        txtEditBirth.TabIndex = 2
+        ' 
+        ' Panel40
+        ' 
+        Panel40.BorderStyle = BorderStyle.FixedSingle
+        Panel40.Controls.Add(txtEditEmail)
+        Panel40.Location = New Point(52, 244)
+        Panel40.Name = "Panel40"
+        Panel40.Size = New Size(273, 46)
+        Panel40.TabIndex = 6
+        ' 
+        ' txtEditEmail
+        ' 
+        txtEditEmail.BorderStyle = BorderStyle.None
+        txtEditEmail.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtEditEmail.Location = New Point(20, 12)
+        txtEditEmail.Name = "txtEditEmail"
+        txtEditEmail.Size = New Size(229, 21)
+        txtEditEmail.TabIndex = 2
+        ' 
+        ' Panel38
+        ' 
+        Panel38.BorderStyle = BorderStyle.FixedSingle
+        Panel38.Controls.Add(txtEditLast)
+        Panel38.Location = New Point(346, 181)
+        Panel38.Name = "Panel38"
+        Panel38.Size = New Size(273, 46)
+        Panel38.TabIndex = 5
+        ' 
+        ' txtEditLast
+        ' 
+        txtEditLast.BorderStyle = BorderStyle.None
+        txtEditLast.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtEditLast.Location = New Point(20, 12)
+        txtEditLast.Name = "txtEditLast"
+        txtEditLast.Size = New Size(229, 21)
+        txtEditLast.TabIndex = 2
+        ' 
+        ' Panel37
+        ' 
+        Panel37.BorderStyle = BorderStyle.FixedSingle
+        Panel37.Controls.Add(txtEditFirst)
+        Panel37.Location = New Point(52, 181)
+        Panel37.Name = "Panel37"
+        Panel37.Size = New Size(273, 46)
+        Panel37.TabIndex = 4
+        ' 
+        ' txtEditFirst
+        ' 
+        txtEditFirst.BorderStyle = BorderStyle.None
+        txtEditFirst.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtEditFirst.Location = New Point(20, 12)
+        txtEditFirst.Name = "txtEditFirst"
+        txtEditFirst.Size = New Size(229, 21)
+        txtEditFirst.TabIndex = 2
+        ' 
+        ' Panel36
+        ' 
+        Panel36.BorderStyle = BorderStyle.FixedSingle
+        Panel36.Controls.Add(txtEditID)
+        Panel36.Location = New Point(52, 122)
+        Panel36.Name = "Panel36"
+        Panel36.Size = New Size(170, 46)
+        Panel36.TabIndex = 3
+        ' 
+        ' txtEditID
+        ' 
+        txtEditID.BorderStyle = BorderStyle.None
+        txtEditID.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtEditID.Location = New Point(20, 12)
+        txtEditID.Name = "txtEditID"
+        txtEditID.Size = New Size(125, 21)
+        txtEditID.TabIndex = 2
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Futura Hv BT", 22.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label3.Location = New Point(205, 59)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(205, 45)
+        Label3.TabIndex = 1
+        Label3.Text = "EDIT USER"
+        ' 
+        ' Panel35
+        ' 
+        Panel35.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Panel35.Controls.Add(Label20)
+        Panel35.Dock = DockStyle.Top
+        Panel35.Location = New Point(0, 0)
+        Panel35.Name = "Panel35"
+        Panel35.Size = New Size(647, 40)
+        Panel35.TabIndex = 0
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Font = New Font("Futura XBlk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label20.ForeColor = Color.White
+        Label20.Location = New Point(15, 9)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(24, 24)
+        Label20.TabIndex = 14
+        Label20.Text = "X"
+        ' 
         ' FORM_ADMIN
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
@@ -1951,12 +2253,13 @@ Partial Class FORM_ADMIN
         ClientSize = New Size(1482, 673)
         Controls.Add(Panel8)
         Controls.Add(Panel1)
-        Controls.Add(pnlUsersContent)
         Controls.Add(pnlSaleContent)
         Controls.Add(pnlAllDashboard)
         Controls.Add(pnlcarinventory)
         Controls.Add(pnlMaintenanceContent)
         Controls.Add(pnlRentalContent)
+        Controls.Add(pnlUsersEditUser)
+        Controls.Add(pnlUsersContent)
         Name = "FORM_ADMIN"
         StartPosition = FormStartPosition.CenterScreen
         Text = "FORM_ADMIN"
@@ -2082,6 +2385,28 @@ Partial Class FORM_ADMIN
         CType(dgvAllUSERS, ComponentModel.ISupportInitialize).EndInit()
         Panel29.ResumeLayout(False)
         Panel29.PerformLayout()
+        pnlUsersEditUser.ResumeLayout(False)
+        pnlUsersEditUser.PerformLayout()
+        Panel44.ResumeLayout(False)
+        Panel44.PerformLayout()
+        Panel43.ResumeLayout(False)
+        Panel43.PerformLayout()
+        Panel41.ResumeLayout(False)
+        Panel41.PerformLayout()
+        Panel42.ResumeLayout(False)
+        Panel42.PerformLayout()
+        Panel39.ResumeLayout(False)
+        Panel39.PerformLayout()
+        Panel40.ResumeLayout(False)
+        Panel40.PerformLayout()
+        Panel38.ResumeLayout(False)
+        Panel38.PerformLayout()
+        Panel37.ResumeLayout(False)
+        Panel37.PerformLayout()
+        Panel36.ResumeLayout(False)
+        Panel36.PerformLayout()
+        Panel35.ResumeLayout(False)
+        Panel35.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -2241,4 +2566,30 @@ Partial Class FORM_ADMIN
     Friend WithEvents Panel33 As Panel
     Friend WithEvents PictureBox22 As PictureBox
     Friend WithEvents Label14 As Label
+    Friend WithEvents pnlUsersEditUser As Panel
+    Friend WithEvents Panel41 As Panel
+    Friend WithEvents txtEditAddress As TextBox
+    Friend WithEvents Panel42 As Panel
+    Friend WithEvents txtEditPhone As TextBox
+    Friend WithEvents Panel39 As Panel
+    Friend WithEvents txtEditBirth As TextBox
+    Friend WithEvents Panel40 As Panel
+    Friend WithEvents txtEditEmail As TextBox
+    Friend WithEvents Panel38 As Panel
+    Friend WithEvents txtEditLast As TextBox
+    Friend WithEvents Panel37 As Panel
+    Friend WithEvents txtEditFirst As TextBox
+    Friend WithEvents Panel36 As Panel
+    Friend WithEvents txtEditID As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel35 As Panel
+    Friend WithEvents Panel45 As Panel
+    Friend WithEvents btnEditUser As Button
+    Friend WithEvents Panel44 As Panel
+    Friend WithEvents txtEditExpiry As TextBox
+    Friend WithEvents Panel43 As Panel
+    Friend WithEvents txtEditLicense As TextBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Button7 As Button
 End Class

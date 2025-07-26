@@ -23,6 +23,7 @@ Public Class FORM_ADMIN
         txtbxInventory.PlaceholderText = "Search Vehicle ID"
         txtbxMaintenance.PlaceholderText = "Search Maintenance ID"
         txtbxUsers.PlaceholderText = "Search User ID"
+        pnlUsersEditUser.Location = New Point(1300, 97)
 
     End Sub
 
@@ -583,6 +584,16 @@ Public Class FORM_ADMIN
         LoadTotalUsers(lblUserUsers)
         LoadTotalUnpaid(lblUserUnpaid)
         LoadTotalPaid(lblUserPaid)
+
+        txtEditID.PlaceholderText = "Input User ID"
+        txtEditFirst.PlaceholderText = "Input First Name"
+        txtEditLast.PlaceholderText = "Input Last Name"
+        txtEditBirth.PlaceholderText = "Input Birthdate (YYYY-MM-DD)"
+        txtEditEmail.PlaceholderText = "Input Email"
+        txtEditPhone.PlaceholderText = "Input Phone Number"
+        txtEditAddress.PlaceholderText = "Input Address"
+        txtEditLicense.PlaceholderText = "Input License Number"
+        txtEditExpiry.PlaceholderText = "Input License Expiry (YYYY-MM-DD)"
     End Sub
 
 
@@ -711,5 +722,139 @@ Public Class FORM_ADMIN
                 Exit For
             End If
         Next
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnEditUser.Click
+        If txtEditID.Text.Trim() = "" Then
+            MessageBox.Show("User ID is required.")
+            Exit Sub
+        End If
+
+        Dim userId As Integer = Integer.Parse(txtEditID.Text.Trim())
+
+        Dim updates As String = ""
+        Dim cmdParams As New List(Of MySqlParameter)
+
+        If txtEditFirst.Text.Trim() <> "" Then
+            updates &= "first_name = @fname, "
+            cmdParams.Add(New MySqlParameter("@fname", txtEditFirst.Text.Trim()))
+        End If
+
+        If txtEditLast.Text.Trim() <> "" Then
+            updates &= "last_name = @lname, "
+            cmdParams.Add(New MySqlParameter("@lname", txtEditLast.Text.Trim()))
+        End If
+
+        If txtEditEmail.Text.Trim() <> "" Then
+            updates &= "email = @email, "
+            cmdParams.Add(New MySqlParameter("@email", txtEditEmail.Text.Trim()))
+        End If
+
+        If txtEditBirth.Text.Trim() <> "" Then
+            Try
+                Dim birthDate As Date = Date.Parse(txtEditBirth.Text.Trim())
+                updates &= "date_of_birth = @bdate, "
+                cmdParams.Add(New MySqlParameter("@bdate", birthDate))
+            Catch ex As Exception
+                MessageBox.Show("Invalid birth date format.")
+                Exit Sub
+            End Try
+        End If
+
+        If txtEditPhone.Text.Trim() <> "" Then
+            updates &= "phone = @phone, "
+            cmdParams.Add(New MySqlParameter("@phone", txtEditPhone.Text.Trim()))
+        End If
+
+        If txtEditAddress.Text.Trim() <> "" Then
+            updates &= "address = @addr, "
+            cmdParams.Add(New MySqlParameter("@addr", txtEditAddress.Text.Trim()))
+        End If
+
+        If txtEditLicense.Text.Trim() <> "" Then
+            updates &= "license_number = @licno, "
+            cmdParams.Add(New MySqlParameter("@licno", txtEditLicense.Text.Trim()))
+        End If
+
+        If txtEditExpiry.Text.Trim() <> "" Then
+            Try
+                Dim expiryDate As Date = Date.Parse(txtEditExpiry.Text.Trim())
+                updates &= "license_expiry = @licexp, "
+                cmdParams.Add(New MySqlParameter("@licexp", expiryDate))
+            Catch ex As Exception
+                MessageBox.Show("Invalid license expiry date format.")
+                Exit Sub
+            End Try
+        End If
+
+        If updates.EndsWith(", ") Then
+            updates = updates.Substring(0, updates.Length - 2)
+        End If
+
+        If updates = "" Then
+            MessageBox.Show("Please fill in at least one field to update.")
+            Exit Sub
+        End If
+
+        Dim query As String = "UPDATE customers SET " & updates & " WHERE customer_id = @id"
+
+        Try
+            Using conn As New MySqlConnection("server=localhost;user=root;password=;database=ridexp")
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+
+                    For Each p As MySqlParameter In cmdParams
+                        cmd.Parameters.Add(p)
+                    Next
+                    cmd.Parameters.AddWithValue("@id", userId)
+
+                    Dim rowsAffected = cmd.ExecuteNonQuery()
+                    If rowsAffected > 0 Then
+                        MessageBox.Show("User updated successfully.")
+                        pnlUsersEditUser.Location = New Point(1300, 97)
+                        LoadTabUsers()
+                    Else
+                        MessageBox.Show("No records updated. Check the User ID.")
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click
+        pnlUsersEditUser.Location = New Point(1300, 97)
+    End Sub
+
+    Private Sub Button7_Click_1(sender As Object, e As EventArgs) Handles Button7.Click
+        pnlUsersEditUser.Location = New Point(442, 175)
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        If dgvAllUSERS.SelectedRows.Count > 0 Then
+            Dim selectedRow As DataGridViewRow = dgvAllUSERS.SelectedRows(0)
+            Dim userId As Integer = Convert.ToInt32(selectedRow.Cells(0).Value)
+
+            Dim confirm = MessageBox.Show("Are you sure you want to delete this user?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+
+            If confirm = DialogResult.Yes Then
+                Dim connStr As String = "server=localhost;user=root;password=;database=ridexp"
+                Using conn As New MySqlConnection(connStr)
+                    conn.Open()
+                    Dim query As String = "DELETE FROM customers WHERE customer_id = @id"
+                    Using cmd As New MySqlCommand(query, conn)
+                        cmd.Parameters.AddWithValue("@id", userId)
+                        cmd.ExecuteNonQuery()
+                    End Using
+                End Using
+
+                MessageBox.Show("User deleted successfully.")
+                LoadTabUsers()
+            End If
+        Else
+            MessageBox.Show("Please select a row to delete.")
+        End If
     End Sub
 End Class
