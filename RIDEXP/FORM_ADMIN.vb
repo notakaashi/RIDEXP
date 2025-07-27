@@ -1163,26 +1163,6 @@ Public Class FORM_ADMIN
                                 Dim result2 = cmd2.ExecuteNonQuery
                             End Using
 
-                            ' Only save image if one was selected
-                            If hasImageSelected Then
-                                Dim comm5 As String = "INSERT INTO cars_pic (car_id, image) VALUES (@car_id, @image)"
-                                Using cmd5 As New MySqlCommand(comm5, conn)
-                                    Try
-                                        cmd5.Parameters.AddWithValue("@car_id", carId)
-                                        cmd5.Parameters.AddWithValue("@image", imageName) ' Use imageBytes for consistency
-
-                                        Dim imageResult = cmd5.ExecuteNonQuery()
-                                        If imageResult > 0 Then
-                                            MessageBox.Show("Image saved successfully!")
-                                        Else
-                                            MessageBox.Show("Image not saved - no rows affected!")
-                                        End If
-                                    Catch ex As Exception
-                                        MessageBox.Show($"Image save error: {ex.Message}")
-                                    End Try
-                                End Using
-                            End If
-
                             Dim vehicleId As Integer
                             cmd.CommandText = "SELECT LAST_INSERT_ID()"
                             vehicleId = Convert.ToInt32(cmd.ExecuteScalar)
@@ -1197,8 +1177,6 @@ Public Class FORM_ADMIN
                                 Dim result3 = cmd3.ExecuteNonQuery
                                 If result3 > 0 Then
                                     MessageBox.Show("Car added successfully!")
-                                    pnlInventory_Click(pnlInventory, EventArgs.Empty)
-                                    ClearForm()
                                 Else
                                     MessageBox.Show("Failed to add rental rate.")
                                 End If
@@ -1227,7 +1205,7 @@ Public Class FORM_ADMIN
                         Dim result = cmd.ExecuteNonQuery
                         If result > 0 Then
                             cmd.CommandText = "SELECT LAST_INSERT_ID()"
-                            motorId = Convert.ToInt32(cmd.ExecuteScalar) ' Set the class-level variable
+                            motorId = Convert.ToInt32(cmd.ExecuteScalar)
 
                             Dim comm2 = "INSERT INTO vehicles (vehicle_type, item_id, status_id) 
                             VALUES (@vehicle_type, @item_id, @status_id)"
@@ -1245,25 +1223,6 @@ Public Class FORM_ADMIN
                                 Dim result2 = cmd2.ExecuteNonQuery
                             End Using
 
-                            If hasImageSelected Then
-                                Dim comm5 As String = "INSERT INTO motors_pic (motor_id, image) VALUES (@motor_id, @image)"
-                                Using cmd5 As New MySqlCommand(comm5, conn)
-                                    Try
-                                        cmd5.Parameters.AddWithValue("@motor_id", motorId)
-                                        cmd5.Parameters.AddWithValue("@image", imageName)
-
-                                        Dim imageResult = cmd5.ExecuteNonQuery()
-                                        If imageResult > 0 Then
-                                            MessageBox.Show("Image saved successfully!")
-                                        Else
-                                            MessageBox.Show("Image not saved - no rows affected!")
-                                        End If
-                                    Catch ex As Exception
-                                        MessageBox.Show($"Image save error: {ex.Message}")
-                                    End Try
-                                End Using
-                            End If
-
                             Dim vehicleId As Integer
                             cmd.CommandText = "SELECT LAST_INSERT_ID()"
                             vehicleId = Convert.ToInt32(cmd.ExecuteScalar)
@@ -1278,8 +1237,6 @@ Public Class FORM_ADMIN
                                 Dim result3 = cmd3.ExecuteNonQuery
                                 If result3 > 0 Then
                                     MessageBox.Show("Motorcycle added successfully!")
-                                    pnlInventory_Click(pnlInventory, EventArgs.Empty)
-                                    ClearForm()
                                 Else
                                     MessageBox.Show("Failed to add rental rate.")
                                 End If
@@ -1296,6 +1253,8 @@ Public Class FORM_ADMIN
         Catch ex As Exception
             MessageBox.Show($"An error occurred: {ex.Message}")
         End Try
+
+        btnUploadImage.Enabled = True
     End Sub
 
     Private Sub ClearForm()
@@ -1311,9 +1270,6 @@ Public Class FORM_ADMIN
         addMileage.Clear()
         txtAddSeatCapacity.Clear()
         txtRentalRate.Clear()
-
-        ' Clear image data
-        pbxAddImage.Image = Nothing
         imagePath = ""
         imageBytes = Nothing
         imageName = ""
@@ -1329,79 +1285,83 @@ Public Class FORM_ADMIN
         pnlAddCars.Location = New Point(1300, 81)
     End Sub
 
-    ' FIXED: Image upload button - just prepare the image, don't save to DB
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles btnUploadImage.Click
-        Dim ofd As New OpenFileDialog()
-        ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp"
+        Try
+            Dim tableName As String = ""
+            Dim idColumn As String = ""
+            Dim lastId As Integer = -1
 
-        If ofd.ShowDialog() = DialogResult.OK Then
-            Try
+            If cbCategory.SelectedItem Is Nothing Then
+                MessageBox.Show("Please select vehicle type (CARS or MOTORCYCLES) first!")
+                Exit Sub
+            End If
+
+            If cbCategory.SelectedItem.ToString() = "CARS" Then
+                tableName = "cars_pic"
+                idColumn = "car_id"
+            ElseIf cbCategory.SelectedItem.ToString() = "MOTORCYCLES" Then
+                tableName = "motors_pic"
+                idColumn = "motor_id"
+            Else
+                MessageBox.Show("Invalid vehicle type selection!")
+                Exit Sub
+            End If
+
+            Using conn As New MySqlConnection("server=localhost;database=ridexp;userid=root;password=;")
+                conn.Open()
+                Dim query As String = $"SELECT {idColumn} FROM {If(tableName = "cars_pic", "cars", "motors")} ORDER BY {idColumn} DESC LIMIT 1"
+                Dim cmd As New MySqlCommand(query, conn)
+                Dim result = cmd.ExecuteScalar()
+                If result IsNot Nothing Then
+                    lastId = Convert.ToInt32(result)
+                    MessageBox.Show($"DEBUG: Last {idColumn} found = {lastId}")
+                Else
+                    MessageBox.Show("No records found! Add a vehicle first.")
+                    Exit Sub
+                End If
+            End Using
+
+            Dim ofd As New OpenFileDialog()
+            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp"
+            ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)
+
+            If ofd.ShowDialog(Me) = DialogResult.OK Then
                 Dim selectedFilePath As String = ofd.FileName
 
-                ' Ensure Resources folder exists
-                Dim resourcesFolder As String = "C:\Users\Admin\Desktop\3RD SEM\FUNDAMENTALS\VBNET\RIDEXP\RIDEXP\Resources"
-                If Not Directory.Exists(resourcesFolder) Then
-                    Directory.CreateDirectory(resourcesFolder)
+                Dim imagesFolder As String = Path.Combine(Application.StartupPath, "Images")
+                If Not Directory.Exists(imagesFolder) Then
+                    Directory.CreateDirectory(imagesFolder)
                 End If
 
-                ' Copy the selected image to Resources folder
                 Dim fileName As String = Path.GetFileName(selectedFilePath)
-                Dim destPath As String = Path.Combine(resourcesFolder, fileName)
+                Dim destPath As String = Path.Combine(imagesFolder, fileName)
                 File.Copy(selectedFilePath, destPath, True)
 
-                ' Set image data for database storage
-                imagePath = destPath ' Use the copied file path
-                pbxAddImage.Image = Image.FromFile(destPath)
-                imageName = fileName
-                imageBytes = File.ReadAllBytes(destPath)
-                hasImageSelected = True
+                Dim relativePath As String = "Images/" & fileName
 
-                MessageBox.Show("Image copied to Resources folder and selected successfully! It will be saved when you add the vehicle.")
-            Catch ex As Exception
-                MessageBox.Show($"Error loading/copying image: {ex.Message}")
-                hasImageSelected = False
-            End Try
-        End If
+                Using conn As New MySqlConnection("server=localhost;database=ridexp;userid=root;password=;")
+                    conn.Open()
+                    Dim query As String = $"INSERT INTO {tableName} ({idColumn}, image) VALUES (@id, @img)"
+                    Dim cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@id", lastId)
+                    cmd.Parameters.AddWithValue("@img", relativePath)
+                    cmd.ExecuteNonQuery()
+                End Using
 
 
-    End Sub
 
-
-    Private Sub putanginamo_Click(sender As Object, e As EventArgs) Handles putanginamo.Click
-        ' First test - just show a simple message to confirm the event fires
-        MessageBox.Show("Button clicked! Event is working.")
-
-        Try
-            Dim possibleExtensions As String() = {".jpg", ".jpeg", ".png", ".gif", ".bmp"}
-            Dim serviceImage As Image = Nothing
-            Dim imageName As String = "AdobeStock_656858801"
-
-            MessageBox.Show("Starting image search...")
-
-            For Each ext In possibleExtensions
-                Dim imagePath As String = Path.Combine("C:\Users\Admin\Desktop\3RD SEM\FUNDAMENTALS\VBNET\RIDEXP\RIDEXP\Resources", imageName & ext)
-                MessageBox.Show($"Checking path: {imagePath}")
-
-                If File.Exists(imagePath) Then
-                    MessageBox.Show("File exists! Attempting to load...")
-                    serviceImage = Image.FromFile(imagePath)
-                    MessageBox.Show("Image loaded from file!")
-                    Exit For
-                Else
-                    MessageBox.Show("File does not exist at this path.")
-                End If
-            Next
-
-            If serviceImage IsNot Nothing Then
-                MessageBox.Show("Setting image to PictureBox...")
-                picpicbox.Image = serviceImage
-                MessageBox.Show("Image set successfully!")
-            Else
-                MessageBox.Show("No image was loaded - serviceImage is Nothing")
+                MessageBox.Show($"Image uploaded and linked to {idColumn} {lastId} successfully!")
             End If
 
         Catch ex As Exception
-            MessageBox.Show($"Error occurred: {ex.Message}")
+            MessageBox.Show("Error uploading image: " & ex.Message)
         End Try
+
+        ClearForm()
     End Sub
+
+
+
+
+
 End Class
