@@ -17,9 +17,11 @@ Public Class allcars
                 conn.Open()
                 For carId As Integer = 1 To 10
                     LoadSingleCar(conn, carId)
-
                 Next
             End Using
+            MessageBox.Show("Calling LoadNewCars() now...")
+            LoadNewCars()
+
         Catch ex As Exception
             MessageBox.Show("Error loading car data: " & ex.Message)
         End Try
@@ -363,6 +365,113 @@ Public Class allcars
             Return
         End If
         SelectCar(3, "Toyota Innova", 750, "Car", 3)
+    End Sub
+
+    Private Sub LoadNewCars()
+        MessageBox.Show("LoadNewCars() is running!")
+        Dim query As String = "
+        SELECT c.car_id, c.car_category_id, c.make, c.model_name, c.year, c.color,
+               c.mileage, c.seating_capacity, rr.rate_per_day, cp.image
+        FROM cars c
+        JOIN cars_pic cp ON c.car_id = cp.car_id
+        JOIN vehicles v ON c.car_id = v.item_id AND v.vehicle_type = 'car'
+        JOIN rental_rate rr ON rr.vehicle_id = v.vehicle_id
+        WHERE c.car_id > 10
+        ORDER BY c.car_id ASC"
+
+        Using conn As New MySqlConnection("server=localhost;database=ridexp;UserId=root;password=;")
+            conn.Open()
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+            If Not reader.HasRows Then
+                MessageBox.Show("No new cars found!")
+            End If
+
+            While reader.Read()
+                Dim imgFullPath As String = Path.Combine(Application.StartupPath, reader("image").ToString())
+                MessageBox.Show("Found car: " & reader("model_name").ToString())
+                ShowNewCarInCategory(
+                reader("car_category_id"),
+                reader("make").ToString(),
+                reader("model_name").ToString(),
+                reader("year").ToString(),
+                reader("color").ToString(),
+                reader("mileage").ToString(),
+                reader("seating_capacity").ToString(),
+                reader("rate_per_day").ToString(),
+                imgFullPath
+            )
+            End While
+        End Using
+    End Sub
+
+    Private Sub ShowNewCarInCategory(categoryId As Integer, make As String, model As String, year As String,
+                                 color As String, mileage As String, seating As String,
+                                 rate As String, imgPath As String)
+
+        Dim prefix As String = ""
+        Dim parentPanel As Panel = Nothing
+
+        Select Case categoryId
+            Case 1 : prefix = "sedan" : parentPanel = pnlSedan
+            Case 2 : prefix = "suv" : parentPanel = pnlSuvContent
+            Case 3 : prefix = "mpv" : parentPanel = pnlMpv
+            Case 4 : prefix = "hatch" : parentPanel = pnlHatchback
+            Case 5 : prefix = "hybrid" : parentPanel = pnlHybrid
+        End Select
+
+        Debug.WriteLine($"[DEBUG] Loading car {make} {model} into {prefix}")
+
+        For i As Integer = 1 To 20
+            Dim btn = Me.Controls.Find($"{prefix}{i}btn", True).FirstOrDefault()
+
+            If btn Is Nothing Then
+                Debug.WriteLine($"[DEBUG] -> Cannot find {prefix}{i}btn")
+                Continue For
+            End If
+
+            If btn.Visible = False Then
+                Debug.WriteLine($"[DEBUG] -> Found slot {i} for {prefix}")
+
+                ' Find and set other controls
+                SetLabel($"{prefix}make{i}txt", make)
+                SetLabel($"{prefix}model{i}txt", model)
+                SetLabel($"{prefix}year{i}txt", year)
+                SetLabel($"{prefix}color{i}txt", color)
+                SetLabel($"{prefix}mileage{i}txt", mileage & " km")
+                SetLabel($"{prefix}seatingcapacity{i}txt", seating)
+                SetLabel($"{prefix}rentalrate{i}txt", rate & " per day")
+
+                Select Case categoryId
+                    Case 1 : panel1sedan.Visible = True
+
+                End Select
+
+                ' Load picture
+                Dim pic = CType(Me.Controls.Find($"{prefix}{i}pic", True).FirstOrDefault(), PictureBox)
+                If pic IsNot Nothing AndAlso File.Exists(imgPath) Then
+                    pic.Image = Image.FromFile(imgPath)
+                Else
+                    Debug.WriteLine($"[DEBUG] -> Image not found: {imgPath}")
+                End If
+
+                btn.Visible = True
+                If parentPanel IsNot Nothing Then parentPanel.Visible = True
+
+                Exit For
+            End If
+        Next
+    End Sub
+
+    Private Sub SetLabel(name As String, text As String)
+        Dim lbl = Me.Controls.Find(name, True).FirstOrDefault()
+        If lbl IsNot Nothing Then
+            CType(lbl, Label).Text = text
+            lbl.Visible = True
+        Else
+            Debug.WriteLine($"[DEBUG] -> Cannot find label {name}")
+        End If
     End Sub
 
 
