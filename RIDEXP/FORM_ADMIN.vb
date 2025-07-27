@@ -1,6 +1,8 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.IO
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.Notice
+Imports Windows.Win32.System
 Public Class FORM_ADMIN
 
     Dim connStr As String = "server=localhost;user=root;password=;database=ridexp"
@@ -1048,6 +1050,13 @@ Public Class FORM_ADMIN
         End If
     End Sub
 
+    Dim carId As Integer
+    Dim motorId As Integer ' Fixed typo: was "motorid"
+    Dim imagePath As String = ""
+    Dim imageBytes() As Byte
+    Dim imageName As String
+    Dim hasImageSelected As Boolean = False
+
     Private Sub btnAddCars_Click(sender As Object, e As EventArgs) Handles btnAddCars.Click
         txtAddSeatCapacity.Enabled = False
         pnlAddCars.Location = New Point(127, 92)
@@ -1117,36 +1126,33 @@ Public Class FORM_ADMIN
                     Exit Sub
                 End If
 
-                Dim comm As String = "INSERT INTO cars (car_category_id, make, model_name, year, license_plate, color, mileage, seating_capacity) 
-                  VALUES (@car_category, @make, @model, @year, @license_plate, @color, @mileage, @seating_capacity)"
+                Dim comm = "INSERT INTO cars (car_category_id, make, model_name, year, license_plate, color, mileage, seating_capacity) 
+              VALUES (@car_category, @make, @model, @year, @license_plate, @color, @mileage, @seating_capacity)"
                 Using conn As New MySqlConnection(connStr)
                     conn.Open()
 
                     Using cmd As New MySqlCommand(comm, conn)
                         cmd.Parameters.AddWithValue("@car_category", cbVehicleCategory.SelectedIndex + 1)
-                        cmd.Parameters.AddWithValue("@make", txtAddMake.Text.Trim())
-                        cmd.Parameters.AddWithValue("@model", txtAddModel.Text.Trim())
+                        cmd.Parameters.AddWithValue("@make", txtAddMake.Text.Trim)
+                        cmd.Parameters.AddWithValue("@model", txtAddModel.Text.Trim)
                         cmd.Parameters.AddWithValue("@year", txtAddYear.Text.Trim)
-                        cmd.Parameters.AddWithValue("@license_plate", txtAddPlate.Text.Trim().ToUpper())
-                        cmd.Parameters.AddWithValue("@color", txtAddColor.Text.Trim())
+                        cmd.Parameters.AddWithValue("@license_plate", txtAddPlate.Text.Trim.ToUpper)
+                        cmd.Parameters.AddWithValue("@color", txtAddColor.Text.Trim)
                         cmd.Parameters.AddWithValue("@mileage", addMileage.Text.Trim)
                         cmd.Parameters.AddWithValue("@seating_capacity", txtAddSeatCapacity.Text.Trim)
 
-                        Dim result = cmd.ExecuteNonQuery()
+                        Dim result = cmd.ExecuteNonQuery
 
                         If result > 0 Then
-                            Dim carId As Integer
                             cmd.CommandText = "SELECT LAST_INSERT_ID()"
-                            carId = Convert.ToInt32(cmd.ExecuteScalar())
+                            carId = Convert.ToInt32(cmd.ExecuteScalar) ' Set the class-level variable
 
-                            Dim comm2 As String = "INSERT INTO vehicles (vehicle_type, item_id, status_id) 
-                                VALUES (@vehicle_type, @item_id, @status_id)"
+                            Dim comm2 = "INSERT INTO vehicles (vehicle_type, item_id, status_id) 
+                            VALUES (@vehicle_type, @item_id, @status_id)"
                             Using cmd2 As New MySqlCommand(comm2, conn)
-
-                                Dim vehicleTypeId As Integer = If(cbCategory.SelectedItem = "CARS", 1, 2)
+                                Dim vehicleTypeId = If(cbCategory.SelectedItem = "CARS", 1, 2)
                                 cmd2.Parameters.AddWithValue("@vehicle_type", vehicleTypeId)
                                 cmd2.Parameters.AddWithValue("@item_id", carId)
-
 
                                 If cbStatus IsNot Nothing AndAlso cbStatus.SelectedIndex >= 0 Then
                                     cmd2.Parameters.AddWithValue("@status_id", cbStatus.SelectedIndex + 1)
@@ -1154,26 +1160,44 @@ Public Class FORM_ADMIN
                                     cmd2.Parameters.AddWithValue("@status_id", 1)
                                 End If
 
-                                Dim result2 = cmd2.ExecuteNonQuery()
+                                Dim result2 = cmd2.ExecuteNonQuery
                             End Using
+
+                            ' Only save image if one was selected
+                            If hasImageSelected Then
+                                Dim comm5 As String = "INSERT INTO cars_pic (car_id, image) VALUES (@car_id, @image)"
+                                Using cmd5 As New MySqlCommand(comm5, conn)
+                                    Try
+                                        cmd5.Parameters.AddWithValue("@car_id", carId)
+                                        cmd5.Parameters.AddWithValue("@image", imageName) ' Use imageBytes for consistency
+
+                                        Dim imageResult = cmd5.ExecuteNonQuery()
+                                        If imageResult > 0 Then
+                                            MessageBox.Show("Image saved successfully!")
+                                        Else
+                                            MessageBox.Show("Image not saved - no rows affected!")
+                                        End If
+                                    Catch ex As Exception
+                                        MessageBox.Show($"Image save error: {ex.Message}")
+                                    End Try
+                                End Using
+                            End If
 
                             Dim vehicleId As Integer
                             cmd.CommandText = "SELECT LAST_INSERT_ID()"
-                            vehicleId = Convert.ToInt32(cmd.ExecuteScalar())
+                            vehicleId = Convert.ToInt32(cmd.ExecuteScalar)
 
-                            Dim comm3 As String = "INSERT INTO rental_rate (vehicle_id, rate_per_day, effective_date) 
-                                VALUES (@vehicle_id, @rate_per_day, CURDATE())"
+                            Dim comm3 = "INSERT INTO rental_rate (vehicle_id, rate_per_day, effective_date) 
+                            VALUES (@vehicle_id, @rate_per_day, CURDATE())"
 
                             Using cmd3 As New MySqlCommand(comm3, conn)
                                 cmd3.Parameters.AddWithValue("@vehicle_id", vehicleId)
                                 cmd3.Parameters.AddWithValue("@rate_per_day", rentalRate)
 
-                                Dim result3 = cmd3.ExecuteNonQuery()
+                                Dim result3 = cmd3.ExecuteNonQuery
                                 If result3 > 0 Then
                                     MessageBox.Show("Car added successfully!")
-
                                     pnlInventory_Click(pnlInventory, EventArgs.Empty)
-
                                     ClearForm()
                                 Else
                                     MessageBox.Show("Failed to add rental rate.")
@@ -1186,35 +1210,31 @@ Public Class FORM_ADMIN
                 End Using
 
             ElseIf cbCategory.SelectedItem = "MOTORCYCLES" Then
-
-                Dim comm As String = "INSERT INTO motors (motor_category_id, make, model, year, license_plate, color, mileage) 
-                  VALUES (@motorcycle_category, @make, @model, @year, @license_plate, @color, @mileage)"
+                Dim comm = "INSERT INTO motors (motor_category_id, make, model, year, license_plate, color, mileage) 
+              VALUES (@motorcycle_category, @make, @model, @year, @license_plate, @color, @mileage)"
                 Using conn As New MySqlConnection(connStr)
                     conn.Open()
 
                     Using cmd As New MySqlCommand(comm, conn)
                         cmd.Parameters.AddWithValue("@motorcycle_category", cbVehicleCategory.SelectedIndex + 1)
-                        cmd.Parameters.AddWithValue("@make", txtAddMake.Text.Trim())
-                        cmd.Parameters.AddWithValue("@model", txtAddModel.Text.Trim())
+                        cmd.Parameters.AddWithValue("@make", txtAddMake.Text.Trim)
+                        cmd.Parameters.AddWithValue("@model", txtAddModel.Text.Trim)
                         cmd.Parameters.AddWithValue("@year", txtAddYear.Text.Trim)
-                        cmd.Parameters.AddWithValue("@license_plate", txtAddPlate.Text.Trim().ToUpper())
-                        cmd.Parameters.AddWithValue("@color", txtAddColor.Text.Trim())
+                        cmd.Parameters.AddWithValue("@license_plate", txtAddPlate.Text.Trim.ToUpper)
+                        cmd.Parameters.AddWithValue("@color", txtAddColor.Text.Trim)
                         cmd.Parameters.AddWithValue("@mileage", addMileage.Text.Trim)
 
-                        Dim result = cmd.ExecuteNonQuery()
+                        Dim result = cmd.ExecuteNonQuery
                         If result > 0 Then
-                            Dim motorId As Integer
                             cmd.CommandText = "SELECT LAST_INSERT_ID()"
-                            motorId = Convert.ToInt32(cmd.ExecuteScalar())
+                            motorId = Convert.ToInt32(cmd.ExecuteScalar) ' Set the class-level variable
 
-                            Dim comm2 As String = "INSERT INTO vehicles (vehicle_type, item_id, status_id) 
-                                VALUES (@vehicle_type, @item_id, @status_id)"
+                            Dim comm2 = "INSERT INTO vehicles (vehicle_type, item_id, status_id) 
+                            VALUES (@vehicle_type, @item_id, @status_id)"
                             Using cmd2 As New MySqlCommand(comm2, conn)
-
-                                Dim vehicleTypeId As Integer = If(cbCategory.SelectedItem = "CARS", 1, 2)
+                                Dim vehicleTypeId = If(cbCategory.SelectedItem = "CARS", 1, 2)
                                 cmd2.Parameters.AddWithValue("@vehicle_type", vehicleTypeId)
                                 cmd2.Parameters.AddWithValue("@item_id", motorId)
-
 
                                 If cbStatus IsNot Nothing AndAlso cbStatus.SelectedIndex >= 0 Then
                                     cmd2.Parameters.AddWithValue("@status_id", cbStatus.SelectedIndex + 1)
@@ -1222,24 +1242,42 @@ Public Class FORM_ADMIN
                                     cmd2.Parameters.AddWithValue("@status_id", 1)
                                 End If
 
-                                Dim result2 = cmd2.ExecuteNonQuery()
+                                Dim result2 = cmd2.ExecuteNonQuery
                             End Using
+
+                            If hasImageSelected Then
+                                Dim comm5 As String = "INSERT INTO motors_pic (motor_id, image) VALUES (@motor_id, @image)"
+                                Using cmd5 As New MySqlCommand(comm5, conn)
+                                    Try
+                                        cmd5.Parameters.AddWithValue("@motor_id", motorId)
+                                        cmd5.Parameters.AddWithValue("@image", imageName)
+
+                                        Dim imageResult = cmd5.ExecuteNonQuery()
+                                        If imageResult > 0 Then
+                                            MessageBox.Show("Image saved successfully!")
+                                        Else
+                                            MessageBox.Show("Image not saved - no rows affected!")
+                                        End If
+                                    Catch ex As Exception
+                                        MessageBox.Show($"Image save error: {ex.Message}")
+                                    End Try
+                                End Using
+                            End If
 
                             Dim vehicleId As Integer
                             cmd.CommandText = "SELECT LAST_INSERT_ID()"
-                            vehicleId = Convert.ToInt32(cmd.ExecuteScalar())
+                            vehicleId = Convert.ToInt32(cmd.ExecuteScalar)
 
-                            Dim comm3 As String = "INSERT INTO rental_rate (vehicle_id, rate_per_day, effective_date) 
-                                VALUES (@vehicle_id, @rate_per_day, CURDATE())"
+                            Dim comm3 = "INSERT INTO rental_rate (vehicle_id, rate_per_day, effective_date) 
+                            VALUES (@vehicle_id, @rate_per_day, CURDATE())"
 
                             Using cmd3 As New MySqlCommand(comm3, conn)
                                 cmd3.Parameters.AddWithValue("@vehicle_id", vehicleId)
                                 cmd3.Parameters.AddWithValue("@rate_per_day", rentalRate)
 
-                                Dim result3 = cmd3.ExecuteNonQuery()
+                                Dim result3 = cmd3.ExecuteNonQuery
                                 If result3 > 0 Then
-                                    MessageBox.Show("Car added successfully!")
-
+                                    MessageBox.Show("Motorcycle added successfully!")
                                     pnlInventory_Click(pnlInventory, EventArgs.Empty)
                                     ClearForm()
                                 Else
@@ -1247,7 +1285,7 @@ Public Class FORM_ADMIN
                                 End If
                             End Using
                         Else
-                            MessageBox.Show("Failed to add car.")
+                            MessageBox.Show("Failed to add motorcycle.")
                         End If
                     End Using
                 End Using
@@ -1273,16 +1311,97 @@ Public Class FORM_ADMIN
         addMileage.Clear()
         txtAddSeatCapacity.Clear()
         txtRentalRate.Clear()
+
+        ' Clear image data
+        pbxAddImage.Image = Nothing
+        imagePath = ""
+        imageBytes = Nothing
+        imageName = ""
+        hasImageSelected = False
+        carId = 0
+        motorId = 0
+
         pnlAddCars.Location = New Point(1300, 81)
         cbCategory.Text = "Vehicle Type"
         cbVehicleCategory.Text = "Vehicle Category"
     End Sub
+    Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
+        pnlAddCars.Location = New Point(1300, 81)
+    End Sub
 
-    Private Sub cbStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbStatus.SelectedIndexChanged
+    ' FIXED: Image upload button - just prepare the image, don't save to DB
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles btnUploadImage.Click
+        Dim ofd As New OpenFileDialog()
+        ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp"
+
+        If ofd.ShowDialog() = DialogResult.OK Then
+            Try
+                Dim selectedFilePath As String = ofd.FileName
+
+                ' Ensure Resources folder exists
+                Dim resourcesFolder As String = "C:\Users\Admin\Desktop\3RD SEM\FUNDAMENTALS\VBNET\RIDEXP\RIDEXP\Resources"
+                If Not Directory.Exists(resourcesFolder) Then
+                    Directory.CreateDirectory(resourcesFolder)
+                End If
+
+                ' Copy the selected image to Resources folder
+                Dim fileName As String = Path.GetFileName(selectedFilePath)
+                Dim destPath As String = Path.Combine(resourcesFolder, fileName)
+                File.Copy(selectedFilePath, destPath, True)
+
+                ' Set image data for database storage
+                imagePath = destPath ' Use the copied file path
+                pbxAddImage.Image = Image.FromFile(destPath)
+                imageName = fileName
+                imageBytes = File.ReadAllBytes(destPath)
+                hasImageSelected = True
+
+                MessageBox.Show("Image copied to Resources folder and selected successfully! It will be saved when you add the vehicle.")
+            Catch ex As Exception
+                MessageBox.Show($"Error loading/copying image: {ex.Message}")
+                hasImageSelected = False
+            End Try
+        End If
+
 
     End Sub
 
-    Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
-        pnlAddCars.Location = New Point(1300, 81)
+
+    Private Sub putanginamo_Click(sender As Object, e As EventArgs) Handles putanginamo.Click
+        ' First test - just show a simple message to confirm the event fires
+        MessageBox.Show("Button clicked! Event is working.")
+
+        Try
+            Dim possibleExtensions As String() = {".jpg", ".jpeg", ".png", ".gif", ".bmp"}
+            Dim serviceImage As Image = Nothing
+            Dim imageName As String = "AdobeStock_656858801"
+
+            MessageBox.Show("Starting image search...")
+
+            For Each ext In possibleExtensions
+                Dim imagePath As String = Path.Combine("C:\Users\Admin\Desktop\3RD SEM\FUNDAMENTALS\VBNET\RIDEXP\RIDEXP\Resources", imageName & ext)
+                MessageBox.Show($"Checking path: {imagePath}")
+
+                If File.Exists(imagePath) Then
+                    MessageBox.Show("File exists! Attempting to load...")
+                    serviceImage = Image.FromFile(imagePath)
+                    MessageBox.Show("Image loaded from file!")
+                    Exit For
+                Else
+                    MessageBox.Show("File does not exist at this path.")
+                End If
+            Next
+
+            If serviceImage IsNot Nothing Then
+                MessageBox.Show("Setting image to PictureBox...")
+                picpicbox.Image = serviceImage
+                MessageBox.Show("Image set successfully!")
+            Else
+                MessageBox.Show("No image was loaded - serviceImage is Nothing")
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show($"Error occurred: {ex.Message}")
+        End Try
     End Sub
 End Class

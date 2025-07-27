@@ -22,6 +22,7 @@ Partial Class FORM_ADMIN
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim putanginamo As Button
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
@@ -75,6 +76,8 @@ Partial Class FORM_ADMIN
         dgvRentals = New DataGridView()
         pnlcarinventory = New Panel()
         pnlAddCars = New Panel()
+        pbxAddImage = New PictureBox()
+        btnUploadImage = New Button()
         Panel52 = New Panel()
         txtRentalRate = New TextBox()
         Panel57 = New Panel()
@@ -165,9 +168,9 @@ Partial Class FORM_ADMIN
         PictureBox6 = New PictureBox()
         Label26 = New Label()
         txtbxMaintenance = New TextBox()
-        dgvMaintenance = New DataGridView()
         Panel17 = New Panel()
         Label32 = New Label()
+        dgvMaintenance = New DataGridView()
         pnlSaleContent = New Panel()
         Panel32 = New Panel()
         PictureBox21 = New PictureBox()
@@ -191,19 +194,6 @@ Partial Class FORM_ADMIN
         Panel25 = New Panel()
         Label41 = New Label()
         pnlUsersContent = New Panel()
-        pnlAddPenalty = New Panel()
-        Panel50 = New Panel()
-        cbPenaltyType = New ComboBox()
-        Panel34 = New Panel()
-        txtPenaltyAmount = New TextBox()
-        Button9 = New Button()
-        Panel54 = New Panel()
-        cbPenaltyDescription = New ComboBox()
-        Panel55 = New Panel()
-        txtPenaltyRentalID = New TextBox()
-        Label23 = New Label()
-        Panel56 = New Panel()
-        Label25 = New Label()
         Button8 = New Button()
         Button7 = New Button()
         Panel31 = New Panel()
@@ -225,6 +215,19 @@ Partial Class FORM_ADMIN
         Button10 = New Button()
         Panel46 = New Panel()
         ComboBox2 = New ComboBox()
+        pnlAddPenalty = New Panel()
+        Panel50 = New Panel()
+        cbPenaltyType = New ComboBox()
+        Panel34 = New Panel()
+        txtPenaltyAmount = New TextBox()
+        Button9 = New Button()
+        Panel54 = New Panel()
+        cbPenaltyDescription = New ComboBox()
+        Panel55 = New Panel()
+        txtPenaltyRentalID = New TextBox()
+        Label23 = New Label()
+        Panel56 = New Panel()
+        Label25 = New Label()
         pnlUsersEditUser = New Panel()
         Panel45 = New Panel()
         btnEditUser = New Button()
@@ -249,6 +252,9 @@ Partial Class FORM_ADMIN
         Label3 = New Label()
         Panel35 = New Panel()
         Label20 = New Label()
+        OpenFileDialog1 = New OpenFileDialog()
+        picpicbox = New PictureBox()
+        putanginamo = New Button()
         Panel1.SuspendLayout()
         pnlUsers.SuspendLayout()
         CType(iconUsers, ComponentModel.ISupportInitialize).BeginInit()
@@ -278,6 +284,7 @@ Partial Class FORM_ADMIN
         CType(dgvRentals, ComponentModel.ISupportInitialize).BeginInit()
         pnlcarinventory.SuspendLayout()
         pnlAddCars.SuspendLayout()
+        CType(pbxAddImage, ComponentModel.ISupportInitialize).BeginInit()
         Panel52.SuspendLayout()
         Panel57.SuspendLayout()
         Panel51.SuspendLayout()
@@ -320,8 +327,8 @@ Partial Class FORM_ADMIN
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         Panel16.SuspendLayout()
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
-        CType(dgvMaintenance, ComponentModel.ISupportInitialize).BeginInit()
         Panel17.SuspendLayout()
+        CType(dgvMaintenance, ComponentModel.ISupportInitialize).BeginInit()
         pnlSaleContent.SuspendLayout()
         Panel32.SuspendLayout()
         CType(PictureBox21, ComponentModel.ISupportInitialize).BeginInit()
@@ -334,12 +341,6 @@ Partial Class FORM_ADMIN
         CType(dgvSales, ComponentModel.ISupportInitialize).BeginInit()
         Panel25.SuspendLayout()
         pnlUsersContent.SuspendLayout()
-        pnlAddPenalty.SuspendLayout()
-        Panel50.SuspendLayout()
-        Panel34.SuspendLayout()
-        Panel54.SuspendLayout()
-        Panel55.SuspendLayout()
-        Panel56.SuspendLayout()
         Panel31.SuspendLayout()
         CType(PictureBox20, ComponentModel.ISupportInitialize).BeginInit()
         Panel30.SuspendLayout()
@@ -349,6 +350,12 @@ Partial Class FORM_ADMIN
         CType(dgvAllUSERS, ComponentModel.ISupportInitialize).BeginInit()
         Panel29.SuspendLayout()
         Panel46.SuspendLayout()
+        pnlAddPenalty.SuspendLayout()
+        Panel50.SuspendLayout()
+        Panel34.SuspendLayout()
+        Panel54.SuspendLayout()
+        Panel55.SuspendLayout()
+        Panel56.SuspendLayout()
         pnlUsersEditUser.SuspendLayout()
         Panel44.SuspendLayout()
         Panel43.SuspendLayout()
@@ -360,7 +367,17 @@ Partial Class FORM_ADMIN
         Panel37.SuspendLayout()
         Panel36.SuspendLayout()
         Panel35.SuspendLayout()
+        CType(picpicbox, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
+        ' 
+        ' putanginamo
+        ' 
+        putanginamo.Location = New Point(293, 271)
+        putanginamo.Name = "putanginamo"
+        putanginamo.Size = New Size(94, 29)
+        putanginamo.TabIndex = 22
+        putanginamo.Text = "Button11"
+        putanginamo.UseVisualStyleBackColor = True
         ' 
         ' Panel1
         ' 
@@ -376,7 +393,7 @@ Partial Class FORM_ADMIN
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(290, 673)
+        Panel1.Size = New Size(290, 1055)
         Panel1.TabIndex = 0
         ' 
         ' pnlUsers
@@ -595,7 +612,7 @@ Partial Class FORM_ADMIN
         Panel8.Dock = DockStyle.Top
         Panel8.Location = New Point(290, 0)
         Panel8.Name = "Panel8"
-        Panel8.Size = New Size(1292, 75)
+        Panel8.Size = New Size(1634, 75)
         Panel8.TabIndex = 1
         ' 
         ' Button6
@@ -843,7 +860,7 @@ Partial Class FORM_ADMIN
         pnlAllDashboard.Controls.Add(Panel11)
         pnlAllDashboard.Controls.Add(Panel10)
         pnlAllDashboard.Controls.Add(Panel9)
-        pnlAllDashboard.Location = New Point(1300, 100)
+        pnlAllDashboard.Location = New Point(1300, 80)
         pnlAllDashboard.Name = "pnlAllDashboard"
         pnlAllDashboard.Size = New Size(949, 564)
         pnlAllDashboard.TabIndex = 13
@@ -899,7 +916,7 @@ Partial Class FORM_ADMIN
         pnlcarinventory.Controls.Add(txtbxInventory)
         pnlcarinventory.Controls.Add(dgvVehicles)
         pnlcarinventory.Controls.Add(Panel4)
-        pnlcarinventory.Location = New Point(321, 104)
+        pnlcarinventory.Location = New Point(302, 93)
         pnlcarinventory.Name = "pnlcarinventory"
         pnlcarinventory.Size = New Size(915, 564)
         pnlcarinventory.TabIndex = 14
@@ -909,6 +926,8 @@ Partial Class FORM_ADMIN
         pnlAddCars.AutoScroll = True
         pnlAddCars.BackColor = Color.White
         pnlAddCars.BorderStyle = BorderStyle.FixedSingle
+        pnlAddCars.Controls.Add(pbxAddImage)
+        pnlAddCars.Controls.Add(btnUploadImage)
         pnlAddCars.Controls.Add(Panel52)
         pnlAddCars.Controls.Add(Panel57)
         pnlAddCars.Controls.Add(Panel51)
@@ -924,10 +943,33 @@ Partial Class FORM_ADMIN
         pnlAddCars.Controls.Add(Panel60)
         pnlAddCars.Controls.Add(Label27)
         pnlAddCars.Controls.Add(Panel62)
-        pnlAddCars.Location = New Point(1300, 128)
+        pnlAddCars.Location = New Point(108, 131)
         pnlAddCars.Name = "pnlAddCars"
         pnlAddCars.Size = New Size(670, 372)
         pnlAddCars.TabIndex = 20
+        ' 
+        ' pbxAddImage
+        ' 
+        pbxAddImage.BorderStyle = BorderStyle.FixedSingle
+        pbxAddImage.Location = New Point(53, 506)
+        pbxAddImage.Name = "pbxAddImage"
+        pbxAddImage.Size = New Size(355, 198)
+        pbxAddImage.SizeMode = PictureBoxSizeMode.StretchImage
+        pbxAddImage.TabIndex = 19
+        pbxAddImage.TabStop = False
+        ' 
+        ' btnUploadImage
+        ' 
+        btnUploadImage.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnUploadImage.Cursor = Cursors.Hand
+        btnUploadImage.Font = New Font("Futura Hv BT", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnUploadImage.ForeColor = Color.White
+        btnUploadImage.Location = New Point(52, 722)
+        btnUploadImage.Name = "btnUploadImage"
+        btnUploadImage.Size = New Size(211, 35)
+        btnUploadImage.TabIndex = 18
+        btnUploadImage.Text = "UPLOAD IMAGE"
+        btnUploadImage.UseVisualStyleBackColor = False
         ' 
         ' Panel52
         ' 
@@ -991,7 +1033,7 @@ Partial Class FORM_ADMIN
         Button5.Cursor = Cursors.Hand
         Button5.Font = New Font("Futura Hv BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button5.ForeColor = Color.White
-        Button5.Location = New Point(245, 566)
+        Button5.Location = New Point(245, 840)
         Button5.Name = "Button5"
         Button5.Size = New Size(199, 47)
         Button5.TabIndex = 12
@@ -1057,7 +1099,7 @@ Partial Class FORM_ADMIN
         ' 
         ' Panel48
         ' 
-        Panel48.Location = New Point(53, 590)
+        Panel48.Location = New Point(53, 864)
         Panel48.Name = "Panel48"
         Panel48.Size = New Size(567, 46)
         Panel48.TabIndex = 13
@@ -1465,7 +1507,7 @@ Partial Class FORM_ADMIN
         pnlRentalContent.Controls.Add(txtbxRental)
         pnlRentalContent.Controls.Add(dgvRentals2)
         pnlRentalContent.Controls.Add(Panel20)
-        pnlRentalContent.Location = New Point(1300, 97)
+        pnlRentalContent.Location = New Point(1300, 80)
         pnlRentalContent.Name = "pnlRentalContent"
         pnlRentalContent.Size = New Size(915, 564)
         pnlRentalContent.TabIndex = 15
@@ -1677,9 +1719,9 @@ Partial Class FORM_ADMIN
         pnlMaintenanceContent.Controls.Add(Button3)
         pnlMaintenanceContent.Controls.Add(Panel16)
         pnlMaintenanceContent.Controls.Add(txtbxMaintenance)
-        pnlMaintenanceContent.Controls.Add(dgvMaintenance)
         pnlMaintenanceContent.Controls.Add(Panel17)
-        pnlMaintenanceContent.Location = New Point(1300, 97)
+        pnlMaintenanceContent.Controls.Add(dgvMaintenance)
+        pnlMaintenanceContent.Location = New Point(1300, 80)
         pnlMaintenanceContent.Name = "pnlMaintenanceContent"
         pnlMaintenanceContent.Size = New Size(943, 564)
         pnlMaintenanceContent.TabIndex = 16
@@ -1877,16 +1919,6 @@ Partial Class FORM_ADMIN
         txtbxMaintenance.Size = New Size(231, 31)
         txtbxMaintenance.TabIndex = 14
         ' 
-        ' dgvMaintenance
-        ' 
-        dgvMaintenance.BackgroundColor = Color.White
-        dgvMaintenance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvMaintenance.Location = New Point(25, 233)
-        dgvMaintenance.Name = "dgvMaintenance"
-        dgvMaintenance.RowHeadersWidth = 51
-        dgvMaintenance.Size = New Size(885, 317)
-        dgvMaintenance.TabIndex = 13
-        ' 
         ' Panel17
         ' 
         Panel17.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
@@ -1907,6 +1939,16 @@ Partial Class FORM_ADMIN
         Label32.TabIndex = 7
         Label32.Text = "VEHICLE MAINTENANCE"
         ' 
+        ' dgvMaintenance
+        ' 
+        dgvMaintenance.BackgroundColor = Color.White
+        dgvMaintenance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvMaintenance.Location = New Point(25, 233)
+        dgvMaintenance.Name = "dgvMaintenance"
+        dgvMaintenance.RowHeadersWidth = 51
+        dgvMaintenance.Size = New Size(885, 317)
+        dgvMaintenance.TabIndex = 13
+        ' 
         ' pnlSaleContent
         ' 
         pnlSaleContent.Controls.Add(Panel32)
@@ -1917,7 +1959,7 @@ Partial Class FORM_ADMIN
         pnlSaleContent.Controls.Add(txtbxSales)
         pnlSaleContent.Controls.Add(dgvSales)
         pnlSaleContent.Controls.Add(Panel25)
-        pnlSaleContent.Location = New Point(1300, 91)
+        pnlSaleContent.Location = New Point(1300, 80)
         pnlSaleContent.Name = "pnlSaleContent"
         pnlSaleContent.Size = New Size(915, 564)
         pnlSaleContent.TabIndex = 17
@@ -2147,7 +2189,6 @@ Partial Class FORM_ADMIN
         ' 
         ' pnlUsersContent
         ' 
-        pnlUsersContent.Controls.Add(pnlAddPenalty)
         pnlUsersContent.Controls.Add(Button8)
         pnlUsersContent.Controls.Add(Button7)
         pnlUsersContent.Controls.Add(Panel31)
@@ -2158,146 +2199,10 @@ Partial Class FORM_ADMIN
         pnlUsersContent.Controls.Add(Panel29)
         pnlUsersContent.Controls.Add(Button10)
         pnlUsersContent.Controls.Add(Panel46)
-        pnlUsersContent.Location = New Point(1300, 105)
+        pnlUsersContent.Location = New Point(1300, 80)
         pnlUsersContent.Name = "pnlUsersContent"
         pnlUsersContent.Size = New Size(915, 564)
         pnlUsersContent.TabIndex = 18
-        ' 
-        ' pnlAddPenalty
-        ' 
-        pnlAddPenalty.AutoScroll = True
-        pnlAddPenalty.BackColor = Color.White
-        pnlAddPenalty.BorderStyle = BorderStyle.FixedSingle
-        pnlAddPenalty.Controls.Add(Panel50)
-        pnlAddPenalty.Controls.Add(Panel34)
-        pnlAddPenalty.Controls.Add(Button9)
-        pnlAddPenalty.Controls.Add(Panel54)
-        pnlAddPenalty.Controls.Add(Panel55)
-        pnlAddPenalty.Controls.Add(Label23)
-        pnlAddPenalty.Controls.Add(Panel56)
-        pnlAddPenalty.Location = New Point(6, 155)
-        pnlAddPenalty.Name = "pnlAddPenalty"
-        pnlAddPenalty.Size = New Size(670, 337)
-        pnlAddPenalty.TabIndex = 20
-        ' 
-        ' Panel50
-        ' 
-        Panel50.BorderStyle = BorderStyle.FixedSingle
-        Panel50.Controls.Add(cbPenaltyType)
-        Panel50.Location = New Point(254, 122)
-        Panel50.Name = "Panel50"
-        Panel50.Size = New Size(170, 46)
-        Panel50.TabIndex = 4
-        ' 
-        ' cbPenaltyType
-        ' 
-        cbPenaltyType.FlatStyle = FlatStyle.Flat
-        cbPenaltyType.Font = New Font("Futura Bk BT", 10.2F)
-        cbPenaltyType.FormattingEnabled = True
-        cbPenaltyType.Location = New Point(14, 9)
-        cbPenaltyType.Name = "cbPenaltyType"
-        cbPenaltyType.Size = New Size(151, 28)
-        cbPenaltyType.TabIndex = 3
-        ' 
-        ' Panel34
-        ' 
-        Panel34.BorderStyle = BorderStyle.FixedSingle
-        Panel34.Controls.Add(txtPenaltyAmount)
-        Panel34.Location = New Point(52, 252)
-        Panel34.Name = "Panel34"
-        Panel34.Size = New Size(245, 46)
-        Panel34.TabIndex = 5
-        ' 
-        ' txtPenaltyAmount
-        ' 
-        txtPenaltyAmount.BorderStyle = BorderStyle.None
-        txtPenaltyAmount.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtPenaltyAmount.Location = New Point(15, 12)
-        txtPenaltyAmount.Name = "txtPenaltyAmount"
-        txtPenaltyAmount.Size = New Size(210, 21)
-        txtPenaltyAmount.TabIndex = 2
-        ' 
-        ' Button9
-        ' 
-        Button9.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button9.Cursor = Cursors.Hand
-        Button9.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button9.ForeColor = Color.White
-        Button9.Location = New Point(319, 252)
-        Button9.Name = "Button9"
-        Button9.Size = New Size(199, 47)
-        Button9.TabIndex = 12
-        Button9.Text = "SUBMIT"
-        Button9.UseVisualStyleBackColor = False
-        ' 
-        ' Panel54
-        ' 
-        Panel54.BorderStyle = BorderStyle.FixedSingle
-        Panel54.Controls.Add(cbPenaltyDescription)
-        Panel54.Location = New Point(52, 190)
-        Panel54.Name = "Panel54"
-        Panel54.Size = New Size(525, 46)
-        Panel54.TabIndex = 4
-        ' 
-        ' cbPenaltyDescription
-        ' 
-        cbPenaltyDescription.FlatStyle = FlatStyle.Flat
-        cbPenaltyDescription.Font = New Font("Futura Bk BT", 10.2F)
-        cbPenaltyDescription.FormattingEnabled = True
-        cbPenaltyDescription.Location = New Point(18, 9)
-        cbPenaltyDescription.Name = "cbPenaltyDescription"
-        cbPenaltyDescription.Size = New Size(502, 28)
-        cbPenaltyDescription.TabIndex = 4
-        ' 
-        ' Panel55
-        ' 
-        Panel55.BorderStyle = BorderStyle.FixedSingle
-        Panel55.Controls.Add(txtPenaltyRentalID)
-        Panel55.Location = New Point(52, 122)
-        Panel55.Name = "Panel55"
-        Panel55.Size = New Size(170, 46)
-        Panel55.TabIndex = 3
-        ' 
-        ' txtPenaltyRentalID
-        ' 
-        txtPenaltyRentalID.BorderStyle = BorderStyle.None
-        txtPenaltyRentalID.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtPenaltyRentalID.Location = New Point(20, 12)
-        txtPenaltyRentalID.Name = "txtPenaltyRentalID"
-        txtPenaltyRentalID.Size = New Size(125, 21)
-        txtPenaltyRentalID.TabIndex = 2
-        ' 
-        ' Label23
-        ' 
-        Label23.AutoSize = True
-        Label23.Font = New Font("Futura Hv BT", 22.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label23.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label23.Location = New Point(189, 57)
-        Label23.Name = "Label23"
-        Label23.Size = New Size(272, 45)
-        Label23.TabIndex = 1
-        Label23.Text = "ADD PENALTY"
-        ' 
-        ' Panel56
-        ' 
-        Panel56.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Panel56.Controls.Add(Label25)
-        Panel56.Dock = DockStyle.Top
-        Panel56.Location = New Point(0, 0)
-        Panel56.Name = "Panel56"
-        Panel56.Size = New Size(668, 40)
-        Panel56.TabIndex = 0
-        ' 
-        ' Label25
-        ' 
-        Label25.AutoSize = True
-        Label25.Font = New Font("Futura XBlk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label25.ForeColor = Color.White
-        Label25.Location = New Point(15, 9)
-        Label25.Name = "Label25"
-        Label25.Size = New Size(24, 24)
-        Label25.TabIndex = 14
-        Label25.Text = "X"
         ' 
         ' Button8
         ' 
@@ -2526,6 +2431,142 @@ Partial Class FORM_ADMIN
         ComboBox2.Size = New Size(154, 26)
         ComboBox2.TabIndex = 3
         ' 
+        ' pnlAddPenalty
+        ' 
+        pnlAddPenalty.AutoScroll = True
+        pnlAddPenalty.BackColor = Color.White
+        pnlAddPenalty.BorderStyle = BorderStyle.FixedSingle
+        pnlAddPenalty.Controls.Add(Panel50)
+        pnlAddPenalty.Controls.Add(Panel34)
+        pnlAddPenalty.Controls.Add(Button9)
+        pnlAddPenalty.Controls.Add(Panel54)
+        pnlAddPenalty.Controls.Add(Panel55)
+        pnlAddPenalty.Controls.Add(Label23)
+        pnlAddPenalty.Controls.Add(Panel56)
+        pnlAddPenalty.Location = New Point(1296, 546)
+        pnlAddPenalty.Name = "pnlAddPenalty"
+        pnlAddPenalty.Size = New Size(670, 337)
+        pnlAddPenalty.TabIndex = 20
+        ' 
+        ' Panel50
+        ' 
+        Panel50.BorderStyle = BorderStyle.FixedSingle
+        Panel50.Controls.Add(cbPenaltyType)
+        Panel50.Location = New Point(254, 122)
+        Panel50.Name = "Panel50"
+        Panel50.Size = New Size(170, 46)
+        Panel50.TabIndex = 4
+        ' 
+        ' cbPenaltyType
+        ' 
+        cbPenaltyType.FlatStyle = FlatStyle.Flat
+        cbPenaltyType.Font = New Font("Futura Bk BT", 10.2F)
+        cbPenaltyType.FormattingEnabled = True
+        cbPenaltyType.Location = New Point(14, 9)
+        cbPenaltyType.Name = "cbPenaltyType"
+        cbPenaltyType.Size = New Size(151, 28)
+        cbPenaltyType.TabIndex = 3
+        ' 
+        ' Panel34
+        ' 
+        Panel34.BorderStyle = BorderStyle.FixedSingle
+        Panel34.Controls.Add(txtPenaltyAmount)
+        Panel34.Location = New Point(52, 252)
+        Panel34.Name = "Panel34"
+        Panel34.Size = New Size(245, 46)
+        Panel34.TabIndex = 5
+        ' 
+        ' txtPenaltyAmount
+        ' 
+        txtPenaltyAmount.BorderStyle = BorderStyle.None
+        txtPenaltyAmount.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtPenaltyAmount.Location = New Point(15, 12)
+        txtPenaltyAmount.Name = "txtPenaltyAmount"
+        txtPenaltyAmount.Size = New Size(210, 21)
+        txtPenaltyAmount.TabIndex = 2
+        ' 
+        ' Button9
+        ' 
+        Button9.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button9.Cursor = Cursors.Hand
+        Button9.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button9.ForeColor = Color.White
+        Button9.Location = New Point(319, 252)
+        Button9.Name = "Button9"
+        Button9.Size = New Size(199, 47)
+        Button9.TabIndex = 12
+        Button9.Text = "SUBMIT"
+        Button9.UseVisualStyleBackColor = False
+        ' 
+        ' Panel54
+        ' 
+        Panel54.BorderStyle = BorderStyle.FixedSingle
+        Panel54.Controls.Add(cbPenaltyDescription)
+        Panel54.Location = New Point(52, 190)
+        Panel54.Name = "Panel54"
+        Panel54.Size = New Size(525, 46)
+        Panel54.TabIndex = 4
+        ' 
+        ' cbPenaltyDescription
+        ' 
+        cbPenaltyDescription.FlatStyle = FlatStyle.Flat
+        cbPenaltyDescription.Font = New Font("Futura Bk BT", 10.2F)
+        cbPenaltyDescription.FormattingEnabled = True
+        cbPenaltyDescription.Location = New Point(18, 9)
+        cbPenaltyDescription.Name = "cbPenaltyDescription"
+        cbPenaltyDescription.Size = New Size(502, 28)
+        cbPenaltyDescription.TabIndex = 4
+        ' 
+        ' Panel55
+        ' 
+        Panel55.BorderStyle = BorderStyle.FixedSingle
+        Panel55.Controls.Add(txtPenaltyRentalID)
+        Panel55.Location = New Point(52, 122)
+        Panel55.Name = "Panel55"
+        Panel55.Size = New Size(170, 46)
+        Panel55.TabIndex = 3
+        ' 
+        ' txtPenaltyRentalID
+        ' 
+        txtPenaltyRentalID.BorderStyle = BorderStyle.None
+        txtPenaltyRentalID.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtPenaltyRentalID.Location = New Point(20, 12)
+        txtPenaltyRentalID.Name = "txtPenaltyRentalID"
+        txtPenaltyRentalID.Size = New Size(125, 21)
+        txtPenaltyRentalID.TabIndex = 2
+        ' 
+        ' Label23
+        ' 
+        Label23.AutoSize = True
+        Label23.Font = New Font("Futura Hv BT", 22.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label23.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label23.Location = New Point(189, 57)
+        Label23.Name = "Label23"
+        Label23.Size = New Size(272, 45)
+        Label23.TabIndex = 1
+        Label23.Text = "ADD PENALTY"
+        ' 
+        ' Panel56
+        ' 
+        Panel56.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Panel56.Controls.Add(Label25)
+        Panel56.Dock = DockStyle.Top
+        Panel56.Location = New Point(0, 0)
+        Panel56.Name = "Panel56"
+        Panel56.Size = New Size(668, 40)
+        Panel56.TabIndex = 0
+        ' 
+        ' Label25
+        ' 
+        Label25.AutoSize = True
+        Label25.Font = New Font("Futura XBlk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label25.ForeColor = Color.White
+        Label25.Location = New Point(15, 9)
+        Label25.Name = "Label25"
+        Label25.Size = New Size(24, 24)
+        Label25.TabIndex = 14
+        Label25.Text = "X"
+        ' 
         ' pnlUsersEditUser
         ' 
         pnlUsersEditUser.AutoScroll = True
@@ -2544,7 +2585,7 @@ Partial Class FORM_ADMIN
         pnlUsersEditUser.Controls.Add(Panel36)
         pnlUsersEditUser.Controls.Add(Label3)
         pnlUsersEditUser.Controls.Add(Panel35)
-        pnlUsersEditUser.Location = New Point(1300, 127)
+        pnlUsersEditUser.Location = New Point(1300, 80)
         pnlUsersEditUser.Name = "pnlUsersEditUser"
         pnlUsersEditUser.Size = New Size(670, 337)
         pnlUsersEditUser.TabIndex = 19
@@ -2763,21 +2804,38 @@ Partial Class FORM_ADMIN
         Label20.TabIndex = 14
         Label20.Text = "X"
         ' 
+        ' OpenFileDialog1
+        ' 
+        OpenFileDialog1.FileName = "OpenFileDialog1"
+        ' 
+        ' picpicbox
+        ' 
+        picpicbox.BorderStyle = BorderStyle.FixedSingle
+        picpicbox.Location = New Point(299, 87)
+        picpicbox.Name = "picpicbox"
+        picpicbox.Size = New Size(630, 157)
+        picpicbox.SizeMode = PictureBoxSizeMode.StretchImage
+        picpicbox.TabIndex = 21
+        picpicbox.TabStop = False
+        ' 
         ' FORM_ADMIN
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Gainsboro
-        ClientSize = New Size(1582, 673)
+        ClientSize = New Size(1924, 1055)
+        Controls.Add(picpicbox)
+        Controls.Add(putanginamo)
+        Controls.Add(pnlAllDashboard)
+        Controls.Add(pnlRentalContent)
+        Controls.Add(pnlMaintenanceContent)
         Controls.Add(Panel8)
         Controls.Add(Panel1)
-        Controls.Add(pnlcarinventory)
         Controls.Add(pnlUsersContent)
         Controls.Add(pnlSaleContent)
+        Controls.Add(pnlcarinventory)
         Controls.Add(pnlUsersEditUser)
-        Controls.Add(pnlAllDashboard)
-        Controls.Add(pnlMaintenanceContent)
-        Controls.Add(pnlRentalContent)
+        Controls.Add(pnlAddPenalty)
         Name = "FORM_ADMIN"
         StartPosition = FormStartPosition.CenterScreen
         Text = "FORM_ADMIN"
@@ -2826,6 +2884,7 @@ Partial Class FORM_ADMIN
         pnlcarinventory.PerformLayout()
         pnlAddCars.ResumeLayout(False)
         pnlAddCars.PerformLayout()
+        CType(pbxAddImage, ComponentModel.ISupportInitialize).EndInit()
         Panel52.ResumeLayout(False)
         Panel52.PerformLayout()
         Panel57.ResumeLayout(False)
@@ -2892,9 +2951,9 @@ Partial Class FORM_ADMIN
         Panel16.ResumeLayout(False)
         Panel16.PerformLayout()
         CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
-        CType(dgvMaintenance, ComponentModel.ISupportInitialize).EndInit()
         Panel17.ResumeLayout(False)
         Panel17.PerformLayout()
+        CType(dgvMaintenance, ComponentModel.ISupportInitialize).EndInit()
         pnlSaleContent.ResumeLayout(False)
         pnlSaleContent.PerformLayout()
         Panel32.ResumeLayout(False)
@@ -2914,16 +2973,6 @@ Partial Class FORM_ADMIN
         Panel25.PerformLayout()
         pnlUsersContent.ResumeLayout(False)
         pnlUsersContent.PerformLayout()
-        pnlAddPenalty.ResumeLayout(False)
-        pnlAddPenalty.PerformLayout()
-        Panel50.ResumeLayout(False)
-        Panel34.ResumeLayout(False)
-        Panel34.PerformLayout()
-        Panel54.ResumeLayout(False)
-        Panel55.ResumeLayout(False)
-        Panel55.PerformLayout()
-        Panel56.ResumeLayout(False)
-        Panel56.PerformLayout()
         Panel31.ResumeLayout(False)
         Panel31.PerformLayout()
         CType(PictureBox20, ComponentModel.ISupportInitialize).EndInit()
@@ -2937,6 +2986,16 @@ Partial Class FORM_ADMIN
         Panel29.ResumeLayout(False)
         Panel29.PerformLayout()
         Panel46.ResumeLayout(False)
+        pnlAddPenalty.ResumeLayout(False)
+        pnlAddPenalty.PerformLayout()
+        Panel50.ResumeLayout(False)
+        Panel34.ResumeLayout(False)
+        Panel34.PerformLayout()
+        Panel54.ResumeLayout(False)
+        Panel55.ResumeLayout(False)
+        Panel55.PerformLayout()
+        Panel56.ResumeLayout(False)
+        Panel56.PerformLayout()
         pnlUsersEditUser.ResumeLayout(False)
         pnlUsersEditUser.PerformLayout()
         Panel44.ResumeLayout(False)
@@ -2959,6 +3018,7 @@ Partial Class FORM_ADMIN
         Panel36.PerformLayout()
         Panel35.ResumeLayout(False)
         Panel35.PerformLayout()
+        CType(picpicbox, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -3188,4 +3248,9 @@ Partial Class FORM_ADMIN
     Friend WithEvents cbStatus As ComboBox
     Friend WithEvents Panel52 As Panel
     Friend WithEvents txtRentalRate As TextBox
+    Friend WithEvents btnUploadImage As Button
+    Friend WithEvents pbxAddImage As PictureBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents picpicbox As PictureBox
+    Friend WithEvents putanginamo As Button
 End Class
