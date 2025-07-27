@@ -566,7 +566,7 @@ Public Class FORM_ADMIN
 
     Private Sub pnlDashboard_Click(sender As Object, e As EventArgs) Handles pnlDashboard.Click
         ClickDashboard()
-        LoadTableRentals(dgvRentals)
+        cbVehicle.SelectedItem = "ALL"
         LoadTotalRentals(lblDashRentals)
         LoadTotalUsers(lblDashUsers)
         LoadTotalIncome(lblDashIncome)
@@ -579,6 +579,8 @@ Public Class FORM_ADMIN
         LoadTotalAvailableCars(lblInventoryAvailable)
         LoadTotalMaintenance(lblInventoryMaintenance)
         LoadTotalDamaged(lblInventoryDamaged)
+        cbVehicle.SelectedItem = "ALL"
+        pnlAddCars.Location = New Point(1300, 97)
     End Sub
 
     Private Sub pnlRentals_Click(sender As Object, e As EventArgs) Handles pnlRentals.Click
@@ -1001,5 +1003,286 @@ Public Class FORM_ADMIN
             End Try
         End Using
 
+    End Sub
+
+    Dim carCategory() As String = {"Compact Sedan CVT", "MPV Automatic", "SUV Diesel Automatic", "SUV Gasoline Automatic", "Hatchback CVT", "Hybrid CVT"}
+    Dim motorcycleCategory() As String = {"Scooter CVT", "Underbone Semi-Auto", "Adventure CVT"}
+    Dim valueCarCategory As Integer = 0
+    Dim valueMotorcycleCategory As Integer = 0
+
+    Private Sub cbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCategory.SelectedIndexChanged
+
+        cbVehicleCategory.Items.Clear()
+
+        If cbCategory.SelectedItem IsNot Nothing Then
+            If cbCategory.SelectedItem.ToString() = "CARS" Then
+                For Each item In carCategory
+                    cbVehicleCategory.Items.Add(item)
+                Next
+                cbVehicleCategory.Enabled = True
+            ElseIf cbCategory.SelectedItem.ToString() = "MOTORCYCLES" Then
+                For Each item In motorcycleCategory
+                    cbVehicleCategory.Items.Add(item)
+                Next
+                cbVehicleCategory.Enabled = True
+                txtAddSeatCapacity.Enabled = False
+                txtAddSeatCapacity.Clear()
+            End If
+        Else
+            cbVehicleCategory.Enabled = False
+        End If
+
+        cbVehicleCategory.SelectedIndex = -1
+        cbVehicleCategory.Text = "Select Category"
+
+    End Sub
+
+    Private Sub cbVehicleCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbVehicleCategory.SelectedIndexChanged
+        If cbVehicleCategory.SelectedItem IsNot Nothing Then
+            If cbCategory.SelectedItem = "CARS" Then
+                txtAddSeatCapacity.Enabled = True
+            ElseIf cbCategory.SelectedItem = "MOTORCYCLES" Then
+                txtAddSeatCapacity.Enabled = False
+                txtAddSeatCapacity.Clear()
+            End If
+        End If
+    End Sub
+
+    Private Sub btnAddCars_Click(sender As Object, e As EventArgs) Handles btnAddCars.Click
+        txtAddSeatCapacity.Enabled = False
+        pnlAddCars.Location = New Point(127, 92)
+
+        txtAddMake.PlaceholderText = "Input Make"
+        txtAddModel.PlaceholderText = "Input Model"
+        txtAddYear.PlaceholderText = "Input Year"
+        txtAddPlate.PlaceholderText = "Input License Plate"
+        txtAddColor.PlaceholderText = "Input Color"
+        txtRentalRate.PlaceholderText = "Input Rental Rate"
+        addMileage.PlaceholderText = "Input Mileage"
+        txtAddSeatCapacity.PlaceholderText = "Input Seat Capacity"
+
+        cbCategory.Text = "Vehicle Type"
+        cbVehicleCategory.Text = "Vehicle Category"
+
+        cbCategory.SelectedIndex = -1
+        cbVehicleCategory.SelectedIndex = -1
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        If cbCategory.SelectedIndex = -1 Then
+            MessageBox.Show("Please select a vehicle type.")
+            Exit Sub
+        End If
+
+        If cbVehicleCategory.SelectedIndex = -1 Then
+            MessageBox.Show("Please select a vehicle category.")
+            Exit Sub
+        End If
+
+        If String.IsNullOrWhiteSpace(txtAddMake.Text) OrElse
+       String.IsNullOrWhiteSpace(txtAddModel.Text) OrElse
+       String.IsNullOrWhiteSpace(txtAddYear.Text) OrElse
+       String.IsNullOrWhiteSpace(txtAddPlate.Text) OrElse
+       String.IsNullOrWhiteSpace(txtAddColor.Text) OrElse
+       String.IsNullOrWhiteSpace(addMileage.Text) OrElse
+       String.IsNullOrWhiteSpace(txtRentalRate.Text) Then
+            MessageBox.Show("Please fill in all required fields.")
+            Exit Sub
+        End If
+
+        Dim year As Integer
+        Dim mileage As Decimal
+        Dim rentalRate As Decimal
+
+        If Not Integer.TryParse(txtAddYear.Text, year) Then
+            MessageBox.Show("Please enter a valid year.")
+            Exit Sub
+        End If
+
+        If Not Decimal.TryParse(addMileage.Text, mileage) Then
+            MessageBox.Show("Please enter a valid mileage.")
+            Exit Sub
+        End If
+
+        If Not Decimal.TryParse(txtRentalRate.Text, rentalRate) Then
+            MessageBox.Show("Please enter a valid rental rate.")
+            Exit Sub
+        End If
+
+        Try
+            If cbCategory.SelectedItem = "CARS" Then
+                Dim seatCapacity As Integer
+                If Not Integer.TryParse(txtAddSeatCapacity.Text, seatCapacity) Then
+                    MessageBox.Show("Please enter a valid seat capacity.")
+                    Exit Sub
+                End If
+
+                Dim comm As String = "INSERT INTO cars (car_category_id, make, model_name, year, license_plate, color, mileage, seating_capacity) 
+                  VALUES (@car_category, @make, @model, @year, @license_plate, @color, @mileage, @seating_capacity)"
+                Using conn As New MySqlConnection(connStr)
+                    conn.Open()
+
+                    Using cmd As New MySqlCommand(comm, conn)
+                        cmd.Parameters.AddWithValue("@car_category", cbVehicleCategory.SelectedIndex + 1)
+                        cmd.Parameters.AddWithValue("@make", txtAddMake.Text.Trim())
+                        cmd.Parameters.AddWithValue("@model", txtAddModel.Text.Trim())
+                        cmd.Parameters.AddWithValue("@year", txtAddYear.Text.Trim)
+                        cmd.Parameters.AddWithValue("@license_plate", txtAddPlate.Text.Trim().ToUpper())
+                        cmd.Parameters.AddWithValue("@color", txtAddColor.Text.Trim())
+                        cmd.Parameters.AddWithValue("@mileage", addMileage.Text.Trim)
+                        cmd.Parameters.AddWithValue("@seating_capacity", txtAddSeatCapacity.Text.Trim)
+
+                        Dim result = cmd.ExecuteNonQuery()
+
+                        If result > 0 Then
+                            Dim carId As Integer
+                            cmd.CommandText = "SELECT LAST_INSERT_ID()"
+                            carId = Convert.ToInt32(cmd.ExecuteScalar())
+
+                            Dim comm2 As String = "INSERT INTO vehicles (vehicle_type, item_id, status_id) 
+                                VALUES (@vehicle_type, @item_id, @status_id)"
+                            Using cmd2 As New MySqlCommand(comm2, conn)
+
+                                Dim vehicleTypeId As Integer = If(cbCategory.SelectedItem = "CARS", 1, 2)
+                                cmd2.Parameters.AddWithValue("@vehicle_type", vehicleTypeId)
+                                cmd2.Parameters.AddWithValue("@item_id", carId)
+
+
+                                If cbStatus IsNot Nothing AndAlso cbStatus.SelectedIndex >= 0 Then
+                                    cmd2.Parameters.AddWithValue("@status_id", cbStatus.SelectedIndex + 1)
+                                Else
+                                    cmd2.Parameters.AddWithValue("@status_id", 1)
+                                End If
+
+                                Dim result2 = cmd2.ExecuteNonQuery()
+                            End Using
+
+                            Dim vehicleId As Integer
+                            cmd.CommandText = "SELECT LAST_INSERT_ID()"
+                            vehicleId = Convert.ToInt32(cmd.ExecuteScalar())
+
+                            Dim comm3 As String = "INSERT INTO rental_rate (vehicle_id, rate_per_day, effective_date) 
+                                VALUES (@vehicle_id, @rate_per_day, CURDATE())"
+
+                            Using cmd3 As New MySqlCommand(comm3, conn)
+                                cmd3.Parameters.AddWithValue("@vehicle_id", vehicleId)
+                                cmd3.Parameters.AddWithValue("@rate_per_day", rentalRate)
+
+                                Dim result3 = cmd3.ExecuteNonQuery()
+                                If result3 > 0 Then
+                                    MessageBox.Show("Car added successfully!")
+
+                                    pnlInventory_Click(pnlInventory, EventArgs.Empty)
+
+                                    ClearForm()
+                                Else
+                                    MessageBox.Show("Failed to add rental rate.")
+                                End If
+                            End Using
+                        Else
+                            MessageBox.Show("Failed to add car.")
+                        End If
+                    End Using
+                End Using
+
+            ElseIf cbCategory.SelectedItem = "MOTORCYCLES" Then
+
+                Dim comm As String = "INSERT INTO motors (motor_category_id, make, model, year, license_plate, color, mileage) 
+                  VALUES (@motorcycle_category, @make, @model, @year, @license_plate, @color, @mileage)"
+                Using conn As New MySqlConnection(connStr)
+                    conn.Open()
+
+                    Using cmd As New MySqlCommand(comm, conn)
+                        cmd.Parameters.AddWithValue("@motorcycle_category", cbVehicleCategory.SelectedIndex + 1)
+                        cmd.Parameters.AddWithValue("@make", txtAddMake.Text.Trim())
+                        cmd.Parameters.AddWithValue("@model", txtAddModel.Text.Trim())
+                        cmd.Parameters.AddWithValue("@year", txtAddYear.Text.Trim)
+                        cmd.Parameters.AddWithValue("@license_plate", txtAddPlate.Text.Trim().ToUpper())
+                        cmd.Parameters.AddWithValue("@color", txtAddColor.Text.Trim())
+                        cmd.Parameters.AddWithValue("@mileage", addMileage.Text.Trim)
+
+                        Dim result = cmd.ExecuteNonQuery()
+                        If result > 0 Then
+                            Dim motorId As Integer
+                            cmd.CommandText = "SELECT LAST_INSERT_ID()"
+                            motorId = Convert.ToInt32(cmd.ExecuteScalar())
+
+                            Dim comm2 As String = "INSERT INTO vehicles (vehicle_type, item_id, status_id) 
+                                VALUES (@vehicle_type, @item_id, @status_id)"
+                            Using cmd2 As New MySqlCommand(comm2, conn)
+
+                                Dim vehicleTypeId As Integer = If(cbCategory.SelectedItem = "CARS", 1, 2)
+                                cmd2.Parameters.AddWithValue("@vehicle_type", vehicleTypeId)
+                                cmd2.Parameters.AddWithValue("@item_id", motorId)
+
+
+                                If cbStatus IsNot Nothing AndAlso cbStatus.SelectedIndex >= 0 Then
+                                    cmd2.Parameters.AddWithValue("@status_id", cbStatus.SelectedIndex + 1)
+                                Else
+                                    cmd2.Parameters.AddWithValue("@status_id", 1)
+                                End If
+
+                                Dim result2 = cmd2.ExecuteNonQuery()
+                            End Using
+
+                            Dim vehicleId As Integer
+                            cmd.CommandText = "SELECT LAST_INSERT_ID()"
+                            vehicleId = Convert.ToInt32(cmd.ExecuteScalar())
+
+                            Dim comm3 As String = "INSERT INTO rental_rate (vehicle_id, rate_per_day, effective_date) 
+                                VALUES (@vehicle_id, @rate_per_day, CURDATE())"
+
+                            Using cmd3 As New MySqlCommand(comm3, conn)
+                                cmd3.Parameters.AddWithValue("@vehicle_id", vehicleId)
+                                cmd3.Parameters.AddWithValue("@rate_per_day", rentalRate)
+
+                                Dim result3 = cmd3.ExecuteNonQuery()
+                                If result3 > 0 Then
+                                    MessageBox.Show("Car added successfully!")
+
+                                    pnlInventory_Click(pnlInventory, EventArgs.Empty)
+                                    ClearForm()
+                                Else
+                                    MessageBox.Show("Failed to add rental rate.")
+                                End If
+                            End Using
+                        Else
+                            MessageBox.Show("Failed to add car.")
+                        End If
+                    End Using
+                End Using
+            End If
+
+        Catch ex As MySqlException
+            MessageBox.Show($"Database error: {ex.Message}")
+        Catch ex As Exception
+            MessageBox.Show($"An error occurred: {ex.Message}")
+        End Try
+    End Sub
+
+    Private Sub ClearForm()
+        cbCategory.SelectedIndex = -1
+        cbVehicleCategory.SelectedIndex = -1
+        If cbVehicleCategory IsNot Nothing Then cbVehicleCategory.SelectedIndex = -1
+
+        txtAddMake.Clear()
+        txtAddModel.Clear()
+        txtAddYear.Clear()
+        txtAddPlate.Clear()
+        txtAddColor.Clear()
+        addMileage.Clear()
+        txtAddSeatCapacity.Clear()
+        txtRentalRate.Clear()
+        pnlAddCars.Location = New Point(1300, 81)
+        cbCategory.Text = "Vehicle Type"
+        cbVehicleCategory.Text = "Vehicle Category"
+    End Sub
+
+    Private Sub cbStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbStatus.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
+        pnlAddCars.Location = New Point(1300, 81)
     End Sub
 End Class
