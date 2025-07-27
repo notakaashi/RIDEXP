@@ -1,5 +1,6 @@
 ﻿Imports Microsoft.VisualBasic.Logging
 Imports MySql.Data.MySqlClient
+Imports System.IO
 
 Public Class FORMRENTAL_STEP3
 
@@ -47,24 +48,36 @@ c.make,
 
                 If Not IsDBNull(reader("image")) Then
                     Try
-                        Dim imageName As String = IO.Path.GetFileNameWithoutExtension(reader("image").ToString())
-                        Dim resImage = My.Resources.ResourceManager.GetObject(imageName)
+                        Dim imageVal As String = reader("image").ToString()
 
-                        If resImage IsNot Nothing AndAlso TypeOf resImage Is Image Then
-                            PictureBox4.Image = CType(resImage, Image)
-                            MessageBox.Show($"Image '{imageName}' loaded successfully")
+                        ' First check if file exists (new cars)
+                        Dim fullPath As String = Path.Combine(Application.StartupPath, imageVal)
+                        If File.Exists(fullPath) Then
+                            PictureBox4.Image = Image.FromFile(fullPath)
+                            PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
+                            Debug.WriteLine($"[DEBUG] Loaded image from file: {fullPath}")
                         Else
-                            MessageBox.Show($"Image '{imageName}' not found in resources or is not an Image type")
-                            PictureBox4.Image = Nothing
+                            ' Otherwise, try loading from My.Resources (predefined cars)
+                            Dim imageName As String = IO.Path.GetFileNameWithoutExtension(imageVal)
+                            Dim resImage = My.Resources.ResourceManager.GetObject(imageName)
+
+                            If resImage IsNot Nothing AndAlso TypeOf resImage Is Image Then
+                                PictureBox4.Image = CType(resImage, Image)
+                                PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
+                                Debug.WriteLine($"[DEBUG] Loaded image from resources: {imageName}")
+                            Else
+                                Debug.WriteLine($"[DEBUG] Image not found: {imageVal}")
+                                PictureBox4.Image = Nothing
+                            End If
                         End If
 
-                    Catch resEx As Exception
-                        MessageBox.Show($"Error loading image: {resEx.Message}")
+                    Catch ex As Exception
+                        MessageBox.Show($"Error loading image: {ex.Message}")
                         PictureBox4.Image = Nothing
                     End Try
                 Else
-                    MessageBox.Show("No image found in database")
                     PictureBox4.Image = Nothing
+                    Debug.WriteLine("[DEBUG] No image in DB for this car")
                 End If
 
                 PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
@@ -132,23 +145,35 @@ c.make,
                 ' Load image from resource name
                 If Not IsDBNull(reader("image")) Then
                     Try
-                        Dim imageName As String = IO.Path.GetFileNameWithoutExtension(reader("image").ToString())
-                        Dim resImage = My.Resources.ResourceManager.GetObject(imageName)
+                        Dim imageVal As String = reader("image").ToString()
 
-                        If resImage IsNot Nothing AndAlso TypeOf resImage Is Image Then
-                            PictureBox4.Image = CType(resImage, Image)
+                        Dim fullPath As String = Path.Combine(Application.StartupPath, imageVal)
+                        If File.Exists(fullPath) Then
+                            PictureBox4.Image = Image.FromFile(fullPath)
+                            PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
+                            Debug.WriteLine($"[DEBUG] Loaded image from file: {fullPath}")
                         Else
-                            PictureBox4.Image = Nothing
+                            Dim imageName As String = IO.Path.GetFileNameWithoutExtension(imageVal)
+                            Dim resImage = My.Resources.ResourceManager.GetObject(imageName)
+
+                            If resImage IsNot Nothing AndAlso TypeOf resImage Is Image Then
+                                PictureBox4.Image = CType(resImage, Image)
+                                PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
+                                Debug.WriteLine($"[DEBUG] Loaded image from resources: {imageName}")
+                            Else
+                                Debug.WriteLine($"[DEBUG] Image not found: {imageVal}")
+                                PictureBox4.Image = Nothing
+                            End If
                         End If
 
-                    Catch resEx As Exception
-                        MessageBox.Show($"Error loading image: {resEx.Message}")
+                    Catch ex As Exception
+                        MessageBox.Show($"Error loading image: {ex.Message}")
                         PictureBox4.Image = Nothing
                     End Try
                 Else
                     PictureBox4.Image = Nothing
+                    Debug.WriteLine("[DEBUG] No image in DB for this car")
                 End If
-
                 PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
 
             Else

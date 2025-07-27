@@ -392,37 +392,54 @@ Public Class allcars
                 Dim imgFullPath As String = Path.Combine(Application.StartupPath, reader("image").ToString())
                 MessageBox.Show("Found car: " & reader("model_name").ToString())
                 ShowNewCarInCategory(
-                reader("car_category_id"),
-                reader("make").ToString(),
-                reader("model_name").ToString(),
-                reader("year").ToString(),
-                reader("color").ToString(),
-                reader("mileage").ToString(),
-                reader("seating_capacity").ToString(),
-                reader("rate_per_day").ToString(),
-                imgFullPath
-            )
+    reader("car_category_id"),
+    reader("car_id"),
+    reader("make").ToString(),
+    reader("model_name").ToString(),
+    reader("year").ToString(),
+    reader("color").ToString(),
+    reader("mileage").ToString(),
+    reader("seating_capacity").ToString(),
+    reader("rate_per_day").ToString(),
+    imgFullPath
+)
             End While
         End Using
     End Sub
 
-    Private Sub ShowNewCarInCategory(categoryId As Integer, make As String, model As String, year As String,
+    Private Sub ShowNewCarInCategory(categoryId As Integer, carId As Integer, make As String, model As String, year As String,
                                  color As String, mileage As String, seating As String,
                                  rate As String, imgPath As String)
 
         Dim prefix As String = ""
         Dim parentPanel As Panel = Nothing
 
+
         Select Case categoryId
-            Case 1 : prefix = "sedan" : parentPanel = pnlSedan
-            Case 2 : prefix = "suv" : parentPanel = pnlSuvContent
-            Case 3 : prefix = "mpv" : parentPanel = pnlMpv
-            Case 4 : prefix = "hatch" : parentPanel = pnlHatchback
-            Case 5 : prefix = "hybrid" : parentPanel = pnlHybrid
+            Case 1
+                prefix = "sedan"
+                parentPanel = pnlSedan
+
+            Case 2
+                prefix = "mpv"
+                parentPanel = pnlMpv
+
+            Case 3, 4
+                prefix = "suv"
+                parentPanel = pnlSuvContent
+
+            Case 5
+                prefix = "hatch"
+                parentPanel = pnlHatchback
+
+            Case 6
+                prefix = "hybrid"
+                parentPanel = pnlHybrid
         End Select
 
         Debug.WriteLine($"[DEBUG] Loading car {make} {model} into {prefix}")
 
+        ' Find available slot
         For i As Integer = 1 To 20
             Dim btn = Me.Controls.Find($"{prefix}{i}btn", True).FirstOrDefault()
 
@@ -434,7 +451,7 @@ Public Class allcars
             If btn.Visible = False Then
                 Debug.WriteLine($"[DEBUG] -> Found slot {i} for {prefix}")
 
-                ' Find and set other controls
+                ' Set all label values
                 SetLabel($"{prefix}make{i}txt", make)
                 SetLabel($"{prefix}model{i}txt", model)
                 SetLabel($"{prefix}year{i}txt", year)
@@ -442,11 +459,6 @@ Public Class allcars
                 SetLabel($"{prefix}mileage{i}txt", mileage & " km")
                 SetLabel($"{prefix}seatingcapacity{i}txt", seating)
                 SetLabel($"{prefix}rentalrate{i}txt", rate & " per day")
-
-                Select Case categoryId
-                    Case 1 : panel1sedan.Visible = True
-
-                End Select
 
                 ' Load picture
                 Dim pic = CType(Me.Controls.Find($"{prefix}{i}pic", True).FirstOrDefault(), PictureBox)
@@ -456,13 +468,26 @@ Public Class allcars
                     Debug.WriteLine($"[DEBUG] -> Image not found: {imgPath}")
                 End If
 
+                ' Show the slot
                 btn.Visible = True
+                btn.Tag = carId
+
+                ' Show the main category panel
                 If parentPanel IsNot Nothing Then parentPanel.Visible = True
+
+                ' Show the correct container (panel1sedan, panel2sedan, etc.)
+                Dim containerPanel = TryCast(btn.Parent, Panel)
+                If containerPanel IsNot Nothing Then containerPanel.Visible = True
+
+                ' Attach dynamic click handler
+                RemoveHandler btn.Click, AddressOf DynamicCarButton_Click
+                AddHandler btn.Click, AddressOf DynamicCarButton_Click
 
                 Exit For
             End If
         Next
     End Sub
+
 
     Private Sub SetLabel(name As String, text As String)
         Dim lbl = Me.Controls.Find(name, True).FirstOrDefault()
@@ -474,5 +499,42 @@ Public Class allcars
         End If
     End Sub
 
+    Private Sub DynamicCarButton_Click(sender As Object, e As EventArgs)
+        Dim btn As Button = CType(sender, Button)
+        Dim carId As Integer = CInt(btn.Tag) ' ✅ Real carId from the DB
+
+        ' Determine prefix (for finding labels)
+        Dim prefix As String = ""
+        If btn.Name.StartsWith("sedan") Then prefix = "sedan"
+        If btn.Name.StartsWith("suv") Then prefix = "suv"
+        If btn.Name.StartsWith("mpv") Then prefix = "mpv"
+        If btn.Name.StartsWith("hatch") Then prefix = "hatch"
+        If btn.Name.StartsWith("hybrid") Then prefix = "hybrid"
+
+        ' Find labels using the slot index
+        Dim numPart As String = New String(btn.Name.Where(Function(c) Char.IsDigit(c)).ToArray())
+        Dim slotIndex As Integer = Integer.Parse(numPart)
+
+        Dim makeLbl = CType(Me.Controls.Find($"{prefix}make{slotIndex}txt", True).FirstOrDefault(), Label)
+        Dim modelLbl = CType(Me.Controls.Find($"{prefix}model{slotIndex}txt", True).FirstOrDefault(), Label)
+        Dim rateLbl = CType(Me.Controls.Find($"{prefix}rentalrate{slotIndex}txt", True).FirstOrDefault(), Label)
+
+        If makeLbl Is Nothing OrElse modelLbl Is Nothing OrElse rateLbl Is Nothing Then
+            MessageBox.Show("Error: Missing car info for this button!")
+            Exit Sub
+        End If
+
+        Dim carName As String = $"{makeLbl.Text} {modelLbl.Text}"
+        Dim dailyRate As Decimal = Decimal.Parse(rateLbl.Text.Split(" "c)(0))
+
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+
+        ' ✅ Pass the real carId now
+        SelectCar(carId, carName, dailyRate, "Car", carId)
+    End Sub
 
 End Class

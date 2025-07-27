@@ -1051,7 +1051,7 @@ Public Class FORM_ADMIN
     End Sub
 
     Dim carId As Integer
-    Dim motorId As Integer ' Fixed typo: was "motorid"
+    Dim motorId As Integer
     Dim imagePath As String = ""
     Dim imageBytes() As Byte
     Dim imageName As String

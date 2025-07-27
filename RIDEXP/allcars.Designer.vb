@@ -157,6 +157,22 @@ Partial Class allcars
         PictureBox3 = New PictureBox()
         TextBox1 = New TextBox()
         pnlSuvContent = New Panel()
+        panel1suv = New Panel()
+        suvyear1txt = New Label()
+        Label102 = New Label()
+        suvrentalrate1txt = New Label()
+        Label116 = New Label()
+        suvcolor1txt = New Label()
+        suvmileage1txt = New Label()
+        suvseatingcapacity1txt = New Label()
+        suvmake1txt = New Label()
+        suv1btn = New Button()
+        Label145 = New Label()
+        Label153 = New Label()
+        Label156 = New Label()
+        suv1pic = New PictureBox()
+        suvmodel1txt = New Label()
+        Label161 = New Label()
         Panel22 = New Panel()
         year10txt = New Label()
         Label157 = New Label()
@@ -271,6 +287,22 @@ Partial Class allcars
         model1txt = New Label()
         Label109 = New Label()
         pnlMpv = New Panel()
+        panel1mpv = New Panel()
+        mpvyear1txt = New Label()
+        Label128 = New Label()
+        mpvrentalrate1txt = New Label()
+        Label143 = New Label()
+        mpvcolor1txt = New Label()
+        mpvmileage1txt = New Label()
+        mpvseatingcapacity1txt = New Label()
+        mpvmake1txt = New Label()
+        mpv1btn = New Button()
+        Label188 = New Label()
+        Label189 = New Label()
+        Label190 = New Label()
+        mpv1pic = New PictureBox()
+        mpvmodel1txt = New Label()
+        Label196 = New Label()
         Panel1 = New Panel()
         year4txt = New Label()
         Label124 = New Label()
@@ -320,6 +352,22 @@ Partial Class allcars
         model2txt = New Label()
         Label195 = New Label()
         pnlHybrid = New Panel()
+        panel1hybrid = New Panel()
+        hybridyear1txt = New Label()
+        Label114 = New Label()
+        hybridrentalrate1txt = New Label()
+        Label130 = New Label()
+        hybridcolor1txt = New Label()
+        hybridmileage1txt = New Label()
+        hybridseatingcapacity1txt = New Label()
+        hybridmake1txt = New Label()
+        hybrid1btn = New Button()
+        Label174 = New Label()
+        Label175 = New Label()
+        Label176 = New Label()
+        hybrid1pic = New PictureBox()
+        hybridmodel1txt = New Label()
+        Label181 = New Label()
         Panel23 = New Panel()
         year9txt = New Label()
         Label126 = New Label()
@@ -337,6 +385,22 @@ Partial Class allcars
         model9txt = New Label()
         Label179 = New Label()
         pnlHatchback = New Panel()
+        panel1hatch = New Panel()
+        hatchyear1txt = New Label()
+        Label96 = New Label()
+        hatchrentalrate1txt = New Label()
+        Label108 = New Label()
+        hatchcolor1txt = New Label()
+        hatchmileage1txt = New Label()
+        hatchseatingcapacity1txt = New Label()
+        hatchmake1txt = New Label()
+        hatch1btn = New Button()
+        Label131 = New Label()
+        Label135 = New Label()
+        Label137 = New Label()
+        hatch1pic = New PictureBox()
+        hatchmodel1txt = New Label()
+        Label142 = New Label()
         Panel24 = New Panel()
         year7txt = New Label()
         Label160 = New Label()
@@ -378,6 +442,8 @@ Partial Class allcars
         Panel13.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         pnlSuvContent.SuspendLayout()
+        panel1suv.SuspendLayout()
+        CType(suv1pic, ComponentModel.ISupportInitialize).BeginInit()
         Panel22.SuspendLayout()
         CType(car10img, ComponentModel.ISupportInitialize).BeginInit()
         Panel25.SuspendLayout()
@@ -394,6 +460,8 @@ Partial Class allcars
         Panel15.SuspendLayout()
         CType(car1img, ComponentModel.ISupportInitialize).BeginInit()
         pnlMpv.SuspendLayout()
+        panel1mpv.SuspendLayout()
+        CType(mpv1pic, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(car4img, ComponentModel.ISupportInitialize).BeginInit()
         Panel16.SuspendLayout()
@@ -401,9 +469,13 @@ Partial Class allcars
         Panel27.SuspendLayout()
         CType(car2img, ComponentModel.ISupportInitialize).BeginInit()
         pnlHybrid.SuspendLayout()
+        panel1hybrid.SuspendLayout()
+        CType(hybrid1pic, ComponentModel.ISupportInitialize).BeginInit()
         Panel23.SuspendLayout()
         CType(car9img, ComponentModel.ISupportInitialize).BeginInit()
         pnlHatchback.SuspendLayout()
+        panel1hatch.SuspendLayout()
+        CType(hatch1pic, ComponentModel.ISupportInitialize).BeginInit()
         Panel24.SuspendLayout()
         CType(car7img, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -646,7 +718,7 @@ Partial Class allcars
         pnlAllCarsContent.Controls.Add(Panel3)
         pnlAllCarsContent.Controls.Add(Panel2)
         pnlAllCarsContent.Controls.Add(Panel4)
-        pnlAllCarsContent.Location = New Point(1107, 101)
+        pnlAllCarsContent.Location = New Point(1115, 60)
         pnlAllCarsContent.Margin = New Padding(3, 2, 3, 2)
         pnlAllCarsContent.Name = "pnlAllCarsContent"
         pnlAllCarsContent.Size = New Size(1017, 263)
@@ -1956,7 +2028,7 @@ Partial Class allcars
         Panel6.Location = New Point(0, 0)
         Panel6.Margin = New Padding(3, 2, 3, 2)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(1077, 28)
+        Panel6.Size = New Size(1075, 28)
         Panel6.TabIndex = 41
         ' 
         ' Label37
@@ -2014,13 +2086,209 @@ Partial Class allcars
         ' 
         pnlSuvContent.AutoScroll = True
         pnlSuvContent.BackColor = SystemColors.Control
+        pnlSuvContent.Controls.Add(panel1suv)
         pnlSuvContent.Controls.Add(Panel22)
         pnlSuvContent.Controls.Add(Panel25)
-        pnlSuvContent.Location = New Point(1101, 349)
+        pnlSuvContent.Location = New Point(1102, 399)
         pnlSuvContent.Margin = New Padding(3, 2, 3, 2)
         pnlSuvContent.Name = "pnlSuvContent"
         pnlSuvContent.Size = New Size(1017, 263)
         pnlSuvContent.TabIndex = 43
+        ' 
+        ' panel1suv
+        ' 
+        panel1suv.BackColor = Color.White
+        panel1suv.BorderStyle = BorderStyle.FixedSingle
+        panel1suv.Controls.Add(suvyear1txt)
+        panel1suv.Controls.Add(Label102)
+        panel1suv.Controls.Add(suvrentalrate1txt)
+        panel1suv.Controls.Add(Label116)
+        panel1suv.Controls.Add(suvcolor1txt)
+        panel1suv.Controls.Add(suvmileage1txt)
+        panel1suv.Controls.Add(suvseatingcapacity1txt)
+        panel1suv.Controls.Add(suvmake1txt)
+        panel1suv.Controls.Add(suv1btn)
+        panel1suv.Controls.Add(Label145)
+        panel1suv.Controls.Add(Label153)
+        panel1suv.Controls.Add(Label156)
+        panel1suv.Controls.Add(suv1pic)
+        panel1suv.Controls.Add(suvmodel1txt)
+        panel1suv.Controls.Add(Label161)
+        panel1suv.ForeColor = Color.Gray
+        panel1suv.Location = New Point(9, 478)
+        panel1suv.Margin = New Padding(3, 2, 3, 2)
+        panel1suv.Name = "panel1suv"
+        panel1suv.Size = New Size(976, 215)
+        panel1suv.TabIndex = 51
+        panel1suv.Visible = False
+        ' 
+        ' suvyear1txt
+        ' 
+        suvyear1txt.AutoSize = True
+        suvyear1txt.Font = New Font("Futura Hv BT", 12F)
+        suvyear1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        suvyear1txt.Location = New Point(487, 158)
+        suvyear1txt.Name = "suvyear1txt"
+        suvyear1txt.Size = New Size(49, 19)
+        suvyear1txt.TabIndex = 25
+        suvyear1txt.Text = "2021"
+        ' 
+        ' Label102
+        ' 
+        Label102.AutoSize = True
+        Label102.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label102.ForeColor = Color.Black
+        Label102.Location = New Point(324, 158)
+        Label102.Name = "Label102"
+        Label102.Size = New Size(49, 19)
+        Label102.TabIndex = 24
+        Label102.Text = "YEAR:"
+        ' 
+        ' suvrentalrate1txt
+        ' 
+        suvrentalrate1txt.AutoSize = True
+        suvrentalrate1txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        suvrentalrate1txt.ForeColor = Color.Black
+        suvrentalrate1txt.Location = New Point(709, 91)
+        suvrentalrate1txt.Name = "suvrentalrate1txt"
+        suvrentalrate1txt.Size = New Size(149, 22)
+        suvrentalrate1txt.TabIndex = 23
+        suvrentalrate1txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label116
+        ' 
+        Label116.AutoSize = True
+        Label116.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label116.ForeColor = Color.Black
+        Label116.Location = New Point(708, 66)
+        Label116.Name = "Label116"
+        Label116.Size = New Size(99, 19)
+        Label116.TabIndex = 22
+        Label116.Text = "Vehicle Rate:"
+        ' 
+        ' suvcolor1txt
+        ' 
+        suvcolor1txt.AutoSize = True
+        suvcolor1txt.Font = New Font("Futura Hv BT", 12F)
+        suvcolor1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        suvcolor1txt.Location = New Point(486, 75)
+        suvcolor1txt.Name = "suvcolor1txt"
+        suvcolor1txt.Size = New Size(35, 19)
+        suvcolor1txt.TabIndex = 21
+        suvcolor1txt.Text = "red"
+        ' 
+        ' suvmileage1txt
+        ' 
+        suvmileage1txt.AutoSize = True
+        suvmileage1txt.Font = New Font("Futura Hv BT", 12F)
+        suvmileage1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        suvmileage1txt.Location = New Point(487, 131)
+        suvmileage1txt.Name = "suvmileage1txt"
+        suvmileage1txt.Size = New Size(88, 19)
+        suvmileage1txt.TabIndex = 20
+        suvmileage1txt.Text = "11,456km"
+        ' 
+        ' suvseatingcapacity1txt
+        ' 
+        suvseatingcapacity1txt.AutoSize = True
+        suvseatingcapacity1txt.Font = New Font("Futura Hv BT", 12F)
+        suvseatingcapacity1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        suvseatingcapacity1txt.Location = New Point(487, 103)
+        suvseatingcapacity1txt.Name = "suvseatingcapacity1txt"
+        suvseatingcapacity1txt.Size = New Size(19, 19)
+        suvseatingcapacity1txt.TabIndex = 19
+        suvseatingcapacity1txt.Text = "5"
+        ' 
+        ' suvmake1txt
+        ' 
+        suvmake1txt.AutoSize = True
+        suvmake1txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        suvmake1txt.ForeColor = Color.Black
+        suvmake1txt.Location = New Point(24, 7)
+        suvmake1txt.Name = "suvmake1txt"
+        suvmake1txt.Size = New Size(60, 22)
+        suvmake1txt.TabIndex = 17
+        suvmake1txt.Text = "MAKE"
+        ' 
+        ' suv1btn
+        ' 
+        suv1btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        suv1btn.FlatStyle = FlatStyle.Flat
+        suv1btn.Font = New Font("Reesha", 16.1999989F)
+        suv1btn.ForeColor = Color.White
+        suv1btn.Location = New Point(708, 129)
+        suv1btn.Margin = New Padding(3, 2, 3, 2)
+        suv1btn.Name = "suv1btn"
+        suv1btn.Size = New Size(233, 43)
+        suv1btn.TabIndex = 16
+        suv1btn.Text = "BOOK NOW"
+        suv1btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label145
+        ' 
+        Label145.AutoSize = True
+        Label145.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label145.ForeColor = Color.Black
+        Label145.Location = New Point(324, 131)
+        Label145.Name = "Label145"
+        Label145.Size = New Size(78, 19)
+        Label145.TabIndex = 5
+        Label145.Text = "MILEAGE:"
+        ' 
+        ' Label153
+        ' 
+        Label153.AutoSize = True
+        Label153.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label153.ForeColor = Color.Black
+        Label153.Location = New Point(324, 103)
+        Label153.Name = "Label153"
+        Label153.Size = New Size(123, 19)
+        Label153.TabIndex = 4
+        Label153.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label156
+        ' 
+        Label156.AutoSize = True
+        Label156.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label156.ForeColor = Color.Black
+        Label156.Location = New Point(324, 75)
+        Label156.Name = "Label156"
+        Label156.Size = New Size(69, 19)
+        Label156.TabIndex = 3
+        Label156.Text = "COLOR:"
+        ' 
+        ' suv1pic
+        ' 
+        suv1pic.Image = My.Resources.Resources.RideX
+        suv1pic.Location = New Point(24, 75)
+        suv1pic.Margin = New Padding(3, 2, 3, 2)
+        suv1pic.Name = "suv1pic"
+        suv1pic.Size = New Size(265, 106)
+        suv1pic.SizeMode = PictureBoxSizeMode.StretchImage
+        suv1pic.TabIndex = 2
+        suv1pic.TabStop = False
+        ' 
+        ' suvmodel1txt
+        ' 
+        suvmodel1txt.AutoSize = True
+        suvmodel1txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        suvmodel1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        suvmodel1txt.Location = New Point(19, 22)
+        suvmodel1txt.Name = "suvmodel1txt"
+        suvmodel1txt.Size = New Size(245, 32)
+        suvmodel1txt.TabIndex = 0
+        suvmodel1txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label161
+        ' 
+        Label161.AutoSize = True
+        Label161.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label161.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label161.Location = New Point(19, 26)
+        Label161.Name = "Label161"
+        Label161.Size = New Size(882, 32)
+        Label161.TabIndex = 1
+        Label161.Text = "______________________________________________________________"
         ' 
         ' Panel22
         ' 
@@ -3394,14 +3662,210 @@ Partial Class allcars
         ' 
         pnlMpv.AutoScroll = True
         pnlMpv.BackColor = SystemColors.Control
+        pnlMpv.Controls.Add(panel1mpv)
         pnlMpv.Controls.Add(Panel1)
         pnlMpv.Controls.Add(Panel16)
         pnlMpv.Controls.Add(Panel27)
-        pnlMpv.Location = New Point(1146, 64)
+        pnlMpv.Location = New Point(1105, 383)
         pnlMpv.Margin = New Padding(3, 2, 3, 2)
         pnlMpv.Name = "pnlMpv"
         pnlMpv.Size = New Size(1017, 263)
         pnlMpv.TabIndex = 45
+        ' 
+        ' panel1mpv
+        ' 
+        panel1mpv.BackColor = Color.White
+        panel1mpv.BorderStyle = BorderStyle.FixedSingle
+        panel1mpv.Controls.Add(mpvyear1txt)
+        panel1mpv.Controls.Add(Label128)
+        panel1mpv.Controls.Add(mpvrentalrate1txt)
+        panel1mpv.Controls.Add(Label143)
+        panel1mpv.Controls.Add(mpvcolor1txt)
+        panel1mpv.Controls.Add(mpvmileage1txt)
+        panel1mpv.Controls.Add(mpvseatingcapacity1txt)
+        panel1mpv.Controls.Add(mpvmake1txt)
+        panel1mpv.Controls.Add(mpv1btn)
+        panel1mpv.Controls.Add(Label188)
+        panel1mpv.Controls.Add(Label189)
+        panel1mpv.Controls.Add(Label190)
+        panel1mpv.Controls.Add(mpv1pic)
+        panel1mpv.Controls.Add(mpvmodel1txt)
+        panel1mpv.Controls.Add(Label196)
+        panel1mpv.ForeColor = Color.Gray
+        panel1mpv.Location = New Point(10, 726)
+        panel1mpv.Margin = New Padding(3, 2, 3, 2)
+        panel1mpv.Name = "panel1mpv"
+        panel1mpv.Size = New Size(976, 215)
+        panel1mpv.TabIndex = 55
+        panel1mpv.Visible = False
+        ' 
+        ' mpvyear1txt
+        ' 
+        mpvyear1txt.AutoSize = True
+        mpvyear1txt.Font = New Font("Futura Hv BT", 12F)
+        mpvyear1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        mpvyear1txt.Location = New Point(487, 158)
+        mpvyear1txt.Name = "mpvyear1txt"
+        mpvyear1txt.Size = New Size(49, 19)
+        mpvyear1txt.TabIndex = 25
+        mpvyear1txt.Text = "2021"
+        ' 
+        ' Label128
+        ' 
+        Label128.AutoSize = True
+        Label128.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label128.ForeColor = Color.Black
+        Label128.Location = New Point(324, 158)
+        Label128.Name = "Label128"
+        Label128.Size = New Size(49, 19)
+        Label128.TabIndex = 24
+        Label128.Text = "YEAR:"
+        ' 
+        ' mpvrentalrate1txt
+        ' 
+        mpvrentalrate1txt.AutoSize = True
+        mpvrentalrate1txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        mpvrentalrate1txt.ForeColor = Color.Black
+        mpvrentalrate1txt.Location = New Point(709, 91)
+        mpvrentalrate1txt.Name = "mpvrentalrate1txt"
+        mpvrentalrate1txt.Size = New Size(149, 22)
+        mpvrentalrate1txt.TabIndex = 23
+        mpvrentalrate1txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label143
+        ' 
+        Label143.AutoSize = True
+        Label143.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label143.ForeColor = Color.Black
+        Label143.Location = New Point(708, 66)
+        Label143.Name = "Label143"
+        Label143.Size = New Size(99, 19)
+        Label143.TabIndex = 22
+        Label143.Text = "Vehicle Rate:"
+        ' 
+        ' mpvcolor1txt
+        ' 
+        mpvcolor1txt.AutoSize = True
+        mpvcolor1txt.Font = New Font("Futura Hv BT", 12F)
+        mpvcolor1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        mpvcolor1txt.Location = New Point(486, 75)
+        mpvcolor1txt.Name = "mpvcolor1txt"
+        mpvcolor1txt.Size = New Size(35, 19)
+        mpvcolor1txt.TabIndex = 21
+        mpvcolor1txt.Text = "red"
+        ' 
+        ' mpvmileage1txt
+        ' 
+        mpvmileage1txt.AutoSize = True
+        mpvmileage1txt.Font = New Font("Futura Hv BT", 12F)
+        mpvmileage1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        mpvmileage1txt.Location = New Point(487, 131)
+        mpvmileage1txt.Name = "mpvmileage1txt"
+        mpvmileage1txt.Size = New Size(88, 19)
+        mpvmileage1txt.TabIndex = 20
+        mpvmileage1txt.Text = "11,456km"
+        ' 
+        ' mpvseatingcapacity1txt
+        ' 
+        mpvseatingcapacity1txt.AutoSize = True
+        mpvseatingcapacity1txt.Font = New Font("Futura Hv BT", 12F)
+        mpvseatingcapacity1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        mpvseatingcapacity1txt.Location = New Point(487, 103)
+        mpvseatingcapacity1txt.Name = "mpvseatingcapacity1txt"
+        mpvseatingcapacity1txt.Size = New Size(19, 19)
+        mpvseatingcapacity1txt.TabIndex = 19
+        mpvseatingcapacity1txt.Text = "5"
+        ' 
+        ' mpvmake1txt
+        ' 
+        mpvmake1txt.AutoSize = True
+        mpvmake1txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        mpvmake1txt.ForeColor = Color.Black
+        mpvmake1txt.Location = New Point(24, 7)
+        mpvmake1txt.Name = "mpvmake1txt"
+        mpvmake1txt.Size = New Size(60, 22)
+        mpvmake1txt.TabIndex = 17
+        mpvmake1txt.Text = "MAKE"
+        ' 
+        ' mpv1btn
+        ' 
+        mpv1btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        mpv1btn.FlatStyle = FlatStyle.Flat
+        mpv1btn.Font = New Font("Reesha", 16.1999989F)
+        mpv1btn.ForeColor = Color.White
+        mpv1btn.Location = New Point(708, 129)
+        mpv1btn.Margin = New Padding(3, 2, 3, 2)
+        mpv1btn.Name = "mpv1btn"
+        mpv1btn.Size = New Size(233, 43)
+        mpv1btn.TabIndex = 16
+        mpv1btn.Text = "BOOK NOW"
+        mpv1btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label188
+        ' 
+        Label188.AutoSize = True
+        Label188.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label188.ForeColor = Color.Black
+        Label188.Location = New Point(324, 131)
+        Label188.Name = "Label188"
+        Label188.Size = New Size(78, 19)
+        Label188.TabIndex = 5
+        Label188.Text = "MILEAGE:"
+        ' 
+        ' Label189
+        ' 
+        Label189.AutoSize = True
+        Label189.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label189.ForeColor = Color.Black
+        Label189.Location = New Point(324, 103)
+        Label189.Name = "Label189"
+        Label189.Size = New Size(123, 19)
+        Label189.TabIndex = 4
+        Label189.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label190
+        ' 
+        Label190.AutoSize = True
+        Label190.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label190.ForeColor = Color.Black
+        Label190.Location = New Point(324, 75)
+        Label190.Name = "Label190"
+        Label190.Size = New Size(69, 19)
+        Label190.TabIndex = 3
+        Label190.Text = "COLOR:"
+        ' 
+        ' mpv1pic
+        ' 
+        mpv1pic.Image = My.Resources.Resources.RideX
+        mpv1pic.Location = New Point(24, 75)
+        mpv1pic.Margin = New Padding(3, 2, 3, 2)
+        mpv1pic.Name = "mpv1pic"
+        mpv1pic.Size = New Size(265, 106)
+        mpv1pic.SizeMode = PictureBoxSizeMode.StretchImage
+        mpv1pic.TabIndex = 2
+        mpv1pic.TabStop = False
+        ' 
+        ' mpvmodel1txt
+        ' 
+        mpvmodel1txt.AutoSize = True
+        mpvmodel1txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        mpvmodel1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        mpvmodel1txt.Location = New Point(19, 22)
+        mpvmodel1txt.Name = "mpvmodel1txt"
+        mpvmodel1txt.Size = New Size(245, 32)
+        mpvmodel1txt.TabIndex = 0
+        mpvmodel1txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label196
+        ' 
+        Label196.AutoSize = True
+        Label196.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label196.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label196.Location = New Point(19, 26)
+        Label196.Name = "Label196"
+        Label196.Size = New Size(882, 32)
+        Label196.TabIndex = 1
+        Label196.Text = "______________________________________________________________"
         ' 
         ' Panel1
         ' 
@@ -3989,12 +4453,208 @@ Partial Class allcars
         ' 
         pnlHybrid.AutoScroll = True
         pnlHybrid.BackColor = SystemColors.Control
+        pnlHybrid.Controls.Add(panel1hybrid)
         pnlHybrid.Controls.Add(Panel23)
-        pnlHybrid.Location = New Point(1101, 361)
+        pnlHybrid.Location = New Point(1125, 346)
         pnlHybrid.Margin = New Padding(3, 2, 3, 2)
         pnlHybrid.Name = "pnlHybrid"
-        pnlHybrid.Size = New Size(994, 238)
+        pnlHybrid.Size = New Size(1003, 238)
         pnlHybrid.TabIndex = 47
+        ' 
+        ' panel1hybrid
+        ' 
+        panel1hybrid.BackColor = Color.White
+        panel1hybrid.BorderStyle = BorderStyle.FixedSingle
+        panel1hybrid.Controls.Add(hybridyear1txt)
+        panel1hybrid.Controls.Add(Label114)
+        panel1hybrid.Controls.Add(hybridrentalrate1txt)
+        panel1hybrid.Controls.Add(Label130)
+        panel1hybrid.Controls.Add(hybridcolor1txt)
+        panel1hybrid.Controls.Add(hybridmileage1txt)
+        panel1hybrid.Controls.Add(hybridseatingcapacity1txt)
+        panel1hybrid.Controls.Add(hybridmake1txt)
+        panel1hybrid.Controls.Add(hybrid1btn)
+        panel1hybrid.Controls.Add(Label174)
+        panel1hybrid.Controls.Add(Label175)
+        panel1hybrid.Controls.Add(Label176)
+        panel1hybrid.Controls.Add(hybrid1pic)
+        panel1hybrid.Controls.Add(hybridmodel1txt)
+        panel1hybrid.Controls.Add(Label181)
+        panel1hybrid.ForeColor = Color.Gray
+        panel1hybrid.Location = New Point(11, 258)
+        panel1hybrid.Margin = New Padding(3, 2, 3, 2)
+        panel1hybrid.Name = "panel1hybrid"
+        panel1hybrid.Size = New Size(964, 215)
+        panel1hybrid.TabIndex = 51
+        panel1hybrid.Visible = False
+        ' 
+        ' hybridyear1txt
+        ' 
+        hybridyear1txt.AutoSize = True
+        hybridyear1txt.Font = New Font("Futura Hv BT", 12F)
+        hybridyear1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridyear1txt.Location = New Point(487, 158)
+        hybridyear1txt.Name = "hybridyear1txt"
+        hybridyear1txt.Size = New Size(49, 19)
+        hybridyear1txt.TabIndex = 25
+        hybridyear1txt.Text = "2021"
+        ' 
+        ' Label114
+        ' 
+        Label114.AutoSize = True
+        Label114.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label114.ForeColor = Color.Black
+        Label114.Location = New Point(324, 158)
+        Label114.Name = "Label114"
+        Label114.Size = New Size(49, 19)
+        Label114.TabIndex = 24
+        Label114.Text = "YEAR:"
+        ' 
+        ' hybridrentalrate1txt
+        ' 
+        hybridrentalrate1txt.AutoSize = True
+        hybridrentalrate1txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hybridrentalrate1txt.ForeColor = Color.Black
+        hybridrentalrate1txt.Location = New Point(709, 91)
+        hybridrentalrate1txt.Name = "hybridrentalrate1txt"
+        hybridrentalrate1txt.Size = New Size(149, 22)
+        hybridrentalrate1txt.TabIndex = 23
+        hybridrentalrate1txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label130
+        ' 
+        Label130.AutoSize = True
+        Label130.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label130.ForeColor = Color.Black
+        Label130.Location = New Point(708, 66)
+        Label130.Name = "Label130"
+        Label130.Size = New Size(99, 19)
+        Label130.TabIndex = 22
+        Label130.Text = "Vehicle Rate:"
+        ' 
+        ' hybridcolor1txt
+        ' 
+        hybridcolor1txt.AutoSize = True
+        hybridcolor1txt.Font = New Font("Futura Hv BT", 12F)
+        hybridcolor1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridcolor1txt.Location = New Point(486, 75)
+        hybridcolor1txt.Name = "hybridcolor1txt"
+        hybridcolor1txt.Size = New Size(35, 19)
+        hybridcolor1txt.TabIndex = 21
+        hybridcolor1txt.Text = "red"
+        ' 
+        ' hybridmileage1txt
+        ' 
+        hybridmileage1txt.AutoSize = True
+        hybridmileage1txt.Font = New Font("Futura Hv BT", 12F)
+        hybridmileage1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridmileage1txt.Location = New Point(487, 131)
+        hybridmileage1txt.Name = "hybridmileage1txt"
+        hybridmileage1txt.Size = New Size(88, 19)
+        hybridmileage1txt.TabIndex = 20
+        hybridmileage1txt.Text = "11,456km"
+        ' 
+        ' hybridseatingcapacity1txt
+        ' 
+        hybridseatingcapacity1txt.AutoSize = True
+        hybridseatingcapacity1txt.Font = New Font("Futura Hv BT", 12F)
+        hybridseatingcapacity1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridseatingcapacity1txt.Location = New Point(487, 103)
+        hybridseatingcapacity1txt.Name = "hybridseatingcapacity1txt"
+        hybridseatingcapacity1txt.Size = New Size(19, 19)
+        hybridseatingcapacity1txt.TabIndex = 19
+        hybridseatingcapacity1txt.Text = "5"
+        ' 
+        ' hybridmake1txt
+        ' 
+        hybridmake1txt.AutoSize = True
+        hybridmake1txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        hybridmake1txt.ForeColor = Color.Black
+        hybridmake1txt.Location = New Point(24, 7)
+        hybridmake1txt.Name = "hybridmake1txt"
+        hybridmake1txt.Size = New Size(60, 22)
+        hybridmake1txt.TabIndex = 17
+        hybridmake1txt.Text = "MAKE"
+        ' 
+        ' hybrid1btn
+        ' 
+        hybrid1btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybrid1btn.FlatStyle = FlatStyle.Flat
+        hybrid1btn.Font = New Font("Reesha", 16.1999989F)
+        hybrid1btn.ForeColor = Color.White
+        hybrid1btn.Location = New Point(708, 129)
+        hybrid1btn.Margin = New Padding(3, 2, 3, 2)
+        hybrid1btn.Name = "hybrid1btn"
+        hybrid1btn.Size = New Size(233, 43)
+        hybrid1btn.TabIndex = 16
+        hybrid1btn.Text = "BOOK NOW"
+        hybrid1btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label174
+        ' 
+        Label174.AutoSize = True
+        Label174.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label174.ForeColor = Color.Black
+        Label174.Location = New Point(324, 131)
+        Label174.Name = "Label174"
+        Label174.Size = New Size(78, 19)
+        Label174.TabIndex = 5
+        Label174.Text = "MILEAGE:"
+        ' 
+        ' Label175
+        ' 
+        Label175.AutoSize = True
+        Label175.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label175.ForeColor = Color.Black
+        Label175.Location = New Point(324, 103)
+        Label175.Name = "Label175"
+        Label175.Size = New Size(123, 19)
+        Label175.TabIndex = 4
+        Label175.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label176
+        ' 
+        Label176.AutoSize = True
+        Label176.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label176.ForeColor = Color.Black
+        Label176.Location = New Point(324, 75)
+        Label176.Name = "Label176"
+        Label176.Size = New Size(69, 19)
+        Label176.TabIndex = 3
+        Label176.Text = "COLOR:"
+        ' 
+        ' hybrid1pic
+        ' 
+        hybrid1pic.Image = My.Resources.Resources.RideX
+        hybrid1pic.Location = New Point(24, 75)
+        hybrid1pic.Margin = New Padding(3, 2, 3, 2)
+        hybrid1pic.Name = "hybrid1pic"
+        hybrid1pic.Size = New Size(265, 106)
+        hybrid1pic.SizeMode = PictureBoxSizeMode.StretchImage
+        hybrid1pic.TabIndex = 2
+        hybrid1pic.TabStop = False
+        ' 
+        ' hybridmodel1txt
+        ' 
+        hybridmodel1txt.AutoSize = True
+        hybridmodel1txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hybridmodel1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridmodel1txt.Location = New Point(19, 22)
+        hybridmodel1txt.Name = "hybridmodel1txt"
+        hybridmodel1txt.Size = New Size(245, 32)
+        hybridmodel1txt.TabIndex = 0
+        hybridmodel1txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label181
+        ' 
+        Label181.AutoSize = True
+        Label181.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label181.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label181.Location = New Point(19, 26)
+        Label181.Name = "Label181"
+        Label181.Size = New Size(882, 32)
+        Label181.TabIndex = 1
+        Label181.Text = "______________________________________________________________"
         ' 
         ' Panel23
         ' 
@@ -4019,7 +4679,7 @@ Partial Class allcars
         Panel23.Location = New Point(10, 12)
         Panel23.Margin = New Padding(3, 2, 3, 2)
         Panel23.Name = "Panel23"
-        Panel23.Size = New Size(976, 215)
+        Panel23.Size = New Size(964, 215)
         Panel23.TabIndex = 50
         ' 
         ' year9txt
@@ -4194,12 +4854,208 @@ Partial Class allcars
         ' 
         pnlHatchback.AutoScroll = True
         pnlHatchback.BackColor = SystemColors.Control
+        pnlHatchback.Controls.Add(panel1hatch)
         pnlHatchback.Controls.Add(Panel24)
-        pnlHatchback.Location = New Point(1104, 337)
+        pnlHatchback.Location = New Point(1132, 44)
         pnlHatchback.Margin = New Padding(3, 2, 3, 2)
         pnlHatchback.Name = "pnlHatchback"
         pnlHatchback.Size = New Size(1017, 263)
         pnlHatchback.TabIndex = 46
+        ' 
+        ' panel1hatch
+        ' 
+        panel1hatch.BackColor = Color.White
+        panel1hatch.BorderStyle = BorderStyle.FixedSingle
+        panel1hatch.Controls.Add(hatchyear1txt)
+        panel1hatch.Controls.Add(Label96)
+        panel1hatch.Controls.Add(hatchrentalrate1txt)
+        panel1hatch.Controls.Add(Label108)
+        panel1hatch.Controls.Add(hatchcolor1txt)
+        panel1hatch.Controls.Add(hatchmileage1txt)
+        panel1hatch.Controls.Add(hatchseatingcapacity1txt)
+        panel1hatch.Controls.Add(hatchmake1txt)
+        panel1hatch.Controls.Add(hatch1btn)
+        panel1hatch.Controls.Add(Label131)
+        panel1hatch.Controls.Add(Label135)
+        panel1hatch.Controls.Add(Label137)
+        panel1hatch.Controls.Add(hatch1pic)
+        panel1hatch.Controls.Add(hatchmodel1txt)
+        panel1hatch.Controls.Add(Label142)
+        panel1hatch.ForeColor = Color.Gray
+        panel1hatch.Location = New Point(10, 250)
+        panel1hatch.Margin = New Padding(3, 2, 3, 2)
+        panel1hatch.Name = "panel1hatch"
+        panel1hatch.Size = New Size(976, 215)
+        panel1hatch.TabIndex = 52
+        panel1hatch.Visible = False
+        ' 
+        ' hatchyear1txt
+        ' 
+        hatchyear1txt.AutoSize = True
+        hatchyear1txt.Font = New Font("Futura Hv BT", 12F)
+        hatchyear1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchyear1txt.Location = New Point(487, 158)
+        hatchyear1txt.Name = "hatchyear1txt"
+        hatchyear1txt.Size = New Size(49, 19)
+        hatchyear1txt.TabIndex = 25
+        hatchyear1txt.Text = "2021"
+        ' 
+        ' Label96
+        ' 
+        Label96.AutoSize = True
+        Label96.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label96.ForeColor = Color.Black
+        Label96.Location = New Point(324, 158)
+        Label96.Name = "Label96"
+        Label96.Size = New Size(49, 19)
+        Label96.TabIndex = 24
+        Label96.Text = "YEAR:"
+        ' 
+        ' hatchrentalrate1txt
+        ' 
+        hatchrentalrate1txt.AutoSize = True
+        hatchrentalrate1txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hatchrentalrate1txt.ForeColor = Color.Black
+        hatchrentalrate1txt.Location = New Point(709, 91)
+        hatchrentalrate1txt.Name = "hatchrentalrate1txt"
+        hatchrentalrate1txt.Size = New Size(149, 22)
+        hatchrentalrate1txt.TabIndex = 23
+        hatchrentalrate1txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label108
+        ' 
+        Label108.AutoSize = True
+        Label108.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label108.ForeColor = Color.Black
+        Label108.Location = New Point(708, 66)
+        Label108.Name = "Label108"
+        Label108.Size = New Size(99, 19)
+        Label108.TabIndex = 22
+        Label108.Text = "Vehicle Rate:"
+        ' 
+        ' hatchcolor1txt
+        ' 
+        hatchcolor1txt.AutoSize = True
+        hatchcolor1txt.Font = New Font("Futura Hv BT", 12F)
+        hatchcolor1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchcolor1txt.Location = New Point(486, 75)
+        hatchcolor1txt.Name = "hatchcolor1txt"
+        hatchcolor1txt.Size = New Size(35, 19)
+        hatchcolor1txt.TabIndex = 21
+        hatchcolor1txt.Text = "red"
+        ' 
+        ' hatchmileage1txt
+        ' 
+        hatchmileage1txt.AutoSize = True
+        hatchmileage1txt.Font = New Font("Futura Hv BT", 12F)
+        hatchmileage1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchmileage1txt.Location = New Point(487, 131)
+        hatchmileage1txt.Name = "hatchmileage1txt"
+        hatchmileage1txt.Size = New Size(88, 19)
+        hatchmileage1txt.TabIndex = 20
+        hatchmileage1txt.Text = "11,456km"
+        ' 
+        ' hatchseatingcapacity1txt
+        ' 
+        hatchseatingcapacity1txt.AutoSize = True
+        hatchseatingcapacity1txt.Font = New Font("Futura Hv BT", 12F)
+        hatchseatingcapacity1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchseatingcapacity1txt.Location = New Point(487, 103)
+        hatchseatingcapacity1txt.Name = "hatchseatingcapacity1txt"
+        hatchseatingcapacity1txt.Size = New Size(19, 19)
+        hatchseatingcapacity1txt.TabIndex = 19
+        hatchseatingcapacity1txt.Text = "5"
+        ' 
+        ' hatchmake1txt
+        ' 
+        hatchmake1txt.AutoSize = True
+        hatchmake1txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        hatchmake1txt.ForeColor = Color.Black
+        hatchmake1txt.Location = New Point(24, 7)
+        hatchmake1txt.Name = "hatchmake1txt"
+        hatchmake1txt.Size = New Size(60, 22)
+        hatchmake1txt.TabIndex = 17
+        hatchmake1txt.Text = "MAKE"
+        ' 
+        ' hatch1btn
+        ' 
+        hatch1btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatch1btn.FlatStyle = FlatStyle.Flat
+        hatch1btn.Font = New Font("Reesha", 16.1999989F)
+        hatch1btn.ForeColor = Color.White
+        hatch1btn.Location = New Point(708, 129)
+        hatch1btn.Margin = New Padding(3, 2, 3, 2)
+        hatch1btn.Name = "hatch1btn"
+        hatch1btn.Size = New Size(233, 43)
+        hatch1btn.TabIndex = 16
+        hatch1btn.Text = "BOOK NOW"
+        hatch1btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label131
+        ' 
+        Label131.AutoSize = True
+        Label131.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label131.ForeColor = Color.Black
+        Label131.Location = New Point(324, 131)
+        Label131.Name = "Label131"
+        Label131.Size = New Size(78, 19)
+        Label131.TabIndex = 5
+        Label131.Text = "MILEAGE:"
+        ' 
+        ' Label135
+        ' 
+        Label135.AutoSize = True
+        Label135.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label135.ForeColor = Color.Black
+        Label135.Location = New Point(324, 103)
+        Label135.Name = "Label135"
+        Label135.Size = New Size(123, 19)
+        Label135.TabIndex = 4
+        Label135.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label137
+        ' 
+        Label137.AutoSize = True
+        Label137.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label137.ForeColor = Color.Black
+        Label137.Location = New Point(324, 75)
+        Label137.Name = "Label137"
+        Label137.Size = New Size(69, 19)
+        Label137.TabIndex = 3
+        Label137.Text = "COLOR:"
+        ' 
+        ' hatch1pic
+        ' 
+        hatch1pic.Image = My.Resources.Resources.RideX
+        hatch1pic.Location = New Point(24, 75)
+        hatch1pic.Margin = New Padding(3, 2, 3, 2)
+        hatch1pic.Name = "hatch1pic"
+        hatch1pic.Size = New Size(265, 106)
+        hatch1pic.SizeMode = PictureBoxSizeMode.StretchImage
+        hatch1pic.TabIndex = 2
+        hatch1pic.TabStop = False
+        ' 
+        ' hatchmodel1txt
+        ' 
+        hatchmodel1txt.AutoSize = True
+        hatchmodel1txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hatchmodel1txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchmodel1txt.Location = New Point(19, 22)
+        hatchmodel1txt.Name = "hatchmodel1txt"
+        hatchmodel1txt.Size = New Size(245, 32)
+        hatchmodel1txt.TabIndex = 0
+        hatchmodel1txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label142
+        ' 
+        Label142.AutoSize = True
+        Label142.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label142.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label142.Location = New Point(19, 26)
+        Label142.Name = "Label142"
+        Label142.Size = New Size(882, 32)
+        Label142.TabIndex = 1
+        Label142.Text = "______________________________________________________________"
         ' 
         ' Panel24
         ' 
@@ -4400,12 +5256,12 @@ Partial Class allcars
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
-        ClientSize = New Size(1077, 428)
+        ClientSize = New Size(1075, 428)
+        Controls.Add(pnlHybrid)
         Controls.Add(pnlMpv)
         Controls.Add(pnlSuvContent)
         Controls.Add(pnlHatchback)
         Controls.Add(pnlSedan)
-        Controls.Add(pnlHybrid)
         Controls.Add(Panel13)
         Controls.Add(Panel6)
         Controls.Add(pnlAllCarsContent)
@@ -4453,6 +5309,9 @@ Partial Class allcars
         Panel13.ResumeLayout(False)
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         pnlSuvContent.ResumeLayout(False)
+        panel1suv.ResumeLayout(False)
+        panel1suv.PerformLayout()
+        CType(suv1pic, ComponentModel.ISupportInitialize).EndInit()
         Panel22.ResumeLayout(False)
         Panel22.PerformLayout()
         CType(car10img, ComponentModel.ISupportInitialize).EndInit()
@@ -4476,6 +5335,9 @@ Partial Class allcars
         Panel15.PerformLayout()
         CType(car1img, ComponentModel.ISupportInitialize).EndInit()
         pnlMpv.ResumeLayout(False)
+        panel1mpv.ResumeLayout(False)
+        panel1mpv.PerformLayout()
+        CType(mpv1pic, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(car4img, ComponentModel.ISupportInitialize).EndInit()
@@ -4486,10 +5348,16 @@ Partial Class allcars
         Panel27.PerformLayout()
         CType(car2img, ComponentModel.ISupportInitialize).EndInit()
         pnlHybrid.ResumeLayout(False)
+        panel1hybrid.ResumeLayout(False)
+        panel1hybrid.PerformLayout()
+        CType(hybrid1pic, ComponentModel.ISupportInitialize).EndInit()
         Panel23.ResumeLayout(False)
         Panel23.PerformLayout()
         CType(car9img, ComponentModel.ISupportInitialize).EndInit()
         pnlHatchback.ResumeLayout(False)
+        panel1hatch.ResumeLayout(False)
+        panel1hatch.PerformLayout()
+        CType(hatch1pic, ComponentModel.ISupportInitialize).EndInit()
         Panel24.ResumeLayout(False)
         Panel24.PerformLayout()
         CType(car7img, ComponentModel.ISupportInitialize).EndInit()
@@ -4655,7 +5523,6 @@ Partial Class allcars
     Friend WithEvents pnlMpv As Panel
     Friend WithEvents model3txt As Label
     Friend WithEvents pnlHatchback As Panel
-    Friend WithEvents Panel26 As Panel
     Friend WithEvents Label200 As Label
     Friend WithEvents Label201 As Label
     Friend WithEvents Label202 As Label
@@ -4844,5 +5711,69 @@ Partial Class allcars
     Friend WithEvents sedan1pic As PictureBox
     Friend WithEvents sedanmodel1txt As Label
     Friend WithEvents Label129 As Label
+    Friend WithEvents panel1hatch As Panel
+    Friend WithEvents hatchyear1txt As Label
+    Friend WithEvents Label96 As Label
+    Friend WithEvents hatchrentalrate1txt As Label
+    Friend WithEvents Label108 As Label
+    Friend WithEvents hatchcolor1txt As Label
+    Friend WithEvents hatchmileage1txt As Label
+    Friend WithEvents hatchseatingcapacity1txt As Label
+    Friend WithEvents hatchmake1txt As Label
+    Friend WithEvents hatch1btn As Button
+    Friend WithEvents Label131 As Label
+    Friend WithEvents Label135 As Label
+    Friend WithEvents Label137 As Label
+    Friend WithEvents hatch1pic As PictureBox
+    Friend WithEvents hatchmodel1txt As Label
+    Friend WithEvents Label142 As Label
+    Friend WithEvents panel1suv As Panel
+    Friend WithEvents suvyear1txt As Label
+    Friend WithEvents Label102 As Label
+    Friend WithEvents suvrentalrate1txt As Label
+    Friend WithEvents Label116 As Label
+    Friend WithEvents suvcolor1txt As Label
+    Friend WithEvents suvmileage1txt As Label
+    Friend WithEvents suvseatingcapacity1txt As Label
+    Friend WithEvents suvmake1txt As Label
+    Friend WithEvents suv1btn As Button
+    Friend WithEvents Label145 As Label
+    Friend WithEvents Label153 As Label
+    Friend WithEvents Label156 As Label
+    Friend WithEvents suv1pic As PictureBox
+    Friend WithEvents suvmodel1txt As Label
+    Friend WithEvents Label161 As Label
+    Friend WithEvents panel1hybrid As Panel
+    Friend WithEvents hybridyear1txt As Label
+    Friend WithEvents Label114 As Label
+    Friend WithEvents hybridrentalrate1txt As Label
+    Friend WithEvents Label130 As Label
+    Friend WithEvents hybridcolor1txt As Label
+    Friend WithEvents hybridmileage1txt As Label
+    Friend WithEvents hybridseatingcapacity1txt As Label
+    Friend WithEvents hybridmake1txt As Label
+    Friend WithEvents hybrid1btn As Button
+    Friend WithEvents Label174 As Label
+    Friend WithEvents Label175 As Label
+    Friend WithEvents Label176 As Label
+    Friend WithEvents hybrid1pic As PictureBox
+    Friend WithEvents hybridmodel1txt As Label
+    Friend WithEvents Label181 As Label
+    Friend WithEvents panel1mpv As Panel
+    Friend WithEvents mpvyear1txt As Label
+    Friend WithEvents Label128 As Label
+    Friend WithEvents mpvrentalrate1txt As Label
+    Friend WithEvents Label143 As Label
+    Friend WithEvents mpvcolor1txt As Label
+    Friend WithEvents mpvmileage1txt As Label
+    Friend WithEvents mpvseatingcapacity1txt As Label
+    Friend WithEvents mpvmake1txt As Label
+    Friend WithEvents mpv1btn As Button
+    Friend WithEvents Label188 As Label
+    Friend WithEvents Label189 As Label
+    Friend WithEvents Label190 As Label
+    Friend WithEvents mpv1pic As PictureBox
+    Friend WithEvents mpvmodel1txt As Label
+    Friend WithEvents Label196 As Label
 
 End Class

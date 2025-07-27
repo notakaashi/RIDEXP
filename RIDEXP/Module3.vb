@@ -360,7 +360,7 @@ Public Module Module3
                 End Using
             End Using
         Catch ex As Exception
-            ' If database query fails, return default values
+
             Console.WriteLine("Could not retrieve vehicle information: " & ex.Message)
         End Try
 
