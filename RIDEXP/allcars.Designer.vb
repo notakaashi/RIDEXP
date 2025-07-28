@@ -222,6 +222,70 @@ Partial Class allcars
         model6txt = New Label()
         Label147 = New Label()
         pnlSedan = New Panel()
+        panel5sedan = New Panel()
+        sedanyear5txt = New Label()
+        Label194 = New Label()
+        sedanrentalrate5txt = New Label()
+        Label201 = New Label()
+        sedancolor5txt = New Label()
+        sedanmileage5txt = New Label()
+        sedanseatingcapacity5txt = New Label()
+        sedanmake5txt = New Label()
+        sedan5btn = New Button()
+        Label216 = New Label()
+        Label217 = New Label()
+        Label218 = New Label()
+        sedan5pic = New PictureBox()
+        sedanmodel5txt = New Label()
+        Label220 = New Label()
+        panel4sedan = New Panel()
+        sedanyear4txt = New Label()
+        Label178 = New Label()
+        sedanrentalrate4txt = New Label()
+        Label197 = New Label()
+        sedancolor4txt = New Label()
+        sedanmileage4txt = New Label()
+        sedanseatingcapacity4txt = New Label()
+        sedanmake4txt = New Label()
+        sedan4btn = New Button()
+        Label208 = New Label()
+        Label209 = New Label()
+        Label210 = New Label()
+        sedan4pic = New PictureBox()
+        sedanmodel4txt = New Label()
+        Label212 = New Label()
+        panel3sedan = New Panel()
+        sedanyear3txt = New Label()
+        Label158 = New Label()
+        sedanrentalrate3txt = New Label()
+        Label186 = New Label()
+        sedancolor3txt = New Label()
+        sedanmileage3txt = New Label()
+        sedanseatingcapacity3txt = New Label()
+        sedanmake3txt = New Label()
+        sedan3btn = New Button()
+        Label202 = New Label()
+        Label203 = New Label()
+        Label204 = New Label()
+        sedan3pic = New PictureBox()
+        sedanmodel3txt = New Label()
+        Label206 = New Label()
+        panel2sedan = New Panel()
+        sedanyear2txt = New Label()
+        Label141 = New Label()
+        sedanrentalrate2txt = New Label()
+        Label172 = New Label()
+        sedancolor2txt = New Label()
+        sedanmileage2txt = New Label()
+        sedanseatingcapacity2txt = New Label()
+        sedanmake2txt = New Label()
+        sedan2btn = New Button()
+        Label198 = New Label()
+        Label199 = New Label()
+        Label213 = New Label()
+        sedan2pic = New PictureBox()
+        Label214 = New Label()
+        sedanmodel2txt = New Label()
         panel1sedan = New Panel()
         sedanyear1txt = New Label()
         Label95 = New Label()
@@ -352,6 +416,70 @@ Partial Class allcars
         model2txt = New Label()
         Label195 = New Label()
         pnlHybrid = New Panel()
+        panel5hybrid = New Panel()
+        hybridyear5txt = New Label()
+        Label219 = New Label()
+        hybridrentalrate5txt = New Label()
+        Label227 = New Label()
+        hybridcolor5txt = New Label()
+        hybridmileage5txt = New Label()
+        hybridseatingcapacity5txt = New Label()
+        hybridmake5txt = New Label()
+        hybrid5btn = New Button()
+        Label240 = New Label()
+        Label241 = New Label()
+        Label242 = New Label()
+        hybrid5pic = New PictureBox()
+        hybridmodel5txt = New Label()
+        Label244 = New Label()
+        panel4hybrid = New Panel()
+        hybridyear4txt = New Label()
+        Label211 = New Label()
+        hybridrentalrate4txt = New Label()
+        Label221 = New Label()
+        hybridcolor4txt = New Label()
+        hybridmileage4txt = New Label()
+        hybridseatingcapacity4txt = New Label()
+        hybridmake4txt = New Label()
+        hybrid4btn = New Button()
+        Label234 = New Label()
+        Label235 = New Label()
+        Label236 = New Label()
+        hybrid4pic = New PictureBox()
+        hybridmodel4txt = New Label()
+        Label238 = New Label()
+        panel3hybrid = New Panel()
+        hybridyear3txt = New Label()
+        Label205 = New Label()
+        hybridrentalrate3txt = New Label()
+        Label215 = New Label()
+        hybridcolor3txt = New Label()
+        hybridmileage3txt = New Label()
+        hybridseatingcapacity3txt = New Label()
+        hybridmake3txt = New Label()
+        hybrid3btn = New Button()
+        Label228 = New Label()
+        Label229 = New Label()
+        Label230 = New Label()
+        hybrid3pic = New PictureBox()
+        hybridmodel3txt = New Label()
+        Label232 = New Label()
+        panel2hybrid = New Panel()
+        hybridyear2txt = New Label()
+        Label200 = New Label()
+        hybridrentalrate2txt = New Label()
+        Label207 = New Label()
+        hybridcolor2txt = New Label()
+        hybridmileage2txt = New Label()
+        hybridseatingcapacity2txt = New Label()
+        hybridmake2txt = New Label()
+        hybrid2btn = New Button()
+        Label222 = New Label()
+        Label223 = New Label()
+        Label224 = New Label()
+        hybrid2pic = New PictureBox()
+        hybridmodel2txt = New Label()
+        Label226 = New Label()
         panel1hybrid = New Panel()
         hybridyear1txt = New Label()
         Label114 = New Label()
@@ -417,70 +545,6 @@ Partial Class allcars
         car7img = New PictureBox()
         model7txt = New Label()
         Label187 = New Label()
-        panel2sedan = New Panel()
-        sedanyear2txt = New Label()
-        Label141 = New Label()
-        sedanrentalrate2txt = New Label()
-        Label172 = New Label()
-        sedancolor2txt = New Label()
-        sedanmileage2txt = New Label()
-        sedanseatingcapacity2txt = New Label()
-        sedanmake2txt = New Label()
-        sedan2btn = New Button()
-        Label198 = New Label()
-        Label199 = New Label()
-        Label213 = New Label()
-        sedan2pic = New PictureBox()
-        Label214 = New Label()
-        sedanmodel2txt = New Label()
-        panel3sedan = New Panel()
-        sedanyear3txt = New Label()
-        Label158 = New Label()
-        sedanrentalrate3txt = New Label()
-        Label186 = New Label()
-        sedancolor3txt = New Label()
-        sedanmileage3txt = New Label()
-        sedanseatingcapacity3txt = New Label()
-        sedanmake3txt = New Label()
-        sedan3btn = New Button()
-        Label202 = New Label()
-        Label203 = New Label()
-        Label204 = New Label()
-        sedan3pic = New PictureBox()
-        sedanmodel3txt = New Label()
-        Label206 = New Label()
-        panel4sedan = New Panel()
-        sedanyear4txt = New Label()
-        Label178 = New Label()
-        sedanrentalrate4txt = New Label()
-        Label197 = New Label()
-        sedancolor4txt = New Label()
-        sedanmileage4txt = New Label()
-        sedanseatingcapacity4txt = New Label()
-        sedanmake4txt = New Label()
-        sedan4btn = New Button()
-        Label208 = New Label()
-        Label209 = New Label()
-        Label210 = New Label()
-        sedan4pic = New PictureBox()
-        sedanmodel4txt = New Label()
-        Label212 = New Label()
-        panel5sedan = New Panel()
-        sedanyear5txt = New Label()
-        Label194 = New Label()
-        sedanrentalrate5txt = New Label()
-        Label201 = New Label()
-        sedancolor5txt = New Label()
-        sedanmileage5txt = New Label()
-        sedanseatingcapacity5txt = New Label()
-        sedanmake5txt = New Label()
-        sedan5btn = New Button()
-        Label216 = New Label()
-        Label217 = New Label()
-        Label218 = New Label()
-        sedan5pic = New PictureBox()
-        sedanmodel5txt = New Label()
-        Label220 = New Label()
         Panel4.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         pnlAllCarsContent.SuspendLayout()
@@ -515,6 +579,14 @@ Partial Class allcars
         CType(imgCar6, ComponentModel.ISupportInitialize).BeginInit()
         CType(car6img, ComponentModel.ISupportInitialize).BeginInit()
         pnlSedan.SuspendLayout()
+        panel5sedan.SuspendLayout()
+        CType(sedan5pic, ComponentModel.ISupportInitialize).BeginInit()
+        panel4sedan.SuspendLayout()
+        CType(sedan4pic, ComponentModel.ISupportInitialize).BeginInit()
+        panel3sedan.SuspendLayout()
+        CType(sedan3pic, ComponentModel.ISupportInitialize).BeginInit()
+        panel2sedan.SuspendLayout()
+        CType(sedan2pic, ComponentModel.ISupportInitialize).BeginInit()
         panel1sedan.SuspendLayout()
         CType(sedan1pic, ComponentModel.ISupportInitialize).BeginInit()
         Panel14.SuspendLayout()
@@ -533,6 +605,14 @@ Partial Class allcars
         Panel27.SuspendLayout()
         CType(car2img, ComponentModel.ISupportInitialize).BeginInit()
         pnlHybrid.SuspendLayout()
+        panel5hybrid.SuspendLayout()
+        CType(hybrid5pic, ComponentModel.ISupportInitialize).BeginInit()
+        panel4hybrid.SuspendLayout()
+        CType(hybrid4pic, ComponentModel.ISupportInitialize).BeginInit()
+        panel3hybrid.SuspendLayout()
+        CType(hybrid3pic, ComponentModel.ISupportInitialize).BeginInit()
+        panel2hybrid.SuspendLayout()
+        CType(hybrid2pic, ComponentModel.ISupportInitialize).BeginInit()
         panel1hybrid.SuspendLayout()
         CType(hybrid1pic, ComponentModel.ISupportInitialize).BeginInit()
         Panel23.SuspendLayout()
@@ -542,14 +622,6 @@ Partial Class allcars
         CType(hatch1pic, ComponentModel.ISupportInitialize).BeginInit()
         Panel24.SuspendLayout()
         CType(car7img, ComponentModel.ISupportInitialize).BeginInit()
-        panel2sedan.SuspendLayout()
-        CType(sedan2pic, ComponentModel.ISupportInitialize).BeginInit()
-        panel3sedan.SuspendLayout()
-        CType(sedan3pic, ComponentModel.ISupportInitialize).BeginInit()
-        panel4sedan.SuspendLayout()
-        CType(sedan4pic, ComponentModel.ISupportInitialize).BeginInit()
-        panel5sedan.SuspendLayout()
-        CType(sedan5pic, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnHybrid
@@ -2063,7 +2135,7 @@ Partial Class allcars
         Panel6.Dock = DockStyle.Top
         Panel6.Location = New Point(0, 0)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(1229, 37)
+        Panel6.Size = New Size(1233, 37)
         Panel6.TabIndex = 41
         ' 
         ' Label37
@@ -2908,6 +2980,766 @@ Partial Class allcars
         pnlSedan.Name = "pnlSedan"
         pnlSedan.Size = New Size(1162, 351)
         pnlSedan.TabIndex = 44
+        ' 
+        ' panel5sedan
+        ' 
+        panel5sedan.BackColor = Color.White
+        panel5sedan.Controls.Add(sedanyear5txt)
+        panel5sedan.Controls.Add(Label194)
+        panel5sedan.Controls.Add(sedanrentalrate5txt)
+        panel5sedan.Controls.Add(Label201)
+        panel5sedan.Controls.Add(sedancolor5txt)
+        panel5sedan.Controls.Add(sedanmileage5txt)
+        panel5sedan.Controls.Add(sedanseatingcapacity5txt)
+        panel5sedan.Controls.Add(sedanmake5txt)
+        panel5sedan.Controls.Add(sedan5btn)
+        panel5sedan.Controls.Add(Label216)
+        panel5sedan.Controls.Add(Label217)
+        panel5sedan.Controls.Add(Label218)
+        panel5sedan.Controls.Add(sedan5pic)
+        panel5sedan.Controls.Add(sedanmodel5txt)
+        panel5sedan.Controls.Add(Label220)
+        panel5sedan.Location = New Point(11, 2219)
+        panel5sedan.Name = "panel5sedan"
+        panel5sedan.Size = New Size(1115, 285)
+        panel5sedan.TabIndex = 49
+        panel5sedan.Visible = False
+        ' 
+        ' sedanyear5txt
+        ' 
+        sedanyear5txt.AutoSize = True
+        sedanyear5txt.Font = New Font("Futura Hv BT", 12F)
+        sedanyear5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanyear5txt.Location = New Point(558, 209)
+        sedanyear5txt.Name = "sedanyear5txt"
+        sedanyear5txt.Size = New Size(58, 24)
+        sedanyear5txt.TabIndex = 27
+        sedanyear5txt.Text = "2021"
+        ' 
+        ' Label194
+        ' 
+        Label194.AutoSize = True
+        Label194.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label194.ForeColor = Color.Black
+        Label194.Location = New Point(371, 209)
+        Label194.Name = "Label194"
+        Label194.Size = New Size(60, 24)
+        Label194.TabIndex = 26
+        Label194.Text = "YEAR:"
+        ' 
+        ' sedanrentalrate5txt
+        ' 
+        sedanrentalrate5txt.AutoSize = True
+        sedanrentalrate5txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        sedanrentalrate5txt.ForeColor = Color.Black
+        sedanrentalrate5txt.Location = New Point(810, 121)
+        sedanrentalrate5txt.Name = "sedanrentalrate5txt"
+        sedanrentalrate5txt.Size = New Size(175, 27)
+        sedanrentalrate5txt.TabIndex = 25
+        sedanrentalrate5txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label201
+        ' 
+        Label201.AutoSize = True
+        Label201.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label201.ForeColor = Color.Black
+        Label201.Location = New Point(809, 88)
+        Label201.Name = "Label201"
+        Label201.Size = New Size(121, 24)
+        Label201.TabIndex = 24
+        Label201.Text = "Vehicle Rate:"
+        ' 
+        ' sedancolor5txt
+        ' 
+        sedancolor5txt.AutoSize = True
+        sedancolor5txt.Font = New Font("Futura Hv BT", 12F)
+        sedancolor5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedancolor5txt.Location = New Point(557, 100)
+        sedancolor5txt.Name = "sedancolor5txt"
+        sedancolor5txt.Size = New Size(41, 24)
+        sedancolor5txt.TabIndex = 21
+        sedancolor5txt.Text = "red"
+        ' 
+        ' sedanmileage5txt
+        ' 
+        sedanmileage5txt.AutoSize = True
+        sedanmileage5txt.Font = New Font("Futura Hv BT", 12F)
+        sedanmileage5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanmileage5txt.Location = New Point(557, 175)
+        sedanmileage5txt.Name = "sedanmileage5txt"
+        sedanmileage5txt.Size = New Size(105, 24)
+        sedanmileage5txt.TabIndex = 20
+        sedanmileage5txt.Text = "11,456km"
+        ' 
+        ' sedanseatingcapacity5txt
+        ' 
+        sedanseatingcapacity5txt.AutoSize = True
+        sedanseatingcapacity5txt.Font = New Font("Futura Hv BT", 12F)
+        sedanseatingcapacity5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanseatingcapacity5txt.Location = New Point(557, 137)
+        sedanseatingcapacity5txt.Name = "sedanseatingcapacity5txt"
+        sedanseatingcapacity5txt.Size = New Size(22, 24)
+        sedanseatingcapacity5txt.TabIndex = 19
+        sedanseatingcapacity5txt.Text = "5"
+        ' 
+        ' sedanmake5txt
+        ' 
+        sedanmake5txt.AutoSize = True
+        sedanmake5txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic)
+        sedanmake5txt.ForeColor = Color.Black
+        sedanmake5txt.Location = New Point(27, 9)
+        sedanmake5txt.Name = "sedanmake5txt"
+        sedanmake5txt.Size = New Size(76, 29)
+        sedanmake5txt.TabIndex = 17
+        sedanmake5txt.Text = "MAKE"
+        ' 
+        ' sedan5btn
+        ' 
+        sedan5btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedan5btn.FlatStyle = FlatStyle.Flat
+        sedan5btn.Font = New Font("Reesha", 16.1999989F)
+        sedan5btn.ForeColor = Color.White
+        sedan5btn.Location = New Point(809, 172)
+        sedan5btn.Name = "sedan5btn"
+        sedan5btn.Size = New Size(266, 57)
+        sedan5btn.TabIndex = 16
+        sedan5btn.Text = "BOOK NOW"
+        sedan5btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label216
+        ' 
+        Label216.AutoSize = True
+        Label216.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label216.ForeColor = Color.Black
+        Label216.Location = New Point(370, 175)
+        Label216.Name = "Label216"
+        Label216.Size = New Size(96, 24)
+        Label216.TabIndex = 5
+        Label216.Text = "MILEAGE:"
+        ' 
+        ' Label217
+        ' 
+        Label217.AutoSize = True
+        Label217.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label217.ForeColor = Color.Black
+        Label217.Location = New Point(370, 137)
+        Label217.Name = "Label217"
+        Label217.Size = New Size(153, 24)
+        Label217.TabIndex = 4
+        Label217.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label218
+        ' 
+        Label218.AutoSize = True
+        Label218.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label218.ForeColor = Color.Black
+        Label218.Location = New Point(370, 100)
+        Label218.Name = "Label218"
+        Label218.Size = New Size(83, 24)
+        Label218.TabIndex = 3
+        Label218.Text = "COLOR:"
+        ' 
+        ' sedan5pic
+        ' 
+        sedan5pic.Image = My.Resources.Resources.RideX
+        sedan5pic.Location = New Point(27, 100)
+        sedan5pic.Name = "sedan5pic"
+        sedan5pic.Size = New Size(303, 141)
+        sedan5pic.SizeMode = PictureBoxSizeMode.StretchImage
+        sedan5pic.TabIndex = 2
+        sedan5pic.TabStop = False
+        ' 
+        ' sedanmodel5txt
+        ' 
+        sedanmodel5txt.AutoSize = True
+        sedanmodel5txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        sedanmodel5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanmodel5txt.Location = New Point(22, 29)
+        sedanmodel5txt.Name = "sedanmodel5txt"
+        sedanmodel5txt.Size = New Size(303, 41)
+        sedanmodel5txt.TabIndex = 0
+        sedanmodel5txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label220
+        ' 
+        Label220.AutoSize = True
+        Label220.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label220.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label220.Location = New Point(22, 35)
+        Label220.Name = "Label220"
+        Label220.Size = New Size(1072, 41)
+        Label220.TabIndex = 1
+        Label220.Text = "______________________________________________________________"
+        ' 
+        ' panel4sedan
+        ' 
+        panel4sedan.BackColor = Color.White
+        panel4sedan.Controls.Add(sedanyear4txt)
+        panel4sedan.Controls.Add(Label178)
+        panel4sedan.Controls.Add(sedanrentalrate4txt)
+        panel4sedan.Controls.Add(Label197)
+        panel4sedan.Controls.Add(sedancolor4txt)
+        panel4sedan.Controls.Add(sedanmileage4txt)
+        panel4sedan.Controls.Add(sedanseatingcapacity4txt)
+        panel4sedan.Controls.Add(sedanmake4txt)
+        panel4sedan.Controls.Add(sedan4btn)
+        panel4sedan.Controls.Add(Label208)
+        panel4sedan.Controls.Add(Label209)
+        panel4sedan.Controls.Add(Label210)
+        panel4sedan.Controls.Add(sedan4pic)
+        panel4sedan.Controls.Add(sedanmodel4txt)
+        panel4sedan.Controls.Add(Label212)
+        panel4sedan.Location = New Point(11, 1912)
+        panel4sedan.Name = "panel4sedan"
+        panel4sedan.Size = New Size(1115, 285)
+        panel4sedan.TabIndex = 48
+        panel4sedan.Visible = False
+        ' 
+        ' sedanyear4txt
+        ' 
+        sedanyear4txt.AutoSize = True
+        sedanyear4txt.Font = New Font("Futura Hv BT", 12F)
+        sedanyear4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanyear4txt.Location = New Point(558, 209)
+        sedanyear4txt.Name = "sedanyear4txt"
+        sedanyear4txt.Size = New Size(58, 24)
+        sedanyear4txt.TabIndex = 27
+        sedanyear4txt.Text = "2021"
+        ' 
+        ' Label178
+        ' 
+        Label178.AutoSize = True
+        Label178.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label178.ForeColor = Color.Black
+        Label178.Location = New Point(371, 209)
+        Label178.Name = "Label178"
+        Label178.Size = New Size(60, 24)
+        Label178.TabIndex = 26
+        Label178.Text = "YEAR:"
+        ' 
+        ' sedanrentalrate4txt
+        ' 
+        sedanrentalrate4txt.AutoSize = True
+        sedanrentalrate4txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        sedanrentalrate4txt.ForeColor = Color.Black
+        sedanrentalrate4txt.Location = New Point(810, 121)
+        sedanrentalrate4txt.Name = "sedanrentalrate4txt"
+        sedanrentalrate4txt.Size = New Size(175, 27)
+        sedanrentalrate4txt.TabIndex = 25
+        sedanrentalrate4txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label197
+        ' 
+        Label197.AutoSize = True
+        Label197.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label197.ForeColor = Color.Black
+        Label197.Location = New Point(809, 88)
+        Label197.Name = "Label197"
+        Label197.Size = New Size(121, 24)
+        Label197.TabIndex = 24
+        Label197.Text = "Vehicle Rate:"
+        ' 
+        ' sedancolor4txt
+        ' 
+        sedancolor4txt.AutoSize = True
+        sedancolor4txt.Font = New Font("Futura Hv BT", 12F)
+        sedancolor4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedancolor4txt.Location = New Point(557, 100)
+        sedancolor4txt.Name = "sedancolor4txt"
+        sedancolor4txt.Size = New Size(41, 24)
+        sedancolor4txt.TabIndex = 21
+        sedancolor4txt.Text = "red"
+        ' 
+        ' sedanmileage4txt
+        ' 
+        sedanmileage4txt.AutoSize = True
+        sedanmileage4txt.Font = New Font("Futura Hv BT", 12F)
+        sedanmileage4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanmileage4txt.Location = New Point(557, 175)
+        sedanmileage4txt.Name = "sedanmileage4txt"
+        sedanmileage4txt.Size = New Size(105, 24)
+        sedanmileage4txt.TabIndex = 20
+        sedanmileage4txt.Text = "11,456km"
+        ' 
+        ' sedanseatingcapacity4txt
+        ' 
+        sedanseatingcapacity4txt.AutoSize = True
+        sedanseatingcapacity4txt.Font = New Font("Futura Hv BT", 12F)
+        sedanseatingcapacity4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanseatingcapacity4txt.Location = New Point(557, 137)
+        sedanseatingcapacity4txt.Name = "sedanseatingcapacity4txt"
+        sedanseatingcapacity4txt.Size = New Size(22, 24)
+        sedanseatingcapacity4txt.TabIndex = 19
+        sedanseatingcapacity4txt.Text = "5"
+        ' 
+        ' sedanmake4txt
+        ' 
+        sedanmake4txt.AutoSize = True
+        sedanmake4txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic)
+        sedanmake4txt.ForeColor = Color.Black
+        sedanmake4txt.Location = New Point(27, 9)
+        sedanmake4txt.Name = "sedanmake4txt"
+        sedanmake4txt.Size = New Size(76, 29)
+        sedanmake4txt.TabIndex = 17
+        sedanmake4txt.Text = "MAKE"
+        ' 
+        ' sedan4btn
+        ' 
+        sedan4btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedan4btn.FlatStyle = FlatStyle.Flat
+        sedan4btn.Font = New Font("Reesha", 16.1999989F)
+        sedan4btn.ForeColor = Color.White
+        sedan4btn.Location = New Point(809, 172)
+        sedan4btn.Name = "sedan4btn"
+        sedan4btn.Size = New Size(266, 57)
+        sedan4btn.TabIndex = 16
+        sedan4btn.Text = "BOOK NOW"
+        sedan4btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label208
+        ' 
+        Label208.AutoSize = True
+        Label208.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label208.ForeColor = Color.Black
+        Label208.Location = New Point(370, 175)
+        Label208.Name = "Label208"
+        Label208.Size = New Size(96, 24)
+        Label208.TabIndex = 5
+        Label208.Text = "MILEAGE:"
+        ' 
+        ' Label209
+        ' 
+        Label209.AutoSize = True
+        Label209.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label209.ForeColor = Color.Black
+        Label209.Location = New Point(370, 137)
+        Label209.Name = "Label209"
+        Label209.Size = New Size(153, 24)
+        Label209.TabIndex = 4
+        Label209.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label210
+        ' 
+        Label210.AutoSize = True
+        Label210.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label210.ForeColor = Color.Black
+        Label210.Location = New Point(370, 100)
+        Label210.Name = "Label210"
+        Label210.Size = New Size(83, 24)
+        Label210.TabIndex = 3
+        Label210.Text = "COLOR:"
+        ' 
+        ' sedan4pic
+        ' 
+        sedan4pic.Image = My.Resources.Resources.RideX
+        sedan4pic.Location = New Point(27, 100)
+        sedan4pic.Name = "sedan4pic"
+        sedan4pic.Size = New Size(303, 141)
+        sedan4pic.SizeMode = PictureBoxSizeMode.StretchImage
+        sedan4pic.TabIndex = 2
+        sedan4pic.TabStop = False
+        ' 
+        ' sedanmodel4txt
+        ' 
+        sedanmodel4txt.AutoSize = True
+        sedanmodel4txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        sedanmodel4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanmodel4txt.Location = New Point(22, 29)
+        sedanmodel4txt.Name = "sedanmodel4txt"
+        sedanmodel4txt.Size = New Size(303, 41)
+        sedanmodel4txt.TabIndex = 0
+        sedanmodel4txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label212
+        ' 
+        Label212.AutoSize = True
+        Label212.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label212.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label212.Location = New Point(22, 35)
+        Label212.Name = "Label212"
+        Label212.Size = New Size(1072, 41)
+        Label212.TabIndex = 1
+        Label212.Text = "______________________________________________________________"
+        ' 
+        ' panel3sedan
+        ' 
+        panel3sedan.BackColor = Color.White
+        panel3sedan.Controls.Add(sedanyear3txt)
+        panel3sedan.Controls.Add(Label158)
+        panel3sedan.Controls.Add(sedanrentalrate3txt)
+        panel3sedan.Controls.Add(Label186)
+        panel3sedan.Controls.Add(sedancolor3txt)
+        panel3sedan.Controls.Add(sedanmileage3txt)
+        panel3sedan.Controls.Add(sedanseatingcapacity3txt)
+        panel3sedan.Controls.Add(sedanmake3txt)
+        panel3sedan.Controls.Add(sedan3btn)
+        panel3sedan.Controls.Add(Label202)
+        panel3sedan.Controls.Add(Label203)
+        panel3sedan.Controls.Add(Label204)
+        panel3sedan.Controls.Add(sedan3pic)
+        panel3sedan.Controls.Add(sedanmodel3txt)
+        panel3sedan.Controls.Add(Label206)
+        panel3sedan.Location = New Point(11, 1596)
+        panel3sedan.Name = "panel3sedan"
+        panel3sedan.Size = New Size(1115, 285)
+        panel3sedan.TabIndex = 47
+        panel3sedan.Visible = False
+        ' 
+        ' sedanyear3txt
+        ' 
+        sedanyear3txt.AutoSize = True
+        sedanyear3txt.Font = New Font("Futura Hv BT", 12F)
+        sedanyear3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanyear3txt.Location = New Point(558, 209)
+        sedanyear3txt.Name = "sedanyear3txt"
+        sedanyear3txt.Size = New Size(58, 24)
+        sedanyear3txt.TabIndex = 27
+        sedanyear3txt.Text = "2021"
+        ' 
+        ' Label158
+        ' 
+        Label158.AutoSize = True
+        Label158.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label158.ForeColor = Color.Black
+        Label158.Location = New Point(371, 209)
+        Label158.Name = "Label158"
+        Label158.Size = New Size(60, 24)
+        Label158.TabIndex = 26
+        Label158.Text = "YEAR:"
+        ' 
+        ' sedanrentalrate3txt
+        ' 
+        sedanrentalrate3txt.AutoSize = True
+        sedanrentalrate3txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        sedanrentalrate3txt.ForeColor = Color.Black
+        sedanrentalrate3txt.Location = New Point(810, 121)
+        sedanrentalrate3txt.Name = "sedanrentalrate3txt"
+        sedanrentalrate3txt.Size = New Size(175, 27)
+        sedanrentalrate3txt.TabIndex = 25
+        sedanrentalrate3txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label186
+        ' 
+        Label186.AutoSize = True
+        Label186.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label186.ForeColor = Color.Black
+        Label186.Location = New Point(809, 88)
+        Label186.Name = "Label186"
+        Label186.Size = New Size(121, 24)
+        Label186.TabIndex = 24
+        Label186.Text = "Vehicle Rate:"
+        ' 
+        ' sedancolor3txt
+        ' 
+        sedancolor3txt.AutoSize = True
+        sedancolor3txt.Font = New Font("Futura Hv BT", 12F)
+        sedancolor3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedancolor3txt.Location = New Point(557, 100)
+        sedancolor3txt.Name = "sedancolor3txt"
+        sedancolor3txt.Size = New Size(41, 24)
+        sedancolor3txt.TabIndex = 21
+        sedancolor3txt.Text = "red"
+        ' 
+        ' sedanmileage3txt
+        ' 
+        sedanmileage3txt.AutoSize = True
+        sedanmileage3txt.Font = New Font("Futura Hv BT", 12F)
+        sedanmileage3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanmileage3txt.Location = New Point(557, 175)
+        sedanmileage3txt.Name = "sedanmileage3txt"
+        sedanmileage3txt.Size = New Size(105, 24)
+        sedanmileage3txt.TabIndex = 20
+        sedanmileage3txt.Text = "11,456km"
+        ' 
+        ' sedanseatingcapacity3txt
+        ' 
+        sedanseatingcapacity3txt.AutoSize = True
+        sedanseatingcapacity3txt.Font = New Font("Futura Hv BT", 12F)
+        sedanseatingcapacity3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanseatingcapacity3txt.Location = New Point(557, 137)
+        sedanseatingcapacity3txt.Name = "sedanseatingcapacity3txt"
+        sedanseatingcapacity3txt.Size = New Size(22, 24)
+        sedanseatingcapacity3txt.TabIndex = 19
+        sedanseatingcapacity3txt.Text = "5"
+        ' 
+        ' sedanmake3txt
+        ' 
+        sedanmake3txt.AutoSize = True
+        sedanmake3txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic)
+        sedanmake3txt.ForeColor = Color.Black
+        sedanmake3txt.Location = New Point(27, 9)
+        sedanmake3txt.Name = "sedanmake3txt"
+        sedanmake3txt.Size = New Size(76, 29)
+        sedanmake3txt.TabIndex = 17
+        sedanmake3txt.Text = "MAKE"
+        ' 
+        ' sedan3btn
+        ' 
+        sedan3btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedan3btn.FlatStyle = FlatStyle.Flat
+        sedan3btn.Font = New Font("Reesha", 16.1999989F)
+        sedan3btn.ForeColor = Color.White
+        sedan3btn.Location = New Point(809, 172)
+        sedan3btn.Name = "sedan3btn"
+        sedan3btn.Size = New Size(266, 57)
+        sedan3btn.TabIndex = 16
+        sedan3btn.Text = "BOOK NOW"
+        sedan3btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label202
+        ' 
+        Label202.AutoSize = True
+        Label202.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label202.ForeColor = Color.Black
+        Label202.Location = New Point(370, 175)
+        Label202.Name = "Label202"
+        Label202.Size = New Size(96, 24)
+        Label202.TabIndex = 5
+        Label202.Text = "MILEAGE:"
+        ' 
+        ' Label203
+        ' 
+        Label203.AutoSize = True
+        Label203.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label203.ForeColor = Color.Black
+        Label203.Location = New Point(370, 137)
+        Label203.Name = "Label203"
+        Label203.Size = New Size(153, 24)
+        Label203.TabIndex = 4
+        Label203.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label204
+        ' 
+        Label204.AutoSize = True
+        Label204.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label204.ForeColor = Color.Black
+        Label204.Location = New Point(370, 100)
+        Label204.Name = "Label204"
+        Label204.Size = New Size(83, 24)
+        Label204.TabIndex = 3
+        Label204.Text = "COLOR:"
+        ' 
+        ' sedan3pic
+        ' 
+        sedan3pic.Image = My.Resources.Resources.RideX
+        sedan3pic.Location = New Point(27, 100)
+        sedan3pic.Name = "sedan3pic"
+        sedan3pic.Size = New Size(303, 141)
+        sedan3pic.SizeMode = PictureBoxSizeMode.StretchImage
+        sedan3pic.TabIndex = 2
+        sedan3pic.TabStop = False
+        ' 
+        ' sedanmodel3txt
+        ' 
+        sedanmodel3txt.AutoSize = True
+        sedanmodel3txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        sedanmodel3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanmodel3txt.Location = New Point(22, 29)
+        sedanmodel3txt.Name = "sedanmodel3txt"
+        sedanmodel3txt.Size = New Size(303, 41)
+        sedanmodel3txt.TabIndex = 0
+        sedanmodel3txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label206
+        ' 
+        Label206.AutoSize = True
+        Label206.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label206.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label206.Location = New Point(22, 35)
+        Label206.Name = "Label206"
+        Label206.Size = New Size(1072, 41)
+        Label206.TabIndex = 1
+        Label206.Text = "______________________________________________________________"
+        ' 
+        ' panel2sedan
+        ' 
+        panel2sedan.BackColor = Color.White
+        panel2sedan.Controls.Add(sedanyear2txt)
+        panel2sedan.Controls.Add(Label141)
+        panel2sedan.Controls.Add(sedanrentalrate2txt)
+        panel2sedan.Controls.Add(Label172)
+        panel2sedan.Controls.Add(sedancolor2txt)
+        panel2sedan.Controls.Add(sedanmileage2txt)
+        panel2sedan.Controls.Add(sedanseatingcapacity2txt)
+        panel2sedan.Controls.Add(sedanmake2txt)
+        panel2sedan.Controls.Add(sedan2btn)
+        panel2sedan.Controls.Add(Label198)
+        panel2sedan.Controls.Add(Label199)
+        panel2sedan.Controls.Add(Label213)
+        panel2sedan.Controls.Add(sedan2pic)
+        panel2sedan.Controls.Add(Label214)
+        panel2sedan.Controls.Add(sedanmodel2txt)
+        panel2sedan.Location = New Point(11, 1282)
+        panel2sedan.Name = "panel2sedan"
+        panel2sedan.Size = New Size(1115, 285)
+        panel2sedan.TabIndex = 46
+        panel2sedan.Visible = False
+        ' 
+        ' sedanyear2txt
+        ' 
+        sedanyear2txt.AutoSize = True
+        sedanyear2txt.Font = New Font("Futura Hv BT", 12F)
+        sedanyear2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanyear2txt.Location = New Point(558, 209)
+        sedanyear2txt.Name = "sedanyear2txt"
+        sedanyear2txt.Size = New Size(58, 24)
+        sedanyear2txt.TabIndex = 27
+        sedanyear2txt.Text = "2021"
+        ' 
+        ' Label141
+        ' 
+        Label141.AutoSize = True
+        Label141.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label141.ForeColor = Color.Black
+        Label141.Location = New Point(371, 209)
+        Label141.Name = "Label141"
+        Label141.Size = New Size(60, 24)
+        Label141.TabIndex = 26
+        Label141.Text = "YEAR:"
+        ' 
+        ' sedanrentalrate2txt
+        ' 
+        sedanrentalrate2txt.AutoSize = True
+        sedanrentalrate2txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        sedanrentalrate2txt.ForeColor = Color.Black
+        sedanrentalrate2txt.Location = New Point(810, 121)
+        sedanrentalrate2txt.Name = "sedanrentalrate2txt"
+        sedanrentalrate2txt.Size = New Size(175, 27)
+        sedanrentalrate2txt.TabIndex = 25
+        sedanrentalrate2txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label172
+        ' 
+        Label172.AutoSize = True
+        Label172.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label172.ForeColor = Color.Black
+        Label172.Location = New Point(809, 88)
+        Label172.Name = "Label172"
+        Label172.Size = New Size(121, 24)
+        Label172.TabIndex = 24
+        Label172.Text = "Vehicle Rate:"
+        ' 
+        ' sedancolor2txt
+        ' 
+        sedancolor2txt.AutoSize = True
+        sedancolor2txt.Font = New Font("Futura Hv BT", 12F)
+        sedancolor2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedancolor2txt.Location = New Point(557, 100)
+        sedancolor2txt.Name = "sedancolor2txt"
+        sedancolor2txt.Size = New Size(41, 24)
+        sedancolor2txt.TabIndex = 21
+        sedancolor2txt.Text = "red"
+        ' 
+        ' sedanmileage2txt
+        ' 
+        sedanmileage2txt.AutoSize = True
+        sedanmileage2txt.Font = New Font("Futura Hv BT", 12F)
+        sedanmileage2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanmileage2txt.Location = New Point(557, 175)
+        sedanmileage2txt.Name = "sedanmileage2txt"
+        sedanmileage2txt.Size = New Size(105, 24)
+        sedanmileage2txt.TabIndex = 20
+        sedanmileage2txt.Text = "11,456km"
+        ' 
+        ' sedanseatingcapacity2txt
+        ' 
+        sedanseatingcapacity2txt.AutoSize = True
+        sedanseatingcapacity2txt.Font = New Font("Futura Hv BT", 12F)
+        sedanseatingcapacity2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanseatingcapacity2txt.Location = New Point(557, 137)
+        sedanseatingcapacity2txt.Name = "sedanseatingcapacity2txt"
+        sedanseatingcapacity2txt.Size = New Size(22, 24)
+        sedanseatingcapacity2txt.TabIndex = 19
+        sedanseatingcapacity2txt.Text = "5"
+        ' 
+        ' sedanmake2txt
+        ' 
+        sedanmake2txt.AutoSize = True
+        sedanmake2txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic)
+        sedanmake2txt.ForeColor = Color.Black
+        sedanmake2txt.Location = New Point(27, 9)
+        sedanmake2txt.Name = "sedanmake2txt"
+        sedanmake2txt.Size = New Size(76, 29)
+        sedanmake2txt.TabIndex = 17
+        sedanmake2txt.Text = "MAKE"
+        ' 
+        ' sedan2btn
+        ' 
+        sedan2btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedan2btn.FlatStyle = FlatStyle.Flat
+        sedan2btn.Font = New Font("Reesha", 16.1999989F)
+        sedan2btn.ForeColor = Color.White
+        sedan2btn.Location = New Point(809, 172)
+        sedan2btn.Name = "sedan2btn"
+        sedan2btn.Size = New Size(266, 57)
+        sedan2btn.TabIndex = 16
+        sedan2btn.Text = "BOOK NOW"
+        sedan2btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label198
+        ' 
+        Label198.AutoSize = True
+        Label198.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label198.ForeColor = Color.Black
+        Label198.Location = New Point(370, 175)
+        Label198.Name = "Label198"
+        Label198.Size = New Size(96, 24)
+        Label198.TabIndex = 5
+        Label198.Text = "MILEAGE:"
+        ' 
+        ' Label199
+        ' 
+        Label199.AutoSize = True
+        Label199.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label199.ForeColor = Color.Black
+        Label199.Location = New Point(370, 137)
+        Label199.Name = "Label199"
+        Label199.Size = New Size(153, 24)
+        Label199.TabIndex = 4
+        Label199.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label213
+        ' 
+        Label213.AutoSize = True
+        Label213.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label213.ForeColor = Color.Black
+        Label213.Location = New Point(370, 100)
+        Label213.Name = "Label213"
+        Label213.Size = New Size(83, 24)
+        Label213.TabIndex = 3
+        Label213.Text = "COLOR:"
+        ' 
+        ' sedan2pic
+        ' 
+        sedan2pic.Image = My.Resources.Resources.RideX
+        sedan2pic.Location = New Point(27, 100)
+        sedan2pic.Name = "sedan2pic"
+        sedan2pic.Size = New Size(303, 141)
+        sedan2pic.SizeMode = PictureBoxSizeMode.StretchImage
+        sedan2pic.TabIndex = 2
+        sedan2pic.TabStop = False
+        ' 
+        ' Label214
+        ' 
+        Label214.AutoSize = True
+        Label214.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label214.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label214.Location = New Point(22, 29)
+        Label214.Name = "Label214"
+        Label214.Size = New Size(303, 41)
+        Label214.TabIndex = 0
+        Label214.Text = "CAR NUMBER 1"
+        ' 
+        ' sedanmodel2txt
+        ' 
+        sedanmodel2txt.AutoSize = True
+        sedanmodel2txt.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        sedanmodel2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        sedanmodel2txt.Location = New Point(22, 35)
+        sedanmodel2txt.Name = "sedanmodel2txt"
+        sedanmodel2txt.Size = New Size(1072, 41)
+        sedanmodel2txt.TabIndex = 1
+        sedanmodel2txt.Text = "______________________________________________________________"
         ' 
         ' panel1sedan
         ' 
@@ -4450,12 +5282,784 @@ Partial Class allcars
         ' 
         pnlHybrid.AutoScroll = True
         pnlHybrid.BackColor = SystemColors.Control
+        pnlHybrid.Controls.Add(panel5hybrid)
+        pnlHybrid.Controls.Add(panel4hybrid)
+        pnlHybrid.Controls.Add(panel3hybrid)
+        pnlHybrid.Controls.Add(panel2hybrid)
         pnlHybrid.Controls.Add(panel1hybrid)
         pnlHybrid.Controls.Add(Panel23)
-        pnlHybrid.Location = New Point(1286, 461)
+        pnlHybrid.Location = New Point(1318, 461)
         pnlHybrid.Name = "pnlHybrid"
         pnlHybrid.Size = New Size(1146, 317)
         pnlHybrid.TabIndex = 47
+        ' 
+        ' panel5hybrid
+        ' 
+        panel5hybrid.BackColor = Color.White
+        panel5hybrid.BorderStyle = BorderStyle.FixedSingle
+        panel5hybrid.Controls.Add(hybridyear5txt)
+        panel5hybrid.Controls.Add(Label219)
+        panel5hybrid.Controls.Add(hybridrentalrate5txt)
+        panel5hybrid.Controls.Add(Label227)
+        panel5hybrid.Controls.Add(hybridcolor5txt)
+        panel5hybrid.Controls.Add(hybridmileage5txt)
+        panel5hybrid.Controls.Add(hybridseatingcapacity5txt)
+        panel5hybrid.Controls.Add(hybridmake5txt)
+        panel5hybrid.Controls.Add(hybrid5btn)
+        panel5hybrid.Controls.Add(Label240)
+        panel5hybrid.Controls.Add(Label241)
+        panel5hybrid.Controls.Add(Label242)
+        panel5hybrid.Controls.Add(hybrid5pic)
+        panel5hybrid.Controls.Add(hybridmodel5txt)
+        panel5hybrid.Controls.Add(Label244)
+        panel5hybrid.ForeColor = Color.Gray
+        panel5hybrid.Location = New Point(13, 1598)
+        panel5hybrid.Name = "panel5hybrid"
+        panel5hybrid.Size = New Size(1101, 286)
+        panel5hybrid.TabIndex = 55
+        panel5hybrid.Visible = False
+        ' 
+        ' hybridyear5txt
+        ' 
+        hybridyear5txt.AutoSize = True
+        hybridyear5txt.Font = New Font("Futura Hv BT", 12F)
+        hybridyear5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridyear5txt.Location = New Point(557, 211)
+        hybridyear5txt.Name = "hybridyear5txt"
+        hybridyear5txt.Size = New Size(58, 24)
+        hybridyear5txt.TabIndex = 25
+        hybridyear5txt.Text = "2021"
+        ' 
+        ' Label219
+        ' 
+        Label219.AutoSize = True
+        Label219.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label219.ForeColor = Color.Black
+        Label219.Location = New Point(370, 211)
+        Label219.Name = "Label219"
+        Label219.Size = New Size(60, 24)
+        Label219.TabIndex = 24
+        Label219.Text = "YEAR:"
+        ' 
+        ' hybridrentalrate5txt
+        ' 
+        hybridrentalrate5txt.AutoSize = True
+        hybridrentalrate5txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hybridrentalrate5txt.ForeColor = Color.Black
+        hybridrentalrate5txt.Location = New Point(810, 121)
+        hybridrentalrate5txt.Name = "hybridrentalrate5txt"
+        hybridrentalrate5txt.Size = New Size(175, 27)
+        hybridrentalrate5txt.TabIndex = 23
+        hybridrentalrate5txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label227
+        ' 
+        Label227.AutoSize = True
+        Label227.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label227.ForeColor = Color.Black
+        Label227.Location = New Point(809, 88)
+        Label227.Name = "Label227"
+        Label227.Size = New Size(121, 24)
+        Label227.TabIndex = 22
+        Label227.Text = "Vehicle Rate:"
+        ' 
+        ' hybridcolor5txt
+        ' 
+        hybridcolor5txt.AutoSize = True
+        hybridcolor5txt.Font = New Font("Futura Hv BT", 12F)
+        hybridcolor5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridcolor5txt.Location = New Point(555, 100)
+        hybridcolor5txt.Name = "hybridcolor5txt"
+        hybridcolor5txt.Size = New Size(41, 24)
+        hybridcolor5txt.TabIndex = 21
+        hybridcolor5txt.Text = "red"
+        ' 
+        ' hybridmileage5txt
+        ' 
+        hybridmileage5txt.AutoSize = True
+        hybridmileage5txt.Font = New Font("Futura Hv BT", 12F)
+        hybridmileage5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridmileage5txt.Location = New Point(557, 175)
+        hybridmileage5txt.Name = "hybridmileage5txt"
+        hybridmileage5txt.Size = New Size(105, 24)
+        hybridmileage5txt.TabIndex = 20
+        hybridmileage5txt.Text = "11,456km"
+        ' 
+        ' hybridseatingcapacity5txt
+        ' 
+        hybridseatingcapacity5txt.AutoSize = True
+        hybridseatingcapacity5txt.Font = New Font("Futura Hv BT", 12F)
+        hybridseatingcapacity5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridseatingcapacity5txt.Location = New Point(557, 137)
+        hybridseatingcapacity5txt.Name = "hybridseatingcapacity5txt"
+        hybridseatingcapacity5txt.Size = New Size(22, 24)
+        hybridseatingcapacity5txt.TabIndex = 19
+        hybridseatingcapacity5txt.Text = "5"
+        ' 
+        ' hybridmake5txt
+        ' 
+        hybridmake5txt.AutoSize = True
+        hybridmake5txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        hybridmake5txt.ForeColor = Color.Black
+        hybridmake5txt.Location = New Point(27, 9)
+        hybridmake5txt.Name = "hybridmake5txt"
+        hybridmake5txt.Size = New Size(76, 29)
+        hybridmake5txt.TabIndex = 17
+        hybridmake5txt.Text = "MAKE"
+        ' 
+        ' hybrid5btn
+        ' 
+        hybrid5btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybrid5btn.FlatStyle = FlatStyle.Flat
+        hybrid5btn.Font = New Font("Reesha", 16.1999989F)
+        hybrid5btn.ForeColor = Color.White
+        hybrid5btn.Location = New Point(809, 172)
+        hybrid5btn.Name = "hybrid5btn"
+        hybrid5btn.Size = New Size(266, 57)
+        hybrid5btn.TabIndex = 16
+        hybrid5btn.Text = "BOOK NOW"
+        hybrid5btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label240
+        ' 
+        Label240.AutoSize = True
+        Label240.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label240.ForeColor = Color.Black
+        Label240.Location = New Point(370, 175)
+        Label240.Name = "Label240"
+        Label240.Size = New Size(96, 24)
+        Label240.TabIndex = 5
+        Label240.Text = "MILEAGE:"
+        ' 
+        ' Label241
+        ' 
+        Label241.AutoSize = True
+        Label241.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label241.ForeColor = Color.Black
+        Label241.Location = New Point(370, 137)
+        Label241.Name = "Label241"
+        Label241.Size = New Size(153, 24)
+        Label241.TabIndex = 4
+        Label241.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label242
+        ' 
+        Label242.AutoSize = True
+        Label242.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label242.ForeColor = Color.Black
+        Label242.Location = New Point(370, 100)
+        Label242.Name = "Label242"
+        Label242.Size = New Size(83, 24)
+        Label242.TabIndex = 3
+        Label242.Text = "COLOR:"
+        ' 
+        ' hybrid5pic
+        ' 
+        hybrid5pic.Image = My.Resources.Resources.RideX
+        hybrid5pic.Location = New Point(27, 100)
+        hybrid5pic.Name = "hybrid5pic"
+        hybrid5pic.Size = New Size(303, 141)
+        hybrid5pic.SizeMode = PictureBoxSizeMode.StretchImage
+        hybrid5pic.TabIndex = 2
+        hybrid5pic.TabStop = False
+        ' 
+        ' hybridmodel5txt
+        ' 
+        hybridmodel5txt.AutoSize = True
+        hybridmodel5txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hybridmodel5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridmodel5txt.Location = New Point(22, 29)
+        hybridmodel5txt.Name = "hybridmodel5txt"
+        hybridmodel5txt.Size = New Size(303, 41)
+        hybridmodel5txt.TabIndex = 0
+        hybridmodel5txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label244
+        ' 
+        Label244.AutoSize = True
+        Label244.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label244.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label244.Location = New Point(22, 35)
+        Label244.Name = "Label244"
+        Label244.Size = New Size(1072, 41)
+        Label244.TabIndex = 1
+        Label244.Text = "______________________________________________________________"
+        ' 
+        ' panel4hybrid
+        ' 
+        panel4hybrid.BackColor = Color.White
+        panel4hybrid.BorderStyle = BorderStyle.FixedSingle
+        panel4hybrid.Controls.Add(hybridyear4txt)
+        panel4hybrid.Controls.Add(Label211)
+        panel4hybrid.Controls.Add(hybridrentalrate4txt)
+        panel4hybrid.Controls.Add(Label221)
+        panel4hybrid.Controls.Add(hybridcolor4txt)
+        panel4hybrid.Controls.Add(hybridmileage4txt)
+        panel4hybrid.Controls.Add(hybridseatingcapacity4txt)
+        panel4hybrid.Controls.Add(hybridmake4txt)
+        panel4hybrid.Controls.Add(hybrid4btn)
+        panel4hybrid.Controls.Add(Label234)
+        panel4hybrid.Controls.Add(Label235)
+        panel4hybrid.Controls.Add(Label236)
+        panel4hybrid.Controls.Add(hybrid4pic)
+        panel4hybrid.Controls.Add(hybridmodel4txt)
+        panel4hybrid.Controls.Add(Label238)
+        panel4hybrid.ForeColor = Color.Gray
+        panel4hybrid.Location = New Point(13, 1278)
+        panel4hybrid.Name = "panel4hybrid"
+        panel4hybrid.Size = New Size(1101, 286)
+        panel4hybrid.TabIndex = 54
+        panel4hybrid.Visible = False
+        ' 
+        ' hybridyear4txt
+        ' 
+        hybridyear4txt.AutoSize = True
+        hybridyear4txt.Font = New Font("Futura Hv BT", 12F)
+        hybridyear4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridyear4txt.Location = New Point(557, 211)
+        hybridyear4txt.Name = "hybridyear4txt"
+        hybridyear4txt.Size = New Size(58, 24)
+        hybridyear4txt.TabIndex = 25
+        hybridyear4txt.Text = "2021"
+        ' 
+        ' Label211
+        ' 
+        Label211.AutoSize = True
+        Label211.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label211.ForeColor = Color.Black
+        Label211.Location = New Point(370, 211)
+        Label211.Name = "Label211"
+        Label211.Size = New Size(60, 24)
+        Label211.TabIndex = 24
+        Label211.Text = "YEAR:"
+        ' 
+        ' hybridrentalrate4txt
+        ' 
+        hybridrentalrate4txt.AutoSize = True
+        hybridrentalrate4txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hybridrentalrate4txt.ForeColor = Color.Black
+        hybridrentalrate4txt.Location = New Point(810, 121)
+        hybridrentalrate4txt.Name = "hybridrentalrate4txt"
+        hybridrentalrate4txt.Size = New Size(175, 27)
+        hybridrentalrate4txt.TabIndex = 23
+        hybridrentalrate4txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label221
+        ' 
+        Label221.AutoSize = True
+        Label221.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label221.ForeColor = Color.Black
+        Label221.Location = New Point(809, 88)
+        Label221.Name = "Label221"
+        Label221.Size = New Size(121, 24)
+        Label221.TabIndex = 22
+        Label221.Text = "Vehicle Rate:"
+        ' 
+        ' hybridcolor4txt
+        ' 
+        hybridcolor4txt.AutoSize = True
+        hybridcolor4txt.Font = New Font("Futura Hv BT", 12F)
+        hybridcolor4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridcolor4txt.Location = New Point(555, 100)
+        hybridcolor4txt.Name = "hybridcolor4txt"
+        hybridcolor4txt.Size = New Size(41, 24)
+        hybridcolor4txt.TabIndex = 21
+        hybridcolor4txt.Text = "red"
+        ' 
+        ' hybridmileage4txt
+        ' 
+        hybridmileage4txt.AutoSize = True
+        hybridmileage4txt.Font = New Font("Futura Hv BT", 12F)
+        hybridmileage4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridmileage4txt.Location = New Point(557, 175)
+        hybridmileage4txt.Name = "hybridmileage4txt"
+        hybridmileage4txt.Size = New Size(105, 24)
+        hybridmileage4txt.TabIndex = 20
+        hybridmileage4txt.Text = "11,456km"
+        ' 
+        ' hybridseatingcapacity4txt
+        ' 
+        hybridseatingcapacity4txt.AutoSize = True
+        hybridseatingcapacity4txt.Font = New Font("Futura Hv BT", 12F)
+        hybridseatingcapacity4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridseatingcapacity4txt.Location = New Point(557, 137)
+        hybridseatingcapacity4txt.Name = "hybridseatingcapacity4txt"
+        hybridseatingcapacity4txt.Size = New Size(22, 24)
+        hybridseatingcapacity4txt.TabIndex = 19
+        hybridseatingcapacity4txt.Text = "5"
+        ' 
+        ' hybridmake4txt
+        ' 
+        hybridmake4txt.AutoSize = True
+        hybridmake4txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        hybridmake4txt.ForeColor = Color.Black
+        hybridmake4txt.Location = New Point(27, 9)
+        hybridmake4txt.Name = "hybridmake4txt"
+        hybridmake4txt.Size = New Size(76, 29)
+        hybridmake4txt.TabIndex = 17
+        hybridmake4txt.Text = "MAKE"
+        ' 
+        ' hybrid4btn
+        ' 
+        hybrid4btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybrid4btn.FlatStyle = FlatStyle.Flat
+        hybrid4btn.Font = New Font("Reesha", 16.1999989F)
+        hybrid4btn.ForeColor = Color.White
+        hybrid4btn.Location = New Point(809, 172)
+        hybrid4btn.Name = "hybrid4btn"
+        hybrid4btn.Size = New Size(266, 57)
+        hybrid4btn.TabIndex = 16
+        hybrid4btn.Text = "BOOK NOW"
+        hybrid4btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label234
+        ' 
+        Label234.AutoSize = True
+        Label234.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label234.ForeColor = Color.Black
+        Label234.Location = New Point(370, 175)
+        Label234.Name = "Label234"
+        Label234.Size = New Size(96, 24)
+        Label234.TabIndex = 5
+        Label234.Text = "MILEAGE:"
+        ' 
+        ' Label235
+        ' 
+        Label235.AutoSize = True
+        Label235.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label235.ForeColor = Color.Black
+        Label235.Location = New Point(370, 137)
+        Label235.Name = "Label235"
+        Label235.Size = New Size(153, 24)
+        Label235.TabIndex = 4
+        Label235.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label236
+        ' 
+        Label236.AutoSize = True
+        Label236.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label236.ForeColor = Color.Black
+        Label236.Location = New Point(370, 100)
+        Label236.Name = "Label236"
+        Label236.Size = New Size(83, 24)
+        Label236.TabIndex = 3
+        Label236.Text = "COLOR:"
+        ' 
+        ' hybrid4pic
+        ' 
+        hybrid4pic.Image = My.Resources.Resources.RideX
+        hybrid4pic.Location = New Point(27, 100)
+        hybrid4pic.Name = "hybrid4pic"
+        hybrid4pic.Size = New Size(303, 141)
+        hybrid4pic.SizeMode = PictureBoxSizeMode.StretchImage
+        hybrid4pic.TabIndex = 2
+        hybrid4pic.TabStop = False
+        ' 
+        ' hybridmodel4txt
+        ' 
+        hybridmodel4txt.AutoSize = True
+        hybridmodel4txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hybridmodel4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridmodel4txt.Location = New Point(22, 29)
+        hybridmodel4txt.Name = "hybridmodel4txt"
+        hybridmodel4txt.Size = New Size(303, 41)
+        hybridmodel4txt.TabIndex = 0
+        hybridmodel4txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label238
+        ' 
+        Label238.AutoSize = True
+        Label238.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label238.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label238.Location = New Point(22, 35)
+        Label238.Name = "Label238"
+        Label238.Size = New Size(1072, 41)
+        Label238.TabIndex = 1
+        Label238.Text = "______________________________________________________________"
+        ' 
+        ' panel3hybrid
+        ' 
+        panel3hybrid.BackColor = Color.White
+        panel3hybrid.BorderStyle = BorderStyle.FixedSingle
+        panel3hybrid.Controls.Add(hybridyear3txt)
+        panel3hybrid.Controls.Add(Label205)
+        panel3hybrid.Controls.Add(hybridrentalrate3txt)
+        panel3hybrid.Controls.Add(Label215)
+        panel3hybrid.Controls.Add(hybridcolor3txt)
+        panel3hybrid.Controls.Add(hybridmileage3txt)
+        panel3hybrid.Controls.Add(hybridseatingcapacity3txt)
+        panel3hybrid.Controls.Add(hybridmake3txt)
+        panel3hybrid.Controls.Add(hybrid3btn)
+        panel3hybrid.Controls.Add(Label228)
+        panel3hybrid.Controls.Add(Label229)
+        panel3hybrid.Controls.Add(Label230)
+        panel3hybrid.Controls.Add(hybrid3pic)
+        panel3hybrid.Controls.Add(hybridmodel3txt)
+        panel3hybrid.Controls.Add(Label232)
+        panel3hybrid.ForeColor = Color.Gray
+        panel3hybrid.Location = New Point(13, 963)
+        panel3hybrid.Name = "panel3hybrid"
+        panel3hybrid.Size = New Size(1101, 286)
+        panel3hybrid.TabIndex = 53
+        panel3hybrid.Visible = False
+        ' 
+        ' hybridyear3txt
+        ' 
+        hybridyear3txt.AutoSize = True
+        hybridyear3txt.Font = New Font("Futura Hv BT", 12F)
+        hybridyear3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridyear3txt.Location = New Point(557, 211)
+        hybridyear3txt.Name = "hybridyear3txt"
+        hybridyear3txt.Size = New Size(58, 24)
+        hybridyear3txt.TabIndex = 25
+        hybridyear3txt.Text = "2021"
+        ' 
+        ' Label205
+        ' 
+        Label205.AutoSize = True
+        Label205.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label205.ForeColor = Color.Black
+        Label205.Location = New Point(370, 211)
+        Label205.Name = "Label205"
+        Label205.Size = New Size(60, 24)
+        Label205.TabIndex = 24
+        Label205.Text = "YEAR:"
+        ' 
+        ' hybridrentalrate3txt
+        ' 
+        hybridrentalrate3txt.AutoSize = True
+        hybridrentalrate3txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hybridrentalrate3txt.ForeColor = Color.Black
+        hybridrentalrate3txt.Location = New Point(810, 121)
+        hybridrentalrate3txt.Name = "hybridrentalrate3txt"
+        hybridrentalrate3txt.Size = New Size(175, 27)
+        hybridrentalrate3txt.TabIndex = 23
+        hybridrentalrate3txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label215
+        ' 
+        Label215.AutoSize = True
+        Label215.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label215.ForeColor = Color.Black
+        Label215.Location = New Point(809, 88)
+        Label215.Name = "Label215"
+        Label215.Size = New Size(121, 24)
+        Label215.TabIndex = 22
+        Label215.Text = "Vehicle Rate:"
+        ' 
+        ' hybridcolor3txt
+        ' 
+        hybridcolor3txt.AutoSize = True
+        hybridcolor3txt.Font = New Font("Futura Hv BT", 12F)
+        hybridcolor3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridcolor3txt.Location = New Point(555, 100)
+        hybridcolor3txt.Name = "hybridcolor3txt"
+        hybridcolor3txt.Size = New Size(41, 24)
+        hybridcolor3txt.TabIndex = 21
+        hybridcolor3txt.Text = "red"
+        ' 
+        ' hybridmileage3txt
+        ' 
+        hybridmileage3txt.AutoSize = True
+        hybridmileage3txt.Font = New Font("Futura Hv BT", 12F)
+        hybridmileage3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridmileage3txt.Location = New Point(557, 175)
+        hybridmileage3txt.Name = "hybridmileage3txt"
+        hybridmileage3txt.Size = New Size(105, 24)
+        hybridmileage3txt.TabIndex = 20
+        hybridmileage3txt.Text = "11,456km"
+        ' 
+        ' hybridseatingcapacity3txt
+        ' 
+        hybridseatingcapacity3txt.AutoSize = True
+        hybridseatingcapacity3txt.Font = New Font("Futura Hv BT", 12F)
+        hybridseatingcapacity3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridseatingcapacity3txt.Location = New Point(557, 137)
+        hybridseatingcapacity3txt.Name = "hybridseatingcapacity3txt"
+        hybridseatingcapacity3txt.Size = New Size(22, 24)
+        hybridseatingcapacity3txt.TabIndex = 19
+        hybridseatingcapacity3txt.Text = "5"
+        ' 
+        ' hybridmake3txt
+        ' 
+        hybridmake3txt.AutoSize = True
+        hybridmake3txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        hybridmake3txt.ForeColor = Color.Black
+        hybridmake3txt.Location = New Point(27, 9)
+        hybridmake3txt.Name = "hybridmake3txt"
+        hybridmake3txt.Size = New Size(76, 29)
+        hybridmake3txt.TabIndex = 17
+        hybridmake3txt.Text = "MAKE"
+        ' 
+        ' hybrid3btn
+        ' 
+        hybrid3btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybrid3btn.FlatStyle = FlatStyle.Flat
+        hybrid3btn.Font = New Font("Reesha", 16.1999989F)
+        hybrid3btn.ForeColor = Color.White
+        hybrid3btn.Location = New Point(809, 172)
+        hybrid3btn.Name = "hybrid3btn"
+        hybrid3btn.Size = New Size(266, 57)
+        hybrid3btn.TabIndex = 16
+        hybrid3btn.Text = "BOOK NOW"
+        hybrid3btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label228
+        ' 
+        Label228.AutoSize = True
+        Label228.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label228.ForeColor = Color.Black
+        Label228.Location = New Point(370, 175)
+        Label228.Name = "Label228"
+        Label228.Size = New Size(96, 24)
+        Label228.TabIndex = 5
+        Label228.Text = "MILEAGE:"
+        ' 
+        ' Label229
+        ' 
+        Label229.AutoSize = True
+        Label229.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label229.ForeColor = Color.Black
+        Label229.Location = New Point(370, 137)
+        Label229.Name = "Label229"
+        Label229.Size = New Size(153, 24)
+        Label229.TabIndex = 4
+        Label229.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label230
+        ' 
+        Label230.AutoSize = True
+        Label230.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label230.ForeColor = Color.Black
+        Label230.Location = New Point(370, 100)
+        Label230.Name = "Label230"
+        Label230.Size = New Size(83, 24)
+        Label230.TabIndex = 3
+        Label230.Text = "COLOR:"
+        ' 
+        ' hybrid3pic
+        ' 
+        hybrid3pic.Image = My.Resources.Resources.RideX
+        hybrid3pic.Location = New Point(27, 100)
+        hybrid3pic.Name = "hybrid3pic"
+        hybrid3pic.Size = New Size(303, 141)
+        hybrid3pic.SizeMode = PictureBoxSizeMode.StretchImage
+        hybrid3pic.TabIndex = 2
+        hybrid3pic.TabStop = False
+        ' 
+        ' hybridmodel3txt
+        ' 
+        hybridmodel3txt.AutoSize = True
+        hybridmodel3txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hybridmodel3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridmodel3txt.Location = New Point(22, 29)
+        hybridmodel3txt.Name = "hybridmodel3txt"
+        hybridmodel3txt.Size = New Size(303, 41)
+        hybridmodel3txt.TabIndex = 0
+        hybridmodel3txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label232
+        ' 
+        Label232.AutoSize = True
+        Label232.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label232.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label232.Location = New Point(22, 35)
+        Label232.Name = "Label232"
+        Label232.Size = New Size(1072, 41)
+        Label232.TabIndex = 1
+        Label232.Text = "______________________________________________________________"
+        ' 
+        ' panel2hybrid
+        ' 
+        panel2hybrid.BackColor = Color.White
+        panel2hybrid.BorderStyle = BorderStyle.FixedSingle
+        panel2hybrid.Controls.Add(hybridyear2txt)
+        panel2hybrid.Controls.Add(Label200)
+        panel2hybrid.Controls.Add(hybridrentalrate2txt)
+        panel2hybrid.Controls.Add(Label207)
+        panel2hybrid.Controls.Add(hybridcolor2txt)
+        panel2hybrid.Controls.Add(hybridmileage2txt)
+        panel2hybrid.Controls.Add(hybridseatingcapacity2txt)
+        panel2hybrid.Controls.Add(hybridmake2txt)
+        panel2hybrid.Controls.Add(hybrid2btn)
+        panel2hybrid.Controls.Add(Label222)
+        panel2hybrid.Controls.Add(Label223)
+        panel2hybrid.Controls.Add(Label224)
+        panel2hybrid.Controls.Add(hybrid2pic)
+        panel2hybrid.Controls.Add(hybridmodel2txt)
+        panel2hybrid.Controls.Add(Label226)
+        panel2hybrid.ForeColor = Color.Gray
+        panel2hybrid.Location = New Point(13, 651)
+        panel2hybrid.Name = "panel2hybrid"
+        panel2hybrid.Size = New Size(1101, 286)
+        panel2hybrid.TabIndex = 52
+        panel2hybrid.Visible = False
+        ' 
+        ' hybridyear2txt
+        ' 
+        hybridyear2txt.AutoSize = True
+        hybridyear2txt.Font = New Font("Futura Hv BT", 12F)
+        hybridyear2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridyear2txt.Location = New Point(557, 211)
+        hybridyear2txt.Name = "hybridyear2txt"
+        hybridyear2txt.Size = New Size(58, 24)
+        hybridyear2txt.TabIndex = 25
+        hybridyear2txt.Text = "2021"
+        ' 
+        ' Label200
+        ' 
+        Label200.AutoSize = True
+        Label200.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label200.ForeColor = Color.Black
+        Label200.Location = New Point(370, 211)
+        Label200.Name = "Label200"
+        Label200.Size = New Size(60, 24)
+        Label200.TabIndex = 24
+        Label200.Text = "YEAR:"
+        ' 
+        ' hybridrentalrate2txt
+        ' 
+        hybridrentalrate2txt.AutoSize = True
+        hybridrentalrate2txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hybridrentalrate2txt.ForeColor = Color.Black
+        hybridrentalrate2txt.Location = New Point(810, 121)
+        hybridrentalrate2txt.Name = "hybridrentalrate2txt"
+        hybridrentalrate2txt.Size = New Size(175, 27)
+        hybridrentalrate2txt.TabIndex = 23
+        hybridrentalrate2txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label207
+        ' 
+        Label207.AutoSize = True
+        Label207.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label207.ForeColor = Color.Black
+        Label207.Location = New Point(809, 88)
+        Label207.Name = "Label207"
+        Label207.Size = New Size(121, 24)
+        Label207.TabIndex = 22
+        Label207.Text = "Vehicle Rate:"
+        ' 
+        ' hybridcolor2txt
+        ' 
+        hybridcolor2txt.AutoSize = True
+        hybridcolor2txt.Font = New Font("Futura Hv BT", 12F)
+        hybridcolor2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridcolor2txt.Location = New Point(555, 100)
+        hybridcolor2txt.Name = "hybridcolor2txt"
+        hybridcolor2txt.Size = New Size(41, 24)
+        hybridcolor2txt.TabIndex = 21
+        hybridcolor2txt.Text = "red"
+        ' 
+        ' hybridmileage2txt
+        ' 
+        hybridmileage2txt.AutoSize = True
+        hybridmileage2txt.Font = New Font("Futura Hv BT", 12F)
+        hybridmileage2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridmileage2txt.Location = New Point(557, 175)
+        hybridmileage2txt.Name = "hybridmileage2txt"
+        hybridmileage2txt.Size = New Size(105, 24)
+        hybridmileage2txt.TabIndex = 20
+        hybridmileage2txt.Text = "11,456km"
+        ' 
+        ' hybridseatingcapacity2txt
+        ' 
+        hybridseatingcapacity2txt.AutoSize = True
+        hybridseatingcapacity2txt.Font = New Font("Futura Hv BT", 12F)
+        hybridseatingcapacity2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridseatingcapacity2txt.Location = New Point(557, 137)
+        hybridseatingcapacity2txt.Name = "hybridseatingcapacity2txt"
+        hybridseatingcapacity2txt.Size = New Size(22, 24)
+        hybridseatingcapacity2txt.TabIndex = 19
+        hybridseatingcapacity2txt.Text = "5"
+        ' 
+        ' hybridmake2txt
+        ' 
+        hybridmake2txt.AutoSize = True
+        hybridmake2txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        hybridmake2txt.ForeColor = Color.Black
+        hybridmake2txt.Location = New Point(27, 9)
+        hybridmake2txt.Name = "hybridmake2txt"
+        hybridmake2txt.Size = New Size(76, 29)
+        hybridmake2txt.TabIndex = 17
+        hybridmake2txt.Text = "MAKE"
+        ' 
+        ' hybrid2btn
+        ' 
+        hybrid2btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybrid2btn.FlatStyle = FlatStyle.Flat
+        hybrid2btn.Font = New Font("Reesha", 16.1999989F)
+        hybrid2btn.ForeColor = Color.White
+        hybrid2btn.Location = New Point(809, 172)
+        hybrid2btn.Name = "hybrid2btn"
+        hybrid2btn.Size = New Size(266, 57)
+        hybrid2btn.TabIndex = 16
+        hybrid2btn.Text = "BOOK NOW"
+        hybrid2btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label222
+        ' 
+        Label222.AutoSize = True
+        Label222.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label222.ForeColor = Color.Black
+        Label222.Location = New Point(370, 175)
+        Label222.Name = "Label222"
+        Label222.Size = New Size(96, 24)
+        Label222.TabIndex = 5
+        Label222.Text = "MILEAGE:"
+        ' 
+        ' Label223
+        ' 
+        Label223.AutoSize = True
+        Label223.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label223.ForeColor = Color.Black
+        Label223.Location = New Point(370, 137)
+        Label223.Name = "Label223"
+        Label223.Size = New Size(153, 24)
+        Label223.TabIndex = 4
+        Label223.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label224
+        ' 
+        Label224.AutoSize = True
+        Label224.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label224.ForeColor = Color.Black
+        Label224.Location = New Point(370, 100)
+        Label224.Name = "Label224"
+        Label224.Size = New Size(83, 24)
+        Label224.TabIndex = 3
+        Label224.Text = "COLOR:"
+        ' 
+        ' hybrid2pic
+        ' 
+        hybrid2pic.Image = My.Resources.Resources.RideX
+        hybrid2pic.Location = New Point(27, 100)
+        hybrid2pic.Name = "hybrid2pic"
+        hybrid2pic.Size = New Size(303, 141)
+        hybrid2pic.SizeMode = PictureBoxSizeMode.StretchImage
+        hybrid2pic.TabIndex = 2
+        hybrid2pic.TabStop = False
+        ' 
+        ' hybridmodel2txt
+        ' 
+        hybridmodel2txt.AutoSize = True
+        hybridmodel2txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hybridmodel2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hybridmodel2txt.Location = New Point(22, 29)
+        hybridmodel2txt.Name = "hybridmodel2txt"
+        hybridmodel2txt.Size = New Size(303, 41)
+        hybridmodel2txt.TabIndex = 0
+        hybridmodel2txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label226
+        ' 
+        Label226.AutoSize = True
+        Label226.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label226.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label226.Location = New Point(22, 35)
+        Label226.Name = "Label226"
+        Label226.Size = New Size(1072, 41)
+        Label226.TabIndex = 1
+        Label226.Text = "______________________________________________________________"
         ' 
         ' panel1hybrid
         ' 
@@ -5234,772 +6838,12 @@ Partial Class allcars
         Label187.TabIndex = 1
         Label187.Text = "______________________________________________________________"
         ' 
-        ' panel2sedan
-        ' 
-        panel2sedan.BackColor = Color.White
-        panel2sedan.Controls.Add(sedanyear2txt)
-        panel2sedan.Controls.Add(Label141)
-        panel2sedan.Controls.Add(sedanrentalrate2txt)
-        panel2sedan.Controls.Add(Label172)
-        panel2sedan.Controls.Add(sedancolor2txt)
-        panel2sedan.Controls.Add(sedanmileage2txt)
-        panel2sedan.Controls.Add(sedanseatingcapacity2txt)
-        panel2sedan.Controls.Add(sedanmake2txt)
-        panel2sedan.Controls.Add(sedan2btn)
-        panel2sedan.Controls.Add(Label198)
-        panel2sedan.Controls.Add(Label199)
-        panel2sedan.Controls.Add(Label213)
-        panel2sedan.Controls.Add(sedan2pic)
-        panel2sedan.Controls.Add(Label214)
-        panel2sedan.Controls.Add(sedanmodel2txt)
-        panel2sedan.Location = New Point(11, 1282)
-        panel2sedan.Name = "panel2sedan"
-        panel2sedan.Size = New Size(1115, 285)
-        panel2sedan.TabIndex = 46
-        panel2sedan.Visible = False
-        ' 
-        ' sedanyear2txt
-        ' 
-        sedanyear2txt.AutoSize = True
-        sedanyear2txt.Font = New Font("Futura Hv BT", 12F)
-        sedanyear2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanyear2txt.Location = New Point(558, 209)
-        sedanyear2txt.Name = "sedanyear2txt"
-        sedanyear2txt.Size = New Size(58, 24)
-        sedanyear2txt.TabIndex = 27
-        sedanyear2txt.Text = "2021"
-        ' 
-        ' Label141
-        ' 
-        Label141.AutoSize = True
-        Label141.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label141.ForeColor = Color.Black
-        Label141.Location = New Point(371, 209)
-        Label141.Name = "Label141"
-        Label141.Size = New Size(60, 24)
-        Label141.TabIndex = 26
-        Label141.Text = "YEAR:"
-        ' 
-        ' sedanrentalrate2txt
-        ' 
-        sedanrentalrate2txt.AutoSize = True
-        sedanrentalrate2txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        sedanrentalrate2txt.ForeColor = Color.Black
-        sedanrentalrate2txt.Location = New Point(810, 121)
-        sedanrentalrate2txt.Name = "sedanrentalrate2txt"
-        sedanrentalrate2txt.Size = New Size(175, 27)
-        sedanrentalrate2txt.TabIndex = 25
-        sedanrentalrate2txt.Text = "PHP 10,100.00"
-        ' 
-        ' Label172
-        ' 
-        Label172.AutoSize = True
-        Label172.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label172.ForeColor = Color.Black
-        Label172.Location = New Point(809, 88)
-        Label172.Name = "Label172"
-        Label172.Size = New Size(121, 24)
-        Label172.TabIndex = 24
-        Label172.Text = "Vehicle Rate:"
-        ' 
-        ' sedancolor2txt
-        ' 
-        sedancolor2txt.AutoSize = True
-        sedancolor2txt.Font = New Font("Futura Hv BT", 12F)
-        sedancolor2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedancolor2txt.Location = New Point(557, 100)
-        sedancolor2txt.Name = "sedancolor2txt"
-        sedancolor2txt.Size = New Size(41, 24)
-        sedancolor2txt.TabIndex = 21
-        sedancolor2txt.Text = "red"
-        ' 
-        ' sedanmileage2txt
-        ' 
-        sedanmileage2txt.AutoSize = True
-        sedanmileage2txt.Font = New Font("Futura Hv BT", 12F)
-        sedanmileage2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanmileage2txt.Location = New Point(557, 175)
-        sedanmileage2txt.Name = "sedanmileage2txt"
-        sedanmileage2txt.Size = New Size(105, 24)
-        sedanmileage2txt.TabIndex = 20
-        sedanmileage2txt.Text = "11,456km"
-        ' 
-        ' sedanseatingcapacity2txt
-        ' 
-        sedanseatingcapacity2txt.AutoSize = True
-        sedanseatingcapacity2txt.Font = New Font("Futura Hv BT", 12F)
-        sedanseatingcapacity2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanseatingcapacity2txt.Location = New Point(557, 137)
-        sedanseatingcapacity2txt.Name = "sedanseatingcapacity2txt"
-        sedanseatingcapacity2txt.Size = New Size(22, 24)
-        sedanseatingcapacity2txt.TabIndex = 19
-        sedanseatingcapacity2txt.Text = "5"
-        ' 
-        ' sedanmake2txt
-        ' 
-        sedanmake2txt.AutoSize = True
-        sedanmake2txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic)
-        sedanmake2txt.ForeColor = Color.Black
-        sedanmake2txt.Location = New Point(27, 9)
-        sedanmake2txt.Name = "sedanmake2txt"
-        sedanmake2txt.Size = New Size(76, 29)
-        sedanmake2txt.TabIndex = 17
-        sedanmake2txt.Text = "MAKE"
-        ' 
-        ' sedan2btn
-        ' 
-        sedan2btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedan2btn.FlatStyle = FlatStyle.Flat
-        sedan2btn.Font = New Font("Reesha", 16.1999989F)
-        sedan2btn.ForeColor = Color.White
-        sedan2btn.Location = New Point(809, 172)
-        sedan2btn.Name = "sedan2btn"
-        sedan2btn.Size = New Size(266, 57)
-        sedan2btn.TabIndex = 16
-        sedan2btn.Text = "BOOK NOW"
-        sedan2btn.UseVisualStyleBackColor = False
-        ' 
-        ' Label198
-        ' 
-        Label198.AutoSize = True
-        Label198.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label198.ForeColor = Color.Black
-        Label198.Location = New Point(370, 175)
-        Label198.Name = "Label198"
-        Label198.Size = New Size(96, 24)
-        Label198.TabIndex = 5
-        Label198.Text = "MILEAGE:"
-        ' 
-        ' Label199
-        ' 
-        Label199.AutoSize = True
-        Label199.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label199.ForeColor = Color.Black
-        Label199.Location = New Point(370, 137)
-        Label199.Name = "Label199"
-        Label199.Size = New Size(153, 24)
-        Label199.TabIndex = 4
-        Label199.Text = "SEAT CAPACITY:"
-        ' 
-        ' Label213
-        ' 
-        Label213.AutoSize = True
-        Label213.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label213.ForeColor = Color.Black
-        Label213.Location = New Point(370, 100)
-        Label213.Name = "Label213"
-        Label213.Size = New Size(83, 24)
-        Label213.TabIndex = 3
-        Label213.Text = "COLOR:"
-        ' 
-        ' sedan2pic
-        ' 
-        sedan2pic.Image = My.Resources.Resources.RideX
-        sedan2pic.Location = New Point(27, 100)
-        sedan2pic.Name = "sedan2pic"
-        sedan2pic.Size = New Size(303, 141)
-        sedan2pic.SizeMode = PictureBoxSizeMode.StretchImage
-        sedan2pic.TabIndex = 2
-        sedan2pic.TabStop = False
-        ' 
-        ' Label214
-        ' 
-        Label214.AutoSize = True
-        Label214.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label214.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label214.Location = New Point(22, 29)
-        Label214.Name = "Label214"
-        Label214.Size = New Size(303, 41)
-        Label214.TabIndex = 0
-        Label214.Text = "CAR NUMBER 1"
-        ' 
-        ' sedanmodel2txt
-        ' 
-        sedanmodel2txt.AutoSize = True
-        sedanmodel2txt.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        sedanmodel2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanmodel2txt.Location = New Point(22, 35)
-        sedanmodel2txt.Name = "sedanmodel2txt"
-        sedanmodel2txt.Size = New Size(1072, 41)
-        sedanmodel2txt.TabIndex = 1
-        sedanmodel2txt.Text = "______________________________________________________________"
-        ' 
-        ' panel3sedan
-        ' 
-        panel3sedan.BackColor = Color.White
-        panel3sedan.Controls.Add(sedanyear3txt)
-        panel3sedan.Controls.Add(Label158)
-        panel3sedan.Controls.Add(sedanrentalrate3txt)
-        panel3sedan.Controls.Add(Label186)
-        panel3sedan.Controls.Add(sedancolor3txt)
-        panel3sedan.Controls.Add(sedanmileage3txt)
-        panel3sedan.Controls.Add(sedanseatingcapacity3txt)
-        panel3sedan.Controls.Add(sedanmake3txt)
-        panel3sedan.Controls.Add(sedan3btn)
-        panel3sedan.Controls.Add(Label202)
-        panel3sedan.Controls.Add(Label203)
-        panel3sedan.Controls.Add(Label204)
-        panel3sedan.Controls.Add(sedan3pic)
-        panel3sedan.Controls.Add(sedanmodel3txt)
-        panel3sedan.Controls.Add(Label206)
-        panel3sedan.Location = New Point(11, 1596)
-        panel3sedan.Name = "panel3sedan"
-        panel3sedan.Size = New Size(1115, 285)
-        panel3sedan.TabIndex = 47
-        panel3sedan.Visible = False
-        ' 
-        ' sedanyear3txt
-        ' 
-        sedanyear3txt.AutoSize = True
-        sedanyear3txt.Font = New Font("Futura Hv BT", 12F)
-        sedanyear3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanyear3txt.Location = New Point(558, 209)
-        sedanyear3txt.Name = "sedanyear3txt"
-        sedanyear3txt.Size = New Size(58, 24)
-        sedanyear3txt.TabIndex = 27
-        sedanyear3txt.Text = "2021"
-        ' 
-        ' Label158
-        ' 
-        Label158.AutoSize = True
-        Label158.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label158.ForeColor = Color.Black
-        Label158.Location = New Point(371, 209)
-        Label158.Name = "Label158"
-        Label158.Size = New Size(60, 24)
-        Label158.TabIndex = 26
-        Label158.Text = "YEAR:"
-        ' 
-        ' sedanrentalrate3txt
-        ' 
-        sedanrentalrate3txt.AutoSize = True
-        sedanrentalrate3txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        sedanrentalrate3txt.ForeColor = Color.Black
-        sedanrentalrate3txt.Location = New Point(810, 121)
-        sedanrentalrate3txt.Name = "sedanrentalrate3txt"
-        sedanrentalrate3txt.Size = New Size(175, 27)
-        sedanrentalrate3txt.TabIndex = 25
-        sedanrentalrate3txt.Text = "PHP 10,100.00"
-        ' 
-        ' Label186
-        ' 
-        Label186.AutoSize = True
-        Label186.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label186.ForeColor = Color.Black
-        Label186.Location = New Point(809, 88)
-        Label186.Name = "Label186"
-        Label186.Size = New Size(121, 24)
-        Label186.TabIndex = 24
-        Label186.Text = "Vehicle Rate:"
-        ' 
-        ' sedancolor3txt
-        ' 
-        sedancolor3txt.AutoSize = True
-        sedancolor3txt.Font = New Font("Futura Hv BT", 12F)
-        sedancolor3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedancolor3txt.Location = New Point(557, 100)
-        sedancolor3txt.Name = "sedancolor3txt"
-        sedancolor3txt.Size = New Size(41, 24)
-        sedancolor3txt.TabIndex = 21
-        sedancolor3txt.Text = "red"
-        ' 
-        ' sedanmileage3txt
-        ' 
-        sedanmileage3txt.AutoSize = True
-        sedanmileage3txt.Font = New Font("Futura Hv BT", 12F)
-        sedanmileage3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanmileage3txt.Location = New Point(557, 175)
-        sedanmileage3txt.Name = "sedanmileage3txt"
-        sedanmileage3txt.Size = New Size(105, 24)
-        sedanmileage3txt.TabIndex = 20
-        sedanmileage3txt.Text = "11,456km"
-        ' 
-        ' sedanseatingcapacity3txt
-        ' 
-        sedanseatingcapacity3txt.AutoSize = True
-        sedanseatingcapacity3txt.Font = New Font("Futura Hv BT", 12F)
-        sedanseatingcapacity3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanseatingcapacity3txt.Location = New Point(557, 137)
-        sedanseatingcapacity3txt.Name = "sedanseatingcapacity3txt"
-        sedanseatingcapacity3txt.Size = New Size(22, 24)
-        sedanseatingcapacity3txt.TabIndex = 19
-        sedanseatingcapacity3txt.Text = "5"
-        ' 
-        ' sedanmake3txt
-        ' 
-        sedanmake3txt.AutoSize = True
-        sedanmake3txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic)
-        sedanmake3txt.ForeColor = Color.Black
-        sedanmake3txt.Location = New Point(27, 9)
-        sedanmake3txt.Name = "sedanmake3txt"
-        sedanmake3txt.Size = New Size(76, 29)
-        sedanmake3txt.TabIndex = 17
-        sedanmake3txt.Text = "MAKE"
-        ' 
-        ' sedan3btn
-        ' 
-        sedan3btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedan3btn.FlatStyle = FlatStyle.Flat
-        sedan3btn.Font = New Font("Reesha", 16.1999989F)
-        sedan3btn.ForeColor = Color.White
-        sedan3btn.Location = New Point(809, 172)
-        sedan3btn.Name = "sedan3btn"
-        sedan3btn.Size = New Size(266, 57)
-        sedan3btn.TabIndex = 16
-        sedan3btn.Text = "BOOK NOW"
-        sedan3btn.UseVisualStyleBackColor = False
-        ' 
-        ' Label202
-        ' 
-        Label202.AutoSize = True
-        Label202.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label202.ForeColor = Color.Black
-        Label202.Location = New Point(370, 175)
-        Label202.Name = "Label202"
-        Label202.Size = New Size(96, 24)
-        Label202.TabIndex = 5
-        Label202.Text = "MILEAGE:"
-        ' 
-        ' Label203
-        ' 
-        Label203.AutoSize = True
-        Label203.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label203.ForeColor = Color.Black
-        Label203.Location = New Point(370, 137)
-        Label203.Name = "Label203"
-        Label203.Size = New Size(153, 24)
-        Label203.TabIndex = 4
-        Label203.Text = "SEAT CAPACITY:"
-        ' 
-        ' Label204
-        ' 
-        Label204.AutoSize = True
-        Label204.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label204.ForeColor = Color.Black
-        Label204.Location = New Point(370, 100)
-        Label204.Name = "Label204"
-        Label204.Size = New Size(83, 24)
-        Label204.TabIndex = 3
-        Label204.Text = "COLOR:"
-        ' 
-        ' sedan3pic
-        ' 
-        sedan3pic.Image = My.Resources.Resources.RideX
-        sedan3pic.Location = New Point(27, 100)
-        sedan3pic.Name = "sedan3pic"
-        sedan3pic.Size = New Size(303, 141)
-        sedan3pic.SizeMode = PictureBoxSizeMode.StretchImage
-        sedan3pic.TabIndex = 2
-        sedan3pic.TabStop = False
-        ' 
-        ' sedanmodel3txt
-        ' 
-        sedanmodel3txt.AutoSize = True
-        sedanmodel3txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        sedanmodel3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanmodel3txt.Location = New Point(22, 29)
-        sedanmodel3txt.Name = "sedanmodel3txt"
-        sedanmodel3txt.Size = New Size(303, 41)
-        sedanmodel3txt.TabIndex = 0
-        sedanmodel3txt.Text = "CAR NUMBER 1"
-        ' 
-        ' Label206
-        ' 
-        Label206.AutoSize = True
-        Label206.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label206.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label206.Location = New Point(22, 35)
-        Label206.Name = "Label206"
-        Label206.Size = New Size(1072, 41)
-        Label206.TabIndex = 1
-        Label206.Text = "______________________________________________________________"
-        ' 
-        ' panel4sedan
-        ' 
-        panel4sedan.BackColor = Color.White
-        panel4sedan.Controls.Add(sedanyear4txt)
-        panel4sedan.Controls.Add(Label178)
-        panel4sedan.Controls.Add(sedanrentalrate4txt)
-        panel4sedan.Controls.Add(Label197)
-        panel4sedan.Controls.Add(sedancolor4txt)
-        panel4sedan.Controls.Add(sedanmileage4txt)
-        panel4sedan.Controls.Add(sedanseatingcapacity4txt)
-        panel4sedan.Controls.Add(sedanmake4txt)
-        panel4sedan.Controls.Add(sedan4btn)
-        panel4sedan.Controls.Add(Label208)
-        panel4sedan.Controls.Add(Label209)
-        panel4sedan.Controls.Add(Label210)
-        panel4sedan.Controls.Add(sedan4pic)
-        panel4sedan.Controls.Add(sedanmodel4txt)
-        panel4sedan.Controls.Add(Label212)
-        panel4sedan.Location = New Point(11, 1912)
-        panel4sedan.Name = "panel4sedan"
-        panel4sedan.Size = New Size(1115, 285)
-        panel4sedan.TabIndex = 48
-        panel4sedan.Visible = False
-        ' 
-        ' sedanyear4txt
-        ' 
-        sedanyear4txt.AutoSize = True
-        sedanyear4txt.Font = New Font("Futura Hv BT", 12F)
-        sedanyear4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanyear4txt.Location = New Point(558, 209)
-        sedanyear4txt.Name = "sedanyear4txt"
-        sedanyear4txt.Size = New Size(58, 24)
-        sedanyear4txt.TabIndex = 27
-        sedanyear4txt.Text = "2021"
-        ' 
-        ' Label178
-        ' 
-        Label178.AutoSize = True
-        Label178.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label178.ForeColor = Color.Black
-        Label178.Location = New Point(371, 209)
-        Label178.Name = "Label178"
-        Label178.Size = New Size(60, 24)
-        Label178.TabIndex = 26
-        Label178.Text = "YEAR:"
-        ' 
-        ' sedanrentalrate4txt
-        ' 
-        sedanrentalrate4txt.AutoSize = True
-        sedanrentalrate4txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        sedanrentalrate4txt.ForeColor = Color.Black
-        sedanrentalrate4txt.Location = New Point(810, 121)
-        sedanrentalrate4txt.Name = "sedanrentalrate4txt"
-        sedanrentalrate4txt.Size = New Size(175, 27)
-        sedanrentalrate4txt.TabIndex = 25
-        sedanrentalrate4txt.Text = "PHP 10,100.00"
-        ' 
-        ' Label197
-        ' 
-        Label197.AutoSize = True
-        Label197.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label197.ForeColor = Color.Black
-        Label197.Location = New Point(809, 88)
-        Label197.Name = "Label197"
-        Label197.Size = New Size(121, 24)
-        Label197.TabIndex = 24
-        Label197.Text = "Vehicle Rate:"
-        ' 
-        ' sedancolor4txt
-        ' 
-        sedancolor4txt.AutoSize = True
-        sedancolor4txt.Font = New Font("Futura Hv BT", 12F)
-        sedancolor4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedancolor4txt.Location = New Point(557, 100)
-        sedancolor4txt.Name = "sedancolor4txt"
-        sedancolor4txt.Size = New Size(41, 24)
-        sedancolor4txt.TabIndex = 21
-        sedancolor4txt.Text = "red"
-        ' 
-        ' sedanmileage4txt
-        ' 
-        sedanmileage4txt.AutoSize = True
-        sedanmileage4txt.Font = New Font("Futura Hv BT", 12F)
-        sedanmileage4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanmileage4txt.Location = New Point(557, 175)
-        sedanmileage4txt.Name = "sedanmileage4txt"
-        sedanmileage4txt.Size = New Size(105, 24)
-        sedanmileage4txt.TabIndex = 20
-        sedanmileage4txt.Text = "11,456km"
-        ' 
-        ' sedanseatingcapacity4txt
-        ' 
-        sedanseatingcapacity4txt.AutoSize = True
-        sedanseatingcapacity4txt.Font = New Font("Futura Hv BT", 12F)
-        sedanseatingcapacity4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanseatingcapacity4txt.Location = New Point(557, 137)
-        sedanseatingcapacity4txt.Name = "sedanseatingcapacity4txt"
-        sedanseatingcapacity4txt.Size = New Size(22, 24)
-        sedanseatingcapacity4txt.TabIndex = 19
-        sedanseatingcapacity4txt.Text = "5"
-        ' 
-        ' sedanmake4txt
-        ' 
-        sedanmake4txt.AutoSize = True
-        sedanmake4txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic)
-        sedanmake4txt.ForeColor = Color.Black
-        sedanmake4txt.Location = New Point(27, 9)
-        sedanmake4txt.Name = "sedanmake4txt"
-        sedanmake4txt.Size = New Size(76, 29)
-        sedanmake4txt.TabIndex = 17
-        sedanmake4txt.Text = "MAKE"
-        ' 
-        ' sedan4btn
-        ' 
-        sedan4btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedan4btn.FlatStyle = FlatStyle.Flat
-        sedan4btn.Font = New Font("Reesha", 16.1999989F)
-        sedan4btn.ForeColor = Color.White
-        sedan4btn.Location = New Point(809, 172)
-        sedan4btn.Name = "sedan4btn"
-        sedan4btn.Size = New Size(266, 57)
-        sedan4btn.TabIndex = 16
-        sedan4btn.Text = "BOOK NOW"
-        sedan4btn.UseVisualStyleBackColor = False
-        ' 
-        ' Label208
-        ' 
-        Label208.AutoSize = True
-        Label208.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label208.ForeColor = Color.Black
-        Label208.Location = New Point(370, 175)
-        Label208.Name = "Label208"
-        Label208.Size = New Size(96, 24)
-        Label208.TabIndex = 5
-        Label208.Text = "MILEAGE:"
-        ' 
-        ' Label209
-        ' 
-        Label209.AutoSize = True
-        Label209.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label209.ForeColor = Color.Black
-        Label209.Location = New Point(370, 137)
-        Label209.Name = "Label209"
-        Label209.Size = New Size(153, 24)
-        Label209.TabIndex = 4
-        Label209.Text = "SEAT CAPACITY:"
-        ' 
-        ' Label210
-        ' 
-        Label210.AutoSize = True
-        Label210.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label210.ForeColor = Color.Black
-        Label210.Location = New Point(370, 100)
-        Label210.Name = "Label210"
-        Label210.Size = New Size(83, 24)
-        Label210.TabIndex = 3
-        Label210.Text = "COLOR:"
-        ' 
-        ' sedan4pic
-        ' 
-        sedan4pic.Image = My.Resources.Resources.RideX
-        sedan4pic.Location = New Point(27, 100)
-        sedan4pic.Name = "sedan4pic"
-        sedan4pic.Size = New Size(303, 141)
-        sedan4pic.SizeMode = PictureBoxSizeMode.StretchImage
-        sedan4pic.TabIndex = 2
-        sedan4pic.TabStop = False
-        ' 
-        ' sedanmodel4txt
-        ' 
-        sedanmodel4txt.AutoSize = True
-        sedanmodel4txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        sedanmodel4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanmodel4txt.Location = New Point(22, 29)
-        sedanmodel4txt.Name = "sedanmodel4txt"
-        sedanmodel4txt.Size = New Size(303, 41)
-        sedanmodel4txt.TabIndex = 0
-        sedanmodel4txt.Text = "CAR NUMBER 1"
-        ' 
-        ' Label212
-        ' 
-        Label212.AutoSize = True
-        Label212.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label212.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label212.Location = New Point(22, 35)
-        Label212.Name = "Label212"
-        Label212.Size = New Size(1072, 41)
-        Label212.TabIndex = 1
-        Label212.Text = "______________________________________________________________"
-        ' 
-        ' panel5sedan
-        ' 
-        panel5sedan.BackColor = Color.White
-        panel5sedan.Controls.Add(sedanyear5txt)
-        panel5sedan.Controls.Add(Label194)
-        panel5sedan.Controls.Add(sedanrentalrate5txt)
-        panel5sedan.Controls.Add(Label201)
-        panel5sedan.Controls.Add(sedancolor5txt)
-        panel5sedan.Controls.Add(sedanmileage5txt)
-        panel5sedan.Controls.Add(sedanseatingcapacity5txt)
-        panel5sedan.Controls.Add(sedanmake5txt)
-        panel5sedan.Controls.Add(sedan5btn)
-        panel5sedan.Controls.Add(Label216)
-        panel5sedan.Controls.Add(Label217)
-        panel5sedan.Controls.Add(Label218)
-        panel5sedan.Controls.Add(sedan5pic)
-        panel5sedan.Controls.Add(sedanmodel5txt)
-        panel5sedan.Controls.Add(Label220)
-        panel5sedan.Location = New Point(11, 2219)
-        panel5sedan.Name = "panel5sedan"
-        panel5sedan.Size = New Size(1115, 285)
-        panel5sedan.TabIndex = 49
-        panel5sedan.Visible = False
-        ' 
-        ' sedanyear5txt
-        ' 
-        sedanyear5txt.AutoSize = True
-        sedanyear5txt.Font = New Font("Futura Hv BT", 12F)
-        sedanyear5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanyear5txt.Location = New Point(558, 209)
-        sedanyear5txt.Name = "sedanyear5txt"
-        sedanyear5txt.Size = New Size(58, 24)
-        sedanyear5txt.TabIndex = 27
-        sedanyear5txt.Text = "2021"
-        ' 
-        ' Label194
-        ' 
-        Label194.AutoSize = True
-        Label194.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label194.ForeColor = Color.Black
-        Label194.Location = New Point(371, 209)
-        Label194.Name = "Label194"
-        Label194.Size = New Size(60, 24)
-        Label194.TabIndex = 26
-        Label194.Text = "YEAR:"
-        ' 
-        ' sedanrentalrate5txt
-        ' 
-        sedanrentalrate5txt.AutoSize = True
-        sedanrentalrate5txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        sedanrentalrate5txt.ForeColor = Color.Black
-        sedanrentalrate5txt.Location = New Point(810, 121)
-        sedanrentalrate5txt.Name = "sedanrentalrate5txt"
-        sedanrentalrate5txt.Size = New Size(175, 27)
-        sedanrentalrate5txt.TabIndex = 25
-        sedanrentalrate5txt.Text = "PHP 10,100.00"
-        ' 
-        ' Label201
-        ' 
-        Label201.AutoSize = True
-        Label201.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label201.ForeColor = Color.Black
-        Label201.Location = New Point(809, 88)
-        Label201.Name = "Label201"
-        Label201.Size = New Size(121, 24)
-        Label201.TabIndex = 24
-        Label201.Text = "Vehicle Rate:"
-        ' 
-        ' sedancolor5txt
-        ' 
-        sedancolor5txt.AutoSize = True
-        sedancolor5txt.Font = New Font("Futura Hv BT", 12F)
-        sedancolor5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedancolor5txt.Location = New Point(557, 100)
-        sedancolor5txt.Name = "sedancolor5txt"
-        sedancolor5txt.Size = New Size(41, 24)
-        sedancolor5txt.TabIndex = 21
-        sedancolor5txt.Text = "red"
-        ' 
-        ' sedanmileage5txt
-        ' 
-        sedanmileage5txt.AutoSize = True
-        sedanmileage5txt.Font = New Font("Futura Hv BT", 12F)
-        sedanmileage5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanmileage5txt.Location = New Point(557, 175)
-        sedanmileage5txt.Name = "sedanmileage5txt"
-        sedanmileage5txt.Size = New Size(105, 24)
-        sedanmileage5txt.TabIndex = 20
-        sedanmileage5txt.Text = "11,456km"
-        ' 
-        ' sedanseatingcapacity5txt
-        ' 
-        sedanseatingcapacity5txt.AutoSize = True
-        sedanseatingcapacity5txt.Font = New Font("Futura Hv BT", 12F)
-        sedanseatingcapacity5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanseatingcapacity5txt.Location = New Point(557, 137)
-        sedanseatingcapacity5txt.Name = "sedanseatingcapacity5txt"
-        sedanseatingcapacity5txt.Size = New Size(22, 24)
-        sedanseatingcapacity5txt.TabIndex = 19
-        sedanseatingcapacity5txt.Text = "5"
-        ' 
-        ' sedanmake5txt
-        ' 
-        sedanmake5txt.AutoSize = True
-        sedanmake5txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic)
-        sedanmake5txt.ForeColor = Color.Black
-        sedanmake5txt.Location = New Point(27, 9)
-        sedanmake5txt.Name = "sedanmake5txt"
-        sedanmake5txt.Size = New Size(76, 29)
-        sedanmake5txt.TabIndex = 17
-        sedanmake5txt.Text = "MAKE"
-        ' 
-        ' sedan5btn
-        ' 
-        sedan5btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedan5btn.FlatStyle = FlatStyle.Flat
-        sedan5btn.Font = New Font("Reesha", 16.1999989F)
-        sedan5btn.ForeColor = Color.White
-        sedan5btn.Location = New Point(809, 172)
-        sedan5btn.Name = "sedan5btn"
-        sedan5btn.Size = New Size(266, 57)
-        sedan5btn.TabIndex = 16
-        sedan5btn.Text = "BOOK NOW"
-        sedan5btn.UseVisualStyleBackColor = False
-        ' 
-        ' Label216
-        ' 
-        Label216.AutoSize = True
-        Label216.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label216.ForeColor = Color.Black
-        Label216.Location = New Point(370, 175)
-        Label216.Name = "Label216"
-        Label216.Size = New Size(96, 24)
-        Label216.TabIndex = 5
-        Label216.Text = "MILEAGE:"
-        ' 
-        ' Label217
-        ' 
-        Label217.AutoSize = True
-        Label217.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label217.ForeColor = Color.Black
-        Label217.Location = New Point(370, 137)
-        Label217.Name = "Label217"
-        Label217.Size = New Size(153, 24)
-        Label217.TabIndex = 4
-        Label217.Text = "SEAT CAPACITY:"
-        ' 
-        ' Label218
-        ' 
-        Label218.AutoSize = True
-        Label218.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label218.ForeColor = Color.Black
-        Label218.Location = New Point(370, 100)
-        Label218.Name = "Label218"
-        Label218.Size = New Size(83, 24)
-        Label218.TabIndex = 3
-        Label218.Text = "COLOR:"
-        ' 
-        ' sedan5pic
-        ' 
-        sedan5pic.Image = My.Resources.Resources.RideX
-        sedan5pic.Location = New Point(27, 100)
-        sedan5pic.Name = "sedan5pic"
-        sedan5pic.Size = New Size(303, 141)
-        sedan5pic.SizeMode = PictureBoxSizeMode.StretchImage
-        sedan5pic.TabIndex = 2
-        sedan5pic.TabStop = False
-        ' 
-        ' sedanmodel5txt
-        ' 
-        sedanmodel5txt.AutoSize = True
-        sedanmodel5txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        sedanmodel5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        sedanmodel5txt.Location = New Point(22, 29)
-        sedanmodel5txt.Name = "sedanmodel5txt"
-        sedanmodel5txt.Size = New Size(303, 41)
-        sedanmodel5txt.TabIndex = 0
-        sedanmodel5txt.Text = "CAR NUMBER 1"
-        ' 
-        ' Label220
-        ' 
-        Label220.AutoSize = True
-        Label220.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label220.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label220.Location = New Point(22, 35)
-        Label220.Name = "Label220"
-        Label220.Size = New Size(1072, 41)
-        Label220.TabIndex = 1
-        Label220.Text = "______________________________________________________________"
-        ' 
         ' allcars
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
-        ClientSize = New Size(1229, 571)
+        ClientSize = New Size(1233, 571)
         Controls.Add(pnlHybrid)
         Controls.Add(pnlMpv)
         Controls.Add(pnlSuvContent)
@@ -6064,6 +6908,18 @@ Partial Class allcars
         CType(imgCar6, ComponentModel.ISupportInitialize).EndInit()
         CType(car6img, ComponentModel.ISupportInitialize).EndInit()
         pnlSedan.ResumeLayout(False)
+        panel5sedan.ResumeLayout(False)
+        panel5sedan.PerformLayout()
+        CType(sedan5pic, ComponentModel.ISupportInitialize).EndInit()
+        panel4sedan.ResumeLayout(False)
+        panel4sedan.PerformLayout()
+        CType(sedan4pic, ComponentModel.ISupportInitialize).EndInit()
+        panel3sedan.ResumeLayout(False)
+        panel3sedan.PerformLayout()
+        CType(sedan3pic, ComponentModel.ISupportInitialize).EndInit()
+        panel2sedan.ResumeLayout(False)
+        panel2sedan.PerformLayout()
+        CType(sedan2pic, ComponentModel.ISupportInitialize).EndInit()
         panel1sedan.ResumeLayout(False)
         panel1sedan.PerformLayout()
         CType(sedan1pic, ComponentModel.ISupportInitialize).EndInit()
@@ -6090,6 +6946,18 @@ Partial Class allcars
         Panel27.PerformLayout()
         CType(car2img, ComponentModel.ISupportInitialize).EndInit()
         pnlHybrid.ResumeLayout(False)
+        panel5hybrid.ResumeLayout(False)
+        panel5hybrid.PerformLayout()
+        CType(hybrid5pic, ComponentModel.ISupportInitialize).EndInit()
+        panel4hybrid.ResumeLayout(False)
+        panel4hybrid.PerformLayout()
+        CType(hybrid4pic, ComponentModel.ISupportInitialize).EndInit()
+        panel3hybrid.ResumeLayout(False)
+        panel3hybrid.PerformLayout()
+        CType(hybrid3pic, ComponentModel.ISupportInitialize).EndInit()
+        panel2hybrid.ResumeLayout(False)
+        panel2hybrid.PerformLayout()
+        CType(hybrid2pic, ComponentModel.ISupportInitialize).EndInit()
         panel1hybrid.ResumeLayout(False)
         panel1hybrid.PerformLayout()
         CType(hybrid1pic, ComponentModel.ISupportInitialize).EndInit()
@@ -6103,18 +6971,6 @@ Partial Class allcars
         Panel24.ResumeLayout(False)
         Panel24.PerformLayout()
         CType(car7img, ComponentModel.ISupportInitialize).EndInit()
-        panel2sedan.ResumeLayout(False)
-        panel2sedan.PerformLayout()
-        CType(sedan2pic, ComponentModel.ISupportInitialize).EndInit()
-        panel3sedan.ResumeLayout(False)
-        panel3sedan.PerformLayout()
-        CType(sedan3pic, ComponentModel.ISupportInitialize).EndInit()
-        panel4sedan.ResumeLayout(False)
-        panel4sedan.PerformLayout()
-        CType(sedan4pic, ComponentModel.ISupportInitialize).EndInit()
-        panel5sedan.ResumeLayout(False)
-        panel5sedan.PerformLayout()
-        CType(sedan5pic, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -6580,5 +7436,69 @@ Partial Class allcars
     Friend WithEvents sedan5pic As PictureBox
     Friend WithEvents sedanmodel5txt As Label
     Friend WithEvents Label220 As Label
+    Friend WithEvents panel2hybrid As Panel
+    Friend WithEvents hybridyear2txt As Label
+    Friend WithEvents Label200 As Label
+    Friend WithEvents hybridrentalrate2txt As Label
+    Friend WithEvents Label207 As Label
+    Friend WithEvents hybridcolor2txt As Label
+    Friend WithEvents hybridmileage2txt As Label
+    Friend WithEvents hybridseatingcapacity2txt As Label
+    Friend WithEvents hybridmake2txt As Label
+    Friend WithEvents hybrid2btn As Button
+    Friend WithEvents Label222 As Label
+    Friend WithEvents Label223 As Label
+    Friend WithEvents Label224 As Label
+    Friend WithEvents hybrid2pic As PictureBox
+    Friend WithEvents hybridmodel2txt As Label
+    Friend WithEvents Label226 As Label
+    Friend WithEvents panel4hybrid As Panel
+    Friend WithEvents hybridyear4txt As Label
+    Friend WithEvents Label211 As Label
+    Friend WithEvents hybridrentalrate4txt As Label
+    Friend WithEvents Label221 As Label
+    Friend WithEvents hybridcolor4txt As Label
+    Friend WithEvents hybridmileage4txt As Label
+    Friend WithEvents hybridseatingcapacity4txt As Label
+    Friend WithEvents hybridmake4txt As Label
+    Friend WithEvents hybrid4btn As Button
+    Friend WithEvents Label234 As Label
+    Friend WithEvents Label235 As Label
+    Friend WithEvents Label236 As Label
+    Friend WithEvents hybrid4pic As PictureBox
+    Friend WithEvents hybridmodel4txt As Label
+    Friend WithEvents Label238 As Label
+    Friend WithEvents panel3hybrid As Panel
+    Friend WithEvents hybridyear3txt As Label
+    Friend WithEvents Label205 As Label
+    Friend WithEvents hybridrentalrate3txt As Label
+    Friend WithEvents Label215 As Label
+    Friend WithEvents hybridcolor3txt As Label
+    Friend WithEvents hybridmileage3txt As Label
+    Friend WithEvents hybridseatingcapacity3txt As Label
+    Friend WithEvents hybridmake3txt As Label
+    Friend WithEvents hybrid3btn As Button
+    Friend WithEvents Label228 As Label
+    Friend WithEvents Label229 As Label
+    Friend WithEvents Label230 As Label
+    Friend WithEvents hybrid3pic As PictureBox
+    Friend WithEvents hybridmodel3txt As Label
+    Friend WithEvents Label232 As Label
+    Friend WithEvents panel5hybrid As Panel
+    Friend WithEvents hybridyear5txt As Label
+    Friend WithEvents Label219 As Label
+    Friend WithEvents hybridrentalrate5txt As Label
+    Friend WithEvents Label227 As Label
+    Friend WithEvents hybridcolor5txt As Label
+    Friend WithEvents hybridmileage5txt As Label
+    Friend WithEvents hybridseatingcapacity5txt As Label
+    Friend WithEvents hybridmake5txt As Label
+    Friend WithEvents hybrid5btn As Button
+    Friend WithEvents Label240 As Label
+    Friend WithEvents Label241 As Label
+    Friend WithEvents Label242 As Label
+    Friend WithEvents hybrid5pic As PictureBox
+    Friend WithEvents hybridmodel5txt As Label
+    Friend WithEvents Label244 As Label
 
 End Class

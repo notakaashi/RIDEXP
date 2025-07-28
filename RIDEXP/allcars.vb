@@ -232,9 +232,9 @@ Public Class allcars
     End Sub
 
     Private Sub car9_Click(sender As Object, e As EventArgs) Handles car9btn.Click
-        If Not StartTransaction() Then
+        If Not StartTransaction Then
             MessageBox.Show("Failed to start transaction. Please try again.")
-            Close()
+            Close
             Return
         End If
         SelectCar(9, "Toyota Corolla Altis", 1200, "Car", 9)
