@@ -537,4 +537,7 @@ Public Class allcars
         SelectCar(carId, carName, dailyRate, "Car", carId)
     End Sub
 
+    Private Sub pnlSedan_Paint(sender As Object, e As PaintEventArgs) Handles pnlSedan.Paint
+
+    End Sub
 End Class
