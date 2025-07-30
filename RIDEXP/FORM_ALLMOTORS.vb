@@ -6,9 +6,34 @@ Public Class FORM_ALLMOTORS
             Dim connectionString As String = "server=localhost;database=ridexp;UserId=root;password=;"
             Using conn As New MySqlConnection(connectionString)
                 conn.Open()
+
                 For motorId As Integer = 1 To 10
                     LoadSingleMotor(conn, motorId)
                 Next
+
+                Dim newMotorsQuery = "SELECT m.motor_id, m.motor_category_id, m.make, m.model, m.year,
+                                         m.color, m.mileage, rr.rate_per_day, mp.image
+                                  FROM motors m
+                                  JOIN vehicles v ON m.motor_id = v.item_id
+                                  JOIN rental_rate rr ON rr.vehicle_id = v.vehicle_id
+                                  JOIN motors_pic mp ON mp.motor_id = m.motor_id
+                                  WHERE m.motor_id > 10"
+                Using cmd As New MySqlCommand(newMotorsQuery, conn)
+                    Dim reader = cmd.ExecuteReader()
+                    While reader.Read()
+                        ShowNewMotorInCategory(
+                        Convert.ToInt32(reader("motor_category_id")),
+                        Convert.ToInt32(reader("motor_id")),
+                        reader("make").ToString(),
+                        reader("model").ToString(),
+                        reader("year").ToString(),
+                        reader("color").ToString(),
+                        reader("mileage").ToString(),
+                        reader("rate_per_day").ToString(),
+                        reader("image").ToString()
+                    )
+                    End While
+                End Using
             End Using
         Catch ex As Exception
             MessageBox.Show("Error loading motor data: " & ex.Message)
@@ -212,9 +237,9 @@ Public Class FORM_ALLMOTORS
     End Sub
 
     Private Sub motor10btn_Click(sender As Object, e As EventArgs) Handles motor10btn.Click
-        If Not StartTransaction() Then
+        If Not StartTransaction Then
             MessageBox.Show("Failed to start transaction. Please try again.")
-            Close()
+            Close
             Return
         End If
         SelectMotor(10, "Honda ADV", 2500, "Motor", 20)
@@ -230,9 +255,9 @@ Public Class FORM_ALLMOTORS
     End Sub
 
     Private Sub motor8btn_Click(sender As Object, e As EventArgs) Handles motor8btn.Click
-        If Not StartTransaction() Then
+        If Not StartTransaction Then
             MessageBox.Show("Failed to start transaction. Please try again.")
-            Close()
+            Close
             Return
         End If
         SelectMotor(8, "Kawasaki Barako", 2400, "Motor", 18)
@@ -257,9 +282,9 @@ Public Class FORM_ALLMOTORS
     End Sub
 
     Private Sub motor9btn_Click(sender As Object, e As EventArgs) Handles motor9btn.Click
-        If Not StartTransaction() Then
+        If Not StartTransaction Then
             MessageBox.Show("Failed to start transaction. Please try again.")
-            Close()
+            Close
             Return
         End If
         SelectMotor(9, "Yamaha NMAX", 2800, "Motor", 19)
@@ -324,4 +349,115 @@ Public Class FORM_ALLMOTORS
             MessageBox.Show("Error in SelectCar: " & ex.Message)
         End Try
     End Sub
+
+    Private Sub ShowNewMotorInCategory(categoryId As Integer, motorId As Integer, make As String, model As String,
+                                   year As String, color As String, mileage As String, rate As String, imgPath As String)
+
+        Dim prefix As String = ""
+        Dim parentPanel As Panel = Nothing
+
+        ' Match motor categories to main panels
+        Select Case categoryId
+            Case 1 : prefix = "scooter" : parentPanel = pnlScooter
+            Case 2 : prefix = "underbone" : parentPanel = pnlUnderbone
+            Case 3 : prefix = "adventure" : parentPanel = pnlAdventure
+        End Select
+
+        MessageBox.Show($"Loading motor {make} {model} into {prefix}") ' Visible debug
+
+        ' Look for an available slot
+        For i As Integer = 1 To 10
+            Dim btn = Me.Controls.Find($"{prefix}{i}btn", True).FirstOrDefault()
+
+            If btn Is Nothing Then
+                MessageBox.Show($"Cannot find {prefix}{i}btn")
+                Continue For
+            End If
+
+            If btn.Visible = False Then
+                MessageBox.Show($"Found slot {i} for {prefix}")
+
+                ' Set labels
+                SetLabel($"{prefix}make{i}txt", make)
+                SetLabel($"{prefix}model{i}txt", model)
+                SetLabel($"{prefix}lblyear{i}", year)
+                SetLabel($"{prefix}color{i}txt", color)
+                SetLabel($"{prefix}mileage{i}txt", mileage & " km")
+                SetLabel($"{prefix}rentalrate{i}txt", rate & " per day")
+
+                ' Load the picture (now using `pic` instead of `img`)
+                Dim pic = CType(Me.Controls.Find($"{prefix}{i}pic", True).FirstOrDefault(), PictureBox)
+                If pic IsNot Nothing Then
+                    If IO.File.Exists(imgPath) Then
+                        pic.Image = Image.FromFile(imgPath)
+                    Else
+                        Dim resImg = My.Resources.ResourceManager.GetObject(IO.Path.GetFileNameWithoutExtension(imgPath))
+                        If resImg IsNot Nothing Then
+                            pic.Image = CType(resImg, Image)
+                        End If
+                    End If
+                End If
+
+                ' Show the button + panel
+                btn.Visible = True
+                btn.Tag = motorId
+
+                If parentPanel IsNot Nothing Then parentPanel.Visible = True
+                Dim containerPanel = TryCast(btn.Parent, Panel)
+                If containerPanel IsNot Nothing Then containerPanel.Visible = True
+
+                ' Attach dynamic click event
+                RemoveHandler btn.Click, AddressOf DynamicMotorButton_Click
+                AddHandler btn.Click, AddressOf DynamicMotorButton_Click
+
+                Exit For
+            End If
+        Next
+    End Sub
+
+
+    Private Sub SetLabel(controlName As String, value As String)
+        Dim ctrl = Me.Controls.Find(controlName, True).FirstOrDefault()
+        If ctrl IsNot Nothing Then ctrl.Text = value
+    End Sub
+
+    Private Sub DynamicMotorButton_Click(sender As Object, e As EventArgs)
+        Dim btn As Button = CType(sender, Button)
+        Dim motorId As Integer = CInt(btn.Tag)
+
+        ' Determine prefix (for finding labels)
+        Dim prefix As String = ""
+        If btn.Name.StartsWith("scooter") Then prefix = "scooter"
+        If btn.Name.StartsWith("underbone") Then prefix = "underbone"
+        If btn.Name.StartsWith("adventure") Then prefix = "adventure"
+
+        ' Find the slot index (number in the button name)
+        Dim numPart As String = New String(btn.Name.Where(Function(c) Char.IsDigit(c)).ToArray())
+        Dim slotIndex As Integer = Integer.Parse(numPart)
+
+        ' Find the labels for this slot
+        Dim makeLbl = CType(Me.Controls.Find($"{prefix}make{slotIndex}txt", True).FirstOrDefault(), Label)
+        Dim modelLbl = CType(Me.Controls.Find($"{prefix}model{slotIndex}txt", True).FirstOrDefault(), Label)
+        Dim rateLbl = CType(Me.Controls.Find($"{prefix}rentalrate{slotIndex}txt", True).FirstOrDefault(), Label)
+
+        If makeLbl Is Nothing OrElse modelLbl Is Nothing OrElse rateLbl Is Nothing Then
+            MessageBox.Show("Error: Missing motor info for this button!")
+            Exit Sub
+        End If
+
+        Dim motorName As String = $"{makeLbl.Text} {modelLbl.Text}"
+        Dim dailyRate As Decimal = Decimal.Parse(rateLbl.Text.Split(" "c)(0))
+
+        ' Start transaction
+        If Not StartTransaction() Then
+            MessageBox.Show("Failed to start transaction. Please try again.")
+            Close()
+            Return
+        End If
+
+        ' Pass motor data to the transaction
+        SelectMotor(motorId, motorName, dailyRate, "Motor", motorId)
+    End Sub
+
+
 End Class

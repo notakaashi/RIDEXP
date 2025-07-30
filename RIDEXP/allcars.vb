@@ -501,7 +501,7 @@ Public Class allcars
 
     Private Sub DynamicCarButton_Click(sender As Object, e As EventArgs)
         Dim btn As Button = CType(sender, Button)
-        Dim carId As Integer = CInt(btn.Tag) ' ✅ Real carId from the DB
+        Dim carId As Integer = CInt(btn.Tag)
 
         ' Determine prefix (for finding labels)
         Dim prefix As String = ""
@@ -533,7 +533,6 @@ Public Class allcars
             Return
         End If
 
-        ' ✅ Pass the real carId now
         SelectCar(carId, carName, dailyRate, "Car", carId)
     End Sub
 
