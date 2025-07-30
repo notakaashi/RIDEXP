@@ -43,8 +43,8 @@
         rentalslbl.ForeColor = Color.DarkRed
     End Sub
     Private Sub contactslbl_Click(sender As Object, e As EventArgs) Handles contactslbl.Click
-        CONTACTUS.Show()
         contactslbl.ForeColor = Color.DarkRed
+        pnlContactUs.Visible = True
     End Sub
 
     Private Sub rentalslbl_MouseEnter(sender As Object, e As EventArgs) Handles rentalslbl.MouseEnter
@@ -121,5 +121,10 @@
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
         TRANSAC_COMPLETE.Show()
+    End Sub
+
+    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
+        pnlContactUs.Visible = False
+        contactslbl.ForeColor = Color.Black
     End Sub
 End Class
