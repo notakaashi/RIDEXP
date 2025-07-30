@@ -48,7 +48,6 @@ Partial Class FORM_ADMIN
         Label2 = New Label()
         Label1 = New Label()
         Panel8 = New Panel()
-        TextBox1 = New TextBox()
         Button6 = New Button()
         Label9 = New Label()
         Panel9 = New Panel()
@@ -606,7 +605,6 @@ Partial Class FORM_ADMIN
         ' Panel8
         ' 
         Panel8.BackColor = Color.White
-        Panel8.Controls.Add(TextBox1)
         Panel8.Controls.Add(Button6)
         Panel8.Controls.Add(Label9)
         Panel8.Dock = DockStyle.Top
@@ -615,13 +613,6 @@ Partial Class FORM_ADMIN
         Panel8.Name = "Panel8"
         Panel8.Size = New Size(945, 56)
         Panel8.TabIndex = 1
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(216, 28)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(100, 23)
-        TextBox1.TabIndex = 8
         ' 
         ' Button6
         ' 
@@ -968,7 +959,7 @@ Partial Class FORM_ADMIN
         pnlAddCars.Location = New Point(94, 98)
         pnlAddCars.Margin = New Padding(3, 2, 3, 2)
         pnlAddCars.Name = "pnlAddCars"
-        pnlAddCars.Size = New Size(586, 280)
+        pnlAddCars.Size = New Size(586, 325)
         pnlAddCars.TabIndex = 20
         ' 
         ' btnUploadImage
@@ -3380,5 +3371,4 @@ Partial Class FORM_ADMIN
     Friend WithEvents txtRentalRate As TextBox
     Friend WithEvents btnUploadImage As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents TextBox1 As TextBox
 End Class

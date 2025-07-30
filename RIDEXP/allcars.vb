@@ -19,7 +19,6 @@ Public Class allcars
                     LoadSingleCar(conn, carId)
                 Next
             End Using
-            MessageBox.Show("Calling LoadNewCars() now...")
             LoadNewCars()
 
         Catch ex As Exception
@@ -204,6 +203,7 @@ Public Class allcars
 
     Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
         Me.Close()
+        FORMRENTAL_STEP1.Show()
     End Sub
 
     Private Sub btnSuv_Click(sender As Object, e As EventArgs) Handles btnSuv.Click
@@ -242,13 +242,14 @@ Public Class allcars
 
     Private Sub SelectCar(carId As Integer, carName As String, dailyRate As Decimal, vehicleType As String, vehicleId As Integer)
         Try
+            If FORMRENTAL_STEP1.Visible Then FORMRENTAL_STEP1.Hide()
+
             If RentalTransactionModule.transaction Is Nothing Then
                 MessageBox.Show("Transaction is null in SelectCar!")
                 Return
             End If
 
             RentalTransactionModule.SaveForm1CarData(carId, carName, dailyRate, vehicleType, vehicleId)
-            MessageBox.Show("Car data saved: " & carName)
 
             Dim step2Form As New FORMRENTAL_STEP2()
             step2Form.Show()
@@ -368,7 +369,6 @@ Public Class allcars
     End Sub
 
     Private Sub LoadNewCars()
-        MessageBox.Show("LoadNewCars() is running!")
         Dim query As String = "
         SELECT c.car_id, c.car_category_id, c.make, c.model_name, c.year, c.color,
                c.mileage, c.seating_capacity, rr.rate_per_day, cp.image
@@ -390,7 +390,6 @@ Public Class allcars
 
             While reader.Read()
                 Dim imgFullPath As String = Path.Combine(Application.StartupPath, reader("image").ToString())
-                MessageBox.Show("Found car: " & reader("model_name").ToString())
                 ShowNewCarInCategory(
     reader("car_category_id"),
     reader("car_id"),
@@ -437,9 +436,7 @@ Public Class allcars
                 parentPanel = pnlHybrid
         End Select
 
-        Debug.WriteLine($"[DEBUG] Loading car {make} {model} into {prefix}")
 
-        ' Find available slot
         For i As Integer = 1 To 20
             Dim btn = Me.Controls.Find($"{prefix}{i}btn", True).FirstOrDefault()
 
@@ -495,7 +492,7 @@ Public Class allcars
             CType(lbl, Label).Text = text
             lbl.Visible = True
         Else
-            Debug.WriteLine($"[DEBUG] -> Cannot find label {name}")
+
         End If
     End Sub
 

@@ -197,13 +197,6 @@ c.make,
         Try
             With RentalTransactionModule.TransactionData
 
-                MessageBox.Show($"Loading data for Car ID: { .SelectedCarId}" & vbCrLf &
-                           $"Pickup Date: { .PickupDate}" & vbCrLf &
-                           $"Pickup Time: { .PickupTime}" & vbCrLf &
-                           $"Pickup Place: { .PickupPlace}" & vbCrLf &
-                           $"Return Date: { .ReturnDate}" & vbCrLf &
-                           $"Return Time: { .ReturnTime}" & vbCrLf &
-                           $"Return Place: { .ReturnPlace}")
 
                 ' Display pickup information
                 If .PickupDate <> Nothing Then
@@ -268,7 +261,6 @@ c.make,
                     Return
                 End If
             End If
-            MessageBox.Show("VehicleType: " & RentalTransactionModule.TransactionData.VehicleType)
 
             If RentalTransactionModule.TransactionData.VehicleType = "Car" Then
                 LoadCarInfo(RentalTransactionModule.TransactionData.SelectedCarId)
@@ -286,14 +278,13 @@ c.make,
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            ' Simple validation
 
-            ' Check if user is logged in
             If loggedin = False Then
                 MessageBox.Show("You need to log in before proceeding to payment.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Logjn.Show()
             Else
                 FORMRENTAL_STEP4.Show()
+                Me.Hide()
                 TransactionData.CustomerConfirmed = True
             End If
 
@@ -301,6 +292,8 @@ c.make,
         Catch ex As Exception
             MessageBox.Show("Error proceeding to payment: " & ex.Message)
         End Try
+
+
     End Sub
 
     Private Sub homelbl_Click(sender As Object, e As EventArgs) Handles homelbl.Click
@@ -334,11 +327,6 @@ c.make,
     End Sub
 
     Private Sub FORMRENTAL_STEP3_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-
-
-        MessageBox.Show("SelectedCarId: " & RentalTransactionModule.TransactionData.SelectedCarId & vbCrLf &
-                "SelectedMotorId: " & RentalTransactionModule.TransactionData.SelectedMotorId & vbCrLf &
-                "VehicleType: " & RentalTransactionModule.TransactionData.VehicleType)
 
     End Sub
 

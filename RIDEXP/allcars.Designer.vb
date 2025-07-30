@@ -577,6 +577,38 @@ Partial Class allcars
         model9txt = New Label()
         Label179 = New Label()
         pnlHatchback = New Panel()
+        panel5hatch = New Panel()
+        hatchyear5txt = New Label()
+        Label267 = New Label()
+        hatchrentalrate5txt = New Label()
+        Label275 = New Label()
+        hatchcolor5txt = New Label()
+        hatchmileage5txt = New Label()
+        hatchseatingcapacity5txt = New Label()
+        hatchmake5txt = New Label()
+        hatch5btn = New Button()
+        Label288 = New Label()
+        Label289 = New Label()
+        Label290 = New Label()
+        hatch5pic = New PictureBox()
+        hatchmodel5txt = New Label()
+        Label292 = New Label()
+        panel4hatch = New Panel()
+        hatchyear4txt = New Label()
+        Label261 = New Label()
+        hatchrentalrate4txt = New Label()
+        Label269 = New Label()
+        hatchcolor4txt = New Label()
+        hatchmileage4txt = New Label()
+        hatchseatingcapacity4txt = New Label()
+        hatchmake4txt = New Label()
+        hatch4btn = New Button()
+        Label282 = New Label()
+        Label283 = New Label()
+        Label284 = New Label()
+        hatch4pic = New PictureBox()
+        hatchmodel4txt = New Label()
+        Label286 = New Label()
         panel3hatch = New Panel()
         hatchyear3txt = New Label()
         Label256 = New Label()
@@ -641,38 +673,6 @@ Partial Class allcars
         car7img = New PictureBox()
         model7txt = New Label()
         Label187 = New Label()
-        panel4hatch = New Panel()
-        hatchyear4txt = New Label()
-        Label261 = New Label()
-        hatchrentalrate4txt = New Label()
-        Label269 = New Label()
-        hatchcolor4txt = New Label()
-        hatchmileage4txt = New Label()
-        hatchseatingcapacity4txt = New Label()
-        hatchmake4txt = New Label()
-        hatch4btn = New Button()
-        Label282 = New Label()
-        Label283 = New Label()
-        Label284 = New Label()
-        hatch4pic = New PictureBox()
-        hatchmodel4txt = New Label()
-        Label286 = New Label()
-        panel5hatch = New Panel()
-        hatchyear5txt = New Label()
-        Label267 = New Label()
-        hatchrentalrate5txt = New Label()
-        Label275 = New Label()
-        hatchcolor5txt = New Label()
-        hatchmileage5txt = New Label()
-        hatchseatingcapacity5txt = New Label()
-        hatchmake5txt = New Label()
-        hatch5btn = New Button()
-        Label288 = New Label()
-        Label289 = New Label()
-        Label290 = New Label()
-        hatch5pic = New PictureBox()
-        hatchmodel5txt = New Label()
-        Label292 = New Label()
         Panel4.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         pnlAllCarsContent.SuspendLayout()
@@ -754,6 +754,10 @@ Partial Class allcars
         Panel23.SuspendLayout()
         CType(car9img, ComponentModel.ISupportInitialize).BeginInit()
         pnlHatchback.SuspendLayout()
+        panel5hatch.SuspendLayout()
+        CType(hatch5pic, ComponentModel.ISupportInitialize).BeginInit()
+        panel4hatch.SuspendLayout()
+        CType(hatch4pic, ComponentModel.ISupportInitialize).BeginInit()
         panel3hatch.SuspendLayout()
         CType(hatch3pic, ComponentModel.ISupportInitialize).BeginInit()
         panel2hatch.SuspendLayout()
@@ -762,10 +766,6 @@ Partial Class allcars
         CType(hatch1pic, ComponentModel.ISupportInitialize).BeginInit()
         Panel24.SuspendLayout()
         CType(car7img, ComponentModel.ISupportInitialize).BeginInit()
-        panel4hatch.SuspendLayout()
-        CType(hatch4pic, ComponentModel.ISupportInitialize).BeginInit()
-        panel5hatch.SuspendLayout()
-        CType(hatch5pic, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnHybrid
@@ -2316,7 +2316,7 @@ Partial Class allcars
         Panel6.Location = New Point(0, 0)
         Panel6.Margin = New Padding(3, 2, 3, 2)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(1386, 28)
+        Panel6.Size = New Size(1074, 28)
         Panel6.TabIndex = 41
         ' 
         ' Label37
@@ -7498,6 +7498,396 @@ Partial Class allcars
         pnlHatchback.Size = New Size(1017, 263)
         pnlHatchback.TabIndex = 46
         ' 
+        ' panel5hatch
+        ' 
+        panel5hatch.BackColor = Color.White
+        panel5hatch.BorderStyle = BorderStyle.FixedSingle
+        panel5hatch.Controls.Add(hatchyear5txt)
+        panel5hatch.Controls.Add(Label267)
+        panel5hatch.Controls.Add(hatchrentalrate5txt)
+        panel5hatch.Controls.Add(Label275)
+        panel5hatch.Controls.Add(hatchcolor5txt)
+        panel5hatch.Controls.Add(hatchmileage5txt)
+        panel5hatch.Controls.Add(hatchseatingcapacity5txt)
+        panel5hatch.Controls.Add(hatchmake5txt)
+        panel5hatch.Controls.Add(hatch5btn)
+        panel5hatch.Controls.Add(Label288)
+        panel5hatch.Controls.Add(Label289)
+        panel5hatch.Controls.Add(Label290)
+        panel5hatch.Controls.Add(hatch5pic)
+        panel5hatch.Controls.Add(hatchmodel5txt)
+        panel5hatch.Controls.Add(Label292)
+        panel5hatch.ForeColor = Color.Gray
+        panel5hatch.Location = New Point(10, 1197)
+        panel5hatch.Margin = New Padding(3, 2, 3, 2)
+        panel5hatch.Name = "panel5hatch"
+        panel5hatch.Size = New Size(976, 215)
+        panel5hatch.TabIndex = 56
+        panel5hatch.Visible = False
+        ' 
+        ' hatchyear5txt
+        ' 
+        hatchyear5txt.AutoSize = True
+        hatchyear5txt.Font = New Font("Futura Hv BT", 12F)
+        hatchyear5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchyear5txt.Location = New Point(487, 158)
+        hatchyear5txt.Name = "hatchyear5txt"
+        hatchyear5txt.Size = New Size(49, 19)
+        hatchyear5txt.TabIndex = 25
+        hatchyear5txt.Text = "2021"
+        ' 
+        ' Label267
+        ' 
+        Label267.AutoSize = True
+        Label267.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label267.ForeColor = Color.Black
+        Label267.Location = New Point(324, 158)
+        Label267.Name = "Label267"
+        Label267.Size = New Size(49, 19)
+        Label267.TabIndex = 24
+        Label267.Text = "YEAR:"
+        ' 
+        ' hatchrentalrate5txt
+        ' 
+        hatchrentalrate5txt.AutoSize = True
+        hatchrentalrate5txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hatchrentalrate5txt.ForeColor = Color.Black
+        hatchrentalrate5txt.Location = New Point(709, 91)
+        hatchrentalrate5txt.Name = "hatchrentalrate5txt"
+        hatchrentalrate5txt.Size = New Size(149, 22)
+        hatchrentalrate5txt.TabIndex = 23
+        hatchrentalrate5txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label275
+        ' 
+        Label275.AutoSize = True
+        Label275.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label275.ForeColor = Color.Black
+        Label275.Location = New Point(708, 66)
+        Label275.Name = "Label275"
+        Label275.Size = New Size(99, 19)
+        Label275.TabIndex = 22
+        Label275.Text = "Vehicle Rate:"
+        ' 
+        ' hatchcolor5txt
+        ' 
+        hatchcolor5txt.AutoSize = True
+        hatchcolor5txt.Font = New Font("Futura Hv BT", 12F)
+        hatchcolor5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchcolor5txt.Location = New Point(486, 75)
+        hatchcolor5txt.Name = "hatchcolor5txt"
+        hatchcolor5txt.Size = New Size(35, 19)
+        hatchcolor5txt.TabIndex = 21
+        hatchcolor5txt.Text = "red"
+        ' 
+        ' hatchmileage5txt
+        ' 
+        hatchmileage5txt.AutoSize = True
+        hatchmileage5txt.Font = New Font("Futura Hv BT", 12F)
+        hatchmileage5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchmileage5txt.Location = New Point(487, 131)
+        hatchmileage5txt.Name = "hatchmileage5txt"
+        hatchmileage5txt.Size = New Size(88, 19)
+        hatchmileage5txt.TabIndex = 20
+        hatchmileage5txt.Text = "11,456km"
+        ' 
+        ' hatchseatingcapacity5txt
+        ' 
+        hatchseatingcapacity5txt.AutoSize = True
+        hatchseatingcapacity5txt.Font = New Font("Futura Hv BT", 12F)
+        hatchseatingcapacity5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchseatingcapacity5txt.Location = New Point(487, 103)
+        hatchseatingcapacity5txt.Name = "hatchseatingcapacity5txt"
+        hatchseatingcapacity5txt.Size = New Size(19, 19)
+        hatchseatingcapacity5txt.TabIndex = 19
+        hatchseatingcapacity5txt.Text = "5"
+        ' 
+        ' hatchmake5txt
+        ' 
+        hatchmake5txt.AutoSize = True
+        hatchmake5txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        hatchmake5txt.ForeColor = Color.Black
+        hatchmake5txt.Location = New Point(24, 7)
+        hatchmake5txt.Name = "hatchmake5txt"
+        hatchmake5txt.Size = New Size(60, 22)
+        hatchmake5txt.TabIndex = 17
+        hatchmake5txt.Text = "MAKE"
+        ' 
+        ' hatch5btn
+        ' 
+        hatch5btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatch5btn.FlatStyle = FlatStyle.Flat
+        hatch5btn.Font = New Font("Reesha", 16.1999989F)
+        hatch5btn.ForeColor = Color.White
+        hatch5btn.Location = New Point(708, 129)
+        hatch5btn.Margin = New Padding(3, 2, 3, 2)
+        hatch5btn.Name = "hatch5btn"
+        hatch5btn.Size = New Size(233, 43)
+        hatch5btn.TabIndex = 16
+        hatch5btn.Text = "BOOK NOW"
+        hatch5btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label288
+        ' 
+        Label288.AutoSize = True
+        Label288.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label288.ForeColor = Color.Black
+        Label288.Location = New Point(324, 131)
+        Label288.Name = "Label288"
+        Label288.Size = New Size(78, 19)
+        Label288.TabIndex = 5
+        Label288.Text = "MILEAGE:"
+        ' 
+        ' Label289
+        ' 
+        Label289.AutoSize = True
+        Label289.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label289.ForeColor = Color.Black
+        Label289.Location = New Point(324, 103)
+        Label289.Name = "Label289"
+        Label289.Size = New Size(123, 19)
+        Label289.TabIndex = 4
+        Label289.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label290
+        ' 
+        Label290.AutoSize = True
+        Label290.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label290.ForeColor = Color.Black
+        Label290.Location = New Point(324, 75)
+        Label290.Name = "Label290"
+        Label290.Size = New Size(69, 19)
+        Label290.TabIndex = 3
+        Label290.Text = "COLOR:"
+        ' 
+        ' hatch5pic
+        ' 
+        hatch5pic.Image = My.Resources.Resources.RideX
+        hatch5pic.Location = New Point(24, 75)
+        hatch5pic.Margin = New Padding(3, 2, 3, 2)
+        hatch5pic.Name = "hatch5pic"
+        hatch5pic.Size = New Size(265, 106)
+        hatch5pic.SizeMode = PictureBoxSizeMode.StretchImage
+        hatch5pic.TabIndex = 2
+        hatch5pic.TabStop = False
+        ' 
+        ' hatchmodel5txt
+        ' 
+        hatchmodel5txt.AutoSize = True
+        hatchmodel5txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hatchmodel5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchmodel5txt.Location = New Point(19, 22)
+        hatchmodel5txt.Name = "hatchmodel5txt"
+        hatchmodel5txt.Size = New Size(245, 32)
+        hatchmodel5txt.TabIndex = 0
+        hatchmodel5txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label292
+        ' 
+        Label292.AutoSize = True
+        Label292.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label292.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label292.Location = New Point(19, 26)
+        Label292.Name = "Label292"
+        Label292.Size = New Size(882, 32)
+        Label292.TabIndex = 1
+        Label292.Text = "______________________________________________________________"
+        ' 
+        ' panel4hatch
+        ' 
+        panel4hatch.BackColor = Color.White
+        panel4hatch.BorderStyle = BorderStyle.FixedSingle
+        panel4hatch.Controls.Add(hatchyear4txt)
+        panel4hatch.Controls.Add(Label261)
+        panel4hatch.Controls.Add(hatchrentalrate4txt)
+        panel4hatch.Controls.Add(Label269)
+        panel4hatch.Controls.Add(hatchcolor4txt)
+        panel4hatch.Controls.Add(hatchmileage4txt)
+        panel4hatch.Controls.Add(hatchseatingcapacity4txt)
+        panel4hatch.Controls.Add(hatchmake4txt)
+        panel4hatch.Controls.Add(hatch4btn)
+        panel4hatch.Controls.Add(Label282)
+        panel4hatch.Controls.Add(Label283)
+        panel4hatch.Controls.Add(Label284)
+        panel4hatch.Controls.Add(hatch4pic)
+        panel4hatch.Controls.Add(hatchmodel4txt)
+        panel4hatch.Controls.Add(Label286)
+        panel4hatch.ForeColor = Color.Gray
+        panel4hatch.Location = New Point(10, 959)
+        panel4hatch.Margin = New Padding(3, 2, 3, 2)
+        panel4hatch.Name = "panel4hatch"
+        panel4hatch.Size = New Size(976, 215)
+        panel4hatch.TabIndex = 55
+        panel4hatch.Visible = False
+        ' 
+        ' hatchyear4txt
+        ' 
+        hatchyear4txt.AutoSize = True
+        hatchyear4txt.Font = New Font("Futura Hv BT", 12F)
+        hatchyear4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchyear4txt.Location = New Point(487, 158)
+        hatchyear4txt.Name = "hatchyear4txt"
+        hatchyear4txt.Size = New Size(49, 19)
+        hatchyear4txt.TabIndex = 25
+        hatchyear4txt.Text = "2021"
+        ' 
+        ' Label261
+        ' 
+        Label261.AutoSize = True
+        Label261.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label261.ForeColor = Color.Black
+        Label261.Location = New Point(324, 158)
+        Label261.Name = "Label261"
+        Label261.Size = New Size(49, 19)
+        Label261.TabIndex = 24
+        Label261.Text = "YEAR:"
+        ' 
+        ' hatchrentalrate4txt
+        ' 
+        hatchrentalrate4txt.AutoSize = True
+        hatchrentalrate4txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hatchrentalrate4txt.ForeColor = Color.Black
+        hatchrentalrate4txt.Location = New Point(709, 91)
+        hatchrentalrate4txt.Name = "hatchrentalrate4txt"
+        hatchrentalrate4txt.Size = New Size(149, 22)
+        hatchrentalrate4txt.TabIndex = 23
+        hatchrentalrate4txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label269
+        ' 
+        Label269.AutoSize = True
+        Label269.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label269.ForeColor = Color.Black
+        Label269.Location = New Point(708, 66)
+        Label269.Name = "Label269"
+        Label269.Size = New Size(99, 19)
+        Label269.TabIndex = 22
+        Label269.Text = "Vehicle Rate:"
+        ' 
+        ' hatchcolor4txt
+        ' 
+        hatchcolor4txt.AutoSize = True
+        hatchcolor4txt.Font = New Font("Futura Hv BT", 12F)
+        hatchcolor4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchcolor4txt.Location = New Point(486, 75)
+        hatchcolor4txt.Name = "hatchcolor4txt"
+        hatchcolor4txt.Size = New Size(35, 19)
+        hatchcolor4txt.TabIndex = 21
+        hatchcolor4txt.Text = "red"
+        ' 
+        ' hatchmileage4txt
+        ' 
+        hatchmileage4txt.AutoSize = True
+        hatchmileage4txt.Font = New Font("Futura Hv BT", 12F)
+        hatchmileage4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchmileage4txt.Location = New Point(487, 131)
+        hatchmileage4txt.Name = "hatchmileage4txt"
+        hatchmileage4txt.Size = New Size(88, 19)
+        hatchmileage4txt.TabIndex = 20
+        hatchmileage4txt.Text = "11,456km"
+        ' 
+        ' hatchseatingcapacity4txt
+        ' 
+        hatchseatingcapacity4txt.AutoSize = True
+        hatchseatingcapacity4txt.Font = New Font("Futura Hv BT", 12F)
+        hatchseatingcapacity4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchseatingcapacity4txt.Location = New Point(487, 103)
+        hatchseatingcapacity4txt.Name = "hatchseatingcapacity4txt"
+        hatchseatingcapacity4txt.Size = New Size(19, 19)
+        hatchseatingcapacity4txt.TabIndex = 19
+        hatchseatingcapacity4txt.Text = "5"
+        ' 
+        ' hatchmake4txt
+        ' 
+        hatchmake4txt.AutoSize = True
+        hatchmake4txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        hatchmake4txt.ForeColor = Color.Black
+        hatchmake4txt.Location = New Point(24, 7)
+        hatchmake4txt.Name = "hatchmake4txt"
+        hatchmake4txt.Size = New Size(60, 22)
+        hatchmake4txt.TabIndex = 17
+        hatchmake4txt.Text = "MAKE"
+        ' 
+        ' hatch4btn
+        ' 
+        hatch4btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatch4btn.FlatStyle = FlatStyle.Flat
+        hatch4btn.Font = New Font("Reesha", 16.1999989F)
+        hatch4btn.ForeColor = Color.White
+        hatch4btn.Location = New Point(708, 129)
+        hatch4btn.Margin = New Padding(3, 2, 3, 2)
+        hatch4btn.Name = "hatch4btn"
+        hatch4btn.Size = New Size(233, 43)
+        hatch4btn.TabIndex = 16
+        hatch4btn.Text = "BOOK NOW"
+        hatch4btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label282
+        ' 
+        Label282.AutoSize = True
+        Label282.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label282.ForeColor = Color.Black
+        Label282.Location = New Point(324, 131)
+        Label282.Name = "Label282"
+        Label282.Size = New Size(78, 19)
+        Label282.TabIndex = 5
+        Label282.Text = "MILEAGE:"
+        ' 
+        ' Label283
+        ' 
+        Label283.AutoSize = True
+        Label283.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label283.ForeColor = Color.Black
+        Label283.Location = New Point(324, 103)
+        Label283.Name = "Label283"
+        Label283.Size = New Size(123, 19)
+        Label283.TabIndex = 4
+        Label283.Text = "SEAT CAPACITY:"
+        ' 
+        ' Label284
+        ' 
+        Label284.AutoSize = True
+        Label284.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label284.ForeColor = Color.Black
+        Label284.Location = New Point(324, 75)
+        Label284.Name = "Label284"
+        Label284.Size = New Size(69, 19)
+        Label284.TabIndex = 3
+        Label284.Text = "COLOR:"
+        ' 
+        ' hatch4pic
+        ' 
+        hatch4pic.Image = My.Resources.Resources.RideX
+        hatch4pic.Location = New Point(24, 75)
+        hatch4pic.Margin = New Padding(3, 2, 3, 2)
+        hatch4pic.Name = "hatch4pic"
+        hatch4pic.Size = New Size(265, 106)
+        hatch4pic.SizeMode = PictureBoxSizeMode.StretchImage
+        hatch4pic.TabIndex = 2
+        hatch4pic.TabStop = False
+        ' 
+        ' hatchmodel4txt
+        ' 
+        hatchmodel4txt.AutoSize = True
+        hatchmodel4txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        hatchmodel4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        hatchmodel4txt.Location = New Point(19, 22)
+        hatchmodel4txt.Name = "hatchmodel4txt"
+        hatchmodel4txt.Size = New Size(245, 32)
+        hatchmodel4txt.TabIndex = 0
+        hatchmodel4txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label286
+        ' 
+        Label286.AutoSize = True
+        Label286.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label286.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label286.Location = New Point(19, 26)
+        Label286.Name = "Label286"
+        Label286.Size = New Size(882, 32)
+        Label286.TabIndex = 1
+        Label286.Text = "______________________________________________________________"
+        ' 
         ' panel3hatch
         ' 
         panel3hatch.BackColor = Color.White
@@ -8277,402 +8667,12 @@ Partial Class allcars
         Label187.TabIndex = 1
         Label187.Text = "______________________________________________________________"
         ' 
-        ' panel4hatch
-        ' 
-        panel4hatch.BackColor = Color.White
-        panel4hatch.BorderStyle = BorderStyle.FixedSingle
-        panel4hatch.Controls.Add(hatchyear4txt)
-        panel4hatch.Controls.Add(Label261)
-        panel4hatch.Controls.Add(hatchrentalrate4txt)
-        panel4hatch.Controls.Add(Label269)
-        panel4hatch.Controls.Add(hatchcolor4txt)
-        panel4hatch.Controls.Add(hatchmileage4txt)
-        panel4hatch.Controls.Add(hatchseatingcapacity4txt)
-        panel4hatch.Controls.Add(hatchmake4txt)
-        panel4hatch.Controls.Add(hatch4btn)
-        panel4hatch.Controls.Add(Label282)
-        panel4hatch.Controls.Add(Label283)
-        panel4hatch.Controls.Add(Label284)
-        panel4hatch.Controls.Add(hatch4pic)
-        panel4hatch.Controls.Add(hatchmodel4txt)
-        panel4hatch.Controls.Add(Label286)
-        panel4hatch.ForeColor = Color.Gray
-        panel4hatch.Location = New Point(10, 959)
-        panel4hatch.Margin = New Padding(3, 2, 3, 2)
-        panel4hatch.Name = "panel4hatch"
-        panel4hatch.Size = New Size(976, 215)
-        panel4hatch.TabIndex = 55
-        panel4hatch.Visible = False
-        ' 
-        ' hatchyear4txt
-        ' 
-        hatchyear4txt.AutoSize = True
-        hatchyear4txt.Font = New Font("Futura Hv BT", 12F)
-        hatchyear4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        hatchyear4txt.Location = New Point(487, 158)
-        hatchyear4txt.Name = "hatchyear4txt"
-        hatchyear4txt.Size = New Size(49, 19)
-        hatchyear4txt.TabIndex = 25
-        hatchyear4txt.Text = "2021"
-        ' 
-        ' Label261
-        ' 
-        Label261.AutoSize = True
-        Label261.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label261.ForeColor = Color.Black
-        Label261.Location = New Point(324, 158)
-        Label261.Name = "Label261"
-        Label261.Size = New Size(49, 19)
-        Label261.TabIndex = 24
-        Label261.Text = "YEAR:"
-        ' 
-        ' hatchrentalrate4txt
-        ' 
-        hatchrentalrate4txt.AutoSize = True
-        hatchrentalrate4txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        hatchrentalrate4txt.ForeColor = Color.Black
-        hatchrentalrate4txt.Location = New Point(709, 91)
-        hatchrentalrate4txt.Name = "hatchrentalrate4txt"
-        hatchrentalrate4txt.Size = New Size(149, 22)
-        hatchrentalrate4txt.TabIndex = 23
-        hatchrentalrate4txt.Text = "PHP 10,100.00"
-        ' 
-        ' Label269
-        ' 
-        Label269.AutoSize = True
-        Label269.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label269.ForeColor = Color.Black
-        Label269.Location = New Point(708, 66)
-        Label269.Name = "Label269"
-        Label269.Size = New Size(99, 19)
-        Label269.TabIndex = 22
-        Label269.Text = "Vehicle Rate:"
-        ' 
-        ' hatchcolor4txt
-        ' 
-        hatchcolor4txt.AutoSize = True
-        hatchcolor4txt.Font = New Font("Futura Hv BT", 12F)
-        hatchcolor4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        hatchcolor4txt.Location = New Point(486, 75)
-        hatchcolor4txt.Name = "hatchcolor4txt"
-        hatchcolor4txt.Size = New Size(35, 19)
-        hatchcolor4txt.TabIndex = 21
-        hatchcolor4txt.Text = "red"
-        ' 
-        ' hatchmileage4txt
-        ' 
-        hatchmileage4txt.AutoSize = True
-        hatchmileage4txt.Font = New Font("Futura Hv BT", 12F)
-        hatchmileage4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        hatchmileage4txt.Location = New Point(487, 131)
-        hatchmileage4txt.Name = "hatchmileage4txt"
-        hatchmileage4txt.Size = New Size(88, 19)
-        hatchmileage4txt.TabIndex = 20
-        hatchmileage4txt.Text = "11,456km"
-        ' 
-        ' hatchseatingcapacity4txt
-        ' 
-        hatchseatingcapacity4txt.AutoSize = True
-        hatchseatingcapacity4txt.Font = New Font("Futura Hv BT", 12F)
-        hatchseatingcapacity4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        hatchseatingcapacity4txt.Location = New Point(487, 103)
-        hatchseatingcapacity4txt.Name = "hatchseatingcapacity4txt"
-        hatchseatingcapacity4txt.Size = New Size(19, 19)
-        hatchseatingcapacity4txt.TabIndex = 19
-        hatchseatingcapacity4txt.Text = "5"
-        ' 
-        ' hatchmake4txt
-        ' 
-        hatchmake4txt.AutoSize = True
-        hatchmake4txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        hatchmake4txt.ForeColor = Color.Black
-        hatchmake4txt.Location = New Point(24, 7)
-        hatchmake4txt.Name = "hatchmake4txt"
-        hatchmake4txt.Size = New Size(60, 22)
-        hatchmake4txt.TabIndex = 17
-        hatchmake4txt.Text = "MAKE"
-        ' 
-        ' hatch4btn
-        ' 
-        hatch4btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        hatch4btn.FlatStyle = FlatStyle.Flat
-        hatch4btn.Font = New Font("Reesha", 16.1999989F)
-        hatch4btn.ForeColor = Color.White
-        hatch4btn.Location = New Point(708, 129)
-        hatch4btn.Margin = New Padding(3, 2, 3, 2)
-        hatch4btn.Name = "hatch4btn"
-        hatch4btn.Size = New Size(233, 43)
-        hatch4btn.TabIndex = 16
-        hatch4btn.Text = "BOOK NOW"
-        hatch4btn.UseVisualStyleBackColor = False
-        ' 
-        ' Label282
-        ' 
-        Label282.AutoSize = True
-        Label282.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label282.ForeColor = Color.Black
-        Label282.Location = New Point(324, 131)
-        Label282.Name = "Label282"
-        Label282.Size = New Size(78, 19)
-        Label282.TabIndex = 5
-        Label282.Text = "MILEAGE:"
-        ' 
-        ' Label283
-        ' 
-        Label283.AutoSize = True
-        Label283.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label283.ForeColor = Color.Black
-        Label283.Location = New Point(324, 103)
-        Label283.Name = "Label283"
-        Label283.Size = New Size(123, 19)
-        Label283.TabIndex = 4
-        Label283.Text = "SEAT CAPACITY:"
-        ' 
-        ' Label284
-        ' 
-        Label284.AutoSize = True
-        Label284.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label284.ForeColor = Color.Black
-        Label284.Location = New Point(324, 75)
-        Label284.Name = "Label284"
-        Label284.Size = New Size(69, 19)
-        Label284.TabIndex = 3
-        Label284.Text = "COLOR:"
-        ' 
-        ' hatch4pic
-        ' 
-        hatch4pic.Image = My.Resources.Resources.RideX
-        hatch4pic.Location = New Point(24, 75)
-        hatch4pic.Margin = New Padding(3, 2, 3, 2)
-        hatch4pic.Name = "hatch4pic"
-        hatch4pic.Size = New Size(265, 106)
-        hatch4pic.SizeMode = PictureBoxSizeMode.StretchImage
-        hatch4pic.TabIndex = 2
-        hatch4pic.TabStop = False
-        ' 
-        ' hatchmodel4txt
-        ' 
-        hatchmodel4txt.AutoSize = True
-        hatchmodel4txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        hatchmodel4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        hatchmodel4txt.Location = New Point(19, 22)
-        hatchmodel4txt.Name = "hatchmodel4txt"
-        hatchmodel4txt.Size = New Size(245, 32)
-        hatchmodel4txt.TabIndex = 0
-        hatchmodel4txt.Text = "CAR NUMBER 1"
-        ' 
-        ' Label286
-        ' 
-        Label286.AutoSize = True
-        Label286.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label286.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label286.Location = New Point(19, 26)
-        Label286.Name = "Label286"
-        Label286.Size = New Size(882, 32)
-        Label286.TabIndex = 1
-        Label286.Text = "______________________________________________________________"
-        ' 
-        ' panel5hatch
-        ' 
-        panel5hatch.BackColor = Color.White
-        panel5hatch.BorderStyle = BorderStyle.FixedSingle
-        panel5hatch.Controls.Add(hatchyear5txt)
-        panel5hatch.Controls.Add(Label267)
-        panel5hatch.Controls.Add(hatchrentalrate5txt)
-        panel5hatch.Controls.Add(Label275)
-        panel5hatch.Controls.Add(hatchcolor5txt)
-        panel5hatch.Controls.Add(hatchmileage5txt)
-        panel5hatch.Controls.Add(hatchseatingcapacity5txt)
-        panel5hatch.Controls.Add(hatchmake5txt)
-        panel5hatch.Controls.Add(hatch5btn)
-        panel5hatch.Controls.Add(Label288)
-        panel5hatch.Controls.Add(Label289)
-        panel5hatch.Controls.Add(Label290)
-        panel5hatch.Controls.Add(hatch5pic)
-        panel5hatch.Controls.Add(hatchmodel5txt)
-        panel5hatch.Controls.Add(Label292)
-        panel5hatch.ForeColor = Color.Gray
-        panel5hatch.Location = New Point(10, 1197)
-        panel5hatch.Margin = New Padding(3, 2, 3, 2)
-        panel5hatch.Name = "panel5hatch"
-        panel5hatch.Size = New Size(976, 215)
-        panel5hatch.TabIndex = 56
-        panel5hatch.Visible = False
-        ' 
-        ' hatchyear5txt
-        ' 
-        hatchyear5txt.AutoSize = True
-        hatchyear5txt.Font = New Font("Futura Hv BT", 12F)
-        hatchyear5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        hatchyear5txt.Location = New Point(487, 158)
-        hatchyear5txt.Name = "hatchyear5txt"
-        hatchyear5txt.Size = New Size(49, 19)
-        hatchyear5txt.TabIndex = 25
-        hatchyear5txt.Text = "2021"
-        ' 
-        ' Label267
-        ' 
-        Label267.AutoSize = True
-        Label267.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label267.ForeColor = Color.Black
-        Label267.Location = New Point(324, 158)
-        Label267.Name = "Label267"
-        Label267.Size = New Size(49, 19)
-        Label267.TabIndex = 24
-        Label267.Text = "YEAR:"
-        ' 
-        ' hatchrentalrate5txt
-        ' 
-        hatchrentalrate5txt.AutoSize = True
-        hatchrentalrate5txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        hatchrentalrate5txt.ForeColor = Color.Black
-        hatchrentalrate5txt.Location = New Point(709, 91)
-        hatchrentalrate5txt.Name = "hatchrentalrate5txt"
-        hatchrentalrate5txt.Size = New Size(149, 22)
-        hatchrentalrate5txt.TabIndex = 23
-        hatchrentalrate5txt.Text = "PHP 10,100.00"
-        ' 
-        ' Label275
-        ' 
-        Label275.AutoSize = True
-        Label275.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label275.ForeColor = Color.Black
-        Label275.Location = New Point(708, 66)
-        Label275.Name = "Label275"
-        Label275.Size = New Size(99, 19)
-        Label275.TabIndex = 22
-        Label275.Text = "Vehicle Rate:"
-        ' 
-        ' hatchcolor5txt
-        ' 
-        hatchcolor5txt.AutoSize = True
-        hatchcolor5txt.Font = New Font("Futura Hv BT", 12F)
-        hatchcolor5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        hatchcolor5txt.Location = New Point(486, 75)
-        hatchcolor5txt.Name = "hatchcolor5txt"
-        hatchcolor5txt.Size = New Size(35, 19)
-        hatchcolor5txt.TabIndex = 21
-        hatchcolor5txt.Text = "red"
-        ' 
-        ' hatchmileage5txt
-        ' 
-        hatchmileage5txt.AutoSize = True
-        hatchmileage5txt.Font = New Font("Futura Hv BT", 12F)
-        hatchmileage5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        hatchmileage5txt.Location = New Point(487, 131)
-        hatchmileage5txt.Name = "hatchmileage5txt"
-        hatchmileage5txt.Size = New Size(88, 19)
-        hatchmileage5txt.TabIndex = 20
-        hatchmileage5txt.Text = "11,456km"
-        ' 
-        ' hatchseatingcapacity5txt
-        ' 
-        hatchseatingcapacity5txt.AutoSize = True
-        hatchseatingcapacity5txt.Font = New Font("Futura Hv BT", 12F)
-        hatchseatingcapacity5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        hatchseatingcapacity5txt.Location = New Point(487, 103)
-        hatchseatingcapacity5txt.Name = "hatchseatingcapacity5txt"
-        hatchseatingcapacity5txt.Size = New Size(19, 19)
-        hatchseatingcapacity5txt.TabIndex = 19
-        hatchseatingcapacity5txt.Text = "5"
-        ' 
-        ' hatchmake5txt
-        ' 
-        hatchmake5txt.AutoSize = True
-        hatchmake5txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        hatchmake5txt.ForeColor = Color.Black
-        hatchmake5txt.Location = New Point(24, 7)
-        hatchmake5txt.Name = "hatchmake5txt"
-        hatchmake5txt.Size = New Size(60, 22)
-        hatchmake5txt.TabIndex = 17
-        hatchmake5txt.Text = "MAKE"
-        ' 
-        ' hatch5btn
-        ' 
-        hatch5btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        hatch5btn.FlatStyle = FlatStyle.Flat
-        hatch5btn.Font = New Font("Reesha", 16.1999989F)
-        hatch5btn.ForeColor = Color.White
-        hatch5btn.Location = New Point(708, 129)
-        hatch5btn.Margin = New Padding(3, 2, 3, 2)
-        hatch5btn.Name = "hatch5btn"
-        hatch5btn.Size = New Size(233, 43)
-        hatch5btn.TabIndex = 16
-        hatch5btn.Text = "BOOK NOW"
-        hatch5btn.UseVisualStyleBackColor = False
-        ' 
-        ' Label288
-        ' 
-        Label288.AutoSize = True
-        Label288.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label288.ForeColor = Color.Black
-        Label288.Location = New Point(324, 131)
-        Label288.Name = "Label288"
-        Label288.Size = New Size(78, 19)
-        Label288.TabIndex = 5
-        Label288.Text = "MILEAGE:"
-        ' 
-        ' Label289
-        ' 
-        Label289.AutoSize = True
-        Label289.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label289.ForeColor = Color.Black
-        Label289.Location = New Point(324, 103)
-        Label289.Name = "Label289"
-        Label289.Size = New Size(123, 19)
-        Label289.TabIndex = 4
-        Label289.Text = "SEAT CAPACITY:"
-        ' 
-        ' Label290
-        ' 
-        Label290.AutoSize = True
-        Label290.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label290.ForeColor = Color.Black
-        Label290.Location = New Point(324, 75)
-        Label290.Name = "Label290"
-        Label290.Size = New Size(69, 19)
-        Label290.TabIndex = 3
-        Label290.Text = "COLOR:"
-        ' 
-        ' hatch5pic
-        ' 
-        hatch5pic.Image = My.Resources.Resources.RideX
-        hatch5pic.Location = New Point(24, 75)
-        hatch5pic.Margin = New Padding(3, 2, 3, 2)
-        hatch5pic.Name = "hatch5pic"
-        hatch5pic.Size = New Size(265, 106)
-        hatch5pic.SizeMode = PictureBoxSizeMode.StretchImage
-        hatch5pic.TabIndex = 2
-        hatch5pic.TabStop = False
-        ' 
-        ' hatchmodel5txt
-        ' 
-        hatchmodel5txt.AutoSize = True
-        hatchmodel5txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        hatchmodel5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        hatchmodel5txt.Location = New Point(19, 22)
-        hatchmodel5txt.Name = "hatchmodel5txt"
-        hatchmodel5txt.Size = New Size(245, 32)
-        hatchmodel5txt.TabIndex = 0
-        hatchmodel5txt.Text = "CAR NUMBER 1"
-        ' 
-        ' Label292
-        ' 
-        Label292.AutoSize = True
-        Label292.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label292.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label292.Location = New Point(19, 26)
-        Label292.Name = "Label292"
-        Label292.Size = New Size(882, 32)
-        Label292.TabIndex = 1
-        Label292.Text = "______________________________________________________________"
-        ' 
         ' allcars
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
-        ClientSize = New Size(1386, 428)
+        ClientSize = New Size(1074, 428)
         Controls.Add(pnlHybrid)
         Controls.Add(pnlMpv)
         Controls.Add(pnlSuvContent)
@@ -8807,6 +8807,12 @@ Partial Class allcars
         Panel23.PerformLayout()
         CType(car9img, ComponentModel.ISupportInitialize).EndInit()
         pnlHatchback.ResumeLayout(False)
+        panel5hatch.ResumeLayout(False)
+        panel5hatch.PerformLayout()
+        CType(hatch5pic, ComponentModel.ISupportInitialize).EndInit()
+        panel4hatch.ResumeLayout(False)
+        panel4hatch.PerformLayout()
+        CType(hatch4pic, ComponentModel.ISupportInitialize).EndInit()
         panel3hatch.ResumeLayout(False)
         panel3hatch.PerformLayout()
         CType(hatch3pic, ComponentModel.ISupportInitialize).EndInit()
@@ -8819,12 +8825,6 @@ Partial Class allcars
         Panel24.ResumeLayout(False)
         Panel24.PerformLayout()
         CType(car7img, ComponentModel.ISupportInitialize).EndInit()
-        panel4hatch.ResumeLayout(False)
-        panel4hatch.PerformLayout()
-        CType(hatch4pic, ComponentModel.ISupportInitialize).EndInit()
-        panel5hatch.ResumeLayout(False)
-        panel5hatch.PerformLayout()
-        CType(hatch5pic, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub

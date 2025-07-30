@@ -234,6 +234,7 @@ Public Class FORM_ALLMOTORS
 
     Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
         Me.Close()
+        FORMRENTAL_STEP1.Show()
     End Sub
 
     Private Sub motor10btn_Click(sender As Object, e As EventArgs) Handles motor10btn.Click
@@ -337,10 +338,8 @@ Public Class FORM_ALLMOTORS
 
     Private Sub SelectMotor(motorId As Integer, motorName As String, dailyRate As Decimal, vehicleType As String, vehicleId As Integer)
         Try
-
             RentalTransactionModule.SaveForm1MotorData(motorId, motorName, dailyRate, vehicleType, vehicleId)
-            MessageBox.Show("Motor data saved: " & motorName)
-
+            If FORMRENTAL_STEP1.Visible Then FORMRENTAL_STEP1.Hide()
             Dim step2Form As New FORMRENTAL_STEP2()
             step2Form.Show()
             Me.Hide()
@@ -356,16 +355,14 @@ Public Class FORM_ALLMOTORS
         Dim prefix As String = ""
         Dim parentPanel As Panel = Nothing
 
-        ' Match motor categories to main panels
         Select Case categoryId
             Case 1 : prefix = "scooter" : parentPanel = pnlScooter
             Case 2 : prefix = "underbone" : parentPanel = pnlUnderbone
             Case 3 : prefix = "adventure" : parentPanel = pnlAdventure
         End Select
 
-        MessageBox.Show($"Loading motor {make} {model} into {prefix}") ' Visible debug
 
-        ' Look for an available slot
+
         For i As Integer = 1 To 10
             Dim btn = Me.Controls.Find($"{prefix}{i}btn", True).FirstOrDefault()
 
@@ -375,7 +372,6 @@ Public Class FORM_ALLMOTORS
             End If
 
             If btn.Visible = False Then
-                MessageBox.Show($"Found slot {i} for {prefix}")
 
                 ' Set labels
                 SetLabel($"{prefix}make{i}txt", make)
@@ -385,7 +381,6 @@ Public Class FORM_ALLMOTORS
                 SetLabel($"{prefix}mileage{i}txt", mileage & " km")
                 SetLabel($"{prefix}rentalrate{i}txt", rate & " per day")
 
-                ' Load the picture (now using `pic` instead of `img`)
                 Dim pic = CType(Me.Controls.Find($"{prefix}{i}pic", True).FirstOrDefault(), PictureBox)
                 If pic IsNot Nothing Then
                     If IO.File.Exists(imgPath) Then

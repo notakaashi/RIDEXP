@@ -51,6 +51,7 @@ Public Class SIGNUP
 
         If InsertUserData() Then
             MessageBox.Show("Sign up successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.Hide()
             ClearForm()
         Else
             MessageBox.Show("Sign up failed. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

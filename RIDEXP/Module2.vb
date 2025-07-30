@@ -117,7 +117,7 @@ Public Module RentalTransactionModule
                 conn.Close()
             End If
         Catch ex As Exception
-            ' Log error but don't show to user
+
         End Try
     End Sub
 
@@ -173,8 +173,7 @@ Public Module RentalTransactionModule
         Dim rentalDays As Decimal = CDec((returnDateTime - pickupDateTime).TotalHours / 24D)
         If rentalDays < 1D Then rentalDays = 1D
 
-        MessageBox.Show($"Final Rental Days: {rentalDays}")
-        MessageBox.Show($"About to save - Rental Days: {rentalDays}")
+
 
         With TransactionData
             .PickupDate = parsedPickupDate
@@ -252,28 +251,12 @@ Public Module RentalTransactionModule
     Public Function ValidateTransactionData() As Boolean
         With TransactionData
             If .SelectedVehicleId <= 0 Then
-                MessageBox.Show("Please select a vehicle." & vbCrLf &
-                              "Debug Info:" & vbCrLf &
-                              "SelectedVehicleId: " & .SelectedVehicleId & vbCrLf &
-                              "SelectedCarId: " & .SelectedCarId & vbCrLf &
-                              "SelectedMotorId: " & .SelectedMotorId & vbCrLf &
-                              "CarName: " & .SelectedCarName & vbCrLf &
-                              "MotorName: " & .SelectedMotorName)
+
                 Return False
             End If
 
             If .CustomerId <= 0 Then
-                MessageBox.Show("Customer ID is required.")
-                Return False
-            End If
-
-            If .PickupDate = Nothing OrElse .ReturnDate = Nothing Then
-                MessageBox.Show("Please select pickup and return dates.")
-                Return False
-            End If
-
-            If .PickupDate >= .ReturnDate Then
-                MessageBox.Show("Return date must be after pickup date.")
+                MessageBox.Show("Login before proceeding.")
                 Return False
             End If
 
@@ -324,24 +307,6 @@ Public Module RentalTransactionModule
         End With
     End Sub
 
-    ' Debug method to show current transaction data
-    Public Sub ShowTransactionDataDebug()
-        With TransactionData
-            Dim debugInfo As String = "=== Transaction Data Debug ===" & vbCrLf &
-                                    "SelectedVehicleId: " & .SelectedVehicleId & vbCrLf &
-                                    "SelectedCarId: " & .SelectedCarId & vbCrLf &
-                                    "SelectedMotorId: " & .SelectedMotorId & vbCrLf &
-                                    "SelectedCarName: " & .SelectedCarName & vbCrLf &
-                                    "SelectedMotorName: " & .SelectedMotorName & vbCrLf &
-                                    "VehicleType: " & .VehicleType & vbCrLf &
-                                    "DailyRate: " & .DailyRate & vbCrLf &
-                                    "CustomerId: " & .CustomerId & vbCrLf &
-                                    "PickupDate: " & .PickupDate & vbCrLf &
-                                    "ReturnDate: " & .ReturnDate & vbCrLf &
-                                    "TotalAmount: " & .TotalAmount & vbCrLf &
-                                    "RentalStatusId: " & .RentalStatusId
-            MessageBox.Show(debugInfo, "Transaction Data Debug")
-        End With
-    End Sub
+
 
 End Module

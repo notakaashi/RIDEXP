@@ -107,8 +107,7 @@ Public Class FORMRENTAL_STEP4
                 .RentalStatusId = 1
             End With
 
-            ' Validate all transaction data
-            DebugTransactionData() ' Debug call
+
             If Not RentalTransactionModule.ValidateTransactionData() Then
                 Return
             End If
@@ -120,6 +119,10 @@ Public Class FORMRENTAL_STEP4
                 InsertPaymentRecord(rentalId)
                 InsertInitialChecklist(rentalId)
                 UpdateVehicleStatus()
+
+                ' 🔹 Insert the sales report record
+                InsertSalesReportRecord(rentalId)
+
                 GenerateRideExpressInvoice(rentalId)
 
                 If RentalTransactionModule.CommitTransaction() Then
@@ -127,9 +130,8 @@ Public Class FORMRENTAL_STEP4
 
                     RentalTransactionModule.ClearTransactionData()
 
-
                     Dim transacCompleteForm As New TRANSAC_COMPLETE()
-                    transacCompleteForm.RentalId = rentalId 
+                    transacCompleteForm.RentalId = rentalId
                     transacCompleteForm.Show()
                     Me.Close()
                 Else
@@ -244,18 +246,31 @@ Public Class FORMRENTAL_STEP4
             Throw New Exception("Error updating vehicle status: " & ex.Message)
         End Try
     End Sub
+    Private Sub InsertSalesReportRecord(rentalId As Integer)
+        Try
+            Dim query As String = "
+            INSERT INTO sales_report (report_date, earnings, rental_id, penalties, generated_by)
+            VALUES (CURDATE(), @earnings, @rental_id, 0, @generated_by)
+        "
+
+            Using cmd As New MySqlCommand(query, RentalTransactionModule.conn, RentalTransactionModule.transaction)
+                With cmd.Parameters
+                    .AddWithValue("@earnings", RentalTransactionModule.TransactionData.TotalAmount)
+                    .AddWithValue("@rental_id", rentalId)
+                    .AddWithValue("@generated_by", RentalTransactionModule.TransactionData.CustomerId)
+                End With
+                cmd.ExecuteNonQuery()
+            End Using
+
+        Catch ex As Exception
+            Throw New Exception("Error inserting sales report record: " & ex.Message)
+        End Try
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
-        ' Debug button - shows current transaction data
-        RentalTransactionModule.ShowTransactionDataDebug()
+
     End Sub
 
-    ' Additional debug method to check data before validation
-    Private Sub DebugTransactionData()
-        MessageBox.Show("About to validate transaction data..." & vbCrLf &
-                       "SelectedVehicleId: " & RentalTransactionModule.TransactionData.SelectedVehicleId & vbCrLf &
-                       "CustomerId: " & RentalTransactionModule.TransactionData.CustomerId & vbCrLf &
-                       "RentalStatusId: " & RentalTransactionModule.TransactionData.RentalStatusId,
-                       "Pre-Validation Debug")
-    End Sub
+
+
 End Class

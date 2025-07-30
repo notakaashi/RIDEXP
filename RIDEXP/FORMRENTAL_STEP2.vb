@@ -15,6 +15,11 @@ Public Class FORMRENTAL_STEP2
             End If
         End If
 
+        If returndated.Value.Date <= pickupdate.Value.Date Then
+            MessageBox.Show("Return date must be AFTER the pickup date.", "Invalid Dates", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
         If ValidateForm() Then
             Dim vehicleId As Integer = RentalTransactionModule.TransactionData.SelectedVehicleId
 
@@ -32,6 +37,7 @@ Public Class FORMRENTAL_STEP2
             FORMRENTAL_STEP3.Show()
             Close()
         End If
+
     End Sub
 
     Private Sub homelbl_Click(sender As Object, e As EventArgs) Handles homelbl.Click

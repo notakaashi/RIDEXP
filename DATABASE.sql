@@ -434,18 +434,23 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ridexp`.`sales_report` (
   `report_id` INT(11) NOT NULL AUTO_INCREMENT,
-  `report_date` DATE NOT NULL,
+  `report_date` DATE NOT NULL DEFAULT (CURDATE()),
   `earnings` DECIMAL(12,2) NULL DEFAULT NULL,
-  `rentals` INT(11) NULL DEFAULT NULL,
+  `rental_id` INT(11) NOT NULL,
   `penalties` DECIMAL(12,2) NULL DEFAULT NULL,
   `generated_by` INT(11) NOT NULL,
   PRIMARY KEY (`report_id`),
-  INDEX( `generated_by`  ),
+  INDEX (`rental_id`),
+  INDEX (`generated_by`),
   CONSTRAINT `sales_report_ibfk_1`
     FOREIGN KEY (`generated_by`)
-    REFERENCES `ridexp`.`user` (`user_id`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+    REFERENCES `ridexp`.`user` (`user_id`),
+  CONSTRAINT `sales_report_ibfk_2`
+    FOREIGN KEY (`rental_id`)
+    REFERENCES `ridexp`.`rentals` (`rental_id`)
+) ENGINE=InnoDB
+DEFAULT CHARACTER SET=utf8;
+
 
 
 -- -----------------------------------------------------
