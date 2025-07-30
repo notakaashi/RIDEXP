@@ -170,6 +170,12 @@ Partial Class FORM_ADMIN
         Label32 = New Label()
         dgvMaintenance = New DataGridView()
         pnlSaleContent = New Panel()
+        Button11 = New Button()
+        Label36 = New Label()
+        Label35 = New Label()
+        Label33 = New Label()
+        dtpEndDate = New DateTimePicker()
+        dtpStartDate = New DateTimePicker()
         Panel32 = New Panel()
         PictureBox21 = New PictureBox()
         lblSalesEarnings = New Label()
@@ -251,6 +257,7 @@ Partial Class FORM_ADMIN
         Panel35 = New Panel()
         Label20 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
+        btnFilterDate = New Button()
         Panel1.SuspendLayout()
         pnlUsers.SuspendLayout()
         CType(iconUsers, ComponentModel.ISupportInitialize).BeginInit()
@@ -377,9 +384,8 @@ Partial Class FORM_ADMIN
         Panel1.Controls.Add(Label1)
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 0)
-        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(254, 562)
+        Panel1.Size = New Size(290, 749)
         Panel1.TabIndex = 0
         ' 
         ' pnlUsers
@@ -387,19 +393,17 @@ Partial Class FORM_ADMIN
         pnlUsers.Controls.Add(iconUsers)
         pnlUsers.Controls.Add(lblUsers)
         pnlUsers.Cursor = Cursors.Hand
-        pnlUsers.Location = New Point(29, 316)
-        pnlUsers.Margin = New Padding(3, 2, 3, 2)
+        pnlUsers.Location = New Point(33, 421)
         pnlUsers.Name = "pnlUsers"
-        pnlUsers.Size = New Size(228, 32)
+        pnlUsers.Size = New Size(261, 43)
         pnlUsers.TabIndex = 5
         ' 
         ' iconUsers
         ' 
         iconUsers.Image = My.Resources.Resources.arrow_white
-        iconUsers.Location = New Point(195, 8)
-        iconUsers.Margin = New Padding(3, 2, 3, 2)
+        iconUsers.Location = New Point(223, 11)
         iconUsers.Name = "iconUsers"
-        iconUsers.Size = New Size(13, 18)
+        iconUsers.Size = New Size(15, 24)
         iconUsers.SizeMode = PictureBoxSizeMode.StretchImage
         iconUsers.TabIndex = 4
         iconUsers.TabStop = False
@@ -407,11 +411,11 @@ Partial Class FORM_ADMIN
         ' lblUsers
         ' 
         lblUsers.AutoSize = True
-        lblUsers.Font = New Font("Reesha", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblUsers.Font = New Font("Reesha", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblUsers.ForeColor = Color.White
-        lblUsers.Location = New Point(6, 8)
+        lblUsers.Location = New Point(7, 11)
         lblUsers.Name = "lblUsers"
-        lblUsers.Size = New Size(74, 19)
+        lblUsers.Size = New Size(90, 24)
         lblUsers.TabIndex = 3
         lblUsers.Text = "USERS"
         ' 
@@ -420,19 +424,17 @@ Partial Class FORM_ADMIN
         pnlSales.Controls.Add(iconSales)
         pnlSales.Controls.Add(lblSales)
         pnlSales.Cursor = Cursors.Hand
-        pnlSales.Location = New Point(29, 280)
-        pnlSales.Margin = New Padding(3, 2, 3, 2)
+        pnlSales.Location = New Point(33, 373)
         pnlSales.Name = "pnlSales"
-        pnlSales.Size = New Size(228, 32)
+        pnlSales.Size = New Size(261, 43)
         pnlSales.TabIndex = 5
         ' 
         ' iconSales
         ' 
         iconSales.Image = My.Resources.Resources.arrow_white
-        iconSales.Location = New Point(195, 8)
-        iconSales.Margin = New Padding(3, 2, 3, 2)
+        iconSales.Location = New Point(223, 11)
         iconSales.Name = "iconSales"
-        iconSales.Size = New Size(13, 18)
+        iconSales.Size = New Size(15, 24)
         iconSales.SizeMode = PictureBoxSizeMode.StretchImage
         iconSales.TabIndex = 4
         iconSales.TabStop = False
@@ -440,11 +442,11 @@ Partial Class FORM_ADMIN
         ' lblSales
         ' 
         lblSales.AutoSize = True
-        lblSales.Font = New Font("Reesha", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblSales.Font = New Font("Reesha", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblSales.ForeColor = Color.White
-        lblSales.Location = New Point(6, 8)
+        lblSales.Location = New Point(7, 11)
         lblSales.Name = "lblSales"
-        lblSales.Size = New Size(74, 19)
+        lblSales.Size = New Size(90, 24)
         lblSales.TabIndex = 3
         lblSales.Text = "SALES"
         ' 
@@ -453,19 +455,17 @@ Partial Class FORM_ADMIN
         pnlMaintenance.Controls.Add(iconMaintenance)
         pnlMaintenance.Controls.Add(lblMaintenance)
         pnlMaintenance.Cursor = Cursors.Hand
-        pnlMaintenance.Location = New Point(29, 243)
-        pnlMaintenance.Margin = New Padding(3, 2, 3, 2)
+        pnlMaintenance.Location = New Point(33, 324)
         pnlMaintenance.Name = "pnlMaintenance"
-        pnlMaintenance.Size = New Size(228, 32)
+        pnlMaintenance.Size = New Size(261, 43)
         pnlMaintenance.TabIndex = 5
         ' 
         ' iconMaintenance
         ' 
         iconMaintenance.Image = My.Resources.Resources.arrow_white
-        iconMaintenance.Location = New Point(195, 8)
-        iconMaintenance.Margin = New Padding(3, 2, 3, 2)
+        iconMaintenance.Location = New Point(223, 11)
         iconMaintenance.Name = "iconMaintenance"
-        iconMaintenance.Size = New Size(13, 18)
+        iconMaintenance.Size = New Size(15, 24)
         iconMaintenance.SizeMode = PictureBoxSizeMode.StretchImage
         iconMaintenance.TabIndex = 4
         iconMaintenance.TabStop = False
@@ -473,11 +473,11 @@ Partial Class FORM_ADMIN
         ' lblMaintenance
         ' 
         lblMaintenance.AutoSize = True
-        lblMaintenance.Font = New Font("Reesha", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblMaintenance.Font = New Font("Reesha", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblMaintenance.ForeColor = Color.White
-        lblMaintenance.Location = New Point(6, 8)
+        lblMaintenance.Location = New Point(7, 11)
         lblMaintenance.Name = "lblMaintenance"
-        lblMaintenance.Size = New Size(145, 19)
+        lblMaintenance.Size = New Size(178, 24)
         lblMaintenance.TabIndex = 3
         lblMaintenance.Text = "MAINTENANCE"
         ' 
@@ -486,19 +486,17 @@ Partial Class FORM_ADMIN
         pnlRentals.Controls.Add(iconRentals)
         pnlRentals.Controls.Add(lblRentals)
         pnlRentals.Cursor = Cursors.Hand
-        pnlRentals.Location = New Point(29, 206)
-        pnlRentals.Margin = New Padding(3, 2, 3, 2)
+        pnlRentals.Location = New Point(33, 275)
         pnlRentals.Name = "pnlRentals"
-        pnlRentals.Size = New Size(228, 32)
+        pnlRentals.Size = New Size(261, 43)
         pnlRentals.TabIndex = 5
         ' 
         ' iconRentals
         ' 
         iconRentals.Image = My.Resources.Resources.arrow_white
-        iconRentals.Location = New Point(195, 8)
-        iconRentals.Margin = New Padding(3, 2, 3, 2)
+        iconRentals.Location = New Point(223, 11)
         iconRentals.Name = "iconRentals"
-        iconRentals.Size = New Size(13, 18)
+        iconRentals.Size = New Size(15, 24)
         iconRentals.SizeMode = PictureBoxSizeMode.StretchImage
         iconRentals.TabIndex = 4
         iconRentals.TabStop = False
@@ -506,11 +504,11 @@ Partial Class FORM_ADMIN
         ' lblRentals
         ' 
         lblRentals.AutoSize = True
-        lblRentals.Font = New Font("Reesha", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblRentals.Font = New Font("Reesha", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblRentals.ForeColor = Color.White
-        lblRentals.Location = New Point(6, 8)
+        lblRentals.Location = New Point(7, 11)
         lblRentals.Name = "lblRentals"
-        lblRentals.Size = New Size(100, 19)
+        lblRentals.Size = New Size(122, 24)
         lblRentals.TabIndex = 3
         lblRentals.Text = "RENTALS"
         ' 
@@ -519,19 +517,17 @@ Partial Class FORM_ADMIN
         pnlInventory.Controls.Add(iconInventory)
         pnlInventory.Controls.Add(lblInventory)
         pnlInventory.Cursor = Cursors.Hand
-        pnlInventory.Location = New Point(29, 170)
-        pnlInventory.Margin = New Padding(3, 2, 3, 2)
+        pnlInventory.Location = New Point(33, 227)
         pnlInventory.Name = "pnlInventory"
-        pnlInventory.Size = New Size(228, 32)
+        pnlInventory.Size = New Size(261, 43)
         pnlInventory.TabIndex = 5
         ' 
         ' iconInventory
         ' 
         iconInventory.Image = My.Resources.Resources.arrow_white
-        iconInventory.Location = New Point(195, 8)
-        iconInventory.Margin = New Padding(3, 2, 3, 2)
+        iconInventory.Location = New Point(223, 11)
         iconInventory.Name = "iconInventory"
-        iconInventory.Size = New Size(13, 18)
+        iconInventory.Size = New Size(15, 24)
         iconInventory.SizeMode = PictureBoxSizeMode.StretchImage
         iconInventory.TabIndex = 4
         iconInventory.TabStop = False
@@ -539,11 +535,11 @@ Partial Class FORM_ADMIN
         ' lblInventory
         ' 
         lblInventory.AutoSize = True
-        lblInventory.Font = New Font("Reesha", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblInventory.Font = New Font("Reesha", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblInventory.ForeColor = Color.White
-        lblInventory.Location = New Point(6, 8)
+        lblInventory.Location = New Point(7, 11)
         lblInventory.Name = "lblInventory"
-        lblInventory.Size = New Size(116, 19)
+        lblInventory.Size = New Size(142, 24)
         lblInventory.TabIndex = 3
         lblInventory.Text = "INVENTORY"
         ' 
@@ -552,19 +548,17 @@ Partial Class FORM_ADMIN
         pnlDashboard.Controls.Add(iconDashboard)
         pnlDashboard.Controls.Add(lblDashboard)
         pnlDashboard.Cursor = Cursors.Hand
-        pnlDashboard.Location = New Point(29, 133)
-        pnlDashboard.Margin = New Padding(3, 2, 3, 2)
+        pnlDashboard.Location = New Point(33, 177)
         pnlDashboard.Name = "pnlDashboard"
-        pnlDashboard.Size = New Size(228, 32)
+        pnlDashboard.Size = New Size(261, 43)
         pnlDashboard.TabIndex = 2
         ' 
         ' iconDashboard
         ' 
         iconDashboard.Image = My.Resources.Resources.arrow_white
-        iconDashboard.Location = New Point(195, 8)
-        iconDashboard.Margin = New Padding(3, 2, 3, 2)
+        iconDashboard.Location = New Point(223, 11)
         iconDashboard.Name = "iconDashboard"
-        iconDashboard.Size = New Size(13, 18)
+        iconDashboard.Size = New Size(15, 24)
         iconDashboard.SizeMode = PictureBoxSizeMode.StretchImage
         iconDashboard.TabIndex = 4
         iconDashboard.TabStop = False
@@ -572,33 +566,33 @@ Partial Class FORM_ADMIN
         ' lblDashboard
         ' 
         lblDashboard.AutoSize = True
-        lblDashboard.Font = New Font("Reesha", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDashboard.Font = New Font("Reesha", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblDashboard.ForeColor = Color.White
-        lblDashboard.Location = New Point(6, 8)
+        lblDashboard.Location = New Point(7, 11)
         lblDashboard.Name = "lblDashboard"
-        lblDashboard.Size = New Size(126, 19)
+        lblDashboard.Size = New Size(154, 24)
         lblDashboard.TabIndex = 3
         lblDashboard.Text = "DASHBOARD"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.White
-        Label2.Location = New Point(60, 52)
+        Label2.Location = New Point(69, 69)
         Label2.Name = "Label2"
-        Label2.Size = New Size(104, 19)
+        Label2.Size = New Size(130, 24)
         Label2.TabIndex = 1
         Label2.Text = "ADMIN PAGE"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Reesha", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Reesha", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(21, 17)
+        Label1.Location = New Point(24, 23)
         Label1.Name = "Label1"
-        Label1.Size = New Size(189, 29)
+        Label1.Size = New Size(237, 36)
         Label1.TabIndex = 0
         Label1.Text = "RIDEXPRESS"
         ' 
@@ -608,21 +602,19 @@ Partial Class FORM_ADMIN
         Panel8.Controls.Add(Button6)
         Panel8.Controls.Add(Label9)
         Panel8.Dock = DockStyle.Top
-        Panel8.Location = New Point(254, 0)
-        Panel8.Margin = New Padding(3, 2, 3, 2)
+        Panel8.Location = New Point(290, 0)
         Panel8.Name = "Panel8"
-        Panel8.Size = New Size(945, 56)
+        Panel8.Size = New Size(1080, 75)
         Panel8.TabIndex = 1
         ' 
         ' Button6
         ' 
         Button6.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button6.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button6.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button6.ForeColor = Color.White
-        Button6.Location = New Point(732, 14)
-        Button6.Margin = New Padding(3, 2, 3, 2)
+        Button6.Location = New Point(837, 19)
         Button6.Name = "Button6"
-        Button6.Size = New Size(95, 27)
+        Button6.Size = New Size(109, 36)
         Button6.TabIndex = 7
         Button6.Text = "LOGOUT"
         Button6.UseVisualStyleBackColor = False
@@ -630,11 +622,11 @@ Partial Class FORM_ADMIN
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Reesha", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Reesha", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label9.Location = New Point(32, 14)
+        Label9.Location = New Point(37, 19)
         Label9.Name = "Label9"
-        Label9.Size = New Size(184, 29)
+        Label9.Size = New Size(231, 36)
         Label9.TabIndex = 6
         Label9.Text = "DASHBOARD"
         ' 
@@ -644,10 +636,9 @@ Partial Class FORM_ADMIN
         Panel9.Controls.Add(lblDashUsers)
         Panel9.Controls.Add(PictureBox7)
         Panel9.Controls.Add(Label10)
-        Panel9.Location = New Point(12, 10)
-        Panel9.Margin = New Padding(3, 2, 3, 2)
+        Panel9.Location = New Point(14, 13)
         Panel9.Name = "Panel9"
-        Panel9.Size = New Size(186, 90)
+        Panel9.Size = New Size(213, 120)
         Panel9.TabIndex = 2
         ' 
         ' lblDashUsers
@@ -655,19 +646,18 @@ Partial Class FORM_ADMIN
         lblDashUsers.AutoSize = True
         lblDashUsers.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblDashUsers.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblDashUsers.Location = New Point(24, 20)
+        lblDashUsers.Location = New Point(27, 27)
         lblDashUsers.Name = "lblDashUsers"
-        lblDashUsers.Size = New Size(55, 39)
+        lblDashUsers.Size = New Size(70, 52)
         lblDashUsers.TabIndex = 7
         lblDashUsers.Text = "69"
         ' 
         ' PictureBox7
         ' 
         PictureBox7.Image = My.Resources.Resources.users_logo
-        PictureBox7.Location = New Point(114, 27)
-        PictureBox7.Margin = New Padding(3, 2, 3, 2)
+        PictureBox7.Location = New Point(130, 36)
         PictureBox7.Name = "PictureBox7"
-        PictureBox7.Size = New Size(47, 26)
+        PictureBox7.Size = New Size(54, 35)
         PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox7.TabIndex = 7
         PictureBox7.TabStop = False
@@ -675,11 +665,11 @@ Partial Class FORM_ADMIN
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.Gray
-        Label10.Location = New Point(34, 62)
+        Label10.Location = New Point(39, 83)
         Label10.Name = "Label10"
-        Label10.Size = New Size(42, 15)
+        Label10.Size = New Size(53, 18)
         Label10.TabIndex = 6
         Label10.Text = "USERS"
         ' 
@@ -689,10 +679,9 @@ Partial Class FORM_ADMIN
         Panel10.Controls.Add(lblDashRentals)
         Panel10.Controls.Add(PictureBox8)
         Panel10.Controls.Add(Label13)
-        Panel10.Location = New Point(213, 10)
-        Panel10.Margin = New Padding(3, 2, 3, 2)
+        Panel10.Location = New Point(243, 13)
         Panel10.Name = "Panel10"
-        Panel10.Size = New Size(195, 90)
+        Panel10.Size = New Size(223, 120)
         Panel10.TabIndex = 8
         ' 
         ' lblDashRentals
@@ -700,19 +689,18 @@ Partial Class FORM_ADMIN
         lblDashRentals.AutoSize = True
         lblDashRentals.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblDashRentals.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblDashRentals.Location = New Point(25, 22)
+        lblDashRentals.Location = New Point(29, 29)
         lblDashRentals.Name = "lblDashRentals"
-        lblDashRentals.Size = New Size(55, 39)
+        lblDashRentals.Size = New Size(70, 52)
         lblDashRentals.TabIndex = 7
         lblDashRentals.Text = "69"
         ' 
         ' PictureBox8
         ' 
         PictureBox8.Image = My.Resources.Resources.car_icon
-        PictureBox8.Location = New Point(111, 27)
-        PictureBox8.Margin = New Padding(3, 2, 3, 2)
+        PictureBox8.Location = New Point(127, 36)
         PictureBox8.Name = "PictureBox8"
-        PictureBox8.Size = New Size(41, 26)
+        PictureBox8.Size = New Size(47, 35)
         PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox8.TabIndex = 7
         PictureBox8.TabStop = False
@@ -720,11 +708,11 @@ Partial Class FORM_ADMIN
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.Gray
-        Label13.Location = New Point(34, 62)
+        Label13.Location = New Point(39, 83)
         Label13.Name = "Label13"
-        Label13.Size = New Size(58, 15)
+        Label13.Size = New Size(72, 18)
         Label13.TabIndex = 6
         Label13.Text = "RENTALS"
         ' 
@@ -734,10 +722,9 @@ Partial Class FORM_ADMIN
         Panel11.Controls.Add(lblDashIncome)
         Panel11.Controls.Add(PictureBox9)
         Panel11.Controls.Add(Label15)
-        Panel11.Location = New Point(628, 10)
-        Panel11.Margin = New Padding(3, 2, 3, 2)
+        Panel11.Location = New Point(718, 13)
         Panel11.Name = "Panel11"
-        Panel11.Size = New Size(186, 90)
+        Panel11.Size = New Size(213, 120)
         Panel11.TabIndex = 8
         ' 
         ' lblDashIncome
@@ -745,19 +732,18 @@ Partial Class FORM_ADMIN
         lblDashIncome.AutoSize = True
         lblDashIncome.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblDashIncome.ForeColor = Color.White
-        lblDashIncome.Location = New Point(52, 32)
+        lblDashIncome.Location = New Point(59, 43)
         lblDashIncome.Name = "lblDashIncome"
-        lblDashIncome.Size = New Size(36, 26)
+        lblDashIncome.Size = New Size(46, 32)
         lblDashIncome.TabIndex = 7
         lblDashIncome.Text = "69"
         ' 
         ' PictureBox9
         ' 
         PictureBox9.Image = My.Resources.Resources.income_iconwhite
-        PictureBox9.Location = New Point(20, 32)
-        PictureBox9.Margin = New Padding(3, 2, 3, 2)
+        PictureBox9.Location = New Point(23, 43)
         PictureBox9.Name = "PictureBox9"
-        PictureBox9.Size = New Size(27, 26)
+        PictureBox9.Size = New Size(31, 35)
         PictureBox9.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox9.TabIndex = 7
         PictureBox9.TabStop = False
@@ -765,11 +751,11 @@ Partial Class FORM_ADMIN
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label15.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label15.ForeColor = Color.White
-        Label15.Location = New Point(52, 63)
+        Label15.Location = New Point(59, 84)
         Label15.Name = "Label15"
-        Label15.Size = New Size(57, 15)
+        Label15.Size = New Size(72, 18)
         Label15.TabIndex = 6
         Label15.Text = "INCOME"
         ' 
@@ -779,10 +765,9 @@ Partial Class FORM_ADMIN
         Panel12.Controls.Add(lblDashAvailableCars)
         Panel12.Controls.Add(PictureBox10)
         Panel12.Controls.Add(Label17)
-        Panel12.Location = New Point(422, 10)
-        Panel12.Margin = New Padding(3, 2, 3, 2)
+        Panel12.Location = New Point(482, 13)
         Panel12.Name = "Panel12"
-        Panel12.Size = New Size(195, 90)
+        Panel12.Size = New Size(223, 120)
         Panel12.TabIndex = 9
         ' 
         ' lblDashAvailableCars
@@ -790,19 +775,18 @@ Partial Class FORM_ADMIN
         lblDashAvailableCars.AutoSize = True
         lblDashAvailableCars.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblDashAvailableCars.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblDashAvailableCars.Location = New Point(25, 22)
+        lblDashAvailableCars.Location = New Point(29, 29)
         lblDashAvailableCars.Name = "lblDashAvailableCars"
-        lblDashAvailableCars.Size = New Size(55, 39)
+        lblDashAvailableCars.Size = New Size(70, 52)
         lblDashAvailableCars.TabIndex = 7
         lblDashAvailableCars.Text = "69"
         ' 
         ' PictureBox10
         ' 
         PictureBox10.Image = My.Resources.Resources.car_icon
-        PictureBox10.Location = New Point(123, 27)
-        PictureBox10.Margin = New Padding(3, 2, 3, 2)
+        PictureBox10.Location = New Point(141, 36)
         PictureBox10.Name = "PictureBox10"
-        PictureBox10.Size = New Size(41, 26)
+        PictureBox10.Size = New Size(47, 35)
         PictureBox10.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox10.TabIndex = 7
         PictureBox10.TabStop = False
@@ -810,11 +794,11 @@ Partial Class FORM_ADMIN
         ' Label17
         ' 
         Label17.AutoSize = True
-        Label17.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label17.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label17.ForeColor = Color.Gray
-        Label17.Location = New Point(34, 62)
+        Label17.Location = New Point(39, 83)
         Label17.Name = "Label17"
-        Label17.Size = New Size(72, 15)
+        Label17.Size = New Size(88, 18)
         Label17.TabIndex = 6
         Label17.Text = "AVAILABLE"
         ' 
@@ -822,10 +806,9 @@ Partial Class FORM_ADMIN
         ' 
         Panel13.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Panel13.Controls.Add(Label18)
-        Panel13.Location = New Point(12, 141)
-        Panel13.Margin = New Padding(3, 2, 3, 2)
+        Panel13.Location = New Point(14, 188)
         Panel13.Name = "Panel13"
-        Panel13.Size = New Size(519, 33)
+        Panel13.Size = New Size(593, 44)
         Panel13.TabIndex = 11
         ' 
         ' Label18
@@ -833,9 +816,9 @@ Partial Class FORM_ADMIN
         Label18.AutoSize = True
         Label18.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label18.ForeColor = Color.White
-        Label18.Location = New Point(10, 6)
+        Label18.Location = New Point(11, 8)
         Label18.Name = "Label18"
-        Label18.Size = New Size(115, 23)
+        Label18.Size = New Size(138, 28)
         Label18.TabIndex = 7
         Label18.Text = "RENTALS"
         ' 
@@ -843,10 +826,9 @@ Partial Class FORM_ADMIN
         ' 
         Panel14.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Panel14.Controls.Add(Label19)
-        Panel14.Location = New Point(584, 141)
-        Panel14.Margin = New Padding(3, 2, 3, 2)
+        Panel14.Location = New Point(667, 188)
         Panel14.Name = "Panel14"
-        Panel14.Size = New Size(229, 33)
+        Panel14.Size = New Size(262, 44)
         Panel14.TabIndex = 12
         ' 
         ' Label19
@@ -854,9 +836,9 @@ Partial Class FORM_ADMIN
         Label19.AutoSize = True
         Label19.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label19.ForeColor = Color.White
-        Label19.Location = New Point(12, 6)
+        Label19.Location = New Point(14, 8)
         Label19.Name = "Label19"
-        Label19.Size = New Size(140, 23)
+        Label19.Size = New Size(168, 28)
         Label19.TabIndex = 8
         Label19.Text = "NEW USERS"
         ' 
@@ -870,21 +852,19 @@ Partial Class FORM_ADMIN
         pnlAllDashboard.Controls.Add(Panel11)
         pnlAllDashboard.Controls.Add(Panel10)
         pnlAllDashboard.Controls.Add(Panel9)
-        pnlAllDashboard.Location = New Point(1138, 60)
-        pnlAllDashboard.Margin = New Padding(3, 2, 3, 2)
+        pnlAllDashboard.Location = New Point(1301, 80)
         pnlAllDashboard.Name = "pnlAllDashboard"
-        pnlAllDashboard.Size = New Size(830, 423)
+        pnlAllDashboard.Size = New Size(949, 564)
         pnlAllDashboard.TabIndex = 13
         ' 
         ' dgvNewUsers
         ' 
         dgvNewUsers.BackgroundColor = Color.White
         dgvNewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvNewUsers.Location = New Point(584, 172)
-        dgvNewUsers.Margin = New Padding(3, 2, 3, 2)
+        dgvNewUsers.Location = New Point(667, 229)
         dgvNewUsers.Name = "dgvNewUsers"
         dgvNewUsers.RowHeadersWidth = 51
-        dgvNewUsers.Size = New Size(229, 227)
+        dgvNewUsers.Size = New Size(262, 303)
         dgvNewUsers.TabIndex = 14
         ' 
         ' dgvRentals
@@ -894,7 +874,7 @@ Partial Class FORM_ADMIN
         dgvRentals.CellBorderStyle = DataGridViewCellBorderStyle.Raised
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
@@ -903,17 +883,16 @@ Partial Class FORM_ADMIN
         dgvRentals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.White
-        DataGridViewCellStyle2.Font = New Font("Futura Lt BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.Font = New Font("Futura Lt BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
         dgvRentals.DefaultCellStyle = DataGridViewCellStyle2
-        dgvRentals.Location = New Point(12, 172)
-        dgvRentals.Margin = New Padding(3, 2, 3, 2)
+        dgvRentals.Location = New Point(14, 229)
         dgvRentals.Name = "dgvRentals"
         dgvRentals.RowHeadersWidth = 51
-        dgvRentals.Size = New Size(519, 227)
+        dgvRentals.Size = New Size(593, 303)
         dgvRentals.TabIndex = 13
         ' 
         ' pnlcarinventory
@@ -929,10 +908,9 @@ Partial Class FORM_ADMIN
         pnlcarinventory.Controls.Add(txtbxInventory)
         pnlcarinventory.Controls.Add(dgvVehicles)
         pnlcarinventory.Controls.Add(Panel4)
-        pnlcarinventory.Location = New Point(264, 70)
-        pnlcarinventory.Margin = New Padding(3, 2, 3, 2)
+        pnlcarinventory.Location = New Point(1300, 93)
         pnlcarinventory.Name = "pnlcarinventory"
-        pnlcarinventory.Size = New Size(801, 423)
+        pnlcarinventory.Size = New Size(915, 564)
         pnlcarinventory.TabIndex = 14
         ' 
         ' pnlAddCars
@@ -956,10 +934,9 @@ Partial Class FORM_ADMIN
         pnlAddCars.Controls.Add(Panel60)
         pnlAddCars.Controls.Add(Label27)
         pnlAddCars.Controls.Add(Panel62)
-        pnlAddCars.Location = New Point(94, 98)
-        pnlAddCars.Margin = New Padding(3, 2, 3, 2)
+        pnlAddCars.Location = New Point(107, 131)
         pnlAddCars.Name = "pnlAddCars"
-        pnlAddCars.Size = New Size(586, 325)
+        pnlAddCars.Size = New Size(669, 433)
         pnlAddCars.TabIndex = 20
         ' 
         ' btnUploadImage
@@ -969,10 +946,9 @@ Partial Class FORM_ADMIN
         btnUploadImage.Enabled = False
         btnUploadImage.Font = New Font("Futura Hv BT", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnUploadImage.ForeColor = Color.White
-        btnUploadImage.Location = New Point(46, 411)
-        btnUploadImage.Margin = New Padding(3, 2, 3, 2)
+        btnUploadImage.Location = New Point(53, 548)
         btnUploadImage.Name = "btnUploadImage"
-        btnUploadImage.Size = New Size(185, 26)
+        btnUploadImage.Size = New Size(211, 35)
         btnUploadImage.TabIndex = 18
         btnUploadImage.Text = "UPLOAD IMAGE"
         btnUploadImage.UseVisualStyleBackColor = False
@@ -981,30 +957,27 @@ Partial Class FORM_ADMIN
         ' 
         Panel52.BorderStyle = BorderStyle.FixedSingle
         Panel52.Controls.Add(txtRentalRate)
-        Panel52.Location = New Point(46, 327)
-        Panel52.Margin = New Padding(3, 2, 3, 2)
+        Panel52.Location = New Point(53, 436)
         Panel52.Name = "Panel52"
-        Panel52.Size = New Size(239, 35)
+        Panel52.Size = New Size(273, 46)
         Panel52.TabIndex = 10
         ' 
         ' txtRentalRate
         ' 
         txtRentalRate.BorderStyle = BorderStyle.None
         txtRentalRate.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtRentalRate.Location = New Point(18, 9)
-        txtRentalRate.Margin = New Padding(3, 2, 3, 2)
+        txtRentalRate.Location = New Point(21, 12)
         txtRentalRate.Name = "txtRentalRate"
-        txtRentalRate.Size = New Size(200, 17)
+        txtRentalRate.Size = New Size(229, 21)
         txtRentalRate.TabIndex = 2
         ' 
         ' Panel57
         ' 
         Panel57.BorderStyle = BorderStyle.FixedSingle
         Panel57.Controls.Add(cbStatus)
-        Panel57.Location = New Point(303, 327)
-        Panel57.Margin = New Padding(3, 2, 3, 2)
+        Panel57.Location = New Point(346, 436)
         Panel57.Name = "Panel57"
-        Panel57.Size = New Size(149, 35)
+        Panel57.Size = New Size(170, 46)
         Panel57.TabIndex = 17
         ' 
         ' cbStatus
@@ -1013,30 +986,27 @@ Partial Class FORM_ADMIN
         cbStatus.Font = New Font("Futura Bk BT", 10.2F)
         cbStatus.FormattingEnabled = True
         cbStatus.Items.AddRange(New Object() {"AVAILABLE", "RENTED", "UNDER MAINTENANCE", "OUT OF SERVICE", "CLEANING ", "DAMAGED"})
-        cbStatus.Location = New Point(12, 7)
-        cbStatus.Margin = New Padding(3, 2, 3, 2)
+        cbStatus.Location = New Point(14, 9)
         cbStatus.Name = "cbStatus"
-        cbStatus.Size = New Size(133, 24)
+        cbStatus.Size = New Size(151, 28)
         cbStatus.TabIndex = 3
         ' 
         ' Panel51
         ' 
         Panel51.BorderStyle = BorderStyle.FixedSingle
         Panel51.Controls.Add(txtAddYear)
-        Panel51.Location = New Point(303, 279)
-        Panel51.Margin = New Padding(3, 2, 3, 2)
+        Panel51.Location = New Point(346, 372)
         Panel51.Name = "Panel51"
-        Panel51.Size = New Size(239, 35)
+        Panel51.Size = New Size(273, 46)
         Panel51.TabIndex = 10
         ' 
         ' txtAddYear
         ' 
         txtAddYear.BorderStyle = BorderStyle.None
         txtAddYear.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtAddYear.Location = New Point(18, 9)
-        txtAddYear.Margin = New Padding(3, 2, 3, 2)
+        txtAddYear.Location = New Point(21, 12)
         txtAddYear.Name = "txtAddYear"
-        txtAddYear.Size = New Size(200, 17)
+        txtAddYear.Size = New Size(229, 21)
         txtAddYear.TabIndex = 2
         ' 
         ' Button5
@@ -1045,10 +1015,9 @@ Partial Class FORM_ADMIN
         Button5.Cursor = Cursors.Hand
         Button5.Font = New Font("Futura Hv BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button5.ForeColor = Color.White
-        Button5.Location = New Point(46, 366)
-        Button5.Margin = New Padding(3, 2, 3, 2)
+        Button5.Location = New Point(53, 488)
         Button5.Name = "Button5"
-        Button5.Size = New Size(185, 43)
+        Button5.Size = New Size(211, 57)
         Button5.TabIndex = 12
         Button5.Text = "ADD VEHICLE"
         Button5.TextImageRelation = TextImageRelation.TextAboveImage
@@ -1058,30 +1027,27 @@ Partial Class FORM_ADMIN
         ' 
         Panel49.BorderStyle = BorderStyle.FixedSingle
         Panel49.Controls.Add(txtAddSeatCapacity)
-        Panel49.Location = New Point(46, 279)
-        Panel49.Margin = New Padding(3, 2, 3, 2)
+        Panel49.Location = New Point(53, 372)
         Panel49.Name = "Panel49"
-        Panel49.Size = New Size(239, 35)
+        Panel49.Size = New Size(273, 46)
         Panel49.TabIndex = 9
         ' 
         ' txtAddSeatCapacity
         ' 
         txtAddSeatCapacity.BorderStyle = BorderStyle.None
         txtAddSeatCapacity.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtAddSeatCapacity.Location = New Point(18, 9)
-        txtAddSeatCapacity.Margin = New Padding(3, 2, 3, 2)
+        txtAddSeatCapacity.Location = New Point(21, 12)
         txtAddSeatCapacity.Name = "txtAddSeatCapacity"
-        txtAddSeatCapacity.Size = New Size(200, 17)
+        txtAddSeatCapacity.Size = New Size(229, 21)
         txtAddSeatCapacity.TabIndex = 2
         ' 
         ' Panel61
         ' 
         Panel61.BorderStyle = BorderStyle.FixedSingle
         Panel61.Controls.Add(cbCategory)
-        Panel61.Location = New Point(46, 92)
-        Panel61.Margin = New Padding(3, 2, 3, 2)
+        Panel61.Location = New Point(53, 123)
         Panel61.Name = "Panel61"
-        Panel61.Size = New Size(149, 35)
+        Panel61.Size = New Size(170, 46)
         Panel61.TabIndex = 15
         ' 
         ' cbCategory
@@ -1090,20 +1056,18 @@ Partial Class FORM_ADMIN
         cbCategory.Font = New Font("Futura Bk BT", 10.2F)
         cbCategory.FormattingEnabled = True
         cbCategory.Items.AddRange(New Object() {"CARS", "MOTORCYCLES"})
-        cbCategory.Location = New Point(12, 7)
-        cbCategory.Margin = New Padding(3, 2, 3, 2)
+        cbCategory.Location = New Point(14, 9)
         cbCategory.Name = "cbCategory"
-        cbCategory.Size = New Size(133, 24)
+        cbCategory.Size = New Size(151, 28)
         cbCategory.TabIndex = 3
         ' 
         ' Panel63
         ' 
         Panel63.BorderStyle = BorderStyle.FixedSingle
         Panel63.Controls.Add(cbVehicleCategory)
-        Panel63.Location = New Point(214, 92)
-        Panel63.Margin = New Padding(3, 2, 3, 2)
+        Panel63.Location = New Point(245, 123)
         Panel63.Name = "Panel63"
-        Panel63.Size = New Size(149, 35)
+        Panel63.Size = New Size(170, 46)
         Panel63.TabIndex = 14
         ' 
         ' cbVehicleCategory
@@ -1111,118 +1075,106 @@ Partial Class FORM_ADMIN
         cbVehicleCategory.FlatStyle = FlatStyle.Flat
         cbVehicleCategory.Font = New Font("Futura Bk BT", 10.2F)
         cbVehicleCategory.FormattingEnabled = True
-        cbVehicleCategory.Location = New Point(12, 7)
-        cbVehicleCategory.Margin = New Padding(3, 2, 3, 2)
+        cbVehicleCategory.Location = New Point(14, 9)
         cbVehicleCategory.Name = "cbVehicleCategory"
-        cbVehicleCategory.Size = New Size(133, 24)
+        cbVehicleCategory.Size = New Size(151, 28)
         cbVehicleCategory.TabIndex = 3
         ' 
         ' Panel48
         ' 
-        Panel48.Location = New Point(38, 528)
-        Panel48.Margin = New Padding(3, 2, 3, 2)
+        Panel48.Location = New Point(43, 704)
         Panel48.Name = "Panel48"
-        Panel48.Size = New Size(496, 34)
+        Panel48.Size = New Size(567, 45)
         Panel48.TabIndex = 13
         ' 
         ' Panel53
         ' 
         Panel53.BorderStyle = BorderStyle.FixedSingle
         Panel53.Controls.Add(txtAddColor)
-        Panel53.Location = New Point(46, 231)
-        Panel53.Margin = New Padding(3, 2, 3, 2)
+        Panel53.Location = New Point(53, 308)
         Panel53.Name = "Panel53"
-        Panel53.Size = New Size(239, 35)
+        Panel53.Size = New Size(273, 46)
         Panel53.TabIndex = 8
         ' 
         ' txtAddColor
         ' 
         txtAddColor.BorderStyle = BorderStyle.None
         txtAddColor.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtAddColor.Location = New Point(18, 9)
-        txtAddColor.Margin = New Padding(3, 2, 3, 2)
+        txtAddColor.Location = New Point(21, 12)
         txtAddColor.Name = "txtAddColor"
-        txtAddColor.Size = New Size(200, 17)
+        txtAddColor.Size = New Size(229, 21)
         txtAddColor.TabIndex = 2
         ' 
         ' txtAddMileage
         ' 
         txtAddMileage.BorderStyle = BorderStyle.FixedSingle
         txtAddMileage.Controls.Add(addMileage)
-        txtAddMileage.Location = New Point(303, 232)
-        txtAddMileage.Margin = New Padding(3, 2, 3, 2)
+        txtAddMileage.Location = New Point(346, 309)
         txtAddMileage.Name = "txtAddMileage"
-        txtAddMileage.Size = New Size(239, 35)
+        txtAddMileage.Size = New Size(273, 46)
         txtAddMileage.TabIndex = 7
         ' 
         ' addMileage
         ' 
         addMileage.BorderStyle = BorderStyle.None
         addMileage.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        addMileage.Location = New Point(18, 9)
-        addMileage.Margin = New Padding(3, 2, 3, 2)
+        addMileage.Location = New Point(21, 12)
         addMileage.Name = "addMileage"
-        addMileage.Size = New Size(200, 17)
+        addMileage.Size = New Size(229, 21)
         addMileage.TabIndex = 2
         ' 
         ' Panel58
         ' 
         Panel58.BorderStyle = BorderStyle.FixedSingle
         Panel58.Controls.Add(txtAddModel)
-        Panel58.Location = New Point(46, 183)
-        Panel58.Margin = New Padding(3, 2, 3, 2)
+        Panel58.Location = New Point(53, 244)
         Panel58.Name = "Panel58"
-        Panel58.Size = New Size(496, 35)
+        Panel58.Size = New Size(567, 46)
         Panel58.TabIndex = 6
         ' 
         ' txtAddModel
         ' 
         txtAddModel.BorderStyle = BorderStyle.None
         txtAddModel.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtAddModel.Location = New Point(18, 9)
-        txtAddModel.Margin = New Padding(3, 2, 3, 2)
+        txtAddModel.Location = New Point(21, 12)
         txtAddModel.Name = "txtAddModel"
-        txtAddModel.Size = New Size(458, 17)
+        txtAddModel.Size = New Size(523, 21)
         txtAddModel.TabIndex = 2
         ' 
         ' Panel59
         ' 
         Panel59.BorderStyle = BorderStyle.FixedSingle
         Panel59.Controls.Add(txtAddPlate)
-        Panel59.Location = New Point(303, 136)
-        Panel59.Margin = New Padding(3, 2, 3, 2)
+        Panel59.Location = New Point(346, 181)
         Panel59.Name = "Panel59"
-        Panel59.Size = New Size(239, 35)
+        Panel59.Size = New Size(273, 46)
         Panel59.TabIndex = 5
         ' 
         ' txtAddPlate
         ' 
         txtAddPlate.BorderStyle = BorderStyle.None
         txtAddPlate.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtAddPlate.Location = New Point(18, 9)
-        txtAddPlate.Margin = New Padding(3, 2, 3, 2)
+        txtAddPlate.Location = New Point(21, 12)
         txtAddPlate.Name = "txtAddPlate"
-        txtAddPlate.Size = New Size(200, 17)
+        txtAddPlate.Size = New Size(229, 21)
         txtAddPlate.TabIndex = 2
         ' 
         ' Panel60
         ' 
         Panel60.BorderStyle = BorderStyle.FixedSingle
         Panel60.Controls.Add(txtAddMake)
-        Panel60.Location = New Point(46, 136)
-        Panel60.Margin = New Padding(3, 2, 3, 2)
+        Panel60.Location = New Point(53, 181)
         Panel60.Name = "Panel60"
-        Panel60.Size = New Size(239, 35)
+        Panel60.Size = New Size(273, 46)
         Panel60.TabIndex = 4
         ' 
         ' txtAddMake
         ' 
         txtAddMake.BorderStyle = BorderStyle.None
         txtAddMake.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtAddMake.Location = New Point(18, 9)
-        txtAddMake.Margin = New Padding(3, 2, 3, 2)
+        txtAddMake.Location = New Point(21, 12)
         txtAddMake.Name = "txtAddMake"
-        txtAddMake.Size = New Size(200, 17)
+        txtAddMake.Size = New Size(229, 21)
         txtAddMake.TabIndex = 2
         ' 
         ' Label27
@@ -1230,9 +1182,9 @@ Partial Class FORM_ADMIN
         Label27.AutoSize = True
         Label27.Font = New Font("Futura Hv BT", 22.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label27.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label27.Location = New Point(179, 44)
+        Label27.Location = New Point(205, 59)
         Label27.Name = "Label27"
-        Label27.Size = New Size(169, 36)
+        Label27.Size = New Size(209, 45)
         Label27.TabIndex = 1
         Label27.Text = "ADD CARS"
         ' 
@@ -1242,19 +1194,18 @@ Partial Class FORM_ADMIN
         Panel62.Controls.Add(Label29)
         Panel62.Dock = DockStyle.Top
         Panel62.Location = New Point(0, 0)
-        Panel62.Margin = New Padding(3, 2, 3, 2)
         Panel62.Name = "Panel62"
-        Panel62.Size = New Size(567, 30)
+        Panel62.Size = New Size(646, 40)
         Panel62.TabIndex = 0
         ' 
         ' Label29
         ' 
         Label29.AutoSize = True
-        Label29.Font = New Font("Futura XBlk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label29.Font = New Font("Futura XBlk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label29.ForeColor = Color.White
-        Label29.Location = New Point(13, 7)
+        Label29.Location = New Point(15, 9)
         Label29.Name = "Label29"
-        Label29.Size = New Size(20, 19)
+        Label29.Size = New Size(24, 24)
         Label29.TabIndex = 14
         Label29.Text = "X"
         ' 
@@ -1262,12 +1213,11 @@ Partial Class FORM_ADMIN
         ' 
         btnAddCars.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         btnAddCars.FlatStyle = FlatStyle.Flat
-        btnAddCars.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnAddCars.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnAddCars.ForeColor = Color.White
-        btnAddCars.Location = New Point(564, 106)
-        btnAddCars.Margin = New Padding(3, 2, 3, 2)
+        btnAddCars.Location = New Point(645, 141)
         btnAddCars.Name = "btnAddCars"
-        btnAddCars.Size = New Size(147, 26)
+        btnAddCars.Size = New Size(168, 35)
         btnAddCars.TabIndex = 18
         btnAddCars.Text = "ADD VEHICLE"
         btnAddCars.UseVisualStyleBackColor = False
@@ -1276,10 +1226,9 @@ Partial Class FORM_ADMIN
         ' 
         Panel2.BackColor = Color.White
         Panel2.Controls.Add(cbVehicle)
-        Panel2.Location = New Point(361, 101)
-        Panel2.Margin = New Padding(3, 2, 3, 2)
+        Panel2.Location = New Point(413, 135)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(186, 34)
+        Panel2.Size = New Size(213, 45)
         Panel2.TabIndex = 17
         ' 
         ' cbVehicle
@@ -1287,10 +1236,9 @@ Partial Class FORM_ADMIN
         cbVehicle.FlatStyle = FlatStyle.Flat
         cbVehicle.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cbVehicle.FormattingEnabled = True
-        cbVehicle.Location = New Point(18, 7)
-        cbVehicle.Margin = New Padding(3, 2, 3, 2)
+        cbVehicle.Location = New Point(21, 9)
         cbVehicle.Name = "cbVehicle"
-        cbVehicle.Size = New Size(166, 24)
+        cbVehicle.Size = New Size(189, 28)
         cbVehicle.TabIndex = 16
         ' 
         ' Panel7
@@ -1299,10 +1247,9 @@ Partial Class FORM_ADMIN
         Panel7.Controls.Add(lblInventoryRentals)
         Panel7.Controls.Add(PictureBox3)
         Panel7.Controls.Add(Label21)
-        Panel7.Location = New Point(617, 5)
-        Panel7.Margin = New Padding(3, 2, 3, 2)
+        Panel7.Location = New Point(705, 7)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(184, 90)
+        Panel7.Size = New Size(210, 120)
         Panel7.TabIndex = 10
         ' 
         ' lblInventoryRentals
@@ -1310,19 +1257,18 @@ Partial Class FORM_ADMIN
         lblInventoryRentals.AutoSize = True
         lblInventoryRentals.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblInventoryRentals.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblInventoryRentals.Location = New Point(22, 20)
+        lblInventoryRentals.Location = New Point(25, 27)
         lblInventoryRentals.Name = "lblInventoryRentals"
-        lblInventoryRentals.Size = New Size(55, 39)
+        lblInventoryRentals.Size = New Size(70, 52)
         lblInventoryRentals.TabIndex = 7
         lblInventoryRentals.Text = "69"
         ' 
         ' PictureBox3
         ' 
         PictureBox3.Image = My.Resources.Resources.car_icon
-        PictureBox3.Location = New Point(111, 27)
-        PictureBox3.Margin = New Padding(3, 2, 3, 2)
+        PictureBox3.Location = New Point(127, 36)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(41, 26)
+        PictureBox3.Size = New Size(47, 35)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox3.TabIndex = 7
         PictureBox3.TabStop = False
@@ -1330,11 +1276,11 @@ Partial Class FORM_ADMIN
         ' Label21
         ' 
         Label21.AutoSize = True
-        Label21.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label21.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label21.ForeColor = Color.Gray
-        Label21.Location = New Point(31, 60)
+        Label21.Location = New Point(35, 80)
         Label21.Name = "Label21"
-        Label21.Size = New Size(58, 15)
+        Label21.Size = New Size(72, 18)
         Label21.TabIndex = 6
         Label21.Text = "RENTALS"
         ' 
@@ -1344,10 +1290,9 @@ Partial Class FORM_ADMIN
         Panel5.Controls.Add(lblInventoryDamaged)
         Panel5.Controls.Add(PictureBox2)
         Panel5.Controls.Add(Label7)
-        Panel5.Location = New Point(420, 5)
-        Panel5.Margin = New Padding(3, 2, 3, 2)
+        Panel5.Location = New Point(480, 7)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(184, 90)
+        Panel5.Size = New Size(210, 120)
         Panel5.TabIndex = 10
         ' 
         ' lblInventoryDamaged
@@ -1355,19 +1300,18 @@ Partial Class FORM_ADMIN
         lblInventoryDamaged.AutoSize = True
         lblInventoryDamaged.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblInventoryDamaged.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblInventoryDamaged.Location = New Point(22, 20)
+        lblInventoryDamaged.Location = New Point(25, 27)
         lblInventoryDamaged.Name = "lblInventoryDamaged"
-        lblInventoryDamaged.Size = New Size(55, 39)
+        lblInventoryDamaged.Size = New Size(70, 52)
         lblInventoryDamaged.TabIndex = 7
         lblInventoryDamaged.Text = "69"
         ' 
         ' PictureBox2
         ' 
         PictureBox2.Image = My.Resources.Resources.car_icon
-        PictureBox2.Location = New Point(111, 27)
-        PictureBox2.Margin = New Padding(3, 2, 3, 2)
+        PictureBox2.Location = New Point(127, 36)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(41, 26)
+        PictureBox2.Size = New Size(47, 35)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 7
         PictureBox2.TabStop = False
@@ -1375,11 +1319,11 @@ Partial Class FORM_ADMIN
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.Gray
-        Label7.Location = New Point(22, 60)
+        Label7.Location = New Point(25, 80)
         Label7.Name = "Label7"
-        Label7.Size = New Size(71, 15)
+        Label7.Size = New Size(87, 18)
         Label7.TabIndex = 6
         Label7.Text = "DAMAGED"
         ' 
@@ -1389,10 +1333,9 @@ Partial Class FORM_ADMIN
         Panel3.Controls.Add(lblInventoryMaintenance)
         Panel3.Controls.Add(PictureBox1)
         Panel3.Controls.Add(Label5)
-        Panel3.Location = New Point(220, 5)
-        Panel3.Margin = New Padding(3, 2, 3, 2)
+        Panel3.Location = New Point(251, 7)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(184, 90)
+        Panel3.Size = New Size(210, 120)
         Panel3.TabIndex = 10
         ' 
         ' lblInventoryMaintenance
@@ -1400,19 +1343,18 @@ Partial Class FORM_ADMIN
         lblInventoryMaintenance.AutoSize = True
         lblInventoryMaintenance.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblInventoryMaintenance.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblInventoryMaintenance.Location = New Point(22, 20)
+        lblInventoryMaintenance.Location = New Point(25, 27)
         lblInventoryMaintenance.Name = "lblInventoryMaintenance"
-        lblInventoryMaintenance.Size = New Size(55, 39)
+        lblInventoryMaintenance.Size = New Size(70, 52)
         lblInventoryMaintenance.TabIndex = 7
         lblInventoryMaintenance.Text = "69"
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Image = My.Resources.Resources.car_icon
-        PictureBox1.Location = New Point(111, 27)
-        PictureBox1.Margin = New Padding(3, 2, 3, 2)
+        PictureBox1.Location = New Point(127, 36)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(41, 26)
+        PictureBox1.Size = New Size(47, 35)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 7
         PictureBox1.TabStop = False
@@ -1420,11 +1362,11 @@ Partial Class FORM_ADMIN
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.Gray
-        Label5.Location = New Point(31, 60)
+        Label5.Location = New Point(35, 80)
         Label5.Name = "Label5"
-        Label5.Size = New Size(98, 15)
+        Label5.Size = New Size(122, 18)
         Label5.TabIndex = 6
         Label5.Text = "MAINTENANCE"
         ' 
@@ -1432,12 +1374,11 @@ Partial Class FORM_ADMIN
         ' 
         Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(246, 106)
-        Button1.Margin = New Padding(3, 2, 3, 2)
+        Button1.Location = New Point(281, 141)
         Button1.Name = "Button1"
-        Button1.Size = New Size(108, 26)
+        Button1.Size = New Size(123, 35)
         Button1.TabIndex = 15
         Button1.Text = "SEARCH"
         Button1.UseVisualStyleBackColor = False
@@ -1448,10 +1389,9 @@ Partial Class FORM_ADMIN
         Panel6.Controls.Add(lblInventoryAvailable)
         Panel6.Controls.Add(PictureBox4)
         Panel6.Controls.Add(Label22)
-        Panel6.Location = New Point(22, 5)
-        Panel6.Margin = New Padding(3, 2, 3, 2)
+        Panel6.Location = New Point(25, 7)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(184, 90)
+        Panel6.Size = New Size(210, 120)
         Panel6.TabIndex = 9
         ' 
         ' lblInventoryAvailable
@@ -1459,19 +1399,18 @@ Partial Class FORM_ADMIN
         lblInventoryAvailable.AutoSize = True
         lblInventoryAvailable.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblInventoryAvailable.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblInventoryAvailable.Location = New Point(22, 20)
+        lblInventoryAvailable.Location = New Point(25, 27)
         lblInventoryAvailable.Name = "lblInventoryAvailable"
-        lblInventoryAvailable.Size = New Size(55, 39)
+        lblInventoryAvailable.Size = New Size(70, 52)
         lblInventoryAvailable.TabIndex = 7
         lblInventoryAvailable.Text = "69"
         ' 
         ' PictureBox4
         ' 
         PictureBox4.Image = My.Resources.Resources.car_icon
-        PictureBox4.Location = New Point(111, 27)
-        PictureBox4.Margin = New Padding(3, 2, 3, 2)
+        PictureBox4.Location = New Point(127, 36)
         PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(41, 26)
+        PictureBox4.Size = New Size(47, 35)
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox4.TabIndex = 7
         PictureBox4.TabStop = False
@@ -1479,21 +1418,20 @@ Partial Class FORM_ADMIN
         ' Label22
         ' 
         Label22.AutoSize = True
-        Label22.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label22.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label22.ForeColor = Color.Gray
-        Label22.Location = New Point(31, 60)
+        Label22.Location = New Point(35, 80)
         Label22.Name = "Label22"
-        Label22.Size = New Size(72, 15)
+        Label22.Size = New Size(88, 18)
         Label22.TabIndex = 6
         Label22.Text = "AVAILABLE"
         ' 
         ' txtbxInventory
         ' 
-        txtbxInventory.Font = New Font("Futura Bk BT", 12F)
-        txtbxInventory.Location = New Point(22, 106)
-        txtbxInventory.Margin = New Padding(3, 2, 3, 2)
+        txtbxInventory.Font = New Font("Futura Bk BT", 12.0F)
+        txtbxInventory.Location = New Point(25, 141)
         txtbxInventory.Name = "txtbxInventory"
-        txtbxInventory.Size = New Size(203, 27)
+        txtbxInventory.Size = New Size(231, 31)
         txtbxInventory.TabIndex = 14
         ' 
         ' dgvVehicles
@@ -1501,7 +1439,7 @@ Partial Class FORM_ADMIN
         dgvVehicles.BackgroundColor = Color.White
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = SystemColors.Control
-        DataGridViewCellStyle3.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle3.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
         DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
@@ -1510,27 +1448,25 @@ Partial Class FORM_ADMIN
         dgvVehicles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = SystemColors.Window
-        DataGridViewCellStyle4.Font = New Font("Futura Lt BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle4.Font = New Font("Futura Lt BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle4.ForeColor = SystemColors.ControlText
         DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
         dgvVehicles.DefaultCellStyle = DataGridViewCellStyle4
-        dgvVehicles.Location = New Point(22, 175)
-        dgvVehicles.Margin = New Padding(3, 2, 3, 2)
+        dgvVehicles.Location = New Point(25, 233)
         dgvVehicles.Name = "dgvVehicles"
         dgvVehicles.RowHeadersWidth = 51
-        dgvVehicles.Size = New Size(747, 238)
+        dgvVehicles.Size = New Size(854, 317)
         dgvVehicles.TabIndex = 13
         ' 
         ' Panel4
         ' 
         Panel4.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Panel4.Controls.Add(Label4)
-        Panel4.Location = New Point(22, 143)
-        Panel4.Margin = New Padding(3, 2, 3, 2)
+        Panel4.Location = New Point(25, 191)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(747, 33)
+        Panel4.Size = New Size(854, 44)
         Panel4.TabIndex = 11
         ' 
         ' Label4
@@ -1538,9 +1474,9 @@ Partial Class FORM_ADMIN
         Label4.AutoSize = True
         Label4.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.White
-        Label4.Location = New Point(10, 6)
+        Label4.Location = New Point(11, 8)
         Label4.Name = "Label4"
-        Label4.Size = New Size(234, 23)
+        Label4.Size = New Size(281, 28)
         Label4.TabIndex = 7
         Label4.Text = "VEHICLE INVENTORY"
         ' 
@@ -1554,10 +1490,9 @@ Partial Class FORM_ADMIN
         pnlRentalContent.Controls.Add(txtbxRental)
         pnlRentalContent.Controls.Add(dgvRentals2)
         pnlRentalContent.Controls.Add(Panel20)
-        pnlRentalContent.Location = New Point(1138, 60)
-        pnlRentalContent.Margin = New Padding(3, 2, 3, 2)
+        pnlRentalContent.Location = New Point(1301, 80)
         pnlRentalContent.Name = "pnlRentalContent"
-        pnlRentalContent.Size = New Size(801, 423)
+        pnlRentalContent.Size = New Size(915, 564)
         pnlRentalContent.TabIndex = 15
         ' 
         ' Panel33
@@ -1566,10 +1501,9 @@ Partial Class FORM_ADMIN
         Panel33.Controls.Add(lblRentalCancelled)
         Panel33.Controls.Add(PictureBox22)
         Panel33.Controls.Add(Label14)
-        Panel33.Location = New Point(422, 7)
-        Panel33.Margin = New Padding(3, 2, 3, 2)
+        Panel33.Location = New Point(482, 9)
         Panel33.Name = "Panel33"
-        Panel33.Size = New Size(184, 90)
+        Panel33.Size = New Size(210, 120)
         Panel33.TabIndex = 11
         ' 
         ' lblRentalCancelled
@@ -1577,19 +1511,18 @@ Partial Class FORM_ADMIN
         lblRentalCancelled.AutoSize = True
         lblRentalCancelled.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblRentalCancelled.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblRentalCancelled.Location = New Point(22, 20)
+        lblRentalCancelled.Location = New Point(25, 27)
         lblRentalCancelled.Name = "lblRentalCancelled"
-        lblRentalCancelled.Size = New Size(55, 39)
+        lblRentalCancelled.Size = New Size(70, 52)
         lblRentalCancelled.TabIndex = 7
         lblRentalCancelled.Text = "69"
         ' 
         ' PictureBox22
         ' 
         PictureBox22.Image = My.Resources.Resources.car_icon
-        PictureBox22.Location = New Point(111, 27)
-        PictureBox22.Margin = New Padding(3, 2, 3, 2)
+        PictureBox22.Location = New Point(127, 36)
         PictureBox22.Name = "PictureBox22"
-        PictureBox22.Size = New Size(41, 26)
+        PictureBox22.Size = New Size(47, 35)
         PictureBox22.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox22.TabIndex = 7
         PictureBox22.TabStop = False
@@ -1597,11 +1530,11 @@ Partial Class FORM_ADMIN
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label14.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.Gray
-        Label14.Location = New Point(31, 62)
+        Label14.Location = New Point(35, 83)
         Label14.Name = "Label14"
-        Label14.Size = New Size(77, 15)
+        Label14.Size = New Size(96, 18)
         Label14.TabIndex = 6
         Label14.Text = "CANCELLED"
         ' 
@@ -1609,10 +1542,9 @@ Partial Class FORM_ADMIN
         ' 
         Panel22.BackColor = Color.White
         Panel22.Controls.Add(ComboBox1)
-        Panel22.Location = New Point(368, 101)
-        Panel22.Margin = New Padding(3, 2, 3, 2)
+        Panel22.Location = New Point(421, 135)
         Panel22.Name = "Panel22"
-        Panel22.Size = New Size(186, 34)
+        Panel22.Size = New Size(213, 45)
         Panel22.TabIndex = 18
         ' 
         ' ComboBox1
@@ -1620,10 +1552,9 @@ Partial Class FORM_ADMIN
         ComboBox1.FlatStyle = FlatStyle.Flat
         ComboBox1.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(18, 7)
-        ComboBox1.Margin = New Padding(3, 2, 3, 2)
+        ComboBox1.Location = New Point(21, 9)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(166, 24)
+        ComboBox1.Size = New Size(189, 28)
         ComboBox1.TabIndex = 16
         ' 
         ' Panel18
@@ -1632,10 +1563,9 @@ Partial Class FORM_ADMIN
         Panel18.Controls.Add(lblRentalCompleted)
         Panel18.Controls.Add(PictureBox11)
         Panel18.Controls.Add(Label28)
-        Panel18.Location = New Point(220, 5)
-        Panel18.Margin = New Padding(3, 2, 3, 2)
+        Panel18.Location = New Point(251, 7)
         Panel18.Name = "Panel18"
-        Panel18.Size = New Size(184, 90)
+        Panel18.Size = New Size(210, 120)
         Panel18.TabIndex = 10
         ' 
         ' lblRentalCompleted
@@ -1643,19 +1573,18 @@ Partial Class FORM_ADMIN
         lblRentalCompleted.AutoSize = True
         lblRentalCompleted.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblRentalCompleted.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblRentalCompleted.Location = New Point(22, 20)
+        lblRentalCompleted.Location = New Point(25, 27)
         lblRentalCompleted.Name = "lblRentalCompleted"
-        lblRentalCompleted.Size = New Size(55, 39)
+        lblRentalCompleted.Size = New Size(70, 52)
         lblRentalCompleted.TabIndex = 7
         lblRentalCompleted.Text = "69"
         ' 
         ' PictureBox11
         ' 
         PictureBox11.Image = My.Resources.Resources.car_icon
-        PictureBox11.Location = New Point(111, 27)
-        PictureBox11.Margin = New Padding(3, 2, 3, 2)
+        PictureBox11.Location = New Point(127, 36)
         PictureBox11.Name = "PictureBox11"
-        PictureBox11.Size = New Size(41, 26)
+        PictureBox11.Size = New Size(47, 35)
         PictureBox11.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox11.TabIndex = 7
         PictureBox11.TabStop = False
@@ -1663,11 +1592,11 @@ Partial Class FORM_ADMIN
         ' Label28
         ' 
         Label28.AutoSize = True
-        Label28.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label28.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label28.ForeColor = Color.Gray
-        Label28.Location = New Point(31, 62)
+        Label28.Location = New Point(35, 83)
         Label28.Name = "Label28"
-        Label28.Size = New Size(78, 15)
+        Label28.Size = New Size(99, 18)
         Label28.TabIndex = 6
         Label28.Text = "COMPLETED"
         ' 
@@ -1675,12 +1604,11 @@ Partial Class FORM_ADMIN
         ' 
         Button2.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(246, 106)
-        Button2.Margin = New Padding(3, 2, 3, 2)
+        Button2.Location = New Point(281, 141)
         Button2.Name = "Button2"
-        Button2.Size = New Size(108, 26)
+        Button2.Size = New Size(123, 35)
         Button2.TabIndex = 15
         Button2.Text = "SEARCH"
         Button2.UseVisualStyleBackColor = False
@@ -1691,10 +1619,9 @@ Partial Class FORM_ADMIN
         Panel19.Controls.Add(lblRentalRentals)
         Panel19.Controls.Add(PictureBox12)
         Panel19.Controls.Add(Label30)
-        Panel19.Location = New Point(22, 5)
-        Panel19.Margin = New Padding(3, 2, 3, 2)
+        Panel19.Location = New Point(25, 7)
         Panel19.Name = "Panel19"
-        Panel19.Size = New Size(184, 90)
+        Panel19.Size = New Size(210, 120)
         Panel19.TabIndex = 9
         ' 
         ' lblRentalRentals
@@ -1702,19 +1629,18 @@ Partial Class FORM_ADMIN
         lblRentalRentals.AutoSize = True
         lblRentalRentals.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblRentalRentals.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblRentalRentals.Location = New Point(22, 20)
+        lblRentalRentals.Location = New Point(25, 27)
         lblRentalRentals.Name = "lblRentalRentals"
-        lblRentalRentals.Size = New Size(55, 39)
+        lblRentalRentals.Size = New Size(70, 52)
         lblRentalRentals.TabIndex = 7
         lblRentalRentals.Text = "69"
         ' 
         ' PictureBox12
         ' 
         PictureBox12.Image = My.Resources.Resources.car_icon
-        PictureBox12.Location = New Point(111, 27)
-        PictureBox12.Margin = New Padding(3, 2, 3, 2)
+        PictureBox12.Location = New Point(127, 36)
         PictureBox12.Name = "PictureBox12"
-        PictureBox12.Size = New Size(41, 26)
+        PictureBox12.Size = New Size(47, 35)
         PictureBox12.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox12.TabIndex = 7
         PictureBox12.TabStop = False
@@ -1722,42 +1648,39 @@ Partial Class FORM_ADMIN
         ' Label30
         ' 
         Label30.AutoSize = True
-        Label30.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label30.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label30.ForeColor = Color.Gray
-        Label30.Location = New Point(31, 62)
+        Label30.Location = New Point(35, 83)
         Label30.Name = "Label30"
-        Label30.Size = New Size(58, 15)
+        Label30.Size = New Size(72, 18)
         Label30.TabIndex = 6
         Label30.Text = "RENTALS"
         ' 
         ' txtbxRental
         ' 
-        txtbxRental.Font = New Font("Futura Bk BT", 12F)
-        txtbxRental.Location = New Point(22, 106)
-        txtbxRental.Margin = New Padding(3, 2, 3, 2)
+        txtbxRental.Font = New Font("Futura Bk BT", 12.0F)
+        txtbxRental.Location = New Point(25, 141)
         txtbxRental.Name = "txtbxRental"
-        txtbxRental.Size = New Size(203, 27)
+        txtbxRental.Size = New Size(231, 31)
         txtbxRental.TabIndex = 14
         ' 
         ' dgvRentals2
         ' 
         dgvRentals2.BackgroundColor = Color.White
         dgvRentals2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvRentals2.Location = New Point(22, 175)
-        dgvRentals2.Margin = New Padding(3, 2, 3, 2)
+        dgvRentals2.Location = New Point(25, 233)
         dgvRentals2.Name = "dgvRentals2"
         dgvRentals2.RowHeadersWidth = 51
-        dgvRentals2.Size = New Size(747, 238)
+        dgvRentals2.Size = New Size(854, 317)
         dgvRentals2.TabIndex = 13
         ' 
         ' Panel20
         ' 
         Panel20.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Panel20.Controls.Add(Label31)
-        Panel20.Location = New Point(22, 143)
-        Panel20.Margin = New Padding(3, 2, 3, 2)
+        Panel20.Location = New Point(25, 191)
         Panel20.Name = "Panel20"
-        Panel20.Size = New Size(747, 33)
+        Panel20.Size = New Size(854, 44)
         Panel20.TabIndex = 11
         ' 
         ' Label31
@@ -1765,9 +1688,9 @@ Partial Class FORM_ADMIN
         Label31.AutoSize = True
         Label31.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label31.ForeColor = Color.White
-        Label31.Location = New Point(10, 6)
+        Label31.Location = New Point(11, 8)
         Label31.Name = "Label31"
-        Label31.Size = New Size(215, 23)
+        Label31.Size = New Size(258, 28)
         Label31.TabIndex = 7
         Label31.Text = "VEHICLE RENTALS"
         ' 
@@ -1781,10 +1704,9 @@ Partial Class FORM_ADMIN
         pnlMaintenanceContent.Controls.Add(txtbxMaintenance)
         pnlMaintenanceContent.Controls.Add(Panel17)
         pnlMaintenanceContent.Controls.Add(dgvMaintenance)
-        pnlMaintenanceContent.Location = New Point(1138, 60)
-        pnlMaintenanceContent.Margin = New Padding(3, 2, 3, 2)
+        pnlMaintenanceContent.Location = New Point(1301, 80)
         pnlMaintenanceContent.Name = "pnlMaintenanceContent"
-        pnlMaintenanceContent.Size = New Size(825, 423)
+        pnlMaintenanceContent.Size = New Size(943, 564)
         pnlMaintenanceContent.TabIndex = 16
         ' 
         ' Panel27
@@ -1793,10 +1715,9 @@ Partial Class FORM_ADMIN
         Panel27.Controls.Add(lblMaintenanceScheduled)
         Panel27.Controls.Add(PictureBox14)
         Panel27.Controls.Add(Label6)
-        Panel27.Location = New Point(612, 6)
-        Panel27.Margin = New Padding(3, 2, 3, 2)
+        Panel27.Location = New Point(699, 8)
         Panel27.Name = "Panel27"
-        Panel27.Size = New Size(184, 90)
+        Panel27.Size = New Size(210, 120)
         Panel27.TabIndex = 12
         ' 
         ' lblMaintenanceScheduled
@@ -1804,19 +1725,18 @@ Partial Class FORM_ADMIN
         lblMaintenanceScheduled.AutoSize = True
         lblMaintenanceScheduled.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblMaintenanceScheduled.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblMaintenanceScheduled.Location = New Point(22, 20)
+        lblMaintenanceScheduled.Location = New Point(25, 27)
         lblMaintenanceScheduled.Name = "lblMaintenanceScheduled"
-        lblMaintenanceScheduled.Size = New Size(55, 39)
+        lblMaintenanceScheduled.Size = New Size(70, 52)
         lblMaintenanceScheduled.TabIndex = 7
         lblMaintenanceScheduled.Text = "69"
         ' 
         ' PictureBox14
         ' 
         PictureBox14.Image = My.Resources.Resources.car_icon
-        PictureBox14.Location = New Point(111, 27)
-        PictureBox14.Margin = New Padding(3, 2, 3, 2)
+        PictureBox14.Location = New Point(127, 36)
         PictureBox14.Name = "PictureBox14"
-        PictureBox14.Size = New Size(41, 26)
+        PictureBox14.Size = New Size(47, 35)
         PictureBox14.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox14.TabIndex = 7
         PictureBox14.TabStop = False
@@ -1824,11 +1744,11 @@ Partial Class FORM_ADMIN
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Gray
-        Label6.Location = New Point(31, 63)
+        Label6.Location = New Point(35, 84)
         Label6.Name = "Label6"
-        Label6.Size = New Size(77, 15)
+        Label6.Size = New Size(96, 18)
         Label6.TabIndex = 6
         Label6.Text = "SCHEDULED"
         ' 
@@ -1838,10 +1758,9 @@ Partial Class FORM_ADMIN
         Panel21.Controls.Add(lblMaintenanceGoods)
         Panel21.Controls.Add(PictureBox13)
         Panel21.Controls.Add(Label34)
-        Panel21.Location = New Point(420, 5)
-        Panel21.Margin = New Padding(3, 2, 3, 2)
+        Panel21.Location = New Point(480, 7)
         Panel21.Name = "Panel21"
-        Panel21.Size = New Size(184, 90)
+        Panel21.Size = New Size(210, 120)
         Panel21.TabIndex = 11
         ' 
         ' lblMaintenanceGoods
@@ -1849,19 +1768,18 @@ Partial Class FORM_ADMIN
         lblMaintenanceGoods.AutoSize = True
         lblMaintenanceGoods.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblMaintenanceGoods.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblMaintenanceGoods.Location = New Point(22, 20)
+        lblMaintenanceGoods.Location = New Point(25, 27)
         lblMaintenanceGoods.Name = "lblMaintenanceGoods"
-        lblMaintenanceGoods.Size = New Size(55, 39)
+        lblMaintenanceGoods.Size = New Size(70, 52)
         lblMaintenanceGoods.TabIndex = 7
         lblMaintenanceGoods.Text = "69"
         ' 
         ' PictureBox13
         ' 
         PictureBox13.Image = My.Resources.Resources.car_icon
-        PictureBox13.Location = New Point(111, 27)
-        PictureBox13.Margin = New Padding(3, 2, 3, 2)
+        PictureBox13.Location = New Point(127, 36)
         PictureBox13.Name = "PictureBox13"
-        PictureBox13.Size = New Size(41, 26)
+        PictureBox13.Size = New Size(47, 35)
         PictureBox13.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox13.TabIndex = 7
         PictureBox13.TabStop = False
@@ -1869,11 +1787,11 @@ Partial Class FORM_ADMIN
         ' Label34
         ' 
         Label34.AutoSize = True
-        Label34.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label34.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label34.ForeColor = Color.Gray
-        Label34.Location = New Point(31, 63)
+        Label34.Location = New Point(35, 84)
         Label34.Name = "Label34"
-        Label34.Size = New Size(121, 15)
+        Label34.Size = New Size(151, 18)
         Label34.TabIndex = 6
         Label34.Text = "GOOD CONDITION"
         ' 
@@ -1883,10 +1801,9 @@ Partial Class FORM_ADMIN
         Panel15.Controls.Add(lblMaintenanceDamaged)
         Panel15.Controls.Add(PictureBox5)
         Panel15.Controls.Add(Label24)
-        Panel15.Location = New Point(220, 5)
-        Panel15.Margin = New Padding(3, 2, 3, 2)
+        Panel15.Location = New Point(251, 7)
         Panel15.Name = "Panel15"
-        Panel15.Size = New Size(184, 90)
+        Panel15.Size = New Size(210, 120)
         Panel15.TabIndex = 10
         ' 
         ' lblMaintenanceDamaged
@@ -1894,19 +1811,18 @@ Partial Class FORM_ADMIN
         lblMaintenanceDamaged.AutoSize = True
         lblMaintenanceDamaged.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblMaintenanceDamaged.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblMaintenanceDamaged.Location = New Point(22, 20)
+        lblMaintenanceDamaged.Location = New Point(25, 27)
         lblMaintenanceDamaged.Name = "lblMaintenanceDamaged"
-        lblMaintenanceDamaged.Size = New Size(55, 39)
+        lblMaintenanceDamaged.Size = New Size(70, 52)
         lblMaintenanceDamaged.TabIndex = 7
         lblMaintenanceDamaged.Text = "69"
         ' 
         ' PictureBox5
         ' 
         PictureBox5.Image = My.Resources.Resources.car_icon
-        PictureBox5.Location = New Point(111, 27)
-        PictureBox5.Margin = New Padding(3, 2, 3, 2)
+        PictureBox5.Location = New Point(127, 36)
         PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(41, 26)
+        PictureBox5.Size = New Size(47, 35)
         PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox5.TabIndex = 7
         PictureBox5.TabStop = False
@@ -1914,11 +1830,11 @@ Partial Class FORM_ADMIN
         ' Label24
         ' 
         Label24.AutoSize = True
-        Label24.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label24.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label24.ForeColor = Color.Gray
-        Label24.Location = New Point(31, 63)
+        Label24.Location = New Point(35, 84)
         Label24.Name = "Label24"
-        Label24.Size = New Size(71, 15)
+        Label24.Size = New Size(87, 18)
         Label24.TabIndex = 6
         Label24.Text = "DAMAGED"
         ' 
@@ -1926,12 +1842,11 @@ Partial Class FORM_ADMIN
         ' 
         Button3.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button3.FlatStyle = FlatStyle.Flat
-        Button3.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button3.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = Color.White
-        Button3.Location = New Point(246, 106)
-        Button3.Margin = New Padding(3, 2, 3, 2)
+        Button3.Location = New Point(281, 141)
         Button3.Name = "Button3"
-        Button3.Size = New Size(108, 26)
+        Button3.Size = New Size(123, 35)
         Button3.TabIndex = 15
         Button3.Text = "SEARCH"
         Button3.UseVisualStyleBackColor = False
@@ -1942,10 +1857,9 @@ Partial Class FORM_ADMIN
         Panel16.Controls.Add(lblMaintenanceOngoing)
         Panel16.Controls.Add(PictureBox6)
         Panel16.Controls.Add(Label26)
-        Panel16.Location = New Point(22, 5)
-        Panel16.Margin = New Padding(3, 2, 3, 2)
+        Panel16.Location = New Point(25, 7)
         Panel16.Name = "Panel16"
-        Panel16.Size = New Size(184, 90)
+        Panel16.Size = New Size(210, 120)
         Panel16.TabIndex = 9
         ' 
         ' lblMaintenanceOngoing
@@ -1953,19 +1867,18 @@ Partial Class FORM_ADMIN
         lblMaintenanceOngoing.AutoSize = True
         lblMaintenanceOngoing.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblMaintenanceOngoing.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblMaintenanceOngoing.Location = New Point(22, 20)
+        lblMaintenanceOngoing.Location = New Point(25, 27)
         lblMaintenanceOngoing.Name = "lblMaintenanceOngoing"
-        lblMaintenanceOngoing.Size = New Size(55, 39)
+        lblMaintenanceOngoing.Size = New Size(70, 52)
         lblMaintenanceOngoing.TabIndex = 7
         lblMaintenanceOngoing.Text = "69"
         ' 
         ' PictureBox6
         ' 
         PictureBox6.Image = My.Resources.Resources.car_icon
-        PictureBox6.Location = New Point(111, 27)
-        PictureBox6.Margin = New Padding(3, 2, 3, 2)
+        PictureBox6.Location = New Point(127, 36)
         PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(41, 26)
+        PictureBox6.Size = New Size(47, 35)
         PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox6.TabIndex = 7
         PictureBox6.TabStop = False
@@ -1973,31 +1886,29 @@ Partial Class FORM_ADMIN
         ' Label26
         ' 
         Label26.AutoSize = True
-        Label26.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label26.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label26.ForeColor = Color.Gray
-        Label26.Location = New Point(31, 63)
+        Label26.Location = New Point(35, 84)
         Label26.Name = "Label26"
-        Label26.Size = New Size(71, 15)
+        Label26.Size = New Size(87, 18)
         Label26.TabIndex = 6
         Label26.Text = "ONGOING"
         ' 
         ' txtbxMaintenance
         ' 
-        txtbxMaintenance.Font = New Font("Futura Bk BT", 12F)
-        txtbxMaintenance.Location = New Point(22, 106)
-        txtbxMaintenance.Margin = New Padding(3, 2, 3, 2)
+        txtbxMaintenance.Font = New Font("Futura Bk BT", 12.0F)
+        txtbxMaintenance.Location = New Point(25, 141)
         txtbxMaintenance.Name = "txtbxMaintenance"
-        txtbxMaintenance.Size = New Size(203, 27)
+        txtbxMaintenance.Size = New Size(231, 31)
         txtbxMaintenance.TabIndex = 14
         ' 
         ' Panel17
         ' 
         Panel17.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Panel17.Controls.Add(Label32)
-        Panel17.Location = New Point(22, 143)
-        Panel17.Margin = New Padding(3, 2, 3, 2)
+        Panel17.Location = New Point(25, 191)
         Panel17.Name = "Panel17"
-        Panel17.Size = New Size(774, 33)
+        Panel17.Size = New Size(885, 44)
         Panel17.TabIndex = 11
         ' 
         ' Label32
@@ -2005,9 +1916,9 @@ Partial Class FORM_ADMIN
         Label32.AutoSize = True
         Label32.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label32.ForeColor = Color.White
-        Label32.Location = New Point(10, 6)
+        Label32.Location = New Point(11, 8)
         Label32.Name = "Label32"
-        Label32.Size = New Size(268, 23)
+        Label32.Size = New Size(322, 28)
         Label32.TabIndex = 7
         Label32.Text = "VEHICLE MAINTENANCE"
         ' 
@@ -2015,15 +1926,21 @@ Partial Class FORM_ADMIN
         ' 
         dgvMaintenance.BackgroundColor = Color.White
         dgvMaintenance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvMaintenance.Location = New Point(22, 175)
-        dgvMaintenance.Margin = New Padding(3, 2, 3, 2)
+        dgvMaintenance.Location = New Point(25, 233)
         dgvMaintenance.Name = "dgvMaintenance"
         dgvMaintenance.RowHeadersWidth = 51
-        dgvMaintenance.Size = New Size(774, 238)
+        dgvMaintenance.Size = New Size(885, 317)
         dgvMaintenance.TabIndex = 13
         ' 
         ' pnlSaleContent
         ' 
+        pnlSaleContent.Controls.Add(btnFilterDate)
+        pnlSaleContent.Controls.Add(Button11)
+        pnlSaleContent.Controls.Add(Label36)
+        pnlSaleContent.Controls.Add(Label35)
+        pnlSaleContent.Controls.Add(Label33)
+        pnlSaleContent.Controls.Add(dtpEndDate)
+        pnlSaleContent.Controls.Add(dtpStartDate)
         pnlSaleContent.Controls.Add(Panel32)
         pnlSaleContent.Controls.Add(Panel24)
         pnlSaleContent.Controls.Add(Panel26)
@@ -2032,11 +1949,75 @@ Partial Class FORM_ADMIN
         pnlSaleContent.Controls.Add(txtbxSales)
         pnlSaleContent.Controls.Add(dgvSales)
         pnlSaleContent.Controls.Add(Panel25)
-        pnlSaleContent.Location = New Point(1138, 60)
-        pnlSaleContent.Margin = New Padding(3, 2, 3, 2)
+        pnlSaleContent.Location = New Point(310, 93)
         pnlSaleContent.Name = "pnlSaleContent"
-        pnlSaleContent.Size = New Size(801, 423)
+        pnlSaleContent.Size = New Size(915, 564)
         pnlSaleContent.TabIndex = 17
+        ' 
+        ' Button11
+        ' 
+        Button11.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button11.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button11.ForeColor = Color.White
+        Button11.Location = New Point(695, 433)
+        Button11.Name = "Button11"
+        Button11.Size = New Size(143, 41)
+        Button11.TabIndex = 22
+        Button11.Text = "CLEAR DATE"
+        Button11.UseVisualStyleBackColor = False
+        ' 
+        ' Label36
+        ' 
+        Label36.AutoSize = True
+        Label36.Font = New Font("Futura Hv BT", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label36.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label36.Location = New Point(676, 303)
+        Label36.Name = "Label36"
+        Label36.Size = New Size(102, 21)
+        Label36.TabIndex = 21
+        Label36.Text = "END DATE"
+        ' 
+        ' Label35
+        ' 
+        Label35.AutoSize = True
+        Label35.Font = New Font("Futura Hv BT", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label35.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label35.Location = New Point(676, 233)
+        Label35.Name = "Label35"
+        Label35.Size = New Size(117, 21)
+        Label35.TabIndex = 20
+        Label35.Text = "START DATE"
+        ' 
+        ' Label33
+        ' 
+        Label33.AutoSize = True
+        Label33.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label33.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label33.Location = New Point(676, 193)
+        Label33.Name = "Label33"
+        Label33.Size = New Size(230, 27)
+        Label33.TabIndex = 9
+        Label33.Text = "SALES DATE RANGE"
+        ' 
+        ' dtpEndDate
+        ' 
+        dtpEndDate.CalendarFont = New Font("Futura Bk BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpEndDate.CustomFormat = "YYYY-MM-DD"
+        dtpEndDate.Font = New Font("Futura Hv BT", 10.2F)
+        dtpEndDate.Location = New Point(676, 332)
+        dtpEndDate.Name = "dtpEndDate"
+        dtpEndDate.Size = New Size(231, 28)
+        dtpEndDate.TabIndex = 19
+        ' 
+        ' dtpStartDate
+        ' 
+        dtpStartDate.CalendarFont = New Font("Futura Bk BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpStartDate.CustomFormat = "YYYY-MM-DD"
+        dtpStartDate.Font = New Font("Futura Hv BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpStartDate.Location = New Point(676, 266)
+        dtpStartDate.Name = "dtpStartDate"
+        dtpStartDate.Size = New Size(231, 28)
+        dtpStartDate.TabIndex = 18
         ' 
         ' Panel32
         ' 
@@ -2044,19 +2025,17 @@ Partial Class FORM_ADMIN
         Panel32.Controls.Add(PictureBox21)
         Panel32.Controls.Add(lblSalesEarnings)
         Panel32.Controls.Add(Label16)
-        Panel32.Location = New Point(22, 5)
-        Panel32.Margin = New Padding(3, 2, 3, 2)
+        Panel32.Location = New Point(25, 7)
         Panel32.Name = "Panel32"
-        Panel32.Size = New Size(165, 82)
+        Panel32.Size = New Size(189, 109)
         Panel32.TabIndex = 11
         ' 
         ' PictureBox21
         ' 
         PictureBox21.Image = My.Resources.Resources.income_icon
-        PictureBox21.Location = New Point(13, 27)
-        PictureBox21.Margin = New Padding(3, 2, 3, 2)
+        PictureBox21.Location = New Point(15, 36)
         PictureBox21.Name = "PictureBox21"
-        PictureBox21.Size = New Size(28, 25)
+        PictureBox21.Size = New Size(32, 33)
         PictureBox21.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox21.TabIndex = 8
         PictureBox21.TabStop = False
@@ -2066,20 +2045,20 @@ Partial Class FORM_ADMIN
         lblSalesEarnings.AutoSize = True
         lblSalesEarnings.Font = New Font("Microsoft Sans Serif", 16.2F)
         lblSalesEarnings.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblSalesEarnings.Location = New Point(46, 27)
+        lblSalesEarnings.Location = New Point(53, 36)
         lblSalesEarnings.Name = "lblSalesEarnings"
-        lblSalesEarnings.Size = New Size(36, 26)
+        lblSalesEarnings.Size = New Size(46, 32)
         lblSalesEarnings.TabIndex = 7
         lblSalesEarnings.Text = "69"
         ' 
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label16.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label16.ForeColor = Color.Gray
-        Label16.Location = New Point(46, 58)
+        Label16.Location = New Point(53, 77)
         Label16.Name = "Label16"
-        Label16.Size = New Size(70, 15)
+        Label16.Size = New Size(86, 18)
         Label16.TabIndex = 6
         Label16.Text = "EARNINGS"
         ' 
@@ -2089,19 +2068,17 @@ Partial Class FORM_ADMIN
         Panel24.Controls.Add(PictureBox16)
         Panel24.Controls.Add(lblSalesPenalties)
         Panel24.Controls.Add(Label11)
-        Panel24.Location = New Point(204, 5)
-        Panel24.Margin = New Padding(3, 2, 3, 2)
+        Panel24.Location = New Point(233, 7)
         Panel24.Name = "Panel24"
-        Panel24.Size = New Size(165, 82)
+        Panel24.Size = New Size(189, 109)
         Panel24.TabIndex = 17
         ' 
         ' PictureBox16
         ' 
         PictureBox16.Image = My.Resources.Resources.income_icon
-        PictureBox16.Location = New Point(13, 27)
-        PictureBox16.Margin = New Padding(3, 2, 3, 2)
+        PictureBox16.Location = New Point(15, 36)
         PictureBox16.Name = "PictureBox16"
-        PictureBox16.Size = New Size(28, 25)
+        PictureBox16.Size = New Size(32, 33)
         PictureBox16.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox16.TabIndex = 8
         PictureBox16.TabStop = False
@@ -2111,20 +2088,20 @@ Partial Class FORM_ADMIN
         lblSalesPenalties.AutoSize = True
         lblSalesPenalties.Font = New Font("Microsoft Sans Serif", 16.2F)
         lblSalesPenalties.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblSalesPenalties.Location = New Point(46, 27)
+        lblSalesPenalties.Location = New Point(53, 36)
         lblSalesPenalties.Name = "lblSalesPenalties"
-        lblSalesPenalties.Size = New Size(36, 26)
+        lblSalesPenalties.Size = New Size(46, 32)
         lblSalesPenalties.TabIndex = 7
         lblSalesPenalties.Text = "69"
         ' 
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.Gray
-        Label11.Location = New Point(46, 58)
+        Label11.Location = New Point(53, 77)
         Label11.Name = "Label11"
-        Label11.Size = New Size(69, 15)
+        Label11.Size = New Size(86, 18)
         Label11.TabIndex = 6
         Label11.Text = "PENALTIES"
         ' 
@@ -2134,10 +2111,9 @@ Partial Class FORM_ADMIN
         Panel26.Controls.Add(lblSalesIncome)
         Panel26.Controls.Add(PictureBox17)
         Panel26.Controls.Add(Label43)
-        Panel26.Location = New Point(578, 5)
-        Panel26.Margin = New Padding(3, 2, 3, 2)
+        Panel26.Location = New Point(661, 7)
         Panel26.Name = "Panel26"
-        Panel26.Size = New Size(192, 95)
+        Panel26.Size = New Size(219, 127)
         Panel26.TabIndex = 16
         ' 
         ' lblSalesIncome
@@ -2145,19 +2121,18 @@ Partial Class FORM_ADMIN
         lblSalesIncome.AutoSize = True
         lblSalesIncome.Font = New Font("Microsoft Sans Serif", 16.2F)
         lblSalesIncome.ForeColor = Color.White
-        lblSalesIncome.Location = New Point(46, 28)
+        lblSalesIncome.Location = New Point(53, 37)
         lblSalesIncome.Name = "lblSalesIncome"
-        lblSalesIncome.Size = New Size(36, 26)
+        lblSalesIncome.Size = New Size(46, 32)
         lblSalesIncome.TabIndex = 7
         lblSalesIncome.Text = "69"
         ' 
         ' PictureBox17
         ' 
         PictureBox17.Image = My.Resources.Resources.income_iconwhite
-        PictureBox17.Location = New Point(13, 30)
-        PictureBox17.Margin = New Padding(3, 2, 3, 2)
+        PictureBox17.Location = New Point(15, 40)
         PictureBox17.Name = "PictureBox17"
-        PictureBox17.Size = New Size(28, 25)
+        PictureBox17.Size = New Size(32, 33)
         PictureBox17.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox17.TabIndex = 7
         PictureBox17.TabStop = False
@@ -2165,11 +2140,11 @@ Partial Class FORM_ADMIN
         ' Label43
         ' 
         Label43.AutoSize = True
-        Label43.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label43.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label43.ForeColor = Color.White
-        Label43.Location = New Point(46, 62)
+        Label43.Location = New Point(53, 83)
         Label43.Name = "Label43"
-        Label43.Size = New Size(57, 15)
+        Label43.Size = New Size(72, 18)
         Label43.TabIndex = 6
         Label43.Text = "INCOME"
         ' 
@@ -2179,19 +2154,17 @@ Partial Class FORM_ADMIN
         Panel23.Controls.Add(PictureBox15)
         Panel23.Controls.Add(lblSalesCost)
         Panel23.Controls.Add(Label38)
-        Panel23.Location = New Point(385, 5)
-        Panel23.Margin = New Padding(3, 2, 3, 2)
+        Panel23.Location = New Point(440, 7)
         Panel23.Name = "Panel23"
-        Panel23.Size = New Size(165, 82)
+        Panel23.Size = New Size(189, 109)
         Panel23.TabIndex = 10
         ' 
         ' PictureBox15
         ' 
         PictureBox15.Image = My.Resources.Resources.income_icon
-        PictureBox15.Location = New Point(13, 27)
-        PictureBox15.Margin = New Padding(3, 2, 3, 2)
+        PictureBox15.Location = New Point(15, 36)
         PictureBox15.Name = "PictureBox15"
-        PictureBox15.Size = New Size(28, 25)
+        PictureBox15.Size = New Size(32, 33)
         PictureBox15.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox15.TabIndex = 8
         PictureBox15.TabStop = False
@@ -2201,9 +2174,9 @@ Partial Class FORM_ADMIN
         lblSalesCost.AutoSize = True
         lblSalesCost.Font = New Font("Microsoft Sans Serif", 16.2F)
         lblSalesCost.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblSalesCost.Location = New Point(46, 27)
+        lblSalesCost.Location = New Point(53, 36)
         lblSalesCost.Name = "lblSalesCost"
-        lblSalesCost.Size = New Size(36, 26)
+        lblSalesCost.Size = New Size(46, 32)
         lblSalesCost.TabIndex = 7
         lblSalesCost.Text = "69"
         ' 
@@ -2212,9 +2185,9 @@ Partial Class FORM_ADMIN
         Label38.AutoSize = True
         Label38.Font = New Font("Futura Hv BT", 7.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label38.ForeColor = Color.Gray
-        Label38.Location = New Point(22, 58)
+        Label38.Location = New Point(25, 77)
         Label38.Name = "Label38"
-        Label38.Size = New Size(121, 14)
+        Label38.Size = New Size(142, 16)
         Label38.TabIndex = 6
         Label38.Text = "MAINTENANCE COST"
         ' 
@@ -2222,44 +2195,40 @@ Partial Class FORM_ADMIN
         ' 
         Button4.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button4.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.White
-        Button4.Location = New Point(246, 106)
-        Button4.Margin = New Padding(3, 2, 3, 2)
+        Button4.Location = New Point(281, 141)
         Button4.Name = "Button4"
-        Button4.Size = New Size(108, 26)
+        Button4.Size = New Size(123, 35)
         Button4.TabIndex = 15
         Button4.Text = "SEARCH"
         Button4.UseVisualStyleBackColor = False
         ' 
         ' txtbxSales
         ' 
-        txtbxSales.Font = New Font("Futura Bk BT", 12F)
-        txtbxSales.Location = New Point(22, 106)
-        txtbxSales.Margin = New Padding(3, 2, 3, 2)
+        txtbxSales.Font = New Font("Futura Bk BT", 12.0F)
+        txtbxSales.Location = New Point(25, 141)
         txtbxSales.Name = "txtbxSales"
-        txtbxSales.Size = New Size(203, 27)
+        txtbxSales.Size = New Size(231, 31)
         txtbxSales.TabIndex = 14
         ' 
         ' dgvSales
         ' 
         dgvSales.BackgroundColor = Color.White
         dgvSales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvSales.Location = New Point(22, 175)
-        dgvSales.Margin = New Padding(3, 2, 3, 2)
+        dgvSales.Location = New Point(25, 233)
         dgvSales.Name = "dgvSales"
         dgvSales.RowHeadersWidth = 51
-        dgvSales.Size = New Size(747, 238)
+        dgvSales.Size = New Size(642, 278)
         dgvSales.TabIndex = 13
         ' 
         ' Panel25
         ' 
         Panel25.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Panel25.Controls.Add(Label41)
-        Panel25.Location = New Point(22, 143)
-        Panel25.Margin = New Padding(3, 2, 3, 2)
+        Panel25.Location = New Point(25, 191)
         Panel25.Name = "Panel25"
-        Panel25.Size = New Size(747, 33)
+        Panel25.Size = New Size(642, 44)
         Panel25.TabIndex = 11
         ' 
         ' Label41
@@ -2267,9 +2236,9 @@ Partial Class FORM_ADMIN
         Label41.AutoSize = True
         Label41.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label41.ForeColor = Color.White
-        Label41.Location = New Point(10, 6)
+        Label41.Location = New Point(11, 8)
         Label41.Name = "Label41"
-        Label41.Size = New Size(85, 23)
+        Label41.Size = New Size(102, 28)
         Label41.TabIndex = 7
         Label41.Text = "SALES"
         ' 
@@ -2285,22 +2254,20 @@ Partial Class FORM_ADMIN
         pnlUsersContent.Controls.Add(Panel29)
         pnlUsersContent.Controls.Add(Button10)
         pnlUsersContent.Controls.Add(Panel46)
-        pnlUsersContent.Location = New Point(1138, 60)
-        pnlUsersContent.Margin = New Padding(3, 2, 3, 2)
+        pnlUsersContent.Location = New Point(1301, 80)
         pnlUsersContent.Name = "pnlUsersContent"
-        pnlUsersContent.Size = New Size(801, 423)
+        pnlUsersContent.Size = New Size(915, 564)
         pnlUsersContent.TabIndex = 18
         ' 
         ' Button8
         ' 
         Button8.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button8.FlatStyle = FlatStyle.Flat
-        Button8.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button8.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button8.ForeColor = Color.White
-        Button8.Location = New Point(497, 106)
-        Button8.Margin = New Padding(3, 2, 3, 2)
+        Button8.Location = New Point(568, 141)
         Button8.Name = "Button8"
-        Button8.Size = New Size(131, 26)
+        Button8.Size = New Size(150, 35)
         Button8.TabIndex = 17
         Button8.Text = "DELETE USER"
         Button8.UseVisualStyleBackColor = False
@@ -2309,12 +2276,11 @@ Partial Class FORM_ADMIN
         ' 
         Button7.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button7.FlatStyle = FlatStyle.Flat
-        Button7.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button7.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button7.ForeColor = Color.White
-        Button7.Location = New Point(375, 106)
-        Button7.Margin = New Padding(3, 2, 3, 2)
+        Button7.Location = New Point(429, 141)
         Button7.Name = "Button7"
-        Button7.Size = New Size(108, 26)
+        Button7.Size = New Size(123, 35)
         Button7.TabIndex = 16
         Button7.Text = "EDIT USER"
         Button7.UseVisualStyleBackColor = False
@@ -2325,10 +2291,9 @@ Partial Class FORM_ADMIN
         Panel31.Controls.Add(lblUserPaid)
         Panel31.Controls.Add(PictureBox20)
         Panel31.Controls.Add(Label12)
-        Panel31.Location = New Point(429, 5)
-        Panel31.Margin = New Padding(3, 2, 3, 2)
+        Panel31.Location = New Point(490, 7)
         Panel31.Name = "Panel31"
-        Panel31.Size = New Size(184, 90)
+        Panel31.Size = New Size(210, 120)
         Panel31.TabIndex = 11
         ' 
         ' lblUserPaid
@@ -2336,19 +2301,18 @@ Partial Class FORM_ADMIN
         lblUserPaid.AutoSize = True
         lblUserPaid.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblUserPaid.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblUserPaid.Location = New Point(22, 20)
+        lblUserPaid.Location = New Point(25, 27)
         lblUserPaid.Name = "lblUserPaid"
-        lblUserPaid.Size = New Size(55, 39)
+        lblUserPaid.Size = New Size(70, 52)
         lblUserPaid.TabIndex = 7
         lblUserPaid.Text = "69"
         ' 
         ' PictureBox20
         ' 
         PictureBox20.Image = My.Resources.Resources.car_icon
-        PictureBox20.Location = New Point(111, 27)
-        PictureBox20.Margin = New Padding(3, 2, 3, 2)
+        PictureBox20.Location = New Point(127, 36)
         PictureBox20.Name = "PictureBox20"
-        PictureBox20.Size = New Size(41, 26)
+        PictureBox20.Size = New Size(47, 35)
         PictureBox20.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox20.TabIndex = 7
         PictureBox20.TabStop = False
@@ -2356,11 +2320,11 @@ Partial Class FORM_ADMIN
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label12.ForeColor = Color.Gray
-        Label12.Location = New Point(31, 63)
+        Label12.Location = New Point(35, 84)
         Label12.Name = "Label12"
-        Label12.Size = New Size(102, 15)
+        Label12.Size = New Size(126, 18)
         Label12.TabIndex = 6
         Label12.Text = "PAID PENALTIES"
         ' 
@@ -2370,10 +2334,9 @@ Partial Class FORM_ADMIN
         Panel30.Controls.Add(lblUserUnpaid)
         Panel30.Controls.Add(PictureBox18)
         Panel30.Controls.Add(Label8)
-        Panel30.Location = New Point(227, 5)
-        Panel30.Margin = New Padding(3, 2, 3, 2)
+        Panel30.Location = New Point(259, 7)
         Panel30.Name = "Panel30"
-        Panel30.Size = New Size(184, 90)
+        Panel30.Size = New Size(210, 120)
         Panel30.TabIndex = 10
         ' 
         ' lblUserUnpaid
@@ -2381,19 +2344,18 @@ Partial Class FORM_ADMIN
         lblUserUnpaid.AutoSize = True
         lblUserUnpaid.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblUserUnpaid.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblUserUnpaid.Location = New Point(22, 20)
+        lblUserUnpaid.Location = New Point(25, 27)
         lblUserUnpaid.Name = "lblUserUnpaid"
-        lblUserUnpaid.Size = New Size(55, 39)
+        lblUserUnpaid.Size = New Size(70, 52)
         lblUserUnpaid.TabIndex = 7
         lblUserUnpaid.Text = "69"
         ' 
         ' PictureBox18
         ' 
         PictureBox18.Image = My.Resources.Resources.car_icon
-        PictureBox18.Location = New Point(111, 27)
-        PictureBox18.Margin = New Padding(3, 2, 3, 2)
+        PictureBox18.Location = New Point(127, 36)
         PictureBox18.Name = "PictureBox18"
-        PictureBox18.Size = New Size(41, 26)
+        PictureBox18.Size = New Size(47, 35)
         PictureBox18.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox18.TabIndex = 7
         PictureBox18.TabStop = False
@@ -2401,11 +2363,11 @@ Partial Class FORM_ADMIN
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.Gray
-        Label8.Location = New Point(31, 63)
+        Label8.Location = New Point(35, 84)
         Label8.Name = "Label8"
-        Label8.Size = New Size(121, 15)
+        Label8.Size = New Size(149, 18)
         Label8.TabIndex = 6
         Label8.Text = "UNPAID PENALTIES"
         ' 
@@ -2415,10 +2377,9 @@ Partial Class FORM_ADMIN
         Panel28.Controls.Add(lblUserUsers)
         Panel28.Controls.Add(PictureBox19)
         Panel28.Controls.Add(Label47)
-        Panel28.Location = New Point(22, 5)
-        Panel28.Margin = New Padding(3, 2, 3, 2)
+        Panel28.Location = New Point(25, 7)
         Panel28.Name = "Panel28"
-        Panel28.Size = New Size(184, 90)
+        Panel28.Size = New Size(210, 120)
         Panel28.TabIndex = 9
         ' 
         ' lblUserUsers
@@ -2426,19 +2387,18 @@ Partial Class FORM_ADMIN
         lblUserUsers.AutoSize = True
         lblUserUsers.Font = New Font("Microsoft Sans Serif", 25.8000011F)
         lblUserUsers.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblUserUsers.Location = New Point(22, 20)
+        lblUserUsers.Location = New Point(25, 27)
         lblUserUsers.Name = "lblUserUsers"
-        lblUserUsers.Size = New Size(55, 39)
+        lblUserUsers.Size = New Size(70, 52)
         lblUserUsers.TabIndex = 7
         lblUserUsers.Text = "69"
         ' 
         ' PictureBox19
         ' 
         PictureBox19.Image = My.Resources.Resources.car_icon
-        PictureBox19.Location = New Point(111, 27)
-        PictureBox19.Margin = New Padding(3, 2, 3, 2)
+        PictureBox19.Location = New Point(127, 36)
         PictureBox19.Name = "PictureBox19"
-        PictureBox19.Size = New Size(41, 26)
+        PictureBox19.Size = New Size(47, 35)
         PictureBox19.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox19.TabIndex = 7
         PictureBox19.TabStop = False
@@ -2446,42 +2406,39 @@ Partial Class FORM_ADMIN
         ' Label47
         ' 
         Label47.AutoSize = True
-        Label47.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label47.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label47.ForeColor = Color.Gray
-        Label47.Location = New Point(31, 63)
+        Label47.Location = New Point(35, 84)
         Label47.Name = "Label47"
-        Label47.Size = New Size(42, 15)
+        Label47.Size = New Size(53, 18)
         Label47.TabIndex = 6
         Label47.Text = "USERS"
         ' 
         ' txtbxUsers
         ' 
-        txtbxUsers.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtbxUsers.Location = New Point(22, 106)
-        txtbxUsers.Margin = New Padding(3, 2, 3, 2)
+        txtbxUsers.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtbxUsers.Location = New Point(25, 141)
         txtbxUsers.Name = "txtbxUsers"
-        txtbxUsers.Size = New Size(186, 27)
+        txtbxUsers.Size = New Size(212, 31)
         txtbxUsers.TabIndex = 14
         ' 
         ' dgvAllUSERS
         ' 
         dgvAllUSERS.BackgroundColor = Color.White
         dgvAllUSERS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvAllUSERS.Location = New Point(22, 175)
-        dgvAllUSERS.Margin = New Padding(3, 2, 3, 2)
+        dgvAllUSERS.Location = New Point(25, 233)
         dgvAllUSERS.Name = "dgvAllUSERS"
         dgvAllUSERS.RowHeadersWidth = 51
-        dgvAllUSERS.Size = New Size(747, 238)
+        dgvAllUSERS.Size = New Size(854, 317)
         dgvAllUSERS.TabIndex = 13
         ' 
         ' Panel29
         ' 
         Panel29.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Panel29.Controls.Add(Label48)
-        Panel29.Location = New Point(22, 143)
-        Panel29.Margin = New Padding(3, 2, 3, 2)
+        Panel29.Location = New Point(25, 191)
         Panel29.Name = "Panel29"
-        Panel29.Size = New Size(747, 33)
+        Panel29.Size = New Size(854, 44)
         Panel29.TabIndex = 11
         ' 
         ' Label48
@@ -2489,9 +2446,9 @@ Partial Class FORM_ADMIN
         Label48.AutoSize = True
         Label48.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label48.ForeColor = Color.White
-        Label48.Location = New Point(10, 6)
+        Label48.Location = New Point(11, 8)
         Label48.Name = "Label48"
-        Label48.Size = New Size(85, 23)
+        Label48.Size = New Size(102, 28)
         Label48.TabIndex = 7
         Label48.Text = "USERS"
         ' 
@@ -2499,12 +2456,11 @@ Partial Class FORM_ADMIN
         ' 
         Button10.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button10.FlatStyle = FlatStyle.Flat
-        Button10.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button10.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button10.ForeColor = Color.White
-        Button10.Location = New Point(638, 106)
-        Button10.Margin = New Padding(3, 2, 3, 2)
+        Button10.Location = New Point(729, 141)
         Button10.Name = "Button10"
-        Button10.Size = New Size(131, 26)
+        Button10.Size = New Size(150, 35)
         Button10.TabIndex = 21
         Button10.Text = "ADD PENALTIES"
         Button10.UseVisualStyleBackColor = False
@@ -2514,22 +2470,20 @@ Partial Class FORM_ADMIN
         Panel46.BackColor = Color.White
         Panel46.BorderStyle = BorderStyle.FixedSingle
         Panel46.Controls.Add(ComboBox2)
-        Panel46.Location = New Point(227, 106)
-        Panel46.Margin = New Padding(3, 2, 3, 2)
+        Panel46.Location = New Point(259, 141)
         Panel46.Name = "Panel46"
-        Panel46.Size = New Size(141, 27)
+        Panel46.Size = New Size(161, 35)
         Panel46.TabIndex = 5
         ' 
         ' ComboBox2
         ' 
         ComboBox2.FlatStyle = FlatStyle.Flat
-        ComboBox2.Font = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        ComboBox2.Font = New Font("Futura Bk BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox2.FormattingEnabled = True
         ComboBox2.Items.AddRange(New Object() {"USERS", "PENALTIES"})
-        ComboBox2.Location = New Point(5, 3)
-        ComboBox2.Margin = New Padding(3, 2, 3, 2)
+        ComboBox2.Location = New Point(6, 4)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(135, 23)
+        ComboBox2.Size = New Size(154, 26)
         ComboBox2.TabIndex = 3
         ' 
         ' pnlAddPenalty
@@ -2544,20 +2498,18 @@ Partial Class FORM_ADMIN
         pnlAddPenalty.Controls.Add(Panel55)
         pnlAddPenalty.Controls.Add(Label23)
         pnlAddPenalty.Controls.Add(Panel56)
-        pnlAddPenalty.Location = New Point(1134, 410)
-        pnlAddPenalty.Margin = New Padding(3, 2, 3, 2)
+        pnlAddPenalty.Location = New Point(1296, 547)
         pnlAddPenalty.Name = "pnlAddPenalty"
-        pnlAddPenalty.Size = New Size(586, 253)
+        pnlAddPenalty.Size = New Size(669, 337)
         pnlAddPenalty.TabIndex = 20
         ' 
         ' Panel50
         ' 
         Panel50.BorderStyle = BorderStyle.FixedSingle
         Panel50.Controls.Add(cbPenaltyType)
-        Panel50.Location = New Point(222, 92)
-        Panel50.Margin = New Padding(3, 2, 3, 2)
+        Panel50.Location = New Point(254, 123)
         Panel50.Name = "Panel50"
-        Panel50.Size = New Size(149, 35)
+        Panel50.Size = New Size(170, 46)
         Panel50.TabIndex = 4
         ' 
         ' cbPenaltyType
@@ -2565,42 +2517,38 @@ Partial Class FORM_ADMIN
         cbPenaltyType.FlatStyle = FlatStyle.Flat
         cbPenaltyType.Font = New Font("Futura Bk BT", 10.2F)
         cbPenaltyType.FormattingEnabled = True
-        cbPenaltyType.Location = New Point(12, 7)
-        cbPenaltyType.Margin = New Padding(3, 2, 3, 2)
+        cbPenaltyType.Location = New Point(14, 9)
         cbPenaltyType.Name = "cbPenaltyType"
-        cbPenaltyType.Size = New Size(133, 24)
+        cbPenaltyType.Size = New Size(151, 28)
         cbPenaltyType.TabIndex = 3
         ' 
         ' Panel34
         ' 
         Panel34.BorderStyle = BorderStyle.FixedSingle
         Panel34.Controls.Add(txtPenaltyAmount)
-        Panel34.Location = New Point(46, 189)
-        Panel34.Margin = New Padding(3, 2, 3, 2)
+        Panel34.Location = New Point(53, 252)
         Panel34.Name = "Panel34"
-        Panel34.Size = New Size(215, 35)
+        Panel34.Size = New Size(245, 46)
         Panel34.TabIndex = 5
         ' 
         ' txtPenaltyAmount
         ' 
         txtPenaltyAmount.BorderStyle = BorderStyle.None
         txtPenaltyAmount.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtPenaltyAmount.Location = New Point(13, 9)
-        txtPenaltyAmount.Margin = New Padding(3, 2, 3, 2)
+        txtPenaltyAmount.Location = New Point(15, 12)
         txtPenaltyAmount.Name = "txtPenaltyAmount"
-        txtPenaltyAmount.Size = New Size(184, 17)
+        txtPenaltyAmount.Size = New Size(210, 21)
         txtPenaltyAmount.TabIndex = 2
         ' 
         ' Button9
         ' 
         Button9.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button9.Cursor = Cursors.Hand
-        Button9.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button9.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button9.ForeColor = Color.White
-        Button9.Location = New Point(279, 189)
-        Button9.Margin = New Padding(3, 2, 3, 2)
+        Button9.Location = New Point(319, 252)
         Button9.Name = "Button9"
-        Button9.Size = New Size(174, 35)
+        Button9.Size = New Size(199, 47)
         Button9.TabIndex = 12
         Button9.Text = "SUBMIT"
         Button9.UseVisualStyleBackColor = False
@@ -2609,10 +2557,9 @@ Partial Class FORM_ADMIN
         ' 
         Panel54.BorderStyle = BorderStyle.FixedSingle
         Panel54.Controls.Add(cbPenaltyDescription)
-        Panel54.Location = New Point(46, 142)
-        Panel54.Margin = New Padding(3, 2, 3, 2)
+        Panel54.Location = New Point(53, 189)
         Panel54.Name = "Panel54"
-        Panel54.Size = New Size(460, 35)
+        Panel54.Size = New Size(525, 46)
         Panel54.TabIndex = 4
         ' 
         ' cbPenaltyDescription
@@ -2620,30 +2567,27 @@ Partial Class FORM_ADMIN
         cbPenaltyDescription.FlatStyle = FlatStyle.Flat
         cbPenaltyDescription.Font = New Font("Futura Bk BT", 10.2F)
         cbPenaltyDescription.FormattingEnabled = True
-        cbPenaltyDescription.Location = New Point(16, 7)
-        cbPenaltyDescription.Margin = New Padding(3, 2, 3, 2)
+        cbPenaltyDescription.Location = New Point(18, 9)
         cbPenaltyDescription.Name = "cbPenaltyDescription"
-        cbPenaltyDescription.Size = New Size(440, 24)
+        cbPenaltyDescription.Size = New Size(502, 28)
         cbPenaltyDescription.TabIndex = 4
         ' 
         ' Panel55
         ' 
         Panel55.BorderStyle = BorderStyle.FixedSingle
         Panel55.Controls.Add(txtPenaltyRentalID)
-        Panel55.Location = New Point(46, 92)
-        Panel55.Margin = New Padding(3, 2, 3, 2)
+        Panel55.Location = New Point(53, 123)
         Panel55.Name = "Panel55"
-        Panel55.Size = New Size(149, 35)
+        Panel55.Size = New Size(170, 46)
         Panel55.TabIndex = 3
         ' 
         ' txtPenaltyRentalID
         ' 
         txtPenaltyRentalID.BorderStyle = BorderStyle.None
         txtPenaltyRentalID.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtPenaltyRentalID.Location = New Point(18, 9)
-        txtPenaltyRentalID.Margin = New Padding(3, 2, 3, 2)
+        txtPenaltyRentalID.Location = New Point(21, 12)
         txtPenaltyRentalID.Name = "txtPenaltyRentalID"
-        txtPenaltyRentalID.Size = New Size(109, 17)
+        txtPenaltyRentalID.Size = New Size(125, 21)
         txtPenaltyRentalID.TabIndex = 2
         ' 
         ' Label23
@@ -2651,9 +2595,9 @@ Partial Class FORM_ADMIN
         Label23.AutoSize = True
         Label23.Font = New Font("Futura Hv BT", 22.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label23.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label23.Location = New Point(165, 43)
+        Label23.Location = New Point(189, 57)
         Label23.Name = "Label23"
-        Label23.Size = New Size(220, 36)
+        Label23.Size = New Size(272, 45)
         Label23.TabIndex = 1
         Label23.Text = "ADD PENALTY"
         ' 
@@ -2663,19 +2607,18 @@ Partial Class FORM_ADMIN
         Panel56.Controls.Add(Label25)
         Panel56.Dock = DockStyle.Top
         Panel56.Location = New Point(0, 0)
-        Panel56.Margin = New Padding(3, 2, 3, 2)
         Panel56.Name = "Panel56"
-        Panel56.Size = New Size(584, 30)
+        Panel56.Size = New Size(667, 40)
         Panel56.TabIndex = 0
         ' 
         ' Label25
         ' 
         Label25.AutoSize = True
-        Label25.Font = New Font("Futura XBlk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label25.Font = New Font("Futura XBlk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label25.ForeColor = Color.White
-        Label25.Location = New Point(13, 7)
+        Label25.Location = New Point(15, 9)
         Label25.Name = "Label25"
-        Label25.Size = New Size(20, 19)
+        Label25.Size = New Size(24, 24)
         Label25.TabIndex = 14
         Label25.Text = "X"
         ' 
@@ -2697,18 +2640,16 @@ Partial Class FORM_ADMIN
         pnlUsersEditUser.Controls.Add(Panel36)
         pnlUsersEditUser.Controls.Add(Label3)
         pnlUsersEditUser.Controls.Add(Panel35)
-        pnlUsersEditUser.Location = New Point(1138, 60)
-        pnlUsersEditUser.Margin = New Padding(3, 2, 3, 2)
+        pnlUsersEditUser.Location = New Point(1301, 80)
         pnlUsersEditUser.Name = "pnlUsersEditUser"
-        pnlUsersEditUser.Size = New Size(586, 253)
+        pnlUsersEditUser.Size = New Size(669, 337)
         pnlUsersEditUser.TabIndex = 19
         ' 
         ' Panel45
         ' 
-        Panel45.Location = New Point(46, 475)
-        Panel45.Margin = New Padding(3, 2, 3, 2)
+        Panel45.Location = New Point(53, 633)
         Panel45.Name = "Panel45"
-        Panel45.Size = New Size(496, 34)
+        Panel45.Size = New Size(567, 45)
         Panel45.TabIndex = 13
         ' 
         ' btnEditUser
@@ -2717,10 +2658,9 @@ Partial Class FORM_ADMIN
         btnEditUser.Cursor = Cursors.Hand
         btnEditUser.Font = New Font("Futura Hv BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnEditUser.ForeColor = Color.White
-        btnEditUser.Location = New Point(198, 443)
-        btnEditUser.Margin = New Padding(3, 2, 3, 2)
+        btnEditUser.Location = New Point(226, 591)
         btnEditUser.Name = "btnEditUser"
-        btnEditUser.Size = New Size(174, 35)
+        btnEditUser.Size = New Size(199, 47)
         btnEditUser.TabIndex = 12
         btnEditUser.Text = "SUBMIT"
         btnEditUser.UseVisualStyleBackColor = False
@@ -2729,180 +2669,162 @@ Partial Class FORM_ADMIN
         ' 
         Panel44.BorderStyle = BorderStyle.FixedSingle
         Panel44.Controls.Add(txtEditExpiry)
-        Panel44.Location = New Point(46, 376)
-        Panel44.Margin = New Padding(3, 2, 3, 2)
+        Panel44.Location = New Point(53, 501)
         Panel44.Name = "Panel44"
-        Panel44.Size = New Size(496, 35)
+        Panel44.Size = New Size(567, 46)
         Panel44.TabIndex = 11
         ' 
         ' txtEditExpiry
         ' 
         txtEditExpiry.BorderStyle = BorderStyle.None
         txtEditExpiry.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtEditExpiry.Location = New Point(18, 9)
-        txtEditExpiry.Margin = New Padding(3, 2, 3, 2)
+        txtEditExpiry.Location = New Point(21, 12)
         txtEditExpiry.Name = "txtEditExpiry"
-        txtEditExpiry.Size = New Size(458, 17)
+        txtEditExpiry.Size = New Size(523, 21)
         txtEditExpiry.TabIndex = 2
         ' 
         ' Panel43
         ' 
         Panel43.BorderStyle = BorderStyle.FixedSingle
         Panel43.Controls.Add(txtEditLicense)
-        Panel43.Location = New Point(46, 326)
-        Panel43.Margin = New Padding(3, 2, 3, 2)
+        Panel43.Location = New Point(53, 435)
         Panel43.Name = "Panel43"
-        Panel43.Size = New Size(496, 35)
+        Panel43.Size = New Size(567, 46)
         Panel43.TabIndex = 10
         ' 
         ' txtEditLicense
         ' 
         txtEditLicense.BorderStyle = BorderStyle.None
         txtEditLicense.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtEditLicense.Location = New Point(18, 9)
-        txtEditLicense.Margin = New Padding(3, 2, 3, 2)
+        txtEditLicense.Location = New Point(21, 12)
         txtEditLicense.Name = "txtEditLicense"
-        txtEditLicense.Size = New Size(458, 17)
+        txtEditLicense.Size = New Size(523, 21)
         txtEditLicense.TabIndex = 2
         ' 
         ' Panel41
         ' 
         Panel41.BorderStyle = BorderStyle.FixedSingle
         Panel41.Controls.Add(txtEditAddress)
-        Panel41.Location = New Point(46, 280)
-        Panel41.Margin = New Padding(3, 2, 3, 2)
+        Panel41.Location = New Point(53, 373)
         Panel41.Name = "Panel41"
-        Panel41.Size = New Size(496, 35)
+        Panel41.Size = New Size(567, 46)
         Panel41.TabIndex = 9
         ' 
         ' txtEditAddress
         ' 
         txtEditAddress.BorderStyle = BorderStyle.None
         txtEditAddress.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtEditAddress.Location = New Point(18, 9)
-        txtEditAddress.Margin = New Padding(3, 2, 3, 2)
+        txtEditAddress.Location = New Point(21, 12)
         txtEditAddress.Name = "txtEditAddress"
-        txtEditAddress.Size = New Size(458, 17)
+        txtEditAddress.Size = New Size(523, 21)
         txtEditAddress.TabIndex = 2
         ' 
         ' Panel42
         ' 
         Panel42.BorderStyle = BorderStyle.FixedSingle
         Panel42.Controls.Add(txtEditPhone)
-        Panel42.Location = New Point(46, 231)
-        Panel42.Margin = New Padding(3, 2, 3, 2)
+        Panel42.Location = New Point(53, 308)
         Panel42.Name = "Panel42"
-        Panel42.Size = New Size(239, 35)
+        Panel42.Size = New Size(273, 46)
         Panel42.TabIndex = 8
         ' 
         ' txtEditPhone
         ' 
         txtEditPhone.BorderStyle = BorderStyle.None
         txtEditPhone.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtEditPhone.Location = New Point(18, 9)
-        txtEditPhone.Margin = New Padding(3, 2, 3, 2)
+        txtEditPhone.Location = New Point(21, 12)
         txtEditPhone.Name = "txtEditPhone"
-        txtEditPhone.Size = New Size(200, 17)
+        txtEditPhone.Size = New Size(229, 21)
         txtEditPhone.TabIndex = 2
         ' 
         ' Panel39
         ' 
         Panel39.BorderStyle = BorderStyle.FixedSingle
         Panel39.Controls.Add(txtEditBirth)
-        Panel39.Location = New Point(303, 183)
-        Panel39.Margin = New Padding(3, 2, 3, 2)
+        Panel39.Location = New Point(346, 244)
         Panel39.Name = "Panel39"
-        Panel39.Size = New Size(239, 35)
+        Panel39.Size = New Size(273, 46)
         Panel39.TabIndex = 7
         ' 
         ' txtEditBirth
         ' 
         txtEditBirth.BorderStyle = BorderStyle.None
         txtEditBirth.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtEditBirth.Location = New Point(18, 9)
-        txtEditBirth.Margin = New Padding(3, 2, 3, 2)
+        txtEditBirth.Location = New Point(21, 12)
         txtEditBirth.Name = "txtEditBirth"
-        txtEditBirth.Size = New Size(200, 17)
+        txtEditBirth.Size = New Size(229, 21)
         txtEditBirth.TabIndex = 2
         ' 
         ' Panel40
         ' 
         Panel40.BorderStyle = BorderStyle.FixedSingle
         Panel40.Controls.Add(txtEditEmail)
-        Panel40.Location = New Point(46, 183)
-        Panel40.Margin = New Padding(3, 2, 3, 2)
+        Panel40.Location = New Point(53, 244)
         Panel40.Name = "Panel40"
-        Panel40.Size = New Size(239, 35)
+        Panel40.Size = New Size(273, 46)
         Panel40.TabIndex = 6
         ' 
         ' txtEditEmail
         ' 
         txtEditEmail.BorderStyle = BorderStyle.None
         txtEditEmail.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtEditEmail.Location = New Point(18, 9)
-        txtEditEmail.Margin = New Padding(3, 2, 3, 2)
+        txtEditEmail.Location = New Point(21, 12)
         txtEditEmail.Name = "txtEditEmail"
-        txtEditEmail.Size = New Size(200, 17)
+        txtEditEmail.Size = New Size(229, 21)
         txtEditEmail.TabIndex = 2
         ' 
         ' Panel38
         ' 
         Panel38.BorderStyle = BorderStyle.FixedSingle
         Panel38.Controls.Add(txtEditLast)
-        Panel38.Location = New Point(303, 136)
-        Panel38.Margin = New Padding(3, 2, 3, 2)
+        Panel38.Location = New Point(346, 181)
         Panel38.Name = "Panel38"
-        Panel38.Size = New Size(239, 35)
+        Panel38.Size = New Size(273, 46)
         Panel38.TabIndex = 5
         ' 
         ' txtEditLast
         ' 
         txtEditLast.BorderStyle = BorderStyle.None
         txtEditLast.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtEditLast.Location = New Point(18, 9)
-        txtEditLast.Margin = New Padding(3, 2, 3, 2)
+        txtEditLast.Location = New Point(21, 12)
         txtEditLast.Name = "txtEditLast"
-        txtEditLast.Size = New Size(200, 17)
+        txtEditLast.Size = New Size(229, 21)
         txtEditLast.TabIndex = 2
         ' 
         ' Panel37
         ' 
         Panel37.BorderStyle = BorderStyle.FixedSingle
         Panel37.Controls.Add(txtEditFirst)
-        Panel37.Location = New Point(46, 136)
-        Panel37.Margin = New Padding(3, 2, 3, 2)
+        Panel37.Location = New Point(53, 181)
         Panel37.Name = "Panel37"
-        Panel37.Size = New Size(239, 35)
+        Panel37.Size = New Size(273, 46)
         Panel37.TabIndex = 4
         ' 
         ' txtEditFirst
         ' 
         txtEditFirst.BorderStyle = BorderStyle.None
         txtEditFirst.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtEditFirst.Location = New Point(18, 9)
-        txtEditFirst.Margin = New Padding(3, 2, 3, 2)
+        txtEditFirst.Location = New Point(21, 12)
         txtEditFirst.Name = "txtEditFirst"
-        txtEditFirst.Size = New Size(200, 17)
+        txtEditFirst.Size = New Size(229, 21)
         txtEditFirst.TabIndex = 2
         ' 
         ' Panel36
         ' 
         Panel36.BorderStyle = BorderStyle.FixedSingle
         Panel36.Controls.Add(txtEditID)
-        Panel36.Location = New Point(46, 92)
-        Panel36.Margin = New Padding(3, 2, 3, 2)
+        Panel36.Location = New Point(53, 123)
         Panel36.Name = "Panel36"
-        Panel36.Size = New Size(149, 35)
+        Panel36.Size = New Size(170, 46)
         Panel36.TabIndex = 3
         ' 
         ' txtEditID
         ' 
         txtEditID.BorderStyle = BorderStyle.None
         txtEditID.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtEditID.Location = New Point(18, 9)
-        txtEditID.Margin = New Padding(3, 2, 3, 2)
+        txtEditID.Location = New Point(21, 12)
         txtEditID.Name = "txtEditID"
-        txtEditID.Size = New Size(109, 17)
+        txtEditID.Size = New Size(125, 21)
         txtEditID.TabIndex = 2
         ' 
         ' Label3
@@ -2910,9 +2832,9 @@ Partial Class FORM_ADMIN
         Label3.AutoSize = True
         Label3.Font = New Font("Futura Hv BT", 22.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label3.Location = New Point(179, 44)
+        Label3.Location = New Point(205, 59)
         Label3.Name = "Label3"
-        Label3.Size = New Size(165, 36)
+        Label3.Size = New Size(205, 45)
         Label3.TabIndex = 1
         Label3.Text = "EDIT USER"
         ' 
@@ -2922,19 +2844,18 @@ Partial Class FORM_ADMIN
         Panel35.Controls.Add(Label20)
         Panel35.Dock = DockStyle.Top
         Panel35.Location = New Point(0, 0)
-        Panel35.Margin = New Padding(3, 2, 3, 2)
         Panel35.Name = "Panel35"
-        Panel35.Size = New Size(567, 30)
+        Panel35.Size = New Size(646, 40)
         Panel35.TabIndex = 0
         ' 
         ' Label20
         ' 
         Label20.AutoSize = True
-        Label20.Font = New Font("Futura XBlk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label20.Font = New Font("Futura XBlk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label20.ForeColor = Color.White
-        Label20.Location = New Point(13, 7)
+        Label20.Location = New Point(15, 9)
         Label20.Name = "Label20"
-        Label20.Size = New Size(20, 19)
+        Label20.Size = New Size(24, 24)
         Label20.TabIndex = 14
         Label20.Text = "X"
         ' 
@@ -2942,23 +2863,34 @@ Partial Class FORM_ADMIN
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
+        ' btnFilterDate
+        ' 
+        btnFilterDate.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnFilterDate.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnFilterDate.ForeColor = Color.White
+        btnFilterDate.Location = New Point(695, 381)
+        btnFilterDate.Name = "btnFilterDate"
+        btnFilterDate.Size = New Size(143, 41)
+        btnFilterDate.TabIndex = 23
+        btnFilterDate.Text = "FILTER DATE"
+        btnFilterDate.UseVisualStyleBackColor = False
+        ' 
         ' FORM_ADMIN
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Gainsboro
-        ClientSize = New Size(1199, 562)
-        Controls.Add(pnlAllDashboard)
-        Controls.Add(pnlRentalContent)
-        Controls.Add(pnlMaintenanceContent)
+        ClientSize = New Size(1370, 749)
         Controls.Add(Panel8)
         Controls.Add(Panel1)
-        Controls.Add(pnlUsersContent)
         Controls.Add(pnlSaleContent)
         Controls.Add(pnlcarinventory)
         Controls.Add(pnlUsersEditUser)
         Controls.Add(pnlAddPenalty)
-        Margin = New Padding(3, 2, 3, 2)
+        Controls.Add(pnlAllDashboard)
+        Controls.Add(pnlRentalContent)
+        Controls.Add(pnlMaintenanceContent)
+        Controls.Add(pnlUsersContent)
         Name = "FORM_ADMIN"
         StartPosition = FormStartPosition.CenterScreen
         Text = "FORM_ADMIN"
@@ -3371,4 +3303,11 @@ Partial Class FORM_ADMIN
     Friend WithEvents txtRentalRate As TextBox
     Friend WithEvents btnUploadImage As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents dtpEndDate As DateTimePicker
+    Friend WithEvents dtpStartDate As DateTimePicker
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Button11 As Button
+    Friend WithEvents btnFilterDate As Button
 End Class

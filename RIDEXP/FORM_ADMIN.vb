@@ -55,6 +55,32 @@ Public Class FORM_ADMIN
 
     End Sub
 
+    Private Sub LoadSalesData(Optional ByVal startDate As DateTime = Nothing, Optional ByVal endDate As DateTime = Nothing)
+        Dim query As String
+
+        If startDate = Nothing OrElse endDate = Nothing Then
+            query = "SELECT * FROM sales_report"
+        Else
+            query = "SELECT * FROM sales_report WHERE report_date BETWEEN @start AND @end"
+        End If
+
+        Using conn As New MySqlConnection(connStr)
+            conn.Open()
+            Using cmd As New MySqlCommand(query, conn)
+                If startDate <> Nothing AndAlso endDate <> Nothing Then
+                    cmd.Parameters.AddWithValue("@start", startDate.Date)
+                    cmd.Parameters.AddWithValue("@end", endDate.Date)
+                End If
+
+                Dim adapter As New MySqlDataAdapter(cmd)
+                Dim table As New DataTable()
+                adapter.Fill(table)
+                dgvSales.DataSource = table
+            End Using
+        End Using
+    End Sub
+
+
     Private Sub LoadTotalCompletedRentals(lblPlaceholder As Label)
         Try
             conn.Open()
@@ -599,6 +625,13 @@ Public Class FORM_ADMIN
         LoadTotalPenalties(lblSalesPenalties)
         LoadTotalCost(lblSalesCost)
         LoadTotalIncome(lblSalesIncome)
+
+        dtpStartDate.Format = DateTimePickerFormat.Custom
+        dtpStartDate.CustomFormat = "yyyy-MM-dd"
+
+        dtpEndDate.Format = DateTimePickerFormat.Custom
+        dtpEndDate.CustomFormat = "yyyy-MM-dd"
+
     End Sub
     Private Sub pnlMaintenance_Click(sender As Object, e As EventArgs) Handles pnlMaintenance.Click
         ClickMaintenance()
@@ -890,6 +923,8 @@ Public Class FORM_ADMIN
             MessageBox.Show("Please select a row to delete.")
         End If
     End Sub
+
+
 
     Private Sub cbPenaltyType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPenaltyType.SelectedIndexChanged
         cbPenaltyDescription.Items.Clear()
@@ -1360,8 +1395,32 @@ Public Class FORM_ADMIN
         ClearForm()
     End Sub
 
+    Private Sub dtpStartDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpStartDate.ValueChanged
+        MsgBox("Selected date: " & dtpStartDate.Value)
+    End Sub
+
+    Private Sub dtpEndDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpEndDate.ValueChanged
+        If dtpStartDate.Value > dtpEndDate.Value Then
+            MessageBox.Show("Start date cannot be later than end date.")
+            dtpEndDate.Value = dtpStartDate.Value
+            Return
+        End If
 
 
+    End Sub
 
+    Private Sub Button11_Click_1(sender As Object, e As EventArgs) Handles Button11.Click
+        dtpStartDate.Value = DateTime.Today
+        dtpEndDate.Value = DateTime.Today
+        LoadSalesData()
+    End Sub
 
+    Private Sub btnFilterDate_Click(sender As Object, e As EventArgs) Handles btnFilterDate.Click
+        If dtpStartDate.Value > dtpEndDate.Value Then
+            MessageBox.Show("Start date cannot be later than end date.")
+            Return
+        End If
+
+        LoadSalesData(dtpStartDate.Value, dtpEndDate.Value)
+    End Sub
 End Class
