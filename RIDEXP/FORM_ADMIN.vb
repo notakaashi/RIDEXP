@@ -688,17 +688,17 @@ Public Class FORM_ADMIN
         Next
     End Sub
 
-    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles txtbxSales.TextChanged
-        Dim searchText As String = txtbxSales.Text
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles txtbxSales.TextChanged, TextBox1.TextChanged
+        Dim searchText = txtbxSales.Text
 
-        dgvRentals2.ClearSelection()
+        dgvRentals2.ClearSelection
 
         If searchText = "" Then Exit Sub
 
         For Each row As DataGridViewRow In dgvRentals2.Rows
             If row.IsNewRow Then Continue For
 
-            Dim cellValue As String = row.Cells("report_id").Value.ToString()
+            Dim cellValue = row.Cells("report_id").Value.ToString
 
             If cellValue.Contains(searchText) Then
                 row.Selected = True
@@ -1395,11 +1395,11 @@ Public Class FORM_ADMIN
         ClearForm()
     End Sub
 
-    Private Sub dtpStartDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpStartDate.ValueChanged
+    Private Sub dtpStartDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpStartDate.ValueChanged, DateTimePicker2.ValueChanged
         MsgBox("Selected date: " & dtpStartDate.Value)
     End Sub
 
-    Private Sub dtpEndDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpEndDate.ValueChanged
+    Private Sub dtpEndDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpEndDate.ValueChanged, DateTimePicker1.ValueChanged
         If dtpStartDate.Value > dtpEndDate.Value Then
             MessageBox.Show("Start date cannot be later than end date.")
             dtpEndDate.Value = dtpStartDate.Value
@@ -1409,13 +1409,13 @@ Public Class FORM_ADMIN
 
     End Sub
 
-    Private Sub Button11_Click_1(sender As Object, e As EventArgs) Handles Button11.Click
-        dtpStartDate.Value = DateTime.Today
-        dtpEndDate.Value = DateTime.Today
-        LoadSalesData()
+    Private Sub Button11_Click_1(sender As Object, e As EventArgs) Handles Button11.Click, Button13.Click
+        dtpStartDate.Value = Date.Today
+        dtpEndDate.Value = Date.Today
+        LoadSalesData
     End Sub
 
-    Private Sub btnFilterDate_Click(sender As Object, e As EventArgs) Handles btnFilterDate.Click
+    Private Sub btnFilterDate_Click(sender As Object, e As EventArgs) Handles btnFilterDate.Click, Button12.Click
         If dtpStartDate.Value > dtpEndDate.Value Then
             MessageBox.Show("Start date cannot be later than end date.")
             Return

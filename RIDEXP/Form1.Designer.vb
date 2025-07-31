@@ -40,13 +40,9 @@ Partial Class Form1
         homelbl = New Label()
         rentalslbl = New Label()
         contactslbl = New Label()
-        Button3 = New Button()
-        Button4 = New Button()
         pnlVehicleType = New Panel()
         btnMotor = New Button()
         btnCar = New Button()
-        Button5 = New Button()
-        Button6 = New Button()
         pnlContactUs = New Panel()
         Panel3 = New Panel()
         Label7 = New Label()
@@ -293,24 +289,6 @@ Partial Class Form1
         contactslbl.TabIndex = 22
         contactslbl.Text = "CONTACT US"
         ' 
-        ' Button3
-        ' 
-        Button3.Location = New Point(661, 149)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(94, 29)
-        Button3.TabIndex = 23
-        Button3.Text = "Button3"
-        Button3.UseVisualStyleBackColor = True
-        ' 
-        ' Button4
-        ' 
-        Button4.Location = New Point(661, 184)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(94, 29)
-        Button4.TabIndex = 24
-        Button4.Text = "Button4"
-        Button4.UseVisualStyleBackColor = True
-        ' 
         ' pnlVehicleType
         ' 
         pnlVehicleType.BackColor = Color.White
@@ -346,32 +324,13 @@ Partial Class Form1
         btnCar.TextAlign = ContentAlignment.TopCenter
         btnCar.UseVisualStyleBackColor = True
         ' 
-        ' Button5
-        ' 
-        Button5.Location = New Point(584, 323)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(94, 29)
-        Button5.TabIndex = 25
-        Button5.Text = "Button5"
-        Button5.UseVisualStyleBackColor = True
-        ' 
-        ' Button6
-        ' 
-        Button6.Location = New Point(753, 348)
-        Button6.Margin = New Padding(3, 4, 3, 4)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(86, 31)
-        Button6.TabIndex = 26
-        Button6.Text = "Button6"
-        Button6.UseVisualStyleBackColor = True
-        ' 
         ' pnlContactUs
         ' 
         pnlContactUs.Controls.Add(Panel3)
         pnlContactUs.Controls.Add(Panel5)
         pnlContactUs.Controls.Add(Panel6)
         pnlContactUs.Controls.Add(Panel4)
-        pnlContactUs.Location = New Point(84, 101)
+        pnlContactUs.Location = New Point(78, 115)
         pnlContactUs.Name = "pnlContactUs"
         pnlContactUs.Size = New Size(1050, 447)
         pnlContactUs.TabIndex = 27
@@ -561,11 +520,7 @@ Partial Class Form1
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1262, 673)
         Controls.Add(pnlContactUs)
-        Controls.Add(Button6)
-        Controls.Add(Button5)
         Controls.Add(pnlVehicleType)
-        Controls.Add(Button4)
-        Controls.Add(Button3)
         Controls.Add(contactslbl)
         Controls.Add(rentalslbl)
         Controls.Add(homelbl)
@@ -625,13 +580,9 @@ Partial Class Form1
     Friend WithEvents homelbl As Label
     Friend WithEvents rentalslbl As Label
     Friend WithEvents contactslbl As Label
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents pnlVehicleType As Panel
     Friend WithEvents btnMotor As Button
     Friend WithEvents btnCar As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
     Friend WithEvents pnlContactUs As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel3 As Panel

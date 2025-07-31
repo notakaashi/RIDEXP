@@ -22,10 +22,10 @@ Partial Class FORM_ADMIN
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         pnlUsers = New Panel()
         iconUsers = New PictureBox()
@@ -170,6 +170,7 @@ Partial Class FORM_ADMIN
         Label32 = New Label()
         dgvMaintenance = New DataGridView()
         pnlSaleContent = New Panel()
+        btnFilterDate = New Button()
         Button11 = New Button()
         Label36 = New Label()
         Label35 = New Label()
@@ -257,7 +258,35 @@ Partial Class FORM_ADMIN
         Panel35 = New Panel()
         Label20 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
-        btnFilterDate = New Button()
+        Panel47 = New Panel()
+        Button12 = New Button()
+        Button13 = New Button()
+        Label37 = New Label()
+        Label44 = New Label()
+        Label45 = New Label()
+        DateTimePicker1 = New DateTimePicker()
+        DateTimePicker2 = New DateTimePicker()
+        Panel64 = New Panel()
+        PictureBox23 = New PictureBox()
+        Label46 = New Label()
+        Label49 = New Label()
+        Panel65 = New Panel()
+        PictureBox24 = New PictureBox()
+        Label50 = New Label()
+        Label51 = New Label()
+        Panel66 = New Panel()
+        Label52 = New Label()
+        PictureBox25 = New PictureBox()
+        Label53 = New Label()
+        Panel67 = New Panel()
+        PictureBox26 = New PictureBox()
+        Label54 = New Label()
+        Label55 = New Label()
+        Button14 = New Button()
+        TextBox1 = New TextBox()
+        DataGridView1 = New DataGridView()
+        Panel68 = New Panel()
+        Label56 = New Label()
         Panel1.SuspendLayout()
         pnlUsers.SuspendLayout()
         CType(iconUsers, ComponentModel.ISupportInitialize).BeginInit()
@@ -369,6 +398,17 @@ Partial Class FORM_ADMIN
         Panel37.SuspendLayout()
         Panel36.SuspendLayout()
         Panel35.SuspendLayout()
+        Panel47.SuspendLayout()
+        Panel64.SuspendLayout()
+        CType(PictureBox23, ComponentModel.ISupportInitialize).BeginInit()
+        Panel65.SuspendLayout()
+        CType(PictureBox24, ComponentModel.ISupportInitialize).BeginInit()
+        Panel66.SuspendLayout()
+        CType(PictureBox25, ComponentModel.ISupportInitialize).BeginInit()
+        Panel67.SuspendLayout()
+        CType(PictureBox26, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel68.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -385,7 +425,7 @@ Partial Class FORM_ADMIN
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(290, 749)
+        Panel1.Size = New Size(290, 673)
         Panel1.TabIndex = 0
         ' 
         ' pnlUsers
@@ -604,7 +644,7 @@ Partial Class FORM_ADMIN
         Panel8.Dock = DockStyle.Top
         Panel8.Location = New Point(290, 0)
         Panel8.Name = "Panel8"
-        Panel8.Size = New Size(1080, 75)
+        Panel8.Size = New Size(972, 75)
         Panel8.TabIndex = 1
         ' 
         ' Button6
@@ -644,11 +684,11 @@ Partial Class FORM_ADMIN
         ' lblDashUsers
         ' 
         lblDashUsers.AutoSize = True
-        lblDashUsers.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblDashUsers.Font = New Font("Designer", 25.8000011F)
         lblDashUsers.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblDashUsers.Location = New Point(27, 27)
         lblDashUsers.Name = "lblDashUsers"
-        lblDashUsers.Size = New Size(70, 52)
+        lblDashUsers.Size = New Size(96, 57)
         lblDashUsers.TabIndex = 7
         lblDashUsers.Text = "69"
         ' 
@@ -687,11 +727,11 @@ Partial Class FORM_ADMIN
         ' lblDashRentals
         ' 
         lblDashRentals.AutoSize = True
-        lblDashRentals.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblDashRentals.Font = New Font("Designer", 25.8000011F)
         lblDashRentals.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblDashRentals.Location = New Point(29, 29)
         lblDashRentals.Name = "lblDashRentals"
-        lblDashRentals.Size = New Size(70, 52)
+        lblDashRentals.Size = New Size(96, 57)
         lblDashRentals.TabIndex = 7
         lblDashRentals.Text = "69"
         ' 
@@ -730,11 +770,11 @@ Partial Class FORM_ADMIN
         ' lblDashIncome
         ' 
         lblDashIncome.AutoSize = True
-        lblDashIncome.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDashIncome.Font = New Font("Designer", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblDashIncome.ForeColor = Color.White
         lblDashIncome.Location = New Point(59, 43)
         lblDashIncome.Name = "lblDashIncome"
-        lblDashIncome.Size = New Size(46, 32)
+        lblDashIncome.Size = New Size(60, 36)
         lblDashIncome.TabIndex = 7
         lblDashIncome.Text = "69"
         ' 
@@ -773,11 +813,11 @@ Partial Class FORM_ADMIN
         ' lblDashAvailableCars
         ' 
         lblDashAvailableCars.AutoSize = True
-        lblDashAvailableCars.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblDashAvailableCars.Font = New Font("Designer", 25.8000011F)
         lblDashAvailableCars.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblDashAvailableCars.Location = New Point(29, 29)
         lblDashAvailableCars.Name = "lblDashAvailableCars"
-        lblDashAvailableCars.Size = New Size(70, 52)
+        lblDashAvailableCars.Size = New Size(96, 57)
         lblDashAvailableCars.TabIndex = 7
         lblDashAvailableCars.Text = "69"
         ' 
@@ -852,7 +892,7 @@ Partial Class FORM_ADMIN
         pnlAllDashboard.Controls.Add(Panel11)
         pnlAllDashboard.Controls.Add(Panel10)
         pnlAllDashboard.Controls.Add(Panel9)
-        pnlAllDashboard.Location = New Point(1301, 80)
+        pnlAllDashboard.Location = New Point(314, 97)
         pnlAllDashboard.Name = "pnlAllDashboard"
         pnlAllDashboard.Size = New Size(949, 564)
         pnlAllDashboard.TabIndex = 13
@@ -872,23 +912,23 @@ Partial Class FORM_ADMIN
         dgvRentals.BackgroundColor = Color.White
         dgvRentals.BorderStyle = BorderStyle.Fixed3D
         dgvRentals.CellBorderStyle = DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dgvRentals.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = SystemColors.Control
+        DataGridViewCellStyle9.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle9.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.True
+        dgvRentals.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         dgvRentals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = Color.White
-        DataGridViewCellStyle2.Font = New Font("Futura Lt BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        dgvRentals.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = Color.White
+        DataGridViewCellStyle10.Font = New Font("Futura Lt BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle10.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = DataGridViewTriState.False
+        dgvRentals.DefaultCellStyle = DataGridViewCellStyle10
         dgvRentals.Location = New Point(14, 229)
         dgvRentals.Name = "dgvRentals"
         dgvRentals.RowHeadersWidth = 51
@@ -1255,11 +1295,11 @@ Partial Class FORM_ADMIN
         ' lblInventoryRentals
         ' 
         lblInventoryRentals.AutoSize = True
-        lblInventoryRentals.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblInventoryRentals.Font = New Font("Designer", 25.8000011F)
         lblInventoryRentals.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblInventoryRentals.Location = New Point(25, 27)
         lblInventoryRentals.Name = "lblInventoryRentals"
-        lblInventoryRentals.Size = New Size(70, 52)
+        lblInventoryRentals.Size = New Size(96, 57)
         lblInventoryRentals.TabIndex = 7
         lblInventoryRentals.Text = "69"
         ' 
@@ -1298,11 +1338,11 @@ Partial Class FORM_ADMIN
         ' lblInventoryDamaged
         ' 
         lblInventoryDamaged.AutoSize = True
-        lblInventoryDamaged.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblInventoryDamaged.Font = New Font("Designer", 25.8000011F)
         lblInventoryDamaged.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblInventoryDamaged.Location = New Point(25, 27)
         lblInventoryDamaged.Name = "lblInventoryDamaged"
-        lblInventoryDamaged.Size = New Size(70, 52)
+        lblInventoryDamaged.Size = New Size(96, 57)
         lblInventoryDamaged.TabIndex = 7
         lblInventoryDamaged.Text = "69"
         ' 
@@ -1341,11 +1381,11 @@ Partial Class FORM_ADMIN
         ' lblInventoryMaintenance
         ' 
         lblInventoryMaintenance.AutoSize = True
-        lblInventoryMaintenance.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblInventoryMaintenance.Font = New Font("Designer", 25.8000011F)
         lblInventoryMaintenance.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblInventoryMaintenance.Location = New Point(25, 27)
         lblInventoryMaintenance.Name = "lblInventoryMaintenance"
-        lblInventoryMaintenance.Size = New Size(70, 52)
+        lblInventoryMaintenance.Size = New Size(96, 57)
         lblInventoryMaintenance.TabIndex = 7
         lblInventoryMaintenance.Text = "69"
         ' 
@@ -1397,11 +1437,11 @@ Partial Class FORM_ADMIN
         ' lblInventoryAvailable
         ' 
         lblInventoryAvailable.AutoSize = True
-        lblInventoryAvailable.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblInventoryAvailable.Font = New Font("Designer", 25.8000011F)
         lblInventoryAvailable.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblInventoryAvailable.Location = New Point(25, 27)
         lblInventoryAvailable.Name = "lblInventoryAvailable"
-        lblInventoryAvailable.Size = New Size(70, 52)
+        lblInventoryAvailable.Size = New Size(96, 57)
         lblInventoryAvailable.TabIndex = 7
         lblInventoryAvailable.Text = "69"
         ' 
@@ -1437,23 +1477,23 @@ Partial Class FORM_ADMIN
         ' dgvVehicles
         ' 
         dgvVehicles.BackgroundColor = Color.White
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Control
-        DataGridViewCellStyle3.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        dgvVehicles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = SystemColors.Control
+        DataGridViewCellStyle11.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle11.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.True
+        dgvVehicles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         dgvVehicles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = SystemColors.Window
-        DataGridViewCellStyle4.Font = New Font("Futura Lt BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle4.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
-        dgvVehicles.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = SystemColors.Window
+        DataGridViewCellStyle12.Font = New Font("Futura Lt BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle12.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = DataGridViewTriState.False
+        dgvVehicles.DefaultCellStyle = DataGridViewCellStyle12
         dgvVehicles.Location = New Point(25, 233)
         dgvVehicles.Name = "dgvVehicles"
         dgvVehicles.RowHeadersWidth = 51
@@ -1490,7 +1530,7 @@ Partial Class FORM_ADMIN
         pnlRentalContent.Controls.Add(txtbxRental)
         pnlRentalContent.Controls.Add(dgvRentals2)
         pnlRentalContent.Controls.Add(Panel20)
-        pnlRentalContent.Location = New Point(1301, 80)
+        pnlRentalContent.Location = New Point(314, 97)
         pnlRentalContent.Name = "pnlRentalContent"
         pnlRentalContent.Size = New Size(915, 564)
         pnlRentalContent.TabIndex = 15
@@ -1509,11 +1549,11 @@ Partial Class FORM_ADMIN
         ' lblRentalCancelled
         ' 
         lblRentalCancelled.AutoSize = True
-        lblRentalCancelled.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblRentalCancelled.Font = New Font("Designer", 25.8000011F)
         lblRentalCancelled.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblRentalCancelled.Location = New Point(25, 27)
         lblRentalCancelled.Name = "lblRentalCancelled"
-        lblRentalCancelled.Size = New Size(70, 52)
+        lblRentalCancelled.Size = New Size(96, 57)
         lblRentalCancelled.TabIndex = 7
         lblRentalCancelled.Text = "69"
         ' 
@@ -1571,11 +1611,11 @@ Partial Class FORM_ADMIN
         ' lblRentalCompleted
         ' 
         lblRentalCompleted.AutoSize = True
-        lblRentalCompleted.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblRentalCompleted.Font = New Font("Designer", 25.8000011F)
         lblRentalCompleted.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblRentalCompleted.Location = New Point(25, 27)
         lblRentalCompleted.Name = "lblRentalCompleted"
-        lblRentalCompleted.Size = New Size(70, 52)
+        lblRentalCompleted.Size = New Size(96, 57)
         lblRentalCompleted.TabIndex = 7
         lblRentalCompleted.Text = "69"
         ' 
@@ -1627,11 +1667,11 @@ Partial Class FORM_ADMIN
         ' lblRentalRentals
         ' 
         lblRentalRentals.AutoSize = True
-        lblRentalRentals.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblRentalRentals.Font = New Font("Designer", 25.8000011F)
         lblRentalRentals.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblRentalRentals.Location = New Point(25, 27)
         lblRentalRentals.Name = "lblRentalRentals"
-        lblRentalRentals.Size = New Size(70, 52)
+        lblRentalRentals.Size = New Size(96, 57)
         lblRentalRentals.TabIndex = 7
         lblRentalRentals.Text = "69"
         ' 
@@ -1704,7 +1744,7 @@ Partial Class FORM_ADMIN
         pnlMaintenanceContent.Controls.Add(txtbxMaintenance)
         pnlMaintenanceContent.Controls.Add(Panel17)
         pnlMaintenanceContent.Controls.Add(dgvMaintenance)
-        pnlMaintenanceContent.Location = New Point(1301, 80)
+        pnlMaintenanceContent.Location = New Point(302, 97)
         pnlMaintenanceContent.Name = "pnlMaintenanceContent"
         pnlMaintenanceContent.Size = New Size(943, 564)
         pnlMaintenanceContent.TabIndex = 16
@@ -1723,11 +1763,11 @@ Partial Class FORM_ADMIN
         ' lblMaintenanceScheduled
         ' 
         lblMaintenanceScheduled.AutoSize = True
-        lblMaintenanceScheduled.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblMaintenanceScheduled.Font = New Font("Designer", 25.8000011F)
         lblMaintenanceScheduled.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblMaintenanceScheduled.Location = New Point(25, 27)
         lblMaintenanceScheduled.Name = "lblMaintenanceScheduled"
-        lblMaintenanceScheduled.Size = New Size(70, 52)
+        lblMaintenanceScheduled.Size = New Size(96, 57)
         lblMaintenanceScheduled.TabIndex = 7
         lblMaintenanceScheduled.Text = "69"
         ' 
@@ -1766,11 +1806,11 @@ Partial Class FORM_ADMIN
         ' lblMaintenanceGoods
         ' 
         lblMaintenanceGoods.AutoSize = True
-        lblMaintenanceGoods.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblMaintenanceGoods.Font = New Font("Designer", 25.8000011F)
         lblMaintenanceGoods.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblMaintenanceGoods.Location = New Point(25, 27)
         lblMaintenanceGoods.Name = "lblMaintenanceGoods"
-        lblMaintenanceGoods.Size = New Size(70, 52)
+        lblMaintenanceGoods.Size = New Size(96, 57)
         lblMaintenanceGoods.TabIndex = 7
         lblMaintenanceGoods.Text = "69"
         ' 
@@ -1809,11 +1849,11 @@ Partial Class FORM_ADMIN
         ' lblMaintenanceDamaged
         ' 
         lblMaintenanceDamaged.AutoSize = True
-        lblMaintenanceDamaged.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblMaintenanceDamaged.Font = New Font("Designer", 25.8000011F)
         lblMaintenanceDamaged.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblMaintenanceDamaged.Location = New Point(25, 27)
         lblMaintenanceDamaged.Name = "lblMaintenanceDamaged"
-        lblMaintenanceDamaged.Size = New Size(70, 52)
+        lblMaintenanceDamaged.Size = New Size(96, 57)
         lblMaintenanceDamaged.TabIndex = 7
         lblMaintenanceDamaged.Text = "69"
         ' 
@@ -1865,11 +1905,11 @@ Partial Class FORM_ADMIN
         ' lblMaintenanceOngoing
         ' 
         lblMaintenanceOngoing.AutoSize = True
-        lblMaintenanceOngoing.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblMaintenanceOngoing.Font = New Font("Designer", 25.8000011F)
         lblMaintenanceOngoing.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblMaintenanceOngoing.Location = New Point(25, 27)
         lblMaintenanceOngoing.Name = "lblMaintenanceOngoing"
-        lblMaintenanceOngoing.Size = New Size(70, 52)
+        lblMaintenanceOngoing.Size = New Size(96, 57)
         lblMaintenanceOngoing.TabIndex = 7
         lblMaintenanceOngoing.Text = "69"
         ' 
@@ -1949,10 +1989,22 @@ Partial Class FORM_ADMIN
         pnlSaleContent.Controls.Add(txtbxSales)
         pnlSaleContent.Controls.Add(dgvSales)
         pnlSaleContent.Controls.Add(Panel25)
-        pnlSaleContent.Location = New Point(310, 93)
+        pnlSaleContent.Location = New Point(1300, 90)
         pnlSaleContent.Name = "pnlSaleContent"
         pnlSaleContent.Size = New Size(915, 564)
         pnlSaleContent.TabIndex = 17
+        ' 
+        ' btnFilterDate
+        ' 
+        btnFilterDate.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnFilterDate.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnFilterDate.ForeColor = Color.White
+        btnFilterDate.Location = New Point(695, 381)
+        btnFilterDate.Name = "btnFilterDate"
+        btnFilterDate.Size = New Size(143, 41)
+        btnFilterDate.TabIndex = 23
+        btnFilterDate.Text = "FILTER DATE"
+        btnFilterDate.UseVisualStyleBackColor = False
         ' 
         ' Button11
         ' 
@@ -2043,11 +2095,11 @@ Partial Class FORM_ADMIN
         ' lblSalesEarnings
         ' 
         lblSalesEarnings.AutoSize = True
-        lblSalesEarnings.Font = New Font("Microsoft Sans Serif", 16.2F)
+        lblSalesEarnings.Font = New Font("Designer", 16.2F)
         lblSalesEarnings.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblSalesEarnings.Location = New Point(53, 36)
         lblSalesEarnings.Name = "lblSalesEarnings"
-        lblSalesEarnings.Size = New Size(46, 32)
+        lblSalesEarnings.Size = New Size(60, 36)
         lblSalesEarnings.TabIndex = 7
         lblSalesEarnings.Text = "69"
         ' 
@@ -2086,11 +2138,11 @@ Partial Class FORM_ADMIN
         ' lblSalesPenalties
         ' 
         lblSalesPenalties.AutoSize = True
-        lblSalesPenalties.Font = New Font("Microsoft Sans Serif", 16.2F)
+        lblSalesPenalties.Font = New Font("Designer", 16.2F)
         lblSalesPenalties.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblSalesPenalties.Location = New Point(53, 36)
         lblSalesPenalties.Name = "lblSalesPenalties"
-        lblSalesPenalties.Size = New Size(46, 32)
+        lblSalesPenalties.Size = New Size(60, 36)
         lblSalesPenalties.TabIndex = 7
         lblSalesPenalties.Text = "69"
         ' 
@@ -2119,11 +2171,11 @@ Partial Class FORM_ADMIN
         ' lblSalesIncome
         ' 
         lblSalesIncome.AutoSize = True
-        lblSalesIncome.Font = New Font("Microsoft Sans Serif", 16.2F)
+        lblSalesIncome.Font = New Font("Designer", 16.2F)
         lblSalesIncome.ForeColor = Color.White
         lblSalesIncome.Location = New Point(53, 37)
         lblSalesIncome.Name = "lblSalesIncome"
-        lblSalesIncome.Size = New Size(46, 32)
+        lblSalesIncome.Size = New Size(60, 36)
         lblSalesIncome.TabIndex = 7
         lblSalesIncome.Text = "69"
         ' 
@@ -2172,11 +2224,11 @@ Partial Class FORM_ADMIN
         ' lblSalesCost
         ' 
         lblSalesCost.AutoSize = True
-        lblSalesCost.Font = New Font("Microsoft Sans Serif", 16.2F)
+        lblSalesCost.Font = New Font("Designer", 16.2F)
         lblSalesCost.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblSalesCost.Location = New Point(53, 36)
         lblSalesCost.Name = "lblSalesCost"
-        lblSalesCost.Size = New Size(46, 32)
+        lblSalesCost.Size = New Size(60, 36)
         lblSalesCost.TabIndex = 7
         lblSalesCost.Text = "69"
         ' 
@@ -2254,7 +2306,7 @@ Partial Class FORM_ADMIN
         pnlUsersContent.Controls.Add(Panel29)
         pnlUsersContent.Controls.Add(Button10)
         pnlUsersContent.Controls.Add(Panel46)
-        pnlUsersContent.Location = New Point(1301, 80)
+        pnlUsersContent.Location = New Point(311, 81)
         pnlUsersContent.Name = "pnlUsersContent"
         pnlUsersContent.Size = New Size(915, 564)
         pnlUsersContent.TabIndex = 18
@@ -2299,11 +2351,11 @@ Partial Class FORM_ADMIN
         ' lblUserPaid
         ' 
         lblUserPaid.AutoSize = True
-        lblUserPaid.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblUserPaid.Font = New Font("Designer", 25.8000011F)
         lblUserPaid.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblUserPaid.Location = New Point(25, 27)
         lblUserPaid.Name = "lblUserPaid"
-        lblUserPaid.Size = New Size(70, 52)
+        lblUserPaid.Size = New Size(96, 57)
         lblUserPaid.TabIndex = 7
         lblUserPaid.Text = "69"
         ' 
@@ -2342,11 +2394,11 @@ Partial Class FORM_ADMIN
         ' lblUserUnpaid
         ' 
         lblUserUnpaid.AutoSize = True
-        lblUserUnpaid.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblUserUnpaid.Font = New Font("Designer", 25.8000011F)
         lblUserUnpaid.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblUserUnpaid.Location = New Point(25, 27)
         lblUserUnpaid.Name = "lblUserUnpaid"
-        lblUserUnpaid.Size = New Size(70, 52)
+        lblUserUnpaid.Size = New Size(96, 57)
         lblUserUnpaid.TabIndex = 7
         lblUserUnpaid.Text = "69"
         ' 
@@ -2385,11 +2437,11 @@ Partial Class FORM_ADMIN
         ' lblUserUsers
         ' 
         lblUserUsers.AutoSize = True
-        lblUserUsers.Font = New Font("Microsoft Sans Serif", 25.8000011F)
+        lblUserUsers.Font = New Font("Designer", 25.8000011F)
         lblUserUsers.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         lblUserUsers.Location = New Point(25, 27)
         lblUserUsers.Name = "lblUserUsers"
-        lblUserUsers.Size = New Size(70, 52)
+        lblUserUsers.Size = New Size(96, 57)
         lblUserUsers.TabIndex = 7
         lblUserUsers.Text = "69"
         ' 
@@ -2863,34 +2915,345 @@ Partial Class FORM_ADMIN
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
-        ' btnFilterDate
+        ' Panel47
         ' 
-        btnFilterDate.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        btnFilterDate.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnFilterDate.ForeColor = Color.White
-        btnFilterDate.Location = New Point(695, 381)
-        btnFilterDate.Name = "btnFilterDate"
-        btnFilterDate.Size = New Size(143, 41)
-        btnFilterDate.TabIndex = 23
-        btnFilterDate.Text = "FILTER DATE"
-        btnFilterDate.UseVisualStyleBackColor = False
+        Panel47.Controls.Add(Button12)
+        Panel47.Controls.Add(Button13)
+        Panel47.Controls.Add(Label37)
+        Panel47.Controls.Add(Label44)
+        Panel47.Controls.Add(Label45)
+        Panel47.Controls.Add(DateTimePicker1)
+        Panel47.Controls.Add(DateTimePicker2)
+        Panel47.Controls.Add(Panel64)
+        Panel47.Controls.Add(Panel65)
+        Panel47.Controls.Add(Panel66)
+        Panel47.Controls.Add(Panel67)
+        Panel47.Controls.Add(Button14)
+        Panel47.Controls.Add(TextBox1)
+        Panel47.Controls.Add(DataGridView1)
+        Panel47.Controls.Add(Panel68)
+        Panel47.Location = New Point(1249, 93)
+        Panel47.Name = "Panel47"
+        Panel47.Size = New Size(915, 564)
+        Panel47.TabIndex = 17
+        ' 
+        ' Button12
+        ' 
+        Button12.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button12.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button12.ForeColor = Color.White
+        Button12.Location = New Point(695, 381)
+        Button12.Name = "Button12"
+        Button12.Size = New Size(143, 41)
+        Button12.TabIndex = 23
+        Button12.Text = "FILTER DATE"
+        Button12.UseVisualStyleBackColor = False
+        ' 
+        ' Button13
+        ' 
+        Button13.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button13.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button13.ForeColor = Color.White
+        Button13.Location = New Point(695, 433)
+        Button13.Name = "Button13"
+        Button13.Size = New Size(143, 41)
+        Button13.TabIndex = 22
+        Button13.Text = "CLEAR DATE"
+        Button13.UseVisualStyleBackColor = False
+        ' 
+        ' Label37
+        ' 
+        Label37.AutoSize = True
+        Label37.Font = New Font("Futura Hv BT", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label37.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label37.Location = New Point(676, 303)
+        Label37.Name = "Label37"
+        Label37.Size = New Size(102, 21)
+        Label37.TabIndex = 21
+        Label37.Text = "END DATE"
+        ' 
+        ' Label44
+        ' 
+        Label44.AutoSize = True
+        Label44.Font = New Font("Futura Hv BT", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label44.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label44.Location = New Point(676, 233)
+        Label44.Name = "Label44"
+        Label44.Size = New Size(117, 21)
+        Label44.TabIndex = 20
+        Label44.Text = "START DATE"
+        ' 
+        ' Label45
+        ' 
+        Label45.AutoSize = True
+        Label45.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label45.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label45.Location = New Point(676, 193)
+        Label45.Name = "Label45"
+        Label45.Size = New Size(230, 27)
+        Label45.TabIndex = 9
+        Label45.Text = "SALES DATE RANGE"
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.CalendarFont = New Font("Futura Bk BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DateTimePicker1.CustomFormat = "YYYY-MM-DD"
+        DateTimePicker1.Font = New Font("Futura Hv BT", 10.2F)
+        DateTimePicker1.Location = New Point(676, 332)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(231, 28)
+        DateTimePicker1.TabIndex = 19
+        ' 
+        ' DateTimePicker2
+        ' 
+        DateTimePicker2.CalendarFont = New Font("Futura Bk BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DateTimePicker2.CustomFormat = "YYYY-MM-DD"
+        DateTimePicker2.Font = New Font("Futura Hv BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DateTimePicker2.Location = New Point(676, 266)
+        DateTimePicker2.Name = "DateTimePicker2"
+        DateTimePicker2.Size = New Size(231, 28)
+        DateTimePicker2.TabIndex = 18
+        ' 
+        ' Panel64
+        ' 
+        Panel64.BackColor = Color.White
+        Panel64.Controls.Add(PictureBox23)
+        Panel64.Controls.Add(Label46)
+        Panel64.Controls.Add(Label49)
+        Panel64.Location = New Point(25, 7)
+        Panel64.Name = "Panel64"
+        Panel64.Size = New Size(189, 109)
+        Panel64.TabIndex = 11
+        ' 
+        ' PictureBox23
+        ' 
+        PictureBox23.Image = My.Resources.Resources.income_icon
+        PictureBox23.Location = New Point(15, 36)
+        PictureBox23.Name = "PictureBox23"
+        PictureBox23.Size = New Size(32, 33)
+        PictureBox23.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox23.TabIndex = 8
+        PictureBox23.TabStop = False
+        ' 
+        ' Label46
+        ' 
+        Label46.AutoSize = True
+        Label46.Font = New Font("Designer", 16.2F)
+        Label46.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label46.Location = New Point(53, 36)
+        Label46.Name = "Label46"
+        Label46.Size = New Size(60, 36)
+        Label46.TabIndex = 7
+        Label46.Text = "69"
+        ' 
+        ' Label49
+        ' 
+        Label49.AutoSize = True
+        Label49.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label49.ForeColor = Color.Gray
+        Label49.Location = New Point(53, 77)
+        Label49.Name = "Label49"
+        Label49.Size = New Size(86, 18)
+        Label49.TabIndex = 6
+        Label49.Text = "EARNINGS"
+        ' 
+        ' Panel65
+        ' 
+        Panel65.BackColor = Color.White
+        Panel65.Controls.Add(PictureBox24)
+        Panel65.Controls.Add(Label50)
+        Panel65.Controls.Add(Label51)
+        Panel65.Location = New Point(233, 7)
+        Panel65.Name = "Panel65"
+        Panel65.Size = New Size(189, 109)
+        Panel65.TabIndex = 17
+        ' 
+        ' PictureBox24
+        ' 
+        PictureBox24.Image = My.Resources.Resources.income_icon
+        PictureBox24.Location = New Point(15, 36)
+        PictureBox24.Name = "PictureBox24"
+        PictureBox24.Size = New Size(32, 33)
+        PictureBox24.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox24.TabIndex = 8
+        PictureBox24.TabStop = False
+        ' 
+        ' Label50
+        ' 
+        Label50.AutoSize = True
+        Label50.Font = New Font("Designer", 16.2F)
+        Label50.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label50.Location = New Point(53, 36)
+        Label50.Name = "Label50"
+        Label50.Size = New Size(60, 36)
+        Label50.TabIndex = 7
+        Label50.Text = "69"
+        ' 
+        ' Label51
+        ' 
+        Label51.AutoSize = True
+        Label51.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label51.ForeColor = Color.Gray
+        Label51.Location = New Point(53, 77)
+        Label51.Name = "Label51"
+        Label51.Size = New Size(86, 18)
+        Label51.TabIndex = 6
+        Label51.Text = "PENALTIES"
+        ' 
+        ' Panel66
+        ' 
+        Panel66.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Panel66.Controls.Add(Label52)
+        Panel66.Controls.Add(PictureBox25)
+        Panel66.Controls.Add(Label53)
+        Panel66.Location = New Point(661, 7)
+        Panel66.Name = "Panel66"
+        Panel66.Size = New Size(219, 127)
+        Panel66.TabIndex = 16
+        ' 
+        ' Label52
+        ' 
+        Label52.AutoSize = True
+        Label52.Font = New Font("Designer", 16.2F)
+        Label52.ForeColor = Color.White
+        Label52.Location = New Point(53, 37)
+        Label52.Name = "Label52"
+        Label52.Size = New Size(60, 36)
+        Label52.TabIndex = 7
+        Label52.Text = "69"
+        ' 
+        ' PictureBox25
+        ' 
+        PictureBox25.Image = My.Resources.Resources.income_iconwhite
+        PictureBox25.Location = New Point(15, 40)
+        PictureBox25.Name = "PictureBox25"
+        PictureBox25.Size = New Size(32, 33)
+        PictureBox25.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox25.TabIndex = 7
+        PictureBox25.TabStop = False
+        ' 
+        ' Label53
+        ' 
+        Label53.AutoSize = True
+        Label53.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label53.ForeColor = Color.White
+        Label53.Location = New Point(53, 83)
+        Label53.Name = "Label53"
+        Label53.Size = New Size(72, 18)
+        Label53.TabIndex = 6
+        Label53.Text = "INCOME"
+        ' 
+        ' Panel67
+        ' 
+        Panel67.BackColor = Color.White
+        Panel67.Controls.Add(PictureBox26)
+        Panel67.Controls.Add(Label54)
+        Panel67.Controls.Add(Label55)
+        Panel67.Location = New Point(440, 7)
+        Panel67.Name = "Panel67"
+        Panel67.Size = New Size(189, 109)
+        Panel67.TabIndex = 10
+        ' 
+        ' PictureBox26
+        ' 
+        PictureBox26.Image = My.Resources.Resources.income_icon
+        PictureBox26.Location = New Point(15, 36)
+        PictureBox26.Name = "PictureBox26"
+        PictureBox26.Size = New Size(32, 33)
+        PictureBox26.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox26.TabIndex = 8
+        PictureBox26.TabStop = False
+        ' 
+        ' Label54
+        ' 
+        Label54.AutoSize = True
+        Label54.Font = New Font("Designer", 16.2F)
+        Label54.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label54.Location = New Point(53, 36)
+        Label54.Name = "Label54"
+        Label54.Size = New Size(60, 36)
+        Label54.TabIndex = 7
+        Label54.Text = "69"
+        ' 
+        ' Label55
+        ' 
+        Label55.AutoSize = True
+        Label55.Font = New Font("Futura Hv BT", 7.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label55.ForeColor = Color.Gray
+        Label55.Location = New Point(25, 77)
+        Label55.Name = "Label55"
+        Label55.Size = New Size(142, 16)
+        Label55.TabIndex = 6
+        Label55.Text = "MAINTENANCE COST"
+        ' 
+        ' Button14
+        ' 
+        Button14.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button14.FlatStyle = FlatStyle.Flat
+        Button14.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button14.ForeColor = Color.White
+        Button14.Location = New Point(281, 141)
+        Button14.Name = "Button14"
+        Button14.Size = New Size(123, 35)
+        Button14.TabIndex = 15
+        Button14.Text = "SEARCH"
+        Button14.UseVisualStyleBackColor = False
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Futura Bk BT", 12.0F)
+        TextBox1.Location = New Point(25, 141)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(231, 31)
+        TextBox1.TabIndex = 14
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.BackgroundColor = Color.White
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(25, 233)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.RowHeadersWidth = 51
+        DataGridView1.Size = New Size(642, 278)
+        DataGridView1.TabIndex = 13
+        ' 
+        ' Panel68
+        ' 
+        Panel68.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Panel68.Controls.Add(Label56)
+        Panel68.Location = New Point(25, 191)
+        Panel68.Name = "Panel68"
+        Panel68.Size = New Size(642, 44)
+        Panel68.TabIndex = 11
+        ' 
+        ' Label56
+        ' 
+        Label56.AutoSize = True
+        Label56.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label56.ForeColor = Color.White
+        Label56.Location = New Point(11, 8)
+        Label56.Name = "Label56"
+        Label56.Size = New Size(102, 28)
+        Label56.TabIndex = 7
+        Label56.Text = "SALES"
         ' 
         ' FORM_ADMIN
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Gainsboro
-        ClientSize = New Size(1370, 749)
+        ClientSize = New Size(1262, 673)
+        Controls.Add(pnlUsersContent)
         Controls.Add(Panel8)
         Controls.Add(Panel1)
+        Controls.Add(pnlAddPenalty)
+        Controls.Add(pnlMaintenanceContent)
+        Controls.Add(Panel47)
         Controls.Add(pnlSaleContent)
         Controls.Add(pnlcarinventory)
         Controls.Add(pnlUsersEditUser)
-        Controls.Add(pnlAddPenalty)
         Controls.Add(pnlAllDashboard)
         Controls.Add(pnlRentalContent)
-        Controls.Add(pnlMaintenanceContent)
-        Controls.Add(pnlUsersContent)
         Name = "FORM_ADMIN"
         StartPosition = FormStartPosition.CenterScreen
         Text = "FORM_ADMIN"
@@ -3072,6 +3435,23 @@ Partial Class FORM_ADMIN
         Panel36.PerformLayout()
         Panel35.ResumeLayout(False)
         Panel35.PerformLayout()
+        Panel47.ResumeLayout(False)
+        Panel47.PerformLayout()
+        Panel64.ResumeLayout(False)
+        Panel64.PerformLayout()
+        CType(PictureBox23, ComponentModel.ISupportInitialize).EndInit()
+        Panel65.ResumeLayout(False)
+        Panel65.PerformLayout()
+        CType(PictureBox24, ComponentModel.ISupportInitialize).EndInit()
+        Panel66.ResumeLayout(False)
+        Panel66.PerformLayout()
+        CType(PictureBox25, ComponentModel.ISupportInitialize).EndInit()
+        Panel67.ResumeLayout(False)
+        Panel67.PerformLayout()
+        CType(PictureBox26, ComponentModel.ISupportInitialize).EndInit()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        Panel68.ResumeLayout(False)
+        Panel68.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -3310,4 +3690,33 @@ Partial Class FORM_ADMIN
     Friend WithEvents Label33 As Label
     Friend WithEvents Button11 As Button
     Friend WithEvents btnFilterDate As Button
+    Friend WithEvents Panel47 As Panel
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Button13 As Button
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label44 As Label
+    Friend WithEvents Label45 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents Panel64 As Panel
+    Friend WithEvents PictureBox23 As PictureBox
+    Friend WithEvents Label46 As Label
+    Friend WithEvents Label49 As Label
+    Friend WithEvents Panel65 As Panel
+    Friend WithEvents PictureBox24 As PictureBox
+    Friend WithEvents Label50 As Label
+    Friend WithEvents Label51 As Label
+    Friend WithEvents Panel66 As Panel
+    Friend WithEvents Label52 As Label
+    Friend WithEvents PictureBox25 As PictureBox
+    Friend WithEvents Label53 As Label
+    Friend WithEvents Panel67 As Panel
+    Friend WithEvents PictureBox26 As PictureBox
+    Friend WithEvents Label54 As Label
+    Friend WithEvents Label55 As Label
+    Friend WithEvents Button14 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Panel68 As Panel
+    Friend WithEvents Label56 As Label
 End Class
