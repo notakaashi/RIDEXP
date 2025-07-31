@@ -1,7 +1,6 @@
 ﻿Public Class FORMRENTAL_STEP1
 
     Private Sub FORMRENTAL_STEP1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MessageBox.Show("Logged in as: " & userlogged)
         RefreshLoginState()
     End Sub
 

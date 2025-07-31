@@ -384,9 +384,6 @@ Public Class allcars
             Dim cmd As New MySqlCommand(query, conn)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
-            If Not reader.HasRows Then
-                MessageBox.Show("No new cars found!")
-            End If
 
             While reader.Read()
                 Dim imgFullPath As String = Path.Combine(Application.StartupPath, reader("image").ToString())

@@ -8,11 +8,7 @@ Public Class TRANSAC_COMPLETE
     Public Property RentalId As Integer = 0
 
     Private Sub TRANSAC_COMPLETE_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If RentalId > 0 Then
-            Label1.Text = $"Rental completed successfully! Rental ID: {RentalId}"
-        Else
-            Label1.Text = "Transaction completed successfully!"
-        End If
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

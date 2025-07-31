@@ -22,10 +22,10 @@ Partial Class FORM_ADMIN
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         pnlUsers = New Panel()
         iconUsers = New PictureBox()
@@ -451,7 +451,7 @@ Partial Class FORM_ADMIN
         ' lblUsers
         ' 
         lblUsers.AutoSize = True
-        lblUsers.Font = New Font("Reesha", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblUsers.Font = New Font("Reesha", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblUsers.ForeColor = Color.White
         lblUsers.Location = New Point(7, 11)
         lblUsers.Name = "lblUsers"
@@ -482,7 +482,7 @@ Partial Class FORM_ADMIN
         ' lblSales
         ' 
         lblSales.AutoSize = True
-        lblSales.Font = New Font("Reesha", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblSales.Font = New Font("Reesha", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblSales.ForeColor = Color.White
         lblSales.Location = New Point(7, 11)
         lblSales.Name = "lblSales"
@@ -513,7 +513,7 @@ Partial Class FORM_ADMIN
         ' lblMaintenance
         ' 
         lblMaintenance.AutoSize = True
-        lblMaintenance.Font = New Font("Reesha", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblMaintenance.Font = New Font("Reesha", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblMaintenance.ForeColor = Color.White
         lblMaintenance.Location = New Point(7, 11)
         lblMaintenance.Name = "lblMaintenance"
@@ -544,7 +544,7 @@ Partial Class FORM_ADMIN
         ' lblRentals
         ' 
         lblRentals.AutoSize = True
-        lblRentals.Font = New Font("Reesha", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblRentals.Font = New Font("Reesha", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblRentals.ForeColor = Color.White
         lblRentals.Location = New Point(7, 11)
         lblRentals.Name = "lblRentals"
@@ -575,7 +575,7 @@ Partial Class FORM_ADMIN
         ' lblInventory
         ' 
         lblInventory.AutoSize = True
-        lblInventory.Font = New Font("Reesha", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblInventory.Font = New Font("Reesha", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblInventory.ForeColor = Color.White
         lblInventory.Location = New Point(7, 11)
         lblInventory.Name = "lblInventory"
@@ -606,7 +606,7 @@ Partial Class FORM_ADMIN
         ' lblDashboard
         ' 
         lblDashboard.AutoSize = True
-        lblDashboard.Font = New Font("Reesha", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDashboard.Font = New Font("Reesha", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblDashboard.ForeColor = Color.White
         lblDashboard.Location = New Point(7, 11)
         lblDashboard.Name = "lblDashboard"
@@ -617,7 +617,7 @@ Partial Class FORM_ADMIN
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.White
         Label2.Location = New Point(69, 69)
         Label2.Name = "Label2"
@@ -628,7 +628,7 @@ Partial Class FORM_ADMIN
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Reesha", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Reesha", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(24, 23)
         Label1.Name = "Label1"
@@ -644,13 +644,13 @@ Partial Class FORM_ADMIN
         Panel8.Dock = DockStyle.Top
         Panel8.Location = New Point(290, 0)
         Panel8.Name = "Panel8"
-        Panel8.Size = New Size(972, 75)
+        Panel8.Size = New Size(1192, 75)
         Panel8.TabIndex = 1
         ' 
         ' Button6
         ' 
         Button6.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button6.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button6.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button6.ForeColor = Color.White
         Button6.Location = New Point(837, 19)
         Button6.Name = "Button6"
@@ -662,7 +662,7 @@ Partial Class FORM_ADMIN
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Reesha", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Reesha", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Label9.Location = New Point(37, 19)
         Label9.Name = "Label9"
@@ -705,7 +705,7 @@ Partial Class FORM_ADMIN
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.Gray
         Label10.Location = New Point(39, 83)
         Label10.Name = "Label10"
@@ -748,7 +748,7 @@ Partial Class FORM_ADMIN
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.Gray
         Label13.Location = New Point(39, 83)
         Label13.Name = "Label13"
@@ -770,11 +770,11 @@ Partial Class FORM_ADMIN
         ' lblDashIncome
         ' 
         lblDashIncome.AutoSize = True
-        lblDashIncome.Font = New Font("Designer", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDashIncome.Font = New Font("Designer", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblDashIncome.ForeColor = Color.White
-        lblDashIncome.Location = New Point(59, 43)
+        lblDashIncome.Location = New Point(59, 50)
         lblDashIncome.Name = "lblDashIncome"
-        lblDashIncome.Size = New Size(60, 36)
+        lblDashIncome.Size = New Size(44, 26)
         lblDashIncome.TabIndex = 7
         lblDashIncome.Text = "69"
         ' 
@@ -791,7 +791,7 @@ Partial Class FORM_ADMIN
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label15.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label15.ForeColor = Color.White
         Label15.Location = New Point(59, 84)
         Label15.Name = "Label15"
@@ -834,7 +834,7 @@ Partial Class FORM_ADMIN
         ' Label17
         ' 
         Label17.AutoSize = True
-        Label17.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label17.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label17.ForeColor = Color.Gray
         Label17.Location = New Point(39, 83)
         Label17.Name = "Label17"
@@ -892,7 +892,7 @@ Partial Class FORM_ADMIN
         pnlAllDashboard.Controls.Add(Panel11)
         pnlAllDashboard.Controls.Add(Panel10)
         pnlAllDashboard.Controls.Add(Panel9)
-        pnlAllDashboard.Location = New Point(314, 97)
+        pnlAllDashboard.Location = New Point(1300, 97)
         pnlAllDashboard.Name = "pnlAllDashboard"
         pnlAllDashboard.Size = New Size(949, 564)
         pnlAllDashboard.TabIndex = 13
@@ -912,23 +912,23 @@ Partial Class FORM_ADMIN
         dgvRentals.BackgroundColor = Color.White
         dgvRentals.BorderStyle = BorderStyle.Fixed3D
         dgvRentals.CellBorderStyle = DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = SystemColors.Control
-        DataGridViewCellStyle9.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle9.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.True
-        dgvRentals.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvRentals.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvRentals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = Color.White
-        DataGridViewCellStyle10.Font = New Font("Futura Lt BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle10.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = DataGridViewTriState.False
-        dgvRentals.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.White
+        DataGridViewCellStyle2.Font = New Font("Futura Lt BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        dgvRentals.DefaultCellStyle = DataGridViewCellStyle2
         dgvRentals.Location = New Point(14, 229)
         dgvRentals.Name = "dgvRentals"
         dgvRentals.RowHeadersWidth = 51
@@ -1241,7 +1241,7 @@ Partial Class FORM_ADMIN
         ' Label29
         ' 
         Label29.AutoSize = True
-        Label29.Font = New Font("Futura XBlk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label29.Font = New Font("Futura XBlk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label29.ForeColor = Color.White
         Label29.Location = New Point(15, 9)
         Label29.Name = "Label29"
@@ -1253,7 +1253,7 @@ Partial Class FORM_ADMIN
         ' 
         btnAddCars.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         btnAddCars.FlatStyle = FlatStyle.Flat
-        btnAddCars.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnAddCars.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnAddCars.ForeColor = Color.White
         btnAddCars.Location = New Point(645, 141)
         btnAddCars.Name = "btnAddCars"
@@ -1316,7 +1316,7 @@ Partial Class FORM_ADMIN
         ' Label21
         ' 
         Label21.AutoSize = True
-        Label21.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label21.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label21.ForeColor = Color.Gray
         Label21.Location = New Point(35, 80)
         Label21.Name = "Label21"
@@ -1359,7 +1359,7 @@ Partial Class FORM_ADMIN
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.Gray
         Label7.Location = New Point(25, 80)
         Label7.Name = "Label7"
@@ -1402,7 +1402,7 @@ Partial Class FORM_ADMIN
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.Gray
         Label5.Location = New Point(35, 80)
         Label5.Name = "Label5"
@@ -1414,7 +1414,7 @@ Partial Class FORM_ADMIN
         ' 
         Button1.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(281, 141)
         Button1.Name = "Button1"
@@ -1458,7 +1458,7 @@ Partial Class FORM_ADMIN
         ' Label22
         ' 
         Label22.AutoSize = True
-        Label22.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label22.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label22.ForeColor = Color.Gray
         Label22.Location = New Point(35, 80)
         Label22.Name = "Label22"
@@ -1468,7 +1468,7 @@ Partial Class FORM_ADMIN
         ' 
         ' txtbxInventory
         ' 
-        txtbxInventory.Font = New Font("Futura Bk BT", 12.0F)
+        txtbxInventory.Font = New Font("Futura Bk BT", 12F)
         txtbxInventory.Location = New Point(25, 141)
         txtbxInventory.Name = "txtbxInventory"
         txtbxInventory.Size = New Size(231, 31)
@@ -1477,23 +1477,23 @@ Partial Class FORM_ADMIN
         ' dgvVehicles
         ' 
         dgvVehicles.BackgroundColor = Color.White
-        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = SystemColors.Control
-        DataGridViewCellStyle11.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle11.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.True
-        dgvVehicles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = SystemColors.Control
+        DataGridViewCellStyle3.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        dgvVehicles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         dgvVehicles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = SystemColors.Window
-        DataGridViewCellStyle12.Font = New Font("Futura Lt BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle12.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = DataGridViewTriState.False
-        dgvVehicles.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = SystemColors.Window
+        DataGridViewCellStyle4.Font = New Font("Futura Lt BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle4.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
+        dgvVehicles.DefaultCellStyle = DataGridViewCellStyle4
         dgvVehicles.Location = New Point(25, 233)
         dgvVehicles.Name = "dgvVehicles"
         dgvVehicles.RowHeadersWidth = 51
@@ -1570,7 +1570,7 @@ Partial Class FORM_ADMIN
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label14.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.Gray
         Label14.Location = New Point(35, 83)
         Label14.Name = "Label14"
@@ -1632,7 +1632,7 @@ Partial Class FORM_ADMIN
         ' Label28
         ' 
         Label28.AutoSize = True
-        Label28.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label28.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label28.ForeColor = Color.Gray
         Label28.Location = New Point(35, 83)
         Label28.Name = "Label28"
@@ -1644,7 +1644,7 @@ Partial Class FORM_ADMIN
         ' 
         Button2.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
         Button2.Location = New Point(281, 141)
         Button2.Name = "Button2"
@@ -1688,7 +1688,7 @@ Partial Class FORM_ADMIN
         ' Label30
         ' 
         Label30.AutoSize = True
-        Label30.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label30.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label30.ForeColor = Color.Gray
         Label30.Location = New Point(35, 83)
         Label30.Name = "Label30"
@@ -1698,7 +1698,7 @@ Partial Class FORM_ADMIN
         ' 
         ' txtbxRental
         ' 
-        txtbxRental.Font = New Font("Futura Bk BT", 12.0F)
+        txtbxRental.Font = New Font("Futura Bk BT", 12F)
         txtbxRental.Location = New Point(25, 141)
         txtbxRental.Name = "txtbxRental"
         txtbxRental.Size = New Size(231, 31)
@@ -1744,7 +1744,7 @@ Partial Class FORM_ADMIN
         pnlMaintenanceContent.Controls.Add(txtbxMaintenance)
         pnlMaintenanceContent.Controls.Add(Panel17)
         pnlMaintenanceContent.Controls.Add(dgvMaintenance)
-        pnlMaintenanceContent.Location = New Point(302, 97)
+        pnlMaintenanceContent.Location = New Point(1300, 97)
         pnlMaintenanceContent.Name = "pnlMaintenanceContent"
         pnlMaintenanceContent.Size = New Size(943, 564)
         pnlMaintenanceContent.TabIndex = 16
@@ -1784,7 +1784,7 @@ Partial Class FORM_ADMIN
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Gray
         Label6.Location = New Point(35, 84)
         Label6.Name = "Label6"
@@ -1827,7 +1827,7 @@ Partial Class FORM_ADMIN
         ' Label34
         ' 
         Label34.AutoSize = True
-        Label34.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label34.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label34.ForeColor = Color.Gray
         Label34.Location = New Point(35, 84)
         Label34.Name = "Label34"
@@ -1870,7 +1870,7 @@ Partial Class FORM_ADMIN
         ' Label24
         ' 
         Label24.AutoSize = True
-        Label24.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label24.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label24.ForeColor = Color.Gray
         Label24.Location = New Point(35, 84)
         Label24.Name = "Label24"
@@ -1882,7 +1882,7 @@ Partial Class FORM_ADMIN
         ' 
         Button3.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button3.FlatStyle = FlatStyle.Flat
-        Button3.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button3.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = Color.White
         Button3.Location = New Point(281, 141)
         Button3.Name = "Button3"
@@ -1926,7 +1926,7 @@ Partial Class FORM_ADMIN
         ' Label26
         ' 
         Label26.AutoSize = True
-        Label26.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label26.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label26.ForeColor = Color.Gray
         Label26.Location = New Point(35, 84)
         Label26.Name = "Label26"
@@ -1936,7 +1936,7 @@ Partial Class FORM_ADMIN
         ' 
         ' txtbxMaintenance
         ' 
-        txtbxMaintenance.Font = New Font("Futura Bk BT", 12.0F)
+        txtbxMaintenance.Font = New Font("Futura Bk BT", 12F)
         txtbxMaintenance.Location = New Point(25, 141)
         txtbxMaintenance.Name = "txtbxMaintenance"
         txtbxMaintenance.Size = New Size(231, 31)
@@ -1989,7 +1989,7 @@ Partial Class FORM_ADMIN
         pnlSaleContent.Controls.Add(txtbxSales)
         pnlSaleContent.Controls.Add(dgvSales)
         pnlSaleContent.Controls.Add(Panel25)
-        pnlSaleContent.Location = New Point(1300, 90)
+        pnlSaleContent.Location = New Point(300, 83)
         pnlSaleContent.Name = "pnlSaleContent"
         pnlSaleContent.Size = New Size(915, 564)
         pnlSaleContent.TabIndex = 17
@@ -1997,7 +1997,7 @@ Partial Class FORM_ADMIN
         ' btnFilterDate
         ' 
         btnFilterDate.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        btnFilterDate.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnFilterDate.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnFilterDate.ForeColor = Color.White
         btnFilterDate.Location = New Point(695, 381)
         btnFilterDate.Name = "btnFilterDate"
@@ -2009,7 +2009,7 @@ Partial Class FORM_ADMIN
         ' Button11
         ' 
         Button11.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button11.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button11.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button11.ForeColor = Color.White
         Button11.Location = New Point(695, 433)
         Button11.Name = "Button11"
@@ -2053,7 +2053,7 @@ Partial Class FORM_ADMIN
         ' 
         ' dtpEndDate
         ' 
-        dtpEndDate.CalendarFont = New Font("Futura Bk BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpEndDate.CalendarFont = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dtpEndDate.CustomFormat = "YYYY-MM-DD"
         dtpEndDate.Font = New Font("Futura Hv BT", 10.2F)
         dtpEndDate.Location = New Point(676, 332)
@@ -2063,7 +2063,7 @@ Partial Class FORM_ADMIN
         ' 
         ' dtpStartDate
         ' 
-        dtpStartDate.CalendarFont = New Font("Futura Bk BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpStartDate.CalendarFont = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dtpStartDate.CustomFormat = "YYYY-MM-DD"
         dtpStartDate.Font = New Font("Futura Hv BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dtpStartDate.Location = New Point(676, 266)
@@ -2095,18 +2095,18 @@ Partial Class FORM_ADMIN
         ' lblSalesEarnings
         ' 
         lblSalesEarnings.AutoSize = True
-        lblSalesEarnings.Font = New Font("Designer", 16.2F)
+        lblSalesEarnings.Font = New Font("Designer", 12F)
         lblSalesEarnings.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblSalesEarnings.Location = New Point(53, 36)
+        lblSalesEarnings.Location = New Point(49, 39)
         lblSalesEarnings.Name = "lblSalesEarnings"
-        lblSalesEarnings.Size = New Size(60, 36)
+        lblSalesEarnings.Size = New Size(44, 26)
         lblSalesEarnings.TabIndex = 7
         lblSalesEarnings.Text = "69"
         ' 
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label16.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label16.ForeColor = Color.Gray
         Label16.Location = New Point(53, 77)
         Label16.Name = "Label16"
@@ -2138,18 +2138,18 @@ Partial Class FORM_ADMIN
         ' lblSalesPenalties
         ' 
         lblSalesPenalties.AutoSize = True
-        lblSalesPenalties.Font = New Font("Designer", 16.2F)
+        lblSalesPenalties.Font = New Font("Designer", 12F)
         lblSalesPenalties.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblSalesPenalties.Location = New Point(53, 36)
+        lblSalesPenalties.Location = New Point(49, 39)
         lblSalesPenalties.Name = "lblSalesPenalties"
-        lblSalesPenalties.Size = New Size(60, 36)
+        lblSalesPenalties.Size = New Size(44, 26)
         lblSalesPenalties.TabIndex = 7
         lblSalesPenalties.Text = "69"
         ' 
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.Gray
         Label11.Location = New Point(53, 77)
         Label11.Name = "Label11"
@@ -2171,11 +2171,11 @@ Partial Class FORM_ADMIN
         ' lblSalesIncome
         ' 
         lblSalesIncome.AutoSize = True
-        lblSalesIncome.Font = New Font("Designer", 16.2F)
+        lblSalesIncome.Font = New Font("Designer", 12F)
         lblSalesIncome.ForeColor = Color.White
-        lblSalesIncome.Location = New Point(53, 37)
+        lblSalesIncome.Location = New Point(49, 40)
         lblSalesIncome.Name = "lblSalesIncome"
-        lblSalesIncome.Size = New Size(60, 36)
+        lblSalesIncome.Size = New Size(44, 26)
         lblSalesIncome.TabIndex = 7
         lblSalesIncome.Text = "69"
         ' 
@@ -2192,7 +2192,7 @@ Partial Class FORM_ADMIN
         ' Label43
         ' 
         Label43.AutoSize = True
-        Label43.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label43.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label43.ForeColor = Color.White
         Label43.Location = New Point(53, 83)
         Label43.Name = "Label43"
@@ -2224,11 +2224,11 @@ Partial Class FORM_ADMIN
         ' lblSalesCost
         ' 
         lblSalesCost.AutoSize = True
-        lblSalesCost.Font = New Font("Designer", 16.2F)
+        lblSalesCost.Font = New Font("Designer", 12F)
         lblSalesCost.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        lblSalesCost.Location = New Point(53, 36)
+        lblSalesCost.Location = New Point(49, 39)
         lblSalesCost.Name = "lblSalesCost"
-        lblSalesCost.Size = New Size(60, 36)
+        lblSalesCost.Size = New Size(44, 26)
         lblSalesCost.TabIndex = 7
         lblSalesCost.Text = "69"
         ' 
@@ -2247,7 +2247,7 @@ Partial Class FORM_ADMIN
         ' 
         Button4.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button4.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.White
         Button4.Location = New Point(281, 141)
         Button4.Name = "Button4"
@@ -2258,7 +2258,7 @@ Partial Class FORM_ADMIN
         ' 
         ' txtbxSales
         ' 
-        txtbxSales.Font = New Font("Futura Bk BT", 12.0F)
+        txtbxSales.Font = New Font("Futura Bk BT", 12F)
         txtbxSales.Location = New Point(25, 141)
         txtbxSales.Name = "txtbxSales"
         txtbxSales.Size = New Size(231, 31)
@@ -2306,7 +2306,7 @@ Partial Class FORM_ADMIN
         pnlUsersContent.Controls.Add(Panel29)
         pnlUsersContent.Controls.Add(Button10)
         pnlUsersContent.Controls.Add(Panel46)
-        pnlUsersContent.Location = New Point(311, 81)
+        pnlUsersContent.Location = New Point(1300, 81)
         pnlUsersContent.Name = "pnlUsersContent"
         pnlUsersContent.Size = New Size(915, 564)
         pnlUsersContent.TabIndex = 18
@@ -2315,7 +2315,7 @@ Partial Class FORM_ADMIN
         ' 
         Button8.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button8.FlatStyle = FlatStyle.Flat
-        Button8.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button8.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button8.ForeColor = Color.White
         Button8.Location = New Point(568, 141)
         Button8.Name = "Button8"
@@ -2328,7 +2328,7 @@ Partial Class FORM_ADMIN
         ' 
         Button7.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button7.FlatStyle = FlatStyle.Flat
-        Button7.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button7.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button7.ForeColor = Color.White
         Button7.Location = New Point(429, 141)
         Button7.Name = "Button7"
@@ -2372,7 +2372,7 @@ Partial Class FORM_ADMIN
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label12.ForeColor = Color.Gray
         Label12.Location = New Point(35, 84)
         Label12.Name = "Label12"
@@ -2415,7 +2415,7 @@ Partial Class FORM_ADMIN
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.Gray
         Label8.Location = New Point(35, 84)
         Label8.Name = "Label8"
@@ -2458,7 +2458,7 @@ Partial Class FORM_ADMIN
         ' Label47
         ' 
         Label47.AutoSize = True
-        Label47.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label47.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label47.ForeColor = Color.Gray
         Label47.Location = New Point(35, 84)
         Label47.Name = "Label47"
@@ -2468,7 +2468,7 @@ Partial Class FORM_ADMIN
         ' 
         ' txtbxUsers
         ' 
-        txtbxUsers.Font = New Font("Futura Bk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtbxUsers.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtbxUsers.Location = New Point(25, 141)
         txtbxUsers.Name = "txtbxUsers"
         txtbxUsers.Size = New Size(212, 31)
@@ -2508,7 +2508,7 @@ Partial Class FORM_ADMIN
         ' 
         Button10.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button10.FlatStyle = FlatStyle.Flat
-        Button10.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button10.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button10.ForeColor = Color.White
         Button10.Location = New Point(729, 141)
         Button10.Name = "Button10"
@@ -2530,7 +2530,7 @@ Partial Class FORM_ADMIN
         ' ComboBox2
         ' 
         ComboBox2.FlatStyle = FlatStyle.Flat
-        ComboBox2.Font = New Font("Futura Bk BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        ComboBox2.Font = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox2.FormattingEnabled = True
         ComboBox2.Items.AddRange(New Object() {"USERS", "PENALTIES"})
         ComboBox2.Location = New Point(6, 4)
@@ -2596,7 +2596,7 @@ Partial Class FORM_ADMIN
         ' 
         Button9.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button9.Cursor = Cursors.Hand
-        Button9.Font = New Font("Futura Hv BT", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button9.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button9.ForeColor = Color.White
         Button9.Location = New Point(319, 252)
         Button9.Name = "Button9"
@@ -2666,7 +2666,7 @@ Partial Class FORM_ADMIN
         ' Label25
         ' 
         Label25.AutoSize = True
-        Label25.Font = New Font("Futura XBlk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label25.Font = New Font("Futura XBlk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label25.ForeColor = Color.White
         Label25.Location = New Point(15, 9)
         Label25.Name = "Label25"
@@ -2903,7 +2903,7 @@ Partial Class FORM_ADMIN
         ' Label20
         ' 
         Label20.AutoSize = True
-        Label20.Font = New Font("Futura XBlk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label20.Font = New Font("Futura XBlk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label20.ForeColor = Color.White
         Label20.Location = New Point(15, 9)
         Label20.Name = "Label20"
@@ -2932,7 +2932,7 @@ Partial Class FORM_ADMIN
         Panel47.Controls.Add(TextBox1)
         Panel47.Controls.Add(DataGridView1)
         Panel47.Controls.Add(Panel68)
-        Panel47.Location = New Point(1249, 93)
+        Panel47.Location = New Point(1500, 90)
         Panel47.Name = "Panel47"
         Panel47.Size = New Size(915, 564)
         Panel47.TabIndex = 17
@@ -2940,7 +2940,7 @@ Partial Class FORM_ADMIN
         ' Button12
         ' 
         Button12.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button12.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button12.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button12.ForeColor = Color.White
         Button12.Location = New Point(695, 381)
         Button12.Name = "Button12"
@@ -2952,7 +2952,7 @@ Partial Class FORM_ADMIN
         ' Button13
         ' 
         Button13.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Button13.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button13.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button13.ForeColor = Color.White
         Button13.Location = New Point(695, 433)
         Button13.Name = "Button13"
@@ -2996,7 +2996,7 @@ Partial Class FORM_ADMIN
         ' 
         ' DateTimePicker1
         ' 
-        DateTimePicker1.CalendarFont = New Font("Futura Bk BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DateTimePicker1.CalendarFont = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DateTimePicker1.CustomFormat = "YYYY-MM-DD"
         DateTimePicker1.Font = New Font("Futura Hv BT", 10.2F)
         DateTimePicker1.Location = New Point(676, 332)
@@ -3006,7 +3006,7 @@ Partial Class FORM_ADMIN
         ' 
         ' DateTimePicker2
         ' 
-        DateTimePicker2.CalendarFont = New Font("Futura Bk BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DateTimePicker2.CalendarFont = New Font("Futura Bk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DateTimePicker2.CustomFormat = "YYYY-MM-DD"
         DateTimePicker2.Font = New Font("Futura Hv BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DateTimePicker2.Location = New Point(676, 266)
@@ -3038,18 +3038,18 @@ Partial Class FORM_ADMIN
         ' Label46
         ' 
         Label46.AutoSize = True
-        Label46.Font = New Font("Designer", 16.2F)
+        Label46.Font = New Font("Designer", 12F)
         Label46.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label46.Location = New Point(53, 36)
+        Label46.Location = New Point(53, 41)
         Label46.Name = "Label46"
-        Label46.Size = New Size(60, 36)
+        Label46.Size = New Size(44, 26)
         Label46.TabIndex = 7
         Label46.Text = "69"
         ' 
         ' Label49
         ' 
         Label49.AutoSize = True
-        Label49.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label49.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label49.ForeColor = Color.Gray
         Label49.Location = New Point(53, 77)
         Label49.Name = "Label49"
@@ -3081,18 +3081,18 @@ Partial Class FORM_ADMIN
         ' Label50
         ' 
         Label50.AutoSize = True
-        Label50.Font = New Font("Designer", 16.2F)
+        Label50.Font = New Font("Designer", 12F)
         Label50.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label50.Location = New Point(53, 36)
+        Label50.Location = New Point(53, 41)
         Label50.Name = "Label50"
-        Label50.Size = New Size(60, 36)
+        Label50.Size = New Size(44, 26)
         Label50.TabIndex = 7
         Label50.Text = "69"
         ' 
         ' Label51
         ' 
         Label51.AutoSize = True
-        Label51.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label51.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label51.ForeColor = Color.Gray
         Label51.Location = New Point(53, 77)
         Label51.Name = "Label51"
@@ -3114,11 +3114,11 @@ Partial Class FORM_ADMIN
         ' Label52
         ' 
         Label52.AutoSize = True
-        Label52.Font = New Font("Designer", 16.2F)
+        Label52.Font = New Font("Designer", 12F)
         Label52.ForeColor = Color.White
-        Label52.Location = New Point(53, 37)
+        Label52.Location = New Point(53, 42)
         Label52.Name = "Label52"
-        Label52.Size = New Size(60, 36)
+        Label52.Size = New Size(44, 26)
         Label52.TabIndex = 7
         Label52.Text = "69"
         ' 
@@ -3135,7 +3135,7 @@ Partial Class FORM_ADMIN
         ' Label53
         ' 
         Label53.AutoSize = True
-        Label53.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label53.Font = New Font("Futura Hv BT", 9F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label53.ForeColor = Color.White
         Label53.Location = New Point(53, 83)
         Label53.Name = "Label53"
@@ -3167,11 +3167,11 @@ Partial Class FORM_ADMIN
         ' Label54
         ' 
         Label54.AutoSize = True
-        Label54.Font = New Font("Designer", 16.2F)
+        Label54.Font = New Font("Designer", 12F)
         Label54.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label54.Location = New Point(53, 36)
+        Label54.Location = New Point(53, 41)
         Label54.Name = "Label54"
-        Label54.Size = New Size(60, 36)
+        Label54.Size = New Size(44, 26)
         Label54.TabIndex = 7
         Label54.Text = "69"
         ' 
@@ -3190,7 +3190,7 @@ Partial Class FORM_ADMIN
         ' 
         Button14.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button14.FlatStyle = FlatStyle.Flat
-        Button14.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button14.Font = New Font("Futura Hv BT", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button14.ForeColor = Color.White
         Button14.Location = New Point(281, 141)
         Button14.Name = "Button14"
@@ -3201,7 +3201,7 @@ Partial Class FORM_ADMIN
         ' 
         ' TextBox1
         ' 
-        TextBox1.Font = New Font("Futura Bk BT", 12.0F)
+        TextBox1.Font = New Font("Futura Bk BT", 12F)
         TextBox1.Location = New Point(25, 141)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(231, 31)
@@ -3239,21 +3239,21 @@ Partial Class FORM_ADMIN
         ' 
         ' FORM_ADMIN
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Gainsboro
-        ClientSize = New Size(1262, 673)
-        Controls.Add(pnlUsersContent)
+        ClientSize = New Size(1482, 673)
         Controls.Add(Panel8)
         Controls.Add(Panel1)
         Controls.Add(pnlAddPenalty)
-        Controls.Add(pnlMaintenanceContent)
         Controls.Add(Panel47)
         Controls.Add(pnlSaleContent)
         Controls.Add(pnlcarinventory)
         Controls.Add(pnlUsersEditUser)
         Controls.Add(pnlAllDashboard)
         Controls.Add(pnlRentalContent)
+        Controls.Add(pnlUsersContent)
+        Controls.Add(pnlMaintenanceContent)
         Name = "FORM_ADMIN"
         StartPosition = FormStartPosition.CenterScreen
         Text = "FORM_ADMIN"

@@ -37,7 +37,6 @@ Public Class FORMRENTAL_STEP4
     Private Sub FORMRENTAL_STEP4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim td = RentalTransactionModule.TransactionData
 
-        ' Recalculate fractional days just in case
         Dim pickupDateTime As DateTime = td.PickupDate.Add(DateTime.Parse(td.PickupTime).TimeOfDay)
         Dim returnDateTime As DateTime = td.ReturnDate.Add(DateTime.Parse(td.ReturnTime).TimeOfDay)
 
@@ -45,7 +44,6 @@ Public Class FORMRENTAL_STEP4
         If td.RentalDurationDays < 1D Then td.RentalDurationDays = 1D
         td.TotalAmount = td.DailyRate * td.RentalDurationDays
 
-        ' Display vehicle name
         If Not String.IsNullOrEmpty(td.SelectedCarName) Then
             vehicletxt.Text = td.SelectedCarName
         ElseIf Not String.IsNullOrEmpty(td.SelectedMotorName) Then
@@ -55,7 +53,7 @@ Public Class FORMRENTAL_STEP4
         End If
 
         totalrentalratetxt.Text = "₱" & td.TotalAmount.ToString("N2")
-        renteddaystxt.Text = td.RentalDurationDays & " day(s)"
+        renteddaystxt.Text = Convert.ToDecimal(td.RentalDurationDays).ToString("N2") & " day(s)"
         rentalratetxt.Text = "₱" & td.DailyRate.ToString("N2")
 
         ToggleCardInputs(False)

@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports Microsoft.VisualBasic.ApplicationServices
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.Notice
 Imports Windows.Win32.System
@@ -125,7 +126,7 @@ Public Class FORM_ADMIN
             Using cmd As New MySqlCommand(query, conn)
                 Dim result = cmd.ExecuteScalar()
                 If result IsNot DBNull.Value Then
-                    lblPlaceholder.Text = result.ToString("N2")
+                    lblPlaceholder.Text = Convert.ToDecimal(result).ToString("N2")
                 Else
                     lblPlaceholder.Text = "0.00"
                 End If
@@ -144,7 +145,7 @@ Public Class FORM_ADMIN
             Using cmd As New MySqlCommand(query, conn)
                 Dim result = cmd.ExecuteScalar()
                 If result IsNot DBNull.Value Then
-                    lblPlaceholder.Text = result.ToString("N2")
+                    lblPlaceholder.Text = Convert.ToDecimal(result).ToString("N2")
                 Else
                     lblPlaceholder.Text = "0.00"
                 End If
@@ -664,9 +665,12 @@ Public Class FORM_ADMIN
 
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        loggedin = False
+        MsgBox("Logout successful! See you next time.", MsgBoxStyle.Information, "Success")
         Me.Close()
         Form1.Show()
     End Sub
+
 
     Private Sub txtbxRental_TextChanged(sender As Object, e As EventArgs) Handles txtbxRental.TextChanged
         Dim searchText As String = txtbxRental.Text

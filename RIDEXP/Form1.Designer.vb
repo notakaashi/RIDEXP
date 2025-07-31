@@ -519,6 +519,7 @@ Partial Class Form1
         BackgroundImage = My.Resources.Resources.RIDEXPRESS
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1262, 673)
+        Controls.Add(pnlContactUs)
         Controls.Add(pnlVehicleType)
         Controls.Add(contactslbl)
         Controls.Add(rentalslbl)
@@ -532,9 +533,8 @@ Partial Class Form1
         Controls.Add(Label1)
         Controls.Add(Button1)
         Controls.Add(PictureBox2)
-        Controls.Add(pnlContactUs)
-        Controls.Add(PictureBox1)
         Controls.Add(PictureBox3)
+        Controls.Add(PictureBox1)
         DoubleBuffered = True
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen

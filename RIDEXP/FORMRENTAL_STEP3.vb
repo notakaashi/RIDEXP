@@ -249,7 +249,6 @@ c.make,
         End If
 
         Try
-            ' Check if we have transaction data
             If RentalTransactionModule.TransactionData.SelectedCarId <= 0 AndAlso RentalTransactionModule.TransactionData.SelectedMotorId <= 0 Then
                 MessageBox.Show("No vehicle selected. Please start from car or motor selection.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Me.Close()
