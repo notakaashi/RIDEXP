@@ -42,14 +42,21 @@ Partial Class FORMRENTAL_STEP1
         homelbl = New Label()
         PictureBox1 = New PictureBox()
         contactslbl = New Label()
-        PictureBox2 = New PictureBox()
         Panel1 = New Panel()
+        PictureBox2 = New PictureBox()
+        PictureBox3 = New PictureBox()
+        Panel6 = New Panel()
+        Button3 = New Button()
+        Label11 = New Label()
+        user = New Label()
         Panel3.SuspendLayout()
         Panel2.SuspendLayout()
         Panel4.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        Panel6.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel3
@@ -63,10 +70,9 @@ Partial Class FORMRENTAL_STEP1
         Panel3.Controls.Add(Label3)
         Panel3.Controls.Add(DateTimePicker1)
         Panel3.Controls.Add(Label5)
-        Panel3.Location = New Point(52, 78)
-        Panel3.Margin = New Padding(3, 2, 3, 2)
+        Panel3.Location = New Point(59, 104)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(965, 63)
+        Panel3.Size = New Size(1103, 84)
         Panel3.TabIndex = 13
         ' 
         ' Label8
@@ -75,9 +81,9 @@ Partial Class FORMRENTAL_STEP1
         Label8.BackColor = Color.Transparent
         Label8.Font = New Font("Futura Hv BT", 10.2F)
         Label8.ForeColor = Color.Black
-        Label8.Location = New Point(760, 16)
+        Label8.Location = New Point(869, 21)
         Label8.Name = "Label8"
-        Label8.Size = New Size(127, 16)
+        Label8.Size = New Size(152, 20)
         Label8.TabIndex = 14
         Label8.Text = "STEP 4: PAYMENT"
         ' 
@@ -87,9 +93,9 @@ Partial Class FORMRENTAL_STEP1
         Label9.BackColor = Color.Transparent
         Label9.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Black
-        Label9.Location = New Point(724, 16)
+        Label9.Location = New Point(827, 21)
         Label9.Name = "Label9"
-        Label9.Size = New Size(205, 29)
+        Label9.Size = New Size(255, 36)
         Label9.TabIndex = 15
         Label9.Text = "________________"
         ' 
@@ -99,9 +105,9 @@ Partial Class FORMRENTAL_STEP1
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Futura Hv BT", 10.2F)
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(526, 16)
+        Label2.Location = New Point(601, 21)
         Label2.Name = "Label2"
-        Label2.Size = New Size(112, 16)
+        Label2.Size = New Size(136, 20)
         Label2.TabIndex = 12
         Label2.Text = "STEP 3: REVIEW"
         ' 
@@ -111,9 +117,9 @@ Partial Class FORMRENTAL_STEP1
         Label7.BackColor = Color.Transparent
         Label7.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.Black
-        Label7.Location = New Point(491, 16)
+        Label7.Location = New Point(561, 21)
         Label7.Name = "Label7"
-        Label7.Size = New Size(205, 29)
+        Label7.Size = New Size(255, 36)
         Label7.TabIndex = 13
         Label7.Text = "________________"
         ' 
@@ -123,9 +129,9 @@ Partial Class FORMRENTAL_STEP1
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Futura Hv BT", 10.2F)
         Label4.ForeColor = Color.Black
-        Label4.Location = New Point(293, 16)
+        Label4.Location = New Point(335, 21)
         Label4.Name = "Label4"
-        Label4.Size = New Size(135, 16)
+        Label4.Size = New Size(163, 20)
         Label4.TabIndex = 10
         Label4.Text = "STEP 2: ITENERARY"
         ' 
@@ -135,9 +141,9 @@ Partial Class FORMRENTAL_STEP1
         Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Black
-        Label6.Location = New Point(256, 16)
+        Label6.Location = New Point(293, 21)
         Label6.Name = "Label6"
-        Label6.Size = New Size(205, 29)
+        Label6.Size = New Size(255, 36)
         Label6.TabIndex = 11
         Label6.Text = "________________"
         ' 
@@ -147,18 +153,17 @@ Partial Class FORMRENTAL_STEP1
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Futura Hv BT", 10.2F)
         Label3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label3.Location = New Point(37, 16)
+        Label3.Location = New Point(42, 21)
         Label3.Name = "Label3"
-        Label3.Size = New Size(185, 16)
+        Label3.Size = New Size(223, 20)
         Label3.TabIndex = 4
         Label3.Text = "STEP 1: SELECT A VEHICLE"
         ' 
         ' DateTimePicker1
         ' 
-        DateTimePicker1.Location = New Point(170, 40)
-        DateTimePicker1.Margin = New Padding(3, 2, 3, 2)
+        DateTimePicker1.Location = New Point(194, 53)
         DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(0, 23)
+        DateTimePicker1.Size = New Size(0, 27)
         DateTimePicker1.TabIndex = 0
         ' 
         ' Label5
@@ -167,9 +172,9 @@ Partial Class FORMRENTAL_STEP1
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label5.Location = New Point(25, 16)
+        Label5.Location = New Point(29, 21)
         Label5.Name = "Label5"
-        Label5.Size = New Size(205, 29)
+        Label5.Size = New Size(255, 36)
         Label5.TabIndex = 9
         Label5.Text = "________________"
         ' 
@@ -179,10 +184,9 @@ Partial Class FORMRENTAL_STEP1
         Panel2.Controls.Add(Panel5)
         Panel2.Controls.Add(Label10)
         Panel2.Controls.Add(Label1)
-        Panel2.Location = New Point(144, 160)
-        Panel2.Margin = New Padding(3, 2, 3, 2)
+        Panel2.Location = New Point(165, 213)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(794, 124)
+        Panel2.Size = New Size(907, 165)
         Panel2.TabIndex = 14
         ' 
         ' Panel5
@@ -190,9 +194,8 @@ Partial Class FORMRENTAL_STEP1
         Panel5.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Panel5.Dock = DockStyle.Top
         Panel5.Location = New Point(0, 0)
-        Panel5.Margin = New Padding(3, 2, 3, 2)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(794, 25)
+        Panel5.Size = New Size(907, 33)
         Panel5.TabIndex = 27
         ' 
         ' Label10
@@ -201,9 +204,9 @@ Partial Class FORMRENTAL_STEP1
         Label10.BackColor = Color.Transparent
         Label10.Font = New Font("Futura Hv BT", 10.2F)
         Label10.ForeColor = Color.Black
-        Label10.Location = New Point(233, 91)
+        Label10.Location = New Point(266, 121)
         Label10.Name = "Label10"
-        Label10.Size = New Size(312, 16)
+        Label10.Size = New Size(380, 20)
         Label10.TabIndex = 16
         Label10.Text = "Please select a vehicle first before proceeding"
         ' 
@@ -214,9 +217,9 @@ Partial Class FORMRENTAL_STEP1
         Label1.Cursor = Cursors.Hand
         Label1.Font = New Font("Reesha", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Black
-        Label1.Location = New Point(88, 40)
+        Label1.Location = New Point(101, 53)
         Label1.Name = "Label1"
-        Label1.Size = New Size(571, 46)
+        Label1.Size = New Size(721, 56)
         Label1.TabIndex = 26
         Label1.Text = "SELECT A VEHICLE TYPE"
         ' 
@@ -225,10 +228,9 @@ Partial Class FORMRENTAL_STEP1
         Panel4.BackColor = Color.White
         Panel4.Controls.Add(Button2)
         Panel4.Controls.Add(Button1)
-        Panel4.Location = New Point(144, 301)
-        Panel4.Margin = New Padding(3, 2, 3, 2)
+        Panel4.Location = New Point(165, 401)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(794, 119)
+        Panel4.Size = New Size(907, 159)
         Panel4.TabIndex = 27
         ' 
         ' Button2
@@ -237,10 +239,9 @@ Partial Class FORMRENTAL_STEP1
         Button2.Cursor = Cursors.Hand
         Button2.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(399, 28)
-        Button2.Margin = New Padding(3, 2, 3, 2)
+        Button2.Location = New Point(456, 37)
         Button2.Name = "Button2"
-        Button2.Size = New Size(319, 55)
+        Button2.Size = New Size(365, 73)
         Button2.TabIndex = 1
         Button2.Text = "MOTORCYCLES"
         Button2.UseVisualStyleBackColor = False
@@ -251,10 +252,9 @@ Partial Class FORMRENTAL_STEP1
         Button1.Cursor = Cursors.Hand
         Button1.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(78, 28)
-        Button1.Margin = New Padding(3, 2, 3, 2)
+        Button1.Location = New Point(89, 37)
         Button1.Name = "Button1"
-        Button1.Size = New Size(243, 55)
+        Button1.Size = New Size(278, 73)
         Button1.TabIndex = 0
         Button1.Text = "CARS"
         Button1.UseVisualStyleBackColor = False
@@ -266,19 +266,18 @@ Partial Class FORMRENTAL_STEP1
         homelbl.Cursor = Cursors.Hand
         homelbl.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         homelbl.ForeColor = Color.Black
-        homelbl.Location = New Point(144, 16)
+        homelbl.Location = New Point(165, 21)
         homelbl.Name = "homelbl"
-        homelbl.Size = New Size(88, 26)
+        homelbl.Size = New Size(107, 32)
         homelbl.TabIndex = 23
         homelbl.Text = "HOME"
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Image = My.Resources.Resources.RideX
-        PictureBox1.Location = New Point(0, -26)
-        PictureBox1.Margin = New Padding(3, 2, 3, 2)
+        PictureBox1.Location = New Point(0, -35)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(130, 110)
+        PictureBox1.Size = New Size(149, 147)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
@@ -290,50 +289,114 @@ Partial Class FORMRENTAL_STEP1
         contactslbl.Cursor = Cursors.Hand
         contactslbl.Font = New Font("Reesha", 16.1999989F)
         contactslbl.ForeColor = Color.Black
-        contactslbl.Location = New Point(259, 17)
+        contactslbl.Location = New Point(296, 23)
         contactslbl.Name = "contactslbl"
-        contactslbl.Size = New Size(181, 26)
+        contactslbl.Size = New Size(220, 32)
         contactslbl.TabIndex = 25
         contactslbl.Text = "CONTACT US"
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.White
+        Panel1.Controls.Add(contactslbl)
+        Panel1.Controls.Add(PictureBox1)
+        Panel1.Controls.Add(homelbl)
+        Panel1.Controls.Add(PictureBox3)
+        Panel1.Controls.Add(PictureBox2)
+        Panel1.Dock = DockStyle.Top
+        Panel1.Location = New Point(0, 0)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1262, 77)
+        Panel1.TabIndex = 2
         ' 
         ' PictureBox2
         ' 
         PictureBox2.BackColor = Color.Transparent
         PictureBox2.BackgroundImage = My.Resources.Resources.USER_LOGO
         PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox2.Location = New Point(1037, 10)
-        PictureBox2.Margin = New Padding(3, 2, 3, 2)
+        PictureBox2.Location = New Point(1173, 13)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(42, 31)
+        PictureBox2.Size = New Size(48, 41)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.TabIndex = 24
+        PictureBox2.TabIndex = 29
         PictureBox2.TabStop = False
         ' 
-        ' Panel1
+        ' PictureBox3
         ' 
-        Panel1.BackColor = Color.White
-        Panel1.Controls.Add(PictureBox2)
-        Panel1.Controls.Add(contactslbl)
-        Panel1.Controls.Add(PictureBox1)
-        Panel1.Controls.Add(homelbl)
-        Panel1.Dock = DockStyle.Top
-        Panel1.Location = New Point(0, 0)
-        Panel1.Margin = New Padding(3, 2, 3, 2)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1104, 58)
-        Panel1.TabIndex = 2
+        PictureBox3.BackColor = Color.Transparent
+        PictureBox3.BackgroundImage = My.Resources.Resources.USER_LOGO
+        PictureBox3.BackgroundImageLayout = ImageLayout.Stretch
+        PictureBox3.Location = New Point(1173, 14)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(48, 41)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 28
+        PictureBox3.TabStop = False
+        PictureBox3.Visible = False
+        ' 
+        ' Panel6
+        ' 
+        Panel6.BackColor = Color.White
+        Panel6.Controls.Add(Button3)
+        Panel6.Controls.Add(Label11)
+        Panel6.Controls.Add(user)
+        Panel6.Location = New Point(1065, 75)
+        Panel6.Margin = New Padding(3, 4, 3, 4)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(197, 125)
+        Panel6.TabIndex = 29
+        Panel6.Visible = False
+        ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button3.FlatStyle = FlatStyle.Flat
+        Button3.Font = New Font("Reesha", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(34, 75)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(122, 31)
+        Button3.TabIndex = 18
+        Button3.Text = "LOGOUT"
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.BackColor = Color.Transparent
+        Label11.Font = New Font("Futura Hv BT", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label11.Location = New Point(34, 13)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(142, 21)
+        Label11.TabIndex = 16
+        Label11.Text = "LOGGED IN AS"
+        ' 
+        ' user
+        ' 
+        user.AutoSize = True
+        user.BackColor = Color.Transparent
+        user.Font = New Font("Reesha", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        user.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        user.Location = New Point(56, 43)
+        user.Name = "user"
+        user.Size = New Size(100, 23)
+        user.TabIndex = 17
+        user.Text = "AAAAAA"
+        user.TextAlign = ContentAlignment.TopCenter
+        user.Visible = False
         ' 
         ' FORMRENTAL_STEP1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.RIDEXPRESS__5_
-        ClientSize = New Size(1104, 505)
+        ClientSize = New Size(1262, 673)
+        Controls.Add(Panel6)
         Controls.Add(Panel4)
         Controls.Add(Panel2)
         Controls.Add(Panel3)
         Controls.Add(Panel1)
-        Margin = New Padding(3, 2, 3, 2)
         Name = "FORMRENTAL_STEP1"
         StartPosition = FormStartPosition.CenterScreen
         Text = "FORMRENTAL_STEP1"
@@ -343,9 +406,12 @@ Partial Class FORMRENTAL_STEP1
         Panel2.PerformLayout()
         Panel4.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        Panel6.ResumeLayout(False)
+        Panel6.PerformLayout()
         ResumeLayout(False)
     End Sub
     Friend WithEvents Panel3 As Panel
@@ -368,6 +434,11 @@ Partial Class FORMRENTAL_STEP1
     Friend WithEvents homelbl As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents contactslbl As Label
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents user As Label
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

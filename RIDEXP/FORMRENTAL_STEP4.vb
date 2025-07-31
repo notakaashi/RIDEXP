@@ -9,8 +9,21 @@ Public Class FORMRENTAL_STEP4
     End Sub
 
     Private Sub homelbl_Click(sender As Object, e As EventArgs) Handles homelbl.Click
-        Form1.Show()
-        Me.Close()
+        Try
+            ' Ask for confirmation before cancelling
+            If MessageBox.Show("Are you sure you want to cancel this booking? All data will be lost.",
+                              "Confirm Cancellation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+
+                ' Rollback transaction
+                RentalTransactionModule.RollbackTransaction()
+
+                ' Go to home
+                Form1.Show()
+                Me.Close()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error cancelling booking: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click

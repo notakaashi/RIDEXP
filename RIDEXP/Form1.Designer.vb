@@ -204,10 +204,10 @@ Partial Class Form1
         Panel2.Controls.Add(Button2)
         Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(user)
-        Panel2.Location = New Point(977, 87)
+        Panel2.Location = New Point(1067, 87)
         Panel2.Margin = New Padding(3, 4, 3, 4)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(288, 187)
+        Panel2.Size = New Size(197, 125)
         Panel2.TabIndex = 19
         Panel2.Visible = False
         ' 
@@ -217,7 +217,7 @@ Partial Class Form1
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Reesha", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(83, 97)
+        Button2.Location = New Point(34, 75)
         Button2.Name = "Button2"
         Button2.Size = New Size(122, 31)
         Button2.TabIndex = 18
@@ -228,11 +228,11 @@ Partial Class Form1
         ' 
         Label6.AutoSize = True
         Label6.BackColor = Color.Transparent
-        Label6.Font = New Font("Reesha", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Futura Hv BT", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label6.Location = New Point(30, 28)
+        Label6.Location = New Point(34, 13)
         Label6.Name = "Label6"
-        Label6.Size = New Size(161, 23)
+        Label6.Size = New Size(142, 21)
         Label6.TabIndex = 16
         Label6.Text = "LOGGED IN AS"
         ' 
@@ -242,7 +242,7 @@ Partial Class Form1
         user.BackColor = Color.Transparent
         user.Font = New Font("Reesha", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         user.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        user.Location = New Point(83, 52)
+        user.Location = New Point(56, 43)
         user.Name = "user"
         user.Size = New Size(100, 23)
         user.TabIndex = 17
@@ -330,7 +330,7 @@ Partial Class Form1
         pnlContactUs.Controls.Add(Panel5)
         pnlContactUs.Controls.Add(Panel6)
         pnlContactUs.Controls.Add(Panel4)
-        pnlContactUs.Location = New Point(78, 115)
+        pnlContactUs.Location = New Point(84, 121)
         pnlContactUs.Name = "pnlContactUs"
         pnlContactUs.Size = New Size(1050, 447)
         pnlContactUs.TabIndex = 27
@@ -519,7 +519,6 @@ Partial Class Form1
         BackgroundImage = My.Resources.Resources.RIDEXPRESS
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1262, 673)
-        Controls.Add(pnlContactUs)
         Controls.Add(pnlVehicleType)
         Controls.Add(contactslbl)
         Controls.Add(rentalslbl)
@@ -532,8 +531,9 @@ Partial Class Form1
         Controls.Add(Label5)
         Controls.Add(Label1)
         Controls.Add(Button1)
-        Controls.Add(PictureBox1)
         Controls.Add(PictureBox2)
+        Controls.Add(pnlContactUs)
+        Controls.Add(PictureBox1)
         Controls.Add(PictureBox3)
         DoubleBuffered = True
         Name = "Form1"

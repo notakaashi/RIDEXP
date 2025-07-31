@@ -46,6 +46,7 @@ Public Class FORMRENTAL_STEP2
     End Sub
 
     Private Sub FORMRENTAL_STEP2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        RefreshLoginState()
         If RentalTransactionModule.transaction Is Nothing Then
             MessageBox.Show("No active transaction found. Returning to car/motor selection.")
             Dim step1Form As New FORMRENTAL_STEP1()
@@ -238,5 +239,26 @@ Public Class FORMRENTAL_STEP2
             Return Convert.ToDateTime(result)
         End Using
     End Function
+    Public Sub RefreshLoginState()
+        PictureBox3.Visible = loggedin
+        user.Text = userlogged
+        user.Visible = loggedin
+    End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        loggedin = False
+        user.Visible = False
+        Panel7.Visible = False
+        PictureBox3.Visible = False
+        MsgBox("Logout successful! See you next time.", MsgBoxStyle.Information, "Success")
+    End Sub
+
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Panel7.Visible = Not Panel7.Visible
+    End Sub
+
+    Private Sub PictureBox2_Click_1(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Logjn.Show()
+    End Sub
 End Class

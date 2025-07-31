@@ -33,7 +33,6 @@ Partial Class FORMRENTAL_STEP4
         DateTimePicker1 = New DateTimePicker()
         Label5 = New Label()
         Panel1 = New Panel()
-        PictureBox2 = New PictureBox()
         contactslbl = New Label()
         PictureBox1 = New PictureBox()
         homelbl = New Label()
@@ -76,7 +75,6 @@ Partial Class FORMRENTAL_STEP4
         Label21 = New Label()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         Panel9.SuspendLayout()
@@ -209,7 +207,6 @@ Partial Class FORMRENTAL_STEP4
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
-        Panel1.Controls.Add(PictureBox2)
         Panel1.Controls.Add(contactslbl)
         Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(homelbl)
@@ -218,18 +215,6 @@ Partial Class FORMRENTAL_STEP4
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1262, 77)
         Panel1.TabIndex = 27
-        ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.BackColor = Color.Transparent
-        PictureBox2.BackgroundImage = My.Resources.Resources.USER_LOGO
-        PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox2.Location = New Point(1185, 13)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(48, 41)
-        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.TabIndex = 24
-        PictureBox2.TabStop = False
         ' 
         ' contactslbl
         ' 
@@ -692,7 +677,6 @@ Partial Class FORMRENTAL_STEP4
         Panel3.PerformLayout()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
@@ -722,7 +706,6 @@ Partial Class FORMRENTAL_STEP4
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents contactslbl As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents homelbl As Label

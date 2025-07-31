@@ -243,6 +243,11 @@ c.make,
     End Sub
 
     Private Sub FORMRENTAL_STEP3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If loggedin = False Then
+            RefreshLoginState()
+
+        End If
+
         Try
             ' Check if we have transaction data
             If RentalTransactionModule.TransactionData.SelectedCarId <= 0 AndAlso RentalTransactionModule.TransactionData.SelectedMotorId <= 0 Then
@@ -333,5 +338,27 @@ c.make,
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Close()
         FORMRENTAL_STEP2.Show()
+    End Sub
+
+    Public Sub RefreshLoginState()
+        PictureBox3.Visible = loggedin
+        user.Text = userlogged
+        user.Visible = loggedin
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        loggedin = False
+        user.Visible = False
+        Panel9.Visible = False
+        PictureBox3.Visible = False
+        MsgBox("Logout successful! See you next time.", MsgBoxStyle.Information, "Success")
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Panel9.Visible = Not Panel9.Visible
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Logjn.Show()
     End Sub
 End Class
