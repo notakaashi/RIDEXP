@@ -31,7 +31,7 @@ Public Class allcars
             Dim query As String = "SELECT rr.rate_per_day, c.model_name, c.make, c.color, c.mileage, c.seating_capacity,c.year, cp.image
                                 FROM cars c
                                 JOIN cars_pic cp ON c.car_id = cp.car_id 
-                                JOIN vehicles v ON c.car_id = v.vehicle_id
+                                JOIN vehicles v ON c.car_id = v.item_id AND v.vehicle_type = 'car'
                                 JOIN rental_rate rr ON rr.vehicle_id = v.vehicle_id
                                 WHERE c.car_id = @carId"
 
