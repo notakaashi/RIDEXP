@@ -980,7 +980,7 @@ Public Class FORM_ADMIN
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        pnlAddPenalty.Location = New Point(122, 92)
+        pnlAddPenalty.Location = New Point(80, 89)
         txtPenaltyRentalID.PlaceholderText = "Input Rental ID"
         cbPenaltyType.Text = "Penalty Type"
         cbPenaltyDescription.Text = "Penalty Description"
@@ -1142,10 +1142,6 @@ Public Class FORM_ADMIN
         Dim mileage As Decimal
         Dim rentalRate As Decimal
 
-        If Not Integer.TryParse(txtAddYear.Text, year) Then
-            MessageBox.Show("Please enter a valid year.")
-            Exit Sub
-        End If
 
         If Not Decimal.TryParse(addMileage.Text, mileage) Then
             MessageBox.Show("Please enter a valid mileage.")
