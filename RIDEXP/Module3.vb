@@ -34,7 +34,11 @@ Public Module Module3
 
             Dim vehicleInfo = GetVehicleInfo(data.SelectedVehicleId)
 
-            Dim invoicePath As String = $"RideExpress_Invoice_{rentalId}_{DateTime.Now:yyyyMMdd_HHmmss}.pdf"
+            Dim invoiceDirectory As String = "C:\Users\PC\Desktop\RIDEXP\RideXP Receipts"
+            If Not Directory.Exists(invoiceDirectory) Then
+                Directory.CreateDirectory(invoiceDirectory)
+            End If
+            Dim invoicePath As String = Path.Combine(invoiceDirectory, $"RideExpress_Invoice_{rentalId}_{DateTime.Now:yyyyMMdd_HHmmss}.pdf")
 
             Using fs As New FileStream(invoicePath, FileMode.Create, FileAccess.Write, FileShare.None)
                 Dim doc As New Document(PageSize.A4, 30, 30, 30, 30)

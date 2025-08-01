@@ -92,15 +92,15 @@ INSERT INTO motors (motor_category_id, make, model, year, license_plate, color, 
 
 -- Insert vehicles 
 
--- Cars 
-INSERT INTO `vehicles` (`vehicle_type`, `item_id`, `status_id`) VALUES
-('car', 1, 1), ('car', 2, 1), ('car', 3, 1), ('car', 4, 1), ('car', 5, 1),
-('car', 6, 1), ('car', 7, 1), ('car', 8, 1), ('car', 9, 1), ('car', 10, 1);
-
 -- Motors 
 INSERT INTO `vehicles` (`vehicle_type`, `item_id`, `status_id`) VALUES
 ('motor', 1, 1), ('motor', 2, 1), ('motor', 3, 1), ('motor', 4, 1), ('motor', 5, 1),
 ('motor', 6, 1), ('motor', 7, 1), ('motor', 8, 1), ('motor', 9, 1), ('motor', 10, 1);
+
+-- Cars 
+INSERT INTO `vehicles` (`vehicle_type`, `item_id`, `status_id`) VALUES
+('car', 1, 1), ('car', 2, 1), ('car', 3, 1), ('car', 4, 1), ('car', 5, 1),
+('car', 6, 1), ('car', 7, 1), ('car', 8, 1), ('car', 9, 1), ('car', 10, 1);
 
 -- Insert terms and policie
 
@@ -167,6 +167,38 @@ INSERT INTO `terms_and_policies` (`title`, `content`, `version`, `effective_date
 '1.0', '2024-01-01');
 
 
+INSERT INTO user (username, password_hash, role_id, created_at)
+VALUES 
+  ('JONEL', SHA2('admin', 256), 1, NOW()),
+  ('MARCUS', SHA2('admin', 256), 1, NOW());
+
+INSERT INTO cars_pic (car_id, image) VALUES (1, 'vios');
+INSERT INTO cars_pic (car_id, image) VALUES (2, 'xpander');
+INSERT INTO cars_pic (car_id, image) VALUES (3, 'innova');
+INSERT INTO cars_pic (car_id, image) VALUES (4, 'ertiga');
+INSERT INTO cars_pic (car_id, image) VALUES (5, 'city');
+INSERT INTO cars_pic (car_id, image) VALUES (6, 'fortuner');
+INSERT INTO cars_pic (car_id, image) VALUES (7, 'swift');
+INSERT INTO cars_pic (car_id, image) VALUES (8, 'civic');
+INSERT INTO cars_pic (car_id, image) VALUES (9, 'corolla');
+INSERT INTO cars_pic (car_id, image) VALUES (10, 'rush');
+
+INSERT INTO motors_pic (motor_id, image) VALUES
+(1, 'imgSporty'),
+(2, 'imgAerox'),
+(3, 'imgClick'),
+(4, 'imgBeat'),
+(5, 'imgGenio'),
+(6, 'imgPCX'),
+(7, 'imgRaider'),
+(8, 'imgBarako'),
+(9, 'imgNMAX'),
+(10, 'imgADV');
+
+
+
+
+
 -- Insert rental rates for motorcycles (vehicle_id 1-10)
 INSERT INTO rental_rate (vehicle_id, rate_per_day,  effective_date) VALUES
 -- Yamaha Mio Sporty (Budget scooter)
@@ -212,31 +244,3 @@ INSERT INTO rental_rate (vehicle_id,  rate_per_day, effective_date) VALUES
 (19, 2800.00,  '2024-01-01'),
 -- Toyota Rush (Compact SUV)
 (20,  2500.00,  '2024-01-01');
-
-INSERT INTO user (username, password_hash, role_id, created_at)
-VALUES 
-  ('JONEL', SHA2('admin', 256), 1, NOW()),
-  ('MARCUS', SHA2('admin', 256), 1, NOW());
-
-INSERT INTO cars_pic (car_id, image) VALUES (1, 'vios');
-INSERT INTO cars_pic (car_id, image) VALUES (2, 'xpander');
-INSERT INTO cars_pic (car_id, image) VALUES (3, 'innova');
-INSERT INTO cars_pic (car_id, image) VALUES (4, 'ertiga');
-INSERT INTO cars_pic (car_id, image) VALUES (5, 'city');
-INSERT INTO cars_pic (car_id, image) VALUES (6, 'fortuner');
-INSERT INTO cars_pic (car_id, image) VALUES (7, 'swift');
-INSERT INTO cars_pic (car_id, image) VALUES (8, 'civic');
-INSERT INTO cars_pic (car_id, image) VALUES (9, 'corolla');
-INSERT INTO cars_pic (car_id, image) VALUES (10, 'rush');
-
-INSERT INTO motors_pic (motor_id, image) VALUES
-(1, 'imgSporty'),
-(2, 'imgAerox'),
-(3, 'imgClick'),
-(4, 'imgBeat'),
-(5, 'imgGenio'),
-(6, 'imgPCX'),
-(7, 'imgRaider'),
-(8, 'imgBarako'),
-(9, 'imgNMAX'),
-(10, 'imgADV');

@@ -81,9 +81,10 @@ Partial Class Form1
         PictureBox1.BackColor = Color.Transparent
         PictureBox1.BackgroundImage = My.Resources.Resources.USER_LOGO
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(1169, 27)
+        PictureBox1.Location = New Point(1023, 20)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(48, 41)
+        PictureBox1.Size = New Size(42, 31)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
@@ -95,9 +96,10 @@ Partial Class Form1
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Reesha", 16.1999989F)
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(933, 23)
+        Button1.Location = New Point(816, 13)
+        Button1.Margin = New Padding(3, 2, 3, 2)
         Button1.Name = "Button1"
-        Button1.Size = New Size(230, 45)
+        Button1.Size = New Size(201, 43)
         Button1.TabIndex = 6
         Button1.Text = "BOOK NOW"
         Button1.TextAlign = ContentAlignment.TopCenter
@@ -109,9 +111,9 @@ Partial Class Form1
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Reesha", 48F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label1.Location = New Point(34, 139)
+        Label1.Location = New Point(30, 104)
         Label1.Name = "Label1"
-        Label1.Size = New Size(0, 96)
+        Label1.Size = New Size(0, 77)
         Label1.TabIndex = 10
         ' 
         ' Label5
@@ -120,9 +122,9 @@ Partial Class Form1
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label5.Location = New Point(102, 235)
+        Label5.Location = New Point(89, 176)
         Label5.Name = "Label5"
-        Label5.Size = New Size(0, 36)
+        Label5.Size = New Size(0, 29)
         Label5.TabIndex = 11
         ' 
         ' Label2
@@ -131,9 +133,9 @@ Partial Class Form1
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Futura Bk BT", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label2.Location = New Point(78, 299)
+        Label2.Location = New Point(68, 224)
         Label2.Name = "Label2"
-        Label2.Size = New Size(0, 24)
+        Label2.Size = New Size(0, 19)
         Label2.TabIndex = 12
         ' 
         ' Label3
@@ -142,14 +144,15 @@ Partial Class Form1
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Futura Hv BT", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label3.Location = New Point(102, 455)
+        Label3.Location = New Point(89, 341)
         Label3.Name = "Label3"
-        Label3.Size = New Size(0, 36)
+        Label3.Size = New Size(0, 29)
         Label3.TabIndex = 13
         ' 
         ' FlowLayoutPanel1
         ' 
-        FlowLayoutPanel1.Location = New Point(235, 69)
+        FlowLayoutPanel1.Location = New Point(206, 52)
+        FlowLayoutPanel1.Margin = New Padding(3, 2, 3, 2)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         FlowLayoutPanel1.Size = New Size(0, 0)
         FlowLayoutPanel1.TabIndex = 14
@@ -160,9 +163,9 @@ Partial Class Form1
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Reesha", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label4.Location = New Point(141, 181)
+        Label4.Location = New Point(123, 136)
         Label4.Name = "Label4"
-        Label4.Size = New Size(369, 53)
+        Label4.Size = New Size(295, 42)
         Label4.TabIndex = 15
         Label4.Text = "WELCOME TO"
         ' 
@@ -170,9 +173,10 @@ Partial Class Form1
         ' 
         PictureBox2.BackColor = Color.Transparent
         PictureBox2.Image = My.Resources.Resources.RideX
-        PictureBox2.Location = New Point(51, 101)
+        PictureBox2.Location = New Point(45, 76)
+        PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(528, 467)
+        PictureBox2.Size = New Size(462, 350)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 16
         PictureBox2.TabStop = False
@@ -180,7 +184,8 @@ Partial Class Form1
         ' Panel1
         ' 
         Panel1.Controls.Add(FlowLayoutPanel1)
-        Panel1.Location = New Point(102, 139)
+        Panel1.Location = New Point(89, 104)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(0, 0)
         Panel1.TabIndex = 17
@@ -190,9 +195,10 @@ Partial Class Form1
         PictureBox3.BackColor = Color.Transparent
         PictureBox3.BackgroundImage = My.Resources.Resources.USER_LOGO
         PictureBox3.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox3.Location = New Point(1169, 27)
+        PictureBox3.Location = New Point(1023, 20)
+        PictureBox3.Margin = New Padding(3, 2, 3, 2)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(48, 41)
+        PictureBox3.Size = New Size(42, 31)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox3.TabIndex = 18
         PictureBox3.TabStop = False
@@ -204,10 +210,9 @@ Partial Class Form1
         Panel2.Controls.Add(Button2)
         Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(user)
-        Panel2.Location = New Point(1067, 87)
-        Panel2.Margin = New Padding(3, 4, 3, 4)
+        Panel2.Location = New Point(934, 65)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(197, 125)
+        Panel2.Size = New Size(172, 94)
         Panel2.TabIndex = 19
         Panel2.Visible = False
         ' 
@@ -217,9 +222,10 @@ Partial Class Form1
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Reesha", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(34, 75)
+        Button2.Location = New Point(30, 56)
+        Button2.Margin = New Padding(3, 2, 3, 2)
         Button2.Name = "Button2"
-        Button2.Size = New Size(122, 31)
+        Button2.Size = New Size(107, 23)
         Button2.TabIndex = 18
         Button2.Text = "LOGOUT"
         Button2.UseVisualStyleBackColor = False
@@ -230,9 +236,9 @@ Partial Class Form1
         Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Futura Hv BT", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label6.Location = New Point(34, 13)
+        Label6.Location = New Point(30, 10)
         Label6.Name = "Label6"
-        Label6.Size = New Size(142, 21)
+        Label6.Size = New Size(119, 18)
         Label6.TabIndex = 16
         Label6.Text = "LOGGED IN AS"
         ' 
@@ -242,9 +248,9 @@ Partial Class Form1
         user.BackColor = Color.Transparent
         user.Font = New Font("Reesha", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         user.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        user.Location = New Point(56, 43)
+        user.Location = New Point(49, 32)
         user.Name = "user"
-        user.Size = New Size(100, 23)
+        user.Size = New Size(80, 18)
         user.TabIndex = 17
         user.Text = "AAAAAA"
         user.TextAlign = ContentAlignment.TopCenter
@@ -257,9 +263,9 @@ Partial Class Form1
         homelbl.Cursor = Cursors.Hand
         homelbl.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         homelbl.ForeColor = Color.Black
-        homelbl.Location = New Point(249, 28)
+        homelbl.Location = New Point(218, 21)
         homelbl.Name = "homelbl"
-        homelbl.Size = New Size(107, 32)
+        homelbl.Size = New Size(88, 26)
         homelbl.TabIndex = 20
         homelbl.Text = "HOME"
         ' 
@@ -270,9 +276,9 @@ Partial Class Form1
         rentalslbl.Cursor = Cursors.Hand
         rentalslbl.Font = New Font("Reesha", 16.1999989F)
         rentalslbl.ForeColor = Color.Black
-        rentalslbl.Location = New Point(389, 27)
+        rentalslbl.Location = New Point(340, 20)
         rentalslbl.Name = "rentalslbl"
-        rentalslbl.Size = New Size(242, 32)
+        rentalslbl.Size = New Size(199, 26)
         rentalslbl.TabIndex = 21
         rentalslbl.Text = "OUR RENTALS"
         ' 
@@ -283,9 +289,9 @@ Partial Class Form1
         contactslbl.Cursor = Cursors.Hand
         contactslbl.Font = New Font("Reesha", 16.1999989F)
         contactslbl.ForeColor = Color.Black
-        contactslbl.Location = New Point(658, 27)
+        contactslbl.Location = New Point(576, 20)
         contactslbl.Name = "contactslbl"
-        contactslbl.Size = New Size(220, 32)
+        contactslbl.Size = New Size(181, 26)
         contactslbl.TabIndex = 22
         contactslbl.Text = "CONTACT US"
         ' 
@@ -294,10 +300,9 @@ Partial Class Form1
         pnlVehicleType.BackColor = Color.White
         pnlVehicleType.Controls.Add(btnMotor)
         pnlVehicleType.Controls.Add(btnCar)
-        pnlVehicleType.Location = New Point(389, 87)
-        pnlVehicleType.Margin = New Padding(3, 4, 3, 4)
+        pnlVehicleType.Location = New Point(340, 65)
         pnlVehicleType.Name = "pnlVehicleType"
-        pnlVehicleType.Size = New Size(242, 125)
+        pnlVehicleType.Size = New Size(212, 94)
         pnlVehicleType.TabIndex = 20
         pnlVehicleType.Visible = False
         ' 
@@ -305,9 +310,10 @@ Partial Class Form1
         ' 
         btnMotor.Cursor = Cursors.Hand
         btnMotor.Font = New Font("Reesha", 10.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnMotor.Location = New Point(18, 64)
+        btnMotor.Location = New Point(16, 48)
+        btnMotor.Margin = New Padding(3, 2, 3, 2)
         btnMotor.Name = "btnMotor"
-        btnMotor.Size = New Size(203, 44)
+        btnMotor.Size = New Size(178, 33)
         btnMotor.TabIndex = 1
         btnMotor.Text = "MOTORCYCLES"
         btnMotor.UseVisualStyleBackColor = True
@@ -316,9 +322,10 @@ Partial Class Form1
         ' 
         btnCar.Cursor = Cursors.Hand
         btnCar.Font = New Font("Reesha", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnCar.Location = New Point(18, 13)
+        btnCar.Location = New Point(16, 10)
+        btnCar.Margin = New Padding(3, 2, 3, 2)
         btnCar.Name = "btnCar"
-        btnCar.Size = New Size(203, 44)
+        btnCar.Size = New Size(178, 33)
         btnCar.TabIndex = 0
         btnCar.Text = "CARS"
         btnCar.TextAlign = ContentAlignment.TopCenter
@@ -330,9 +337,10 @@ Partial Class Form1
         pnlContactUs.Controls.Add(Panel5)
         pnlContactUs.Controls.Add(Panel6)
         pnlContactUs.Controls.Add(Panel4)
-        pnlContactUs.Location = New Point(84, 121)
+        pnlContactUs.Location = New Point(74, 91)
+        pnlContactUs.Margin = New Padding(3, 2, 3, 2)
         pnlContactUs.Name = "pnlContactUs"
-        pnlContactUs.Size = New Size(1050, 447)
+        pnlContactUs.Size = New Size(919, 335)
         pnlContactUs.TabIndex = 27
         pnlContactUs.Visible = False
         ' 
@@ -343,18 +351,19 @@ Partial Class Form1
         Panel3.Controls.Add(Label8)
         Panel3.Controls.Add(Label9)
         Panel3.Controls.Add(PictureBox5)
-        Panel3.Location = New Point(714, 78)
+        Panel3.Location = New Point(625, 58)
+        Panel3.Margin = New Padding(3, 2, 3, 2)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(315, 312)
+        Panel3.Size = New Size(276, 234)
         Panel3.TabIndex = 35
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(81, 262)
+        Label7.Location = New Point(71, 196)
         Label7.Name = "Label7"
-        Label7.Size = New Size(129, 20)
+        Label7.Size = New Size(105, 16)
         Label7.TabIndex = 30
         Label7.Text = "@ridexpress_ph"
         ' 
@@ -362,9 +371,9 @@ Partial Class Form1
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(101, 238)
+        Label8.Location = New Point(88, 178)
         Label8.Name = "Label8"
-        Label8.Size = New Size(89, 20)
+        Label8.Size = New Size(71, 16)
         Label8.TabIndex = 29
         Label8.Text = "RideXpress"
         ' 
@@ -375,18 +384,19 @@ Partial Class Form1
         Label9.Cursor = Cursors.Hand
         Label9.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label9.Location = New Point(92, 194)
+        Label9.Location = New Point(80, 146)
         Label9.Name = "Label9"
-        Label9.Size = New Size(115, 32)
+        Label9.Size = New Size(95, 26)
         Label9.TabIndex = 28
         Label9.Text = "DM US"
         ' 
         ' PictureBox5
         ' 
         PictureBox5.Image = My.Resources.Resources.users_logo
-        PictureBox5.Location = New Point(50, 34)
+        PictureBox5.Location = New Point(44, 26)
+        PictureBox5.Margin = New Padding(3, 2, 3, 2)
         PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(206, 146)
+        PictureBox5.Size = New Size(180, 110)
         PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox5.TabIndex = 0
         PictureBox5.TabStop = False
@@ -397,18 +407,19 @@ Partial Class Form1
         Panel5.Controls.Add(Label10)
         Panel5.Controls.Add(Label11)
         Panel5.Controls.Add(PictureBox4)
-        Panel5.Location = New Point(371, 80)
+        Panel5.Location = New Point(325, 60)
+        Panel5.Margin = New Padding(3, 2, 3, 2)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(315, 312)
+        Panel5.Size = New Size(276, 234)
         Panel5.TabIndex = 34
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(77, 238)
+        Label10.Location = New Point(67, 178)
         Label10.Name = "Label10"
-        Label10.Size = New Size(158, 20)
+        Label10.Size = New Size(129, 16)
         Label10.TabIndex = 29
         Label10.Text = "rentals@ridexp.com"
         ' 
@@ -419,18 +430,19 @@ Partial Class Form1
         Label11.Cursor = Cursors.Hand
         Label11.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label11.Location = New Point(73, 194)
+        Label11.Location = New Point(64, 146)
         Label11.Name = "Label11"
-        Label11.Size = New Size(164, 32)
+        Label11.Size = New Size(135, 26)
         Label11.TabIndex = 28
         Label11.Text = "EMAIL US"
         ' 
         ' PictureBox4
         ' 
         PictureBox4.Image = My.Resources.Resources.icon_email
-        PictureBox4.Location = New Point(81, 34)
+        PictureBox4.Location = New Point(71, 26)
+        PictureBox4.Margin = New Padding(3, 2, 3, 2)
         PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(154, 146)
+        PictureBox4.Size = New Size(135, 110)
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox4.TabIndex = 0
         PictureBox4.TabStop = False
@@ -442,18 +454,19 @@ Partial Class Form1
         Panel6.Controls.Add(Label13)
         Panel6.Controls.Add(Label14)
         Panel6.Controls.Add(PictureBox6)
-        Panel6.Location = New Point(24, 78)
+        Panel6.Location = New Point(21, 58)
+        Panel6.Margin = New Padding(3, 2, 3, 2)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(315, 312)
+        Panel6.Size = New Size(276, 234)
         Panel6.TabIndex = 33
         ' 
         ' Label12
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(81, 262)
+        Label12.Location = New Point(71, 196)
         Label12.Name = "Label12"
-        Label12.Size = New Size(140, 20)
+        Label12.Size = New Size(112, 16)
         Label12.TabIndex = 30
         Label12.Text = "(02) 7791 - 1234"
         ' 
@@ -461,9 +474,9 @@ Partial Class Form1
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(88, 238)
+        Label13.Location = New Point(77, 178)
         Label13.Name = "Label13"
-        Label13.Size = New Size(119, 20)
+        Label13.Size = New Size(95, 16)
         Label13.TabIndex = 29
         Label13.Text = "09123456789"
         ' 
@@ -474,18 +487,19 @@ Partial Class Form1
         Label14.Cursor = Cursors.Hand
         Label14.Font = New Font("Reesha", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label14.Location = New Point(73, 194)
+        Label14.Location = New Point(64, 146)
         Label14.Name = "Label14"
-        Label14.Size = New Size(154, 32)
+        Label14.Size = New Size(127, 26)
         Label14.TabIndex = 28
         Label14.Text = "CALL US"
         ' 
         ' PictureBox6
         ' 
         PictureBox6.Image = My.Resources.Resources.icon_call
-        PictureBox6.Location = New Point(73, 34)
+        PictureBox6.Location = New Point(64, 26)
+        PictureBox6.Margin = New Padding(3, 2, 3, 2)
         PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(159, 146)
+        PictureBox6.Size = New Size(139, 110)
         PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox6.TabIndex = 0
         PictureBox6.TabStop = False
@@ -496,8 +510,9 @@ Partial Class Form1
         Panel4.Controls.Add(Label15)
         Panel4.Dock = DockStyle.Top
         Panel4.Location = New Point(0, 0)
+        Panel4.Margin = New Padding(3, 2, 3, 2)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(1050, 42)
+        Panel4.Size = New Size(919, 32)
         Panel4.TabIndex = 0
         ' 
         ' Label15
@@ -506,19 +521,19 @@ Partial Class Form1
         Label15.BackColor = Color.Transparent
         Label15.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label15.ForeColor = Color.White
-        Label15.Location = New Point(18, 9)
+        Label15.Location = New Point(16, 7)
         Label15.Name = "Label15"
-        Label15.Size = New Size(31, 29)
+        Label15.Size = New Size(25, 24)
         Label15.TabIndex = 6
         Label15.Text = "X"
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.RIDEXPRESS
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(1262, 673)
+        ClientSize = New Size(1104, 505)
         Controls.Add(pnlContactUs)
         Controls.Add(pnlVehicleType)
         Controls.Add(contactslbl)
@@ -536,6 +551,7 @@ Partial Class Form1
         Controls.Add(PictureBox3)
         Controls.Add(PictureBox1)
         DoubleBuffered = True
+        Margin = New Padding(3, 2, 3, 2)
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Text = " "

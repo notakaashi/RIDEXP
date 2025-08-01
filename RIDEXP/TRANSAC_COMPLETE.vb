@@ -4,7 +4,7 @@ Imports iTextSharp.text.pdf
 Imports iTextSharp.text.pdf.draw
 
 Public Class TRANSAC_COMPLETE
-    ' Store the rental ID when the form loads
+
     Public Property RentalId As Integer = 0
 
     Private Sub TRANSAC_COMPLETE_Load(sender As Object, e As EventArgs) Handles MyBase.Load
