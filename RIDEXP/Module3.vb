@@ -34,12 +34,14 @@ Public Module Module3
 
             Dim vehicleInfo = GetVehicleInfo(data.SelectedVehicleId)
 
-            Dim invoiceDirectory As String = "C:\Users\Admin\Desktop\3RD SEM\FUNDAMENTALS\VBNET\RIDEXP\RideXP Receipts"
+            Dim documentsPath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+            Dim invoiceDirectory As String = Path.Combine(documentsPath, "RideXP Receipts")
+
             If Not Directory.Exists(invoiceDirectory) Then
                 Directory.CreateDirectory(invoiceDirectory)
             End If
-            Dim invoicePath As String = Path.Combine(invoiceDirectory, $"RideExpress_Invoice_{rentalId}_{DateTime.Now:yyyy-MM-dd}.pdf")
 
+            Dim invoicePath As String = Path.Combine(invoiceDirectory, $"RideExpress_Invoice_{rentalId}_{DateTime.Now:yyyy-MM-dd}.pdf")
             Using fs As New FileStream(invoicePath, FileMode.Create, FileAccess.Write, FileShare.None)
                 Dim doc As New Document(PageSize.A4, 30, 30, 30, 30)
                 Dim writer As PdfWriter = PdfWriter.GetInstance(doc, fs)
