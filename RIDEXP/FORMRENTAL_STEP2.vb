@@ -119,6 +119,17 @@ Public Class FORMRENTAL_STEP2
             Return False
         End If
 
+        If cbxPickup.SelectedItem Is Nothing Then
+            MessageBox.Show("Please select a pickup time.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            cbxPickup.Focus()
+            Return False
+        End If
+
+        If cbxReturn.SelectedItem Is Nothing Then
+            MessageBox.Show("Please select a return time.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            cbxReturn.Focus()
+            Return False
+        End If
         Return True
     End Function
 
@@ -162,7 +173,7 @@ Public Class FORMRENTAL_STEP2
                 cbxPickup.SelectedItem = .PickupTime
             End If
             If Not String.IsNullOrEmpty(.ReturnTime) Then
-                cbxReturn.SelectedItem = .ReturnDate
+                cbxReturn.SelectedItem = .ReturnTime
             End If
 
             If Not String.IsNullOrEmpty(.PickupPlace) Then
