@@ -189,7 +189,7 @@ Public Class allcars
         pnlHatchback.Location = New Point(1300, 167)
         pnlHybrid.Location = New Point(1300, 167)
 
-        targetPanel.Location = New Point(54, 185)
+        targetPanel.Location = New Point(39, 106)
         targetPanel.BringToFront()
     End Sub
 

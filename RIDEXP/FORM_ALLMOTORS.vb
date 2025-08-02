@@ -183,7 +183,7 @@ Public Class FORM_ALLMOTORS
         pnlScooter.Location = New Point(1300, 167)
         pnlUnderbone.Location = New Point(1300, 167)
 
-        targetPanel.Location = New Point(54, 185)
+        targetPanel.Location = New Point(39, 107)
         targetPanel.BringToFront()
     End Sub
     Private Sub LoadMotorImage(imageName As String, pictureBox As PictureBox)

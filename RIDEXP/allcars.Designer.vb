@@ -23,7 +23,6 @@ Partial Class allcars
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(allcars))
         btnHybrid = New Button()
         btnHatch = New Button()
         btnMPV = New Button()
@@ -154,8 +153,6 @@ Partial Class allcars
         Label37 = New Label()
         FadeTimer = New Timer(components)
         Panel13 = New Panel()
-        PictureBox3 = New PictureBox()
-        TextBox1 = New TextBox()
         pnlSuvContent = New Panel()
         panel5suv = New Panel()
         suvyear5txt = New Label()
@@ -696,7 +693,6 @@ Partial Class allcars
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel6.SuspendLayout()
         Panel13.SuspendLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         pnlSuvContent.SuspendLayout()
         panel5suv.SuspendLayout()
         CType(suv5pic, ComponentModel.ISupportInitialize).BeginInit()
@@ -2349,27 +2345,6 @@ Partial Class allcars
         Panel13.Size = New Size(993, 46)
         Panel13.TabIndex = 42
         ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.BackColor = Color.Transparent
-        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(47, 94)
-        PictureBox3.Margin = New Padding(3, 2, 3, 2)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(45, 32)
-        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox3.TabIndex = 29
-        PictureBox3.TabStop = False
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Futura Bk BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(110, 96)
-        TextBox1.Margin = New Padding(3, 2, 3, 2)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(176, 33)
-        TextBox1.TabIndex = 22
-        ' 
         ' pnlSuvContent
         ' 
         pnlSuvContent.AutoScroll = True
@@ -3957,7 +3932,7 @@ Partial Class allcars
         pnlSedan.Controls.Add(Panel14)
         pnlSedan.Controls.Add(Panel19)
         pnlSedan.Controls.Add(Panel15)
-        pnlSedan.Location = New Point(48, 137)
+        pnlSedan.Location = New Point(39, 106)
         pnlSedan.Margin = New Padding(3, 2, 3, 2)
         pnlSedan.Name = "pnlSedan"
         pnlSedan.Size = New Size(1017, 263)
@@ -8681,8 +8656,6 @@ Partial Class allcars
         Controls.Add(Panel13)
         Controls.Add(Panel6)
         Controls.Add(pnlAllCarsContent)
-        Controls.Add(TextBox1)
-        Controls.Add(PictureBox3)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(3, 2, 3, 2)
         Name = "allcars"
@@ -8723,7 +8696,6 @@ Partial Class allcars
         Panel6.ResumeLayout(False)
         Panel6.PerformLayout()
         Panel13.ResumeLayout(False)
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         pnlSuvContent.ResumeLayout(False)
         panel5suv.ResumeLayout(False)
         panel5suv.PerformLayout()
@@ -8826,7 +8798,6 @@ Partial Class allcars
         Panel24.PerformLayout()
         CType(car7img, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
     Friend WithEvents btnHybrid As Button
     Friend WithEvents btnHatch As Button
@@ -8958,8 +8929,6 @@ Partial Class allcars
     Friend WithEvents Label90 As Label
     Friend WithEvents Label91 As Label
     Friend WithEvents Panel13 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents pnlSuvContent As Panel
     Friend WithEvents Panel22 As Panel
     Friend WithEvents Label164 As Label

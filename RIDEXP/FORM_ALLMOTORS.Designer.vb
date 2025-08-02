@@ -23,15 +23,12 @@ Partial Class FORM_ALLMOTORS
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FORM_ALLMOTORS))
         Panel13 = New Panel()
         btnScooter = New Button()
         btnUnderbone = New Button()
         btnAdventure = New Button()
         Panel6 = New Panel()
         Label37 = New Label()
-        TextBox1 = New TextBox()
-        PictureBox3 = New PictureBox()
         pnlScooter = New Panel()
         panel5scooter = New Panel()
         scooteryear5txt = New Label()
@@ -202,6 +199,62 @@ Partial Class FORM_ALLMOTORS
         model1txt = New Label()
         Label28 = New Label()
         pnlUnderbone = New Panel()
+        panel5underbone = New Panel()
+        underboneyear5txt = New Label()
+        Label108 = New Label()
+        underbonerentalrate5txt = New Label()
+        Label116 = New Label()
+        underbonecolor5txt = New Label()
+        underbonemileage5txt = New Label()
+        underbonemake5txt = New Label()
+        underbone5btn = New Button()
+        Label124 = New Label()
+        Label125 = New Label()
+        underbone5pic = New PictureBox()
+        underbonemodel5txt = New Label()
+        Label127 = New Label()
+        panel4underbone = New Panel()
+        underboneyear4txt = New Label()
+        Label103 = New Label()
+        underbonerentalrate4txt = New Label()
+        Label111 = New Label()
+        underbonecolor4txt = New Label()
+        underbonemileage4txt = New Label()
+        underbonemake4txt = New Label()
+        underbone4btn = New Button()
+        Label119 = New Label()
+        Label120 = New Label()
+        underbone4pic = New PictureBox()
+        underbonemodel4txt = New Label()
+        Label122 = New Label()
+        panel3underbone = New Panel()
+        underboneyear3txt = New Label()
+        Label98 = New Label()
+        underbonerentalrate3txt = New Label()
+        Label106 = New Label()
+        underbonecolor3txt = New Label()
+        underbonemileage3txt = New Label()
+        underbonemake3txt = New Label()
+        underbone3btn = New Button()
+        Label114 = New Label()
+        Label115 = New Label()
+        underbone3pic = New PictureBox()
+        underbonemodel3txt = New Label()
+        Label117 = New Label()
+        panel2underbone = New Panel()
+        underboneyear2txt = New Label()
+        Label93 = New Label()
+        underbonerentalrate2txt = New Label()
+        Label101 = New Label()
+        underbonecolor2txt = New Label()
+        underbonemileage2txt = New Label()
+        underbonemake2txt = New Label()
+        underbone2btn = New Button()
+        Label109 = New Label()
+        Label110 = New Label()
+        underbone2pic = New PictureBox()
+        underbonemodel2txt = New Label()
+        Label112 = New Label()
         panel1underbone = New Panel()
         underboneyear1txt = New Label()
         Label88 = New Label()
@@ -330,65 +383,8 @@ Partial Class FORM_ALLMOTORS
         model10txt = New Label()
         Label195 = New Label()
         FadeTimer = New Timer(components)
-        panel2underbone = New Panel()
-        underboneyear2txt = New Label()
-        Label93 = New Label()
-        underbonerentalrate2txt = New Label()
-        Label101 = New Label()
-        underbonecolor2txt = New Label()
-        underbonemileage2txt = New Label()
-        underbonemake2txt = New Label()
-        underbone2btn = New Button()
-        Label109 = New Label()
-        Label110 = New Label()
-        underbone2pic = New PictureBox()
-        underbonemodel2txt = New Label()
-        Label112 = New Label()
-        panel3underbone = New Panel()
-        underboneyear3txt = New Label()
-        Label98 = New Label()
-        underbonerentalrate3txt = New Label()
-        Label106 = New Label()
-        underbonecolor3txt = New Label()
-        underbonemileage3txt = New Label()
-        underbonemake3txt = New Label()
-        underbone3btn = New Button()
-        Label114 = New Label()
-        Label115 = New Label()
-        underbone3pic = New PictureBox()
-        underbonemodel3txt = New Label()
-        Label117 = New Label()
-        panel4underbone = New Panel()
-        underboneyear4txt = New Label()
-        Label103 = New Label()
-        underbonerentalrate4txt = New Label()
-        Label111 = New Label()
-        underbonecolor4txt = New Label()
-        underbonemileage4txt = New Label()
-        underbonemake4txt = New Label()
-        underbone4btn = New Button()
-        Label119 = New Label()
-        Label120 = New Label()
-        underbone4pic = New PictureBox()
-        underbonemodel4txt = New Label()
-        Label122 = New Label()
-        panel5underbone = New Panel()
-        underboneyear5txt = New Label()
-        Label108 = New Label()
-        underbonerentalrate5txt = New Label()
-        Label116 = New Label()
-        underbonecolor5txt = New Label()
-        underbonemileage5txt = New Label()
-        underbonemake5txt = New Label()
-        underbone5btn = New Button()
-        Label124 = New Label()
-        Label125 = New Label()
-        underbone5pic = New PictureBox()
-        underbonemodel5txt = New Label()
-        Label127 = New Label()
         Panel13.SuspendLayout()
         Panel6.SuspendLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         pnlScooter.SuspendLayout()
         panel5scooter.SuspendLayout()
         CType(scooter5pic, ComponentModel.ISupportInitialize).BeginInit()
@@ -415,6 +411,14 @@ Partial Class FORM_ALLMOTORS
         Panel1.SuspendLayout()
         CType(motor1img, ComponentModel.ISupportInitialize).BeginInit()
         pnlUnderbone.SuspendLayout()
+        panel5underbone.SuspendLayout()
+        CType(underbone5pic, ComponentModel.ISupportInitialize).BeginInit()
+        panel4underbone.SuspendLayout()
+        CType(underbone4pic, ComponentModel.ISupportInitialize).BeginInit()
+        panel3underbone.SuspendLayout()
+        CType(underbone3pic, ComponentModel.ISupportInitialize).BeginInit()
+        panel2underbone.SuspendLayout()
+        CType(underbone2pic, ComponentModel.ISupportInitialize).BeginInit()
         panel1underbone.SuspendLayout()
         CType(underbone1pic, ComponentModel.ISupportInitialize).BeginInit()
         Panel10.SuspendLayout()
@@ -434,14 +438,6 @@ Partial Class FORM_ALLMOTORS
         CType(adventure1pic, ComponentModel.ISupportInitialize).BeginInit()
         Panel27.SuspendLayout()
         CType(motor10img, ComponentModel.ISupportInitialize).BeginInit()
-        panel2underbone.SuspendLayout()
-        CType(underbone2pic, ComponentModel.ISupportInitialize).BeginInit()
-        panel3underbone.SuspendLayout()
-        CType(underbone3pic, ComponentModel.ISupportInitialize).BeginInit()
-        panel4underbone.SuspendLayout()
-        CType(underbone4pic, ComponentModel.ISupportInitialize).BeginInit()
-        panel5underbone.SuspendLayout()
-        CType(underbone5pic, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel13
@@ -450,7 +446,7 @@ Partial Class FORM_ALLMOTORS
         Panel13.Controls.Add(btnScooter)
         Panel13.Controls.Add(btnUnderbone)
         Panel13.Controls.Add(btnAdventure)
-        Panel13.Location = New Point(43, 32)
+        Panel13.Location = New Point(162, 45)
         Panel13.Margin = New Padding(3, 2, 3, 2)
         Panel13.Name = "Panel13"
         Panel13.Size = New Size(774, 46)
@@ -527,27 +523,6 @@ Partial Class FORM_ALLMOTORS
         Label37.TabIndex = 42
         Label37.Text = "X"
         ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Futura Bk BT", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(101, 94)
-        TextBox1.Margin = New Padding(3, 2, 3, 2)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(176, 33)
-        TextBox1.TabIndex = 43
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.BackColor = Color.Transparent
-        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(43, 92)
-        PictureBox3.Margin = New Padding(3, 2, 3, 2)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(45, 32)
-        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox3.TabIndex = 44
-        PictureBox3.TabStop = False
-        ' 
         ' pnlScooter
         ' 
         pnlScooter.AutoScroll = True
@@ -564,7 +539,7 @@ Partial Class FORM_ALLMOTORS
         pnlScooter.Controls.Add(Panel5)
         pnlScooter.Controls.Add(Panel2)
         pnlScooter.Controls.Add(Panel1)
-        pnlScooter.Location = New Point(43, 140)
+        pnlScooter.Location = New Point(39, 107)
         pnlScooter.Margin = New Padding(3, 2, 3, 2)
         pnlScooter.Name = "pnlScooter"
         pnlScooter.Size = New Size(1017, 263)
@@ -2632,6 +2607,690 @@ Partial Class FORM_ALLMOTORS
         pnlUnderbone.Size = New Size(1017, 263)
         pnlUnderbone.TabIndex = 48
         ' 
+        ' panel5underbone
+        ' 
+        panel5underbone.BackColor = Color.White
+        panel5underbone.BorderStyle = BorderStyle.FixedSingle
+        panel5underbone.Controls.Add(underboneyear5txt)
+        panel5underbone.Controls.Add(Label108)
+        panel5underbone.Controls.Add(underbonerentalrate5txt)
+        panel5underbone.Controls.Add(Label116)
+        panel5underbone.Controls.Add(underbonecolor5txt)
+        panel5underbone.Controls.Add(underbonemileage5txt)
+        panel5underbone.Controls.Add(underbonemake5txt)
+        panel5underbone.Controls.Add(underbone5btn)
+        panel5underbone.Controls.Add(Label124)
+        panel5underbone.Controls.Add(Label125)
+        panel5underbone.Controls.Add(underbone5pic)
+        panel5underbone.Controls.Add(underbonemodel5txt)
+        panel5underbone.Controls.Add(Label127)
+        panel5underbone.ForeColor = Color.Gray
+        panel5underbone.Location = New Point(10, 1424)
+        panel5underbone.Margin = New Padding(3, 2, 3, 2)
+        panel5underbone.Name = "panel5underbone"
+        panel5underbone.Size = New Size(976, 215)
+        panel5underbone.TabIndex = 61
+        panel5underbone.Visible = False
+        ' 
+        ' underboneyear5txt
+        ' 
+        underboneyear5txt.AutoSize = True
+        underboneyear5txt.Font = New Font("Futura Hv BT", 12F)
+        underboneyear5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underboneyear5txt.Location = New Point(487, 158)
+        underboneyear5txt.Name = "underboneyear5txt"
+        underboneyear5txt.Size = New Size(49, 19)
+        underboneyear5txt.TabIndex = 25
+        underboneyear5txt.Text = "2021"
+        ' 
+        ' Label108
+        ' 
+        Label108.AutoSize = True
+        Label108.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label108.ForeColor = Color.Black
+        Label108.Location = New Point(324, 158)
+        Label108.Name = "Label108"
+        Label108.Size = New Size(49, 19)
+        Label108.TabIndex = 24
+        Label108.Text = "YEAR:"
+        ' 
+        ' underbonerentalrate5txt
+        ' 
+        underbonerentalrate5txt.AutoSize = True
+        underbonerentalrate5txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        underbonerentalrate5txt.ForeColor = Color.Black
+        underbonerentalrate5txt.Location = New Point(709, 91)
+        underbonerentalrate5txt.Name = "underbonerentalrate5txt"
+        underbonerentalrate5txt.Size = New Size(149, 22)
+        underbonerentalrate5txt.TabIndex = 23
+        underbonerentalrate5txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label116
+        ' 
+        Label116.AutoSize = True
+        Label116.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label116.ForeColor = Color.Black
+        Label116.Location = New Point(708, 66)
+        Label116.Name = "Label116"
+        Label116.Size = New Size(99, 19)
+        Label116.TabIndex = 22
+        Label116.Text = "Vehicle Rate:"
+        ' 
+        ' underbonecolor5txt
+        ' 
+        underbonecolor5txt.AutoSize = True
+        underbonecolor5txt.Font = New Font("Futura Hv BT", 12F)
+        underbonecolor5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbonecolor5txt.Location = New Point(486, 75)
+        underbonecolor5txt.Name = "underbonecolor5txt"
+        underbonecolor5txt.Size = New Size(35, 19)
+        underbonecolor5txt.TabIndex = 21
+        underbonecolor5txt.Text = "red"
+        ' 
+        ' underbonemileage5txt
+        ' 
+        underbonemileage5txt.AutoSize = True
+        underbonemileage5txt.Font = New Font("Futura Hv BT", 12F)
+        underbonemileage5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbonemileage5txt.Location = New Point(486, 120)
+        underbonemileage5txt.Name = "underbonemileage5txt"
+        underbonemileage5txt.Size = New Size(88, 19)
+        underbonemileage5txt.TabIndex = 20
+        underbonemileage5txt.Text = "11,456km"
+        ' 
+        ' underbonemake5txt
+        ' 
+        underbonemake5txt.AutoSize = True
+        underbonemake5txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        underbonemake5txt.ForeColor = Color.Black
+        underbonemake5txt.Location = New Point(24, 7)
+        underbonemake5txt.Name = "underbonemake5txt"
+        underbonemake5txt.Size = New Size(60, 22)
+        underbonemake5txt.TabIndex = 17
+        underbonemake5txt.Text = "MAKE"
+        ' 
+        ' underbone5btn
+        ' 
+        underbone5btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbone5btn.FlatStyle = FlatStyle.Flat
+        underbone5btn.Font = New Font("Reesha", 16.1999989F)
+        underbone5btn.ForeColor = Color.White
+        underbone5btn.Location = New Point(708, 129)
+        underbone5btn.Margin = New Padding(3, 2, 3, 2)
+        underbone5btn.Name = "underbone5btn"
+        underbone5btn.Size = New Size(233, 43)
+        underbone5btn.TabIndex = 16
+        underbone5btn.Text = "BOOK NOW"
+        underbone5btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label124
+        ' 
+        Label124.AutoSize = True
+        Label124.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label124.ForeColor = Color.Black
+        Label124.Location = New Point(323, 120)
+        Label124.Name = "Label124"
+        Label124.Size = New Size(78, 19)
+        Label124.TabIndex = 5
+        Label124.Text = "MILEAGE:"
+        ' 
+        ' Label125
+        ' 
+        Label125.AutoSize = True
+        Label125.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label125.ForeColor = Color.Black
+        Label125.Location = New Point(324, 75)
+        Label125.Name = "Label125"
+        Label125.Size = New Size(69, 19)
+        Label125.TabIndex = 3
+        Label125.Text = "COLOR:"
+        ' 
+        ' underbone5pic
+        ' 
+        underbone5pic.Image = My.Resources.Resources.RideX
+        underbone5pic.Location = New Point(19, 66)
+        underbone5pic.Margin = New Padding(3, 2, 3, 2)
+        underbone5pic.Name = "underbone5pic"
+        underbone5pic.Size = New Size(283, 145)
+        underbone5pic.SizeMode = PictureBoxSizeMode.StretchImage
+        underbone5pic.TabIndex = 2
+        underbone5pic.TabStop = False
+        ' 
+        ' underbonemodel5txt
+        ' 
+        underbonemodel5txt.AutoSize = True
+        underbonemodel5txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        underbonemodel5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbonemodel5txt.Location = New Point(19, 22)
+        underbonemodel5txt.Name = "underbonemodel5txt"
+        underbonemodel5txt.Size = New Size(245, 32)
+        underbonemodel5txt.TabIndex = 0
+        underbonemodel5txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label127
+        ' 
+        Label127.AutoSize = True
+        Label127.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label127.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label127.Location = New Point(19, 26)
+        Label127.Name = "Label127"
+        Label127.Size = New Size(882, 32)
+        Label127.TabIndex = 1
+        Label127.Text = "______________________________________________________________"
+        ' 
+        ' panel4underbone
+        ' 
+        panel4underbone.BackColor = Color.White
+        panel4underbone.BorderStyle = BorderStyle.FixedSingle
+        panel4underbone.Controls.Add(underboneyear4txt)
+        panel4underbone.Controls.Add(Label103)
+        panel4underbone.Controls.Add(underbonerentalrate4txt)
+        panel4underbone.Controls.Add(Label111)
+        panel4underbone.Controls.Add(underbonecolor4txt)
+        panel4underbone.Controls.Add(underbonemileage4txt)
+        panel4underbone.Controls.Add(underbonemake4txt)
+        panel4underbone.Controls.Add(underbone4btn)
+        panel4underbone.Controls.Add(Label119)
+        panel4underbone.Controls.Add(Label120)
+        panel4underbone.Controls.Add(underbone4pic)
+        panel4underbone.Controls.Add(underbonemodel4txt)
+        panel4underbone.Controls.Add(Label122)
+        panel4underbone.ForeColor = Color.Gray
+        panel4underbone.Location = New Point(10, 1188)
+        panel4underbone.Margin = New Padding(3, 2, 3, 2)
+        panel4underbone.Name = "panel4underbone"
+        panel4underbone.Size = New Size(976, 215)
+        panel4underbone.TabIndex = 60
+        panel4underbone.Visible = False
+        ' 
+        ' underboneyear4txt
+        ' 
+        underboneyear4txt.AutoSize = True
+        underboneyear4txt.Font = New Font("Futura Hv BT", 12F)
+        underboneyear4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underboneyear4txt.Location = New Point(487, 158)
+        underboneyear4txt.Name = "underboneyear4txt"
+        underboneyear4txt.Size = New Size(49, 19)
+        underboneyear4txt.TabIndex = 25
+        underboneyear4txt.Text = "2021"
+        ' 
+        ' Label103
+        ' 
+        Label103.AutoSize = True
+        Label103.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label103.ForeColor = Color.Black
+        Label103.Location = New Point(324, 158)
+        Label103.Name = "Label103"
+        Label103.Size = New Size(49, 19)
+        Label103.TabIndex = 24
+        Label103.Text = "YEAR:"
+        ' 
+        ' underbonerentalrate4txt
+        ' 
+        underbonerentalrate4txt.AutoSize = True
+        underbonerentalrate4txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        underbonerentalrate4txt.ForeColor = Color.Black
+        underbonerentalrate4txt.Location = New Point(709, 91)
+        underbonerentalrate4txt.Name = "underbonerentalrate4txt"
+        underbonerentalrate4txt.Size = New Size(149, 22)
+        underbonerentalrate4txt.TabIndex = 23
+        underbonerentalrate4txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label111
+        ' 
+        Label111.AutoSize = True
+        Label111.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label111.ForeColor = Color.Black
+        Label111.Location = New Point(708, 66)
+        Label111.Name = "Label111"
+        Label111.Size = New Size(99, 19)
+        Label111.TabIndex = 22
+        Label111.Text = "Vehicle Rate:"
+        ' 
+        ' underbonecolor4txt
+        ' 
+        underbonecolor4txt.AutoSize = True
+        underbonecolor4txt.Font = New Font("Futura Hv BT", 12F)
+        underbonecolor4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbonecolor4txt.Location = New Point(486, 75)
+        underbonecolor4txt.Name = "underbonecolor4txt"
+        underbonecolor4txt.Size = New Size(35, 19)
+        underbonecolor4txt.TabIndex = 21
+        underbonecolor4txt.Text = "red"
+        ' 
+        ' underbonemileage4txt
+        ' 
+        underbonemileage4txt.AutoSize = True
+        underbonemileage4txt.Font = New Font("Futura Hv BT", 12F)
+        underbonemileage4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbonemileage4txt.Location = New Point(486, 120)
+        underbonemileage4txt.Name = "underbonemileage4txt"
+        underbonemileage4txt.Size = New Size(88, 19)
+        underbonemileage4txt.TabIndex = 20
+        underbonemileage4txt.Text = "11,456km"
+        ' 
+        ' underbonemake4txt
+        ' 
+        underbonemake4txt.AutoSize = True
+        underbonemake4txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        underbonemake4txt.ForeColor = Color.Black
+        underbonemake4txt.Location = New Point(24, 7)
+        underbonemake4txt.Name = "underbonemake4txt"
+        underbonemake4txt.Size = New Size(60, 22)
+        underbonemake4txt.TabIndex = 17
+        underbonemake4txt.Text = "MAKE"
+        ' 
+        ' underbone4btn
+        ' 
+        underbone4btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbone4btn.FlatStyle = FlatStyle.Flat
+        underbone4btn.Font = New Font("Reesha", 16.1999989F)
+        underbone4btn.ForeColor = Color.White
+        underbone4btn.Location = New Point(708, 129)
+        underbone4btn.Margin = New Padding(3, 2, 3, 2)
+        underbone4btn.Name = "underbone4btn"
+        underbone4btn.Size = New Size(233, 43)
+        underbone4btn.TabIndex = 16
+        underbone4btn.Text = "BOOK NOW"
+        underbone4btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label119
+        ' 
+        Label119.AutoSize = True
+        Label119.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label119.ForeColor = Color.Black
+        Label119.Location = New Point(323, 120)
+        Label119.Name = "Label119"
+        Label119.Size = New Size(78, 19)
+        Label119.TabIndex = 5
+        Label119.Text = "MILEAGE:"
+        ' 
+        ' Label120
+        ' 
+        Label120.AutoSize = True
+        Label120.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label120.ForeColor = Color.Black
+        Label120.Location = New Point(324, 75)
+        Label120.Name = "Label120"
+        Label120.Size = New Size(69, 19)
+        Label120.TabIndex = 3
+        Label120.Text = "COLOR:"
+        ' 
+        ' underbone4pic
+        ' 
+        underbone4pic.Image = My.Resources.Resources.RideX
+        underbone4pic.Location = New Point(19, 66)
+        underbone4pic.Margin = New Padding(3, 2, 3, 2)
+        underbone4pic.Name = "underbone4pic"
+        underbone4pic.Size = New Size(283, 145)
+        underbone4pic.SizeMode = PictureBoxSizeMode.StretchImage
+        underbone4pic.TabIndex = 2
+        underbone4pic.TabStop = False
+        ' 
+        ' underbonemodel4txt
+        ' 
+        underbonemodel4txt.AutoSize = True
+        underbonemodel4txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        underbonemodel4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbonemodel4txt.Location = New Point(19, 22)
+        underbonemodel4txt.Name = "underbonemodel4txt"
+        underbonemodel4txt.Size = New Size(245, 32)
+        underbonemodel4txt.TabIndex = 0
+        underbonemodel4txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label122
+        ' 
+        Label122.AutoSize = True
+        Label122.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label122.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label122.Location = New Point(19, 26)
+        Label122.Name = "Label122"
+        Label122.Size = New Size(882, 32)
+        Label122.TabIndex = 1
+        Label122.Text = "______________________________________________________________"
+        ' 
+        ' panel3underbone
+        ' 
+        panel3underbone.BackColor = Color.White
+        panel3underbone.BorderStyle = BorderStyle.FixedSingle
+        panel3underbone.Controls.Add(underboneyear3txt)
+        panel3underbone.Controls.Add(Label98)
+        panel3underbone.Controls.Add(underbonerentalrate3txt)
+        panel3underbone.Controls.Add(Label106)
+        panel3underbone.Controls.Add(underbonecolor3txt)
+        panel3underbone.Controls.Add(underbonemileage3txt)
+        panel3underbone.Controls.Add(underbonemake3txt)
+        panel3underbone.Controls.Add(underbone3btn)
+        panel3underbone.Controls.Add(Label114)
+        panel3underbone.Controls.Add(Label115)
+        panel3underbone.Controls.Add(underbone3pic)
+        panel3underbone.Controls.Add(underbonemodel3txt)
+        panel3underbone.Controls.Add(Label117)
+        panel3underbone.ForeColor = Color.Gray
+        panel3underbone.Location = New Point(10, 951)
+        panel3underbone.Margin = New Padding(3, 2, 3, 2)
+        panel3underbone.Name = "panel3underbone"
+        panel3underbone.Size = New Size(976, 215)
+        panel3underbone.TabIndex = 59
+        panel3underbone.Visible = False
+        ' 
+        ' underboneyear3txt
+        ' 
+        underboneyear3txt.AutoSize = True
+        underboneyear3txt.Font = New Font("Futura Hv BT", 12F)
+        underboneyear3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underboneyear3txt.Location = New Point(487, 158)
+        underboneyear3txt.Name = "underboneyear3txt"
+        underboneyear3txt.Size = New Size(49, 19)
+        underboneyear3txt.TabIndex = 25
+        underboneyear3txt.Text = "2021"
+        ' 
+        ' Label98
+        ' 
+        Label98.AutoSize = True
+        Label98.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label98.ForeColor = Color.Black
+        Label98.Location = New Point(324, 158)
+        Label98.Name = "Label98"
+        Label98.Size = New Size(49, 19)
+        Label98.TabIndex = 24
+        Label98.Text = "YEAR:"
+        ' 
+        ' underbonerentalrate3txt
+        ' 
+        underbonerentalrate3txt.AutoSize = True
+        underbonerentalrate3txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        underbonerentalrate3txt.ForeColor = Color.Black
+        underbonerentalrate3txt.Location = New Point(709, 91)
+        underbonerentalrate3txt.Name = "underbonerentalrate3txt"
+        underbonerentalrate3txt.Size = New Size(149, 22)
+        underbonerentalrate3txt.TabIndex = 23
+        underbonerentalrate3txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label106
+        ' 
+        Label106.AutoSize = True
+        Label106.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label106.ForeColor = Color.Black
+        Label106.Location = New Point(708, 66)
+        Label106.Name = "Label106"
+        Label106.Size = New Size(99, 19)
+        Label106.TabIndex = 22
+        Label106.Text = "Vehicle Rate:"
+        ' 
+        ' underbonecolor3txt
+        ' 
+        underbonecolor3txt.AutoSize = True
+        underbonecolor3txt.Font = New Font("Futura Hv BT", 12F)
+        underbonecolor3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbonecolor3txt.Location = New Point(486, 75)
+        underbonecolor3txt.Name = "underbonecolor3txt"
+        underbonecolor3txt.Size = New Size(35, 19)
+        underbonecolor3txt.TabIndex = 21
+        underbonecolor3txt.Text = "red"
+        ' 
+        ' underbonemileage3txt
+        ' 
+        underbonemileage3txt.AutoSize = True
+        underbonemileage3txt.Font = New Font("Futura Hv BT", 12F)
+        underbonemileage3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbonemileage3txt.Location = New Point(486, 120)
+        underbonemileage3txt.Name = "underbonemileage3txt"
+        underbonemileage3txt.Size = New Size(88, 19)
+        underbonemileage3txt.TabIndex = 20
+        underbonemileage3txt.Text = "11,456km"
+        ' 
+        ' underbonemake3txt
+        ' 
+        underbonemake3txt.AutoSize = True
+        underbonemake3txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        underbonemake3txt.ForeColor = Color.Black
+        underbonemake3txt.Location = New Point(24, 7)
+        underbonemake3txt.Name = "underbonemake3txt"
+        underbonemake3txt.Size = New Size(60, 22)
+        underbonemake3txt.TabIndex = 17
+        underbonemake3txt.Text = "MAKE"
+        ' 
+        ' underbone3btn
+        ' 
+        underbone3btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbone3btn.FlatStyle = FlatStyle.Flat
+        underbone3btn.Font = New Font("Reesha", 16.1999989F)
+        underbone3btn.ForeColor = Color.White
+        underbone3btn.Location = New Point(708, 129)
+        underbone3btn.Margin = New Padding(3, 2, 3, 2)
+        underbone3btn.Name = "underbone3btn"
+        underbone3btn.Size = New Size(233, 43)
+        underbone3btn.TabIndex = 16
+        underbone3btn.Text = "BOOK NOW"
+        underbone3btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label114
+        ' 
+        Label114.AutoSize = True
+        Label114.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label114.ForeColor = Color.Black
+        Label114.Location = New Point(323, 120)
+        Label114.Name = "Label114"
+        Label114.Size = New Size(78, 19)
+        Label114.TabIndex = 5
+        Label114.Text = "MILEAGE:"
+        ' 
+        ' Label115
+        ' 
+        Label115.AutoSize = True
+        Label115.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label115.ForeColor = Color.Black
+        Label115.Location = New Point(324, 75)
+        Label115.Name = "Label115"
+        Label115.Size = New Size(69, 19)
+        Label115.TabIndex = 3
+        Label115.Text = "COLOR:"
+        ' 
+        ' underbone3pic
+        ' 
+        underbone3pic.Image = My.Resources.Resources.RideX
+        underbone3pic.Location = New Point(19, 66)
+        underbone3pic.Margin = New Padding(3, 2, 3, 2)
+        underbone3pic.Name = "underbone3pic"
+        underbone3pic.Size = New Size(283, 145)
+        underbone3pic.SizeMode = PictureBoxSizeMode.StretchImage
+        underbone3pic.TabIndex = 2
+        underbone3pic.TabStop = False
+        ' 
+        ' underbonemodel3txt
+        ' 
+        underbonemodel3txt.AutoSize = True
+        underbonemodel3txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        underbonemodel3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbonemodel3txt.Location = New Point(19, 22)
+        underbonemodel3txt.Name = "underbonemodel3txt"
+        underbonemodel3txt.Size = New Size(245, 32)
+        underbonemodel3txt.TabIndex = 0
+        underbonemodel3txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label117
+        ' 
+        Label117.AutoSize = True
+        Label117.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label117.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label117.Location = New Point(19, 26)
+        Label117.Name = "Label117"
+        Label117.Size = New Size(882, 32)
+        Label117.TabIndex = 1
+        Label117.Text = "______________________________________________________________"
+        ' 
+        ' panel2underbone
+        ' 
+        panel2underbone.BackColor = Color.White
+        panel2underbone.BorderStyle = BorderStyle.FixedSingle
+        panel2underbone.Controls.Add(underboneyear2txt)
+        panel2underbone.Controls.Add(Label93)
+        panel2underbone.Controls.Add(underbonerentalrate2txt)
+        panel2underbone.Controls.Add(Label101)
+        panel2underbone.Controls.Add(underbonecolor2txt)
+        panel2underbone.Controls.Add(underbonemileage2txt)
+        panel2underbone.Controls.Add(underbonemake2txt)
+        panel2underbone.Controls.Add(underbone2btn)
+        panel2underbone.Controls.Add(Label109)
+        panel2underbone.Controls.Add(Label110)
+        panel2underbone.Controls.Add(underbone2pic)
+        panel2underbone.Controls.Add(underbonemodel2txt)
+        panel2underbone.Controls.Add(Label112)
+        panel2underbone.ForeColor = Color.Gray
+        panel2underbone.Location = New Point(10, 712)
+        panel2underbone.Margin = New Padding(3, 2, 3, 2)
+        panel2underbone.Name = "panel2underbone"
+        panel2underbone.Size = New Size(976, 215)
+        panel2underbone.TabIndex = 58
+        panel2underbone.Visible = False
+        ' 
+        ' underboneyear2txt
+        ' 
+        underboneyear2txt.AutoSize = True
+        underboneyear2txt.Font = New Font("Futura Hv BT", 12F)
+        underboneyear2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underboneyear2txt.Location = New Point(487, 158)
+        underboneyear2txt.Name = "underboneyear2txt"
+        underboneyear2txt.Size = New Size(49, 19)
+        underboneyear2txt.TabIndex = 25
+        underboneyear2txt.Text = "2021"
+        ' 
+        ' Label93
+        ' 
+        Label93.AutoSize = True
+        Label93.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label93.ForeColor = Color.Black
+        Label93.Location = New Point(324, 158)
+        Label93.Name = "Label93"
+        Label93.Size = New Size(49, 19)
+        Label93.TabIndex = 24
+        Label93.Text = "YEAR:"
+        ' 
+        ' underbonerentalrate2txt
+        ' 
+        underbonerentalrate2txt.AutoSize = True
+        underbonerentalrate2txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        underbonerentalrate2txt.ForeColor = Color.Black
+        underbonerentalrate2txt.Location = New Point(709, 91)
+        underbonerentalrate2txt.Name = "underbonerentalrate2txt"
+        underbonerentalrate2txt.Size = New Size(149, 22)
+        underbonerentalrate2txt.TabIndex = 23
+        underbonerentalrate2txt.Text = "PHP 10,100.00"
+        ' 
+        ' Label101
+        ' 
+        Label101.AutoSize = True
+        Label101.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label101.ForeColor = Color.Black
+        Label101.Location = New Point(708, 66)
+        Label101.Name = "Label101"
+        Label101.Size = New Size(99, 19)
+        Label101.TabIndex = 22
+        Label101.Text = "Vehicle Rate:"
+        ' 
+        ' underbonecolor2txt
+        ' 
+        underbonecolor2txt.AutoSize = True
+        underbonecolor2txt.Font = New Font("Futura Hv BT", 12F)
+        underbonecolor2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbonecolor2txt.Location = New Point(486, 75)
+        underbonecolor2txt.Name = "underbonecolor2txt"
+        underbonecolor2txt.Size = New Size(35, 19)
+        underbonecolor2txt.TabIndex = 21
+        underbonecolor2txt.Text = "red"
+        ' 
+        ' underbonemileage2txt
+        ' 
+        underbonemileage2txt.AutoSize = True
+        underbonemileage2txt.Font = New Font("Futura Hv BT", 12F)
+        underbonemileage2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbonemileage2txt.Location = New Point(486, 120)
+        underbonemileage2txt.Name = "underbonemileage2txt"
+        underbonemileage2txt.Size = New Size(88, 19)
+        underbonemileage2txt.TabIndex = 20
+        underbonemileage2txt.Text = "11,456km"
+        ' 
+        ' underbonemake2txt
+        ' 
+        underbonemake2txt.AutoSize = True
+        underbonemake2txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        underbonemake2txt.ForeColor = Color.Black
+        underbonemake2txt.Location = New Point(24, 7)
+        underbonemake2txt.Name = "underbonemake2txt"
+        underbonemake2txt.Size = New Size(60, 22)
+        underbonemake2txt.TabIndex = 17
+        underbonemake2txt.Text = "MAKE"
+        ' 
+        ' underbone2btn
+        ' 
+        underbone2btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbone2btn.FlatStyle = FlatStyle.Flat
+        underbone2btn.Font = New Font("Reesha", 16.1999989F)
+        underbone2btn.ForeColor = Color.White
+        underbone2btn.Location = New Point(708, 129)
+        underbone2btn.Margin = New Padding(3, 2, 3, 2)
+        underbone2btn.Name = "underbone2btn"
+        underbone2btn.Size = New Size(233, 43)
+        underbone2btn.TabIndex = 16
+        underbone2btn.Text = "BOOK NOW"
+        underbone2btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label109
+        ' 
+        Label109.AutoSize = True
+        Label109.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label109.ForeColor = Color.Black
+        Label109.Location = New Point(323, 120)
+        Label109.Name = "Label109"
+        Label109.Size = New Size(78, 19)
+        Label109.TabIndex = 5
+        Label109.Text = "MILEAGE:"
+        ' 
+        ' Label110
+        ' 
+        Label110.AutoSize = True
+        Label110.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
+        Label110.ForeColor = Color.Black
+        Label110.Location = New Point(324, 75)
+        Label110.Name = "Label110"
+        Label110.Size = New Size(69, 19)
+        Label110.TabIndex = 3
+        Label110.Text = "COLOR:"
+        ' 
+        ' underbone2pic
+        ' 
+        underbone2pic.Image = My.Resources.Resources.RideX
+        underbone2pic.Location = New Point(19, 66)
+        underbone2pic.Margin = New Padding(3, 2, 3, 2)
+        underbone2pic.Name = "underbone2pic"
+        underbone2pic.Size = New Size(283, 145)
+        underbone2pic.SizeMode = PictureBoxSizeMode.StretchImage
+        underbone2pic.TabIndex = 2
+        underbone2pic.TabStop = False
+        ' 
+        ' underbonemodel2txt
+        ' 
+        underbonemodel2txt.AutoSize = True
+        underbonemodel2txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        underbonemodel2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        underbonemodel2txt.Location = New Point(19, 22)
+        underbonemodel2txt.Name = "underbonemodel2txt"
+        underbonemodel2txt.Size = New Size(245, 32)
+        underbonemodel2txt.TabIndex = 0
+        underbonemodel2txt.Text = "CAR NUMBER 1"
+        ' 
+        ' Label112
+        ' 
+        Label112.AutoSize = True
+        Label112.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label112.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label112.Location = New Point(19, 26)
+        Label112.Name = "Label112"
+        Label112.Size = New Size(882, 32)
+        Label112.TabIndex = 1
+        Label112.Text = "______________________________________________________________"
+        ' 
         ' panel1underbone
         ' 
         panel1underbone.BackColor = Color.White
@@ -4188,690 +4847,6 @@ Partial Class FORM_ALLMOTORS
         ' 
         FadeTimer.Interval = 25
         ' 
-        ' panel2underbone
-        ' 
-        panel2underbone.BackColor = Color.White
-        panel2underbone.BorderStyle = BorderStyle.FixedSingle
-        panel2underbone.Controls.Add(underboneyear2txt)
-        panel2underbone.Controls.Add(Label93)
-        panel2underbone.Controls.Add(underbonerentalrate2txt)
-        panel2underbone.Controls.Add(Label101)
-        panel2underbone.Controls.Add(underbonecolor2txt)
-        panel2underbone.Controls.Add(underbonemileage2txt)
-        panel2underbone.Controls.Add(underbonemake2txt)
-        panel2underbone.Controls.Add(underbone2btn)
-        panel2underbone.Controls.Add(Label109)
-        panel2underbone.Controls.Add(Label110)
-        panel2underbone.Controls.Add(underbone2pic)
-        panel2underbone.Controls.Add(underbonemodel2txt)
-        panel2underbone.Controls.Add(Label112)
-        panel2underbone.ForeColor = Color.Gray
-        panel2underbone.Location = New Point(10, 712)
-        panel2underbone.Margin = New Padding(3, 2, 3, 2)
-        panel2underbone.Name = "panel2underbone"
-        panel2underbone.Size = New Size(976, 215)
-        panel2underbone.TabIndex = 58
-        panel2underbone.Visible = False
-        ' 
-        ' underboneyear2txt
-        ' 
-        underboneyear2txt.AutoSize = True
-        underboneyear2txt.Font = New Font("Futura Hv BT", 12F)
-        underboneyear2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underboneyear2txt.Location = New Point(487, 158)
-        underboneyear2txt.Name = "underboneyear2txt"
-        underboneyear2txt.Size = New Size(49, 19)
-        underboneyear2txt.TabIndex = 25
-        underboneyear2txt.Text = "2021"
-        ' 
-        ' Label93
-        ' 
-        Label93.AutoSize = True
-        Label93.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label93.ForeColor = Color.Black
-        Label93.Location = New Point(324, 158)
-        Label93.Name = "Label93"
-        Label93.Size = New Size(49, 19)
-        Label93.TabIndex = 24
-        Label93.Text = "YEAR:"
-        ' 
-        ' underbonerentalrate2txt
-        ' 
-        underbonerentalrate2txt.AutoSize = True
-        underbonerentalrate2txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        underbonerentalrate2txt.ForeColor = Color.Black
-        underbonerentalrate2txt.Location = New Point(709, 91)
-        underbonerentalrate2txt.Name = "underbonerentalrate2txt"
-        underbonerentalrate2txt.Size = New Size(149, 22)
-        underbonerentalrate2txt.TabIndex = 23
-        underbonerentalrate2txt.Text = "PHP 10,100.00"
-        ' 
-        ' Label101
-        ' 
-        Label101.AutoSize = True
-        Label101.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label101.ForeColor = Color.Black
-        Label101.Location = New Point(708, 66)
-        Label101.Name = "Label101"
-        Label101.Size = New Size(99, 19)
-        Label101.TabIndex = 22
-        Label101.Text = "Vehicle Rate:"
-        ' 
-        ' underbonecolor2txt
-        ' 
-        underbonecolor2txt.AutoSize = True
-        underbonecolor2txt.Font = New Font("Futura Hv BT", 12F)
-        underbonecolor2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbonecolor2txt.Location = New Point(486, 75)
-        underbonecolor2txt.Name = "underbonecolor2txt"
-        underbonecolor2txt.Size = New Size(35, 19)
-        underbonecolor2txt.TabIndex = 21
-        underbonecolor2txt.Text = "red"
-        ' 
-        ' underbonemileage2txt
-        ' 
-        underbonemileage2txt.AutoSize = True
-        underbonemileage2txt.Font = New Font("Futura Hv BT", 12F)
-        underbonemileage2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbonemileage2txt.Location = New Point(486, 120)
-        underbonemileage2txt.Name = "underbonemileage2txt"
-        underbonemileage2txt.Size = New Size(88, 19)
-        underbonemileage2txt.TabIndex = 20
-        underbonemileage2txt.Text = "11,456km"
-        ' 
-        ' underbonemake2txt
-        ' 
-        underbonemake2txt.AutoSize = True
-        underbonemake2txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        underbonemake2txt.ForeColor = Color.Black
-        underbonemake2txt.Location = New Point(24, 7)
-        underbonemake2txt.Name = "underbonemake2txt"
-        underbonemake2txt.Size = New Size(60, 22)
-        underbonemake2txt.TabIndex = 17
-        underbonemake2txt.Text = "MAKE"
-        ' 
-        ' underbone2btn
-        ' 
-        underbone2btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbone2btn.FlatStyle = FlatStyle.Flat
-        underbone2btn.Font = New Font("Reesha", 16.1999989F)
-        underbone2btn.ForeColor = Color.White
-        underbone2btn.Location = New Point(708, 129)
-        underbone2btn.Margin = New Padding(3, 2, 3, 2)
-        underbone2btn.Name = "underbone2btn"
-        underbone2btn.Size = New Size(233, 43)
-        underbone2btn.TabIndex = 16
-        underbone2btn.Text = "BOOK NOW"
-        underbone2btn.UseVisualStyleBackColor = False
-        ' 
-        ' Label109
-        ' 
-        Label109.AutoSize = True
-        Label109.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label109.ForeColor = Color.Black
-        Label109.Location = New Point(323, 120)
-        Label109.Name = "Label109"
-        Label109.Size = New Size(78, 19)
-        Label109.TabIndex = 5
-        Label109.Text = "MILEAGE:"
-        ' 
-        ' Label110
-        ' 
-        Label110.AutoSize = True
-        Label110.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label110.ForeColor = Color.Black
-        Label110.Location = New Point(324, 75)
-        Label110.Name = "Label110"
-        Label110.Size = New Size(69, 19)
-        Label110.TabIndex = 3
-        Label110.Text = "COLOR:"
-        ' 
-        ' underbone2pic
-        ' 
-        underbone2pic.Image = My.Resources.Resources.RideX
-        underbone2pic.Location = New Point(19, 66)
-        underbone2pic.Margin = New Padding(3, 2, 3, 2)
-        underbone2pic.Name = "underbone2pic"
-        underbone2pic.Size = New Size(283, 145)
-        underbone2pic.SizeMode = PictureBoxSizeMode.StretchImage
-        underbone2pic.TabIndex = 2
-        underbone2pic.TabStop = False
-        ' 
-        ' underbonemodel2txt
-        ' 
-        underbonemodel2txt.AutoSize = True
-        underbonemodel2txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        underbonemodel2txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbonemodel2txt.Location = New Point(19, 22)
-        underbonemodel2txt.Name = "underbonemodel2txt"
-        underbonemodel2txt.Size = New Size(245, 32)
-        underbonemodel2txt.TabIndex = 0
-        underbonemodel2txt.Text = "CAR NUMBER 1"
-        ' 
-        ' Label112
-        ' 
-        Label112.AutoSize = True
-        Label112.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label112.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label112.Location = New Point(19, 26)
-        Label112.Name = "Label112"
-        Label112.Size = New Size(882, 32)
-        Label112.TabIndex = 1
-        Label112.Text = "______________________________________________________________"
-        ' 
-        ' panel3underbone
-        ' 
-        panel3underbone.BackColor = Color.White
-        panel3underbone.BorderStyle = BorderStyle.FixedSingle
-        panel3underbone.Controls.Add(underboneyear3txt)
-        panel3underbone.Controls.Add(Label98)
-        panel3underbone.Controls.Add(underbonerentalrate3txt)
-        panel3underbone.Controls.Add(Label106)
-        panel3underbone.Controls.Add(underbonecolor3txt)
-        panel3underbone.Controls.Add(underbonemileage3txt)
-        panel3underbone.Controls.Add(underbonemake3txt)
-        panel3underbone.Controls.Add(underbone3btn)
-        panel3underbone.Controls.Add(Label114)
-        panel3underbone.Controls.Add(Label115)
-        panel3underbone.Controls.Add(underbone3pic)
-        panel3underbone.Controls.Add(underbonemodel3txt)
-        panel3underbone.Controls.Add(Label117)
-        panel3underbone.ForeColor = Color.Gray
-        panel3underbone.Location = New Point(10, 951)
-        panel3underbone.Margin = New Padding(3, 2, 3, 2)
-        panel3underbone.Name = "panel3underbone"
-        panel3underbone.Size = New Size(976, 215)
-        panel3underbone.TabIndex = 59
-        panel3underbone.Visible = False
-        ' 
-        ' underboneyear3txt
-        ' 
-        underboneyear3txt.AutoSize = True
-        underboneyear3txt.Font = New Font("Futura Hv BT", 12F)
-        underboneyear3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underboneyear3txt.Location = New Point(487, 158)
-        underboneyear3txt.Name = "underboneyear3txt"
-        underboneyear3txt.Size = New Size(49, 19)
-        underboneyear3txt.TabIndex = 25
-        underboneyear3txt.Text = "2021"
-        ' 
-        ' Label98
-        ' 
-        Label98.AutoSize = True
-        Label98.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label98.ForeColor = Color.Black
-        Label98.Location = New Point(324, 158)
-        Label98.Name = "Label98"
-        Label98.Size = New Size(49, 19)
-        Label98.TabIndex = 24
-        Label98.Text = "YEAR:"
-        ' 
-        ' underbonerentalrate3txt
-        ' 
-        underbonerentalrate3txt.AutoSize = True
-        underbonerentalrate3txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        underbonerentalrate3txt.ForeColor = Color.Black
-        underbonerentalrate3txt.Location = New Point(709, 91)
-        underbonerentalrate3txt.Name = "underbonerentalrate3txt"
-        underbonerentalrate3txt.Size = New Size(149, 22)
-        underbonerentalrate3txt.TabIndex = 23
-        underbonerentalrate3txt.Text = "PHP 10,100.00"
-        ' 
-        ' Label106
-        ' 
-        Label106.AutoSize = True
-        Label106.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label106.ForeColor = Color.Black
-        Label106.Location = New Point(708, 66)
-        Label106.Name = "Label106"
-        Label106.Size = New Size(99, 19)
-        Label106.TabIndex = 22
-        Label106.Text = "Vehicle Rate:"
-        ' 
-        ' underbonecolor3txt
-        ' 
-        underbonecolor3txt.AutoSize = True
-        underbonecolor3txt.Font = New Font("Futura Hv BT", 12F)
-        underbonecolor3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbonecolor3txt.Location = New Point(486, 75)
-        underbonecolor3txt.Name = "underbonecolor3txt"
-        underbonecolor3txt.Size = New Size(35, 19)
-        underbonecolor3txt.TabIndex = 21
-        underbonecolor3txt.Text = "red"
-        ' 
-        ' underbonemileage3txt
-        ' 
-        underbonemileage3txt.AutoSize = True
-        underbonemileage3txt.Font = New Font("Futura Hv BT", 12F)
-        underbonemileage3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbonemileage3txt.Location = New Point(486, 120)
-        underbonemileage3txt.Name = "underbonemileage3txt"
-        underbonemileage3txt.Size = New Size(88, 19)
-        underbonemileage3txt.TabIndex = 20
-        underbonemileage3txt.Text = "11,456km"
-        ' 
-        ' underbonemake3txt
-        ' 
-        underbonemake3txt.AutoSize = True
-        underbonemake3txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        underbonemake3txt.ForeColor = Color.Black
-        underbonemake3txt.Location = New Point(24, 7)
-        underbonemake3txt.Name = "underbonemake3txt"
-        underbonemake3txt.Size = New Size(60, 22)
-        underbonemake3txt.TabIndex = 17
-        underbonemake3txt.Text = "MAKE"
-        ' 
-        ' underbone3btn
-        ' 
-        underbone3btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbone3btn.FlatStyle = FlatStyle.Flat
-        underbone3btn.Font = New Font("Reesha", 16.1999989F)
-        underbone3btn.ForeColor = Color.White
-        underbone3btn.Location = New Point(708, 129)
-        underbone3btn.Margin = New Padding(3, 2, 3, 2)
-        underbone3btn.Name = "underbone3btn"
-        underbone3btn.Size = New Size(233, 43)
-        underbone3btn.TabIndex = 16
-        underbone3btn.Text = "BOOK NOW"
-        underbone3btn.UseVisualStyleBackColor = False
-        ' 
-        ' Label114
-        ' 
-        Label114.AutoSize = True
-        Label114.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label114.ForeColor = Color.Black
-        Label114.Location = New Point(323, 120)
-        Label114.Name = "Label114"
-        Label114.Size = New Size(78, 19)
-        Label114.TabIndex = 5
-        Label114.Text = "MILEAGE:"
-        ' 
-        ' Label115
-        ' 
-        Label115.AutoSize = True
-        Label115.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label115.ForeColor = Color.Black
-        Label115.Location = New Point(324, 75)
-        Label115.Name = "Label115"
-        Label115.Size = New Size(69, 19)
-        Label115.TabIndex = 3
-        Label115.Text = "COLOR:"
-        ' 
-        ' underbone3pic
-        ' 
-        underbone3pic.Image = My.Resources.Resources.RideX
-        underbone3pic.Location = New Point(19, 66)
-        underbone3pic.Margin = New Padding(3, 2, 3, 2)
-        underbone3pic.Name = "underbone3pic"
-        underbone3pic.Size = New Size(283, 145)
-        underbone3pic.SizeMode = PictureBoxSizeMode.StretchImage
-        underbone3pic.TabIndex = 2
-        underbone3pic.TabStop = False
-        ' 
-        ' underbonemodel3txt
-        ' 
-        underbonemodel3txt.AutoSize = True
-        underbonemodel3txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        underbonemodel3txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbonemodel3txt.Location = New Point(19, 22)
-        underbonemodel3txt.Name = "underbonemodel3txt"
-        underbonemodel3txt.Size = New Size(245, 32)
-        underbonemodel3txt.TabIndex = 0
-        underbonemodel3txt.Text = "CAR NUMBER 1"
-        ' 
-        ' Label117
-        ' 
-        Label117.AutoSize = True
-        Label117.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label117.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label117.Location = New Point(19, 26)
-        Label117.Name = "Label117"
-        Label117.Size = New Size(882, 32)
-        Label117.TabIndex = 1
-        Label117.Text = "______________________________________________________________"
-        ' 
-        ' panel4underbone
-        ' 
-        panel4underbone.BackColor = Color.White
-        panel4underbone.BorderStyle = BorderStyle.FixedSingle
-        panel4underbone.Controls.Add(underboneyear4txt)
-        panel4underbone.Controls.Add(Label103)
-        panel4underbone.Controls.Add(underbonerentalrate4txt)
-        panel4underbone.Controls.Add(Label111)
-        panel4underbone.Controls.Add(underbonecolor4txt)
-        panel4underbone.Controls.Add(underbonemileage4txt)
-        panel4underbone.Controls.Add(underbonemake4txt)
-        panel4underbone.Controls.Add(underbone4btn)
-        panel4underbone.Controls.Add(Label119)
-        panel4underbone.Controls.Add(Label120)
-        panel4underbone.Controls.Add(underbone4pic)
-        panel4underbone.Controls.Add(underbonemodel4txt)
-        panel4underbone.Controls.Add(Label122)
-        panel4underbone.ForeColor = Color.Gray
-        panel4underbone.Location = New Point(10, 1188)
-        panel4underbone.Margin = New Padding(3, 2, 3, 2)
-        panel4underbone.Name = "panel4underbone"
-        panel4underbone.Size = New Size(976, 215)
-        panel4underbone.TabIndex = 60
-        panel4underbone.Visible = False
-        ' 
-        ' underboneyear4txt
-        ' 
-        underboneyear4txt.AutoSize = True
-        underboneyear4txt.Font = New Font("Futura Hv BT", 12F)
-        underboneyear4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underboneyear4txt.Location = New Point(487, 158)
-        underboneyear4txt.Name = "underboneyear4txt"
-        underboneyear4txt.Size = New Size(49, 19)
-        underboneyear4txt.TabIndex = 25
-        underboneyear4txt.Text = "2021"
-        ' 
-        ' Label103
-        ' 
-        Label103.AutoSize = True
-        Label103.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label103.ForeColor = Color.Black
-        Label103.Location = New Point(324, 158)
-        Label103.Name = "Label103"
-        Label103.Size = New Size(49, 19)
-        Label103.TabIndex = 24
-        Label103.Text = "YEAR:"
-        ' 
-        ' underbonerentalrate4txt
-        ' 
-        underbonerentalrate4txt.AutoSize = True
-        underbonerentalrate4txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        underbonerentalrate4txt.ForeColor = Color.Black
-        underbonerentalrate4txt.Location = New Point(709, 91)
-        underbonerentalrate4txt.Name = "underbonerentalrate4txt"
-        underbonerentalrate4txt.Size = New Size(149, 22)
-        underbonerentalrate4txt.TabIndex = 23
-        underbonerentalrate4txt.Text = "PHP 10,100.00"
-        ' 
-        ' Label111
-        ' 
-        Label111.AutoSize = True
-        Label111.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label111.ForeColor = Color.Black
-        Label111.Location = New Point(708, 66)
-        Label111.Name = "Label111"
-        Label111.Size = New Size(99, 19)
-        Label111.TabIndex = 22
-        Label111.Text = "Vehicle Rate:"
-        ' 
-        ' underbonecolor4txt
-        ' 
-        underbonecolor4txt.AutoSize = True
-        underbonecolor4txt.Font = New Font("Futura Hv BT", 12F)
-        underbonecolor4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbonecolor4txt.Location = New Point(486, 75)
-        underbonecolor4txt.Name = "underbonecolor4txt"
-        underbonecolor4txt.Size = New Size(35, 19)
-        underbonecolor4txt.TabIndex = 21
-        underbonecolor4txt.Text = "red"
-        ' 
-        ' underbonemileage4txt
-        ' 
-        underbonemileage4txt.AutoSize = True
-        underbonemileage4txt.Font = New Font("Futura Hv BT", 12F)
-        underbonemileage4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbonemileage4txt.Location = New Point(486, 120)
-        underbonemileage4txt.Name = "underbonemileage4txt"
-        underbonemileage4txt.Size = New Size(88, 19)
-        underbonemileage4txt.TabIndex = 20
-        underbonemileage4txt.Text = "11,456km"
-        ' 
-        ' underbonemake4txt
-        ' 
-        underbonemake4txt.AutoSize = True
-        underbonemake4txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        underbonemake4txt.ForeColor = Color.Black
-        underbonemake4txt.Location = New Point(24, 7)
-        underbonemake4txt.Name = "underbonemake4txt"
-        underbonemake4txt.Size = New Size(60, 22)
-        underbonemake4txt.TabIndex = 17
-        underbonemake4txt.Text = "MAKE"
-        ' 
-        ' underbone4btn
-        ' 
-        underbone4btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbone4btn.FlatStyle = FlatStyle.Flat
-        underbone4btn.Font = New Font("Reesha", 16.1999989F)
-        underbone4btn.ForeColor = Color.White
-        underbone4btn.Location = New Point(708, 129)
-        underbone4btn.Margin = New Padding(3, 2, 3, 2)
-        underbone4btn.Name = "underbone4btn"
-        underbone4btn.Size = New Size(233, 43)
-        underbone4btn.TabIndex = 16
-        underbone4btn.Text = "BOOK NOW"
-        underbone4btn.UseVisualStyleBackColor = False
-        ' 
-        ' Label119
-        ' 
-        Label119.AutoSize = True
-        Label119.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label119.ForeColor = Color.Black
-        Label119.Location = New Point(323, 120)
-        Label119.Name = "Label119"
-        Label119.Size = New Size(78, 19)
-        Label119.TabIndex = 5
-        Label119.Text = "MILEAGE:"
-        ' 
-        ' Label120
-        ' 
-        Label120.AutoSize = True
-        Label120.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label120.ForeColor = Color.Black
-        Label120.Location = New Point(324, 75)
-        Label120.Name = "Label120"
-        Label120.Size = New Size(69, 19)
-        Label120.TabIndex = 3
-        Label120.Text = "COLOR:"
-        ' 
-        ' underbone4pic
-        ' 
-        underbone4pic.Image = My.Resources.Resources.RideX
-        underbone4pic.Location = New Point(19, 66)
-        underbone4pic.Margin = New Padding(3, 2, 3, 2)
-        underbone4pic.Name = "underbone4pic"
-        underbone4pic.Size = New Size(283, 145)
-        underbone4pic.SizeMode = PictureBoxSizeMode.StretchImage
-        underbone4pic.TabIndex = 2
-        underbone4pic.TabStop = False
-        ' 
-        ' underbonemodel4txt
-        ' 
-        underbonemodel4txt.AutoSize = True
-        underbonemodel4txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        underbonemodel4txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbonemodel4txt.Location = New Point(19, 22)
-        underbonemodel4txt.Name = "underbonemodel4txt"
-        underbonemodel4txt.Size = New Size(245, 32)
-        underbonemodel4txt.TabIndex = 0
-        underbonemodel4txt.Text = "CAR NUMBER 1"
-        ' 
-        ' Label122
-        ' 
-        Label122.AutoSize = True
-        Label122.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label122.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label122.Location = New Point(19, 26)
-        Label122.Name = "Label122"
-        Label122.Size = New Size(882, 32)
-        Label122.TabIndex = 1
-        Label122.Text = "______________________________________________________________"
-        ' 
-        ' panel5underbone
-        ' 
-        panel5underbone.BackColor = Color.White
-        panel5underbone.BorderStyle = BorderStyle.FixedSingle
-        panel5underbone.Controls.Add(underboneyear5txt)
-        panel5underbone.Controls.Add(Label108)
-        panel5underbone.Controls.Add(underbonerentalrate5txt)
-        panel5underbone.Controls.Add(Label116)
-        panel5underbone.Controls.Add(underbonecolor5txt)
-        panel5underbone.Controls.Add(underbonemileage5txt)
-        panel5underbone.Controls.Add(underbonemake5txt)
-        panel5underbone.Controls.Add(underbone5btn)
-        panel5underbone.Controls.Add(Label124)
-        panel5underbone.Controls.Add(Label125)
-        panel5underbone.Controls.Add(underbone5pic)
-        panel5underbone.Controls.Add(underbonemodel5txt)
-        panel5underbone.Controls.Add(Label127)
-        panel5underbone.ForeColor = Color.Gray
-        panel5underbone.Location = New Point(10, 1424)
-        panel5underbone.Margin = New Padding(3, 2, 3, 2)
-        panel5underbone.Name = "panel5underbone"
-        panel5underbone.Size = New Size(976, 215)
-        panel5underbone.TabIndex = 61
-        panel5underbone.Visible = False
-        ' 
-        ' underboneyear5txt
-        ' 
-        underboneyear5txt.AutoSize = True
-        underboneyear5txt.Font = New Font("Futura Hv BT", 12F)
-        underboneyear5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underboneyear5txt.Location = New Point(487, 158)
-        underboneyear5txt.Name = "underboneyear5txt"
-        underboneyear5txt.Size = New Size(49, 19)
-        underboneyear5txt.TabIndex = 25
-        underboneyear5txt.Text = "2021"
-        ' 
-        ' Label108
-        ' 
-        Label108.AutoSize = True
-        Label108.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label108.ForeColor = Color.Black
-        Label108.Location = New Point(324, 158)
-        Label108.Name = "Label108"
-        Label108.Size = New Size(49, 19)
-        Label108.TabIndex = 24
-        Label108.Text = "YEAR:"
-        ' 
-        ' underbonerentalrate5txt
-        ' 
-        underbonerentalrate5txt.AutoSize = True
-        underbonerentalrate5txt.Font = New Font("Futura Hv BT", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        underbonerentalrate5txt.ForeColor = Color.Black
-        underbonerentalrate5txt.Location = New Point(709, 91)
-        underbonerentalrate5txt.Name = "underbonerentalrate5txt"
-        underbonerentalrate5txt.Size = New Size(149, 22)
-        underbonerentalrate5txt.TabIndex = 23
-        underbonerentalrate5txt.Text = "PHP 10,100.00"
-        ' 
-        ' Label116
-        ' 
-        Label116.AutoSize = True
-        Label116.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label116.ForeColor = Color.Black
-        Label116.Location = New Point(708, 66)
-        Label116.Name = "Label116"
-        Label116.Size = New Size(99, 19)
-        Label116.TabIndex = 22
-        Label116.Text = "Vehicle Rate:"
-        ' 
-        ' underbonecolor5txt
-        ' 
-        underbonecolor5txt.AutoSize = True
-        underbonecolor5txt.Font = New Font("Futura Hv BT", 12F)
-        underbonecolor5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbonecolor5txt.Location = New Point(486, 75)
-        underbonecolor5txt.Name = "underbonecolor5txt"
-        underbonecolor5txt.Size = New Size(35, 19)
-        underbonecolor5txt.TabIndex = 21
-        underbonecolor5txt.Text = "red"
-        ' 
-        ' underbonemileage5txt
-        ' 
-        underbonemileage5txt.AutoSize = True
-        underbonemileage5txt.Font = New Font("Futura Hv BT", 12F)
-        underbonemileage5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbonemileage5txt.Location = New Point(486, 120)
-        underbonemileage5txt.Name = "underbonemileage5txt"
-        underbonemileage5txt.Size = New Size(88, 19)
-        underbonemileage5txt.TabIndex = 20
-        underbonemileage5txt.Text = "11,456km"
-        ' 
-        ' underbonemake5txt
-        ' 
-        underbonemake5txt.AutoSize = True
-        underbonemake5txt.Font = New Font("Futura Bk BT", 14.25F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        underbonemake5txt.ForeColor = Color.Black
-        underbonemake5txt.Location = New Point(24, 7)
-        underbonemake5txt.Name = "underbonemake5txt"
-        underbonemake5txt.Size = New Size(60, 22)
-        underbonemake5txt.TabIndex = 17
-        underbonemake5txt.Text = "MAKE"
-        ' 
-        ' underbone5btn
-        ' 
-        underbone5btn.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbone5btn.FlatStyle = FlatStyle.Flat
-        underbone5btn.Font = New Font("Reesha", 16.1999989F)
-        underbone5btn.ForeColor = Color.White
-        underbone5btn.Location = New Point(708, 129)
-        underbone5btn.Margin = New Padding(3, 2, 3, 2)
-        underbone5btn.Name = "underbone5btn"
-        underbone5btn.Size = New Size(233, 43)
-        underbone5btn.TabIndex = 16
-        underbone5btn.Text = "BOOK NOW"
-        underbone5btn.UseVisualStyleBackColor = False
-        ' 
-        ' Label124
-        ' 
-        Label124.AutoSize = True
-        Label124.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label124.ForeColor = Color.Black
-        Label124.Location = New Point(323, 120)
-        Label124.Name = "Label124"
-        Label124.Size = New Size(78, 19)
-        Label124.TabIndex = 5
-        Label124.Text = "MILEAGE:"
-        ' 
-        ' Label125
-        ' 
-        Label125.AutoSize = True
-        Label125.Font = New Font("Futura Bk BT", 12F, FontStyle.Italic)
-        Label125.ForeColor = Color.Black
-        Label125.Location = New Point(324, 75)
-        Label125.Name = "Label125"
-        Label125.Size = New Size(69, 19)
-        Label125.TabIndex = 3
-        Label125.Text = "COLOR:"
-        ' 
-        ' underbone5pic
-        ' 
-        underbone5pic.Image = My.Resources.Resources.RideX
-        underbone5pic.Location = New Point(19, 66)
-        underbone5pic.Margin = New Padding(3, 2, 3, 2)
-        underbone5pic.Name = "underbone5pic"
-        underbone5pic.Size = New Size(283, 145)
-        underbone5pic.SizeMode = PictureBoxSizeMode.StretchImage
-        underbone5pic.TabIndex = 2
-        underbone5pic.TabStop = False
-        ' 
-        ' underbonemodel5txt
-        ' 
-        underbonemodel5txt.AutoSize = True
-        underbonemodel5txt.Font = New Font("Reesha", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        underbonemodel5txt.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        underbonemodel5txt.Location = New Point(19, 22)
-        underbonemodel5txt.Name = "underbonemodel5txt"
-        underbonemodel5txt.Size = New Size(245, 32)
-        underbonemodel5txt.TabIndex = 0
-        underbonemodel5txt.Text = "CAR NUMBER 1"
-        ' 
-        ' Label127
-        ' 
-        Label127.AutoSize = True
-        Label127.Font = New Font("Futura Bk BT", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label127.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
-        Label127.Location = New Point(19, 26)
-        Label127.Name = "Label127"
-        Label127.Size = New Size(882, 32)
-        Label127.TabIndex = 1
-        Label127.Text = "______________________________________________________________"
-        ' 
         ' FORM_ALLMOTORS
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -4882,8 +4857,6 @@ Partial Class FORM_ALLMOTORS
         Controls.Add(pnlScooter)
         Controls.Add(Panel13)
         Controls.Add(Panel6)
-        Controls.Add(TextBox1)
-        Controls.Add(PictureBox3)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(3, 2, 3, 2)
         Name = "FORM_ALLMOTORS"
@@ -4892,7 +4865,6 @@ Partial Class FORM_ALLMOTORS
         Panel13.ResumeLayout(False)
         Panel6.ResumeLayout(False)
         Panel6.PerformLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         pnlScooter.ResumeLayout(False)
         panel5scooter.ResumeLayout(False)
         panel5scooter.PerformLayout()
@@ -4931,6 +4903,18 @@ Partial Class FORM_ALLMOTORS
         Panel1.PerformLayout()
         CType(motor1img, ComponentModel.ISupportInitialize).EndInit()
         pnlUnderbone.ResumeLayout(False)
+        panel5underbone.ResumeLayout(False)
+        panel5underbone.PerformLayout()
+        CType(underbone5pic, ComponentModel.ISupportInitialize).EndInit()
+        panel4underbone.ResumeLayout(False)
+        panel4underbone.PerformLayout()
+        CType(underbone4pic, ComponentModel.ISupportInitialize).EndInit()
+        panel3underbone.ResumeLayout(False)
+        panel3underbone.PerformLayout()
+        CType(underbone3pic, ComponentModel.ISupportInitialize).EndInit()
+        panel2underbone.ResumeLayout(False)
+        panel2underbone.PerformLayout()
+        CType(underbone2pic, ComponentModel.ISupportInitialize).EndInit()
         panel1underbone.ResumeLayout(False)
         panel1underbone.PerformLayout()
         CType(underbone1pic, ComponentModel.ISupportInitialize).EndInit()
@@ -4959,20 +4943,7 @@ Partial Class FORM_ALLMOTORS
         Panel27.ResumeLayout(False)
         Panel27.PerformLayout()
         CType(motor10img, ComponentModel.ISupportInitialize).EndInit()
-        panel2underbone.ResumeLayout(False)
-        panel2underbone.PerformLayout()
-        CType(underbone2pic, ComponentModel.ISupportInitialize).EndInit()
-        panel3underbone.ResumeLayout(False)
-        panel3underbone.PerformLayout()
-        CType(underbone3pic, ComponentModel.ISupportInitialize).EndInit()
-        panel4underbone.ResumeLayout(False)
-        panel4underbone.PerformLayout()
-        CType(underbone4pic, ComponentModel.ISupportInitialize).EndInit()
-        panel5underbone.ResumeLayout(False)
-        panel5underbone.PerformLayout()
-        CType(underbone5pic, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents Panel13 As Panel
@@ -4981,8 +4952,6 @@ Partial Class FORM_ALLMOTORS
     Friend WithEvents btnAdventure As Button
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label37 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents pnlScooter As Panel
     Friend WithEvents lblColor9 As Label
     Friend WithEvents lblMileage9 As Label

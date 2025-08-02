@@ -281,7 +281,22 @@ Public Class FORMRENTAL_STEP4
     Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
+    Private Sub contactslbl_Click(sender As Object, e As EventArgs) Handles contactslbl.Click
+        contactslbl.ForeColor = Color.DarkRed
+        pnlContactUs.Visible = True
+    End Sub
+    Private Sub contactlbl_MouseEnter(sender As Object, e As EventArgs) Handles contactslbl.MouseEnter
+        contactslbl.BackColor = Color.LightGray
+    End Sub
 
+    Private Sub contactlbl_MouseLeave(sender As Object, e As EventArgs) Handles contactslbl.MouseLeave
+        contactslbl.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub Label32_Click(sender As Object, e As EventArgs) Handles Label32.Click
+        pnlContactUs.Visible = False
+        contactslbl.ForeColor = Color.Black
+    End Sub
 
 
 End Class
