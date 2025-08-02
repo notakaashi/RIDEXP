@@ -272,4 +272,8 @@ Public Class FORMRENTAL_STEP2
     Private Sub PictureBox2_Click_1(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Logjn.Show()
     End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        Panel2.Visible = Not Panel2.Visible
+    End Sub
 End Class

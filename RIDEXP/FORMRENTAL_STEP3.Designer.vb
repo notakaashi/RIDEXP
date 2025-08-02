@@ -94,6 +94,7 @@ Partial Class FORMRENTAL_STEP3
         PictureBox7 = New PictureBox()
         Panel13 = New Panel()
         Label32 = New Label()
+        PictureBox8 = New PictureBox()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
@@ -114,11 +115,13 @@ Partial Class FORMRENTAL_STEP3
         Panel12.SuspendLayout()
         CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         Panel13.SuspendLayout()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
+        Panel1.Controls.Add(PictureBox8)
         Panel1.Controls.Add(contactslbl)
         Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(homelbl)
@@ -964,6 +967,20 @@ Partial Class FORMRENTAL_STEP3
         Label32.TabIndex = 6
         Label32.Text = "X"
         ' 
+        ' PictureBox8
+        ' 
+        PictureBox8.BackColor = Color.Transparent
+        PictureBox8.BackgroundImage = My.Resources.Resources.USER_LOGO
+        PictureBox8.BackgroundImageLayout = ImageLayout.Stretch
+        PictureBox8.Location = New Point(1039, 10)
+        PictureBox8.Margin = New Padding(3, 2, 3, 2)
+        PictureBox8.Name = "PictureBox8"
+        PictureBox8.Size = New Size(42, 31)
+        PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox8.TabIndex = 33
+        PictureBox8.TabStop = False
+        PictureBox8.Visible = False
+        ' 
         ' FORMRENTAL_STEP3
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1011,6 +1028,7 @@ Partial Class FORMRENTAL_STEP3
         CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
         Panel13.ResumeLayout(False)
         Panel13.PerformLayout()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -1085,4 +1103,5 @@ Partial Class FORMRENTAL_STEP3
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents Panel13 As Panel
     Friend WithEvents Label32 As Label
+    Friend WithEvents PictureBox8 As PictureBox
 End Class

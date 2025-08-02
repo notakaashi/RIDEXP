@@ -377,4 +377,10 @@ c.make,
         pnlContactUs.Visible = False
         contactslbl.ForeColor = Color.Black
     End Sub
+
+    Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
+        Panel2.Visible = Not Panel2.Visible
+    End Sub
+
+
 End Class
