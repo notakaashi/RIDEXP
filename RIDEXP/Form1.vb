@@ -11,7 +11,6 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RefreshLoginState()
         pnlVehicleType.Visible = False
-
     End Sub
 
 
@@ -115,7 +114,9 @@
         ResetRentalsLabelColor()
     End Sub
 
-
+    Private Sub Form1_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+        RefreshLoginState()
+    End Sub
     Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
         pnlContactUs.Visible = False
         contactslbl.ForeColor = Color.Black

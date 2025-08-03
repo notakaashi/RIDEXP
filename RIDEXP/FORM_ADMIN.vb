@@ -666,6 +666,9 @@ Public Class FORM_ADMIN
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         loggedin = False
+        userlogged = ""
+        userRole = 0
+        userId = 0
         MsgBox("Logout successful! See you next time.", MsgBoxStyle.Information, "Success")
         Me.Close()
         Form1.Show()
