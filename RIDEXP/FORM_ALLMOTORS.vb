@@ -371,7 +371,7 @@ Public Class FORM_ALLMOTORS
                 Continue For
             End If
 
-            If btn.Visible = False Then
+            If btn.Visible = False AndAlso btn.Tag Is Nothing Then
 
                 ' Set labels
                 SetLabel($"{prefix}make{i}txt", make)
