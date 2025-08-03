@@ -3,6 +3,7 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Microsoft.VisualBasic.ApplicationServices
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.Notice
+Imports Org.BouncyCastle.Asn1.Cmp
 Imports Windows.Win32.System
 Public Class FORM_ADMIN
 
@@ -54,6 +55,154 @@ Public Class FORM_ADMIN
         cbPenaltyType.Items.AddRange(categories)
         pnlAddPenalty.Location = New Point(1300, 97)
 
+    End Sub
+
+    Private Sub UpdateMaintenanceRecord()
+        ' Check if Maintenance ID is provided
+        If txtMaintenanceID.Text.Trim = "" Then
+            MessageBox.Show("Maintenance ID is required.")
+            Exit Sub
+        End If
+
+        Dim maintenanceId = Integer.Parse(txtMaintenanceID.Text.Trim)
+        Dim updates = ""
+        Dim cmdParams As New List(Of MySqlParameter)
+
+        ' Check each field and add to updates if not empty
+        If txtUpdateVehicle.Text.Trim <> "" Then
+            updates &= "vehicle_id = @vehicle_id, "
+            cmdParams.Add(New MySqlParameter("@vehicle_id", txtUpdateVehicle.Text.Trim))
+        End If
+
+        If cbUpdateType.SelectedItem IsNot Nothing Then
+            updates &= "maintenance_type = @maintenance_type, "
+            cmdParams.Add(New MySqlParameter("@maintenance_type", cbUpdateType.SelectedItem.ToString()))
+        End If
+
+        If txtUpdateStart.Text.Trim <> "" Then
+            Try
+                Dim startDate = Date.Parse(txtUpdateStart.Text.Trim)
+                updates &= "start_date = @start_date, "
+                cmdParams.Add(New MySqlParameter("@start_date", startDate))
+            Catch ex As Exception
+                MessageBox.Show("Invalid start date format.")
+                Exit Sub
+            End Try
+        End If
+
+        If txtUpdateEnd.Text.Trim <> "" Then
+            Try
+                Dim endDate = Date.Parse(txtUpdateEnd.Text.Trim)
+                updates &= "end_date = @end_date, "
+                cmdParams.Add(New MySqlParameter("@end_date", endDate))
+            Catch ex As Exception
+                MessageBox.Show("Invalid end date format.")
+                Exit Sub
+            End Try
+        End If
+
+        If txtUpdateCost.Text.Trim <> "" Then
+            updates &= "cost = @cost, "
+            cmdParams.Add(New MySqlParameter("@cost", txtUpdateCost.Text.Trim))
+        End If
+
+        If txtUpdateDescription.Text.Trim <> "" Then
+            updates &= "description = @description, "
+            cmdParams.Add(New MySqlParameter("@description", txtUpdateDescription.Text.Trim))
+        End If
+
+        If cbUpdateStatus.SelectedItem IsNot Nothing Then
+            updates &= "maintenance_status_id = @status_id, "
+            cmdParams.Add(New MySqlParameter("@status_id", cbUpdateStatus.SelectedIndex + 1))
+        End If
+
+        If updates.EndsWith(", ") Then
+            updates = updates.Substring(0, updates.Length - 2)
+        End If
+
+        If updates = "" Then
+            MessageBox.Show("Please fill in at least one field to update.")
+            Exit Sub
+        End If
+
+        Dim query = "UPDATE maintenance SET " & updates & " WHERE maintenance_id = @id"
+
+        Try
+            Using conn As New MySqlConnection("server=localhost;user=root;password=;database=ridexp")
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+                    For Each p In cmdParams
+                        cmd.Parameters.Add(p)
+                    Next
+                    cmd.Parameters.AddWithValue("@id", maintenanceId)
+
+                    Dim rowsAffected = cmd.ExecuteNonQuery
+                    If rowsAffected > 0 Then
+                        MessageBox.Show("Maintenance record updated successfully.")
+                        txtMaintenanceID.Clear()
+                        txtUpdateVehicle.Clear()
+                        cbUpdateType.SelectedIndex = -1
+                        txtUpdateStart.Clear()
+                        txtUpdateEnd.Clear()
+                        txtUpdateCost.Clear()
+                        txtUpdateDescription.Clear()
+                        cbUpdateStatus.SelectedIndex = -1
+                        pnlUpdateMaintenance.Location = New Point(1300, 97)
+                        LoadTableMaintenance()
+                    Else
+                        MessageBox.Show("No records updated. Check the Maintenance ID.")
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
+
+
+    Private Sub AddMaintenanceRecord()
+
+        If String.IsNullOrWhiteSpace(txtVehicleID.Text) OrElse
+       cbMainType.SelectedItem Is Nothing OrElse
+       String.IsNullOrWhiteSpace(txtMaintStart.Text) OrElse
+       String.IsNullOrWhiteSpace(txtMaintEnd.Text) OrElse
+       String.IsNullOrWhiteSpace(txtMaintCost.Text) OrElse
+       String.IsNullOrWhiteSpace(txtDescription.Text) OrElse
+       cbMaintStatus.SelectedItem Is Nothing Then
+
+            MessageBox.Show("Please fill in all fields before submitting.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        Dim conn As New MySqlConnection("server=localhost;user id=root;password=;database=ridexp")
+        Dim cmd As New MySqlCommand("INSERT INTO maintenance (vehicle_id, maintenance_type, start_date, end_date, cost, description, maintenance_status_id) VALUES (@vehicle_id, @maintenance_type, @start_date, @end_date, @cost, @description, @status_id)", conn)
+
+        cmd.Parameters.AddWithValue("@vehicle_id", Integer.Parse(txtVehicleID.Text))
+        cmd.Parameters.AddWithValue("@maintenance_type", cbMainType.SelectedItem.ToString())
+        cmd.Parameters.AddWithValue("@start_date", Date.Parse(txtMaintStart.Text))
+        cmd.Parameters.AddWithValue("@end_date", Date.Parse(txtMaintEnd.Text))
+        cmd.Parameters.AddWithValue("@cost", Decimal.Parse(txtMaintCost.Text))
+        cmd.Parameters.AddWithValue("@description", txtDescription.Text)
+        cmd.Parameters.AddWithValue("@status_id", Integer.Parse(cbMaintStatus.SelectedIndex + 1))
+
+        Try
+            conn.Open()
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Maintenance record added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            txtVehicleID.Clear()
+            cbMainType.SelectedIndex = -1
+            txtMaintStart.Clear()
+            txtMaintEnd.Clear()
+            txtMaintCost.Clear()
+            txtDescription.Clear()
+            cbMaintStatus.SelectedIndex = -1
+            pnlAddMaintenance.Location = New Point(1300, 97)
+            LoadTableMaintenance()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conn.Close()
+        End Try
     End Sub
 
     Private Sub LoadSalesData(Optional ByVal startDate As DateTime = Nothing, Optional ByVal endDate As DateTime = Nothing)
@@ -141,11 +290,16 @@ Public Class FORM_ADMIN
     Private Sub LoadTotalPenalties(lblPlaceholder As Label)
         Try
             conn.Open()
-            Dim query As String = "SELECT SUM(penalties) AS total_penalties FROM sales_report"
+            Dim query As String = "SELECT SUM(CAST(penalties AS SIGNED)) AS total_penalties FROM sales_report WHERE penalties REGEXP '^[0-9]'"
             Using cmd As New MySqlCommand(query, conn)
                 Dim result = cmd.ExecuteScalar()
-                If result IsNot DBNull.Value Then
-                    lblPlaceholder.Text = Convert.ToDecimal(result).ToString("N2")
+                If result IsNot DBNull.Value AndAlso result IsNot Nothing Then
+                    Dim value As Decimal
+                    If Decimal.TryParse(result.ToString(), value) Then
+                        lblPlaceholder.Text = result.ToString()
+                    Else
+                        lblPlaceholder.Text = "0.00"
+                    End If
                 Else
                     lblPlaceholder.Text = "0.00"
                 End If
@@ -160,20 +314,26 @@ Public Class FORM_ADMIN
     Private Sub LoadTotalCost(lblPlaceholder As Label)
         Try
             conn.Open()
-            Dim query As String = "SELECT SUM(cost) AS total_cost FROM maintenance"
+            Dim query As String = "SELECT SUM(CAST(cost AS SIGNED)) AS total_cost FROM maintenance WHERE cost REGEXP '^[0-9]'"
             Using cmd As New MySqlCommand(query, conn)
                 Dim result = cmd.ExecuteScalar()
-                If result IsNot DBNull.Value Then
-                    lblPlaceholder.Text = result.ToString("N2")
+                If result IsNot DBNull.Value AndAlso result IsNot Nothing Then
+                    Dim value As Decimal
+                    If Decimal.TryParse(result.ToString(), value) Then
+                        lblPlaceholder.Text = result.ToString()
+                    Else
+                        lblPlaceholder.Text = "0.00"
+                    End If
                 Else
                     lblPlaceholder.Text = "0.00"
                 End If
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error loading total penalties: " & ex.Message)
+            MessageBox.Show("Error loading total maintenance cost: " & ex.Message)
         Finally
             conn.Close()
         End Try
+
     End Sub
 
     Private Sub LoadTotalPaid(lblPlaceholder As Label)
@@ -641,6 +801,8 @@ Public Class FORM_ADMIN
         LoadTotalOngoing(lblMaintenanceOngoing)
         LoadTotalCompleted(lblMaintenanceGoods)
         LoadTotalScheduled(lblMaintenanceScheduled)
+        pnlAddMaintenance.Location = New Point(1300, 97)
+        pnlUpdateMaintenance.Location = New Point(1300, 97)
     End Sub
     Private Sub pnlUsers_Click(sender As Object, e As EventArgs) Handles pnlUsers.Click
         ClickUsers()
@@ -1087,7 +1249,7 @@ Public Class FORM_ADMIN
                 txtAddSeatCapacity.Enabled = True
             ElseIf cbCategory.SelectedItem = "MOTORCYCLES" Then
                 txtAddSeatCapacity.Enabled = False
-                txtAddSeatCapacity.Clear()
+                txtAddSeatCapacity.Clear
             End If
         End If
     End Sub
@@ -1167,7 +1329,7 @@ Public Class FORM_ADMIN
                 Dim comm = "INSERT INTO cars (car_category_id, make, model_name, year, license_plate, color, mileage, seating_capacity) 
               VALUES (@car_category, @make, @model, @year, @license_plate, @color, @mileage, @seating_capacity)"
                 Using conn As New MySqlConnection(connStr)
-                    conn.Open()
+                    conn.Open
 
                     Using cmd As New MySqlCommand(comm, conn)
                         cmd.Parameters.AddWithValue("@car_category", cbVehicleCategory.SelectedIndex + 1)
@@ -1229,7 +1391,7 @@ Public Class FORM_ADMIN
                 Dim comm = "INSERT INTO motors (motor_category_id, make, model, year, license_plate, color, mileage) 
               VALUES (@motorcycle_category, @make, @model, @year, @license_plate, @color, @mileage)"
                 Using conn As New MySqlConnection(connStr)
-                    conn.Open()
+                    conn.Open
 
                     Using cmd As New MySqlCommand(comm, conn)
                         cmd.Parameters.AddWithValue("@motorcycle_category", cbVehicleCategory.SelectedIndex + 1)
@@ -1325,19 +1487,19 @@ Public Class FORM_ADMIN
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles btnUploadImage.Click
         Try
-            Dim tableName As String = ""
-            Dim idColumn As String = ""
-            Dim lastId As Integer = -1
+            Dim tableName = ""
+            Dim idColumn = ""
+            Dim lastId = -1
 
             If cbCategory.SelectedItem Is Nothing Then
                 MessageBox.Show("Please select vehicle type (CARS or MOTORCYCLES) first!")
                 Exit Sub
             End If
 
-            If cbCategory.SelectedItem.ToString() = "CARS" Then
+            If cbCategory.SelectedItem.ToString = "CARS" Then
                 tableName = "cars_pic"
                 idColumn = "car_id"
-            ElseIf cbCategory.SelectedItem.ToString() = "MOTORCYCLES" Then
+            ElseIf cbCategory.SelectedItem.ToString = "MOTORCYCLES" Then
                 tableName = "motors_pic"
                 idColumn = "motor_id"
             Else
@@ -1346,10 +1508,10 @@ Public Class FORM_ADMIN
             End If
 
             Using conn As New MySqlConnection("server=localhost;database=ridexp;userid=root;password=;")
-                conn.Open()
-                Dim query As String = $"SELECT {idColumn} FROM {If(tableName = "cars_pic", "cars", "motors")} ORDER BY {idColumn} DESC LIMIT 1"
+                conn.Open
+                Dim query = $"SELECT {idColumn} FROM {If(tableName = "cars_pic", "cars", "motors")} ORDER BY {idColumn} DESC LIMIT 1"
                 Dim cmd As New MySqlCommand(query, conn)
-                Dim result = cmd.ExecuteScalar()
+                Dim result = cmd.ExecuteScalar
                 If result IsNot Nothing Then
                     lastId = Convert.ToInt32(result)
                     MessageBox.Show($"DEBUG: Last {idColumn} found = {lastId}")
@@ -1359,31 +1521,31 @@ Public Class FORM_ADMIN
                 End If
             End Using
 
-            Dim ofd As New OpenFileDialog()
+            Dim ofd As New OpenFileDialog
             ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp"
             ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)
 
             If ofd.ShowDialog(Me) = DialogResult.OK Then
-                Dim selectedFilePath As String = ofd.FileName
+                Dim selectedFilePath = ofd.FileName
 
-                Dim imagesFolder As String = Path.Combine(Application.StartupPath, "Images")
+                Dim imagesFolder = Path.Combine(Application.StartupPath, "Images")
                 If Not Directory.Exists(imagesFolder) Then
                     Directory.CreateDirectory(imagesFolder)
                 End If
 
-                Dim fileName As String = Path.GetFileName(selectedFilePath)
-                Dim destPath As String = Path.Combine(imagesFolder, fileName)
+                Dim fileName = Path.GetFileName(selectedFilePath)
+                Dim destPath = Path.Combine(imagesFolder, fileName)
                 File.Copy(selectedFilePath, destPath, True)
 
-                Dim relativePath As String = "Images/" & fileName
+                Dim relativePath = "Images/" & fileName
 
                 Using conn As New MySqlConnection("server=localhost;database=ridexp;userid=root;password=;")
-                    conn.Open()
-                    Dim query As String = $"INSERT INTO {tableName} ({idColumn}, image) VALUES (@id, @img)"
+                    conn.Open
+                    Dim query = $"INSERT INTO {tableName} ({idColumn}, image) VALUES (@id, @img)"
                     Dim cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("@id", lastId)
                     cmd.Parameters.AddWithValue("@img", relativePath)
-                    cmd.ExecuteNonQuery()
+                    cmd.ExecuteNonQuery
                 End Using
 
 
@@ -1395,7 +1557,7 @@ Public Class FORM_ADMIN
             MessageBox.Show("Error uploading image: " & ex.Message)
         End Try
 
-        ClearForm()
+        ClearForm
     End Sub
 
     Private Sub dtpStartDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpStartDate.ValueChanged, DateTimePicker2.ValueChanged
@@ -1425,5 +1587,41 @@ Public Class FORM_ADMIN
         End If
 
         LoadSalesData(dtpStartDate.Value, dtpEndDate.Value)
+    End Sub
+
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        AddMaintenanceRecord()
+    End Sub
+
+    Private Sub btnAddMaintenance_Click(sender As Object, e As EventArgs) Handles btnAddMaintenance.Click
+        pnlAddMaintenance.Location = New Point(158, 68)
+        txtVehicleID.PlaceholderText = "Input Vehicle ID"
+        txtMaintCost.PlaceholderText = "Input Maintenance Cost"
+        txtMaintStart.PlaceholderText = "Input Start Date (YYYY-MM-DD)"
+        txtMaintEnd.PlaceholderText = "Input End Date (YYYY-MM-DD)"
+        txtDescription.PlaceholderText = "Input Description"
+
+    End Sub
+
+    Private Sub Label58_Click(sender As Object, e As EventArgs) Handles Label58.Click
+        pnlAddMaintenance.Location = New Point(1300, 97)
+    End Sub
+
+    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+        UpdateMaintenanceRecord()
+    End Sub
+
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        pnlUpdateMaintenance.Location = New Point(158, 68)
+        txtUpdateCost.PlaceholderText = "Input New Cost"
+        txtUpdateStart.PlaceholderText = "Input New Start Date (YYYY-MM-DD)"
+        txtUpdateEnd.PlaceholderText = "Input New End Date (YYYY-MM-DD)"
+        txtUpdateDescription.PlaceholderText = "Input New Description"
+        txtMaintenanceID.PlaceholderText = "Input Maintenance ID"
+        txtUpdateVehicle.PlaceholderText = "Input New Vehicle ID"
+    End Sub
+
+    Private Sub Label40_Click(sender As Object, e As EventArgs) Handles Label40.Click
+        pnlUpdateMaintenance.Location = New Point(1300, 97)
     End Sub
 End Class

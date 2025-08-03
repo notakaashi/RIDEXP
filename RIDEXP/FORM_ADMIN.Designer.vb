@@ -132,8 +132,6 @@ Partial Class FORM_ADMIN
         lblRentalCancelled = New Label()
         PictureBox22 = New PictureBox()
         Label14 = New Label()
-        Panel22 = New Panel()
-        ComboBox1 = New ComboBox()
         Panel18 = New Panel()
         lblRentalCompleted = New Label()
         PictureBox11 = New PictureBox()
@@ -148,6 +146,50 @@ Partial Class FORM_ADMIN
         Panel20 = New Panel()
         Label31 = New Label()
         pnlMaintenanceContent = New Panel()
+        pnlUpdateMaintenance = New Panel()
+        Panel87 = New Panel()
+        txtMaintenanceID = New TextBox()
+        Button17 = New Button()
+        Panel69 = New Panel()
+        txtUpdateCost = New TextBox()
+        Panel70 = New Panel()
+        cbUpdateType = New ComboBox()
+        Panel71 = New Panel()
+        cbUpdateStatus = New ComboBox()
+        Panel79 = New Panel()
+        Panel82 = New Panel()
+        txtUpdateStart = New TextBox()
+        Panel83 = New Panel()
+        txtUpdateEnd = New TextBox()
+        Panel84 = New Panel()
+        txtUpdateDescription = New TextBox()
+        Panel85 = New Panel()
+        txtUpdateVehicle = New TextBox()
+        Label39 = New Label()
+        Panel86 = New Panel()
+        Label40 = New Label()
+        pnlAddMaintenance = New Panel()
+        Button16 = New Button()
+        Panel72 = New Panel()
+        txtMaintCost = New TextBox()
+        Panel73 = New Panel()
+        cbMainType = New ComboBox()
+        Panel74 = New Panel()
+        cbMaintStatus = New ComboBox()
+        Panel75 = New Panel()
+        Panel76 = New Panel()
+        txtMaintStart = New TextBox()
+        Panel77 = New Panel()
+        txtMaintEnd = New TextBox()
+        Panel78 = New Panel()
+        txtDescription = New TextBox()
+        Panel80 = New Panel()
+        txtVehicleID = New TextBox()
+        Label57 = New Label()
+        Panel81 = New Panel()
+        Label58 = New Label()
+        Button15 = New Button()
+        btnAddMaintenance = New Button()
         Panel27 = New Panel()
         lblMaintenanceScheduled = New Label()
         PictureBox14 = New PictureBox()
@@ -342,7 +384,6 @@ Partial Class FORM_ADMIN
         pnlRentalContent.SuspendLayout()
         Panel33.SuspendLayout()
         CType(PictureBox22, ComponentModel.ISupportInitialize).BeginInit()
-        Panel22.SuspendLayout()
         Panel18.SuspendLayout()
         CType(PictureBox11, ComponentModel.ISupportInitialize).BeginInit()
         Panel19.SuspendLayout()
@@ -350,6 +391,25 @@ Partial Class FORM_ADMIN
         CType(dgvRentals2, ComponentModel.ISupportInitialize).BeginInit()
         Panel20.SuspendLayout()
         pnlMaintenanceContent.SuspendLayout()
+        pnlUpdateMaintenance.SuspendLayout()
+        Panel87.SuspendLayout()
+        Panel69.SuspendLayout()
+        Panel70.SuspendLayout()
+        Panel71.SuspendLayout()
+        Panel82.SuspendLayout()
+        Panel83.SuspendLayout()
+        Panel84.SuspendLayout()
+        Panel85.SuspendLayout()
+        Panel86.SuspendLayout()
+        pnlAddMaintenance.SuspendLayout()
+        Panel72.SuspendLayout()
+        Panel73.SuspendLayout()
+        Panel74.SuspendLayout()
+        Panel76.SuspendLayout()
+        Panel77.SuspendLayout()
+        Panel78.SuspendLayout()
+        Panel80.SuspendLayout()
+        Panel81.SuspendLayout()
         Panel27.SuspendLayout()
         CType(PictureBox14, ComponentModel.ISupportInitialize).BeginInit()
         Panel21.SuspendLayout()
@@ -425,7 +485,7 @@ Partial Class FORM_ADMIN
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(290, 728)
+        Panel1.Size = New Size(290, 673)
         Panel1.TabIndex = 0
         ' 
         ' pnlUsers
@@ -1523,14 +1583,13 @@ Partial Class FORM_ADMIN
         ' pnlRentalContent
         ' 
         pnlRentalContent.Controls.Add(Panel33)
-        pnlRentalContent.Controls.Add(Panel22)
         pnlRentalContent.Controls.Add(Panel18)
         pnlRentalContent.Controls.Add(Button2)
         pnlRentalContent.Controls.Add(Panel19)
         pnlRentalContent.Controls.Add(txtbxRental)
         pnlRentalContent.Controls.Add(dgvRentals2)
         pnlRentalContent.Controls.Add(Panel20)
-        pnlRentalContent.Location = New Point(1300, 97)
+        pnlRentalContent.Location = New Point(1273, 83)
         pnlRentalContent.Name = "pnlRentalContent"
         pnlRentalContent.Size = New Size(915, 564)
         pnlRentalContent.TabIndex = 15
@@ -1577,25 +1636,6 @@ Partial Class FORM_ADMIN
         Label14.Size = New Size(96, 18)
         Label14.TabIndex = 6
         Label14.Text = "CANCELLED"
-        ' 
-        ' Panel22
-        ' 
-        Panel22.BackColor = Color.White
-        Panel22.Controls.Add(ComboBox1)
-        Panel22.Location = New Point(421, 135)
-        Panel22.Name = "Panel22"
-        Panel22.Size = New Size(213, 45)
-        Panel22.TabIndex = 18
-        ' 
-        ' ComboBox1
-        ' 
-        ComboBox1.FlatStyle = FlatStyle.Flat
-        ComboBox1.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(21, 9)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(189, 28)
-        ComboBox1.TabIndex = 16
         ' 
         ' Panel18
         ' 
@@ -1736,6 +1776,10 @@ Partial Class FORM_ADMIN
         ' 
         ' pnlMaintenanceContent
         ' 
+        pnlMaintenanceContent.Controls.Add(pnlUpdateMaintenance)
+        pnlMaintenanceContent.Controls.Add(pnlAddMaintenance)
+        pnlMaintenanceContent.Controls.Add(Button15)
+        pnlMaintenanceContent.Controls.Add(btnAddMaintenance)
         pnlMaintenanceContent.Controls.Add(Panel27)
         pnlMaintenanceContent.Controls.Add(Panel21)
         pnlMaintenanceContent.Controls.Add(Panel15)
@@ -1744,10 +1788,462 @@ Partial Class FORM_ADMIN
         pnlMaintenanceContent.Controls.Add(txtbxMaintenance)
         pnlMaintenanceContent.Controls.Add(Panel17)
         pnlMaintenanceContent.Controls.Add(dgvMaintenance)
-        pnlMaintenanceContent.Location = New Point(1301, 97)
+        pnlMaintenanceContent.Location = New Point(311, 90)
         pnlMaintenanceContent.Name = "pnlMaintenanceContent"
         pnlMaintenanceContent.Size = New Size(943, 564)
         pnlMaintenanceContent.TabIndex = 16
+        ' 
+        ' pnlUpdateMaintenance
+        ' 
+        pnlUpdateMaintenance.AutoScroll = True
+        pnlUpdateMaintenance.BackColor = Color.White
+        pnlUpdateMaintenance.BorderStyle = BorderStyle.FixedSingle
+        pnlUpdateMaintenance.Controls.Add(Panel87)
+        pnlUpdateMaintenance.Controls.Add(Button17)
+        pnlUpdateMaintenance.Controls.Add(Panel69)
+        pnlUpdateMaintenance.Controls.Add(Panel70)
+        pnlUpdateMaintenance.Controls.Add(Panel71)
+        pnlUpdateMaintenance.Controls.Add(Panel79)
+        pnlUpdateMaintenance.Controls.Add(Panel82)
+        pnlUpdateMaintenance.Controls.Add(Panel83)
+        pnlUpdateMaintenance.Controls.Add(Panel84)
+        pnlUpdateMaintenance.Controls.Add(Panel85)
+        pnlUpdateMaintenance.Controls.Add(Label39)
+        pnlUpdateMaintenance.Controls.Add(Panel86)
+        pnlUpdateMaintenance.Location = New Point(3, 172)
+        pnlUpdateMaintenance.Name = "pnlUpdateMaintenance"
+        pnlUpdateMaintenance.Size = New Size(669, 423)
+        pnlUpdateMaintenance.TabIndex = 22
+        ' 
+        ' Panel87
+        ' 
+        Panel87.BorderStyle = BorderStyle.FixedSingle
+        Panel87.Controls.Add(txtMaintenanceID)
+        Panel87.Location = New Point(53, 115)
+        Panel87.Name = "Panel87"
+        Panel87.Size = New Size(184, 46)
+        Panel87.TabIndex = 5
+        ' 
+        ' txtMaintenanceID
+        ' 
+        txtMaintenanceID.BorderStyle = BorderStyle.None
+        txtMaintenanceID.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtMaintenanceID.Location = New Point(21, 12)
+        txtMaintenanceID.Name = "txtMaintenanceID"
+        txtMaintenanceID.Size = New Size(139, 21)
+        txtMaintenanceID.TabIndex = 2
+        ' 
+        ' Button17
+        ' 
+        Button17.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button17.Cursor = Cursors.Hand
+        Button17.Font = New Font("Futura Hv BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button17.ForeColor = Color.White
+        Button17.Location = New Point(167, 459)
+        Button17.Name = "Button17"
+        Button17.Size = New Size(359, 57)
+        Button17.TabIndex = 12
+        Button17.Text = "UPDATE MAINTENANCE"
+        Button17.TextImageRelation = TextImageRelation.TextAboveImage
+        Button17.UseVisualStyleBackColor = False
+        ' 
+        ' Panel69
+        ' 
+        Panel69.BorderStyle = BorderStyle.FixedSingle
+        Panel69.Controls.Add(txtUpdateCost)
+        Panel69.Location = New Point(53, 372)
+        Panel69.Name = "Panel69"
+        Panel69.Size = New Size(273, 46)
+        Panel69.TabIndex = 9
+        ' 
+        ' txtUpdateCost
+        ' 
+        txtUpdateCost.BorderStyle = BorderStyle.None
+        txtUpdateCost.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtUpdateCost.Location = New Point(21, 12)
+        txtUpdateCost.Name = "txtUpdateCost"
+        txtUpdateCost.Size = New Size(229, 21)
+        txtUpdateCost.TabIndex = 2
+        ' 
+        ' Panel70
+        ' 
+        Panel70.BorderStyle = BorderStyle.FixedSingle
+        Panel70.Controls.Add(cbUpdateType)
+        Panel70.Location = New Point(53, 176)
+        Panel70.Name = "Panel70"
+        Panel70.Size = New Size(170, 46)
+        Panel70.TabIndex = 15
+        ' 
+        ' cbUpdateType
+        ' 
+        cbUpdateType.FlatStyle = FlatStyle.Flat
+        cbUpdateType.Font = New Font("Futura Bk BT", 10.2F)
+        cbUpdateType.FormattingEnabled = True
+        cbUpdateType.Items.AddRange(New Object() {"CARS", "MOTORCYCLES"})
+        cbUpdateType.Location = New Point(14, 9)
+        cbUpdateType.Name = "cbUpdateType"
+        cbUpdateType.Size = New Size(151, 28)
+        cbUpdateType.TabIndex = 3
+        ' 
+        ' Panel71
+        ' 
+        Panel71.BorderStyle = BorderStyle.FixedSingle
+        Panel71.Controls.Add(cbUpdateStatus)
+        Panel71.Location = New Point(244, 175)
+        Panel71.Name = "Panel71"
+        Panel71.Size = New Size(170, 46)
+        Panel71.TabIndex = 14
+        ' 
+        ' cbUpdateStatus
+        ' 
+        cbUpdateStatus.FlatStyle = FlatStyle.Flat
+        cbUpdateStatus.Font = New Font("Futura Bk BT", 10.2F)
+        cbUpdateStatus.FormattingEnabled = True
+        cbUpdateStatus.Location = New Point(14, 9)
+        cbUpdateStatus.Name = "cbUpdateStatus"
+        cbUpdateStatus.Size = New Size(151, 28)
+        cbUpdateStatus.TabIndex = 3
+        ' 
+        ' Panel79
+        ' 
+        Panel79.Location = New Point(53, 534)
+        Panel79.Name = "Panel79"
+        Panel79.Size = New Size(567, 45)
+        Panel79.TabIndex = 13
+        ' 
+        ' Panel82
+        ' 
+        Panel82.BorderStyle = BorderStyle.FixedSingle
+        Panel82.Controls.Add(txtUpdateStart)
+        Panel82.Location = New Point(53, 308)
+        Panel82.Name = "Panel82"
+        Panel82.Size = New Size(273, 46)
+        Panel82.TabIndex = 8
+        ' 
+        ' txtUpdateStart
+        ' 
+        txtUpdateStart.BorderStyle = BorderStyle.None
+        txtUpdateStart.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtUpdateStart.Location = New Point(21, 12)
+        txtUpdateStart.Name = "txtUpdateStart"
+        txtUpdateStart.Size = New Size(229, 21)
+        txtUpdateStart.TabIndex = 2
+        ' 
+        ' Panel83
+        ' 
+        Panel83.BorderStyle = BorderStyle.FixedSingle
+        Panel83.Controls.Add(txtUpdateEnd)
+        Panel83.Location = New Point(346, 309)
+        Panel83.Name = "Panel83"
+        Panel83.Size = New Size(273, 46)
+        Panel83.TabIndex = 7
+        ' 
+        ' txtUpdateEnd
+        ' 
+        txtUpdateEnd.BorderStyle = BorderStyle.None
+        txtUpdateEnd.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtUpdateEnd.Location = New Point(21, 12)
+        txtUpdateEnd.Name = "txtUpdateEnd"
+        txtUpdateEnd.Size = New Size(229, 21)
+        txtUpdateEnd.TabIndex = 2
+        ' 
+        ' Panel84
+        ' 
+        Panel84.BorderStyle = BorderStyle.FixedSingle
+        Panel84.Controls.Add(txtUpdateDescription)
+        Panel84.Location = New Point(53, 244)
+        Panel84.Name = "Panel84"
+        Panel84.Size = New Size(567, 46)
+        Panel84.TabIndex = 6
+        ' 
+        ' txtUpdateDescription
+        ' 
+        txtUpdateDescription.BorderStyle = BorderStyle.None
+        txtUpdateDescription.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtUpdateDescription.Location = New Point(21, 12)
+        txtUpdateDescription.Name = "txtUpdateDescription"
+        txtUpdateDescription.Size = New Size(523, 21)
+        txtUpdateDescription.TabIndex = 2
+        ' 
+        ' Panel85
+        ' 
+        Panel85.BorderStyle = BorderStyle.FixedSingle
+        Panel85.Controls.Add(txtUpdateVehicle)
+        Panel85.Location = New Point(436, 175)
+        Panel85.Name = "Panel85"
+        Panel85.Size = New Size(184, 46)
+        Panel85.TabIndex = 4
+        ' 
+        ' txtUpdateVehicle
+        ' 
+        txtUpdateVehicle.BorderStyle = BorderStyle.None
+        txtUpdateVehicle.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtUpdateVehicle.Location = New Point(21, 12)
+        txtUpdateVehicle.Name = "txtUpdateVehicle"
+        txtUpdateVehicle.Size = New Size(139, 21)
+        txtUpdateVehicle.TabIndex = 2
+        ' 
+        ' Label39
+        ' 
+        Label39.AutoSize = True
+        Label39.Font = New Font("Futura Hv BT", 22.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label39.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label39.Location = New Point(105, 56)
+        Label39.Name = "Label39"
+        Label39.Size = New Size(455, 45)
+        Label39.TabIndex = 1
+        Label39.Text = "UPDATE MAINTENANCE"
+        ' 
+        ' Panel86
+        ' 
+        Panel86.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Panel86.Controls.Add(Label40)
+        Panel86.Dock = DockStyle.Top
+        Panel86.Location = New Point(0, 0)
+        Panel86.Name = "Panel86"
+        Panel86.Size = New Size(646, 40)
+        Panel86.TabIndex = 0
+        ' 
+        ' Label40
+        ' 
+        Label40.AutoSize = True
+        Label40.Font = New Font("Futura XBlk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label40.ForeColor = Color.White
+        Label40.Location = New Point(15, 9)
+        Label40.Name = "Label40"
+        Label40.Size = New Size(24, 24)
+        Label40.TabIndex = 14
+        Label40.Text = "X"
+        ' 
+        ' pnlAddMaintenance
+        ' 
+        pnlAddMaintenance.AutoScroll = True
+        pnlAddMaintenance.BackColor = Color.White
+        pnlAddMaintenance.BorderStyle = BorderStyle.FixedSingle
+        pnlAddMaintenance.Controls.Add(Button16)
+        pnlAddMaintenance.Controls.Add(Panel72)
+        pnlAddMaintenance.Controls.Add(Panel73)
+        pnlAddMaintenance.Controls.Add(Panel74)
+        pnlAddMaintenance.Controls.Add(Panel75)
+        pnlAddMaintenance.Controls.Add(Panel76)
+        pnlAddMaintenance.Controls.Add(Panel77)
+        pnlAddMaintenance.Controls.Add(Panel78)
+        pnlAddMaintenance.Controls.Add(Panel80)
+        pnlAddMaintenance.Controls.Add(Label57)
+        pnlAddMaintenance.Controls.Add(Panel81)
+        pnlAddMaintenance.Location = New Point(1300, 17)
+        pnlAddMaintenance.Name = "pnlAddMaintenance"
+        pnlAddMaintenance.Size = New Size(669, 423)
+        pnlAddMaintenance.TabIndex = 21
+        ' 
+        ' Button16
+        ' 
+        Button16.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button16.Cursor = Cursors.Hand
+        Button16.Font = New Font("Futura Hv BT", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button16.ForeColor = Color.White
+        Button16.Location = New Point(157, 399)
+        Button16.Name = "Button16"
+        Button16.Size = New Size(359, 57)
+        Button16.TabIndex = 12
+        Button16.Text = "ADD MAINTENANCE"
+        Button16.TextImageRelation = TextImageRelation.TextAboveImage
+        Button16.UseVisualStyleBackColor = False
+        ' 
+        ' Panel72
+        ' 
+        Panel72.BorderStyle = BorderStyle.FixedSingle
+        Panel72.Controls.Add(txtMaintCost)
+        Panel72.Location = New Point(53, 319)
+        Panel72.Name = "Panel72"
+        Panel72.Size = New Size(273, 46)
+        Panel72.TabIndex = 9
+        ' 
+        ' txtMaintCost
+        ' 
+        txtMaintCost.BorderStyle = BorderStyle.None
+        txtMaintCost.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtMaintCost.Location = New Point(21, 12)
+        txtMaintCost.Name = "txtMaintCost"
+        txtMaintCost.Size = New Size(229, 21)
+        txtMaintCost.TabIndex = 2
+        ' 
+        ' Panel73
+        ' 
+        Panel73.BorderStyle = BorderStyle.FixedSingle
+        Panel73.Controls.Add(cbMainType)
+        Panel73.Location = New Point(53, 123)
+        Panel73.Name = "Panel73"
+        Panel73.Size = New Size(170, 46)
+        Panel73.TabIndex = 15
+        ' 
+        ' cbMainType
+        ' 
+        cbMainType.FlatStyle = FlatStyle.Flat
+        cbMainType.Font = New Font("Futura Bk BT", 10.2F)
+        cbMainType.FormattingEnabled = True
+        cbMainType.Items.AddRange(New Object() {"CLEANING", "REPAIR", "OTHER"})
+        cbMainType.Location = New Point(14, 9)
+        cbMainType.Name = "cbMainType"
+        cbMainType.Size = New Size(151, 28)
+        cbMainType.TabIndex = 3
+        ' 
+        ' Panel74
+        ' 
+        Panel74.BorderStyle = BorderStyle.FixedSingle
+        Panel74.Controls.Add(cbMaintStatus)
+        Panel74.Location = New Point(244, 122)
+        Panel74.Name = "Panel74"
+        Panel74.Size = New Size(170, 46)
+        Panel74.TabIndex = 14
+        ' 
+        ' cbMaintStatus
+        ' 
+        cbMaintStatus.FlatStyle = FlatStyle.Flat
+        cbMaintStatus.Font = New Font("Futura Bk BT", 10.2F)
+        cbMaintStatus.FormattingEnabled = True
+        cbMaintStatus.Items.AddRange(New Object() {"SCHEDULED", "IN PROGRESS", "CANCELLED"})
+        cbMaintStatus.Location = New Point(14, 9)
+        cbMaintStatus.Name = "cbMaintStatus"
+        cbMaintStatus.Size = New Size(151, 28)
+        cbMaintStatus.TabIndex = 3
+        ' 
+        ' Panel75
+        ' 
+        Panel75.Location = New Point(53, 453)
+        Panel75.Name = "Panel75"
+        Panel75.Size = New Size(567, 45)
+        Panel75.TabIndex = 13
+        ' 
+        ' Panel76
+        ' 
+        Panel76.BorderStyle = BorderStyle.FixedSingle
+        Panel76.Controls.Add(txtMaintStart)
+        Panel76.Location = New Point(53, 255)
+        Panel76.Name = "Panel76"
+        Panel76.Size = New Size(273, 46)
+        Panel76.TabIndex = 8
+        ' 
+        ' txtMaintStart
+        ' 
+        txtMaintStart.BorderStyle = BorderStyle.None
+        txtMaintStart.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtMaintStart.Location = New Point(21, 12)
+        txtMaintStart.Name = "txtMaintStart"
+        txtMaintStart.Size = New Size(229, 21)
+        txtMaintStart.TabIndex = 2
+        ' 
+        ' Panel77
+        ' 
+        Panel77.BorderStyle = BorderStyle.FixedSingle
+        Panel77.Controls.Add(txtMaintEnd)
+        Panel77.Location = New Point(346, 256)
+        Panel77.Name = "Panel77"
+        Panel77.Size = New Size(273, 46)
+        Panel77.TabIndex = 7
+        ' 
+        ' txtMaintEnd
+        ' 
+        txtMaintEnd.BorderStyle = BorderStyle.None
+        txtMaintEnd.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtMaintEnd.Location = New Point(21, 12)
+        txtMaintEnd.Name = "txtMaintEnd"
+        txtMaintEnd.Size = New Size(229, 21)
+        txtMaintEnd.TabIndex = 2
+        ' 
+        ' Panel78
+        ' 
+        Panel78.BorderStyle = BorderStyle.FixedSingle
+        Panel78.Controls.Add(txtDescription)
+        Panel78.Location = New Point(53, 191)
+        Panel78.Name = "Panel78"
+        Panel78.Size = New Size(567, 46)
+        Panel78.TabIndex = 6
+        ' 
+        ' txtDescription
+        ' 
+        txtDescription.BorderStyle = BorderStyle.None
+        txtDescription.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtDescription.Location = New Point(21, 12)
+        txtDescription.Name = "txtDescription"
+        txtDescription.Size = New Size(523, 21)
+        txtDescription.TabIndex = 2
+        ' 
+        ' Panel80
+        ' 
+        Panel80.BorderStyle = BorderStyle.FixedSingle
+        Panel80.Controls.Add(txtVehicleID)
+        Panel80.Location = New Point(436, 122)
+        Panel80.Name = "Panel80"
+        Panel80.Size = New Size(184, 46)
+        Panel80.TabIndex = 4
+        ' 
+        ' txtVehicleID
+        ' 
+        txtVehicleID.BorderStyle = BorderStyle.None
+        txtVehicleID.Font = New Font("Futura Bk BT", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtVehicleID.Location = New Point(21, 12)
+        txtVehicleID.Name = "txtVehicleID"
+        txtVehicleID.Size = New Size(139, 21)
+        txtVehicleID.TabIndex = 2
+        ' 
+        ' Label57
+        ' 
+        Label57.AutoSize = True
+        Label57.Font = New Font("Futura Hv BT", 22.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label57.ForeColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Label57.Location = New Point(143, 57)
+        Label57.Name = "Label57"
+        Label57.Size = New Size(392, 45)
+        Label57.TabIndex = 1
+        Label57.Text = "ADD MAINTENANCE"
+        ' 
+        ' Panel81
+        ' 
+        Panel81.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Panel81.Controls.Add(Label58)
+        Panel81.Dock = DockStyle.Top
+        Panel81.Location = New Point(0, 0)
+        Panel81.Name = "Panel81"
+        Panel81.Size = New Size(646, 40)
+        Panel81.TabIndex = 0
+        ' 
+        ' Label58
+        ' 
+        Label58.AutoSize = True
+        Label58.Font = New Font("Futura XBlk BT", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label58.ForeColor = Color.White
+        Label58.Location = New Point(15, 9)
+        Label58.Name = "Label58"
+        Label58.Size = New Size(24, 24)
+        Label58.TabIndex = 14
+        Label58.Text = "X"
+        ' 
+        ' Button15
+        ' 
+        Button15.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button15.FlatStyle = FlatStyle.Flat
+        Button15.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button15.ForeColor = Color.White
+        Button15.Location = New Point(562, 141)
+        Button15.Name = "Button15"
+        Button15.Size = New Size(123, 35)
+        Button15.TabIndex = 23
+        Button15.Text = "UPDATE"
+        Button15.UseVisualStyleBackColor = False
+        ' 
+        ' btnAddMaintenance
+        ' 
+        btnAddMaintenance.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        btnAddMaintenance.FlatStyle = FlatStyle.Flat
+        btnAddMaintenance.Font = New Font("Futura Hv BT", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnAddMaintenance.ForeColor = Color.White
+        btnAddMaintenance.Location = New Point(420, 141)
+        btnAddMaintenance.Name = "btnAddMaintenance"
+        btnAddMaintenance.Size = New Size(123, 35)
+        btnAddMaintenance.TabIndex = 22
+        btnAddMaintenance.Text = "ADD"
+        btnAddMaintenance.UseVisualStyleBackColor = False
         ' 
         ' Panel27
         ' 
@@ -2443,7 +2939,7 @@ Partial Class FORM_ADMIN
         pnlUsersContent.Controls.Add(Panel29)
         pnlUsersContent.Controls.Add(Button10)
         pnlUsersContent.Controls.Add(Panel46)
-        pnlUsersContent.Location = New Point(300, 93)
+        pnlUsersContent.Location = New Point(1300, 93)
         pnlUsersContent.Name = "pnlUsersContent"
         pnlUsersContent.Size = New Size(915, 564)
         pnlUsersContent.TabIndex = 18
@@ -3243,17 +3739,17 @@ Partial Class FORM_ADMIN
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Gainsboro
-        ClientSize = New Size(1262, 728)
+        ClientSize = New Size(1262, 673)
         Controls.Add(Panel8)
         Controls.Add(Panel1)
-        Controls.Add(Panel47)
-        Controls.Add(pnlSaleContent)
-        Controls.Add(pnlRentalContent)
         Controls.Add(pnlMaintenanceContent)
         Controls.Add(pnlcarinventory)
         Controls.Add(pnlUsersEditUser)
         Controls.Add(pnlAllDashboard)
         Controls.Add(pnlUsersContent)
+        Controls.Add(pnlSaleContent)
+        Controls.Add(pnlRentalContent)
+        Controls.Add(Panel47)
         Name = "FORM_ADMIN"
         StartPosition = FormStartPosition.CenterScreen
         Text = "FORM_ADMIN"
@@ -3344,7 +3840,6 @@ Partial Class FORM_ADMIN
         Panel33.ResumeLayout(False)
         Panel33.PerformLayout()
         CType(PictureBox22, ComponentModel.ISupportInitialize).EndInit()
-        Panel22.ResumeLayout(False)
         Panel18.ResumeLayout(False)
         Panel18.PerformLayout()
         CType(PictureBox11, ComponentModel.ISupportInitialize).EndInit()
@@ -3356,6 +3851,40 @@ Partial Class FORM_ADMIN
         Panel20.PerformLayout()
         pnlMaintenanceContent.ResumeLayout(False)
         pnlMaintenanceContent.PerformLayout()
+        pnlUpdateMaintenance.ResumeLayout(False)
+        pnlUpdateMaintenance.PerformLayout()
+        Panel87.ResumeLayout(False)
+        Panel87.PerformLayout()
+        Panel69.ResumeLayout(False)
+        Panel69.PerformLayout()
+        Panel70.ResumeLayout(False)
+        Panel71.ResumeLayout(False)
+        Panel82.ResumeLayout(False)
+        Panel82.PerformLayout()
+        Panel83.ResumeLayout(False)
+        Panel83.PerformLayout()
+        Panel84.ResumeLayout(False)
+        Panel84.PerformLayout()
+        Panel85.ResumeLayout(False)
+        Panel85.PerformLayout()
+        Panel86.ResumeLayout(False)
+        Panel86.PerformLayout()
+        pnlAddMaintenance.ResumeLayout(False)
+        pnlAddMaintenance.PerformLayout()
+        Panel72.ResumeLayout(False)
+        Panel72.PerformLayout()
+        Panel73.ResumeLayout(False)
+        Panel74.ResumeLayout(False)
+        Panel76.ResumeLayout(False)
+        Panel76.PerformLayout()
+        Panel77.ResumeLayout(False)
+        Panel77.PerformLayout()
+        Panel78.ResumeLayout(False)
+        Panel78.PerformLayout()
+        Panel80.ResumeLayout(False)
+        Panel80.PerformLayout()
+        Panel81.ResumeLayout(False)
+        Panel81.PerformLayout()
         Panel27.ResumeLayout(False)
         Panel27.PerformLayout()
         CType(PictureBox14, ComponentModel.ISupportInitialize).EndInit()
@@ -3563,7 +4092,6 @@ Partial Class FORM_ADMIN
     Friend WithEvents Panel23 As Panel
     Friend WithEvents Label38 As Label
     Friend WithEvents Button4 As Button
-    Friend WithEvents Label40 As Label
     Friend WithEvents txtbxSales As TextBox
     Friend WithEvents dgvSales As DataGridView
     Friend WithEvents Panel25 As Panel
@@ -3580,8 +4108,6 @@ Partial Class FORM_ADMIN
     Friend WithEvents Button6 As Button
     Friend WithEvents cbVehicle As ComboBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel22 As Panel
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Panel27 As Panel
     Friend WithEvents lblMaintenanceScheduled As Label
     Friend WithEvents PictureBox14 As PictureBox
@@ -3605,7 +4131,6 @@ Partial Class FORM_ADMIN
     Friend WithEvents PictureBox16 As PictureBox
     Friend WithEvents lblSalesPenalties As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label39 As Label
     Friend WithEvents lblSalesIncome As Label
     Friend WithEvents Panel33 As Panel
     Friend WithEvents PictureBox22 As PictureBox
@@ -3719,4 +4244,48 @@ Partial Class FORM_ADMIN
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Panel68 As Panel
     Friend WithEvents Label56 As Label
+    Friend WithEvents pnlAddMaintenance As Panel
+    Friend WithEvents Button16 As Button
+    Friend WithEvents Panel72 As Panel
+    Friend WithEvents txtMaintCost As TextBox
+    Friend WithEvents Panel73 As Panel
+    Friend WithEvents cbMainType As ComboBox
+    Friend WithEvents Panel74 As Panel
+    Friend WithEvents cbMaintStatus As ComboBox
+    Friend WithEvents Panel75 As Panel
+    Friend WithEvents Panel76 As Panel
+    Friend WithEvents txtMaintStart As TextBox
+    Friend WithEvents Panel77 As Panel
+    Friend WithEvents txtMaintEnd As TextBox
+    Friend WithEvents Panel78 As Panel
+    Friend WithEvents txtDescription As TextBox
+    Friend WithEvents Panel80 As Panel
+    Friend WithEvents txtVehicleID As TextBox
+    Friend WithEvents Label57 As Label
+    Friend WithEvents Panel81 As Panel
+    Friend WithEvents Label58 As Label
+    Friend WithEvents Button15 As Button
+    Friend WithEvents btnAddMaintenance As Button
+    Friend WithEvents pnlUpdateMaintenance As Panel
+    Friend WithEvents Button17 As Button
+    Friend WithEvents Panel69 As Panel
+    Friend WithEvents txtUpdateCost As TextBox
+    Friend WithEvents Panel70 As Panel
+    Friend WithEvents cbUpdateType As ComboBox
+    Friend WithEvents Panel71 As Panel
+    Friend WithEvents cbUpdateStatus As ComboBox
+    Friend WithEvents Panel79 As Panel
+    Friend WithEvents Panel82 As Panel
+    Friend WithEvents txtUpdateStart As TextBox
+    Friend WithEvents Panel83 As Panel
+    Friend WithEvents txtUpdateEnd As TextBox
+    Friend WithEvents Panel84 As Panel
+    Friend WithEvents txtUpdateDescription As TextBox
+    Friend WithEvents Panel85 As Panel
+    Friend WithEvents txtUpdateVehicle As TextBox
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Panel86 As Panel
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Panel87 As Panel
+    Friend WithEvents txtMaintenanceID As TextBox
 End Class

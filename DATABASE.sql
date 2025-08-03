@@ -250,7 +250,6 @@ CREATE TABLE IF NOT EXISTS `ridexp`.`maintenance` (
   `end_date` DATE NULL DEFAULT NULL,
   `cost` DECIMAL(10,2) NULL DEFAULT NULL,
   `description` TEXT NULL DEFAULT NULL,
-  `service_provider` VARCHAR(100) NULL DEFAULT NULL,
   `maintenance_status_id` INT(11) NOT NULL,
   PRIMARY KEY (`maintenance_id`),
   INDEX (`vehicle_id` ) ,
